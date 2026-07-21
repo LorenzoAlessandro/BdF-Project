@@ -51,9 +51,9 @@ To have a good base to answer the aforementioned research question I propose 3 d
 | Arm | Corpus | Lang. | Purpose |
 |---|---|---|---|
 | BASE | none | — | reference |
-| FED | Fed-world, ~250M tokens | EN | treatment 1 |
-| EURO-EN | Eurosystem, ~250M tokens, English-language documents only | EN | treatment 2 (primary contrast) |
-| EURO-FR | Eurosystem, French-language documents (BdF speeches, French ECB material) | FR | language extension (secondary) |
+| FED | Fed-world, ~50M tokens | EN | treatment 1 |
+| EURO-EN | Eurosystem, ~50M tokens, English-language documents only | EN | treatment 2 (primary contrast) |
+| EURO-FR | Eurosystem, French-language documents (BdF speeches, French ECB material) | FR | language extension (secondary) | --> This is to be further verified as time goes on main focus is the ECB side of the data bias. 
 | seeds | each arm ×3 (data order + LoRA init) | | run-level uncertainty |
 
 Importantly to ensure that model performance is comparable, the textual training data should follow a similar composition:
@@ -115,9 +115,10 @@ The core task is classification of monetary policy stance: models assign each se
 I therefore propose up to 5 potential hypothesis which can be tested within this framework.
 
 - **Hypothesis 1:** All model arms (BASE, FED, EURO-EN, EURO-FR) classify the policy stance of central bank sentences at above-chance accuracy, evaluated on Hansen and Kazinnik's metrics: MAE, RMSE, accuracy, Cohen's κ, per-class F1, balanced accuracy. No directional prediction.
-- **Hypothesis 2:** Continued pretraining improves classification accuracy on the home institution's text: the FED arm outperforms the EURO arms on FOMC sentences, and the EURO arms outperform the FED arm on ECB sentences. A null is informative: Gambacorta et al. (2024) find domain adaptation does not uniformly improve accuracy on central banking tasks.
+- **Hypothesis 2:** Continued pretraining through the supervise pre-training techniques improves classification accuracy on the home institution's text: the FED arm outperforms the EURO arms on FOMC sentences, and the EURO arms outperform the FED arm on ECB sentences. A null is informative: Gambacorta et al. (2024) find domain adaptation does not uniformly improve accuracy on central banking tasks.
 - **Hypothesis 3:** The signed classification error (the model's stance score minus the human label) differs systematically across training arms on an identical, held-out, decontaminated sentence set. That is, the same sentence is read as more hawkish or more dovish depending on the corpus the model was adapted on.
 - **Hypothesis 4:** The interaction between training arm and test-set institution is non-zero: each model's directional bias is larger when reading the foreign institution's text than its home institution's text. This is the deployment-relevant hypothesis: it quantifies the risk of applying a Fed-steeped model to Eurosystem communications.
+- **Hypothesis 5** When we extend the model training utilising DAPT (Domain Adaptive) 50 million token database, do we see an improvement in the testable outcomes. 
 
 ## 5 Methodology
 
@@ -130,6 +131,8 @@ Each trained LLM model will be prompted via the code terminal, with a temperatur
 - **Neutral:** Expresses neither a hawkish nor dovish view and is mostly objective.
 - **Mostly Hawkish:** Overall message expresses a belief that the economy is growing too quickly and may need to be slowed down through monetary policy.
 - **Hawkish:** Strongly expresses a belief that the economy is growing too quickly and may need to be slowed down through monetary policy.
+
+The is subject to change due to the bias which in inherit in my classifcation as a human annotator, 
 
 The testing data set will be randomly sampled in equal thirds from the three institutions (approx 200 sentences drawn from FOMC statements, 200 from ECB press-conference statements and 200 from the BdF statement list over a matched period) since the cross-institutional design requires every model to be tested on both its home and its foreign institution's text. Each sampled sentence will be manually annotated with my own classification on the scale above, alongside, where possible, independent annotations from additional annotators; where multiple annotations exist, the final label is the average of the assigned numerical values, following Hansen and Kazinnik (2024), and inter-annotator agreement (Cohen's κ and the mean absolute difference between annotators) will be reported as a measure of benchmark reliability. All test sentences are removed from the fine-tuning corpora prior to training via n-gram overlap matching, guaranteeing that no model is evaluated on text it has seen during adaptation.
 

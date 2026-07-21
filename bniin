@@ -1,0 +1,141 @@
+"""
+QLoRA fine-tuning of OLMo-7B on a small annotated dataset (~1000 examples).
+Designed to run on Colab's free T4 GPU (16GB VRAM) in under an hour.
+
+Install first (run in a Colab cell):
+!pip install -q transformers peft bitsandbytes accelerate datasets trl
+"""
+
+import torch
+from datasets import Dataset
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    TrainingArguments,
+)
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from trl import SFTTrainer
+
+# -----------------------------------------------------------------------
+# 1. DATA FORMAT
+# -----------------------------------------------------------------------
+# Your 1000 annotated sentences should be turned into instruction-style
+# examples. A simple, robust format is a single "text" field per example
+# that already contains the prompt + expected output, e.g.:
+#
+#   ### Instruction:
+#   Classify the sentiment of the following sentence.
+#
+#   ### Input:
+#   The euro strengthened against the dollar this morning.
+#
+#   ### Response:
+#   Neutral
+#
+# Adjust the instruction to match your actual task (classification,
+# extraction, summarization, etc.). Build a Python list of dicts like this
+# from your annotated data, then wrap it in a HF Dataset.
+
+def format_example(instruction: str, input_text: str, response: str) -> str:
+    return (
+        f"### Instruction:\n{instruction}\n\n"
+        f"### Input:\n{input_text}\n\n"
+        f"### Response:\n{response}"
+    )
+
+# EXAMPLE placeholder — replace `raw_examples` with your real 1000 rows.
+# Each item: (instruction, input_text, response)
+raw_examples = [
+    ("Classify the sentiment.", "The euro strengthened against the dollar.", "Neutral"),
+    ("Classify the sentiment.", "Markets crashed on inflation fears.", "Negative"),
+    # ... your ~1000 examples here, or load from CSV/JSON:
+    # import pandas as pd
+    # df = pd.read_csv("annotations.csv")
+    # raw_examples = list(df[["instruction", "input", "response"]].itertuples(index=False, name=None))
+]
+
+texts = [format_example(i, x, r) for i, x, r in raw_examples]
+
+# Hold out ~15% for validation to catch overfitting early
+split_idx = int(len(texts) * 0.85)
+train_dataset = Dataset.from_dict({"text": texts[:split_idx]})
+eval_dataset = Dataset.from_dict({"text": texts[split_idx:]})
+
+# -----------------------------------------------------------------------
+# 2. MODEL + QUANTIZATION (4-bit, fits comfortably on a T4)
+# -----------------------------------------------------------------------
+model_name = "allenai/OLMo-7B-hf"  # adjust to the exact checkpoint you're using
+
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16,
+    bnb_4bit_use_double_quant=True,
+)
+
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    quantization_config=bnb_config,
+    device_map="auto",
+)
+model = prepare_model_for_kbit_training(model)
+# -----------------------------------------------------------------------
+# 3. LoRA CONFIG — low rank, since 1000 examples is a small dataset
+# -----------------------------------------------------------------------
+lora_config = LoraConfig(
+    r=8,                    # low rank: enough capacity, low overfit risk
+    lora_alpha=16,          # typically 2x r
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],  # attention only
+)
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()  # sanity check: should be <1% of 7B
+
+# -----------------------------------------------------------------------
+# 4. TRAINING ARGUMENTS — tuned for a T4 and a tiny dataset
+# -----------------------------------------------------------------------
+training_args = TrainingArguments(
+    output_dir="./olmo7b-lora-checkpoint",
+    per_device_train_batch_size=1,      # small VRAM budget on T4
+    gradient_accumulation_steps=8,      # effective batch size = 8
+    num_train_epochs=5,                 # small dataset -> more passes
+    learning_rate=2e-4,                 # typical for LoRA (higher than full FT)
+    logging_steps=5,
+    eval_strategy="epoch",
+    save_strategy="epoch",
+    save_total_limit=2,
+    bf16=True,                          # T4 supports bf16 compute via bnb
+    optim="paged_adamw_8bit",           # memory-efficient optimizer
+    warmup_ratio=0.03,
+    report_to="none",
+)
+
+# -----------------------------------------------------------------------
+# 5. TRAIN
+# -----------------------------------------------------------------------
+trainer = SFTTrainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset,
+    dataset_text_field="text",
+    max_seq_length=512,   # adjust up if your sentences/instructions are longer
+    tokenizer=tokenizer,
+)
+
+trainer.train()
+
+# -----------------------------------------------------------------------
+# 6. SAVE (adapter only — a few MB, not the full 7B model)
+# -----------------------------------------------------------------------
+model.save_pretrained("./olmo7b-lora-final")
+tokenizer.save_pretrained("./olmo7b-lora-final")
+
+print("Done. LoRA adapter saved to ./olmo7b-lora-final")

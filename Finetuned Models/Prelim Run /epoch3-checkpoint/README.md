@@ -24,9 +24,7 @@ tags:
 
 
 
-- **Developed by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
-- **Shared by [optional]:** [More Information Needed]
+- **Developed by:** [Lorenzo Alessandro Uberti Bona Blotto]
 - **Model type:** [More Information Needed]
 - **Language(s) (NLP):** [More Information Needed]
 - **License:** [More Information Needed]

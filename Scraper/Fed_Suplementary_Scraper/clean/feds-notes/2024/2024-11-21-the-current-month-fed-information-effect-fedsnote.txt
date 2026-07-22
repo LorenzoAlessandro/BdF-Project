@@ -1,0 +1,526 @@
+FEDS Notes
+
+Twitter
+
+November 21, 2024
+
+The Current Month Fed Information Effect
+
+Melanie Friedrichs and
+David S. Miller
+
+Economic forecasters may believe that interest rate changes by the Federal Reserve (Fed) reveal information about the state of the economy. If so, forecasters will update their forecasts of the economy based on this information; e.g. if the Fed cuts rates unexpectedly, forecasters may conclude the economy is in worse shape than they had previously thought. This "Fed Information Effect" adds a complication to the Fed's decisions: interest rate hikes to slow inflation may also raise inflation forecasts. We identify a form of the Fed Information Effect in current month inflation forecasts using a novel daily-frequency dataset and a specialized difference-in-differences framework around FOMC meetings. There is a positive relationship between interest rate surprises and forecasts of inflation: a 1 bp surprise leads to current month forecasts of month-over-month PCE and Core PCE inflation increasing 1 bp, and forecasts of month-over-month CPI and Core CPI inflation increasing 5 bps and 1 bp respectively. This positive relationship contrasts with the usual expected negative relationship between interest rates and future inflation.
+
+Investigating a Fed Information Effect on current month forecasts enables our identification strategy based on Faust et al. (2004). We look at individual professional forecasts of macroeconomic data releases collected by Bloomberg, reported at a daily frequency, in the days before and after FOMC meetings. The median of all Bloomberg forecasts is commonly reported as the "market expectation" in the media. The surprise component of an interest rate change cannot affect the current month's data releases because the releases' underlying data comes from the prior month, before the change. For example, the CPI data released in May contains price information solely from April.
+1
+Hence changes in current month forecasts must be due to the interest rate surprise, after we control for other news. Other papers, such as Nakamura and Steinsson (2018) and Bauer and Swanson (2023a), focus on the possibility of a Fed Information Effect on forecasts of the future.
+
+We do not take a stand on why forecasters respond to Federal Reserve decisions. A recent review of central bank forecasts in Carola and Sekkel (2023) found the Fed had an edge in inflation forecasting in the past, though it has likely eroded. Fed forecasts do not need to be more accurate for a Fed Information Effect to exist: the effect could exist if the Fed transmits information orthogonal to the information set of private forecasters. As interest rate changes influence future inflation, the market may believe that Fed moves are in response to information about the Fed's view of the persistent component of inflation.
+
+Data
+
+The macroeconomic data release forecasts of CPI, Core CPI, PCE, and Core PCE inflation we study are collected by Bloomberg in the weeks prior to the releases becoming public. Bloomberg records the date when each forecast was received. Our dataset consists of forecasts made between 2010-2020 of the forecasted value of each release, and the (real-time) value of the release upon becoming public. These forecasts are at a higher frequency than the monthly forecasts used previously in similar studies, e.g. Bauer and Swanson (2023a), and allow us to control for other macro news released in the same pre- and post-FOMC periods, as well as financial market conditions, avoiding a criticism from Bauer and Swanson (2023a).
+
+We observe the day, but not the time, that forecasts are submitted. Because most macroeconomic data is released before 9 am, we assume that forecasts made on the day of a release are made after the release was available. For example, we assume that forecasts of CPI submitted on the day the unemployment rate is released are made taking into account that unemployment rate information. Due to the afternoon timing of FOMC announcements, we drop forecasts made on the day of an FOMC announcement. We also drop months with unscheduled Federal Reserve policy announcements â October 2019 â or unusual data release timing â the beginning of 2019 due to the preceding government shutdown.
+
+For our monetary surprise data, we use the shock series introduced by Nakamura and Steinsson (2018) and expanded and updated by Acosta (2024). Their measure is constructed using the first principal component of interest rates changes over the next year, as measured by Federal Funds and Eurodollar futures, in a 30-minute window around FOMC announcements. It is scaled so that a 1 unit rise in the measure corresponds to a 1 bp increase in the 1-year Treasury.
+
+Specification
+
+As highlighted by Bauer and Swanson (2023b), a primary challenge to identifying the effect of Fed information is appropriately controlling for macroeconomic and financial information that is made public near FOMC announcements. For example, retail sales information is released mid-month, near when CPI and the PCE inflation data become public. Our daily frequency forecast data allows us to control for such information in ways that previous studies have not.
+
+We only consider forecasts submitted in a limited window before each inflation release. These windows must contain an FOMC meeting. For CPI and Core CPI inflation, which are released early each month, the window is from the preceding unemployment release, which is made public at the beginning of the month, to the CPI release date. For PCE and Core PCE inflation, which are reported mid-month, the window is from the preceding CPI release date to the PCE release date. This ensures that CPI and Core CPI inflation, which cover the same time period and are highly correlated with PCE and Core PCE inflation, are common knowledge. We drop windows that include Advance GDP releases, which contain substantial PCE information.
+
+Our baseline specification includes a "Forecast Distance" variable that captures how many days before the forecasted release date the forecast was submitted, and therefore controls, in a rudimentary way, for the different information sets of a forecaster who submits 5 days before a release and a forecaster who submits 1 day before a release. Specifically, we run the following regression, where $$i$$ indexes the forecaster, $$t$$ the month of release, "Forecast" is the individual professional forecast of the target release (e.g. PCE inflation), "FOMC" is an indicator variable taking the value 0 if the forecast was made before and 1 if it was made after the relevant FOMC meeting, and "Monetary Surprise" is the Nakamura and Steinsson (2018) measure of the monetary policy surprise associated with that FOMC meeting and a constant:
+
+$$$$ Forecast_{i,t} = \beta_{0}Forecast\ Distance_{i,t} + \beta_{1}FOMC_{i,t} + \beta_{2}(FOMC_{i,t} \ast Monetary\ Surprise_{t}) + \beta_{3}Release\ Value_{t} + \epsilon_{i,t} $$$$
+
+The coefficient on the interaction term $$ FOMC_{i,t} \ast Monetary\ Surprise_{t} $$ is the coefficient of interest and identifies the effect of the monetary surprise on post-FOMC forecasts. We control for the level of forecasts by including "Release Value", the actual value of the release as a control. Alternatively, looking at forecast error as a dependent variable yields qualitatively similar results.
+
+In our second specification, we leverage our data to control for surprises in other major macroeconomic data releases that occur close to FOMC announcements in our windows. We do this by mirroring the construction of the FOMC and Monetary Surprise variables for other data releases. Specifically, we control for information contained in the Retail Sales, Housing Starts, Industrial Production, and Consumer Sentiment reports, using a dummy variable if the release occurs within the window and before or after the forecast, and an interaction term of the dummy and the surprise component of the release.
+
+Figure 1 shows an example window for PCE and Core PCE inflation, with Industrial Production, Consumer Sentiment, and Housing Starts releases occurring in the window in the example month. Figure 2 shows an example window for CPI and Core CPI inflation, with the Retail Sales release occurring in the window in the example month.
+
+Figure 1. Example window for PCE Release
+
+Accessible version
+
+Figure 2. Example window for CPI Release
+
+Accessible version
+
+Finally, in our third specification, we add controls for financial news by including two financial market measures: the change in the 3-month to 10-year Treasury yield curve, and the log return of the S&P 500 index. We calculate the change and return starting from the beginning of the window to the close on the day the forecast was made.
+
+Results
+
+In Tables 1 and 2, columns 1 & 4 report the results of our simple specification without controls. Columns 2 & 5 report a regression where we include the control macroeconomic data releases noted above. Columns 3 & 6 include the control releases from columns 2 & 5, and the two additional financial control variables. Standard errors, clustered and adjusted for the number of clusters, are reported in parentheses. Coefficients are in units of basis points.
+
+Table 1: Impact of monetary surprises on forecasts of PCE
+
+Headline CPI
+
+Core CPI
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(Intercept)
+
+-0.019
+
+0.016
+
+0.0005
+
+0.092***
+
+0.061***
+
+0.059***
+
+(0.042)
+
+(0.020)
+
+(0.019)
+
+(0.025)
+
+(0.016)
+
+(0.017)
+
+Forecast Distance
+
+0.002
+
+0.003
+
+0.003
+
+0.002
+
+0.001
+
+0.001
+
+(0.003)
+
+(0.002)
+
+(0.002)
+
+(0.002)
+
+(0.001)
+
+(0.001)
+
+FOMC Indicator
+
+0.038
+
+0.019
+
+0.019
+
+-0.016
+
+0.004
+
+0.006
+
+(0.031)
+
+(0.015)
+
+(0.014)
+
+(0.020)
+
+(0.011)
+
+(0.011)
+
+FOMC Indicator X Surprise
+
+1.162***
+
+0.861**
+
+1.135***
+
+0.952**
+
+0.715**
+
+0.929**
+
+(0.302)
+
+(0.355)
+
+(0.365)
+
+(0.366)
+
+(0.278)
+
+(0.341)
+
+Control releases
+
+No
+
+Yes
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Financial controls
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+Yes
+
+Clusters
+
+17
+
+17
+
+17
+
+21
+
+21
+
+21
+
+Observations
+
+586
+
+586
+
+586
+
+1,041
+
+1,041
+
+1,041
+
+Adjusted R2
+
+0.706
+
+0.748
+
+0.752
+
+0.235
+
+0.425
+
+0.43
+
+F Statistic
+
+352.192***
+
+158.558***
+
+137.104***
+
+80.901***
+
+65.106***
+
+57.070***
+
+Note: *p<0.1; **p<0.05; ***p<0.01; Clustered standard errors adjusted for number of clusters
+
+Control releases: Industrial Production, Retail Sales, Consumer Sentiment (Final), Housing Starts
+
+Table 2: Impact of monetary surprises on forecasts of CPI
+
+Headline CPI
+
+Core CPI
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(Intercept)
+
+0.125***
+
+0.095***
+
+0.075**
+
+0.116***
+
+0.127**
+
+0.162***
+
+(0.039)
+
+(0.027)
+
+(0.027)
+
+(0.038)
+
+(0.044)
+
+(0.027)
+
+Forecast Distance
+
+-0.006
+
+-0.002
+
+-0.001
+
+0.001
+
+0.001
+
+-0.0001
+
+(0.004)
+
+(0.003)
+
+(0.003)
+
+(0.001)
+
+(0.002)
+
+(0.001)
+
+FOMC Indicator
+
+-0.085
+
+-0.079**
+
+-0.064**
+
+0.037**
+
+0.038**
+
+0.013
+
+(0.063)
+
+(0.029)
+
+(0.028)
+
+(0.014)
+
+(0.014)
+
+(0.010)
+
+FOMC Indicator X Surprise
+
+0.82
+
+6.888***
+
+4.874***
+
+1.783***
+
+0.855
+
+1.075*
+
+(1.728)
+
+(2.028)
+
+(1.589)
+
+(0.259)
+
+(0.801)
+
+(0.552)
+
+Control releases
+
+No
+
+Yes
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Financial controls
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+Yes
+
+Clusters
+
+14
+
+14
+
+14
+
+14
+
+14
+
+14
+
+Observations
+
+1,010
+
+1,010
+
+1,010
+
+981
+
+981
+
+981
+
+Adjusted R2
+
+0.649
+
+0.685
+
+0.694
+
+0.088
+
+0.102
+
+0.202
+
+F Statistic
+
+467.717***
+
+220.562***
+
+191.483***
+
+24.496***
+
+12.072***
+
+21.694***
+
+Note: *p<0.1; **p<0.05; ***p<0.01; Clustered standard errors adjusted for number of clusters
+
+Control releases: Industrial Production, Retail Sales, Consumer Sentiment (Final), Housing Starts
+
+For both month-over-month PCE and Core PCE inflation, the coefficient of interest, on the monetary surprise interaction term is roughly 1 bp across all three specifications. The positive coefficient implies that forecasters provide higher forecasts of month-over-month PCE and Core PCE inflation after a positive FOMC surprise.
+
+Our results for CPI are reported in Table 2. As shown in column 1, the coefficient on the interaction between the monetary surprise and the FOMC Indicator in our first specification is not significant. As we add more controls in columns 2 and 3, the coefficient becomes statistically significant, with a value between 5 and 7, implying a 1 bp monetary surprise leads to forecasts of CPI being 5-7 bps higher.
+
+In comparison, column 4 of Table 2 show a statistically significant 2 bps effect. Including control releases and financial controls in column 6 retains some statistical significance, and shows a coefficient around 1, implying a 1 bp monetary surprise leads to forecasts of Core CPI being 1 bp higher.
+
+References
+
+Acosta, Miguel, "The Perceived Causes of Monetary Policy Surprises,"
+mimeo
+, 2024.
+
+Bauer, Michael D and Eric T Swanson, "An alternative explanation for the "fed information effect","
+American Economic Review
+, 2023,
+113
+(3), 664â700.
+
+âââ, "A reassessment of monetary policy surprises and high-frequency identification,"
+NBER Macroeconomics Annual
+, 2023,
+37
+(1), 87â155.
+
+Binder, Carola and Rodrigo Sekkel, "Central bank forecasting: A survey,"
+Journal of Economic Surveys
+, March 2023.
+
+Faust, Jon, Eric T Swanson, and Jonathan H Wright, "Do Federal Reserve policy surprises reveal superior information about the economy?,"
+Contributions in Macroeconomics
+, 2004,
+4
+(1), 20121011.
+
+Nakamura, Emi and Jon Steinsson, "High-frequency identification of monetary non-neutrality: the information effect,"
+The Quarterly Journal of Economics
+, 2018,
+133
+(3), 1283â1330.
+
+1. In what follows, we refer to data releases by the name of the data released rather than their official names.
+Return to text
+
+Please cite this note as:
+
+Friedrichs, Melanie, and David S. Miller (2024). "The Current Month Fed Information Effect," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 21, 2024, https://doi.org/10.17016/2380-7172.3656.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,671 @@
+FEDS Notes
+
+Twitter
+
+July 11, 2025
+
+The $12 Trillion US Repo Market: Evidence from a Novel Panel of Intermediaries
+
+Sam Hempel
+,
+R. Jay Kahn
+, and Julia Shephard
+1
+
+Introduction
+
+The U.S. repurchase agreement (repo) market is one of the world's most important financial markets, yet it remains surprisingly opaque. Existing estimates of the size of this market often rely on data from either a subset of participants or of market segments. To address this gap, we compile a novel data set from the annual reports of all broker-dealers registered with the Securities and Exchange Commission (SEC), as well as from the consolidated annual reports of large U.S. bank holding companies. We use this data to provide the most comprehensive estimate of the size of the U.S. repo market to date, including the opaque non-centrally cleared bilateral repo market. We also examine the nature of intermediation in the repo market.
+
+Our analysis reveals that the gross size of the U.S. repo market reached $11.9 trillion in 2024, significantly above estimates in previous studies. Roughly 38% of that figure ($4.6 trillion) arises from the less transparent non-centrally cleared bilateral repo (NCCBR) segment. Previous estimates have understated the scale of the repo market because they have been derived, either directly or indirectly, from data on a subset of large participants such as primary dealers or global systemically important banks (G-SIBs). Our estimate is based on data on the universe of SEC-registered securities dealers and complemented by additional data on bank balance sheets.
+
+A key insight from our data is the extent to which dealers predominantly serve as
+intermediaries
+between cash borrowersâoften hedge funds seeking leverageâand cash providersâsuch as money market funds, looking for short-term, collateralized investments. Instead of simply borrowing funds to finance their own securities inventories, we find that large consolidated dealer-banks operate matched
+
+books
+,
+with nearly offsetting repo and reverse repo positions on a consolidated basis. We find no evidence for the hypothesis that these matched books are intended primarily to net repo to avoid costs of the Supplementary Leverage Ratio (SLR), since there is no significant difference in matched books between dealers subject to the SLR and those that are not. The intermediation role played by dealers means that shifts in hedge-fund borrowing or money market fund lending drive the lions' share of fluctuations in dealer repo activity, underscoring the market's function as a conduit rather than merely a funding mechanism for dealer inventories. In particular, changes in net repo borrowing by hedge funds, a measure closely associated with the cash-futures basis trade, appears to account for a substantial portion of the variation in gross dealer positions, underscoring the importance of this trade for overall repo volumes.
+
+Data sources
+
+The data we assemble in this note covers outstanding gross repo and reverse-repo back to 2014 for the universe of SEC-registered broker dealers and for large banks active in the repo market. It is the most comprehensive database of repo positions to date. Other data sources on repo activity typically cover either a subset of participants, such as primary dealers or GSIBs, or of market segments. Meanwhile, a challenge for more comprehensive statistics drawn from dealers and banks is that GAAP accounting practices allow dealers to net repo against reverse repo for reporting on their balance sheet so long as the repo and reverse repo have the same maturity date and counterparty. As we show, this can lead to aggregate numbers that dramatically understate gross repo amounts.
+
+To solve these problems, we rely on tables showing gross repo prior to netting and repo after netting reported in the appendices of annual reports of dealers and banks. Our primary data source is notes to financial conditions submitted as annual reports by dealers through the SEC's Form X-17A-5, also known as the FOCUS Report. The data we gather includes the dealer's gross repo positions, the amount netted and the amount remaining to be reported on the balance sheet.
+2
+We scrape the universe of these reports covering all SEC-registered broker dealers and, using a combination of automated and manual methods, parse their appendices. We gather this data for a panel of 156 dealers from 2014 to 2024, which we believe to cover the universe of SEC-registered broker-dealers with repo exposures.
+3
+We complement our data with similar tables from the annual reports of major bank holding companies (BHCs) that participate in the repo market. Then, by manually matching dealers with their parent BHCs, we exclude the dealer subsidiaries of BHCs in our sample to avoid double-counting in our estimate of the size of the repo market.
+
+We are interested not only in the size of the repo market, but also its composition across different segments: centrally cleared vs non-centrally cleared, tri-party vs bilateral. As detailed in Hempel et al. (2023b), the US repo market is divided into four major segments: centrally cleared tri-party, centrally cleared bilateral, non-centrally cleared tri-party and non-centrally cleared bilateral. We merge our data with data on the two centrally cleared markets from the Office of Financial Research and data on the tri-party market from the Federal Reserve, and can infer non-centrally cleared bilateral repo from the residual. The transaction-level data also allows us to identify inter-dealer trades that could lead to double-counting, and capture activity by intermediaries outside our sampleâspecifically foreign banks and dealers.
+
+The size of the repo market
+
+To construct our estimate of the size of the repo market, we begin by establishing total gross repo from the annual reports of dealers and banks. Adding repo and reverse repo by these dealers would overstate total transactions, since some transactions may be between dealers. To account for this double counting we use transaction-level data that allow us to calculate inter-dealer transactions. Finally, we add inter-affiliate transactions as well as transactions in tri-party and cleared markets that are not intermediated by a U.S. bank or dealer, and therefore would not otherwise appear in our estimates, to reach our estimate of $12 trillion. This estimate should cover the entire US repo market, except for non-centrally cleared bilateral repo conducted in the US by foreign banks and their branches. As we will detail below, we conservatively assume this activity to be zero, implying that we likely under-estimate the true size of the US repo market.
+
+Total gross repo and reverse repo
+
+In Table 1, we examine total repo and reverse repo positions from annual reports. For bank holding companies, we break out the portion of their repo positions coming from their dealer subsidiary, since these will already be included in our dealer total.
+4
+We compare our estimates of total repo and reverse repo for U.S. dealers and non-dealer subsidiaries of U.S. banks to existing numbers in the Financial Accounts of the United States. Total gross repo reported by dealers and banks is $5.1 trillion and total gross reverse repo is $5.0 trillion, roughly double the total amounts reported in the Financial Accounts of the United States release, and significantly larger than estimates based on the methodology in Copeland et al. (2012), which would put total repo at $4.2 trillion and total reverse repo at $3.1 trillion. Still, our estimate may not capture the full extent of these dealers' and banks' repo activity, as it does not include inter-affiliate repo, which we discuss below.
+
+Table 1: Dealers' and bank holding companies' repo and reverse repo outstanding, 2024 ($ billions)
+
+Annual Reports (gross)
+
+Financial Accounts of the United States (net)
+
+Repo
+
+Reverse Repo
+
+Repo
+
+Reverse Repo
+
+1. Dealers
+
+3,710
+
+3,426
+
+2,336
+
+1,690
+
+2. Bank Holding Companies
+
+3,453
+
+3,378
+
+3. Dealer subsidiaries
+
+2,051
+
+1,814
+
+4. Other subsidiaries
+
+1,411
+
+1,564
+
+246
+
+325
+
+5. Total (line 1 + line 4)
+
+5,121
+
+4,990
+
+2,582
+
+2,015
+
+Notes: In the annual reports columns, "Other subsidiaries" (line 4) is calculated as line 2 â line 3. "Total" (line 5) is calculated as line 1 + line 4 in order to avoid double counting of bank-affiliated dealers' repo and reverse repo positions.
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, Financial Accounts of the United States.
+
+There are two reasons for the discrepancy between our estimates from annual reports and the estimates in the Financial Accounts. First, for banks, the Financial Accounts exclude non-bank and foreign subsidiaries of the consolidated entity that we capture. Second, and more importantly, for dealers, the Financial Accounts are derived from
+net
+amounts in quarterly FOCUS reports. Indeed, using net amounts from the FOCUS annual reports, we nearly exactly reproduce the Financial Accounts numbers. This leads the Financial Accounts to consistently understate the size of repo positions by these dealers. For dealers alone (line 1 of Table 1), Figure 1 compares repo and reverse repo from our annual report aggregates to the Financial Accounts over time. While the pattern in the two series is similar, it can be seen that the annual reports are considerably higher, reflecting substantial balance-sheet netting by dealers as shown previously in smaller samples such as Hempel et al. (2023b) and Bowman et al. (2024). In particular, we find that in 2024 balance sheet netting reduced aggregate gross repo and reverse repo by 58% and the median dealer or bank's gross repo and reverse repo by 14%.
+
+Figure 1. Comparison of dealersâ gross repo (from annual reports) and net repo (from the Financial Accounts)
+
+Sources: SEC Form X-17A-5, Financial Accounts of the United States.
+
+Accessible version
+
+Merging in transaction data
+
+To find the total size of the market, we cannot simply add repo and reverse-repo together since it would lead to double-counting. Any repo transactions between two dealers in our panel would be counted twice: once as a gross repo exposure by the borrowing firm, and again as a gross reverse repo exposure by the lending firm. To address this issue, we merge in transaction-level data from the cleared and tri-party markets, which we hand match to the dealers and banks in our sample.
+
+Merging in this transaction data also allows us to estimate the size of the repo market by segment, as shown in the first two columns of Table 2. For both GCF and non-centrally cleared tri-party markets, as well as the centrally cleared DVP segment, we construct totals from this transaction data for each dealer in our sample. We then calculate NCCBR as the remainder after subtracting the other segments from total gross repo and reverse repo, as shown in line 5 of Table 1. Our findings indicate that U.S. banks and dealers hold approximately $1.7 trillion in non-centrally cleared bilateral repo, which represents 34% of their total repo, and about $2.8 trillion in non-centrally cleared bilateral reverse repo, making up 56% of their total reverse repo. These results are similar to the findings from the dealer panel in Hempel et al. (2023b).
+
+Table 2: Gross repo market size by segment for US banks and dealers, 2024
+
+Repo
+
+Reverse Repo
+
+Inter-affiliate repo
+
+Inter-affiliate reverse repo
+
+Inter-dealer
+
+Total
+
+Tri-party
+
+1. Centrally cleared (GCF)
+
+229
+
+203
+
+0
+
+0
+
+185
+
+248
+
+2. Non-centrally cleared
+
+1,914
+
+60
+
+54
+
+271
+
+0
+
+2,300
+
+Bilateral
+
+3. Centrally cleared (DVP)
+
+1,462
+
+1,736
+
+0
+
+0
+
+1,458
+
+1,739
+
+4. Non-centrally cleared
+
+1,514
+
+2,990
+
+288
+
+37
+
+270
+
+4,561
+
+5. Total
+
+5,121
+
+4,990
+
+343
+
+309
+
+1,914
+
+8,850
+
+Notes: Row totals (in the right-most column) are calculated as Repo + Reverse Repo + Inter-affiliate repo + Inter-affiliate reverse repo â Inter-dealer.
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, OFR Cleared Repo Collection, Federal Reserve Tri-party Repo Data.
+
+Adjusting for inter-affiliate trades
+
+In the second two columns of Table 2, we add inter-affiliate repo and inter-affiliate reverse repo to our totals. These transactions are excluded in totals for consolidated reports by U.S. bank holding companies, but as covered in Hempel et al. (2023a), Bowman et al. (2024) and Hempel et al. (2025), inter-affiliate repo is an important component of repo activity. We calculate total inter-affiliate repo and reverse repo for these BHCs in line 5 from appendices to the reports of affiliated dealers, which give total repo and reverse repo with related parties.
+5
+These numbers are reported from the point of view of the bank subsidiary, so that reverse repo means that the bank subsidiary is lending to the dealer. The totals in line 5 confirms the importance of inter-affiliate repo, as inter-affiliate transactions stand at 10% of repo for these BHCs and 9% of reverse repo. We also decompose inter-affiliate transactions into inter-affiliate tri-party transactions and non-centrally cleared bilateral repo transactions. As shown in line 2, most inter-affiliate reverse repo â where banks lend to affiliated dealers â occurs in the tri-party segment, which matches with the results in Hempel et al. (2023a) that show banks lending to affiliated dealers through tri-party can make up as much as 40% of private tri-party volumes. Similarly, Bai et al. (2025) find that for the five largest domestic primary dealers, 46% of their overnight Treasury tri-party repo borrowing is sourced from affiliates.
+
+Adjusting for inter-dealer transactions
+
+In the second-to-last column of Table 2, we show total transactions between our sample dealers by segment. Non-centrally cleared tri-party generally involves dealers borrowing cash from money market funds or affiliated banks, so we assume that there is zero inter-dealer repo in the non-centrally cleared tri-party segment. For DVP and GCF, inter-dealer transactions are common, and we calculate total inter-dealer transactions from the transaction data. For NCCBR repo, given the lack of transaction-level data, we cannot observe inter-dealer repo directly. Instead, we assume that inter-dealer repo is 6% of NCCBR activity, as measured in the pilot sample collected by Hempel et al. (2023b).
+
+With these numbers for inter-dealer transactions in hand, we can calculate an estimate of total repo activity by segment for our sample firms in the final column. For each row in this column, total activity in the segment is calculated by taking the sum of total repo and reverse repo, adding inter-affiliate repo and reverse repo, and subtracting inter-dealer repo to avoid double counting. This gives us an estimate of the size of repo intermediated by U.S. banks and dealers. Table 2 lays out our estimates for US banks and dealers by segment, with a total gross size of $8.9 trillion, already significantly larger than previous estimates.
+
+Including repo intermediated by foreign banks and dealers
+
+Though Table 2 provides an estimate of gross repo activity by U.S. banks and dealers in our sample ($8.9 trillion), this figure still under-estimates the
+total
+size of the U.S. repo market. We know this because for the three segments of the market with transaction-level data, we observe a larger total market size than what we capture in Table 2. To estimate the total size of the U.S. repo market, we must consider repos managed by other intermediaries; namely, foreign banks and their branches in the U.S., whenever possible. While we cannot measure the size of these institutions in NCCBR, we do have data on the overall sizes of the tri-party, DVP, and GCF markets.
+
+Table 3 shows how our estimate of the total size of the repo market changes once we incorporate the data on these three segments. For NCCBR, we make a conservative assumption that there is no NCCBR activity not already captured, so we simply take the total from Table 2 ($4.6 trillion) and repeat it in Table 3. Once we include all tri-party and GCF transactions, our estimate increases to $11.9 trillion. In contrast, the highest estimate from Copeland et al. (2012) would stand at $7.4 trillion, but their figure incorporates some double-counting because it includes inter-dealer repos, which would further lower their estimate compared to ours.
+
+Table 3: Gross repo market size for US banks and dealers vs. all intermediaries, 2024
+
+Total, US banks and dealers
+
+Total, other intermediaries
+
+Total, all intermediaries
+
+Tri-party
+
+1. Centrally cleared (GCF)
+
+248
+
+103
+
+351
+
+2. Non-centrally cleared
+
+2,300
+
+1,318
+
+3,618
+
+Bilateral
+
+3. Centrally cleared (DVP)
+
+1,739
+
+1,678
+
+3,417
+
+4. Non-centrally cleared
+
+4,561
+
+-
+
+4,561
+
+5. Total
+
+8,850
+
+3,099
+
+11,949
+
+Notes: The first column ("Total, US banks and dealers") is taken directly from the right-most column of Table 2. For the third column ("Total, all intermediaries"), the totals in lines 1-3 are derived directly from the transaction-level data collections. For line 4, we conservatively assume no additional NCCBR activity (so our total is likely an underestimate). The figures in the middle column are calculated as the difference between the rightmost column and the leftmost column.
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, OFR Cleared Repo Collection, Federal Reserve Tri-party Repo Data.
+
+Growth of the repo market
+
+Our data also allows us to examine the growth of the repo market over time. Figure 2 shows the total repo market size has grown significantly over the period from 2019 to 2024. In addition, Figure 1 shows that repo and reverse-repo have increased by almost 70% since 2014, with repo rising by $1.6 trillion from $2.5 trillion in 2014 and reverse-repo up $1.8 trillion from $2.4 trillion in 2014. Growth of the market was particularly rapid over 2023, with repo and reverse repo growing by $1.2 trillion and $0.9 trillion respectively. Over this period, cleared bilateral repo grew by $0.4 trillion and reverse-repo by $0.3 trillion. Meanwhile, despite the coming implementation of the SEC's central clearing rule for Treasury repo, non-centrally cleared bilateral repo also grew by $0.4 trillion and reverse-repo by $0.5 trillion. Thus, as of year-end 2024, our data suggests that the growth of centrally cleared repo is not driven by dealers simply shifting existing repos from non-centrally cleared to centrally cleared segments.
+
+Figure 2. Total U.S. bank and dealer repo and reverse-repo by segment
+
+Note: Ket identifies in order from bottom to top. Volumes are gross repo and reverse repo before netting out inter-dealer repo. Appendix Table 1 provides the same data as Figure 2 but in table form, since some of the segments in Figure 2 are too small for a label.
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, OFR Cleared Repo Collection, Federal Reserve Tri-party Repo Data.
+
+Accessible version
+
+In the next section, we discuss the drivers of the growth of the repo market over this period in more detail. We show that the growth and variation in total repo has been driven by changes in customer borrowing and lending, rather than by dealers funding their own portfolios.
+
+Dealer to customer repo and inter-affiliate repo
+
+Finally, we examine the time-series variation in repo activity. There are two key purposes to repo transactions by dealers: the first is to fund their own holdings of securities, the second is to fund trades by their customers. To the extent that dealers use repo to fund their own holdings of securities, they must be net borrowers (since they generally hold positive net securities balances they will need to fund). To the extent that dealers use repo to fund customer trades, they serve primarily as intermediaries in this market, and their repo and reverse repo will be closely matched. The last line of Table 1 shows that in the aggregate, dealers and banks run nearly matched books, with only $131 billion (2%) of repo in excess of reverse repo.
+
+However, these aggregate numbers can mask substantial variation across dealers. Across dealers, long-run differences in size can lead to a spurious relationship between repo and reverse repo. But to the extent that dealers maintain a matched book, changes in repo must be matched against changes in reverse repo. To study the extent to which the typical dealer engages in matched-book intermediation we therefore consider regressions of the form:
+
+$$$$ \frac{{Change\ in\ repo}_{i,t}}{{\rm Repo}_{i,t-1}+{Reverse\ repo}_{i,t-1}}=\ \alpha+\beta\times\frac{{Change\ in\ reverse\ repo}_{i,t}}{{\rm Repo}_{i,t-1}+{Reverse\ repo}_{i,t-1}}+\varepsilon_{i,t}, $$$$
+
+where $$i$$ denotes a dealer and $$t$$ a year. This effectively controls for the size of dealers by looking only at changes and scaling by the lagged gross repo obligations of the firm. For reference, a perfectly matched book would have $$\alpha = 0$$ and $$\beta = 1$$.
+
+In the first column of Table 4, we conduct this regression for all dealers with over $1 million in gross repo and reverse repo. Our results show a strong positive relationship between changes in repo and changes in reverse repo, with an estimated coefficient of 0.566, significantly different from both zero and one. This suggests that while there is substantial passthrough intermediation, dealers on average do not maintain perfectly matched booksâon the margin, increases in reverse repo are associated with increases in repo, but not on a one-for-one basis. However, in Column (2), we introduce an interaction term for large dealers (specifically, those with over $10 billion in repo and reverse repo combined). While for small dealers only about 43 cents of every dollar repo goes to reverse repo, large dealers do run nearly matched books with about 85 cents of every dollar of repo going to reverse repo. This indicates that large dealers do, in fact, run nearly matched books.
+
+Table 4: Regression estimates of dealers' matched-book intermediation
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+Intercept
+
+0.028**
+
+0.036
+
+0.026**
+
+0.035
+
+(0.011)
+
+(0.027)
+
+(0.013)
+
+(0.027)
+
+Change in reverse repo
+
+0.566***
+
+0.426***
+
+0.567***
+
+0.432***
+
+(0.068)
+
+(0.087)
+
+(0.075)
+
+(0.09)
+
+Large dealer
+
+-0.027
+
+-0.029
+
+(0.028)
+
+(0.028)
+
+Change in reverse repo x Large dealer
+
+0.419***
+
+0.424***
+
+(0.096)
+
+(0.096)
+
+SLR dealer
+
+0.008
+
+-0.022
+
+(0.023)
+
+(0.081)
+
+Change in reverse repo x SLR dealer
+
+-0.014
+
+-0.081
+
+(0.149)
+
+(0.128)
+
+N
+
+725
+
+725
+
+725
+
+725
+
+$$R^2$$
+
+0.24
+
+0.27
+
+0.24
+
+0.27
+
+Note: Standard errors shown in parentheses. Statistical significance at the 10%, 5% and 1% levels is denoted by *, **, and ***, respectively.
+
+One explanation for the prevalence of matched book intermediation is that dealers want to run matched books to generate netting opportunities that will buffer their SLR ratios. In Column (3) we introduce an interaction term for dealers whose parent companies are subject to the SLR. The estimated coefficient is small and not statistically significant, which suggests the SLR is not a key driver. This remains the case in Column (4) when we also control for large versus small dealers. These results do not support the hypothesis that matched-book intermediation is be driven by the need to manage balance sheet, but may instead result from other factors correlated with size, such as having sufficient connections to customers to take advantage of this form of intermediation.
+
+While some repo â particularly transactions by small dealers â is likely driven by needs to carry securities inventories, most repo is instead passed through from customers lending cash to customers borrowing cash. Indeed, if we look at the variation in repo positions (rather than their levels), we find that fluctuations in repo and reverse repo positions are mainly driven by changes in borrowing from clients, such as hedge funds, and lending from cash providers like money market funds. Figure 3 illustrates this relationship, comparing changes in aggregate dealer reverse repo with changes in repo borrowing by hedge funds and changes in aggregate dealer repo activity with changes in lending by money market funds. Not only do these trends mirror each other, but most changes in dealer and bank activities correspond with shifts in customer behavior.
+
+Figure 3. Cumulative change since 2015 in dealer and customer repo activity
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, SEC Form N-MFP, OFR Hedge Fund Monitor.
+
+Accessible version
+
+These findings reinforce the view that a large share of repo activity reflects dealers' role as intermediariesâchanneling funds from cash-rich investors to clients seeking leverageârather than simply financing their own positions. Notably, Barth and Kahn (2021) argue that hedge funds' net borrowing in repo is largely driven by participation in the cash-futures basis trade. This highlights the central role of asset managers such as hedge funds and money market funds in general, and the basis trade in particular, for driving volumes in the repo market.
+
+Conclusion
+
+Our analysis provides the most comprehensive estimate of the size of the U.S. repo market to date, including the opaque non-centrally cleared bilateral repo market. We find that the gross size of the U.S. repo market reached $11.9 trillion in 2024, significantly above estimates in previous studies. Roughly 38% of that figure arises from the less transparent non-centrally cleared bilateral segment. Our data also reveals that dealers primarily act as intermediaries between those seeking cash and those providing it, rather than merely funding their own portfolios. Our analysis shows that the growth of the repo market has been driven by this matched-book intermediation, and that changes in the aggregate size of the repo market have been driven by changes in client demand rather than variation in dealers' inventories.
+
+References
+
+Jennie Bai, Erik Bostrom, Sebastian Infante, and Victoria Ivashina (2025). "Liquidity Flows to Bank-Affiliated Broker Dealers: Insights from Volumes and Prices." Working Paper. https://drive.google.com/file/d/1hDnltM5lVjvWAFJRLRZKUT575RYQf7VS/view
+
+Daniel Barth & R. Jay Kahn (2021). "Hedge Funds and the Treasury Cash-Futures Disconnect," Working Papers 21-01, Office of Financial Research, US Department of the Treasury.
+
+Bowman, David, Yesol Huh, and Sebastian Infante (2024). "
+Balance-Sheet Netting in U.S. Treasury Markets and Central Clearing
+," Finance and Economics Discussion Series 2024-057. Washington: Board of Governors of the Federal Reserve System.
+
+Copeland, Adam, Isaac Davis, Eric LeSueur, and Antoine Martin (2012). "
+Mapping and Sizing the U.S. Repo Market
+," Liberty Street Economics, June 12. New York: Federal Reserve Bank of New York.
+
+Financial Accounting Standards Board (2011). "
+Balance Sheet (Topic 210): Disclosures about Offsetting Assets and Liabilities (PDF)
+." Accounting Standards Update No. 2011-11, December.
+
+Gupta, Arun (2022). "
+The Internal Capital Markets of Global Dealer Banks
+," Journal of Financial Crises: Vol. 4 : Iss. 3, 165-188.
+
+Hempel, Samuel J., Calvin Isley, R. Jay Kahn, and Patrick E. McCabe (2023a). "
+Money Market Fund Repo and the ON RRP Facility
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, December 15, 2023.
+
+Hempel, Samuel J., R. Jay Kahn, Robert Mann, and Mark E. Paddrik (2023b). "
+Why Is So Much Repo Not Centrally Cleared? Lessons from a Pilot Survey of Non-centrally Cleared Repo Data
+," OFR Brief Series 23-01. Washington: Office of Financial Research.
+
+Hempel, Samuel J., R. Jay Kahn, Robert Mann, and Mark E. Paddrik (2024). "
+Repo Market Intermediation: Dealer Cash and Collateral Flow Management across the U.S. Repo Market
+," OFR Brief Series 24-07. Washington: Office of Financial Research.
+
+Appendix Table 1: Total U.S. bank and dealer repo and reverse-repo by segment
+
+Year
+
+2019
+
+2020
+
+2021
+
+2022
+
+2023
+
+2024
+
+Repo Tri-party
+
+1. Centrally cleared (GCF)
+
+153
+
+177
+
+103
+
+157
+
+313
+
+230
+
+2. Non-centrally cleared
+
+1,237
+
+1,401
+
+1,251
+
+1,300
+
+1,613
+
+1,915
+
+Bilateral
+
+3. Centrally cleared (DVP)
+
+817
+
+967
+
+785
+
+816
+
+1,233
+
+1,463
+
+4. Non-centrally cleared
+
+1,127
+
+623
+
+908
+
+764
+
+1,281
+
+1,514
+
+5. Total gross repo
+
+3,334
+
+3,168
+
+3,047
+
+3,037
+
+4,440
+
+5,121
+
+Reverse Repo Tri-party
+
+6. Centrally cleared (GCF)
+
+123
+
+180
+
+95
+
+130
+
+204
+
+204
+
+7. Non-centrally cleared
+
+21
+
+30
+
+99
+
+81
+
+18
+
+60
+
+Bilateral
+
+8. Centrally cleared (DVP)
+
+858
+
+1,016
+
+953
+
+995
+
+1,410
+
+1,736
+
+9. Non-centrally cleared
+
+2,419
+
+2,153
+
+2,202
+
+2,281
+
+2,780
+
+2,991
+
+10. Total gross reverse repo
+
+3,420
+
+3,379
+
+3,348
+
+3,487
+
+4,410
+
+4,991
+
+Note: All numbers in billions of US dollars.
+
+Sources: SEC Form X-17A-5, SEC Form 10-K, OFR Cleared Repo Collection, Federal Reserve Tri-party Repo Data.
+
+1. Sam Hempel, Federal Reserve Board (
+[email protected]
+); R. Jay Kahn, Federal Reserve Board (
+[email protected]
+); Julia Shephard, Harvard University. We thank Patrick McCabe for helpful comments. The views expressed in this note are solely those of the authors and do not represent the views of the Federal Reserve Board, the Federal Reserve System, or other Federal Reserve staff.
+Return to text
+
+2. The requirement to break out gross and net exposures separately comes from the Financial Accounting Standards Board (2011), which mandated these disclosures for all reporting periods starting January 1, 2013.
+Return to text
+
+3. Our data effectively expands on the sample compiled by Gupta (2022), who focuses on the ten largest primary dealers' filings of SEC Form X-17A-5.
+Return to text
+
+4. In other words, we have data from dealers' filings (FOCUS) and BHCs' filings (10-Ks). Simply adding these two categories together would double-count the activity of dealer subsidiaries of the BHCs in our sample. Thus, to avoid this double counting, we sum all gross positions from dealers' FOCUS filings plus all gross positions from BHCs' 10-K filings, minus the gross positions of BHC-affiliated dealers' FOCUS filings.
+Return to text
+
+5. Other dealers in our sample engage in inter-affiliate repo, especially domestic dealer subsidiaries of foreign BHCs. It is not necessary for us to add back in inter-affiliate transactions for these domestic dealer affiliates of foreign BHCs, since we collect these data from dealer subsidiaries' annual reports â which include inter-affiliate transactions â rather than from consolidated BHCs' annual reports. (We do not collect annual reports of foreign BHCs.) Therefore, we do not report their inter-affiliate transactions separately in Table 2.
+Return to text
+
+Please cite this note as:
+
+Sam Hempel, R. Jay Kahn, Julia Shephard (2025). "The $12 Trillion US Repo Market: Evidence from a Novel Panel of Intermediaries," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 11, 2025, https://doi.org/10.17016/2380-7172.3843.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,508 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 23, 2025
+
+Bank Lending to Private Credit: Size, Characteristics, and Financial Stability Implications
+
+Jose Berrospide
+, 
+Fang Cai
+, Siddhartha Lewis-Hayre, and 
+Filip Zikes
+1
+
+1. Introduction
+
+Private credit (or private debt) has emerged as one of the fastest-growing segments of nonbank financial intermediaries (NBFIs) over the past 15 years or so. Although there is no universal definition, private credit generally refers to direct loans made to mid-market businesses typically by non-bank vehicles such as private debt (PD) funds and Business Development Companies (BDCs) (Cai and Haque, 2024; Haque, Mayer, and Stefanescu, 2025). The asset class totaled $1.34 trillion in the U.S. (Exhibit 1) and nearly $2 trillion globally by 2024-Q2, and has grown roughly five times since 2009. Despite still being a relatively small fraction of the overall credit provided to nonfinancial businesses, the rapid expansion of private credit highlights a broader shift from traditional bank financing to alternative sources.
+
+The rapid growth of private credit is largely attributed to its diversification benefits to investors and expansion of financing possibilities for businesses. As private credit continues to grow, its increasing interconnectedness with other financial institutionsâsuch as banks, insurance companies, and traditional asset managersâis reshaping the landscape of credit markets. Therefore, its implications for banks and broader financial stability have received increasing attention among policymakers and researchers (see for example, the Federal Reserve's FSR, 2023; IMF's GFSR, 2024; Cook, 2025; Jang and Rosen, 2025). While immediate risks from private credit vehicles appear limited due to their moderate use of leverage and long-term capital lockups, the lack of transparency and understanding of the interconnectedness between private credit and the rest of the financial system makes it difficult to assess the implications for systemic vulnerabilities.
+
+In this note, we look into Federal Reserve's supervisory data FR Y-14Q and the U.S. Securities and Exchange Commission (SEC)'s 10-Q filings by BDCs to gain a better understanding of the potential risks in bank lending to private credit vehicles. We document that banks' committed amount of lending to private credit vehicles grew significantly over the past few years, from around $8 billion in 2013-Q1 to around $95 billion in 2024-Q4.
+2
+ We describe the characteristics of the credit lines, including interest rates, maturity, probability of default, and bank internal credit ratings, and compare these characteristics with those for the rest of the NBFI sector. Finally, we consider stress scenarios in which private credit vehicles draw down their lines of credit with banks simultaneously and study the potential impact of these drawdowns on banks' capital and liquidity positions.
+
+This note contributes to a growing strand of literature on bank and NBFI linkages. Some academic literature suggests that the expansion of private credit has been driven by regulatory constraints on banks and structural shifts in the financial system. Chernenko, Erel, and Prilmeier (2022) document how regulations that limit banks' ability to lend to unprofitable and risky firms tend to push these borrowers towards nonbanks; Loumioti (2022) finds that direct lenders step in when issuance of bank loans and securitized debt weakens and provide credit to borrowers with limited financing alternatives; Davydiuk, Marchuk, and Rosen (2024) provide evidence that business development companies (BDCs), a major vehicle for private credit, serve as substitutes for traditional lenders; Avalos, Doerr, and Pinter (2025) show that private credit tends to be more important in countries with lower policy rates, more stringent banking regulation, and a less efficient banking sector.
+
+Chernenko, Ialenti, and Scharfstein (2025) challenge the notion that private credit growth is solely a response to post-crisis capital regulations that significantly increased capital requirements for banks, as private credit funds operate with much lower leverage than banks. Instead, they argue that banks may find it more profitable to lend to risky corporate borrowers indirectly via lending to private credit vehicles or through affiliated private credit funds rather than on balance sheet. Similarly, Acharya, Cetorelli, and Tuckman (2024) emphasize the interdependence of banks and nonbanks, showing that banks act as liquidity providers for nonbanks, facilitating the growth of lending by nonbanks, including private credit funds, rather than being displaced by them.
+
+This note complements a couple of recent studies that also use confidential supervisory data. Haque, Jang, and Wang (2025) document how the largest U.S. banks increasingly extend lines of credit to BDCs, which in turn lend to middle-market firms, and show how this lending by banks to BDCs helped sustain credit supply to middle-market firms during the recent monetary tightening.
+3
+ 
+Levin and Malfroy-Camine (2025) document similar growth in lending by the largest U.S. banks to private equity and private credit funds. Compared to Levin and Malfroy-Camine (2025), we closely examine a broader range of lenders for a subset of private credit fundsâBDCsâby utilizing BDCs' public filings, and additionally characterize the riskiness of banks' credit exposures to private credit funds and the implications of credit line drawdowns on banks' capital and liquidity positions.
+
+Based on the data available to us, the financial stability implications of banks' lending to private credit seem limited so far. Banks' credit provision to private credit vehicles is still small relative to other NBFIs, but it is growing fast.
+4
+ Moreover, the credit quality of the bank loans to private credit vehicles is high. Although these loans tend to have higher utilization rates and higher interest rates, they exhibit lower default probabilities and lower delinquency rates compared with loans extended to other NBFIs. Beyond providing alternative financing options for businesses, private credit vehicles are less engaged in maturity transformation as they use long-term capital for long-term lending. As we show, banks seem well positioned to provide liquidity through credit lines behind this long-term lending, suggesting that the interconnections with private credit vehicles partly reflect efficient specialization in parts of the credit chain. Nevertheless, banks are increasingly expanding their strategic partnerships with private credit, and this increasing interconnectedness warrants close monitoring.
+ 
+
+2. Data and sample construction
+
+Due to their private, largely unregulated nature, public disclosures or regulatory filings by private credit vehicles are generally not available. However, lending to both BDCs and PD funds must be reported by the largest U.S. banks on the reporting form FR Y-14Q filed quarterly with the Federal Reserve. In addition, most BDCs provide some information on their borrowings from banks in their quarterly 10-Q filings with the SEC. In this section, we describe these data sources and outline the algorithms we develop to estimate bank lending to private credit vehicles.
+
+2.1. BDCs and PD funds in FR Y-14Q
+
+Our main data source is the Federal Reserve's Y-14Q Schedule H.1 (henceforth Y-14). These data contain all corporate loans over $1 million extended by large bank holding companies in the United States that are subject to the Federal Reserve annual stress test. As of 2024-Q4, these banks account for about 75 percent of total bank assets in the U.S. and around 71 percent of all bank-issued corporate loans. The Y-14 data contain, for each reported credit facility, committed and utilized amounts of credit lines and term loans, maturity, and interest rate, as well as banks' own quarterly internal risk measures, such as the probability of default (PD), loss given default (LGD), and credit ratings.
+
+The Y-14 data capture banks' lending to a wide range of NBFIs, including BDCs and PD funds. Starting with BDCs, our sample includes 190 BDCs, with 48 of them being publicly traded.
+5
+ 
+The list of BDCs comes from the SEC's website.
+6
+ We search the Y-14 data for BDC taxpayer identification numbers (TINs) and use string matching to search in bank-provided borrower names for BDC names and tickers. We find that 99 of the 190 BDCs in our sample appear in the Y-14 data, accounting for more than 90 percent of the total BDC assets. Turning to PD funds, we search the Y-14 data for these entities by string matching borrowers' names against a list of private credit managers from Preqin. We also search the Y-14 data for borrowers' names using regular expression searches for keywords such as "private credit" and "direct lending." We find a match of 201 PD funds, and we manually verify all matches.
+
+2.2. BDCs in 10-Q filings
+
+As shown in Figure 1, a significant part of the growth in the private credit industry is explained by BDCs. BDCs are not registered with the SEC as investment companies but they are subject to certain protective provisions of the Investment Company Act, such as governance requirements, compliance and recordkeeping provisions, and prohibitions on certain conflicts of interest. As such, BDCs must publicly file periodic reports, including Forms 10-Q and 10-K. A Form 10-Q is a quarterly report required by the SEC, that gives a comprehensive summary of a public company's performance. The 10-Q and 10-K forms include information such as company history, organizational structure, executive compensation, equity, subsidiaries, and audited financial statements, among other information.
+7
+ We develop an algorithm to search the 10-Q filings for SEC-provided tags that indicate debt commitments. We use the tags' unique identifier to find other fields associated with the commitments and we cross-check the commitment totals against the reported aggregate debt amounts. When reported, we manually collect the lender names associated with the reported credit facilities. We find that out of the 190 BDCs in our sample, 140 BDCs report 10-Q filings, and 127 BDCs report their total assets in those 10-Q filings. Of those 127 that report their total assets, our algorithm allows us to extract lending data from 74 BDCs. These BDCs account for 87 percent of the $333 billion in total assets from the 127 BDCs that report total assets. From these 74 BDCs, we find 119 bank lending facilities to 62 BDCs: the remaining 12 BDCs report borrowing from nonbanks.
+
+Figure 1. Assets under management at private credit vehicles
+
+Source: Preqin and BDC Collateral via LSEG. *Data for 2024 are as of Q2.
+
+Accessible version
+
+3. Bank lending to Private Credit
+
+3.1. Bank Lending to PD Funds and BDCs
+
+Based on Y-14 data, committed credit lines by the largest U.S. banks to private credit vehicles (PD funds and BDCs) have increased significantly over the past five years (about 145 percent, equivalently to an annualized growth rate of about 19.5 percent), reaching about $95 billion as of 2024-Q4. Utilized amounts have also grown by about 117 percent during the same period and stand at $56 billion (Figure 2).
+
+Figure 2. Bank Lending to Private Credit Vehicles
+
+Source: FR Y-14Q, Schedule H.1.
+
+Accessible version
+
+Bank loan commitments to NBFIs take the form of revolving credit lines and term loans, though most bank borrowing from private credit vehicles occurs through revolving credit lines. Banks currently hold about $79 billion in total revolving credit lines and about $16 billion in term loan exposures to the sector. Revolving credit lines include about $49 billion for BDCs and $30 billion for PD funds as of 2024-Q4. Term loan exposures are small, about $7 billion for BDCs and $9 billion for PD funds. The amount of drawdowns on those revolving credit lines stands at about $44 billion, implying a current utilization rate of 56 percent on average (about 59 percent if we add term loans).
+
+By comparison, commitments to other NBFIs have increased about 53 percent over the past five years and stand at $2.2 trillion. Commitments to nonfinancial corporations have increased only 14 percent (equivalently to an annualized growth rate of 2.7 percent) over that period and currently stand at $4.2 trillion. Banks currently hold $1.2 trillion in term loans to nonfinancial firms and $3 trillion in total revolving credit lines. Drawdowns on those revolving lines stand at about $800 billion, implying an average utilization rate of 19 percent (40 percent if we add term loans).
+
+Taken separately, the growth in loan commitments over the past five years indicates that BDCs have the largest increase in bank borrowing (about 186 percent) among all NBFIs, followed by the growth in lending to special purpose entities and other securitization vehicles (141 percent). The growth in loan commitments to PD funds is 103 percent.
+
+Regarding bank exposures to PD funds and BDCs identified in the Y-14 data, total loan commitments to these vehicles represent about 7 percent of banks' regulatory capital on average. Notably, about sixty percent of these loan commitments is concentrated among five U.S. GSIBs.
+
+3.2. Additional Estimates for BDCs based on 10-Q data
+
+Unlike in the Y-14 data, bank loans to BDCs reported in 10-Qs are not limited to those extended by the largest U.S. banks, but include lending facilities extended by all U.S. banks, foreign banks, and NBFIs, which provide some additional insight into BDCs' funding sources. The 10-Q filings therefore allow us to estimate the total lending to BDCs, based on the lead arranger information. For the 74 BDCs in our sample for which we are able to extract data on revolving credit facilities as of 2024-Q1, we find that lead arrangers on 50 percent of the loans provided to BDCs are U.S. banks; around 30 percent are foreign banks; about 2 percent are foreign non-banks; and the remaining 18 percent are unknown lenders, which may include other NBFIs. The largest U.S. bank lead arranger is J.P. Morgan Chase, followed by Citigroup, Wells Fargo, and Bank of America; the largest foreign bank lenders are BNP, SMBC, and Barclays. Lending by foreign banks has an average utilization rate of 67 percent compared with a 54 percent utilization rate on loans provided by domestic banks. The largest borrowers are Blackstone, Ares Capital and FS KKR.
+
+Some BDCs only report outstanding amounts of bank debt and not the amount of committed bank credit. As of 2024-Q1, the total amount of outstanding bank credit to the 74 BDCs in our sample equaled $43.6 billion. For 86 percent of the total outstanding amount reported in 10-Q filings, we estimate an average utilization rate of 57.6 percent. Assuming this utilization rate is representative of the utilization across all BDCs and that the committed amounts per dollar of assets are representative for all BDCs, we estimate that the total committed amount of credit to the BDC sector as a whole is around $87 billion. This compares to the $56 billion in credit commitments reported in the Y-14 data, implying that the largest U.S. banks in Y-14 account for around 60 percent of total credit commitments to BDCs as of 2024-Q1.
+
+3.3. Characteristics of bank credit lines
+
+The Y-14 data on bank lending to NBFIs can be informative about the risks that the large U.S. banks may face, considering for example differences in loan characteristics between private credit vehicles and other NBFIs. As shown in this section, the bulk of bank loans to NBFIs are rated investment grade, exhibit very low delinquency rates and tend to be of shorter maturity than loans to nonfinancial corporations.
+
+Table 1 summarizes some characteristics of the bank loans to NBFIs as of 2024-Q4. Loans to private credit vehicles have slightly higher interest rates. In particular, loans to BDCs and private debt funds have an average interest rate of 6.6 percent respectively, compared to 6.2 percent for other NBFIs.
+
+Table 1: Bank loans to NBFIs in FR Y-14Q, as of 2024-Q4
+
+ 
+
+Loan Commitment ($ Billion)
+
+Utilization Rate (%)
+
+Average Interest Rate (%)
+
+Time to Maturity (Years)
+
+Average Rating
+
+Delinquency Rate (%)
+
+BDCs
+
+56
+
+56.8
+
+6.4
+
+4.1
+
+BBB
+
+0.5
+
+Private Debt Funds
+
+40
+
+55.0
+
+6.6
+
+2.6
+
+BBB
+
+0.7
+
+Other NBFIs
+
+2193
+
+48.7
+
+6.2
+
+3.0
+
+BBB
+
+0.7
+
+Source: FR Y-14Q, Schedule H.1.
+
+Table 2 shows summary statistics for the distribution of default probabilities on bank loans to private credit vehicles and other NBFIs across different credit ratings. Loans to private credit vehicles have the smallest share of non-investment grade compared to loans to other NBFIs. BDCs also tend to perform better than loans to other NBFIs. Based on banks' own calculations, default probabilities of loans to BDCs are the smallest ones across almost all different credit ratings. However, bank loans to private debt funds have higher default probabilities than other NBFIs when looking at the mean but not in terms of the median. These findings are consistent with the very small delinquency rates of loans to private credit vehicles shown in Table 1 and suggest that banks take low credit risk in their lending to private credit.
+
+Table 2: BHC loans â Distribution of Default probabilities (%) by Rating, as of 2024-Q4
+
+ 
+
+Other NBFIs
+
+Private Debt Funds
+
+BDCs
+
+Mean
+
+Median
+
+% Obs
+
+Mean
+
+Median
+
+% Obs
+
+Mean
+
+Median
+
+% Obs
+
+All Firms
+
+1.65
+
+0.37
+
+100
+
+2.07
+
+0.22
+
+100
+
+0.71
+
+0.30
+
+100
+
+Inv. Grade excl. BBB
+
+0.38
+
+0.06
+
+16
+
+0.06
+
+0.05
+
+29
+
+0.06
+
+0.07
+
+10
+
+BBB
+
+0.37
+
+0.23
+
+37
+
+0.60
+
+0.20
+
+40
+
+0.44
+
+0.24
+
+52
+
+Non-Inv. Grade
+
+3.07
+
+1.03
+
+47
+
+5.76
+
+1.03
+
+32
+
+1.26
+
+0.85
+
+38
+
+Source: FR Y-14Q, Schedule H.1.
+
+As seen in Figure 3, utilization rates of bank credit lines were higher for private credit vehicles than for other NBFIs during the last decade. However, after the second half of 2023, utilization rates in the sector have converged to levels similar than for other NBFIs (about 59 percent), though they started to increase since the second half of 2024 and remain higher than those of loans to other NBFIs.
+
+Figure 3. Utilization Rate of Credit Lines
+
+Source: FR Y-14Q, Schedule H.1.
+
+Accessible version
+
+Beyond the loan characteristics in the Y-14 data, we try to assess risks at the borrower level. Although public disclosures of financial information by private credit vehicles are generally not available, Figure 4 below compares the borrower leverage, measured as the ratio of total debt to total assets, for a sample of 40 publicly traded BDCs and about 650 other NBFIs matched in Compustat. Leverage for other NBFIs has fluctuated around 42 percent over the past ten years. However, the leverage of BDCs has increased from about 40 percent in 2017 to 53 percent in 2024, suggesting that compared to other NBFIs, BDCs are increasingly financing their private credit deals with more debt.
+
+Figure 4. Borrower Leverage
+
+Source: Compustat and FR Y-14Q, Schedule H.1.
+
+Accessible version
+
+In short, bank credit lines to private credit vehicles appear to have higher utilization rates, higher interest rates, lower probability of default, and lower delinquency rates compared with those extended to other NBFIs. Over the past few years, however, among private credit vehicles, public BDCs have been increasing their leverage compared with other NBFIs.
+
+4. Banks direct credit exposure to private credit and implications
+
+4.1. Concentration and similarity of bank credit exposures to private credit
+
+How diversified are bank credit commitments across private credit vehicles and how similar are these commitments across banks? To address the first question, we calculate the Herfindahl- Hirschman Index (HHI) for each bank's portfolio of commitments to their private credit clients. The index takes values between 0 and 1, with higher values indicating less diversification (i.e., higher concentration) of credit commitments across borrowers. As shown in Panel (a) of Figure 5, the average HHI index declined significantly for both BDC and private credit fund portfolios over the past decade, but it remains at levels that indicate moderate concentration of bank credit exposures to private credit vehicles.
+
+Figure 5. Concentration and similarity of bank exposure to private credit vehicles
+
+Source: FR Y-14Q, Schedule H.1.
+
+Accessible version
+
+Turning to the similarity of bank exposures to private credit, we follow Girardi et al. (2021) and calculate the cosine similarity measure for each pair of banks. The measure takes values between -1 and 1, with higher values indicating more similarity of bank credit commitments to BDCs and PD funds. Panel (b) of Figure 5 plots the average cosine similarity across all pairs of banks in our sample. Similar to the HHI index, the portfolio similarity index also declined over the past decade for both BDC and PD fund portfolios, and the most recent readings indicate low levels of similarity. In summary, while bank credit exposure to private credit vehicles appears to be moderately concentrated, banks do not appear to be exposed to the same BDCs and PD funds, suggesting that idiosyncratic drawdowns on credit lines by private credit vehicles might not affect all banks to the same degree. However, correlated drawdowns by the private credit sector could be sizable, and we explore such a scenario below.
+
+4.2. Potential drawdowns in times of stress
+
+A potential risk that private credit vehicles may pose to the large banks emanates from sudden and large credit line drawdowns during times of financial stress.
+8
+ In the event of market disruptions and restricted access to capital calls, private credit vehicles may be forced to draw on their bank credit lines. As an illustration of the potential impact of this kind of event, an estimate under stress is constructed using a hypothetical scenario in which private debt vehicles withdraw all remaining undrawn funds from their credit lines. The estimate suggests an increased utilization rate of about 44 percentage points, equivalent to $36 billion of increased drawdowns (about 2 percent of Y-14 banks' CET1 capital). As shown in Table 3, such an increase in drawdowns would have a minimal impact on both aggregate CET1 capital ratio (about 2 basis points) and aggregate Liquidity Coverage Ratio (LCR, about 1 percentage point).
+9
+,
+10
+ Further, these loan portfolios are subject to severe stress in supervisory stress tests.
+
+Table 3: Private Credit Vehicles: Changes in Capital and Liquidity ratios
+
+(Îdrawdown = $36 billion)
+
+Regulatory Ratio
+
+Current (%)
+
+Drawdown rate assumption
+
+Implied Change in Numerator ($ Bil.)
+
+Implied Change in denominator ($ Bil.)
+
+New ratio (%)
+
+CET1 ratio
+
+13.02
+
+0.5
+
+0
+
+18
+
+13.0
+
+LCR
+
+122
+
+0.4
+
+-36
+
+-14.4
+
+121
+
+Source: FR Y-9C, S&P Capital IQ, and LCR.
+
+This exercise suggests that the largest U.S. banks are well capitalized and highly liquid, allowing them to absorb a significant drawdown risk from private credit vehicles, thus financial stability concerns from the direct credit channel seem limited. As a caveat though, this calculation provides an upper bound of the potential impact from private credit vehicles alone. Liquidity demands from private debt vehicles could be correlated with liquidity pressures elsewhere and lead to other NBFI drawdowns during stress, which could exceed historical experience given that NBFIs are now more reliant on credit lines for liquidity than they have been in the past.
+
+5. Other interactions of banks with private credit
+
+Besides providing direct loans to private credit vehicles, banks have also engaged in other activities in the evolving corporate credit landscape, increasing their interconnections with private credit and other NBFIs.
+
+Banks are increasingly originating their own private credit deals by using minority stakes in PD funds and BDCs. Chernenko, Ialenti, and Scharfstein (2025) show that banks may prefer to lend to middle market firms via affiliated BDCs or private credit funds to avoid regulatory and supervisory costs of holding these loans on balance sheets, generating higher return on equity than via direct lending. For example, Goldman Sachs (GS) and Morgan Stanley (MS) each operate a large publicly traded BDC: GS BDC, and Morgan Stanley Direct Lending Fund (MS DLF). Such practices help them provide loans for middle-market firms and investment opportunities for bank clients while managing their own capital costs (also see Cook, 2024).
+
+Banks continue to expand their partnerships with private credit providers. A recent Morgan Stanley and Oliver Wyman research report (2024) describes how the rise of private credit creates new opportunities for banks to generate revenues and returns by supporting the private credit industry. Supported by a structural shift in corporate demand for wholesale banking services, private credit lenders continue to expand their reach into product areas historically dominated by banks, including asset-based financing and infrastructure financing. Thus, it is expected that banks will continue to increase their exposures and interconnectedness with private credit lenders, including lending through warehouse financing, and originating and distributing loans to private credit managers, who will hold an increasing proportion of these loans, either originating directly or in partnership with the banks.
+11
+ Through these partnerships banks extend their originate-to-distribute models and risk-transfer deals, allowing private credit vehicles to gain access to and participate in underwriting their loan originations.
+
+In addition, to avoid the regulatory burden brought by the rise in leverage, banks are increasingly providing first-lien financing for private transactions and sourcing the second lien, or riskier and wider-spread yielding part of the debt to a private credit manager. This type of financing can be structured as a synthetic risk transfer, which enables a bank to compete in the direct lending space while unloading the riskiest part of the notes (transferring the risk) to private credit funds and other investors.
+12
+ One caveat in these arrangements is that banks are lending to the same NBFIs including private credit vehicles that are providing the credit insurance, meaning that in aggregate, some of the risk is actually not leaving the banking system as it appears, exposing banks to new vulnerabilities.
+13
+
+6. Conclusion
+
+In this note, we document the size and characteristics of bank loans to private credit vehicles. Based on the data available, banks' credit provision to private credit vehicles is growing fast but still small relative to other NBFIs, and the financial stability implications seem limited. Bank loans to private credit vehicles have higher utilization rates, higher interest rates, lower probability of default, and lower delinquency rates compared with those extended to other NBFIs. We also find that U.S. banks remain well capitalized and highly liquid, allowing them to absorb a significant drawdown risk from private credit vehicles. However, we also see public BDCs' increasing use of leverage compared with other NBFIs. Further, banks are also increasingly expanding their strategic partnerships with private credit vehicles. These developments and the increasing interconnectedness warrant close monitoring.
+
+We also recognize the limitations of current regulatory data, and the difficulties associated with identifying banks' exposures to private credit in these data. Ongoing efforts by the banking agencies implementing changes to reporting requirements should shed more light on the interconnections among banks, private credit, and other NBFIs going forward.
+
+References
+
+Acharya, V. V., N. Cetorelli, and B. Tuckman, 2024, 
+Where Do Banks End and NBFIs Begin? (PDF)
+ Federal Reserve Bank of New York Staff Reports, no. 1119.
+
+Aldasoro, I.. and S. Doerr, 2025, Collateralized lending in private credit, working paper.
+
+Avalos, F., S. Doerr, and G. Pinter, 2025, The global drivers of private credit, BIS Quarterly Review, March 2025.
+
+Block, J., Y. S. Jang, S. N. Kaplan, and A. Schulze, 2024, A Survey of Private Debt Funds, 
+Review of Corporate Finance Studies
+, 13, 335-383.
+
+Cai, F., and S. Haque, 2024, 
+Private Credit: Characteristics and Risks
+, FEDS Notes. Washington: Board of Governors of the Federal Reserve System.
+
+Chernenko, S., I. Erel, R. Prilmeier, 2022, Why Do Firms Borrow Directly from Nonbanks?, 
+The Review of Financial Studies
+, 35 (11), 4902â4947.
+
+Chernenko, S., R. Ialenti, and D. Scharfstein, 2025, Bank Capital and the Growth of Private Credit, working paper, Harvard University.
+
+Cook, L., 2025, 
+An Assessment of the Economy and Financial Stability (PDF)
+, Board of Governors of the Federal Reserve System.
+
+Cook, L., 2024, 
+Current Assessment of Financial Stability (PDF)
+, Board of Governors of the Federal Reserve System.
+
+Davydiuk, T., T. Marchuk, and S. Rosen, 2024, Direct lenders in the U.S. middle market, 
+Journal of Financial Economics
+, 162, 103946.
+
+Degerli, A. and P. Monin, 2024, 
+Private Credit Growth and Monetary Policy Transmission
+, FEDS Notes. Washington: Board of Governors of the Federal Reserve System.
+
+Ellias, J. A. and E. de Fontenay, 2025, The Credit Markets Go Dark, 
+The Yale Law Review
+, 134(3), 779-857.
+
+Erel, I., T. Flanagan, and M. Wiesbach, 2024, Risk-Adjusting the Returns to Private Debt Funds, available at SSRN: https://ssrn.com/abstract=4779852
+
+Federal Reserve, 2023, 
+Financial Stability Report, May 2023 (PDF)
+.
+
+Federal Reserve, 2025, 
+Financial Stability Report, April 2025 (PDF)
+.
+
+Girardi, G., K. W. Hanley, S. Nikolova, L. Pelizzon, and M. Getmanski Sherman, 2021, Portfolio similarity and asset liquidation in the insurance industry, 
+Journal of Financial Economics
+, 141(1), 69-96.
+
+Haque, S., S. Mayer, and I. Stefanescu, 2025, Private Debt versus Bank Debt in Corporate Borrowing, available at SSRN: https://ssrn.com/abstract=4821158.
+
+Haque, S., Y. S. Jang, and J. J. Wang, 2025, Indirect Credit Supply: How Bank Lending to Private Credit Shapes Monetary Policy Transmission, available at SSRN: https://ssrn.com/abstract=5125733.
+
+International Monetary Fund, 2024, 
+Global Financial Stability Report, April 2024
+.
+
+Jang, Y. S., 2024, Are Direct Lenders More Like Banks or Arm's-Length Investors? working paper, Penn State University.
+
+Jang, Y.S. and S. Rosen, 2025, Direct Lenders and Financial Stability, working paper.
+
+Kiernan, K., V. Yankov, and F. Zikes, 2024, Liquidity Provision and Coinsurance in Bank Syndicates, working paper, Federal Reserve Board of Governors.
+
+Levin, J. D. and A. Malfroy-Camine, 2025, Bank Lending to Private Equity and Private Credit Funds: Insights from Regulatory Data, SRA Notes, Issue Number: 2025-02, Federal Reserve Bank of Boston.
+
+Loumioti, M., 2022, Direct Lending: The Determinants, Characteristics and Performance of Direct Loans, available at SSRN: https://ssrn.com/abstract=3450841
+
+Morgan Stanely and Oliver Wyman, 2024, Extending Credit: The Evolving Role of Wholesale Banks in Credit Markets, available at: https://www.oliverwyman.com/content/dam/oliver-wyman/v2/publications/2024/nov/extending-credit-oliver-wyman-morgan-stanley.pdf
+
+1. The views expressed here are strictly those of the authors and do not necessarily represent the views of the Federal Reserve Board or the Federal Reserve System. 
+Return to text
+
+2. Bank committed credit lines to private credit and private equity firms combined stand at approximately $322 billion as of 2024-Q4. This is consistent with the number reported in the Federal Reserve's Financial Stability Report (April 2025) and also by Levin and Malfroy-Camine (2025). 
+Return to text
+
+3. Degerli and Monin (2024) argue that the ability of private credit funds to continue providing credit through the recent monetary tightening was also enabled by a large amount of dry powder available at these funds. Aldasoro and Doerr (2025) document that private credit loans are increasingly collateralized and surmise that the collateral channel may make private credit more pro-cyclical going forward. 
+Return to text
+
+4. As of 2024-Q4, considering outstanding bank loans to private credit vehicles of $56 billion, the size of bank funding to private credit vehicles is about 5 percent of the private credit industry size in the U.S. 
+Return to text
+
+5. BDCs are a way for retail investors to invest money in small and medium-sized private companies and, to a lesser extent, other investments, including public companies. BDCs are structured in different ways. Public BDCs refer to those with shares traded on national securities exchanges, and those whose shares are not traded on national securities exchanges but placed through SEC-registered or private placement offerings are non-publicly traded BDCs. BDCs typically finance middle-market firmsâcompanies with annual earnings before interest expense, income tax expense, depreciation and amortization (EBITDA) between $5 to $100 million, which historically have had limited access to funding from commercial banks and public debt markets. They also provide finance to development-stage companies in sectors such as technology, life science, healthcare information and services and sustainability industries, and private-equity owned or sponsored companies. 
+Return to text
+
+6. See 
+https://www.sec.gov/about/opendatasetsshtmlbdc
+. 
+Return to text
+
+7. In addition to the 10-Q, which is filed quarterly, BDCs are also required to file annual reports on Form 10-K. Information for the final quarter of a firm's fiscal year is included in the annual 10-K, so only three 10-Q filings are made each year. These forms contain information about the BDC's business and financial condition, financial statements, and information about certain material corporate events. 
+Return to text
+
+8. Keirnan, Yankov, and Zikes (2024) develop a simple framework to examine the capacity of the banking system to absorb correlated drawdowns by all borrowers, not just NBFIs, and asses the associated impact on banks' regulatory capital and liquidity ratios. 
+Return to text
+
+9. Under current capital requirements, undrawn non-cancelable credit lines have a 50 percent risk weight for commitments with maturity greater than 1 year, and 20 percent for those with maturity less than 1 year, in the calculation of banks' regulatory capital ratios. Under the LCR requirement, banks must hold high-quality liquid assets equal to 40 percent of the amount of unused credit lines to NBFIs. The requirements are 100 percent for liquidity facilities that back up commercial paper issuance and asset-backed commercial paper conduits. 
+Return to text
+
+10. If we also include full drawdowns by private equity funds, the increased drawdowns by all private finance vehicles would be $134 billion. In this scenario, CET1 ratio would decrease from 13.02 percent to 12.94 percent, and LCR would decrease from 122 percent to 120 percent. 
+Return to text
+
+11. Over the past few years, an increasing number of banks have announced partnerships with private credit companies, including Wells Fargo and Centerbridge Partners, Citigroup and Apollo Global Management, PNC and TCW, Webster Bank and Marathon Asset Management, Barclays and AGL Private Credit, among others. See, "It takes two to Tango in Private Credit," Middle Market Growth, Jan. 27, 2025, and "Private Credit's Next Act," Oliver Wyman, 2024. 
+Return to text
+
+12. See, for example, Private credit â a rising asset class explained â Deutsche Bank, https://flow.db.com/trust-and-agency-services/private-credit-a-rising-asset-class-explained#! 
+Return to text
+
+13. See, for example, Banks' Synthetic Risk Transfers Could Be Trouble for Financial System - Bloomberg, https://www.bloomberg.com/opinion/articles/2024-10-29/banks-synthetic-risk-transfers-could-be-trouble-for-financial-system 
+Return to text
+
+Please cite this note as:
+
+Berrospide, Jose, Fang Cai, Siddhartha Lewis-Hayre, and Filip Zikes (2025). "Bank Lending to Private Credit: Size, Characteristics, and Financial Stability Implications," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 23, 2025, https://doi.org/10.17016/2380-7172.3802.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

@@ -1,0 +1,222 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+November 29, 2019
+
+Do Negative Interest Rates Explain Low Profitability of European Banks?
+1
+
+Nicholas Coleman* and 
+Viktors Stebunovs
+*
+
+Introduction
+
+In this note, we examine the effects of low and negative sovereign yields on net interest margins and the general profitability of European banks. Recent research has shown that low-for-long interest rates weigh on bank profitability around the world (Claessens, Coleman, and Donnelly, 2018 and CGFS 2018). In Europe, as interest rates have gone even more negative in recent months, numerous banks and bank analysts have expressed concerns about the detrimental effects of negative interest rates on bank profitability and professed their support for a multi-tier system for reserve remuneration that shields a significant portion of excess reserves from negative policy interest rates.
+2
+ We ask whether sovereign yields and macroeconomic variables are, in fact, the dominant factors in determining the profitability of European banks, and whether the profitability of these banks would be higher if they operated in a more favorable interest rate and macroeconomic environment.
+
+Overall, we find evidence consistent with bank and analyst reports that sovereign yields, and to some extent other macroeconomic factors, are important for European bank profitability. However, bank-specific and banking sector-specific factors, in particular unobserved ones, appear to be much more important in explaining bank profitability. While we do find that higher sovereign yields, stronger economic growth, and higher inflation may boost profitability of European banks, our estimates suggest that the gap in U.S. and European bank profitability would narrow by less than a third, at most, if European banks operated in the more favorable U.S. interest rate and macroeconomic environment.
+
+Empirical Methodology and Data Analysis
+
+To answer the questions raised, we combine annual consolidated bank-level data for 387 institutions across 20 European countries from S&P Global Market Intelligence with country-level sovereign yields and other macroeconomic variables for the period from 2006 to 2018. Our sample includes banks from the following countries: Austria, Belgium, Bulgaria, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Slovakia, Spain, Sweden, Switzerland, and United Kingdom.
+
+We estimate the following regression model:
+
+$$$\begin{align} \text{Profitability}_{ijt} &= \alpha + \theta \text{Profitability}_{ijt-1} + \tau \text{3-Month Sovereign Yield}_{jt} + \gamma \text{Term Spread}_{jt} \\ &+ \pi \text{Negative Rates Dummy}_{jt} + \varphi \text{Inflation}_{jt} + \rho \text{Real GDP Growth}_{jt} \\ &+ \beta \text{Bank Controls}_{ijt} + \epsilon_{ijt},\end{align}$$$
+
+where $$$\text{Profitability}_ {ijt}$$$ is either the net interest margin (NIM) or return-on-assets (ROA) of bank i in country j in year t. $$$\tau$$$ and $$$\gamma$$$ capture the effects on profitability on the 3-month sovereign yields and the term spread, defined as a difference of 10-year and 3-month sovereign yields, respectively. $$$\pi$$$ captures the additional effect on profitability of a bank that is operating in a negative interest rate environment. Specifically, $$$\text{Negative Rates Dummy}_{jt}$$$ is a dummy variable for country j in year t that is equal to 1 if that country in that year has negative 3-month sovereign yield, and 0 otherwise. $$$\varphi$$$ and $$$\rho$$$ capture the effects of other macroeconomic variablesâinflation and real GDP growthârespectively. Finally, $$$\text{Bank Controls}_{ijt}$$$ is a set of bank-level controls that includes equity-to-assets, cash-to-assets, deposits-to-assets, and securities-to-assets ratios. In addition, we also allow for a differential effect of 3-month sovereign yields and the term spread on bank profitability depending on the bank business model, proxied by the importance of non-interest income to total income of the bank (not shown in the regression equation). We estimate the regression model first without the negative rates dummy variable to set a benchmark and then with that dummy variable to get a complete pictures of the effects of sovereign yields on profitability.
+
+Before discussing the estimation results, we illustrate the properties of our data in panels (a) to (c) of figure 1. Panel (a) shows the evolution of the distribution of 3-month sovereign yields. Since the Global Financial Crisis (GFC), 3-month sovereign yields have plunged across the countries, going negative in most countries in 2015 or earlier. Panels (b) and (c) show the evolution of the distribution of NIMs and ROAs. Over the sample period, median bank NIMs have declined 23 basis points, with banks that had historically high NIMs experiencing larger declines. In contrast, ROAs, having dropped in the aftermath of the GFC, had mostly recovered by 2014, and have changed little since despite the preponderance of negative interest rates across the sample countries. The diverging paths of NIMs and ROAs suggest that banks can compensate, at least temporarily, for lower net interest income, for example, by increasing their reliance on non-interest income, see Altavilla, Boucinha, and Peydro (2017). In addition, banks may incur lower non-interest costs, such as loss provisions, and may post, at least temporarily, capital gains on holdings of securities, as declines in interest rates may boost the quality of loans and prices of securities.
+3
+ Thus, ROAs may not be particularly sensitive to short-term sovereign yields.
+
+Estimation Results
+
+We present our regression results in table 1, and we focus on statistically significant relationships. Starting with the regressions for NIMs, in columns 1 and 2, we find a positive, statistically significant association between NIMs and 3-month sovereign yields ($$$\tau = 0.03 \ \text or \ 0.04)$$$. This result implies that as short-term sovereign yields decline by 100 basis points, bank margins compress a bit in the short run, by 3 to 4 basis points. In column 2, which is a specification where we include the negative interest rate dummy variable, we find a negative, statistically significant association between NIMs and the negative interest rate dummy variable $$$(\pi = 0.09)$$$. The result suggests that operating in a negative interest rate environment is associated with a reduction in NIMs in the short run by a material 9 basis points, in addition to the detrimental effects on NIMs from lower short-term sovereign yields captured by the interest rate variables. For reference, NIMs averaged roughly 130 basis points in our sample in 2018, implying that operating in the negative interest rate environment eroded about 7 percent of the average margins.
+
+Turning to the regressions for ROAs (columns 3 and 4), we do not find a statistically significant relationship between these general profitability measures and short-term sovereign yields.
+4
+ However, we do find (column 4) that operating in a negative interest rate environment is associated with a reduction in ROAs in the short run by a substantial and highly statistically significant 17 basis points, or roughly by 30 percent of the average ROAs in 2018.
+5
+ Perhaps surprisingly, we do not find an economically meaningful difference in the impact of sovereign yields and the term spread on profitability depending on bank business models (not shown).
+
+Moving to the effects of the other macroeconomic variables, we find positive, statistically significant relationships between NIMs and inflation $$$(\varphi > 0$$$ in columns 1 and 2) and between ROAs and real GDP growth $$$(\rho >0$$$ in columns 3 and 4). However, these relationships have small economic effects. For example, our results suggest that an increase in inflation of 100 basis points is associated with an increase in European bank NIMs by only about 1 basis point and an increase of GDP growth of 100 basis points will increase bank ROAs by only about 3 basis points. Overall, we find that sovereign yields and the other macroeconomic variables are both correlated with bank profitability, but they work in opposite directions. For example, while lower sovereign yields may weigh directly on NIMs, they may also boost inflation and real GDP growth, whose positive effect on NIMs could partially offset the adverse direct effect. Among the bank controls, some are not statistically significant, but bank-specific factors, including unobservable ones, appear to have significant explanatory power.
+
+Counterfactual exercise
+
+Next, we offer a back-of-the-envelope exercise to assess whether sovereign yields and the other macroeconomic variables are dominant factors in determining profitability of European banks. Based on the estimation results, we simulate the hypothetical profitability of European banks as if they operated in a more favorable interest rate and macroeconomic environment, such as in the United States. To construct the counterfactual, we first multiply the statistically significant regression coefficients (adjusted by the autoregressive term) on sovereign yields, the macroeconomic variables, and the bank-specific factors from the regressions in columns (2) and (4) by the differences between U.S. and European values for these variables in 2018. We then add up these differences for each category of factors and compare the change attributable to each factor with the actual differences in U.S. and European NIMs (roughly 190 basis points) and ROAs (roughly 80 basis points) to calculate the percentages of the actual differences that the simulation accounts for.
+6
+ The unexplained portion of the difference is attributed to unobservable banking sector-specific factors.
+
+We present the latter calculations in panel (d) of figure 1. The panel shows that the differences in sovereign yields between the United States and Europe accounts for only 18 percent of the difference in NIMs between U.S. and European banks and only 28 percent of the difference in ROAs. The macroeconomic environment accounts for almost none of the difference in either NIMs or ROAs. Therefore, the counterfactual exercise demonstrates that observable and unobservable bank- and banking system-specific factors rather than sovereign yields and the macroeconomic environment account for the majority of the profitability gap between U.S. and European banks.
+
+References
+
+Altavilla, Carlo, Miguel Boucinha, Jose-Luis Peydro (2018). "Monetary policy and bank profitability in a low interest rate environment," Economic Policy, Vol. 33, Iss. 96, pages 531â586
+
+Claessens, Stijn, Nicholas Coleman, and Michael Donnelly (2018). "Low-For-Long" Interest Rates and Banks' Interest Margins and Profitability: Cross-Country Evidence," Journal of Financial Intermediation, vol. 35, part A, pages 1-16.
+
+Committee on the Global Financial System (2018). "Financial Stability Implications of a Prolonged Period of Low Interest Rates," CGFS Papers No. 61.
+
+European Central Bank (2016). "Financial Stability Review," May.
+
+ 
+
+Figure 1: Interest Rates, Net Interest Margins, Return on Assets, and Decomposition
+
+
+Note: Legend entries appear in order from bottom to top.
+
+Panel (a) shows the 25th percentile, median, and 75th percentile of the three-month sovereign yields over our sample period. Panel (b) shows the 25th percentile, median, and 75th percentile of country averages of NIM over our sample period. Panel (c) shows the 25th percentile, median, and 75th percentile of country averages of ROA over our sample period. For panel (d), the estimated difference between European and U.S. bank NIMs is 191 bps and the estimated difference between European and US bank ROAs is 77 bps. Panels (a)-(c) include banks from the following countries: Austria, Belgium, Bulgaria, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Netherlands, Poland, Portugal, Slovakia, Spain, Sweden, Switzerland, and United Kingdom. U.S. data are from the Federal Reserve Bank of St. Louis' FRED database.
+
+Accessible version
+
+Table 1: Effects of Macroeconomic Factors and Interest Rates on Margins and Profitability
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+NIM
+
+NIM
+
+ROA
+
+ROA
+
+NIM lagged
+
+0.69***
+
+0.69***
+
+ 
+
+ 
+
+ROA lagged
+
+ 
+
+ 
+
+0.44***
+
+0.44***
+
+Macroeconomic Factors:
+
+Inflation
+
+0.01**
+
+0.01*
+
+0.04
+
+0.03
+
+Real GDP Growth
+
+0.00
+
+0.00
+
+0.03***
+
+0.03***
+
+Interest Rates:
+
+3-month Sovereign Yield
+
+0.04***
+
+0.03**
+
+-0.04
+
+-0.06
+
+Term Spread
+
+0.06**
+
+0.04*
+
+-0.02
+
+-0.07*
+
+Negative Rates Dummy
+
+ 
+
+-0.09***
+
+ 
+
+-0.17***
+
+Banks
+
+387
+
+387
+
+387
+
+387
+
+Observations
+
+4119
+
+4119
+
+4147
+
+4147
+
+Note: These regressions include bank-specific characteristics (not shown) and bank fixed effects. Regressions are clustered at the bank level. *** indicates statistically significant at the 1% level; ** at the 5% level; and * at the 10% level.
+
+1. The views in this paper are solely the responsibility of the authors and should not be interpreted as representing the views of the Board of Governors of the Federal Reserve System or any other person associated with the Federal Reserve System. Affiliation: * Board of Governors of the Federal Reserve System. 
+Return to text
+
+2. A multi-tiered deposit system assigns different rates to different tranches of bank deposits held at a central bank. 
+Return to text
+
+3. See the European Central Bank's May 2016 financial stability review. 
+Return to text
+
+4. While the regression coefficient on the term spread is weakly statistically significant in column (4), this finding is not robust. The same coefficient is not statistically significant in column (3). 
+Return to text
+
+5. In theory, global banks could shield themselves from negative rates by investing internationally, and our results suggest that the decline in bank profitability associated with negative rates is indeed higher for small banks than large banks. 
+Return to text
+
+6. U.S. data are from the Federal Reserve Bank of St. Louis' FRED database. 
+Return to text
+
+Please cite this note as:
+
+Nicholas Coleman and Viktors Stebunovs (2019). "Do Negative Interest Rates Explain Low Profitability of European Banks?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 29, 2019, https://doi.org/10.17016/2380-7172.2486.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

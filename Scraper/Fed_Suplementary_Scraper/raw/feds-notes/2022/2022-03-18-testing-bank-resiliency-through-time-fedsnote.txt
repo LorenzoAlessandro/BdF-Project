@@ -1,0 +1,192 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+March 18, 2022
+
+Testing Bank Resiliency Through Time
+
+Sergio Correia, Matthew P. Seay, and 
+Cindy M. Vojtech
+
+Summary
+
+A resilient banking system meets the demands of households and businesses for financial services during both benign and severe macroeconomic and financial conditions. Banks' ability to weather severe macroeconomic shocks, and their willingness to continue providing financial services, depends on their levels of capital, balance sheet exposures, and ability to generate earnings. This note uses the Forward-Looking Analysis of Risk Events (FLARE) stress testing model to evaluate the resiliency of the banking system by consistently applying severe macroeconomic and financial shocks each quarter between 2014:Q1 and 2021:Q3. We evaluate resiliency using two measures. The first resiliency measure is the banking industry's post-stress minimum level of common equity tier 1 (CET1) capital ratio.
+1
+ The second resiliency measure is the banking industry's capital buffer shortfall, or the amount of post-stress CET1 capital that would be required to bring all banks to their total 2021 CET1 capital requirements.
+
+First, some background on stress testing is required. Since 2011, the Federal Reserve has conducted annual stress test exercises that help the largest U.S. bank holding companies (BHCs) identify and address potential financial vulnerabilities.
+2
+ The annual stress test is a public exercise that shows how large banks would withstand financial stress. The exercise features a "severely adverse" macroeconomic scenario designed by the Federal Reserve, which generally follows patterns similar to the experiences of the 2007â09 financial crisis. In addition, the exercise requires some banks to submit at least one of their own macroeconomic stress scenarios that reflects risks that are most salient given their views on possible adverse paths of the macroeconomy as well as the exposures and activities of the bank.
+3
+
+The annual stress test exercise remains critical to assessing individual large-bank safety and soundness. FLARE, and other top-down models, provide less accurate projections of individual bank's results and are not a substitute for the annual stress test exercise, but FLARE is useful when focused on the resiliency of similar groups of banks or the banking system as a whole. For example, FLARE can be adapted to address macroprudential stress testing goals and be used to project aggregate capital ratios under different macroeconomic scenarios for groups of banks that do not participate in the Federal Reserve's annual stress test. In this note, we simulate three types of severe shocks on the performance of the entire banking industry, including banks with assets below $100 billion that are outside of the scope of the annual exercise.
+
+The first two scenarios we simulate for the banking industry are based on prior bank-submitted stress test scenarios, each reflecting distinct vulnerabilities. The first bank scenario, which we label the "asset price shock," includes broad decreases in real estate and equity prices without a severe slowdown in economic activity. In fact, it has the weakest slowdown among the three harsh scenarios that we evaluate. The second bank scenario, which we call the "loan loss shock," features a larger decline in both real activity and asset prices relative to the asset price shock. The contrast in the asset price and loan loss scenarios highlight that it is possible for a large financial shock to occur without a comparably severe shock to the macro economy. The third scenario, which is based on a Moody's scenario, includes the smallest declines in asset prices among the three scenarios, but the largest deterioration in economic activity and most severe term spread compression.
+
+Overall, we find that banking system resiliency to severe shocks increased in recent quarters as macroeconomic improvements lifted earnings and stabilized credit quality. In addition, banks retained a larger share of their earnings due to pandemic-related payout restrictions. As of the third quarter of 2021, the actual level of starting capital and post-stress minimum CET1 ratios stood near their highest levels since 2014.
+
+FLARE Model Overview
+
+FLARE is a top-down (i.e., bank level) stress testing model that projects banking system PPNR, loan losses, and capital using mostly FR Y-9C data and macroeconomic variables (hereafter: macro variables).
+4
+ Components of PPNR and losses by loan type are individually estimated using regressions with an autoregressive (AR) term, financial market and macro variables, and bank control variables. Our estimation sample includes 1997 to 2019. It excludes 2020 because the effects associated with the pandemic and the sizeable fiscal and monetary policy responses did not conform with the standard relationships between scenario variables and bank performance measures.
+5
+ The model forecasts each BHC's income, loan losses, and changes in capital based on the estimated sensitivities.
+
+Capital is projected using actual capital from the jump-off period, adding PPNR, and subtracting loan loss provisions, changes in accumulated other comprehensive income, taxes, and capital payouts. We apply a tax rate of 21 percent and assume capital payouts follow an AR process that converges to 45 percent of net income.
+6
+
+Severe Macroeconomic Shocks
+
+As mentioned above, two of the scenarios used in this note come from bank-submitted scenarios from prior annual stress test exercises. These two scenarios were identified based on their severity. When comparing results across a database of bank-submitted scenarios, the asset price shock scenario consistently generated low PPNR levels during the projection horizon, near the 5th percentile. Similarly, the loan loss shock scenario consistently generated loan losses at the 95th percentile.
+7
+ The Moody's scenario is a pre-pandemic scenario (2019:Q4). This scenario is based on the 96th percentile of likely outcomes from Moody's distribution of alternative scenarios. Moody's "develop[s] the basic outlines of [their] alternative scenarios by running multiple simulations to develop a probability distribution of economic outcomes."
+
+Figure 1 plots the different paths of the unemployment rate and the DOW Jones Index in the two bank-submitted scenarios and the Moody's scenario. Each solid, gray line represents the minimum and maximum values of a macro variable across bank-submitted scenario adjusted to a common base period. The Moody's scenario includes the largest shock to real activity and interest rates, and a more moderate deterioration in asset prices, relative to the other two very severe scenarios we tested (dotted, red line). The two bank-submitted scenarios chosen for this exercise reflect different tail risks. The asset price shock includes the least severe shock to the real economy and interest rates, and a broad decline in asset prices (dashed, blue line). The loan loss shock includes a larger decline in real economic activity and interest rates compared to the asset price shock and the most severe deterioration in asset prices among the scenarios evaluated in this exercise (small-dashed, yellow line).
+
+Figure 1. Unemployment and DOW Jones Stock Index by Scenario
+
+Notes: This figure includes the minimum and maximum values of the unemployment rate and DOW Jones Stock Index from 60 bank-submitted scenarios between 2016 and 2019, the Asset Price Shock, the Loan Loss Shock, and the Moody's scenario as of 2019:Q4, adjusted to a common base period and forecast horizon.
+
+Source: Federal Reserve Board, Form FR Y-14A; Moody's Analytics, Inc., U.S. Macro Forecast Database.
+
+Accessible version
+
+Macro Scenario Consistency
+
+To keep the macro scenario consistent through time, macro variables in the scenario are adjusted to account for their starting value at each new jump-off quarter. The technique used for each variable depends on how the variable enters FLARE's specifications. For example, the shift technique is used for the unemployment rate. This technique maintains the quarterly percentage point changes in the unemployment rate from the original scenario path. This method aligns closely with FLARE's specifications, which helps us capture risks from changes in banks' exposures rather than differences arising from changes in the scenario. For example, FLARE uses changes in the unemployment rate for generating loan losses, and the unemployment rate as a level does not enter any specifications. As a result, when the unemployment rate used in the resiliency exercise increases about 7 percentage points from its level at the jump-off quarter over the subsequent three quarters, using the shift technique provides a similar stress with each quarterly run of the model (figure 2, left panel). This differs from the design principles of the Federal Reserve's annual stress test scenarios, which tend to be countercyclical in order to encourage additional resilience during expansions and limit unwarranted reductions in credit supply during recessions. For example, the change in the unemployment rate used in annual stress test scenarios increased from 2017 through 2019 so that the unemployment rate in the scenario continued to reach 10 percent even as the actual unemployment rate fell as low as 3.6 percent at the end of 2019 (figure 2, right panel).
+
+Figure 2. Different Ways to Update Scenarios
+
+Notes: The left panel includes the Moody's scenario as of 2019:Q4, with forecasts beginning during the first quarter of 2017 â 2020 as applied in the resiliency exercise. The right panel of the figure includes Supervisory Severely Adverse scenarios from the 2017 to 2020 annual stress testing exercises.
+
+Source: Federal Reserve Board, Annual stress test scenarios (
+https://www.federalreserve.gov/supervisionreg/dfa-stress-tests.htm
+); Moody's Analytics, Inc., U.S. Macro Forecast Database.
+
+Accessible version
+
+Figure 3 includes two other methods used to move macro variables to a new jump-off period that also align with how these variables enter FLARE's specifications. Interest rates and GDP growth use the static method. This means the projected path of these variables are equal to their original path for each quarterly run of the model, regardless of jump-off. For example, if three-month Treasury rates are set to 25 basis points for all nine quarters in a given scenario, they will be set equal to 25 basis points in the resiliency exercise regardless of the initial jump-off level. The "percent" method applies the same percentage change for each variable. For example, if the DOW Jones Index falls 30 percent in the original scenario, the DOW will decrease 30 percent regardless of its level at jump-off. The stock market index, VIX, residential real estate prices, and commercial real estate prices use the percent method.
+
+Figure 3. Methods to Move Variables Across Scenario Jump-offs
+
+Notes: This figure shows the paths of GDP growth and the DOW Jones Index, with forecasts beginning in 2014:Q2 and 2020:Q1, adjusted to a common forecast horizon. These methods help form a consistent shock through time in FLARE.
+
+Source: Moody's Analytics, Inc., U.S. Macro Forecast Database.
+
+Accessible version
+
+Results
+
+We start by evaluating the distribution of PPNR projections under stress from 2014:Q1 â 2021:Q3. Figure 4 shows the distribution of minimum quarterly PPNR by scenario and bank. Prolonged term spread compression and harsh financial conditions lead to consistently lower PPNR in the Moody's scenario than in the other two scenarios. The average bank's PPNR under stress decreases about 39 percent from its actual levels in the Moody's scenario, compared to an average decline of about 28 percent in the other scenarios.
+
+Figure 4. Distribution of Quarterly PPNR
+
+Notes: This figure shows minimum quarterly PPNR projections as a fraction of RWA using FLARE from 2014:Q1 â 2021:Q3 and estimates from FLARE using the Moody's scenario and two severe scenarios submitted by banks as part of prior annual stress test exercises (Asset Price and Loan Loss Shock). Plots are generated using the kdensity function in Stata.
+
+Source: Federal Reserve Board, Form FR Y-9C, Consolidated Financial Statements for Bank Holding Companies; Federal Reserve Board, Form FR Y-14A, Federal Reserve Board, Large Bank Capital requirements (
+https://www.federalreserve.gov/publications/large-bank-capital-requirements-20210805.htm
+); Moody's Analytics, Inc., U.S. Macro Forecast Database; FLARE calculations.
+
+Accessible version
+
+Figure 5 shows the distribution of maximum quarterly loan loss projections by scenario and bank from 2014:Q1 â 2021:Q3 as a fraction of RWA.
+8
+ In normal times, credit quality is generally benign, and loan losses remain near 0 percent of RWA. As the business cycle turns, loan losses increase. Strained business conditions and large declines in real activity lead to outsized loan losses in the loan loss scenario. Loan losses peak around 0.6 percent of RWA on average in the loan loss scenario, or roughly nine times their levels at jump-off. The other scenarios produce peak quarterly loan losses equivalent to about 0.5 percent of RWA, or roughly seven times their levels at jump-off. As a point of comparison, BHCs' quarterly loan losses peaked around 0.5 percent of RWA on average during the 2007â09 financial crisis. The severe scenarios we tested in this exercise produce peak loan losses similar to that experience. PPNR during the crisis dipped to a minimum of 0.2 percent of RWA on average, significantly harsher than the PPNR projections in the scenarios we tested.
+
+Figure 5. Distribution of Quarterly Net Charge-Offs
+
+Notes: This figure shows maximum quarterly NCOs projections as a fraction of RWA using FLARE from 2014:Q1 â 2021:Q3 using the Moody's scenario and two severe scenarios submitted by banks as part of prior annual stress test exercises (Asset Price and Loan Loss Shock). Plots are generated using the kdensity function in Stata.
+
+Source: Federal Reserve Board, Form FR Y-9C, Consolidated Financial Statements for Bank Holding Companies; Federal Reserve Board, Form FR Y-14A, Federal Reserve Board, Large Bank Capital requirements (
+https://www.federalreserve.gov/publications/large-bank-capital-requirements-20210805.htm
+); Moody's Analytics, Inc., U.S. Macro Forecast Database; FLARE calculations.
+
+Accessible version
+
+In figure 6, we show the net result of the banks' ability to generate PPNR and withstand loan losses under very severe macroeconomic and financial shocks. After recovering from the large shock at the onset of the pandemic, banking system actual CET1 ratios neared their highest levels since 2014 (black line) and are well in excess of the 2021 requirement (thick, gray line) as of 2021:Q3.
+
+Actual banking system capital ratios increased, and banks became more resilient from 2015 through 2017. Aggregate minimum capital after severe stress increased about a percentage point during this time. Part of this increase reflects capital built to meet post-financial crisis reforms. Starting actual CET1 ratios and stressed CET1 ratios decreased from 2017 through 2019, in part due to larger capital distributions.
+
+Stressed CET1 ratios typically decrease about 1 â 2 percentage points from actual jump-off levels in each of the scenarios. The lower payout ratios, stronger PPNR, and lower provisions for loan losses, from 2020:Q4 through 2021:Q2 lifted post-stress CET1 ratios. The loan loss shock, which includes a deep recession and severe financial conditions is typically the most severe among the three scenarios we tested. The results from the test also suggest a financial shock with relatively less severe macroeconomic decline can pose considerable risks to banks' capital (blue line). This can be understood by the relative magnitudes of PPNR and loan losses. From 2014:Q1 through 2019:Q4, banking system PPNR was about 6.5 times the size of loan losses. In our scenarios, PPNR over the nine-quarter horizon is on average about 1.5 times the size of loan losses.
+
+Figure 6. Pre- and Post-Stress Aggregate CET1 Ratios
+
+Notes: This figure includes estimates from FLARE using the Moody's scenario and two severe scenarios submitted by banks as part of prior annual stress test exercises (Asset Price and Loan Loss Shock). CET1 ratios are computed as average of all banks in our sample weighted by risk-weighted assets. Capital losses include PPNR and credit losses; losses due to operational risk and the global market shock are excluded as they are not modelled by FLARE. 2021 CET1 capital requirements include the regulatory minimum of 4.5 percent plus 2021 stress capital buffers and GSIB surcharges, weighted by RWA. We assume a 7.0 CET1 ratio requirement for banks that are not subject to the annual stress test exercise.
+
+Source: Federal Reserve Board, Form FR Y-9C, Consolidated Financial Statements for Bank Holding Companies; Federal Reserve Board, Form FR Y-14A, Federal Reserve Board, Large Bank Capital requirements (
+https://www.federalreserve.gov/publications/large-bank-capital-requirements-20210805.htm
+); Moody's Analytics, Inc., U.S. Macro Forecast Database; FLARE calculations.
+
+Accessible version
+
+Figure 7 shows the potential capital buffer shortfall, or the amount of CET1 capital banks would need to meet total 2021 CET1 capital requirements by scenario.
+9
+ While aggregate post-stress minimum CET1 ratios significantly exceed total 2021 CET1 capital requirements, not all banks remain above their individual CET1 minimum and buffer requirements in our scenarios. Banks that fall below their total CET1 requirements may be less willing to provide financial services and may be at higher risk of deleveraging during periods of stress.
+10
+ In general, the capital buffer shortfall mirrors the contour of post-stress minimum CET1 ratios shown in figure 6. Banks' capital shortfall decreased from a pandemic-peak of about $100 billion to less than $50 billion in recent quarters, or about 3 percent of the banking system's $1.7 trillion CET1 capital. Banks with capital shortfalls equate to about 15 percent of banking system assets as of 2021:Q3, down from 45 percent during 2020:Q1. Taken together, these resiliency measures suggest banks are well-positioned to meet the loan demands from households and businesses during a severe stress.
+
+Figure 7. Capital Buffer Shortfall by Scenario
+
+Notes: This figure includes estimates from FLARE using the Moody's scenario and two severe scenarios submitted by banks as part of prior annual stress test exercises (Asset Price and Loan Loss Shock). The capital buffer shortfall is the amount of CET1 capital that would be required to bring all banks to total 2021 CET1 capital ratio requirements. Capital losses include PPNR and credit losses; losses due to operational risk and the global market shock are excluded as they are not modelled by FLARE. 2021 CET1 capital requirements include the regulatory minimum of 4.5 percent plus 2021 stress capital buffers and GSIB surcharges, weighted by RWA. We assume a 7.0 CET1 ratio requirement for banks that are not subject to the annual stress test exercise.
+
+Source: Federal Reserve Board, Form FR Y-9C, Consolidated Financial Statements for Bank Holding Companies; Federal Reserve Board, Form FR Y-14A, Federal Reserve Board, Large Bank Capital requirements (
+https://www.federalreserve.gov/publications/large-bank-capital-requirements-20210805.htm
+); Moody's Analytics, Inc., U.S. Macro Forecast Database; FLARE calculations.
+
+Accessible version
+
+Discussion
+
+The next shock to the banking system will likely look different than prior experience. Thus, studying banking system resiliency under alternative severe scenarios, as we do in this note, helps to uncover possibly underappreciated vulnerabilities. Given the flexibility of the FLARE model design and its placement outside of the supervisory structure, the possibilities for changing model specifications and scenario designs are much broader than what can be done through the annual stress test exercises.
+
+Applying a variety of scenarios also helps improve the capabilities of FLARE. As a top-down model, FLARE has limited ability to assess some vulnerabilities, such as cases where banks substantially change their business operations and risk tolerances. Moreover, if the model is merely calibrated based on a narrow set of vulnerabilities, it is likely to miss certain risks. Thus, we must stay vigilant about model risks and misspecification. FLARE will continue to evolve and to test alternative methodologies to better understand the relationship between resiliency of the banking system and its relationship to the macroeconomy.
+
+1. The CET1 ratio equals common equity tier 1 capital divided by risk-weighted assets. 
+Return to text
+
+2. This note will conduct analysis at the BHC level but will use the term bank and BHC interchangeably. 
+Return to text
+
+3. For example, in the 2019 annual stress test exercise instructions, BHCs are told to submit scenarios "appropriate to [the bank's] business activities and exposures, including any expected material changes therein over the nine-quarter horizon" 
+https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20190306b2.pdf
+. 
+Return to text
+
+4. The term "top-down" means that the model uses bank level data, as opposed to a bottom-up model that would use more granular data such as loan-level and security-level data. Many of the models used to project losses in the annual stress test exercises are bottom-up models. FLARE primarily relies on FR Y-9C data that is at the bank holding company level. The macro variables are a subset of the 16 domestic macro variables in the annual stress test exercise scenarios. 
+Return to text
+
+5. The 200 largest BHCs are included in the model, plus an additional pseudo-BHC that aggregates all the remaining smaller BHCs. 
+Return to text
+
+6. We assume annual asset growth of 4 percent, consistent with recent recessions. We also assume risk-weighted asset (RWA) growth of 4 percent. More information on FLARE is available in the technical paper available here: 
+https://www.federalreserve.gov/econres/feds/files/2022009pap.pdf
+.
+
+Return to text
+
+7. Bank-submitted scenarios only include nine quarters of data. The trends in the bank scenarios are continued so that they extend to thirteen quarters to forecast loan losses in FLARE. 
+Return to text
+
+8. In FLARE, loan losses are estimated using net charge-offs (NCOs). 
+Return to text
+
+9. Evaluating banks' stressed CET1 ratios relative to individual banks' 2021 CET1 capital requirements provides an intuitive comparison of capital requirement breaches through time. There are at least two potential drawbacks to this approach. First, banks' risk profiles evolve with time, and 2021 CET1 capital requirements may not align with banks' risk profiles in prior years. Second, the annual stress test scenarios are designed to preserve capital requirements during expansions and release capital requirements during stress events. Using the individual banks 2021 CET1 capital requirements does not account for changes in macroeconomic and financial conditions in prior quarters. 
+Return to text
+
+10. Most banks with projected capital shortfalls exceed the regulatory CET1 minimum ratio requirement of 4.5 percent and remain solvent. Banks with shortfalls are subject to capital distribution limitations. 
+Return to text
+
+Please cite this note as:
+
+Correia, Sergio, Matthew P. Seay, and Cindy M. Vojtech (2022). "Testing Bank Resiliency Through Time," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, March 18, 2022,  https://doi.org/10.17016/2380-7172.3070.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

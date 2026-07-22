@@ -1,0 +1,470 @@
+FEDS Notes
+
+Twitter
+
+June 29, 2023
+
+Impact of Leverage Ratio Relief Announcement and Expiry on Bank Stock Prices
+
+Ahmad Rahman and
+Missaka Warusawitharana
+
+The onset of the Covid-19 pandemic in early 2020 drastically increased uncertainty throughout the economy. This led to turmoil in various financial markets, evidenced by the Dow Jones Industrial Average in March 2020 posting its largest single-day drop since the 2008 global financial crisis. Treasury markets faced similar turmoil, as a dash for cash by investors led to liquidity challenges across a variety of markets.
+1
+Government agencies took action to stabilize financial markets and the economy.
+
+On April 1, 2020, as part of these efforts, the Federal Reserve announced an interim final rule, set to expire on March 31, 2021, that would temporarily exclude U.S. Treasuries and deposits at Federal Reserve Banks from the calculation of the Supplementary Leverage Ratio (SLR). One of the main goals of this interim rule was to "ease strains in the Treasury market resulting from the coronavirus and increase banking organizations' ability to provide credit to households and businesses."
+2
+On March 19, 2021, the Federal Reserve announced that the rule would expire as originally scheduled. This Note examines the effect of these announcements on the stock prices of banks subject to the SLR, based on analysis of abnormal stock returns around those events and the sensitivity of the abnormal returns to the bindingness of the SLR. This analysis provides a lens â admittedly partial â on the effectiveness of the rule. Related studies that have examined various impacts of the SLR include Koont and Walz (2021), Allahrakha, Cetina and Munyan (2018) and Favara, Infante, and Rezende (2022). Kroen (2022) performs similar event study analysis of the payout restrictions put in place during the pandemic.
+
+The Note is organized as follows. Section 1 presents a background on the SLR and the exemption, Section 2 discusses the analytical framework relating abnormal returns of bank stock prices and the SLR relief, and Section 3 presents our findings and conclusions.
+
+Background on the SLR and SLR Exemption
+
+The SLR was implemented as part of the Basel III reforms after the 2008 financial crisis. The ratio's numerator is tier 1 Capital, and the denominator comprises all on-balance-sheet assets â including U.S. Treasuries and deposits at Federal Reserve Banks â some off-balance-sheet items, and derivative exposures. As opposed to risk-based capital ratios, the SLR does not apply risk weights to items in the denominator. Category I-III banks are required to maintain an SLR of 3%; additionally, Global Systemically Important Banks (G-SIBs) are subject to an additional 2% enhanced SLR buffer requirement.
+
+As the Covid-19 pandemic affected global financial markets in early 2020, financial markets exhibited considerable strains. Investors globally liquidated risky assets and increased their cash holdings, resulting in a sharp increase in bank deposits. The associated rise in the overall balance sheets had the potential of causing their tier 1 capital levels to fall below the amount required by the SLR, which could have resulted in banks limiting their provision of financial services. As part of a broad package of actions designed to support the economy through the onset of the pandemic, the Federal Reserve provided temporary relief from the SLR requirement by allowing for Treasuries and reserves to be excluded from the denominator. Several other jurisdictions took similar action to ease the bindingness of leverage requirements.
+
+Effect of SLR Relief on Bank Stock Prices
+
+We evaluate the effect of the interim final rule by examining the impact of its announcement on bank stock prices. We begin by obtaining abnormal returns of bank stocks by fitting a Fama-French 4-factor model:
+
+$$$$ R_{jt} = \alpha + B_{j}R_{mt} + s_{j}SMB_t + h_{j}HML_{t} + u_{j}UMD_{t} + \epsilon_{jt} $$$$
+
+Where $$ \hat{R}_{jt} $$ is the rate of return of stock
+j
+on day $$ t,R_{mt} $$ is the return of the market index on day $$ t, SMB_{t} $$ is the average return on small-cap firms minus the average return on three large-cap portfolios on day $$ t, HML_{t}$$ is the average return on two high book-to-market portfolios minus the average return on two low book-to-market portfolios, $$ UMD_{t} $$ is the average return on two high prior return portfolios minus the average return on two low prior return portfolios, and $$ \epsilon_{jt} $$ is the error term. We then define abnormal returns as the prediction error:
+
+$$$$ AR_{jt} = R_{jt} - \hat{R}_{jt} $$$$
+
+For robustness, we estimate abnormal returns by fitting a market model as well:
+
+$$$$ R_{jt} = \alpha_{j} + \beta_{j}R_{mt} + \epsilon_{jt} $$$$
+
+where we use either the overall stock market return or the return on a financial institutions index as the market return. The latter approach enables us to distinguish market reactions at an individual firm, which may be related to firm-specific characteristics, from overall changes in the market value of financial institutions. Abnormal returns calculated using the Fama-French, return on the overall market, and return on the financial institutions index will be indicated by
+
+$$AR_{MM}$$ and
+
+$$AR_{FIM}$$,
+
+respectively.
+
+The abnormal returns were obtained for firms subject to the SLR, which are Category I-III firms. The abnormal returns were obtained on 4/2/2020 and 3/19/2021 â although the announcement of the rule was made on 4/1/2020, the announcement was made after market hours â to capture stock returns in the trading day after each announcement.
+
+We first report the mean abnormal returns for affected banks around the announcement of the relief, its expiry as well as a combined sample. As one would expect the abnormal returns around expiry to have the opposite sign to those around announcement, the combined sample considers the announcement returns and the negative of the expiry returns.
+3
+
+Table 1 presents the sample means of the various abnormal return calculations:
+
+Table 1.
+
+Announcement
+
+Expiration
+
+Combined
+
+$$AR_{FF}$$
+
+1.78
+
+-0.27
+
+1.02
+
+(0.007)
+
+(0.144)
+
+(0.004)
+
+$$AR_{FIM}$$
+
+0.15
+
+0.01
+
+0.07
+
+(0.8)
+
+(0.946)
+
+(0.816)
+
+$$AR_{MM}$$
+
+2.26
+
+-2.24
+
+2.25
+
+(0.002)
+
+(0.00)
+
+(0.00)
+
+$$N$$
+
+14
+
+14
+
+28
+
+$$p-$$values in parentheses
+
+One finds statistically significant abnormal returns for the relief announcement using the Fama-French 4 factor model, with no corresponding result upon expiry. The positive effect on announcement also carries over to a significant positive coefficient on the combined sample. One obtains similar results with the market model, with the additional finding now of a significant negative impact upon expiry. However, the statistical significance of these results disappears when one considers abnormal returns relative to an index for financial intermediaries, reflecting in part the substantial contribution of sample firms to such an index. Another interpretation is that these findings may reflect sectoral shifts around the announcement and expiry dates, as opposed to specific to the affected firms. Overall, the above results indicate that market participants viewed the provision of SLR relief as beneficial for the stock prices of affected firms.
+
+We use regression analysis to examine whether the extent of stock market reaction was related to the degree of relief a firm may have received. As the degree of relief can depend on several factors, we consider four variables: the leverage buffer, the differences in the SLR ratio from the relief, holdings of Treasuries as a fraction of total exposures, and reserves as a fraction of total exposures. The leverage buffer is the difference between the amount of required tier 1 capital when Treasuries and reserves are included in the SLR denominator and the actual amount held. For GSIBs, this buffer is the amount above the 5% eSLR requirement, and for non-GSIBs, the amount above the 3% SLR requirement. The differences in the SLR ($$\Delta$$SLR) is the difference between the SLR if Treasuries and reserves are included in the denominator and if they are excluded from the denominator. Because the Call Reports and Y-9C forms are filed on a quarterly basis, the data for the regressors is from the quarter prior to the event: i.e., for the rule announcement, the left-hand-side variables are from 2020Q1, and for the rule expiry announcement, the data are from 2020Q4. This analysis helps distinguish whether the above abnormal returns reflect broader sectoral shifts in the value of financial institutions or firm-specific changes that reflect the degree of potential benefit from the temporary relief.
+
+Table 2 presents the summary statistics for the regressors:
+
+Table 2.
+
+$$Z$$
+
+Announcement
+
+Expiration
+
+Combined
+
+Leverage Buffer
+
+2.61
+
+2.62
+
+2.62
+
+ÎSLR
+
+1.24
+
+1.19
+
+1.21
+
+Treasuries/Leverage Exposure
+
+0.05
+
+0.05
+
+0.05
+
+Fed. Funds/Leverage Exposure
+
+0.1
+
+0.1
+
+0.1
+
+$$N$$
+
+14
+
+14
+
+28
+
+As the table indicates, on average, firms have a sizeable SLR buffer, adjusting for the exclusions. This is partly driven by Category 2 and 3 banks, which have a lower SLR requirement than G-SIBs.
+4
+The temporary relief had a significant impact on the SLRs of affected firms, lowering them by more than 1 percentage point. This was driven by the sizeable holdings of Treasuries and reserves by these firms, which, sum up to 15 percent of their leverage exposure.
+
+We next report the results of regressing the abnormal returns from the announcement date on the various covariates noted above.
+5
+Table 3 presents these regression results:
+
+Table 3.
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+ÎSLR
+
+0.831
+
+0.804
+
+(1.42)
+
+(1.35)
+
+Lev. Buffer
+
+-0.422
+
+-0.491
++
+
+(-1.53)
+
+(-1.81)
+
+Treasuries/TLE
+
+42.72
++
+
+50.22*
+
+(2.14)
+
+(2.65)
+
+Fed. Funds/TLE
+
+5.310
+
+4.745
+
+(1.03)
+
+(0.97)
+
+Constant
+
+0.694
+
+-0.849
+
+2.823**
+
+1.428
+
+-0.911
+
+-2.797*
+
+(0.77)
+
+(-0.93)
+
+(3.16)
+
+(1.63)
+
+(-0.77)
+
+(-2.49)
+
+$$N$$
+
+14
+
+14
+
+14
+
+14
+
+14
+
+14
+
+$$t$$ statistics in parentheses
+
++
+$$p$$ < 0.10, * $$p$$ < 0.05, ** $$p$$ < 0.01
+
+We obtain a statistically significant and positive relationship between Treasury holdings and the abnormal return. This suggests that market participants viewed the reforms as particularly beneficial for firms that had larger Treasury holdings, as these firms would obtain higher relief. While we obtain a positive point estimate on the extent of relief, this is not statistically significant. We also find statistical significance at the 10% level for a higher abnormal return for firms that are closer to their leverage ratio requirements. While these results are fairly weak, they do provide indicative evidence that the market reaction to the announcement of the relief was tied to firm characteristics associated with the extent to which a firm would benefit.
+
+We carry out an analogous examination of the announcement return at expiry and find no statistical significance. Table 4 present the regression results for the combined sample where, as before, we use the negative of the abnormal return around expiry, and we include a dummy variable for the expiration date:
+
+Table 4.
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+$$AR_{FF}$$
+
+$$AR_{FIM}$$
+
+ÎSLR
+
+0.639
++
+
+0.626
+
+(1.74)
+
+(1.69)
+
+Lev. Buffer
+
+-0.168
+
+-0.229
+
+(-1.09)
+
+(-1.51)
+
+Treasuries/TLE
+
+15.93
+
+19.29*
+
+(1.52)
+
+(1.87)
+
+Fed. Funds/TLE
+
+4.919
+
+4.934
+
+(1.41)
+
+(1.44)
+
+Expiration Date Dummy
+
+-1.423*
+
+-0.13
+
+-1.448*
+
+-0.153
+
+-1.493*
+
+-0.215
+
+(-2.55)
+
+(-0.23)
+
+(-2.51)
+
+(-0.27)
+
+(-2.66)
+
+(-0.39)
+
+Constant
+
+0.933
+
+-0.628
+
+2.158**
+
+0.744
+
+0.441
+
+-1.301
++
+
+(1.55)
+
+(-1.04)
+
+(3.77)
+
+(1.32)
+
+(0.58)
+
+(-1.74)
+
+$$N$$
+
+14
+
+14
+
+14
+
+14
+
+14
+
+14
+
+$$t$$ statistics in parentheses
+
++
+$$p$$ < 0.10, * $$p$$ < 0.05, ** $$p$$ < 0.01
+
+We obtain broadly similar findings in the combined sample as upon announcement, albeit with less statistical significance. The one exception is the relationship between the degree of SLR relief and abnormal returns, which is now significant at the 10% level with the Fama-French model.
+
+Conclusion
+
+This note uses the abnormal stock return around the announcement and expiry of the temporary relief from the SLR provided during the Covid-19 pandemic to assess the market perception of this relief. We find that the relief â in particular, its announcement â was viewed positively by market participants and that this was related to some factors that would influence the degree to which a firm benefited from the relief. These findings indicate that the relief was viewed positively by shareholders, which admittedly provides a partial and imperfect lens to assess the efficacy of such a policy.
+
+References
+
+Basel Committee on Banking Supervision, Early Lessons on the Basel Reforms from the Covid-19 Pandemic, 2022.
+https://www.bis.org/bcbs/publ/d521.pdf
+
+Center for Research in Security Prices, CRSP daily stock data set, Retrieved from Wharton Research Data Services.
+https://wrds-web.wharton.upenn.edu/
+
+Favara, Giovanni and Infante, Sebastian and Rezende, Marcelo, Leverage Regulations and Treasury Market Participation: Evidence from Credit Line Drawdowns, Working Paper, 2022.
+http://dx.doi.org/10.2139/ssrn.4175429
+
+Kroen, Thomas, Payout Restrictions and Bank Risk-Shifting, Working Paper, 2022.
+http://dx.doi.org/10.2139/ssrn.4057374
+
+Koont, Naz and Walz, Stefan, Bank Credit Provision and Leverage Constraints: Evidence from the Supplementary Leverage Ratio, Columbia Business School Research Paper, 2021.
+http://dx.doi.org/10.2139/ssrn.3798714
+
+Meraj Allahrakha, Jill Cetina, Benjamin Munyan, Do higher capital standards always reduce bank risk? The impact of the Basel leverage ratio on the U.S. triparty repo market,
+Journal of Financial Intermediation,
+Volume 34, 2018, pp. 3-16.
+https://doi.org/10.1016/j.jfi.2018.01.008
+
+White, Halbert. A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity,
+Econometrica
+, vol. 48, no. 4, 1980, pp. 817â38.
+https://doi.org/10.2307/1912934
+
+1. See BCBS (2021) for a discussion of these events.
+Return to text
+
+2. Fed release:
+https://www.federalreserve.gov/newsevents/pressreleases/bcreg20200401a.htm
+
+Return to text
+
+3. Essentially, this treats the announcement and expiry abnormal returns as of equal magnitude with differing sign and estimates the average magnitude.
+Return to text
+
+4. The average SLR buffer for the G-SIBs equals 1.14.
+Return to text
+
+5. Due to the small number of observations, we run separate regressions, as opposed to including all regressors in a single model. We also check for heteroskedasticity using the White (1980) test and find that our model errors are homoscedastic across all specifications.
+Return to text
+
+Please cite this note as:
+
+Rahman, Ahmad and Missaka Warusawitharana (2023). "Impact of Leverage Ratio Relief Announcement and Expiry on Bank Stock Prices," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 29, 2023, https://doi.org/10.17016/2380-7172.3330.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,450 @@
+FEDS Notes
+
+Twitter
+
+May 12, 2025
+
+Commissions and Omissions: Trends in Real Estate Broker Compensation
+
+Rupkatha Banerjee and
+Andrew Paciorek
+
+Introduction
+
+In March 2024, the National Association of Realtors reached a $418 million settlement to end multiple antitrust lawsuits brought against it and other brokerages by home sellers (Delouya 2024a). By banning the longstanding practice of advertising commission rates to be paid to buyers' agents in home listings and requiring buyers and their agents to explicitly set compensation terms, the settlement has the potential to upend the traditional model of residential real estate broker compensation, in which the buyer's and seller's agents were each paid as much as 3 percent of the home value by the seller. News reports suggest that many real estate agents are considering leaving the industry, and some analysts expect commission rates to decline given the higher salience of the commission rate for prospective buyers (Yale 2024, Delouya 2024a).
+
+While these changes will likely play out over a period of years, they come on top of major innovations in real estate business models and transparency over the past two decades, in particular the rise of Zillow, Redfin, and other online real estate platforms that give buyers accurate and up-to-date information on properties without having to go through an agent or their local Multiple Listing Service. Although the conventional wisdom is that most sellers offer 2.5 or 3 percent commissions to both their own agent and the buyer's agent, there is little broad-based evidence on either the cross-sectional patterns in rates or how they have evolved over time in response to these changes in the industry.
+
+This note documents some of the patterns in residential real estate commissions by using a large dataset of real estate listings from CoreLogic that includes the commission rates advertised to buyers' agents. Our analysis shows a downward trend nationally in commission rates over the past two decades, as well as noteworthy (but largely idiosyncratic) heterogeneity in average rates paid across metropolitan areas.
+1
+We also look at commissions-related policies that vary across states and over time, such as buyer representation agreements and rebate bans, and find that there are no significant effects of the adoption of these policies on rates. We conclude that local norms likely matter for commissions, as individual sellers and buyers find it costly to deviate from the norm, given the possibility of incurring substantial losses from poor performance of low-commission listings on the market or lack of cooperation from brokerage agencies.
+
+Background
+
+The residential real estate market in the U.S. is huge, with an average of over 5 million new and existing home sales per year over the past decade and a total annual dollar volume of transactions averaging about $1.5 trillion. Even after applying a single-digit commission percentage, the amount paid as commissions to real estate agents and for other ownership transfer costs is thus quite large: In 2024, the BEA estimates that commissions and related costs totaled about $170 billion dollars, or 0.6 percent of US GDP.
+2
+
+Given these large aggregate and individual costs, and the fact that they are much higher than in comparable countries as noted by Barwick and Wong (2019), there has been considerable recent interest in the competitive structure of the real estate industry and whether it contributes to the high prevailing commission rate. Historically, the National Association of Realtors has required that the seller's agent advertise a commission rate to the buyer's agent when listing a home on their local Multiple Listing Service (MLS).
+3
+The seller was responsible for compensating both the buyer's and seller's agents, and the cost of the buyer's agent was thus opaque to the buyer, even though they may have effectively paid some or all of it through a higher resulting transaction price.
+
+The lawsuit against the National Association of Realtors (NAR) alleged that this rule incentivized collusion between real estate agents to increase commissions, resulting in a conflict of interest for the buyer's agent. In addition to the settlement payout, the NAR amended its rules in three major ways: First, sellers' agents can no longer advertise or extend an offer of compensation to buyers' agents through a property listing on an MLS. Second, sellers are no longer required to compensate both their agent and the buyer's agent (sometimes referred to as "decoupling"). Third, all brokerages must implement buyer representation agreements, which clearly lay out for prospective buyers how their agents will be compensated and the final compensation amount.
+
+These changes have the potential to affect commissions, house prices, and consumer welfare. A prevailing hypothesis is that the settlement will spur a more competitive real estate market, leading to lower costs and house prices for buyers in the long term (Delouya 2024b). Supporting this hypothesis, Kim (2025) finds that the combination of decoupling and market-determined feeds reduces broker commissions by at least half. Some of the savings by home sellers are passed through to homebuyers in the form of lower house prices, leaving both buyers and sellers better off. In contrast, Buchak et al. (2024) find that the settlement changes may have differential impacts on the welfare of current and prospective homeowners. While lower transaction costs increase the value of homeownership, they in turn lead to higher home prices and less affordability for new buyers.
+
+While the effects of the settlement will likely take years to play out, there have already been substantial changes in the real estate market in recent decades, including innovations in business models and transparency. With the rise of Zillow and online real estate markets, homebuyers have easy access to accurate and up-to-date information on properties. In theory, this development should lower commissions by minimizing the informational advantage of working with an agent. But the existing literature shows that despite these advances, agent commissions have consistently remained high (Barwick and Wong 2019, Schnare and Kulick 2009). In addition, some states have implemented policies pertinent to agent commissions and the process of home-buying, like buyer rebate bans and representation agreements, which explicitly outline agent responsibilities and the terms of representation and compensation. The prior existence of these policies and their effect on commissions may also provide useful information about how the settlement will play out.
+
+The remainder of this note documents patterns in commission rates, including their evolution over the past two decades, both to evaluate the effects of past changes and to provide a base of knowledge for potential changes in the industry in the wake of the NAR settlement.
+
+Data
+
+We use the CoreLogic Multiple Listing Service dataset that captures information on properties listed for sale or rent. The data include lot and property characteristics, listing details, location, and commissions or fees offered to the buyer's agent. These data come from regional real estate boards and cover around half of listings nationally, with coverage of some areas going back to the 1990s. Coverage is lower in the earlier years and expands over time, so we use data on properties listed for sale starting in the mid-1990s. We extract the commission rate advertised to the buyer's agent from a somewhat messy set of text fields.
+
+As the listing data are entered by the seller's agent, there is no comprehensive information on the seller-side commission or fee. Since there is a strong tendency to split commissions evenly amongst the buyer's and seller's agents, we think it likely that in a large majority of cases the total commission is exactly twice as high as the numbers shown, which would imply similar trends and heterogeneity across states on the buyer and seller sides. If that assumption is wrong, however, our evidence would be limited to just the buyer side.
+
+To the CoreLogic data, we add in data on personal income from the Bureau of Economic Analysis, population estimates from the Census Bureau, and land area estimates from the Census Gazetteer Files to compute estimates of per capita personal income and population density at the metropolitan statistical area (MSA) level. We also use the CoreLogic House Price Index and mean resale prices from Corelogic Market Trends to examine the relationship between commissions and home prices.
+
+We also collected data on buyer representation agreements and rebate bans from state legislative archives. Each state's representation agreement is approved by the state's real estate governing board, association, or Multiple Listing Service.
+
+Representation agreements
+outline buyer and real estate agent responsibilities, agent compensation, the type of representation, among other details. The types of representation are "designated" and "dual" agency; the agent solely represents the buyer's interests in the former case and both the buyer's and seller's interests in the latter. The compensation clause specifies whether the buyer's agent is to be paid by the buyer, the seller, or both. Compensation is split amongst buyer and seller in dual agency cases and when the seller's agent offers less in commission than the originally agreed upon amount in the representation agreement. If an offer of compensation is not made by the seller, the buyer is required to choose between a retainer or flat fee, an hourly rate, or a percentage of the sales price of the home (often whichever is the greatest). The terms of compensation are negotiated by the buyer and the buyer's agent. Below is an example of a compensation clause from the Buyer Broker Service Agreement approved by the Oklahoma Real Estate Commission:
+
+Compensation of Broker
+
+Broker shall be compensated in the following manner (check only those that apply):
+
+a. Buyer shall pay Broker a retainer fee of $_________ due and payable upon execution of this Agreement, which amount shall be applied towards Broker's compensation upon closing on a transaction in which Buyer acquires Property. In all other circumstances, the payment shall be considered as a non-refundable retainer fee earned by the Broker.
+
+b. Buyer shall pay the Broker, at closing, an amount equal to $_________ or _________% of the gross selling/lease price. Buyer shall receive a credit towards the payment of the Broker's compensation in an amount equal to any payment made to the Broker by any other Broker or the Seller.
+
+c. By acceptance of the amount of compensation offered by a Listing Broker or the Seller.
+
+d. Other: _________
+
+Buyer rebate bans
+prohibit agents from using cash refunds and other incentives to encourage buyers to use their services. The rebate is a percentage of the buyer agent's commission that gets credited to the buyer after they close on a home. We were able to verify buyer representation agreement requirements in 15 states and buyer rebate bans in eight states. Table 1 lists all of the states that we're aware of that have adopted at least one of these policies.
+
+Table 1: Policy Adoption State and Years
+
+State
+
+Rep. Agreement
+
+Rebate Ban*
+
+Alabama
+
+1975
+
+Alaska
+
+2002
+
+pre-2007
+
+Georgia
+
+1994
+
+Idaho
+
+1996
+
+Kansas
+
+1980
+
+Maryland
+
+2016
+
+Minnesota
+
+1993
+
+Missouri
+
+1998
+
+2003
+
+Mississippi
+
+1954
+
+Oklahoma
+
+1999
+
+pre-1998
+
+Oregon
+
+pre-1953
+
+New Hampshire
+
+1996
+
+North Carolina
+
+1995
+
+Pennsylvania
+
+1998
+
+South Carolina
+
+1997
+
+Tennessee
+
+2007
+
+Utah
+
+2005
+
+Vermont
+
+1995
+
+Virginia
+
+2012
+
+Wisconsin
+
+2004
+
+Notes: Due to sparse digitization of old state codes, we can see when states amended their legal codes with a buyer rebate ban clause, but it is difficult to determine when the code was first written. Thus, the rebate ban dates are based on the year of the first amendment.
+
+Recent surveys show that almost half of homebuyers and sellers did not know how much their agent received in commission and over a third did not know that they could negotiate fees at all (Solá 2024). Since representation agreements make compensation more salient to buyers, we might expect this transparency to put downward pressure on agent commissions. As for rebate bans, it is possible that rebate bans might drive up advertised commission rates in the relevant states, because the existence of a ban removes much of the direct incentive for buyers to shop around for better deals or even to consider commissions as part of their decision process, reducing competition in the market. Alternatively, if the payment of rebates by buyers' agents simply leads them to steer clients to properties with higher gross commission rates, putting upward pressure on these rates, then we might find a negative relationship between rebate bans and advertised commissions. (Since we do not observe rebates directly, we cannot assess whether the net commission after subtracting the rebate is higher in states with a rebate ban.)
+
+Analysis
+
+Time Trends and Distributions
+
+The blue line in figure 1 shows a clear but modest decline in the national average buyer's agent commission rate over time, with the average rate falling from about 3 percent in the late 1990s to about 2.7 percent today. Coverage has expanded significantly since 1995, as most states had a sparse number of raw observations in the mid to late 1990s; the median number of observations per state in 2015 is 10 times higher than the median in 1995. Therefore, it is possible that the downward trend could be driven by selection into the sample instead of true declines in rates. To address this concern, we plot a second line (in red) with only observations from those states with relatively good coverage throughout the sample period. Specifically, these are the 14 states with the highest number of observations in 1995. The line shows a slightly larger decline than the national average.
+
+Figure 1. Average commission rate over time
+
+Accessible version
+
+To further illustrate this evolution, figures 2 and 3 show the densities of commission rates in 2002 and 2022. In 2002, commissions are strongly clustered at 3 percent, with smaller bumps at 2.5, 2.75, and 3.5 percent. In 2022, we see more of a spread in the 2-3 percent range, with more 2.5 and 2 percent rates than before. The highest bar is still at 3, suggesting that the industry norm of the 6 percent total commission paid to buyer and seller agents persists to some extent, at least under the usual assumption that the buyer and seller agents split commissions equally. This persistence may be explained by steering and how poorly low-commission properties fare. Low commission listings stay on the market for longer and are less likely to sell (Barwick and Wong 2019). Brokerage firms that offer low commissions are less likely to obtain cooperation from agents from larger firms, who make up the majority of the real estate market. Thus, they are unable to compete with full-commission brokerage agencies (Barwick et al. 2017).
+
+Figure 2. Distribution of commissions, 2002
+
+Accessible version
+
+Figure 3. Distribution of commissions , 2022
+
+Accessible version
+
+To the extent we do see some breakdown of the 6 percent norm over this period, two explanations seem most likely to us. The first, which is difficult to quantify given its nationwide scope, is the aforementioned technological innovation, in particular the ability of buyers to do their own searching for homes without having to rely on an agent, which should reduce the willingness to pay for brokerage services. Of course, since most buyers are not paying their own agents directly, the reduction in commissions must happen in a more diffuse way, for example through changes in the relative bargaining positions of buyers and sellers.
+
+The second explanation, about which we have more to say, is the increase in house prices relative to median household incomes over this period. Real median house prices have almost doubled since 1995. When house prices are higher relative to consumer prices or prevailing incomes, real estate agents may be more willing to work for lower commission rates, since the higher selling price offsets the lower rate. Consistent with this hypothesis, Schnare and Kulick (2009) find a counter-cyclical relationship between prices and rates within a few metro areas during the early 2000s housing boom. Alternatively, if commission rates are fixed, Hsieh and Moretti (2003) point out that relatively free entry of real estate agents will result in each agent being less productive (i.e., buying and selling fewer homes), such that total earnings do not scale with prices. They find empirical evidence supporting this hypothesis, consistent with the idea that commission rates do not vary much with prices.
+4
+
+To examine the relationship between house prices and commission rates in our data, we first look at the cross-sectional distribution of median commission rates across MSAs. Figure 4 shows the distribution of MSA medians in 2022. It looks similar to figure 3, suggesting that a fair amount of the variation in rates happens across metropolitan areas, not just within them. Figure 5 shows a map of these MSA median commission rates. The most striking pattern we see here is that rates are notably lower in the Northeast and in California and the Pacific Northwest, which also are the areas with the highest house prices.
+
+Figure 4. Distribution of median rate by CBSA, 2022
+
+Accessible version
+
+Figure 5. Median commission rates by MSA, 2022
+
+Accessible version
+
+We can use panel regressions with MSA-level fixed effects to examine whether this negative relationship between house prices and commission rates can explain the gradual downtrend in figure 1. Table 2 shows these results. We find that the coefficient on the time trend is small and negative (column 1), consistent with figure 1. This trend essentially disappears when we account for house prices in the regressions. A 0.01 log point (about 1 percent) increase in the CoreLogic House Price Index results in about a .003 percentage point decrease in commission rates (column 2), which implies that the doubling in house prices since the mid-1990s (an increase of about 0.7 log points) reduced commissions by about 0.2 percentage point, more than half of the actual nationwide decline over this period.
+5
+In column 3 of table 2, we also look at the impacts of MSA per capita personal income on commission rates. Perhaps surprisingly, we find no meaningful relationship with income, and the coefficient on house prices is nearly identical in this specification.
+6
+
+Table 2: Comission rates, house prices, and income
+
+(1)
+
+Commission rate
+
+Coef/SE
+
+(2)
+
+Commission rate
+
+Coef/SE
+
+(3)
+
+Commission rate
+
+Coef/SE
+
+Year
+
+-0.011***
+
+-0.002
+
+-0.001
+
+(0.001)
+
+(0.001)
+
+(0.003)
+
+Log(HPI)
+
+-0.262***
+
+-0.256***
+
+(0.032)
+
+(0.044)
+
+Log(Pers. Inc)
+
+-0.027
+
+(0.090)
+
+Observations
+
+45805008
+
+45385387
+
+44861856
+
+R2
+
+0.06
+
+0.08
+
+0.08
+
+Notes: The table reports estimates from transaction-level regressions across 1995-2023 using MSA-fixed effects. The dependent variable is commission rate. Standard errors are clustered at the MSA level. *** p < 0.01,  ** p<0.05, * p<0.10
+
+It is also interesting to examine the within-metro distribution of commissions. In Figure 6, we look a little more closely at the commission rates in the low-commission Northeast, plotting a histogram of individual commission rates within the New York MSA, which primarily consists of New York City, Long Island, the northern half of New Jersey, and the northern New York suburbs. The median and mode of this distributionâand about half percent of the observationsâare at 2 percent, which we interpret as evidence that there is still a strong commission rate norm in New York, just a lower one than in many other metropolitan areas outside of the Northeast.
+
+Figure 6. Distribution of commission rates for NY-NJ-PA MSA, 2022
+
+Accessible version
+
+We also observe that areas with lower average commission rates tend to have more variation in rates, suggesting that when the 3 percent norm breaks down in a given area, the new norm (for example, 2.5 percent) is not quite as strong. Figures 7 and 8 show this in two different time periods, 2002 and 2022. There is a small but statistically significant negative correlation between MSA-level standard deviations and means of commission rates in both periods.
+
+Figure 7. Mean vs. standard deviation of rates, 2002
+
+Accessible version
+
+Figure 8. Mean vs. standard deviation of rates, 2022
+
+Accessible version
+
+Buyer Representation Agreements and Rebate Bans
+
+Finally, we look at policies that might be expected to strengthen the power of home sellers and buyers in negotiating rates with their agents. We separate states into groups based on whether they have implemented buyer representation agreements or a rebate ban, as described above. To isolate the effects of these policies on rates, we looked at the treatment effects of buyer representation agreements and rebate bans in the periods before and after implementation, after including state and year fixed effects and a control for house prices. Table 3 shows the results from these regressions.
+
+Table 3: Buyer representation agreements and rebate bans
+
+(1)
+
+Commission rate
+
+Coef/SE
+
+(2)
+
+Commission rate
+
+Coef/SE
+
+(3)
+
+Commission rate
+
+Coef/SE
+
+(4)
+
+Commission rate
+
+Coef/SE
+
+Year
+
+-0.01***
+
+-0.00
+
+-0.01***
+
+-0.00
+
+(0.001)
+
+(0.002)
+
+(0.001)
+
+(0.002)
+
+Buyer rep. agreement
+
+-0.00
+
+-0.03
+
+(0.059)
+
+(0.047)
+
+Rebate ban
+
+-0.01
+
+-0.04
+
+(0.027)
+
+(0.027)
+
+Controls
+
+No
+
+Yes
+
+No
+
+Yes
+
+Observations
+
+46934684
+
+45385387
+
+46934684
+
+45385387
+
+R2
+
+0.06
+
+0.08
+
+0.06
+
+0.08
+
+Notes: The table reports estimates from transaction-level regressions across 1995-2023 with state-fixed effects. Controls described in text. Standard errors clustered at the state-level. *** p < 0.01,  ** p<0.05, * p<0.10
+
+In results not shown here, we find that rebate bans and buyer representation agreements are both negatively correlated with house prices; that is, the states that have implemented these policies have generally cheaper homes. For example, Kansas, Missouri, Mississippi, Oklahoma, and Alabama are some of the cheapest states in which to buy a house. We thus control for house prices to ensure that the effects of treatment are not being masked by the negative relationship between house prices and commission rates discussed in the previous section. In columns 1 and 3, we find that neither of the policies is related commission rates, without controlling for house prices. Once we add these controls, in columns 2 and 4, we find very small negative effects of just a few basis points, neither of which is statistically distinguishable from zero once we cluster our standard errors at the state level. At least in these data, then, we conclude that these policies do not appear to have material effects on advertised commission rates.
+
+Conclusion
+
+High real estate commissions in the United States have gained national attention after last year's NAR settlement. This note analyzes the time trends of commission rates from 1995 to 2023. It extends the current literature on the subject by using a dataset with national coverage and by retrospectively looking at the impacts of potentially relevant policies on commission rates. We find that there has been a consistent and widespreadâbut modestâdownward trend in rates starting in the 1990s. The variation in rates across metropolitan areas is negatively correlated with house prices, and we find that controlling for house prices in a panel regression eliminates the downward time trend. Moreover, the magnitude of the correlation between house prices and commission rates implies that rising house prices could explain more than half of the aggregate trend. Interestingly, we find no material or statistically significant effects of buyer representation agreement requirements or buyer rebate bans on advertised commission rates, suggesting that changes in these policies might not have a material effect.
+
+The settlement could lead to more substantial changes to business models and agent commissions going forward. In particular, new provisions could mitigate the issues of steering and collusion, by prohibiting sellers' agents from advertising rates to buyers' agents through an MLS. That said, press reports suggest that sellers' agents have found ways of sharing information on commission rate offers outside of the MLS. In addition, the NAR has relaxed its Clear Cooperation Policy, leaving more freedom for listing agents to forego or delay listing a property on the MLS in the first place. These sorts of adaptations make it difficult to predict the long-run effects of the settlement. So far, since the settlement changes went into place in August 2024, outside estimates suggest that buyer agent commissions may have declined some but have remained at relatively high levels (Worley 2024, Kamin 2025).
+
+References
+
+Barwick, P. J. and Pathak, P. A. (2015). The costs of free entry: an empirical study of real estate agents in Greater Boston. The RAND Journal of Economics, 46(1):103â145.
+
+Barwick, P. J., Pathak, P. A., and Wong, M. (2017). "Conflicts of interest and steering in residential brokerage." American Economic Journal: Applied Economics, 9(3):191â222.
+
+Barwick, P. J. and Wong, M. (2019). "Competition in the real estate brokerage industry: A critical review." Brookings working paper.
+
+Buchak, G., Matvos, G., Piskorski, T., and Seru, A. (2024). "NAR settlement, house prices, and consumer welfare." NBER Working Paper #32855.
+
+Delouya, S. (2024a). "Biggest shakeup in a century set to hit real estate agents this week: Here's how they're preparing." CNN Business.
+
+Delouya, S. (2024b). "The NAR settlement comes into effect today: Here's what changing and why." CNN Business.
+
+Hsieh, C. and Moretti, E. (2003). "Can free entry be inefficient? Fixed commissions and social waste in the real estate industry." Journal of Political Economy, 111(5):1076â1122.
+
+Kamin, D. (2025). "Home Sellers and Buyers Accuse Realtors of Blocking Lower Fees." The New York Times.
+
+Kim, G. H. (2025). "The Equilibrium Impacts of Broker Incentives in the Real Estate Market." Working paper.
+
+McCulla, S., Turner, D., and Mataloni, L. (2023). "Preview of the 2023 comprehensive update of the national economic accounts", Survey of Current Business, Bureau of Economic Analysis.
+
+Schnare, A. and Kulick, R. B. (2009). "Do real estate agents compete on price? Evidence from seven metropolitan areas." Housing Markets and the Economy: Risk, Regulation, and Policy, Lincoln Institute of Land Policy
+
+Solá, A. T. (2024). "36% of homebuyers and sellers don't know they can negotiate real estate agent fees. Here's how to do it." CNBC.
+
+Worley, M. (2024). "Real estate agent commissions hold steady since new industry rules were implemented." Redfin real estate news.
+
+Yale, A. (2024). "How the NAR Settlement Is Changing Homebuying and Selling." U.S. News.
+
+1. As we discuss below, we do not observe the commissions paid to sellers' agents, but all available evidence points to a strong norm over this period of splitting the total commission payment equally between the two agents. Accordingly, we think the trends in sellers' agents likely closely parallel those we document for buyers' agents.
+Return to text
+
+2. The BEA now uses quinquennial Economic Census data to estimate residential real estate commission rates over history. Given the lags with which Economic Census data are released, the BEA also monitors covariates such as housing prices and real estate agent employment on an ongoing basis (McCulla et al. 2023). It is not clear to us how well this methodology will pick up changes in commission rates in real time.
+Return to text
+
+3. Not all properties are listed on the MLSâin particular, so-called "pocket listings" may not be advertised to the public at all. That said, pocket listings are generally thought to have made up only a small share of overall property listings, particularly after the NAR in 2019 enacted its Clear Cooperation Policy, which required homes sold by NAR-affiliated agents to be listed on the MLS within a day of marketing them.
+Return to text
+
+4. Hsieh and Moretti (2003) also argue that free entry of agents is socially wasteful under these conditions, given the loss of agent productivity. Barwick and Wong (2019), Barwick et al. (2017), and Barwick and Pathak (2015) also discuss the negative implications of high commission rates and a lack of competition in the real estate industry. These welfare considerations are outside the scope of our descriptive note.
+Return to text
+
+5. We estimated similar regressions for the latter half of our sample, where our data have more coverage, and found essentially the same result.
+Return to text
+
+6. In results not shown here, we ran cross-sectional regressions relating commission rates to house prices, population density, and per capita personal income in 2000 and 2017. The house price effects in these specifications were also negative and significant, while we found small and counterintuitively negative effects of income on rates and no substantial effects of population density.
+Return to text
+
+Please cite this note as:
+
+Banerjee, Rupkatha, and Andrew Paciorek (2025). "Commissions and Omissions: Trends in Real Estate Broker Compensation," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 12, 2025, https://doi.org/10.17016/2380-7172.3711.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

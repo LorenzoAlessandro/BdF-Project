@@ -1,0 +1,132 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+April 19, 2019
+
+Indicative Forward-Looking SOFR Term Rates
+
+Erik Heitfield
+ and 
+Yang-Ho Park
+
+On June 12, 2020, a technical correction was made to more accurately model certain SOFR futures contracts. As a result, some forward-looking term rates published after this date may differ slightly from those published previously. In addition, publication of compound average term rates data was discontinued on May 2, 2018 (1 month), July 2, 2018 (3 months), and October 1, 2018 (6 months). More recent compounded average term rate data are available at 
+https://apps.newyorkfed.org/markets/autorates/sofr-avg-ind
+.
+
+On November 8, 2019 the realized term rates data were extended back to September 22, 2014 and the ordering of data in the CSV file was changed so that the most recent observations appear first.
+
+On September 23, 2019 a technical correction was made to more accurately model certain SOFR futures contracts. As a result, some term rates published after this date may differ slightly from those published previously.
+
+On May 3, 2019 titles for the variables labeled âBackward-looking term ratesâ were changed to âCompound average term ratesâ to better match the definition of the variables.
+
+This note presents indicative forward-looking term rates derived from end-of-day SOFR futures prices. The accompanying data file also includes compound averages of daily SOFR rates. These rates are presented for informational purposes only and are not appropriate for use as reference rates in financial contracts. The rates and the process by which they were calculated do not comply with the data quality, methodology, governance and other principles for financial benchmarks established by the International Organization of Securities Commissions. These rates may differ materially from any forward-looking term rates or averages of SOFR that may be produced in the future by any administrator, including any such rate that may be endorsed by the Alternative Reference Rates Committee.
+
+The authors of this note may cease updating the rates presented in the data file at any time. If you choose to use one of the term rates presented here as a reference rate in a financial contract, notwithstanding that the rates are not appropriate for this purpose and should not be used in commercial contracts, the authors of this note and the Board of Governors of the Federal Reserve System will not be liable to you or any other person for damages of any kind arising out of or in connection with use of or inability to use the rate data.
+
+Rates file (CSV)
+ and 
+Rates data definition file (TXT)
+ (
+Updated:
+ May 14, 2021
+).
+
+On May 26, 2021, the authors discontinued updating this data series. The Alternative Reference Rates Committee (ARRC) announced it selected CME Group as the administrator that it plans to recommend for a forward-looking Secured Overnight Financing Rate (SOFR) term rate, once market indicators for the term rate are met. 
+More information
+.
+
+1. Introduction
+
+In 2017 the Alternative Reference Rate Committee (ARRC), a group of private-sector financial market participants convened by the Federal Reserve with support from other U.S. financial regulators, selected the Secured Overnight Financing Rate (SOFR) as the recommended replacement for U.S. dollar LIBOR. Unlike LIBOR, which is reported daily for a variety of tenors ranging from overnight to one year, SOFR is an overnight rate, and hence adjustments will need to be made to contracts and systems designed to incorporate term rates. Adapting new interest rate derivatives to reference SOFR rather than LIBOR should be relatively straightforward, since participants in derivatives markets already have substantial experience with overnight index swaps (OIS) referencing rates such as the effective federal funds rate (EFFR) and SOFR futures and OIS contracts are already being offered in the market. However, financial regulators have recognized that for certain users of cash products that currently reference term interbank funding rates, new term rates derived from liquid markets may be beneficial (Financial Stability Board, 2018). For many loan products tied to term LIBOR, it may be possible to use term rates derived from compound or simple averages of observed SOFR rates. These types of averaged rates are less volatile than overnight rates, can be readily calculated from published data, and do not depend on the liquidity of any underlying market save the overnight repo market that underpins SOFR itself. In other cases, such as some business loans, borrowers with systems that cannot be easily adapted to backward-looking rates may prefer to use forward-looking term rates based on SOFR that are conceptually more similar to the term LIBOR rates they currently use.
+
+While LIBOR rates are determined by a mix of limited interbank transaction data and various judgmental approaches, forward-looking term SOFR rates can be derived from transactions prices for SOFR futures contracts. The use of derivatives prices to infer forward interest rates is a common practice that is well understood by market participants. Although SOFR derivatives markets have just begun to develop, both the CME and ICE now offer SOFR futures contracts, and there are already more transactions underlying SOFR futures than are estimated to underlie LIBOR. Trading volume on SOFR derivatives markets seems likely to continue to grow.
+
+This note describes an approach to computing forward-looking term reference rates based on SOFR futures contracts that is similar to that described by the Alternative Reference Rate Committee (2017) and developed in greater detail by Heitfield and Park (2019). Prices from futures contracts that reference SOFR are used to estimate market-implied forward SOFR rates at a given point in time. These forward rates are then compounded to produce forward-looking term rates. Although the analysis presented here relies solely on closing prices from CME SOFR futures contracts, this approach is quite general and could easily be adapted to incorporate data from a variety of SOFR-based derivatives contracts including futures traded on ICE or other exchanges and SOFR OIS.
+
+Trading volume in SOFR futures has grown at a rapid pace since the CME first offered contracts in May 2018 (Figure 1) and there is considerable headroom for liquidity to continue to improve as markets transition away from LIBOR-based products. However, at current levels of liquidity it is not possible to create a robust, forward-looking term rate based on intra-day SOFR futures prices. The term rates presented here are derived from end-of-day futures prices, and, as such, would not be appropriate reference rates in commercial contracts. Nonetheless, they provide a good indication of how futures-implied SOFR term reference rates would likely perform in practice.
+
+ 
+
+Figure 1: Average daily trading volume in CME SOFR futures contracts
+
+Source: Authors' calculations using Refinitiv data.
+
+Accessible version
+
+2. Using Futures Prices to Infer Forward-Looking Term Rates
+
+Term rates can be computed from overnight rates such as SOFR by applying a simple geometric compounding formula. The difference between these compound averages and forward-looking term rates lies in whether observed overnight rates or expected future overnight rates (i.e., expected forward rates) are used. Forward-looking term rates are considerably more difficult to estimate because they require that one infer market expectations from a limited set of available information. Invariably, such inference involves imposing some assumptions that restrict the shape of the path of forward rates.
+
+In our model, expected forward SOFR rates are assumed to potentially jump up or down on scheduled Federal Open Market Committee (FOMC) policy rate announcement dates but remain constant during the periods between FOMC meetings. This assumption allows one to pin down expected forward rate paths by estimating the size of rate changes on a relatively small number of fixed calendar dates. Although several alternative functional forms for the forward rate path have been applied in the literature, all such approaches necessarily require that one impose some simplifying assumptions because available derivatives prices do not provide enough information to identify forward rates with daily granularity.
+
+Figure 2, which plots SOFR rates over time, provides some justification for our modeling assumption. While realized SOFR rates do fluctuate on a daily basis, they generally move within narrow bands near the effective federal funds rate. With some exceptions, day-to-day changes in SOFR rates do not appear to be very predictable, so it seems reasonable to assume that market expectations do not typically reflect forecasts of such fluctuations. SOFR rates sometimes experiences large spikes at quarter ends when repo markets must accommodate balance sheet adjustments by regulated financial institutions and Treasury coupon settlements, but these transitory shifts dissipate within a day or two. In contrast, persistent shifts in the level of SOFR rates coincide with changes in the EFFR on FOMC announcement dates.
+
+ 
+
+Figure 2: Secured Overnight Financing Rate and Effective Federal Funds Rate over time
+
+Source: Federal Reserve Board, Federal Reserve Bank of New York.
+
+Accessible version
+
+For a given estimation date, the size and direction of forward rate jumps on future FOMC announcement dates can be estimated by choosing values such that the implied prices of derivatives whose settlement values depend on the forward rate path match observed prices as closely as possible. Generally speaking, in order to estimate forward rates out to a specific horizon one needs to observe prices for several contracts whose settlement windows collectively span the time horizon. The term rates presented here rely on closing prices for CME futures contracts for this purpose, though other SOFR futures or SOFR OIS may also be suitable. CME Group began listing one-month and three-month SOFR futures in May 2018.
+
+3. Forward-looking SOFR Term Rates from June 2018 to February 2019
+
+The accuracy of term rates derived from futures prices depends critically on the extent to which contract prices accurately capture market participants' expectations about forward rates. Ideally, prices should be timely, and should not embed distortions that can arise when markets are illiquid. Trading volume for one-month futures is concentrated in near dated contracts while three-month contracts are often used to take positions on SOFR rates at a one-year horizon. In this analysis, we estimate term rates out to a six-month horizon, where both one-month and three-month contract prices provide information about market expectations. End-of-day futures prices are used throughout this analysis, but the methodology could accommodate use of intra-day prices instead, given sufficient trading volume.
+
+Figure 3 shows futures-implied one-, three-, and six-month SOFR term rates and the overnight SOFR rate from June 10, 2018 to February 12, 2019. The term structure for forward-looking SOFR term rates has generally been upward sloping, though it became nearly flat around the turn of the year. Much of the day-to-day fluctuation in daily SOFR rates appears to reflect idiosyncratic factors that tend to average out over time. As a result, term rates are considerably less volatile than the overnight rate. In particular, it is notable that the term rates were largely unaffected by the transitory spike in the SOFR rate at the end of 2018.
+
+ 
+
+Figure 3: Forward-looking SOFR term rates over time
+
+Source: Authors' calculations using Refinitiv and Federal Reserve Bank of New York data.
+
+Accessible version
+
+Figure 4 compares the one-, three-, and six-month term SOFR rates with federal funds OIS and LIBOR rates. For reference, the federal funds effective rate is also shown. Term SOFR rates closely track federal funds OIS rates. Over the last eight months SOFR term rates typically printed within a couple of basis points of federal funds OIS rates. During our sample period, SOFR term rates were, on average, about two basis point above comparable OIS rates and more than 90 percent of observed daily differences were less than five basis points. On most days, the spreads between SOFR term rates and federal funds OIS rates are considerably smaller than the spread between the overnight SOFR rate and the federal funds effective rate. Like federal funds OIS, term SOFR rates, which do not embed credit risk premiums, are consistently lower than term LIBOR rates.
+
+The FOMC's September 19 and December 12 policy rate hikes were largely anticipated by SOFR futures markets. For example, in early August SOFR futures prices implied about an 80 percent chance of a 25 basis point hike at the September meeting and a 50 percent chance of a 25 basis point hike at the December meeting. Accordingly, as can be seen in Figure 4, the one-month SOFR term rate began rising about a month ahead of each of the two EFFR rate increases, while the three- and six-month rates began moving upward considerably earlier.
+
+ 
+
+Figure 4: SOFR, OIS, and LIBOR term rates over time
+
+Source: Federal Reserve Board and authors' calculations using Refinitiv and Federal Reserve Bank of New York data.
+
+Accessible version
+
+4. Conclusion
+
+Futures prices can be used to infer forward-looking SOFR-based term rates that are conceptually similar to the forward-looking term LIBOR rates currently used in a broad range of loan contracts. Comparisons of futures-implied SOFR term rates with other interest rates over the eight months since SOFR futures began trading are encouraging. SOFR term rates are considerably less volatile than overnight SOFR rates, track comparable federal funds OIS rates quite closely, and smoothly transition upward ahead of anticipated policy rate hikes. Because of the relatively short time span over which SOFR futures have been trading, it is not possible to directly evaluate the performance of forward-looking SOFR term rates over a broad range of interest rate environments. However, as detailed in Heitfield and Park (2019), application of the approach described in this note to federal funds futures produces term rates that closely track federal funds OIS rates from 2000 to 2019 and accurately predict realized federal funds rates during most periods.
+
+The term rates presented here are derived from end-of-day futures prices rather than intra-day transaction prices and, as such, are not appropriate reference rates for commercial contracts. Given sufficient market liquidity, it would be desirable to use intra-day prices over a relatively narrow trading window to ensure that prices are as timely as possible. In addition, as SOFR derivatives markets continue to evolve, a number of extensions to the approach described here could be considered. While only CME contract prices are used in this analysis, the methodology could readily accommodate integration of prices from additional futures contracts offered on ICE or other exchanges or even over-the-counter SOFR swaps. In estimating forward rates, our model weights all futures prices equally. If a broader set of derivatives contracts were used, one might consider weighting contracts by measures of market depth or trading volume. Finally, more robust trading of longer-dated SOFR derivatives could facilitate estimation of SOFR term rates of tenors beyond six months.
+
+References
+
+Alternative Reference Rate Committee (2018) "
+Second report
+." 
+
+Financial Stability Board (2019) "
+Interest rate benchmark reform â overnight risk-free rates and term rates
+."
+
+Heitfield and Park (2019) "
+Inferring term rates from SOFR futures prices (PDF)
+." FEDS 2019-014. Washington: Board of Governors of the Federal Reserve System.
+
+Please cite this note as:
+
+Heitfield, Erik, and Yang-Ho Park (2019). "Indicative Forward-Looking SOFR Term Rates," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 19, 2019, https://doi.org/10.17016/2380-7172.2347.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

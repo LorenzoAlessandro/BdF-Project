@@ -1,0 +1,1203 @@
+FEDS Notes
+
+Twitter
+
+February 23, 2026
+
+Measuring Shocks to Banksâ Expectations for Lending Standards Using the Senior Loan Officer Opinion Survey
+
+Solveig Baylor, Jack Keane, Luke Morgan, and
+Andrei Zlate
+1
+
+1. Introduction
+
+Relatively little is known about how banks form their expectations about future credit supply, with a nascent stream of work documenting the role of past experiences in shaping banks' expectations for macroeconomic and credit performance and, in turn, their credit supply decisions (Ma et al., 2022; Falato and Xiao, 2024).
+2
+In this note, we take a broader perspective by studying how banks' credit supply expectations are shaped not only by past experiences, but also by public macroeconomic forecasts, realized macro-financial conditions, and observable bank characteristics. Moreover, we allow for expectation shocks that are orthogonal to these observable factors, capturing idiosyncratic belief changes at the sectoral or individual bank level.
+
+Using banks' responses to the outlook special questions from the Senior Loan Officer Opinion Survey (SLOOS)âwhich query every January about banks' expected changes in lending standards, demand, and asset quality over the following yearâwe address three main questions: (1) To what extent do banks' outlooks for changes in lending standards reflect factors such as macroeconomic forecasts, realized macro-financial conditions, and bank-specific characteristics? (2) To what extent are banks' outlooks shaped by shocks orthogonal to these factors? (3) How well do banks' outlooks for changes in lending standardsâand the shocks we identifyâpredict reported changes in lending standards in subsequent quarters?
+
+We find that, first, banks' outlooks for changes in lending standards are shaped only in part by publicly-available macroeconomic forecasts, realized macro-financial conditions, and bank characteristics observed at the time of each survey. Second, bank's outlooks for standards embed a series of shocks unrelated to these factors, which we isolate as the
+Expected Credit Supply Index (E-CSI)
+introduced in this note. These shocks may reflect a range of other factors, such as changes in banks' risk strategy, the expected impact of changes in bank regulation, or banks' past experiences examined in Ma et al. (2022) and Falato and Xiao (2024). Third, we find that while both the outlook and the E-CSI can predict banks' changes in lending standards in subsequent quarters, the predictive power of the E-CSI appears more persistent, especially for business loans. Intuitively, as the economy deviates from macroeconomic forecasts, banks' initial outlooks become less informative for changes in standards over time, even as banks' stance on credit supply captured by the E-CSI continues to affect lending standards.
+
+2. Drivers of Banks' Outlooks for Changes in Lending Standards
+
+The SLOOS is a quarterly survey conducted by the Federal Reserve on a panel of about 80 large domestically chartered commercial banks and 20 foreign branches and agencies in the United States. The survey asks a set of
+core questions
+every quarter about banks' changes in lending standards and terms, as well as changes in demand for banks' main loan categories over the previous quarter.
+3
+In addition, every January, the SLOOS asks
+special questions
+about banks' outlooks for changes in lending standards, loan demand, and asset quality over the remainder of the year.
+4
+These questions take the form:
+
+Assuming that
+economic activity progresses in line with consensus forecasts, how does your bank expect its
+lending standards
+for the following [C&I, CRE, RRE, or consumer] loan categories to change over [year t] compared to its current standards, apart from normal seasonal variation?
+
+Assuming that economic activity progresses in line with consensus forecasts, how does your bank expect
+demand
+for the following categories of [C&I, CRE, RRE, or consumer] loans to change over [year t] compared to its current level, apart from normal seasonal variation?
+
+Assuming that economic activity progresses in line with consensus forecasts, what is your outlook for
+delinquencies and charge-offs
+on your bank's [C&I, CRE, RRE, or consumer] loans in the following categories in [year t]?
+
+For each bank, we code the answers as follows:
+
++1 if the bank expected standards to tighten, demand to strengthen, or asset quality to improve substantially or somewhat;
+
+0 for standards or demand to remain basically unchanged, or asset quality to remain around current levels;
+
+-1 if the bank expected standards to ease, demand to weaken, or asset quality to deteriorate substantially or somewhat.
+
+Figure 1 shows banks' responses to the outlook questions aggregated into indexes of expected changes in lending standards and demand across the main loan categories. Intuitively, they show the net share of banks expecting tighter standards or stronger demand over the coming year. To construct these indexes for core, business, and household loans, we first take weighted averages of each bank's responses across relevant loan categories, using the shares of each loan category in a bank's total core loan portfolio as weights.
+5
+We then aggregate responses across banks, using their shares in the total core loans on sample banks' balance sheets from Call Reports as weights (see Appendix 1). The indexes show important variation in banks' responses over time, such as the expected easing of standards in 2021 as the economy recovered from the COVID-19 pandemic, or the expected tightening of standards in 2023 amid monetary policy tightening. Notably, the expectation of easing standards was more prevalent in 2021 for household loans than for business loans, possibly reflecting fiscal stimulus that strengthened households' balance sheets. Meanwhile, banks' expectations for demand moved inversely with those for standards, as banks expected demand to strengthen in 2021 and to weaken in 2023.
+
+Figure 1. Expected changes in standards and demand
+
+Source: SLOOS, authors' calculations
+
+Accessible version
+
+As senior loan officers share their expectations for changes in lending standards for the coming year, these expectations are likely shaped by changes in lending standards and demand (either lagged or contemporaneous, realized or expected); by realized or forecasted macro-financial conditions; and by their banks' balance sheet characteristics.
+6
+We aim to parse out the expected changes in lending standards from the influence of macroeconomic forecasts, realized macro-financial conditions, and bank-level variables, as well as expected changes in borrower demand and asset quality as reported by SLOOS respondents.
+
+To understand the role of these factors in driving banks' outlooks, we regress the expected changes in lending standards at the bank level on variables similar to those in Bassett et al. (2014) and Cavallo et al. (2024a, b), adjusted to be relevant to the forward-looking nature and the annual frequency of the SLOOS outlook questions. We include information that respondents have at the time of each January surveyâin particular, the year-ahead consensus (median) forecasts for Q4/Q4 GDP growth and Q4/Q4 changes in unemployment as well as the T-bill rate from the Federal Reserve Bank of Philadelphia's Survey of Professional Forecasters. (See Figure 2, which compares the SPF and Blue Chip forecasts). We also include the Q4/Q4 realized GDP growth and changes in unemployment, the real federal funds rate, and the excess bond premium over the year prior to each survey. We add bank characteristics as in Cavallo et al. (2024a), i.e., changes in net interest margins (NIMs) and loan loss provisions (LLP), the share of core loans over total assets, the share of core deposits to total assets, the return to assets (ROA), banks' total assets (in natural logs), and Tier 1 capital ratio, measured as of the fourth quarter prior to each January SLOOS. We also control for the fourth quarter's reported changes in lending standards and the contemporaneous expected changes in demand and asset quality for the following year, adapting the approach from Bassett et al. (2014) to the forward-looking nature of the SLOOS outlook questions (see the Appendix Table A.1. for summary statistics).
+7
+Our regressions also include bank fixed effects to capture unobservable bank-specific characteristics. Given the relatively recent introduction of the outlook special questions to the SLOOS, the sample period for our bank-year panel ranges from 2018 to 2026.
+8
+
+Figure 2. Macroeconomic forecasts for the year-ahead GDP growth and unemployment change
+
+Note: The shaded bars with top caps indicate periods of business recession as defined by the National Bureau of Economic Research (NBER): March 2001âNovember 2001, December 2007âJune 2009, and February 2020âApril 2020.
+
+Source: Survey of Professional Forecasters, Blue Chip Financial Forecasts.
+
+Accessible version
+
+Table 1 shows the results from several regression specifications that take the general form:
+
+$$$$ E \Delta Stds_{i,t}=c+\beta_1 \Delta Stds_{i,q4}+\beta_2 E \Delta Dem_{i,t}+\beta_3 E\Delta AQ_{i,t}+\beta_4 MacroForecast_t \\ +\beta_5 MacroCond_t+\beta_6 BankChar_{i,t}+\phi_i+\epsilon_{i,t} $$$$
+
+Table 1: Drivers of banks' outlooks for changes in lending standards
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+VARIABLES
+
+Dependent variable: Expected change in standards, core loans
+
+Q4 Realized change in standards
+
+0.5132***
+
+0.4587***
+
+0.4280***
+
+0.4303***
+
+0.4219***
+
+0.4228***
+
+(0.046)
+
+(0.049)
+
+(0.046)
+
+(0.046)
+
+(0.048)
+
+(0.048)
+
+Expected change in demand
+
+-0.2317***
+
+-0.1955***
+
+-0.1461***
+
+-0.1442***
+
+-0.1300***
+
+-0.1302***
+
+(0.027)
+
+(0.026)
+
+(0.028)
+
+(0.028)
+
+(0.029)
+
+(0.029)
+
+Expected change in asset quality
+
+-0.1700***
+
+-0.1529***
+
+-0.1558***
+
+-0.1632***
+
+-0.1650***
+
+(0.049)
+
+(0.051)
+
+(0.051)
+
+(0.051)
+
+(0.050)
+
+GDP growth Q4/Q4, year-ahead forecast
+
+-0.0868***
+
+-0.0837***
+
+(0.026)
+
+(0.027)
+
+Unemployment change Q4/Q4, year-ahead forecast
+
+0.1232***
+
+0.1120***
+
+(0.038)
+
+(0.040)
+
+T-bill yield change Q4/Q4, year-ahead forecast
+
+0.0218
+
+0.0301#
+
+0.0458**
+
+0.0504**
+
+(0.020)
+
+(0.021)
+
+(0.022)
+
+(0.024)
+
+GDP growth Q4/Q4
+
+0.0035
+
+0.0053
+
+(0.007)
+
+(0.007)
+
+Unemployment change Q4/Q4
+
+0.0121
+
+0.0086
+
+(0.011)
+
+(0.011)
+
+RFFR change Q4/Q4
+
+-0.0228**
+
+-0.0220*
+
+-0.0369***
+
+-0.0337***
+
+(0.010)
+
+(0.012)
+
+(0.011)
+
+(0.012)
+
+EBP change Q4/Q4
+
+0.0841#
+
+0.0544
+
+0.0714#
+
+0.0435
+
+(0.053)
+
+(0.053)
+
+(0.051)
+
+(0.050)
+
+NIMs change, bank-level
+
+0.0985**
+
+0.0957**
+
+(0.041)
+
+(0.042)
+
+LLP change, bank-level
+
+-0.0722**
+
+-0.0684**
+
+(0.031)
+
+(0.032)
+
+Share of core loans, bank-level
+
+0.0089***
+
+0.0087**
+
+(0.003)
+
+(0.003)
+
+Share of core deposits, bank-level
+
+0.0076
+
+0.0071
+
+(0.007)
+
+(0.007)
+
+ROA, bank-level
+
+-0.3579***
+
+-0.3509***
+
+(0.128)
+
+(0.130)
+
+log(Assets), bank-level
+
+-0.0117
+
+-0.0086
+
+(0.070)
+
+(0.072)
+
+Tier 1 capital ratio, bank-level
+
+-0.0342*
+
+-0.0349*
+
+(0.017)
+
+(0.018)
+
+Bank fixed effects
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+610
+
+604
+
+604
+
+604
+
+604
+
+604
+
+R-squared
+
+0.533
+
+0.556
+
+0.573
+
+0.574
+
+0.595
+
+0.595
+
+Note: Robust standard errors in parentheses, *** p<0.01, ** p<0.05, * p<0.1, # p<0.2
+
+The regression results shown in column (1) include the fourth quarter's realized changes in standards and the expected changes in demand for the remainder of the year. The results are statistically significant and intuitive: a reported tightening of standards in the fourth quarter prior to each January SLOOS implies that standards are expected to continue to tighten over the coming year. An expected strengthening of demand is associated with expected easing of standards, consistent with the indexes shown in Figure 1, likely reflecting common shocks to both standards and demand as discussed in Bassett et al. (2014).
+
+Column (2) shows results for the same specification as in the first column, while adding the expected changes in asset quality as an explanatory variable. They suggest that an expected improvement in asset quality is associated with an expected easing of standards.
+
+The specifications in columns (3) and (4) of Table 1 add a set of macro-financial variablesâboth forecasts for the coming year and realized changes over the past year. Column (3) uses the forecasted and realized GDP growth, while column (4) alternatively uses the forecasted and realized change in unemployment.
+9
+The results for macro forecasts are generally statistically significant, with the forecast of either stronger GDP growth or falling unemployment being associated with an expected easing in lending standards. Perhaps unsurprisingly for a forward-looking model, the realized GDP growth and unemployment change over the previous year are not statistically significant, unlike their year-ahead forecasts. Moreover, a decline in the real federal funds rate or an increase in the excess bond premium over the previous yearâtypically associated with a deterioration in the economic outlook or a reduction in risk appetite in the financial sector, respectivelyâare associated with an expected tightening in standards, consistent with Basset et al. (2014).
+
+Finally, the specifications in columns (5) and (6) of Table 1 add a set of bank characteristics to the specifications in columns (3) and (4), respectively. While controlling for the expected change in asset quality, banks that previously increased loan loss provisions by more are more likely to expect to ease standards. Banks with a more traditional business model (higher loans/assets) are more likely to expect to tighten standards, while banks with higher ROA or higher Tier 1 capital ratios are more likely to expect to ease standards.
+
+3. Banks' Expected Credit Supply Index (E-CSI)
+
+Using the regression analysis results from Section 2, we aim to capture shocks to banks' expectations that go beyond the effect of macroeconomic forecasts, macro-financial conditions, and bank-level characteristics. For core loans, we use the regression results from column (5) of Table 1 to compute residuals at the bank level. We aggregate these residuals across banks, using weights given by the share of core loans in the total core loans on sample banks' balance sheets. The resulting measure, which captures shocks to banks' expected changes in standards
+beyond
+the effect of macroeconomic forecasts and the other drivers discussed in Section 2, either at the bank level or aggregated across banks, forms the expected credit supply index (E-CSI).
+
+Figure 3 shows the E-CSI aggregated across banks for core, business, and household loans (in red), along with banks' aggregate outlooks for changes in lending standards (in black). While the two indices seem to track each other, each offers different insights. For example, the aggregate outlooks indicate that banks, on net, expected to ease standards for core loans in 2021; the aggregate E-CSI was negative for the same year, indicating that banks, on net, expected to ease standards in 2021 by more than explained by the historical relation between their outlooks and the drivers examined in Section 2, potentially reflecting banks' optimism as the economy started to recover from the COVID-19 pandemic. Conversely, for 2023, the positive E-CSI indicates that banks expected to tighten lending standards by more than explained by macroeconomic forecasts, macro-financial conditions, and bank characteristics, amid monetary policy tightening. For 2025 and 2026, the E-CSI was close to zero, indicating that banks' outlooks for tightening lending standards, on net, were roughly in line with what could be expected based on the historical relationship between the outlooks and the factors examined in Section 2.
+
+Figure 3. Banks' outlooks for changes in lending standards and E-CSI
+
+Source: SLOOS, authors' calculations
+
+Accessible version
+
+The aggregate E-CSI in Figure 3 conceals the cross-sectional variation across banks, which we show in Figure 4 with bank-level E-CSI values for core, business, and household loans. Unlike the aggregate E-CSI (in red), the inter-quartile range (in blue) shows substantial variation in the E-CSI across banks within each given year for each loan category. The cross-sectional variation appears to increase when the aggregate E-CSI reaches inflection points, such as in 2021 and 2023.
+
+Figure 4. Cross-sectional variation of E-CSI across banks
+
+Source: SLOOS, authors' calculations
+
+Accessible version
+
+4. Predictive Power of Banks' Reported Outlook and E-CSI
+
+We next examine how well banks' outlooks and E-CSI shocks predict changes in lending standards reported in subsequent quarters, both in the aggregate and at the bank level. For illustrative purposes, at the aggregate level, Figure 5 plots banks' aggregate outlooks for changes in lending standards at the beginning of each year (red bars for expected net tightening and blue bars for expected net easing) against the aggregate changes in lending standards reported in subsequent quarters (black lines). In general, the subsequent changes in lending standards align with banks' outlooks, in the sense that an outlook for net tightening or easing is generally followed by net actual tightening or easing reported in subsequent quarters.
+
+Figure 5. Banks' outlooks and changes in lending standards reported in subsequent quarters
+
+Source: SLOOS, authors' calculations
+
+Accessible version
+
+In Figure 6 (left panel), we show the corresponding correlations between banks' aggregate outlooks and their changes in lending standards reported in subsequent quarters. For core, business and household loans, there is a high correlation between banks' outlooks and the quarterly changes reported over the following year, on net (black bars). However, the correlation declines over the course of the year, with the outlooks displaying the highest correlation with the changes in lending standards reported in Q1 (darkest blue bar) and the lowest correlation with the changes reported in Q4 (lightest blue bar).
+
+Figure 6. Correlation of reported changes in standards with outlooks and E-CSI
+
+Note: Key identifies in order from left to right.
+
+Source: SLOOS, authors' calculations.
+
+Accessible version
+
+In Figure 6 (right panel), the correlation between the E-CSI and the subsequent quarterly changes in standards is similar, but appears to persist for longer into the year, especially for business loans, as shown by the height of the bars remaining roughly constant rather than declining. Intuitively, the result is consistent with the interpretation that the predictive power of banks' outlooks, which are conditional on consensus forecasts available at the start of the year, declines over time as realized macro conditions deviate from the initial forecast. In contrast, the predictive power of the E-CSI persists later into the year, as banks' outlooks purged of macro forecasts likely reflect a more persistent stance on lending supply, shaped by factors such as changes in banks' risk strategy or banking regulation.
+
+To exploit the cross-sectional variation in banks' outlooks and E-CSI, in Table 2 we show results from a simple panel regression at the bank-quarter level. We regress banks' reported changes in lending standards in each quarter on banks' outlooks (panel A) and E-CSI (panel B) from the start of the year, using bank fixed effects.
+10
+In Panel A, the coefficients on banks' outlooks are generally positive and statistically significant, but their magnitude declines from Q1 to Q4 and their statistical significance vanishes by Q4. In contrast, in Panel B, the E-CSI coefficients remain statistically significant and their magnitude remains roughly constant from Q1 to Q4 for core and business loans, consistent with the correlations in Figure 6.
+
+Table 2: Regression results of reported changes in standards on outlooks and E-CSI
+
+Variable
+
+Changes in standards,
+
+core loans
+
+Changes in standards,
+
+business loans
+
+Changes in standards,
+
+household loans
+
+(1)
+
+Q1
+
+(2)
+
+Q2
+
+(3)
+
+Q3
+
+(4)
+
+Q4
+
+(5)
+
+Q1
+
+(6)
+
+Q2
+
+(7)
+
+Q3
+
+(8)
+
+Q4
+
+(9)
+
+Q1
+
+(10)
+
+Q2
+
+(11)
+
+Q3
+
+(12)
+
+Q4
+
+Panel A: Outlook
+
+Outlook, core b, t
+
+0.479***
+
+(0.0486)
+
+0.421***
+
+(0.0649)
+
+0.294***
+
+(0.0699)
+
+0.0401
+
+(0.0518)
+
+Outlook, business b, t
+
+0.433***
+
+(0.0539)
+
+0.355***
+
+(0.0639)
+
+0.280***
+
+(0.0735)
+
+0.0445
+
+(0.0593)
+
+Outlook, household b, t
+
+0.462***
+
+(0.0637)
+
+0.455***
+
+(0.0682)
+
+0.201***
+
+(0.067)
+
+0.0596
+
+(0.0493)
+
+$$N$$
+
+508
+
+509
+
+496
+
+499
+
+493
+
+496
+
+479
+
+486
+
+390
+
+393
+
+378
+
+378
+
+R-sq
+
+0.364
+
+0.239
+
+0.18
+
+0.171
+
+0.297
+
+0.221
+
+0.178
+
+0.193
+
+0.412
+
+0.259
+
+0.178
+
+0.181
+
+Panel B: E-CSI
+
+E-CSI, core b, t
+
+0.204*
+
+(0.103)
+
+0.299***
+
+(0.0984)
+
+0.164*
+
+(0.0936)
+
+0.143*
+
+(0.0733)
+
+E-CSI, business b, t
+
+0.143*
+
+(0.076)
+
+0.251***
+
+(0.0879)
+
+0.184*
+
+(0.0999)
+
+0.206**
+
+(0.084)
+
+E-CSI, household b, t
+
+0.342***
+
+(0.0956)
+
+0.327***
+
+(0.0886)
+
+0.129
+
+(0.0851)
+
+0.0882
+
+(0.0661)
+
+$$N$$
+
+508
+
+509
+
+496
+
+499
+
+493
+
+496
+
+479
+
+486
+
+390
+
+393
+
+378
+
+378
+
+R-sq
+
+0.196
+
+0.157
+
+0.126
+
+0.179
+
+0.182
+
+0.171
+
+0.143
+
+0.212
+
+0.248
+
+0.156
+
+0.14
+
+0.183
+
+Constant
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Bank FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Notes: Robust standard errors in parentheses, *** p<0.01, ** p<0.05, * p<0.1, # p<0.2
+
+5. Conclusion
+
+We use SLOOS microdata to explore the drivers of bank expectations for changes in lending standards, as well as their predictive power for the subsequent changes in lending standards. We find that banks' outlooks for changes in lending standards reflect macro forecasts and macro-financial conditions only partially. They also reflect shocks unrelated to these factors, which are measured by the E-CSI that we introduce in this note. While banks' outlooks and the E-CSI can both predict the subsequent changes in lending standards, the predictive power of the E-CSI appears more persistent, especially for business loans.
+
+References
+
+Cavallo, Michele, Juan Morelli, Rebecca Zarutskie, and Solveig Baylor (2024a). "
+Measuring Bank Credit Supply Shocks Using the Senior Loan Officer Survey
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 24, 2024.
+
+Cavallo, Michele, Juan Morelli, and Rebecca Zarutskie (2024b). "
+Unpacking the Effects of Bank Credit Supply Shocks on Economic Activity
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 24, 2024.
+
+Falato, Antonio and Jasmine Xiao (2024). "Expectations and Credit Slumps." August 2024, https://ssrn.com/abstract=4650869.
+
+Bassett, William F., Mary Beth Chosak, John C. Driscoll, and Egon ZakrajÅ¡ek (2014). "Changes in bank lending standards and the macroeconomy," Journal of Monetary Economics, Volume 62, 2014, Pages 23-40, ISSN 0304-3932, https://doi.org/10.1016/j.jmoneco.2013.12.005.
+
+Ma, Yueran, Teodora Paligorova, and Jose-Luis Peydro (2021). "
+Expectations and Bank Lending (PDF)
+." December 2021.
+
+Appendix 1
+
+To construct the indexes in Figure 1, first, we weight each bank's reported expected changes in standards and demand for each loan subcategory (e.g., C&I loans to large firms/small firms; commercial real estate (CRE) loans for commercial land development (CLD), non-farm non-residential (NFNR), and multi-family (MF) projects), respectively, by the respondents' total volume of loans in the corresponding loan category for each year, and take the weighted averages of answers across subcategories to construct an index for each main loan category (e.g., C&I, CRE). This gives us indices of both expected standards and demand changes, respectively, for four loan categories (C&I, CRE, RRE, and Consumer) at the entity-year level. Next, we similarly aggregate indices across loan categories, using loan amounts as weights, to construct indices for expected changes in core loans, business loans (C&I and CRE) and household loans (RRE and consumer), still at the entity-year level.
+11
+Finally we take weighted averages of these indexes across banks to obtain the series shown in Figure 1.
+
+Appendix Table A.1: Summary statistics of selected variables
+
+VARIABLES
+
+(1)
+
+N
+
+(2)
+
+mean
+
+(3)
+
+sd
+
+(4)
+
+p25
+
+(5)
+
+p75
+
+(6)
+
+min
+
+(7)
+
+max
+
+E-CSI for core loans (bank-level, annual)
+
+604
+
+0
+
+0.23
+
+-0.12
+
+0.12
+
+-0.95
+
+0.86
+
+Expected change in core loan standards (bank-level, annual)
+
+604
+
+0.08
+
+0.36
+
+0
+
+0.13
+
+-1
+
+1
+
+Expected change in core loan demand (bank-level, annual)
+
+604
+
+0.09
+
+0.52
+
+-0.06
+
+0.44
+
+-1
+
+1
+
+Expected change in core loan asset quality (bank-level, annual)
+
+604
+
+-0.14
+
+0.39
+
+-0.35
+
+0
+
+-1
+
+1
+
+Q4 change in core loan standards (bank-level, annual)
+
+604
+
+0.08
+
+0.32
+
+0
+
+0.13
+
+-1
+
+1
+
+Reported changes in standards (bank-level, quarterly)
+
+2,012
+
+0.13
+
+0.37
+
+0
+
+0.31
+
+-1
+
+1
+
+GDP growth Q4/Q4, year-ahead forecast
+
+9
+
+2.22
+
+0.80
+
+1.83
+
+2.37
+
+0.82
+
+3.51
+
+Unemployment change Q4/Q4, year-ahead forecast
+
+9
+
+-0.10
+
+0.59
+
+-0.11
+
+0.14
+
+-1.34
+
+0.83
+
+T-bill yield change Q4/Q4, year-ahead forecast
+
+9
+
+0.15
+
+0.98
+
+-0.52
+
+0.64
+
+-1.19
+
+2.40
+
+GDP growth Q4/Q4
+
+9
+
+2.49
+
+1.70
+
+2.10
+
+3.30
+
+-0.93
+
+5.60
+
+Unemployment change Q4/Q4
+
+9
+
+-0.05
+
+1.45
+
+-0.60
+
+0.32
+
+-2.60
+
+3.17
+
+RFFR change Q4/Q4
+
+9
+
+0.21
+
+2.03
+
+-0.64
+
+0.95
+
+-3.29
+
+3.52
+
+EBP change Q4/Q4
+
+9
+
+0.01
+
+0.27
+
+-0.17
+
+0.17
+
+-0.39
+
+0.43
+
+Share of core deposits (bank-level, annual)
+
+604
+
+3.26
+
+1.07
+
+2.81
+
+3.60
+
+0.61
+
+10.69
+
+Share of core loans (bank-level, annual)
+
+604
+
+0.23
+
+0.53
+
+0.03
+
+0.26
+
+-0.89
+
+7.43
+
+NIMs change (bank-level, annual)
+
+604
+
+52.24
+
+15.52
+
+45.91
+
+61.94
+
+1.49
+
+87.17
+
+LLP change (bank-level, annual)
+
+604
+
+4.60
+
+3.75
+
+1.80
+
+6.29
+
+0
+
+22.26
+
+ROA (bank-level, annual)
+
+604
+
+0.29
+
+0.15
+
+0.23
+
+0.35
+
+-1.01
+
+1.12
+
+Tier 1 capital ratio (bank-level, annual)
+
+604
+
+-5.98
+
+1.61
+
+-7.24
+
+-4.87
+
+-8.89
+
+-1.89
+
+Log(Assets) (bank-level, annual)
+
+604
+
+9.55
+
+1.41
+
+8.60
+
+10.27
+
+5.99
+
+15.96
+
+Source: Federal Reserve, SLOOS, Survey of Professional Forecasters, Call Reports, authors' calculations.
+
+1. We thank Mark Carlson, Felicia Ionescu, Giovanni Favara, Raven Molloy, Teodora Paligorova, Jessie Wang, and Min Wei for useful comments and discussions, as well as Paige Ehresmann for important contributions. The views expressed in this note are solely those of the authors and do not necessarily reflect the views of the Board of Governors of the Federal Reserve System or other members of its staff.
+Return to text
+
+2. Ma et al. (2022) find that banks with larger regional exposures to declines in HPI and unemployment during the 2008 Global Financial Crisis formulate worse severely adverse macroeconomic scenarios; Falato and Xiao (2024) similarly show that banks' expectation for loan performance reflects their past experiences; in turn, more pessimistic banks reduce credit supply.
+Return to text
+
+3. See
+https://www.federalreserve.gov/data/sloos.htm
+. The main core loan categories are commercial and industrial (C&I), commercial real estate (CRE), residential real estate (RRE), and consumer loans. The survey has been conducted consistently since 1990 but began in the 1960s.
+Return to text
+
+4. The special questions on banks' expectations for changes in lending standards over the remainder of the year have been asked every year since 2016; those for loan demand have been asked since 2018 or 2019, depending on loan category; and those on asset quality have been asked since 2006. Other special questions asked once per year concern changes in banks' credit policies for CRE loans over the past year (asked in April), the current level of lending standards (asked in July), and the likelihood of approving credit card and auto loan applications by borrower credit score (asked in October).
+Return to text
+
+5. For core and business loans, the expected changes in demand for 2018 are constructed by aggregating responses for C&I loans only, since the questions about expected changes in demand for CRE, RRE and consumer loans were introduced in 2019. For household loans, the expected changes in standards for 2016 reflect RRE loans only, since the questions about expected changes in standards for consumer loans were introduced in 2017.
+Return to text
+
+6. The SLOOS asks explicitly about banks' expectations for the year conditioning on consensus forecasts for macroeconomic activity. Additionally, in response to an optional special question in the January 2023 SLOOS, a majority reported reliance on both internal and external forecasts, such as Moody's or Blue Chip. About one third reported using only external sources while very few reported using only internal sources.
+Return to text
+
+7. We use the fourth quarter's reported change in lending standards as a control, rather than the one-year lagged expected changes in lending standards, given the more recent information and higher statistical significance of the former. Adding more lags for changes in lending standards leaves the results little changed.
+Return to text
+
+8. For the January 2026 SLOOS responses, macroeconomic and bank characteristics data for 2025:Q4 are not yet available. Therefore, we use the Q3/Q3 GDP growth; compute the Q4/Q4 changes in unemployment, real federal funds rate, and excess bond premium using the 2025:Q4 average level estimates based on the October and November 2025 values when available (November only for unemployment); and use the bank characteristics from Call Report data for 2025:Q3.
+Return to text
+
+9. Given the recency and annual frequency of the outlook questions, which shorten the sample periods, as well as the correlation between annual GDP growth and unemployment, we include the two macro variables in alternative specifications rather than simultaneously, with similar results.
+Return to text
+
+10. We keep the sample the same across panels A and B in Table 2 to ensure that the results are comparable.
+Return to text
+
+11. These indices are built the same for all categories but RRE loans as for those used for the Credit Supply Index found in Cavallo et al. (2024). One minor difference is that they weight RRE loan categories with a 50/40/10 split for GSE-eligible/qualifying-mortgage (QM) jumbo/non-QM non-jumbo, while we weight categories with a 50/50 split for GSE-eligible/QM jumbo.
+Return to text
+
+Please cite this note as:
+
+Baylor, Solveig, Jack Keane, Luke Morgan, and Andrei Zlate (2026). "Measuring Shocks to Banksâ Expectations for Lending Standards Using the Senior Loan Officer Opinion Survey," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 23, 2026, https://doi.org/10.17016/2380-7172.3997.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

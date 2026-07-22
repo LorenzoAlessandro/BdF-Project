@@ -1,0 +1,247 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+April 03, 2024
+
+Tokenized Assets on Public Blockchains: How Transparent is the Blockchain?
+
+Cy Watsky
+, Matthew Liu, Nolan Ly, Kurtis Orr, 
+Amber Seira
+, Zach Vida, Lawrence Wu
+1
+
+Introduction
+
+With the proliferation of programmable blockchains with smart contract capabilities, new blockchain technology use cases have emerged that involve the tokenization of conventional financial assets and related smart contract-based financial services. While early blockchains like Bitcoin introduced native cryptocurrencies as new asset classes, in recent years, market participants have noted the potential for blockchain and distributed ledger technologies (DLT) to be used to trade tokenized versions of bonds, money funds, and commodities, among other assets (GFMA, 2023, p. 6).
+
+One important differentiating characteristic of public permissionless blockchains is their transparency (Schar, 2022). The smart contracts facilitating the issuance and trading of tokenized assets are visible, in some form, on the blockchain, as is the history of all transactions involving these assets. In 2023, a team at the Federal Reserve conducted technical research within the Board's Technology Lab (TechLab) to better understand the implications of using a public blockchain to run smart contracts underlying tokenized assets issued on Ethereum.
+2
+ The team researched two tokenized bonds issued on Ethereum, a 2019 bond issued by Santander Group (Santander) and a 2021 bond issued by the European Investment Bank (EIB).
+3
+
+In this note, we share findings from this research on the kind of transparency offered by smart contract-based projects deployed on public blockchains. Our research did not focus on other important questions related to the viability, security, or benefits of tokenized bonds. We begin with an overview of tokenized assets and smart contracts on public blockchains. We then discuss the two tokenized bonds under review, which we analyzed using publicly available data and a private Ethereum-based test environment.
+
+Background
+
+The word token in the digital currency context can refer to a number of concepts, but in this note we focus on the Ethereum blockchain and use "tokens" to refer to smart-contract-based fungible tokens issued using smart contracts.
+4
+ The Ethereum blockchain, in addition to functioning as a distributed ledger secured by the native cryptocurrency ether (ETH), runs a distributed computer with robust programmability in the Ethereum Virtual Machine (EVM). Code written and executed on the EVM is known as a smart contract, and smart contracts can be used for various functions, from the development of financial products and services to the issuance of tokens, which we focus on here.
+
+The native ETH asset serves a fundamental role in the Ethereum network as the asset in which transaction fees are paid and validators are rewarded. Separately, numerous tokens issued using smart contracts circulate in the Ethereum network. The ERC-20 token standard describes a set of design specifications for smart contracts which, when followed appropriately, ensure a set of functionalities that make a token a token.
+5
+ The smart contract responsible for issuing a token is called a token contract. An ERC-20 token's basic functionalities are similar to ETH: it is stored on the blockchain, and it can be transferred from account to account. An ERC-20 token, however, opens up numerous additional possibilities for developers to add other features through smart contract code. Other standards for different kinds of tokens, such as non-fungible tokens, exist, but the ERC-20 is the most widely used crypto token standard and serves as a reference point for tokens across blockchains more broadly (Lee, Malone, and Wong, 2020).
+
+"Tokenized assets" and "asset tokenization" refer to the product and process by which an entity uses smart contracts to issue tokens representing assets not conventionally issued on blockchains.
+6
+ Perhaps the most widely recognized example of tokenized assets available to the public is tokenized gold; the market capitalization of tokenized gold reached $1 billion in April 2023 (Sandor, 2023). More than $200 million worth of tokenized securities circulate on public blockchains, including bonds, money funds, and exchange-traded funds (Kelly and Rustgi, 2023).
+
+Publicly available tokenized assets represent only a portion of activity being conducted with tokenized assets; many asset tokenization projects have launched for experimental or limited proof-of-concept purposes that allow entities to explore the possibilities of an emergent technology. Such projects have been wide-ranging thus far, with financial institutions, central banks, and financial technology companies exploring the tokenization of securities, commodities, and conventionally non-financial assets.
+
+The technical characteristics of a tokenized asset depend on the asset being tokenized and the functionality delegated to the smart contracts. The smart contracts themselves only represent one portion of the asset tokenization process. For example, if an issuer wishes to restrict who is allowed to trade the tokenized asset, they might include whitelisting or blacklisting functions in the token contract. Yet the processes for identifying and updating approved or banned addresses might be handled through external processes, and instructions for changing approvals for the token may be issued from levels higher up the technology stack. Critically, functionalities employed at the smart contract level and executed on a public blockchain are publicly visible, which may introduce new considerations about privacy and security.
+
+Aldasoro and others (2023) offer a helpful conceptualization of such design tradeoffs as a "tokenization continuum," a range of assets from easiest to most difficult to tokenize. They argue that systems with fragmented, complex processes and regulations are the least amenable to tokenization, even if the per-unit gains in efficiency might be high. On the other hand, assets in already streamlined, efficient systems are easiest to tokenize, though per-unit gains are lowest. Thus, they argue, tokenization should focus on high-volume markets in the latter category, such as markets for government bonds, where gains can accumulate.
+
+In the following sections, we highlight insights gleaned from studying two smart contracts, illustrating some of the design possibilities for smart contracts enabling tokenization.
+
+Comparing Two Approaches to Tokenized Bonds
+
+To explore the public visibility of a tokenized asset on a public blockchain, the team selected two tokenized bonds issued on public Ethereum as case studies, a 2019 bond issued by Santander Bank and a 2021 bond issued by the EIB. We chose two projects whose bonds had matured by the time research began in earnest, allowing us to view the entire transaction lifecycle. Tokenized bonds issued by financial institutions presented a particularly interesting subject. Unlike widely circulating tokenized gold or stablecoins, the issuers of these tokenized bonds had to design products with strictly permissioned, centralized distribution on the permissionless Ethereum network. These tokenized bonds also differed in several important ways and modeled unique processes, from coupon payments to delivery versus payment (DVP) settlement.
+
+We began with a comparison of these details, then moved on to an analysis of the visible code, and analysis of executions on-chain, and then an attempt to deploy onto a private test environment. Ultimately, research addressed three high-level questions:
+
+What information can be gleaned from these two tokenized bonds, and what isn't visible?
+
+How are certain functionalities of the bond issuance lifecycle carried out through smart contracts, and do the smart contracts differ in how these functionalities are enabled?
+
+How are controls and permissioning enabled in the tokenized bond?
+
+The team relied entirely on publicly available information and data, from public reports to data stored on the Ethereum blockchain. The project's research approach allowed the team both to better understand smart contract designs for tokenized bonds and to discern the extent to which smart contracts in public blockchain networks truly are publicly transparent.
+
+Bond Details
+
+On September 10, 2019, Santander issued a one-year, $20 million bond on Ethereum. Divisions of Santander acted as the issuer, purchasers of the bond, and tokenization agent.
+7
+ The bond carried a 1.98 percent quarterly coupon, but Santander redeemed it early after one quarter (Palmer, 2019). On April 27, 2021, the EIB issued a 100 million euro, two-year "digital bond" on a platform using Ethereum.
+8
+ The bond was settled on April 28, 2021, and matured two years later, on April 28, 2023. The zero-coupon bond was sold at a reoffer price of 101.213 percent.
+9
+ Both projects involved an ERC-20 token representing fiat payments. We refer to the token representing the bond as the "bond token," and the cash representation as the "cash token."
+
+While Santander's internal teams were responsible for the development of the bond token, the French bank Société Générale's cryptocurrency division, Forge (SG-Forge), served as the registrar, fiscal agent, and settlement agent for the EIB bond and created the application responsible for the issuance and management of the bond tokens (SG-Forge, 2021).
+10
+ The Compliant Architecture for Security Tokens (CAST) framework that SG-Forge used in issuing the tokens implements KYC/AML, sanctions, and embargo controls which must be conducted before the smart contract for the token approves any transactions (Zhang, 2022).
+11
+
+The differences between these bonds allowed the project team to examine multiple options for bond token designs and ascertain what kinds of information most improved transparency.
+
+Smart Contract Visibility on Public Blockchains
+
+In this section we present our analytical findings on public blockchain visibility by focusing on the transparency of the code, transaction data, participants, and functionality of the tokenized bonds under review.
+
+Smart Contract Code
+
+The widely used motto in crypto and web3 circles, "don't trust; verify," implores smart contract application users to leverage the transparency of blockchains to check the validity of the smart contracts themselves, rather than trusting a traditional third-party developer.
+12
+ Indeed, public blockchains allow anyone to view the entire history of transactions conducted on the blockchain, from crypto-asset transfers to smart contract code execution.
+
+Yet such a directive is not universally applicable and is instead relevant to varying extents based on the kinds of information made publicly available about a smart contract-based project. As the team relied entirely on publicly available information, it became clear over the course of its research that availability of source code was of primary importance for transparency.
+
+What is stored on the blockchain itself is compiled bytecode rather than the source code of the smart contract. Compiled bytecode, while technically human readable, is practically speaking very difficult to understand â processes for parsing and decompiling bytecode directly are an extensive field of inquiry on their own (Albert and others, 2018).
+13
+
+The EIB tokenized bond source code we analyzed was published publicly on Etherscan, while the Santander tokenized bond code was not.
+14
+ The project team was able to understand the structure and functionality of the smart contract for the EIB bond token and deployed the source code to a private blockchain environment for further hands-on analysis. On the other hand, limitations of decompiling processes made the structure of the Santander bond token code far more difficult to ascertain. The team only successfully decompiled specific functions but did not more rigorously attempt to piece together the smart contract code as a whole.
+
+This difference was important, in particular, for understanding how the smart contracts enforced permissioning schemes. Our technical analysis of the EIB bond's smart contract source code, written in the EVM-compatible language Solidity, showed that access to most of the functions in the bond token require permission to execute. Permissions in the smart contract are structured through modifiers, programming functions commonly employed in Solidity, to restrict access to key contract functionalities through designated roles, which are discussed further in the following section. Partially decompiled bytecode from the Santander bond smart contract indicated use of whitelists to limit access to certain functions, but further details were not legible without more extensive decompiling efforts.
+
+Transaction Data and Participants
+
+Transaction data stored on the blockchain and accessed through the blockchain explorer Etherscan proved instructive for the project team. Like all tokens issued on Ethereum, data on all transactions involving the bond tokens are stored on the Ethereum blockchain, and the team was able to observe the entirety of both bonds' issuance lifecycle. In combination with documentation provided publicly by the teams behind both projects, this transaction data was useful in viewing the portions for which the blockchain was used in the issuance, trade, and settlement of the bond tokens.
+
+Developers associated with the Santander project released explanatory documents about on-chain and off-chain operations publicly, and the transactions involved in the lifecycle of the bond were relatively straightforward.
+15
+ This made it easier to understand the role of smart contract code from partially decompiled bytecode and publicly executed transactions on Etherscan.
+16
+
+On-chain participants for the Santander bond included an investor and an issuer. After the investor wired cash to the custodian off-chain, public blockchain data shows that issuance began on-chain when cash tokens and bond tokens were minted before being sent to the investor and bond token contract addresses, respectively. Both sets of tokens were then sent to the cash token address. Notably, a function in the smart contract for the cash token was responsible for the execution of delivery-versus-payment (DvP) settlement. In a single transaction, when the function was called, bond tokens were sent to the investor wallet and cash tokens were sent to the issuer wallet, thus ensuring that delivery was contingent on payment on-chain. The bond's early redemption after a single quarter was also visible on the blockchain.
+
+In comparison, the EIB tokenized bond project, which involved multiple broker-dealers and trades to third parties, was more difficult to follow on Etherscan. The source code made it easier to understand what each function's purpose was, though, and Etherscan data was useful for tracking the order in which these functions were called and how they related to the payment of cash tokens.
+
+As introduced above, the EIB bond established clear permissioning structures. Here, the EIB bond developers created three roles â Issuer, Registrar, and Settler â to divide up the functions across three distinct entities. When the smart contract is deployed, a separate Ethereum address is tied to each of these roles. Only the Issuer can assign new addresses to designated roles; only the Registrar can burn bond tokens and remove them from circulation; and only the Settler can return confirmation of settlement. If the on-chain smart contracts are appropriately integrated with the off-chain application, the issuer can strictly permission the bond token according to the aforementioned controls.
+
+Functionality and Automation
+
+Blockchain data also usefully confirmed which parts of the bond token smart contract were not actually executed during the lifecycle of the bond. The EIB tokenized bond smart contract code contained a number of descriptive fields, such as the interest rate and coupon frequency, which were not then used in other functions in the smart contract. Of course, the zero-coupon bond did not require coupon payments, but analyzing the code and deploying the smart contract, adjusting our own initialization parameters, and checking against historical data from the Ethereum blockchain confirmed that such functions were either purely descriptive or that any further functionality associated with such code was handled outside of the smart contract, higher up the technology stack of the application.
+
+The self-executing nature of smart contracts, meaning that they can execute autonomously when triggered by predetermined conditions and that smart contracts can call other smart contracts, is often touted as the foundation for complex, highly automated financial processes. However, we found that much of the code was not structured to allow such automation and transactions executed on Ethereum were not combined in such a way. Instead, individual functions were manually called by an entity outside the smart contracts. While automation may have been implemented off-chain in the application, the smart contracts themselves did not trigger complex chains of automated functions.
+
+Ultimately, code analysis, tracking transactions on Ethereum blockchain explorers, and deploying the EIB bond token contract on a private test environment allowed us to view and test the bonds' permissioning set ups, function execution, and parameters. Doing so allowed us to view what was employed through smart contract code, though any operations handled off-chain were not any more transparent than in traditional legacy systems. In both of the projects we analyzed, traditional payment rails were used to move cash between participants. Such an operation can be modeled on-chain, but directly viewing that action is impossible via the blockchain. The entire user interface and layers of software used to access the tokenized bond itself for the end user were not created using smart contracts, either.
+
+Concluding Thoughts
+
+Projects involving smart contracts deployed on public blockchains such as Ethereum provide researchers and the public with some measure of transparency. Case studies on two past experiments with tokenized bonds on public Ethereum allowed us to see what kinds of insights such transparency might allow for. From this analysis, three high-level takeaways emerged:
+
+Smart contract bytecode stored on blockchains
+: Experiments deployed on public blockchains allow for a certain amount of visibility to researchers, but bytecode alone is not revealing without extensive work. Source code was enormously instructive, allowing us not only to view the structure of the code itself but also to deploy the code ourselves to understand the functionality of the token. Additionally, on-chain execution of functions in the smart contract helped with transparency. Even without the source code, descriptive reference material helped to demystify the smart contracts underlying an Ethereum token.
+
+Differences in smart contract functionality and automation
+: The ERC-20 token standard ensures a baseline level of functionality in a token contract. However, the tokenized bonds we analyzed went far beyond these standards to add asset-specific functionalities, permissioning systems and controls, integration with layers of technology off-chain, and the ability to settle against other tokens. We also analyzed smart contract source code for other kinds of popular ERC-20 tokens and saw vast differences between smart contracts for different crypto-assets. Of particular note was the full range of differences in automation available for developers to employ using smart contracts.
+
+Permissioning on permissionless networks
+: Permissioning at the smart contract level allows issuers of tokenized assets to ensure tight levels of control over a crypto-asset. While off-chain software wasn't visible given our focus on solely analyzing publicly available data and documentation, the smart contracts themselves were useful in showing how an application implementing various security features up the technology stack could combine such features with permissioning of functions at the smart contract level.
+
+References
+
+Albert, Elvira, Pablo Gordillo, Benjamin Livshits, Albert Rubio, and Ilya Sergey (2018), "Ethir: A framework for high-level analysis of ethereum bytecode." In 
+International symposium on automated technology for verification and analysis
+, pp. 513-520. Cham: Springer International Publishing.
+
+Aldasoro, Iñaki, Sebastian Doerr, Leonardo Gambacorta, Rodney Garratt, and Koo Wilkens (2023), "The tokenisation continuum," BIS Bulletin, No. 72, Bank for International Settlements, 
+https://www.bis.org/publ/bisbull72.pdf
+.
+
+Carapella, Francesca, Grace Chuan, Jacob Gerszten, Chelsea Hunter, and Nathan Swem (2023). "Tokenization: Overview and Financial Stability Implications," Finance and Economics Discussion Series 2023-060. Washington: Board of Governors of the Federal Reserve System, 
+https://doi.org/10.17016/FEDS.2023.060
+.
+
+Financial Stability Board (FSB) (2019), "Decentralised financial technologies: Report on financial stability, regulatory and governance implications." Financial Stability Board. 
+https://www.fsb.org/wp-content/uploads/P060619.pdf
+.
+
+Global Financial Markets Association (GFMA), Boston Consulting Group, Clifford Chance and Cravath, Swaine &Moore LLP (2023), "Impact of Distributed Ledger Technology in Global Capital Markets," Global Market Policies Series.
+
+Grech, Neville, Lexi Brent, Bernhard Scholz, and Yannis Smaragdakis (2019), "Gigahorse: thorough, declarative decompilation of smart contracts." In 2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE), pp. 1176-1186. IEEE.
+
+Kelly, Liam and Nivesh Rustgi (2023) "Tokenized Securities on Ethereum, Polygon, Gnosis Hit $225M Market Cap," Decrypt, 
+https://decrypt.co/140941/tokenized-securities-ethereum-polygon-gnosis-hit-225m-market-cap
+.
+
+Lee, Alexander, Brendan Malone, and Paul Wong (2020). "Tokens and accounts in the context of digital currencies," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, December 23, 2020, https://doi.org/10.17016/2380-7172.2822.
+
+OECD (2020), 
+The Tokenisation of Assets and Potential Implications for Financial Markets, 
+OECD Blockchain Policy Series, 
+www.oecd.org/finance/The-Tokenisation-of-Assets-and-Potential-Implications-for-Financial-Markets.htm
+.
+
+Palmer, Daniel (2019). "Santander Exec Claims Blockchain Success as Bank Redeems Ethereum-Issued Bond," CoinDesk, https://www.coindesk.com/business/2019/12/10/santander-exec-claims-blockchain-success-as-bank-redeems-ethereum-issued-bond/.
+
+Sandor, Krisztian (2023). "Tokenized Gold Surpasses $1B in Market Cap as Physical Asset Nears All-Time Price High," CoinDesk, https://www.coindesk.com/markets/2023/04/04/tokenized-gold-surpasses-1b-in-market-cap-as-gold-price-nears-all-time-high/.
+
+Schar, Fabien, (2022), "DeFi's Promise and Pitfalls" International Monetary Fund, 
+https://www.imf.org/en/Publications/fandd/issues/2022/09/Defi-promise-and-pitfalls-Fabian-Schar
+.
+
+Societe General Group Forge (SG-Forge) (2021), "European Investment Bank (EIB) issues its first ever digital bond on a public blockchain," https://www.sgforge.com/european-investment-bank-eib-issues-its-first-ever-digital-bond-on-a-public-blockchain/.
+
+Zhang, Guowei, Peter Ryan, and Carter McDowell (2022), "Why Basel Should Not Apply A Blanket Infrastructure Risk Add-On For Group 1 Cryptoassets," SIFMA, Prudential Regulation Series, 
+https://www.sifma.org/resources/news/why-basel-should-not-apply-a-blanket-infrastructure-risk-add-on-for-group-1-cryptoassets/
+.
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the Federal Reserve System. The authors would like to thank David Mills, Sonja Danburg, Jillian Mascelli, Jeff Allen, Nathan Palmer, and Sarah Wright of the Federal Reserve Board for their feedback. 
+Return to text
+
+2. We refer to the public Ethereum blockchain network as "Ethereum," and the private test implementation of the Ethereum protocol the project used as the "private test environment." 
+Return to text
+
+3. The team chose these two bond projects purely for their utility as case studies for research. Both bonds had matured by the time research began in earnest, and their differences allowed the team to better understand the implications of public blockchain transparency: they represented two mechanically distinct arrangements for bond tokenization, and one had source code publicly available while the other did not. 
+Return to text
+
+4. For further details on tokens, the ERC-20 standard, and other related topics, see Lee, Malone, and Wong (2020). 
+Return to text
+
+5. For further documentation on Ethereum token standards, see 
+https://ethereum.org/en/developers/docs/standards/tokens/erc-20/
+. 
+Return to text
+
+6. Definitions of "asset tokenization" tend to refer to the representation of traditional assets more broadly on blockchains or other DLTs, but we pay particular attention to the smart contracts responsible for issuing the tokens on the blockchain (FSB, 2019). 
+Return to text
+
+7. Banco Santander was the issuer of the bond, while Santander Securities Services acted as the tokenization agent and the custodian, and Sander Corporate and Investment Banking acted as the dealer. For further details, see their press release here, https://www.santander.com/en/press-room/press-releases/santander-launches-the-first-end-to-end-blockchain-bond. 
+Return to text
+
+8. For further details, see the EIB's public announcement 
+here
+. 
+Return to text
+
+9. Bonds typically make regular interest payments, known as coupons, at specified intervals, often annually or semi-annually. A zero-coupon bond does not make regular interest payments. It only pays out the face value at the end of the bond term. Zero-coupon bonds are often sold at a discount but can also sell a premium, as in this case, depending on macroeconomic circumstances and issuer credibility. 
+Return to text
+
+10. In a typical bond issuance, intermediaries play organizational and administrative roles. A registrar keeps track of bond holders. A fiscal agent handles the financial aspects of the issuance, such as distributing coupons and addressing tax issues. A settlement agent facilitates the exchange of cash for securities. 
+Return to text
+
+11. SG-Forge's CAST framework documentation provided further information about the overall technology architecture of the EIB tokenized bond. For further details, see their whitepaper here, https://www.cast-framework.com/wp-content/uploads/2021/05/CAST-White-Paper-1.0_Final_17-05-2021.pdf. 
+Return to text
+
+12. For example, see staff writers from Gemini discuss trustlessness in public blockchains here, https://www.gemini.com/cryptopedia/trustless-meaning-blockchain-non-custodial-smart-contracts#section-do-decentralized-exchanges-make-trading-trustless. 
+Return to text
+
+13. Significant amounts of data are lost in the compilation process. Methods of fully reverse-engineering source code from compiled bytecode were outside the scope of this research. 
+Return to text
+
+14. Smart contract developers can choose to upload their source code to a commonly used platform like Etherscan, which puts the code through a verification process to ensure that the source code matches the bytecode stored on the blockchain. 
+Return to text
+
+15. For example, see Banco Santander's presentation here, https://www.youtube.com/watch?v=vAFvAWjKico. 
+Return to text
+
+16. When functions are executed on public Ethereum, an Etherscan user can see the function signature being called; public databases storing commonly used functions along with their function signatures help make identifying many function signatures possible (Grech and others 2019). This means that even if just the bytecode is available, one can use Etherscan to view the execution of commonly used functions and view how the smart contract is being used. 
+Return to text
+
+Please cite this note as:
+
+Watsky, Cy, Matthew Liu, Nolan Ly, Kurtis Orr, Amber Seira, Zach Vida, and Lawrence Wu (2024). "Tokenized Assets on Public Blockchains: How Transparent is the Blockchain?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 03, 2024, https://doi.org/10.17016/2380-7172.3444.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

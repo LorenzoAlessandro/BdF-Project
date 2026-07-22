@@ -1,0 +1,386 @@
+FEDS Notes
+
+Twitter
+
+May 20, 2022
+
+International Trade and Gender Gaps in College Enrollment
+
+Sarah Conlisk, Gaston Navarro, Maddie Penn, and Ricardo Reyes-Heroles
+
+Introduction
+
+A large body of work suggests that trade affects workers unevenly. By shifting economic activity across occupations, industries, or regions, freer trade can generate gains for some workers and losses for others. For instance, in light of the increase in U.S. imports from China starting in the 1990s, Autor, Dorn and Hanson (2013) provide evidence that workers' labor market outcomes deteriorated more in regions exposed to tougher import competition from China. Relatedly, the recent work by Ferriere, Navarro and Reyes-Heroles (2021) shows that college enrollment by young individuals increased more in these exposed regions.
+1
+In particular, they show that labor markets outcomes deteriorated more for workers with lower education levels, thus affecting incentives for young individuals to enroll into college.
+
+In this note, we provide evidence that trade openness has led to a greater increase in college enrollment by women than by men. We extend the work of Ferriere, Navarro and Reyes-Heroles (2021) by analyzing the gender-specific effects of import competition on labor market outcomes and college enrollment decisions. We first show that the adverse effect of import competition is strongest on the labor market outcomes of women without a college education. That is, after the increase in trade, the college premium increases more for women than for men. Second, we show that young women enrolled more into college than men in response to increased imports. Hence, college enrollment responded to the trade-induced increase in college premium.
+2
+
+Section 2 of this note discusses our empirical strategy. Section 3 discusses the effects on labor market outcomes by gender and education levels, while Section 4 does the same for college enrollment. Section 5 concludes.
+
+Empirical Strategy
+
+Our empirical strategy exploits variation in exposure to trade across regions in the United States. In particular, we utilize the import penetration measure proposed by Autor, Dorn and Hanson (2013) for U.S. commuting zonesâwhich we also refer to as local labor markets.
+3
+Changes over time in this import penetration measure (a weighted average across industries of changes in imports per worker) vary across commuting zones. As Figure 1 shows, while some regions were barely affected by import competition, many experienced increases of around $20,000 per worker over a decade. We exploit this variation to estimate the gender-specific effects of trade on: (i) adults' labor market outcomes for different education levels and (ii) college enrollment.
+
+Figure 1. Geographic Distribution of Changes in US Import Penetration from China, 1990-2007
+
+Notes: Ten-year equivalent changes expressed in thousands of U.S. dollars per worker. Changes in import penetration refer to the weighted average across industries of changes in imports per worker. Map is displayed at the county level.
+
+Accessible version
+
+To construct measures of labor market outcomes and college enrollment, we use the American Community Survey (ACS) as obtained from the Integrated Public Use Microdata Series (IPUMS). Our analysis focuses around the years 1990-2007, when imports from China began to increase dramaticallyâespecially around the turn of the millennium. Table 1 reports changes in key statistics of labor market outcomes and college enrollment for men and women over this period. As the table shows, there was substantial variation in changes of wages, employment, and enrollment across space and gender.
+
+Table 1. Summary Statistics by Commuting Zone - Changes from 1990 to 2007
+
+Percentile
+
+25
+
+50
+
+75
+
+(Imports from China to US) / (workers in 1990) (kUS$)
+
+1.6
+
+2.11
+
+3.11
+
+Wage Income per Capita ($)
+
+All
+
+3314
+
+3568
+
+3853
+
+Men
+
+2705
+
+3152
+
+3405
+
+Women
+
+4145
+
+4416
+
+4669
+
+Employment per Capita
+
+All
+
+-1.25
+
+-0.77
+
+0.08
+
+Men
+
+-3.29
+
+-2.04
+
+-1.19
+
+Women
+
+-0.23
+
+1.2
+
+2.66
+
+18-25 year olds Enrolled in College (%)
+
+All
+
+2.72
+
+4.09
+
+5.54
+
+Men
+
+1.65
+
+3.34
+
+4.3
+
+Women
+
+3.73
+
+5.46
+
+6.7
+
+Notes: All statistics are expressed in ten-year equivalent changes. Wage income and employment are for individuals aged 30-55.
+
+Measuring Import Penetration:
+
+We consider 722 commuting zones in the United States. For each of these zones, Autor, Dorn and Hanson (2013) construct a measure of import penetration in a given time period $$t$$
+
+as follows:
+
+(1) $$\Delta{IPW}_{rt} = \sum_i \frac{L_{rit}}{L_{rt}}\frac{\Delta M_{it}}{L_{it}}$$
+
+Where $$r$$
+
+denotes the commuting zone, $$i$$
+
+the industry, $$\Delta M_{it}$$
+
+the change in Chinese imports into the United States in industry $$i$$
+
+in period $$t$$, and $$ L_{rit}$$
+
+the number of workers employed in that industry. Note that industry changes in imports per worker are weighted by the share of workers in the region employed in that industry, where $$L_{rt} = \sum_i L_{rit}$$
+
+and $$L_{it}=\sum_r L_{rit}$$. The import penetration measure in equation (1) provides a proxy for trade shocks at the regional level.
+4
+
+We consider changes in import penetration over the two different time periods: 1990 to 2000 and 2000 to 2007. The changes in import penetration for commuting zones have a median value of $1,140 for 1990-2000 and $2,600 for 2000-2007, as well as inter-quartile ranges of $600 for 1990-2000 and $1,500 for 2000-2007.
+5
+
+Empirical Model:
+
+Let $$y_{rgt}$$ be the variable of interestâsuch as labor income or college enrollmentâwhere $$g$$ denotes the demographic group. We consider three groups $$g$$: All, Men, and Women. We estimate the effect of $$\Delta {IPW}_{rt}$$ on variable $$y_{rgt}$$ with the empirical specification
+
+(2) $$\Delta y_{rgt} = \gamma_{gt} + \beta_g \Delta {IPW}_{rt} + \delta X_{rgt} + u_{rgt}$$.
+
+This specification includes a set of group-specific controls, $$X_{rgt}$$, that include labor force characteristics and regional dummies, among others.
+6
+
+Labor Market Outcomes
+
+We find that greater import penetration deteriorated labor market outcomes for all workers aged 30 to 55, but the effects were strongest for women without a college education. Figure 2 shows our estimates of the effect of import penetration on labor income and employment for our three demographic groups. Regardless of gender, the increase in import penetration did not have a statistically significant effect on labor market outcomes for workers with a college degree. However, the detrimental effects were statistically significantly larger for workers with lower than college education, and particularly more so for women. A $1,000 increase in import penetration led to a 1% decline in labor income for men with a high school degree or less, while the effect was more than twice as large for women with the same level of education. Our results show similar differences across genders for changes in employment.
+
+Figure 2. Effects of Import Penetration on Labor Income and Employment across Education and Gender Groups
+
+Notes: 2SLS estimates and 95 percent confidence intervals, 1990-2007. Estimates in y-axis expressed in terms of the effect of a $1,000 increase in âIPW.
+
+Accessible version
+
+These results imply that import penetration also had gender-specific effects on college- premia, as measured by the difference in labor market outcomes between college-educated and non-college-educated workers. Table 2 shows the estimated effect of import penetration on the college premium, for both labor income and employment.
+
+Table 2. Effects of Import Penetration on Workersâ College-Premia across Genders
+
+All
+
+Men
+
+Women
+
+College-income premium
+
+0.93*
+
+0.43
+
+2.14***
+
+(0.48)
+
+(0.50)
+
+(0.77)
+
+College-employment premium
+
+0.59**
+
+0.43*
+
+0.78**
+
+(0.23)
+
+(0.26)
+
+(0.31)
+
+Baseline Controls
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+1444
+
+1444
+
+1444
+
+Notes: 2SLS estimates. Standard errors in parentheses, clustered by state. Estimates provided as percentage points. College premium refers to the difference in outcome between college and non-college educated individuals; outcome defined as the change following a $1,000 increase in import penetration. â p < 0.1, ââ p < 0.05, âââ p < 0.01
+
+While a $1,000 increase in import penetration leads to an average 0.93 percentage point increase in the labor-income college premium, the effect is more than double for women and statistically non-significant for men. Similarly, a $1,000 increase in import penetration leads to a 0.43 percentage point decline in the employment college-premium among men, but the drop in this premium is 0.78 percentage point among women, almost twice as large.
+
+Incentives to enroll into college should depend on the effect that import penetration had on the college premium. We expect the larger effect of import penetration on women's college-premia to translate into a larger increase in college enrollment relative to men. We show in the next section that is indeed the case.
+
+College Enrollment
+
+Estimating college enrollment measures by regions poses important challenges. In particular, the fact that many individuals ages 18-25 migrate across regions in response to the trade shockâto enroll into college or elseârepresents an issue for our identification strategy. Unfortunately, the ACS considers as separate households those individuals who leave home for college. This methodology makes it difficult to link these individuals to the regions where they were located before going to college. Hence, we propose one particular strategy to account for individuals' possibility to migrate.
+7
+We explain our strategy first and then discuss the results.
+
+Computing College Enrollment by Region
+
+Our strategy relies on data for the location of individuals five years before they are interviewed in the ACS. We construct our measure of enrollment at the commuting zone level by linking individuals to the previous region where they were located. That is, for a given commuting zone, our measure computes the share of college enrollment among individuals aged 18-25 who were located in that region five years ago. In other words, we aim to control for young individuals' ability to move by linking them to the shock realized for the region where they were located five years ago. Considering 18â25-year-old individuals is in line with measures of educational attainment used in previous work (Greenland and Lopresti, 2016).
+
+Effects on College Enrollment
+
+We estimate the effects of import penetration on college enrollment by estimating (2) with $$y_{rgt}$$ denoting our college enrollment measure. We control for the same set of variables that are included in previous regressions. Table 3 presents the results.
+
+Table 3. Effects of Import Penetration on College Enrollment by Adults 18-25
+
+All
+
+Men
+
+Women
+
+Period t
+
+Adults ages 18-25
+
+0.88***
+
+0.67***
+
+1.1***
+
+(0.19)
+
+(0.22)
+
+(0.2)
+
+Period t+1
+
+Adults ages 18-25
+
+1.24***
+
+0.87**
+
+1.63***
+
+(0.39)
+
+(0.43)
+
+(0.42)
+
+Baseline Controls
+
+Yes
+
+Yes
+
+Yes
+
+Notes: 2SLS estimates. Standard errors in parentheses, clustered by state. Estimates provided in terms of basis points, following a $1,000 increase in import penetration. College enrollment refers to the fraction of adults aged 18-25 enrolled in college. â p < 0.1, ââ p < 0.05, âââ p < 0.01
+
+The top panel of Table 3 shows that greater import penetration leads to an increase in college enrollment for all individuals independently of their gender. In line with Ferriere, Navarro and Reyes-Heroles (2021), our estimates in column (1) imply that a $1,000 increase in import penetration leads to an 88 basis points increase in the fraction of individuals aged 18 to 25 enrolled in college.
+8
+
+There is a striking difference across genders in the college enrollment response to greater import penetration, as columns (2) and (3) of Table 3 show. While a $1,000 increase in import penetration leads to a 67 basis points increase in men's college enrollment, the effect is almost twice as large for women. Hence, the greater response in women's college enrollment aligns with our previous findings of a larger effect of import penetration on women's college-premia.
+
+This difference across genders magnifies when estimating college enrollment responses after a decade, as the bottom panel of Table 3 shows. To the extent that adjusting education decisions takes time, future enrollment should change in response to past trade shocks. Our estimates point in that direction. Greater import penetration led to a sizable effect on future college enrollment. Yet again, this effect is concentrated on women, with the estimate for men lacking statistical significance at the .01 level.
+
+Conclusion
+
+Our main results are twofold. First, import penetration led to an increase in college-premia, and especially so for women. Second, women responded to the college-premia increase by enrolling into college more, consistent with our hypothesis.
+
+Additionally, we showed that college enrollment responses take time to materialize. Thus, it may take time for changes in labor market conditions to disseminate throughout communities, so that past trade shocks may hold weight in future college enrollment.
+
+References
+
+Autor, David H., David Dorn, and Gordon H. Hanson, "The China Syndrome: Local Labor Market Effects of Import Competition in the United States,"
+American Economic Review
+, October 2013,
+103
+(6), 2121â68.
+
+Autor, David H., David Dorn, and Gordon H. Hanson, Replication data for: "The China Syndrome: Local Labor Market Effects of Import Competition in the United States." Nashville, TN: American Economic Association [publisher], 2013. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-11.
+https://doi.org/10.3886/E112670V1
+
+BesedÄs, Tibor, Seung Hoon Lee, and Tongyang Yang, "Trade liberalization and gender gaps in local labor market outcomes: Dimensions of adjustment in the United States,"
+Journal of
+Economic Behavior & Organization
+, 2021,
+183
+, 574â588.
+
+Ferriere, Axelle, Gaston Navarro, and Ricardo Reyes-Heroles, "Escaping the losses from trade: The impact of heterogeneity and skill acquisition," Manuscript 2021.
+
+Greenland, Andrew and John Lopresti, "Import exposure and human capital adjustment: Evidence from the U.S.,"
+Journal of International Economics
+, 2016,
+100
+, 50 â 60.
+
+Hakobyan, Shushanik and John McLaren, "NAFTA and the Gender Wage Gap," 2017.
+
+Keller, Wolfgang and Hale Utar, "Globalization, Gender, and the Family,"
+The Review of Economic Studies
+, 03 2022. rdac012.
+
+Ruggles, Steven, Sarah Flood, Sophia Foster, Ronald Goeken, Jose Pacas, Megan Schouweiler and Matthew Sobek, IPUMS USA: Version 11.0 [dataset]. Minneapolis, MN: IPUMS, 2021.
+https://doi.org/10.18128/D010.V11.0
+
+Sauré, Philip and Hosny Zoabi, "International trade, the gender wage gap and female labor force participation,"
+Journal of Development Economics
+, 2014,
+111
+, 17â33.
+
+1. The latest version of this paper can be found in https://rreyes-heroles.com/research.html.
+Return to text
+
+2. Our results contribute to the growing literature on the distributional effects of trade on gender including the works by Sauré and Zoabi (2014); Hakobyan and McLaren (2017); BesedÄs et al. (2021) and most recently Keller and Utar (2022).
+Return to text
+
+3. These regions are characterized by strong within commuting links but weak between commuting links.
+Return to text
+
+4. We follow Autor, Dorn and Hanson (2013) and instrument U.S. imports from China by those of other high-income countries.
+Return to text
+
+5. These quantities are all expressed in ten-year equivalent changes.
+Return to text
+
+6. We include the following controls: lagged share of manufacturing employment, lagged share of workers with a college education, lagged share of foreign-born workers, lagged share of employment in routine occupations, and a measure of average off-shorability of jobs. We cluster residuals at the state level when we run these regressions.
+Return to text
+
+7. Ferriere, Navarro and Reyes-Heroles 2021) propose additional strategies, one of them relying on individual level longitudinal data.
+Return to text
+
+8. To put this number into perspective, the median 10-year change in this measure of enrollment for 1990-2007 was 400 basis points.
+Return to text
+
+Please cite this note as:
+
+Conlisk, Sarah, Gaston Navarro, Maddie Penn, and Ricardo Reyes-Heroles (2022). "International Trade and Gender Gaps in College Enrollment," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 20, 2022, https://doi.org/10.17016/2380-7172.3117.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

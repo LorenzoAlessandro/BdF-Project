@@ -1,0 +1,373 @@
+FEDS Notes
+
+Twitter
+
+February 03, 2022
+
+Security Considerations for a Central Bank Digital Currency
+
+Tarik Hansen and Katya Delak
+1
+
+Introduction
+
+The concept of a central bank digital currency (CBDC) has gained traction in recent years, with an increasing number of central banks announcing efforts to explore CBDC use cases and designs. Institutions are in various stages of research and development, with some just beginning their research and others already entering pilot testing or even production, albeit on a limited scale. Discussions around CBDCs have included a variety of use cases and characteristics, including general-purpose and wholesale CBDCs, direct and indirect distribution of digital currency, and use of centralized and decentralized ledgers.
+
+While there are many potential options for designing and implementing a CBDC, one important consideration that spans all the approaches is security. Like cash and conventional electronic payment systems, security considerations for a CBDC include the prevention of counterfeiting, fraud, and double spending. Given the likely importance of a CBDC to a jurisdiction's financial system and broader economy, other security considerations include anti-money laundering and countering the financing of terrorism, consumer protection, and financial stability.
+
+A potential technology solution that is often discussed for a CBDC is distributed ledger technology (DLT).
+2
+The use of a decentralized ledger replicated across a distributed network could offer enhanced availability and minimize single points of failure, and the use of cryptographic hashes ensures the integrity of transaction records. While DLT may offer benefits, its use is not without security risks. For example, many of the purported benefits are associated with permissionless designs, yet security incidents involving these same designs demonstrate the continued existence of vulnerabilities.
+
+Regardless of the technology used, security must remain an important consideration for a CBDC. The security considerations for a CBDC are not any different than those for conventional payment systems, online banking, and other financial activities. Attackers will continue to use phishing attacks and malware to obtain credentials or private keys, malicious insiders will continue to leverage their privileged access to steal assets, and nation-states will continue to engage in espionage to access information or wreak havoc on another nation's critical infrastructure. To prevent these attacks, a central bank issuing a digital currency must have a robust information security program in place.
+
+We begin this note by discussing why security is important for a CBDC. We then address how existing security frameworks can be used to design and implement a secure CBDC. Finally, for CBDC designs based on DLTs, we identify additional areas that a central bank should consider as part of its security-related activities during the system initiation and development phases.
+
+Importance of Security for a CBDC
+
+Security is an important component of conventional electronic payment systems. It is no less critical in the design and implementation of a CBDC, where the ability to settle payments in real time and with immediate finality means that transactions cannot be easily stopped or reversed. While immediate and final settlement has existed in interbank payment systems for decades, it is more recent for retail payments. Security breaches from the systems that enable the use of CBDC could have immediate effects on payment systems and consumers. An attack or disruption of a CBDC arrangement may lead to follow-on effects that may pose broader risks to financial markets, economies, and currency-issuing institutions.
+
+Supporting a Resilient Payment System
+
+The introduction of a CBDC may augment the existing payment infrastructure, which must operate in a smooth and efficient manner that enables secure transactions and prevents disruption in payment flows or erroneous or fraudulent payments. Settlement delays could result in the inability of businesses to make payments on goods and services and in potential credit and liquidity exposures, all having implications for financial stability. By adding a CBDC to payment systems, new networks and infrastructures increase the attack surface and have the potential to introduce new opportunities for disruptions.
+
+Building Trust in a Payment Instrument
+
+An important aspect of any currency is trust, and a CBDC would not be successful without a secure platform that ensures user trust in the currency itself. A form of payment that is difficult to secure can be susceptible to counterfeiting, fraud, and double-spending, and is therefore unlikely to be adopted by merchants or consumers. The lack of trust and confidence in a currency could quickly reduce the value of that currency, disrupt businesses, and even destabilize economies and governments.
+
+In the case of physical currency, the prevalence of counterfeits presents a significant threat to trust in cash as a payment instrument. For example, the Continental currency notes issued by the Continental Congress in 1775 to finance the Revolutionary War were easy to counterfeit and quickly lost their value, ultimately leading to the coining of the phrase "not worth a Continental."
+3
+To address the problem of counterfeiting, banknote printers and issuing authorities incorporate a variety of anti-counterfeiting mechanisms into the payment instrument itself. For example, many banknotes include physical characteristics, such as watermarks, color shifting inks, and holograms, so consumers and businesses can visually evaluate a banknote's legitimacy.
+
+In addition to potential counterfeiting, a CBDC may be subject to fraud and double spending, which could weaken trust in a CBDC. Like the anti-counterfeiting measures used for physical currency, a variety of measures would need to be incorporated into a CBDC to prevent users from copying, modifying, or double spending the same asset. In the digital context, these measures could likely involve leveraging cryptography to confirm identities and authenticity of the asset or token rather than the watermarks and other security features designed to prevent the counterfeiting of physical banknotes. A general-purpose CBDC used by consumers would also need to incorporate secure applications used for managing end user CBDC assets.
+
+Protecting End User Asset and Sensitive Personal Information
+
+While the level of personally identifiable information (PII) collected from users will vary widely depending on the implementation, a general-purpose CBDC would likely involve the collection and storage of sensitive PII and information about users' financial transactions. Given the sensitivity of this information, central banks and other institutions involved in the implementation of a CBDC would need to ensure this information is securely held to prevent harm to consumers from fraud and theft arising out of stolen PII as well as unauthorized disclosure of information. These entities would also need to ensure compliance with various privacy and recordkeeping laws.
+
+Preventing Reputational Harm to a Central Bank
+
+A CBDC that does not operate seamlessly, whether due to operational disruptions or prevalence of fraud, may ultimately result not only in a loss of trust in the digital currency instrument itself, but also in damage to the reputation of the central bank. A common role of many central banks is operating robust and resilient payment infrastructure. A central bank that experiences security problems with its CBDC could face challenges fulfilling this responsibility, resulting in harm to its reputation and the services it provides. Additionally, its ability to fulfill other responsibilities, such as maintaining monetary and financial stability, may also be affected.
+
+Frameworks for a Secure CBDC
+
+A central bank must place security considerations among its top priorities for a CBDC. Bearing in mind that a CBDC is built upon information systems, it is useful to consider the risk-management approaches that ensure security in those systems. Securing a CBDC would entail conducting risk assessments and carrying out appropriate protective measures to manage and mitigate identified risks. The key risk areas are typically cast in terms of threats to confidentiality, integrity, and availability of data that is stored, maintained, and exchanged throughout the system. These characteristicsâconfidentiality, integrity, and availabilityâare commonly referred to as the CIA triad and are baseline security requirements for information systems. Risk management involves fortifying protections to CIA in one way or another, and many comprehensive security frameworks exist to assist organizations in securing the CIA of their systems to support mission/business functions.
+
+While the potential realization of a CBDC is novel, many of the underlying technologies that may be used for a CBDC are not new. Therefore, many of the protections for existing payment systems may be applied to CBDCs. These protections are built upon select security and operational frameworks that guide system operators through risk assessments and the subsequent implementation of security controls based on the sensitivity of the data stored on the information system. These frameworks are intended to be flexible and non-prescriptive, allowing information security professionals discretion in assessing risk, putting appropriate protections in place, and managing response to security incidents.
+
+Many of these frameworks are likely broad enough to cover most, if not all, aspects of any CBDC implementation regardless of architecture or characteristics. A central bank should leverage one or more of these frameworks to ensure necessary security controls are in place prior to production roll-out of the system. Some of the most-used risk and security frameworks, guidance, and standards are discussed below. Other frameworks may also be applicable, and the list below is by no means exhaustive nor necessarily sufficient.
+
+General Risk Management Guidance
+
+NIST Risk Management Framework (NIST RMF)
+4
+
+The NIST RMF is a framework for managing security and privacy risk that has been adopted by a variety of public and private entities. It is a flexible methodology that can be applied to any type of information system and can be tailored to each organization's unique business and risk profiles. NIST has produced an extensive collection of specific standards and guidance that complement the NIST RMF and provide additional guidance on managing risk using this framework. The approach outlined in the NIST RMF is meant to be iterative and ongoing throughout the life of a given information system. Table 1 lists the seven steps of the NIST RMF methodology along with a brief description of each step.
+
+Table 1. NIST RMF Steps
+
+Step
+
+Description
+
+Prepare
+
+Essential activities to prepare the organization to manage security and privacy risks
+
+Categorize
+
+Categorize the system and information processed, stored, and transmitted based on an impact analysis
+
+Select
+
+Select the set of security and privacy controls (NIST SP 800-53) to protect the system commensurate with risk to the organization, assets, individuals, and other organizations
+
+Implement
+
+Implement the controls and document how controls are deployed
+
+Assess
+
+Assess the controls to determine if the safeguards are in place, operating as intended, and producing the desired results
+
+Authorize
+
+Senior official makes a risk-based decision to authorize the system (to operate)
+
+Monitor
+
+Continuously monitor control implementation and risks to the system
+
+International Organization for Standardization (ISO)/International Electrotechnical Commission (IEC) 27000 Series
+5
+
+ISO is a non-governmental, international organization that publishes standards in a variety of technical areas. The ISO/IEC 27000 series consists of standards that provide best practices for organizations to manage security risk. These standards are published by the ISO and the IEC, and like the frameworks mentioned above, are generally broad and allow for tailoring to a specific organization's unique risks.
+
+CPMI-IOSCO Principles for Financial Market Infrastructures (PFMI)
+6
+
+In 2012, the Committee on Payments and Market Infrastructures and the International Organization of Securities Commissions (IOSCO) published international risk-management and related standards for systemically important payment systems and other financial market infrastructures (FMI) in the PFMI. Principle 2 on Governance and Principle 17 on Operational Risk set standards that are particularly relevant for managing operational risk, including information security risk. Table 2 provides more information on these two principles. The application of the PFMI to a CBDC would depend on the specifics of a given implementation and whether it would be considered a systemically important payment system as defined by the PFMI.
+
+Table 2. CPMI-IOSCO Principles 2 and 17
+
+Principle
+
+Description
+
+Principle 2: Governance
+
+An FMI should have governance arrangements that are clear and transparent, promote the safety and efficiency of the FMI, and support the stability of the broader financial system, other relevant public interest considerations, and the objectives of relevant stakeholders.
+
+Principle 17: Operational Risk
+
+An FMI should identify the plausible sources of operational risk, both internal and external, and mitigate their impact through the use of appropriate systems, policies, procedures, and controls. Systems should be designed to ensure a high degree of security and operational reliability and should have adequate, scalable capacity. Business continuity management should aim for timely recovery of operations and fulfilment of the FMIâs obligations, including in the event of a wide-scale or major disruption.
+
+Cybersecurity Guidance
+
+In addition to general risk management frameworks like those discussed above, some organizations have also created cybersecurity-specific frameworks to supplement existing guidance. For example, the CPMI-IOSCO Guidance on Cyber Resilience for Financial Market Infrastructures (Cyber Guidance) supplements the PFMI to provide additional insight into enhancing cyber resilience.
+7
+Similarly, NIST developed the Cybersecurity Framework (NIST CSF)
+
+to provide a comprehensive framework for critical infrastructure owners and operators to manage cybersecurity risks, although the guidance in the NIST CSF is applicable to any organization.
+
+While the CPMI Cyber Guidance and the NIST CSF have some differences, their overall approach to managing cybersecurity risk is very similar and based on five essential functions: Identify, protect, detect, respond, and recover. These functions are intended to guide system owners through a series of desired outcomes that enable a protective posture and operations that are resilient to threats. Table 3 provides a side-by-side comparison of the areas of focus for these two frameworks. Beyond the NIST CSF and the CPMI-IOSCO Cyber Guidance, there are additional cybersecurity frameworks that may be used alone or in combination with each other depending on the unique needs of an organization.
+
+Table 3. NIST CSF and CPMI Cyber Guidance Functions and Categories
+
+NIST CSF
+
+Function
+
+Description
+
+Identify
+
+Develop an organizational understanding to manage cybersecurity risk to systems, people, assets, data, and capabilities.
+
+Protect
+
+Develop and implement appropriate safeguards to ensure delivery of critical services.
+
+Detect
+
+Develop and implement appropriate activities to identify the occurrence of a cybersecurity event.
+
+Respond
+
+Develop and implement appropriate activities to take action regarding a detected cybersecurity incident.
+
+Recover
+
+Develop and implement appropriate activities to maintain plans for resilience and to restore any capabilities or services that were impaired due toa cybersecurity incident.
+
+CPMI Cyber Guidance
+
+Categories
+
+Description
+
+Governance
+
+Develop arrangements to establish, implement, and review the approach to managing cyber risks.
+
+Identification
+
+Identify and classify business processes, information assets, system access, and external dependencies.
+
+Protection
+
+Implement appropriate and effective controls and design systems and processes to prevent, limit, and contain the impact of a potential cyber incident.
+
+Detection
+
+Detect the occurrence of anomalies and events indicating a potential cyber incident.
+
+Response and Recovery
+
+Enable critical operations to resume rapidly, safely, and with accurate data.
+
+Additional Considerations specific to DLT-based CBDC
+
+While the frameworks described above are generally applicable to any CBDC implementation, a DLT-based CBDC raises some additional considerations that may require special attention given certain novel aspects of the technology. A central bank should consider how existing security frameworks can address the unique characteristics of a DLT-based system.
+
+In the following sections, we address aspects of security that a central bank should consider as part of a DLT-based CBDC design. We examine these aspects through the lens of architecture, protocols and code, and human factors in the general sense, elaborating on our interpretation of these factors as we discuss them.
+
+Architecture
+
+An important design component of a CBDC is system architecture.
+8
+Because of its distributed nature, a DLT design would need to take into account the extent of the system network, the number of participating nodes, their locations, the connections among them, and the overall extent or size of the system. Nodes may be owned or operated by different participants in the network; ownership and responsibilities of the nodes must be clear. In addition, there are elements of DLT design and operation that will influence the chosen architecture, such as governance and consensus, that require consideration. Finally, the treatment of third parties, which may not be expressly part of the system but are linked to it through communication lines, must also be considered.
+
+The diversity of potential architectures and operating models for a DLT-based CBDC has direct implications for the management of security risks. While the intent of this paper is not to enumerate and evaluate specific security risks associated with different CBDC model architectures, this type of assessment is integral to the risk-assessment process in designing any CBDC. Identifying risks associated with a DLT-based CBDC poses a unique challenge, however, because the technology is still evolving, and some of the associated threats are not as well understood. Threat intelligence information sharing relies on timely reporting of incidents so that any security vulnerabilities can be addressed. With ongoing research in DLT, this kind of information will become easier to access, but currently the absence of a significant amount of data in this area will make comparing the risks and benefits of different model architectures difficult.
+
+Whether the architecture is fully centralized, federated, or decentralized, the delineation of ownership and responsibility for associated risks must be clarified early on because it is fundamental to system design. A risk assessment will not be comprehensive without knowing what needs to be protected. Thus, the specifics of the implementation are an important component of fully understanding the risks related to a CBDC.
+
+Governance
+
+In a DLT system, governance and architecture are closely linked, as governance may influence the choice of architecture, or a fixed architecture may impose limitations on the governance models that can be used. In short, governance has to do with authorities, decision rights, and incentivizing desirable behavior.
+9
+Governance models determine, for example, who is a part of the system.
+10
+A DLT-based CBDC would likely operate in the permissioned space and require some kind of hierarchy in specifying participant roles. This complexity has the potential to introduce additional vulnerabilities, so a design challenge is how security can be effectively managed through the governance structureâone that is likely to be managed by the central bank with public stakeholder involvement.
+
+Governance models are used to specify roles and authorities, but aspects of decision-making, particularly in the case of determining transaction finality, are carried out by consensus in DLTs. The governance model assigns which nodes are involved in the consensus process, and a greater number of nodes increases the complexity of communication in the system.
+11
+Furthermore, the use of nodes outside the direct operation of the central bank (for example, nodes operated by commercial banks) increases the attack surface of the system and the time required to reach finality, affecting throughput.
+
+The security frameworks introduced earlier generally approach governance from the perspective of a centrally owned system, where boundaries are well-defined through the system architecture and where roles, authorities, and permissions are clear. In a DLT-based CBDC, the system boundaries may be less clear, and the number of participants may be quite large. Governance models must ensure that application of security frameworks sufficiently addresses authorities and responsibilities. Governance is also critical in operational stages where updates to code, patching of vulnerabilities, and other system changes must be quickly deployed over the system. Additionally, tasks such as incident reporting and system maintenance may require coordination among system participants to ensure security is maintained. With a decentralized structure, participating bodies would have to set clear expectations for adherence to security requirements.
+
+Third Parties
+
+Third parties are participants in a CBDC ecosystem that exist outside of the formal network infrastructure. As such, they may not adhere to the same security practices as those in the network. To ensure that third parties' security standards are acceptable to the CBDC network, system operators may request routine audits, accreditation, or other evaluations. Standards of practice may also be specified in contractual agreements. There are some unique considerations with a DLT-based CBDC, and while not comprehensive, we consider here the case of key management custodians and external oracle. These third parties have emerged due to the novel characteristics associated with DLTs.
+
+Key Management Custodians
+
+Current iterations of DLTs rely heavily on the use of public key cryptography for verifying and signing transactions, and in some cases for securing blocks. This use of public key cryptography poses a problem for usability in scenarios where users may be more familiar with biometric or password-enabled security functionality. To address usability challenges, key management custodians have emerged in the cryptocurrency landscape. As third parties outside of the blockchain system itself, custodians constitute an attractive attack target and have been demonstrated to be a key point of vulnerability for many cryptocurrencies.
+12
+If a CBDC is to allow users flexibility in maintaining their keys, and by extension the use of key custodians, this suggests that key custodians may be required to implement security controls commensurate with the expectations for operating as part of payment systems.
+
+External Oracles
+
+A DLT-based CBDC could be enabled to support smart contracts. If so, it would likely rely on oracles, which are sources of data from outside a blockchain that serve as input for a smart contract, to provide data upon which contract logic executes.
+13
+Oracles are a comparatively new and rapidly evolving area of technology in the blockchain space, and approaches to aggregating, vetting, and guaranteeing authenticity of data are a significant area of research. The use of oracles requires an understanding of how trust in the data is assured, but for the purposes of this paper, we are concerned primarily about the integrity of data communicated from the oracle. Because oracles typically sit outside of the DLT system, security protections inherent to a DLT-based CBDC may not automatically extend to associated oracles.
+
+Attacks on external oracles have the potential to affect an associated smart contract to which the oracle sends data. As a result, they are an enticing target for attackers, much in the same way that cryptocurrency exchanges are. Further, data communicated from an oracle to a DLT may be intercepted through a meddler-in-the-middle attack. This threat can be mitigated using secure communication channels or of authenticity proofs. Oracles may also communicate to a DLT through decentralized means, forgoing a single channel in favor of redundancy to ensure data integrity. Such safeguards are essential to maintaining the integrity of data being communicated from oracles.
+
+Protocols and Code
+
+Although cryptocurrencies have experienced many high-profile security incidents in recent years, blockchain protocols themselves are, at the present time, relatively secure. Blockchain technology offers potential security benefits over conventional systems because of its use of a distributed network, which provides redundancy in maintaining transaction data and allows for more-robust operation, and because of the use of cryptography to protect the integrity of the data. Many attacks on cryptocurrencies have been the result of security failures by exchanges or users providing private keys or credentials because of phishing emails or fraud schemes. Even still, attacks do exist that target aspects of the blockchain protocols themselves.
+14
+
+DLT systems rely on cryptographic protocols, where they are used to secure transaction data in blocks. These protocols and the mathematical functions on which they are based provide the core security of the system to protect against the alteration of data or double spending. Existing DLTs operate with platform-specific cryptographic protocols. Central banks and other institutions should evaluate whether those protocols meet their needs, depending on risk factors, the availability of computational resources, and need for throughput. The use of standardized cryptographic protocols provides a benefit that these protocols have undergone extensive testing and evaluation. In the interest of future proofing DLT-based CBDC systems, institutions may also wish to anticipate quantum threats and incorporate quantum-resistant protocols that are currently being evaluated.
+15
+
+Consensus mechanisms are also an important characteristic of blockchain protocols. Blockchain protocols use consensus mechanisms that allow for decision-making in a decentralized manner and are generally used to confirm transactions. The use of consensus mechanisms in the context of DLTs is comparatively novel, and consensus mechanisms are not impervious to attack. For example, consensus can potentially be overcome through a 51 percent attack, creating opportunities for double-spending, confounding the finality of transactions, and potentially leading to forking of the ledger. A consensus mechanism should function to prevent this type of collusion, while striking a balance between other requirements like decentralization and throughput. Incentives may also be instituted to ensure that validators act in the beneficial interest of the system. These may be combined with other considerations that safeguard and establish equitable participation among stakeholders to prevent de facto centralization.
+
+Finally, given the relative novelty of DLTs, any implementation can have vulnerabilities that are not immediately known or identifiable. For example, code used in blockchains may not be fully vetted. In designing a DLT-based CBDC, security best practices such as routine code testing and secure code reviews should be carried out to assess potential flaws or weaknesses. The codebase could even be available to the general public for review, testing, and developmentâa strategy that poses both opportunities and risks.
+
+Human Factors
+
+Human factors are a major consideration with any CBDC implementation regardless of design. A DLT-based system may be less susceptible to threats associated with traditional human factors, such as insider threats and mistakes due to consensus-based governance, which, depending on the implementation, could prevent a single actor from inflicting damage. However, central banks would need to consider a potentially larger attack surface with a DLT-based CBDC given the likely scale of a CBDC system that could include millions of end users.
+
+End users are broadly seen as the weakest link in any information security program implementation, especially for something like a payment system. While this perspective may be simplistic, the general idea that users are a major vulnerability has consistently proven to be accurate. Common security frameworks address risks arising out of human factors through a variety of means, including training programs, logging and monitoring capabilities, and physical security controls. The security of a CBDC would largely depend on the level to which average users can safely store, acquire, and use it.
+
+Conclusion
+
+CBDCs have received significant attention in recent years as central banks investigate the feasibility of different models aimed at their realization. DLT has been proposed as a potential solution for a CBDC, and it may provide some advantages owing to greater resiliency in a distributed system as well as the associated blockchain technologies. The novel technologies associated with DLTs present challenges in assessing some aspects of system security, even while providing advantages compared to traditional systems. The shared ownership and distributed character of a DLT-based CBDC mean that system responsibilities would not fall to one particular operator, and therefore, the implementation of security practices derived from frameworks like those highlighted in this note may benefit from institutional and end-user coordination, as well as the use of shared standards.
+
+Attacks on existing payment systems are a risk, and CBDCs would likely encounter similar pressures. Drawing on the security practices for legacy systems provides a reasonable baseline from which to consider approaches to CBDC security. It is difficult to assess the explicit security needs of a CBDC without a clear system design as approaches to security would need to be tailored to the unique design and architecture that is implemented for each CBDC. However, by capitalizing on existing security frameworks in the early stages, central banks can develop a CBDC that considers the most critical security risks and prepare themselves to face the security challenges that may arise upon CBDC implementation.
+
+References
+
+Bank for International Settlements, "Central Bank Digital Currencies: Foundational Principles and Core Features," 2020,
+https://www.bis.org/publ/othp33.pdf (PDF)
+
+Committee on Payment and Settlement Systems and Technical Committee of the International Organization of Securities Commissions, "Principles for financial market infrastructures," April 2012,
+https://www.bis.org/cpmi/publ/d101a.pdf (PDF)
+
+Committee on Payments and Market Infrastructures and Board of the International Organization of Securities Commissions, "Guidance on Cyber Resilience for Financial Market Infrastructures," June 2016,
+https://www.bis.org/cpmi/publ/d146.pdf (PDF)
+
+Dunin-Underwood, Anna and Randi Eitzman, "Cryptocurrency and Blockchain Networks: Facing New Security Paradigms,"
+FireEye Threat Research
+, January 2019, https://www.fireeye.com/blog/threat-research/2019/01/cryptocurrency-blockchain-networks-facing-new-security-paradigms.html
+
+International Electrotechnical Commission (2021). "IEC 60050: International Electrotechnical Vocabulary," webpage,
+https://www.electropedia.org
+
+International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC), 27000 Series, 2018.
+
+Lesavre, Loïc, Priam Varin, Peter Mell, Michael Davidson, and James Shook (2020), "A Taxonomic Approach to Understanding Emerging Blockchain Identity Management Systems,"
+NIST Cybersecurity White Paper
+,
+
+https://doi.org/10.6028/NIST.CSWP.01142020
+or
+https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01142020.pdf (PDF)
+
+Mell, Peter, Nik Roby, Karen Scarfone, and Dylan Yaga (2018), "Blockchain Technology Overview,"
+NISTIR 8202
+,
+https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8202.pdf (PDF)
+
+Mills, David C., Kathy Wang, Brendan Malone, Anjana Ravi, Jeff Marquardt, Clinton Chen, Anton Badev, Timothy Brezinski, Linda Fahy, Kimberley Liao, Vanessa Kargenian, Max Ellithorpe, Wendy Ng, and Maria Baird, "Distributed ledger technology in payments, clearing, and settlement," Finance and Economics Discussion Series 2016-095, Washington: Board of Governors of the Federal Reserve System,
+https://doi.org/10.17016/FEDS.2016.095
+
+National Institute of Standards and Technology, "Framework for Improving Critical Infrastructure Cybersecurity
+,
+Version 1.1," April 2018,
+https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04162018.pdf (PDF)
+
+National Institute of Standards and Technology, Joint Task Force, "Risk Management Framework for Information Systems and Organizations," NIST SP 800-37 Rev. 2, December 2018,
+https://doi.org/10.6028/NIST.SP.800-37r2
+
+National Institute of Standards and Technology, "Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process," NISTIR 8309,
+
+2020,
+https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8309.pdf (PDF)
+
+Nijsse, Jeff and Alan Litchfield (2020). "A Taxonomy of Blockchain Consensus Methods,"
+Cryptography,
+vol. 4, issue 32, (November) p. 3.
+http://dx.doi.org/10.3390/cryptography4040032
+
+U.S. Currency Education Program, "The History of U.S. Currency,"
+https://www.uscurrency.gov/history?period=1700s
+
+Weill, Peter and Jeanne W. Ross (2004),
+IT Governance: How Top Performers Manager IT Decision Rights for Superior Results
+(Boston: Harvard Business School Press).
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the staff of the Federal Reserve System. The authors would like to thank Jillian Mascelli, Emily Caron, Matthew Hayduk, Timothy Maas, David Mills, Michelle Monsees, Kathy Wang, Paul Wong, and Sarah Wright of the Federal Reserve Board; Angela Lawson of the Federal Reserve Bank of Minneapolis; and Alexander Lee of the Federal Reserve Bank of New York for their contributions to and assistance with this note. They also would like to thank Victoria Yan Pillitteri, Eduardo Takamura and William Newhouse of the National Institute of Standards and Technology for their contributions.
+Return to text
+
+2. See Mills (2016).
+Return to text
+
+3. See U.S. Currency Education Program.
+Return to text
+
+4. National Institute of Standards and Technology, (May 2021 update).
+Return to text
+
+5. International Organization for Standardization (ISO) and International Electrotechnical Commission (2018).
+Return to text
+
+6. Committee on Payment and Settlement Systems and Technical Committee of the International Organization of Securities Commissions, "Principles for financial market infrastructures" (April 2012).
+Return to text
+
+7. Committee on Payments and Market Infrastructures and Board of the International Organization of Securities Commissions (June 2016).
+Return to text
+
+8. Architecture of a Telecommunication Network: The grouping of functional or physical structures which may be identified within a given telecommunication network when considered from different points of view. See International Electrotechnical Commission (2021).
+Return to text
+
+9. See Weill (2004).
+Return to text
+
+10. Bitcoin presents a simplified governance structure, eliminating traditional hierarchies in favor of a permissionless, decentralized system where security and trust are ensured through other mechanisms, namely a proof-of-work protocol.
+Return to text
+
+11. See Nijsse (2020).
+Return to text
+
+12. See Dunin-Underwood (January 2019).
+Return to text
+
+13. See Lesavre (2020), p. 5.
+
+Return to text
+
+14. Depending on the blockchain protocol in use, it may be susceptible to a variety of attacks including 51% or Sybil attacks. In a 51% attack, an attacker attempts to gain the majority of block production resources in a distributed network. A Sybil attack involves a malicious actor creating several nodes in a network to increase influence and control in the network. See Mell (2018).
+Return to text
+
+15. Quantum computers, which are still undergoing development, will have the capacity to break existing cryptographic protocols. See and NISTIR 8309 (2020).
+Return to text
+
+Please cite this note as:
+
+Hansen, Tarik, and Katya Delak (2022). "Security Considerations for a Central Bank Digital Currency," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 03, 2022, https://doi.org/10.17016/2380-7172.2970.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,153 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 13, 2020
+
+Observations from the FooWire Project: Experimenting with DLT for Payments Use
+
+Jillian Buttecali, Zachary Proom, Paul Wong
+1
+
+Summary
+
+In 2019, a team at the Federal Reserve Board (Board) conducted small-scale experimentation, named the "FooWire project," to build a payment system using distributed ledger technology (DLT).
+2
+ The team built the system using Hyperledger Fabric, a popular DLT platform, because it generally met the team's design requirements of a closed network, mature technology, and enterprise readiness. The experiment highlighted the potential of DLT for certain payment uses, the quick speed with which a system could be implemented, the potential simplicity of smart contracts, and the range of functionality offered by such platforms. It further highlighted the need for more experimentation to better understand the possibilities for wide-scale adoption and use of any DLT platform for payments.
+
+Introduction
+
+In recent years, a number of central banks have conducted technical research on DLT for payment uses. Such projects, including Project Jasper in Canada, Project Ubin in Singapore, and Project Stella in Japan and Europe, reflect a growing interest in understanding how DLT could be used for central bank payment systems. In 2019, the Federal Reserve Board assembled an in-house team to build a small-scale payment system, afterwards called "FooWire," based on a DLT platform. The objective of the FooWire project was to assess independently and objectively the potential of the technology for payments from a research perspective. It was in no way a proposed replacement for, or meant as viable candidate for, any existing or planned Federal Reserve payment system.
+
+The Federal Reserve's interest in DLT stems from its decentralized operating model. DLT encompasses the processes and related technologies that enable participants in a network to manage jointly a decentralized record of network activities. It allows participants (or nodes) on a network to securely propose, validate, and record state changes (or updates) to a synchronized ledger distributed across a network.
+3
+ In a DLT-based payment system, the nodes maintain individual copies of the transaction ledger. Updates to the ledger are coordinated among the nodes such that each node's individual copy of the ledger remains consistent with the other nodes' copies. A consensus mechanism governs modifications to the ledger and determines whether new transactions are accepted and posted to the ledger or rejected.
+4
+
+The use of DLT has the potential to reduce or eliminate operational and financial inefficiencies in the current payments system. DLT, for example, could reduce payment complexity by removing a number of intermediaries needed in the settlement process. Further, DLT could enhance operational efficiency by allowing participants to agree on a common ledger state across entities, geographic distance, and time zones. This could simplify reconciliation across recordkeeping infrastructures. DLT could also improve network resiliency by eliminating single points of failure associated with centralized ledgers, which most payment systems still rely on to maintain transaction data but which are vulnerable to data loss and tampering.
+5
+
+The FooWire Project
+
+The FooWire project was a small-scale, DLT experiment to evaluate the technology's basic potential for payments and to build internal knowledge. For this experiment, the team used a DLT platform called Hyperledger Fabric (Fabric), which is based on a permissioned network, uses a relatively mature technology, and is marketed as enterprise ready. The selection of Fabric as the underlying platform for this experiment, however, does not represent any endorsement of Fabric, because the team could have used any of a number of equally capable platforms.
+
+One of the key drivers for selecting Fabric, which is maintained by the Hyperledger organizationâa consortium chartered by the Linux Foundationâand its community of programmers, was Fabric's use of a permissioned network.
+6
+ A permissioned network allows one or more network administrators to control who can and cannot access and transact on the network ledger. This is in contrast to a permissionless network, which allows any public actor to access and transact on the ledger. The use of a permissioned network mirrors what is in use today for most payment systems and, in some configurations, offers greater network security than a permissionless network.
+
+After selecting Fabric as the base platform, the team built a simple payment system. At the outset, the network included three hypothetical organizations: a central bank, a government agency, and a commercial bank. Network administrators were responsible for approving and creating accounts and nodes to administer the ledger. The only asset that could be transferred between nodes was an artificial asset called "Funds." Transactor nodes could submit transactions for settlement.
+7
+ Validator nodes could transact with other nodes on the network and participate in consensus to update the ledger.
+8
+
+Fabric enables developers to write smart contracts, which are computer programs that specify and enforce business logic. For example, the team wrote a set of rules to prohibit account overdrafts and limit transaction values. Successful transactions are posted to the distributed ledger across the network's nodes. In a Fabric network, the ledger has two components. First, the ledger has a world state, which is a database of key-value pairs that represent ledger pairings such as an organization and its account balance. Second, the ledger has a blockchain log all of the transactions or changes on the network and have resulted in the current world state. Fabric supports different recordkeeping approaches â both the unspent transaction output (UTXO) model for tracking value across transactions and a traditional account model that records balances in a database. A UTXO model effectively issues a new digital identifier for each new transaction while a traditional account system effectively updates a balance.
+9
+ The FooWire team chose to use a traditional account model for simplicity.
+
+To update information on the ledger, Fabric uses a consensus mechanism, which enables nodes in a DLT network to agree on changes to the shared ledger and prevents other nodes from adding invalid transactions to the ledger. Fabric uses a voting consensus mechanism inspired by the practical Byzantine Fault Tolerance (pBFT) model. Validators vote for or against a proposed transaction in the shared ledger. These nodes see all transaction information and use this, along with other information they might know about the transaction's participants, to reach consensus by voting for or against a proposed transaction.
+
+High-Level Observations and Findings
+
+Below are four high-level takeaways from the FooWire project. Two takeaways focus on the general DLT observations and two on Fabric. It should be emphasized that the project was limited in scope; for example, the team did not robustly test for Fabric's scalability, security, or privacy capabilities.
+
+DLT is a viable technology for certain payment uses
+	
+The team was able to construct a functional payment system using Fabric. A typical transaction on FooWire took about 10 seconds to settle, which is slow in comparison with real-time payment systems that can settle payments instantly when received. The team, however, did not optimize the FooWire platform or hardware to process transactions at higher speeds or with higher processing capacity.
+10
+ A team of computer scientists, for example, was able to configure a Fabric network to process transactions at a rate of approximately 20,000 transactions per second.
+11
+ Regardless of processing speed and capacity, Fabric works as a settlement engine and may be appropriate for use in certain scenarios depending on the design of the platform.
+
+DLT networks can be implemented relatively quickly
+	
+The team established its settlement platform quickly with the aid of extensive online documentation for various DLT development topics. After installing a sample network, the team found that building its own development network was simpler and more straightforward than expected compared with previous software development projects. There are a number of publicly available tools, some open source and some proprietary, that facilitated rapid network scaffolding. These include "point and click" offerings by cloud infrastructure providers. The team was able to resolve software-coding issues with online, publicly available resources. The ability to implement the network quickly speaks to the ease with which a variety of organizations can build a simple DLT payment system.
+
+Writing smart contracts was relatively easy in Fabric
+	
+The Fabric chaincode, which is a prepackaged smart contract, was less complex than the team expected. This lent itself to rapid prototyping. The chaincode to effect a transaction on the network (that is, move funds from one account to another) accounts for roughly 100 lines of code, even with several custom business rules. The team implemented two primary rules: Transacting organizations (a) could not overdraft their accounts and (b) could not transfer values exceeding a set threshold. In addition, the chaincode checked the validity of the transaction parameters. The chaincode ensured that the transacting organizations exist in the state database and that the transaction amount is a number. The chaincode also provided functions for initializing the chaincode, querying an organization's account balance, and deleting an organization's account balance from the state database.
+
+Fabric has a range of extended capabilities, some of which have associated tradeoffs
+	
+Fabric has a modular framework that allows developers to modify many parts of the platform to add functionality for specific use cases. For example, developers can add and remove roles in the network, edit the chaincode, and change the recordkeeping method (UTXOs or accounts). The team also observed a number of private data handling options, which have some associated tradeoffs. Fabric allows groups of nodes to keep their transactions private from the rest of the network. An administrator could divide and further subdivide the network into small cohorts participating in private subgroups with their own ledgers. However, this arrangement achieves greater privacy at the expense of computing resources and network complexity.
+12
+
+Conclusion
+
+The FooWire project explored the potential application of DLT for payments using Fabric as a representative platform. The team found that Fabric and similar DLT platforms have potential payment uses. Organizations can leverage these technologies to stand up functional settlement systems, can be relatively simple in their chaincode, and can be customized in terms of their functionality. Wide-scale adoption and use of a DLT-based payment system, however, would require rigorous assessments of the technology's security, scalability, and privacy features. The Federal Reserve continues to research the capabilities of such technologies and to identify risks and weaknesses associated with their use.
+
+References
+
+Committee on Payments and Market Infrastructures, 
+Distributed ledger technology in payment, clearing and settlement
+, February 2017, 
+https://www.bis.org/cpmi/publ/d157.pdf
+.
+
+Gorenflo, Christian, Stephen Lee, Lukasz Golab, and S. Keshav, "FastFabric: Scaling Hyperledger Fabric to 20,000 Transactions per Second," May 2019, 
+https://arxiv.org/pdf/1901.00910.pdf
+.
+
+Mills, David, Kathy Wang, Brendan Malone, Anjana Ravi, Jeff Marquardt, Clinton Chen, Anton Badev, Timothy Brezinski, Linda Fahy, Kimberley Liao, Vanessa Kargenian, Max Ellithorpe, Wendy Ng, and Maria Baird, "Distributed ledger technology in payments, clearing, and settlement," Finance and Economics Discussion Series 2016-095, Washington: Board of Governors of the Federal Reserve System, 2016, 
+https://doi.org/10.17016/FEDS.2016.095
+.
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the staff of the Federal Reserve System. The authors thank the experimentation team that also included Dave Mills, Hayden Parsley, Brendan Malone, Eric Piegols, Steven Ward, and Adam Wenner of the Federal Reserve Board. In addition, the team received helpful guidance from Charles Buhecker, Robert Bench, and Tyler Frederick of the Federal Reserve Bank of Boston. The authors also would like to thank Mark Manuszak, Krzysztof Wozniak, and Lawrence Wu of the Federal Reserve Board for their feedback on this note. 
+Return to text
+
+2. Programmers commonly use "foo" as a placeholder term to demonstrate how something works. 
+Return to text
+
+3. See, for example, 
+Committee on Payments and Market Infrastructures
+, 
+Distributed ledger technology in payment, clearing and settlement
+, February 2017. 
+Return to text
+
+4. For additional information on DLT, see Mills, David et al., "Distributed ledger technology in payments, clearing, and settlement," Finance and Economics Discussion Series 2016-095, Washington: Board of Governors of the Federal Reserve System, 2016, 
+https://doi.org/10.17016/FEDS.2016.095
+. 
+Return to text
+
+5. A single point of failure is a part of a system that, if it fails, stops the entire system from working. 
+Return to text
+
+6. For more information about Fabric, see 
+https://www.hyperledger.org/use/fabric
+. 
+Return to text
+
+7. The terms "Validator" and "Transactor" are used in this report but are not part of the official Hyperledger Fabric terminology. In Hyperledger's documentation, Validators are called endorsing peers. Transactors do not have a specific name. See 
+https://hyperledger-fabric.readthedocs.io/en/release-2.0/peers/peers.html
+. 
+Return to text
+
+8. Validators are distinguished from transactors by their ability to participate in consensus; that is, they vote for or against all proposed transactions before those transactions are added to the shared ledger. 
+Return to text
+
+9. A UTXO is a recordkeeping structure stored on a ledger that associates some amount of value with a private key rather than a traditional account. For a user to spend a UTXO, the entire output must be consumed and reassigned to a new set of outputs. This may be associated with an entirely different set of private keys, even if one or more of the new outputs were in fact "spent back" to the spender of the UTXO. 
+Return to text
+
+10. Increased processing can be achieved by modifying the network's underlying environment, the number of peer and orderer nodes, and consensus parameters. 
+Return to text
+
+11. See Gorenflo, Christian, Stephen Lee, Lukasz Golab, and S. Keshav, "FastFabric: Scaling Hyperledger Fabric to 20,000 Transactions per Second," May 2019, 
+https://arxiv.org/pdf/1901.00910.pdf
+. 
+Return to text
+
+12. Fabric has introduced a private data feature that enables participants in a private subnetwork to send encrypted data to each other, reducing the need for private subgroups. 
+Return to text
+
+Please cite this note as:
+
+Buttecali, Jillian, Zachary Proom, and Paul Wong (2020). "Observations from the FooWire Project: Experimenting with DLT for Payments Use," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 13, 2020, https://doi.org/10.17016/2380-7172.2737.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

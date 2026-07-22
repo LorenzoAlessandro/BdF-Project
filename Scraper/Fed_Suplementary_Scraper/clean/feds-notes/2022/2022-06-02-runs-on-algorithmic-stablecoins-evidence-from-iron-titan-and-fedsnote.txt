@@ -1,0 +1,142 @@
+FEDS Notes
+
+Twitter
+
+June 02, 2022
+
+Runs on Algorithmic Stablecoins: Evidence from Iron, Titan, and Steel
+
+Austin Adams and Markus Ibert
+1
+
+Stablecoins---digital currencies pegged to an external reference (e.g., the US dollar)---play an increasingly important role in transacting digital currencies.
+2
+However, with a peg to an external reference comes the risk that the peg breaks and, akin to runs on other financial instruments, the risk of a stablecoin run. For instance, a run on a stablecoin could be analogous to a run on a money market mutual fund: both promise a stable value, but this promise is not guaranteed and, thus, both could, in practice, "break the buck." A distinguishing feature of a run in the digital era relative to other types of runs on financial instruments is that we can observe all transactions in two-second intervals as these transactions are publicly stored on a blockchain.
+
+There exist three general types of stablecoins. First, there are stablecoins that are supposed to be backed by fiat currencies. Second, there are stablecoins that are supposed to be backed by other stablecoins. Stablecoins backed by fiat currencies or other stablecoins are in theory fully collateralized, but in practice the composition and riskiness of the collateral is often unclear. Third, there are algorithmic stablecoins, which are by design undercollateralized and aim to maintain the peg by providing arbitrage incentives to users. While all types of stablecoins could be prone to runs due to the nature of their collaterals, algorithmic stablecoins appear to be particularly fragile, as we show in this note.
+
+More specifically, in this note, we study a run on the algorithmic stablecoin IRON on the Polygon blockchain that occurred in mid-June 2021 using high-frequency transaction-level data. We find that design flaws in the no-arbitrage mechanism contributed to the failure of the IRON stablecoin, that runs can be triggered by what appear to be idiosyncratic and large sell orders following a run up in prices, and that the largest---and perhaps most sophisticated accounts---run first. While our results do not necessarily imply that all algorithmic stablecoins are as fragile as IRON, the speed of IRON's failure serves as a useful reminder that some stablecoins are not stable at all.
+
+How IRON was supposed to keep its peg at $1
+
+The IRON stablecoin is backed by two other cryptocurrencies.
+3
+First, it is collateralized by a certain amount of U.S. Dollar Coin (USDC, around 75% at the time of the run). USDC is a different and widely used stablecoin pegged to $1 that is supposedly backed by cash and other forms of debt securities.
+4
+Second, the IRON stablecoin is backed by TITAN (around 25% at the time of the run), a cryptocurrency created by IRON Finance that was used to maintain the peg via the algorithm. TITAN cannot be mined but is issued by IRON Finance and akin to an equity stake in the IRON Finance ecosystem. IRON Finance is the entity that controls and operates the IRON Finance ecosystem. There exists a primary market where users can create and redeem IRON as well as a secondary market where users can trade IRON, TITAN, and USDC at spot prices.
+
+The IRON stablecoin uses a creation ("minting") and redemption ("burning") mechanism, akin to the creation and redemption mechanism for Exchange-Traded Funds, to maintain its peg at $1 via no arbitrage. Users can create one unit of IRON by sending (1 â TCR) * TITAN_$ and TCR * USDC to IRON Finance, where TCR is the Target Collateral Ratio, TITAN_$ is the
+amount
+of TITAN that is worth $1, and USDC is one unit of USDC, which is worth about $1. For instance, if the price of TITAN was $50 and the TCR was 75%, to create one unit of IRON a user would have to send (1 â 0.75) * $1/$50 = 0.005 units of TITAN and 0.75 * $1 units of USDC (75 cents). If the price of IRON was above $1, a user could create one unit of IRON by sending 25 cents worth of TITAN and 75 cents worth of USDC to IRON Finance and then sell this unit of IRON for more than $1 in the spot market, thereby making a profit and putting downward pressure on the price of IRON. An important detail is that the price of TITAN to compute TITAN_$ is not equal to the spot price of TITAN, but is the ten-minute weighted-average price of TITAN (weighted by time spent at a particular price). Similarly, users can redeem one unit of IRON and receive (1 â ECR) * TITAN_$ and ECR * USDC, where ECR is the Effective Collateral Ratio. The ECR is simply the actual amount of IRON collateralized by USDC at a given point in time.
+5
+
+The TCR is dynamically adjusted in order to ensure that the IRON stablecoin is not fully collateralized, albeit these adjustments are small in practice over shorter time periods. The closer the TCR is to 100%, the more similar is the IRON stablecoin to the simple USDC stablecoin. When the price of IRON is less than $1, the TCR will be adjusted upwards by 0.25% per hour. By adjusting the TCR upwards, IRON becomes more similar to USDC and, accordingly $1, which should in theory stabilize the peg in addition to the beforementioned no-arbitrage mechanism. In contrast, when the price of IRON is more than $1, the TCR will be adjusted downwards 0.25% per hour. However, in practice the dynamic adjustment of the TCR turned out to be too slow to prevent a run. At the time of the run, the TCR was around 75%. The ECR and TCR are usually close to each other, but not exactly equal to each other.
+
+There is a problem with the no-arbitrage mechanism that aims to maintain the peg. By using the ten-minute weighted-average price of TITAN as opposed to the spot price, users can create and redeem IRON in the primary market using a price of TITAN that differs from the price of TITAN in the spot market.
+6
+For instance, let us suppose that the ten-minute weighted average price of TITAN was significantly larger than the spot price of TITAN. In that case, there exists a separate arbitrage opportunity: a user can create IRON using an inflated price of TITAN, making the effective cost less than $1, and then sell the resulting IRON for $1 in the spot market. Of course, such an arbitrage opportunity puts downward pressure on the peg.
+
+Run on IRON
+
+Figure 1 shows the price of TITAN as well as the price of IRON, expressed in USDC (whose price is equivalent to about $1), over time. While the peg was somewhat stable before June 16, 2021, IRON significantly broke the peg on June 16 and dropped from $1 to less than the $0.75. This run on IRON was preceded by an increase and subsequent sharp decline in the price of TITAN. The price of TITAN increased by more than 600% the week before the breaking of the peg. One reason for the increase in the price of TITAN the week before the run appears to be the mentioning of IRON on Mark Cuban's Blog and Twitter.
+7
+
+Figure 1.
+
+Note: The figure shows the price of the TITAN token as well as the price of the IRON stablecoin over time. Prices are recovered from secondary market transactions on the Polygon bockchain and expressed in USDC, a separate stablecoin whose value is about $1. The dotted line shows the ECR at the time of the run.
+
+Source: Polygon blockchain.
+
+Accessible version
+
+On June 16, the bubble popped. Following the run up in TITAN's price, the spot price of TITAN declined from $60 to $0 within a few hours. The sharp decline was caused by large sell orders with extraordinary volume (see Figure 2) within a short time period and led to the problem mentioned above: as the run was fast paced, the ten-minute weighted-average price of TITAN was significantly larger than the spot price of TITAN. Thus, users created IRON at an inflated price of TITAN and sold IRON in the spot market, causing the peg to break. Moreover, IRON's price was naturally declining as the amount collateralized by TITAN, whose price was declining rapidly, became worth less and less. In principle, the run could have been stopped by adjusting the TCR to 100%, but the dynamic adjustment of 0.25% per hour was too slow to stop the run. In sum, the peg broke because users were creating IRON that was inherently worth less than $1, as the sum of the spot value of TITAN plus the value of USDC used for the creation of IRON was worth less than the spot price of IRON.
+
+Figure 2.
+
+Note: The figure shows the volume of USDC exchanged on the USDC/IRON liquidity pool over time.
+
+Source: Polygon blockchain.
+
+Accessible version
+
+As a result of the sharp decline in TITAN's price and subsequent peg breaking, IRON Finance attempted to stabilize the peg by buying TITAN using IRON Finance's external excess reserves. This led to a temporary spike in the price of TITAN on June 16, but could not prevent the ongoing run as IRON Finance (presumably) ran out of reserves.
+
+Interestingly, the price of IRON declined below the ECR of 75%, indicating that investors likely overreacted: IRON was temporarily overcollateralized. However, in the aftermath of the run, the price of IRON stabilized at around 75 cents per $1, consistent with the amount of assets backed by USDC (the ECR) and the now worthlessness of the TITAN token.
+
+No run on IRON on the Binance blockchain
+
+What caused the large sell-orders in TITAN and the run on IRON? One explanation could be a general loss of a trust in the mechanism of the IRON stablecoin or the IRON Finance entity. However, this does not seem to be the case.
+
+While we have focused so far on IRON operated on the Polygon blockchain, the same mechanism and code was also operating on the separate Binance blockchain (Binance Smart Chain, also known as BSC).
+8
+Thus, the IRON stablecoin on the Binance blockchain serves as a natural control group. Importantly, IRON on the Binance chain and IRON on the Polygon chain cannot be traded or arbitraged with each other. Instead of TITAN, the token native to the ecosystem on the Binance chain is called STEEL. While operating separately, TITAN and STEEL are functionally equivalent. In particular, both are issued by IRON Finance. Thus, in case a general loss of a trust in the stablecoin's mechanism or in IRON Finance was the ultimate reason for the breaking of IRON's peg on the Polygon blockchain, we would expect to see a decline in the price of STEEL and a breaking of the peg of IRON on the Binance blockchain as well. However, Figure 3 shows that IRON on the Binance blockchain did not break the peg.
+
+Figure 3.
+
+Note: The figure shows the price of the STEEL token expressed in IRON on the Binance blockchain as well as the price of the IRON stablecoin on the Binance blockchain over time. Prices are recovered from secondary market transactions on the Binance blockchain and expressed in BUSD, a separate stablecoin whose value is about $1.
+
+Source: Binance blockchain.
+
+Accessible version
+
+The price of STEEL did decline on the Binance blockchain as well. However, the decline in the price of STEEL on June 16 was less abrupt, not as a large, and not accompanied by as much volume compared with TITAN. These results point to the importance of the run up in the price of TITAN and the subsequent initial large sell orders of TITAN, presumably by users who rode the bubble and wanted to realize their gains, for explaining the run on IRON.
+
+Who ran first?
+
+During a run, there is a first-mover advantage. An investor selling IRON early in the run recoups a value closer to $1 per unit of IRON compared with an investor who sells late or does not sell at all. Such strategic complementarities can amplify and be the initial cause for a run.
+
+Thus, an interesting question is which type of users ran first. While we cannot link transaction-level data from the blockchain to user characteristics such as age or income, we can group users according to their account sizes. Figure 4 shows that larger accounts ran first on IRON (on the Polygon blockchain). The figure plots the percent change in account size from the start to the middle of the run (Panel A) on June 16, as well as the percent change in account size from the start to the end of the run (Panel B). We measure account size as the change in the amount of IRON in a given account as opposed to the dollar value to avoid mechanical valuation effects. While larger accounts (decile 10) experienced net changes of close to 100% from the beginning to the end of the run smaller accounts were, in fact, net buyers. In other words, larger accounts, presumably tied to more sophisticated users, ran first and liquidated all their holdings of IRON during the run.
+
+Figure 4.
+
+Note: The figure shows the change in account size during the run against account size at the beginning of the run. Account size is measured as the number of IRON units in a given account. Account sizes are recovered from IRON and IRON equivalents before, during, and after the run. Before refers to June 16th, 3 AM UTC; during refers to June 16th, 4.45 PM UTC; and after refers to June17th, 6 AM. 1 is the smallest decile and 10 is the largest.
+
+Source: Polygon blockchain.
+
+Accessible version
+
+Conclusion
+
+In conclusion, design flaws in the no-arbitrage mechanism contributed to the failure of the IRON stablecoin. That said, the design flaws we uncover in this paper are not easily fixed. For instance, using the spot price as opposed to the ten-minute weighted-average price of TITAN in the creation of IRON is susceptible to manipulation of the spot price. It remains to be seen whether future generations of algorithmic stablecoins can improve these issues. For now, our results serve as useful reminder that some stablecoins are not stable at all, particularly for the users of smaller accounts who bought into the falling knife when IRON was tumbling.
+
+References
+
+Gorton, Gary B., and Zhang, Jeffery (October 2021). "Taming Wildcat Stablecoins.",
+SSRN Working Paper.
+
+Liao, Gordon Y., and Caramichael, John (January 2022). "Stablecoins: Growth Potential and Impact on Banking."
+International Finance Discussion Paper.
+
+Saengchote, Kanis (July 2021). "A DeFi Bank Run: Iron Finance, IRON Stablecoin, and the Fall of TITAN."
+SSRN Working Paper.
+
+1. Ibert is a Senior Economist at the Board of Governors of the Federal Reserve System. At the time of writing this paper, Adams also worked at the Board of Governors of the Federal Reserve System. All errors and omissions are our own responsibility. The views expressed in this note are solely the responsibility of the authors and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of anyone else associated with the Federal Reserve System.
+Return to text
+
+2. See, e.g., Gorton and Zhang (2021) and Liao and Caramichael (2022).
+Return to text
+
+3. Even though the IRON stablecoin broke its peg and accordingly failed, it is technically still in existence and held by some users.
+Return to text
+
+4. The exact composition of USDC's collateral is not public.
+Return to text
+
+5. For more details, see also Saengchote (2021).
+Return to text
+
+6. Using the spot price in the creation and redemption mechanism is infeasible as the spot price could be easily manipulated. For instance, if a user buys a large amount of TITAN to push up the price of TITAN, the user could create IRON at an inflated price of TITAN. The user could then sell TITAN in the spot market and make a profit selling the IRON that they cheaply created.
+Return to text
+
+7. See https://blogmaverick.com/2021/06/13/the-brilliance-of-yield-farming-liquidity-providing-and-valuing-crypto-projects.
+Return to text
+
+8. Polygon, Binance, and also the Ethereum blockchain are examples of Blockchains that allow decentralized applications.
+Return to text
+
+Please cite this note as:
+
+Adams, Austin, and Markus Ibert (2022). "Runs on Algorithmic Stablecoins: Evidence from Iron, Titan, and Steel ," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 02, 2022, https://doi.org/10.17016/2380-7172.3121.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

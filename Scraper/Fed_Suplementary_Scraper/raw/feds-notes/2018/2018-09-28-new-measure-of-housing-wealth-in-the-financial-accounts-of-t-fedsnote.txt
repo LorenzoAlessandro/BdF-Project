@@ -1,0 +1,210 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+September 28, 2018
+
+A New Measure of Housing Wealth in the Financial Accounts of the United States
+
+Hannah Hall, 
+Eric Nielsen
+, and 
+Kamila Sommer
+1
+
+Summary
+
+This note introduces a new method for measuring 
+the aggregate value of own-use residential real estate in the United States from 2001 to present
+. Beginning with the 2018:Q2 publication, this alternative series will be included in the 
+Enhanced Financial Accounts
+ as a supplement to estimates in the Federal Reserve's 
+Financial Accounts of the United States 
+(FAUS). The method and estimates discussed in this note represent an alternative to the current estimates of own-use residential real estate presented in Table B.101 (line 4), the Balance Sheet of Households and Nonprofit Organizations. This note describes the new method, which is based on property value estimates from the real-estate analytics company Zillow. We evaluate the method's strengths and weaknesses and argue that it has the potential to overcome some of the shortcomings of the current method used in the 
+Financial Accounts. 
+We compare the estimates from the new method to the series currently published in the 
+Accounts
+, and show that the new measure results in a somewhat different path of aggregate housing wealth over the Great Recession and recovery. The method and findings in this note are based on an analysis in 
+Gallin, Molloy, Nielsen, Smith, and Sommer (2018) (PDF)
+.
+
+Background
+
+Housing wealth is a major component of total household wealth, and as such it has important macroeconomic implications. The 
+Financial Accounts
+ estimates aggregate own-use housing wealth at about $25 trillion as of the first quarter of 2018, almost exactly a quarter of total household net worth.
+2
+ Despite its importance, the aggregate value of the housing stock is quite difficult to measure accurately because homes sell infrequently and differ widely in characteristics such as size, location, and condition. Understanding how values are changing for 
+all
+ homes based on the 
+few
+ homes that have sold recently is inherently challenging.
+
+The measurement of housing wealth in the 
+Financial Accounts
+ and academic research has traditionally relied on two sources: homeowners' self-reported values in surveys and extrapolations based on repeat-sales house price indexes. Both of these approaches have strengths and weaknesses. Household surveys are typically nationally representative and can capture quality changes known by the homeowner; however, research has found that homeowners' self-reported values are often biased upward. While the bias is relatively modest during normal times, it can widen considerably during market turning points, as owner-reports seem to lag behind market indicators.
+3
+ Repeat-sales indexes, which are based on price changes of the same houses across multiple transactions, are not subject to these behavioral biases. However, since the repeat-sales methodology attempts to hold quality constant between sales, such price indexes generally do not reflect the value of home improvements and the higher quality of new houses. Moreover, price indexes may be a misleading measure of changes in the value of the housing stock if the homes that sell in a given period are not representative of the housing stock as a whole. For instance, if the homes that sold during the Great Recession were disproportionately experiencing above average price declines, perhaps because of their geographic location or the financial distress of their owners, then a repeated sales index would overstate the decline in the value of the overall housing stock.
+4
+
+The current method for estimating housing wealth in the 
+Financial Accounts
+ makes use of both owner reports from surveys and price changes from repeat-sales price indexes. From the mid-1980s through 2005, the FAUS series was benchmarked every two years to homeowners' reported values in the American Housing Survey (AHS), a biennial Census survey that is representative of the national housing stock. As part of the benchmarking procedure, the owner-reported values in the AHS were lowered by 5.5 percent to reflect the average upward bias in owner reports mentioned above. Even with this adjustment, however, the potential for additional bias became evident in 2007, when homeowner-reported valuations continued to rise in the AHS, even as market transaction data indicated that prices had started to come down. In response to the divergence between survey data and transactions data, the benchmarking of the FAUS to the AHS was discontinued in 2005. Since then, the FAUS housing wealth series has been extrapolated using repeat-sales price index, combined with net fixed investment (i.e., net additions to the housing stock) from the Bureau of Economic Analysis. This solution effectively prioritized transaction data over survey data. As described below, the new method offers the ability to combine some of the best features of both transaction and survey data.
+
+A New Measure of Housing Wealth
+
+As detailed in Gallin et al. (2018), the new method for valuing aggregate residential real estate wealth is based on estimates from Zillow's automated valuation model (AVM).
+5
+ Zillow's AVM (and AVMs in general), can loosely be thought of as a set of algorithms that combine large amounts of information on a home's characteristics, neighborhood amenities, nearby sales, and other data to produce an estimate for the current market value of the home. Zillow has made available to us the average and total value of homes in each state and county as estimated by their AVM.
+
+Zillow's AVM has several notable advantages and some disadvantages from the point of view of aggregate wealth estimation. A major advantage is that, like a repeat-sales index, the AVM estimates are disciplined by recent market prices and can be updated very frequently and with minimal lag. A further important advantage is that, unlike a repeat-sales index, the AVM estimates values for the full housing stock, not just transacting homes. Especially if the observable characteristics of traded units are not representative of the non-traded stock, the AVM should provide a more accurate pricing signal for the non-traded units than a house price index.
+6
+ The Zillow estimation universe is also larger than that of a repeat-sales index, making it easier to pick up pricing signals in sparsely traded markets.
+7
+ In turn, Zillow is able to produce estimates by structure type (e.g., single-family vs. condo/coop), whereas house price indexes are typically constructed from sales of single-family structures only. Finally, the AVM can account for an unusually rich set of observable property characteristics, and thus can in principle account for changes in the quality of the housing stock over time.
+8
+
+One disadvantage of any measure of national housing wealth based on public sales records, including both AVMs and repeat-sales indexes, is that sales records are not nationally representative, due to gaps in coverage in less densely populated housing markets. For this reason, the AVM does not provide estimates for every home, and we cannot simply add up the Zillow AVM estimates into a representative national measure for the 
+Financial Accounts
+. To address this coverage issue, our method multiplies the county-level average AVM value by the county-level number of owner-occupied properties from the American Community Survey (ACS), a nationally representative survey produced by the Census Bureau.
+9
+ Our aggregate estimates therefore rely on Zillow for prices and the ACS for quantities.
+10
+ This method should produce accurate estimates of housing wealth under several assumptions, discussed in detail in Gallin et al. (2018).
+
+A second disadvantage is that Zillow's AVM does not always provide an unbiased estimate of home values for a particular area. However, Zillow has provided high-frequency measures of that bias (on a confidential basis). In particular, Zillow compares AVM-generated estimates of a property's value with the arm's-length transaction price for that property when it sells. While we cannot observe the error for properties that did not trade in a given period, the error data for traded units allows us to construct adjustment factors to correct the AVM estimates for the small positive bias observable in the error data.
+11
+
+A third disadvantage for the purpose of constructing a national housing wealth measure is that the Zillow data include valuations on some rental units, which by definition are excluded from our concept of housing wealth.
+12
+ This will bias down our estimates because rental units likely have lower values, on average, than own-use properties. Gallin et al. (2018)--using confidential data from the Census Bureau that includes data on both rentals and own-use properties merged with an alternative, but similar, AVM for 2014--find evidence that rental homes are on average 20-30 percent less valuable than own-use homes valued by the AVM in that year. If we applied the same price difference to Zillow's AVM, it would imply a 6 percent downward "rental-inclusion bias" in the aggregate Zillow-based estimate. Because this evidence is only suggestive--as it is not based on the Zillow AVM--and because we do not know the size of the bias in other years, we do not adjust for this bias in the figures shown here.
+
+Comparing Measures of Housing Wealth
+
+Figure 1 shows our new, AVM-derived measure of aggregate owner-occupied housing wealth for the period 2001-2017 (in red). For comparison, we also plot the measure from the 2018:Q1 release of the 
+Financial Accounts 
+(in black) and a measure based on owner-reported values from the ACS (in blue).
+13
+ While the three measures are largely in line with one another from 2001 to 2006, they diverge notably from 2006 to 2016, a time period that included an enormous housing bust and gradual recovery. In particular, the 
+Financial Accounts 
+measure shows a very pronounced downturn and recovery, while owner-reports show a significantly milder cycle. The AVM-based measure lies in between the two. The differences between these three measures over the Great Recession are substantial--the ACS series is about $3 trillion above the Zillow series at the widest point in 2008, while the Zillow series in turn peaks at over $2.7 trillion above the 
+Financial Accounts
+ measure in 2011. We also find that the timing of the cycle differs among the measures. Whereas the Zillow AVM and 
+Financial Accounts
+ measures date the peak of the cycle in 2006, the owner-reported measure does not peak until 2008.
+
+Figure 1
+
+
+Source: American Community Survey (U.S. Census Bureau) and Financial Accounts of the United States.
+
+Accessible version
+
+The comparison between these three series highlights some of the pitfalls of using survey data and house price indexes to measure housing wealth. In particular, the comparison between Zillow and the ACS suggests that survey respondents who did not sell their homes were either unaware of market fluctuations in real time, or they believed that their home values were different than those in the surrounding market. To the extent that owners did acknowledge changes in the market, it appears that they were late to do so. Similarly, the much more pronounced swings in wealth in the 
+Financial Accounts 
+likely result from applying to all homes the house-price dynamics of homes that transacted during the housing bust and recovery, suggesting that transacting homes did not fully represent the whole housing stock.
+
+Concluding Thoughts
+
+The new method for estimating aggregate own-use housing wealth described in this note, though imperfect, represents a promising addition to existed methods, as it has the potential to combine some of the best features of both survey-based and price-index-based methods. In particular, our new method is market-based, representative, and makes use of very detailed property characteristics. This new method may be particularly appropriate during market turning points and could be used in a variety of research and policy contexts including time series studies and quantitative macro models of consumption and other economic phenomena. As we develop this new measure further, we may begin to incorporate some version of it in the 
+Financial Accounts
+ in future publications.
+
+References
+
+Bucks, Brian, and Karen M. Pence. "Do homeowners know their house values and mortgage terms?" Divisions of Research & Statistics and Monetary Affairs, Federal Reserve Board, 2006.
+
+Case, Bradford, Henry O. Pollakowski, and Susan M. Wachter. "Frequency of transaction and house price modeling." The Journal of Real Estate Finance and Economics 14.1-2 (1997): 173-187.
+
+Chan, Sewin, Samuel Dastrup, and Ingrid Ellen. "Do homeowners mark to market? A comparison of self-reported and estimated market home values during the housing boom and bust." Real Estate Economics 44.3 (2016): 627-657.
+
+Choi, Jung Hyun, and Gary Painter. "Self-reported vs. market estimated house values: are homeowners misinformed or are they purposely misreporting?" Real Estate Economics 46.2 (2018): 487-520.
+
+Clapp, John M., HyonâJung Kim, and Alan E. Gelfand. "Predicting spatial patterns of house prices using LPR and Bayesian smoothing." Real Estate Economics 30.4 (2002): 505-532.
+
+Dreiman, Michelle H., and Anthony Pennington-Cross. "Alternative methods of increasing the precision of weighted repeat sales house prices indices." The Journal of Real Estate Finance and Economics 28.4 (2004): 299-317.
+
+Gallin, Joshua H., Raven Molloy, Eric Nielsen, Paul Smith, and Kamila Sommer (2018). "Measuring aggregate housing wealth: new insights from an automated valuation model." Finance and Economics Discussion Series 2018-064. Washington: Board of Governors of the Federal Reserve System, 
+https://doi.org/10.17016/FEDS.2018.064
+.
+
+Gatzlaff, Dean H., and Donald R. Haurin. "Sample selection bias and repeat-sales index estimates." The Journal of Real Estate Finance and Economics 14.1-2 (1997): 33-50.
+
+Glennon, Dennis and Kiefer, Hua and Mayock, Tom. "Measurement error in residential property valuation: an application of forecast combination." (2016).
+
+Goodman, John L., and John B. Ittner. "The accuracy of home owners' estimates of house value." Journal of Housing Economics 2.4 (1992): 339-357.
+
+Henriques, Alice M. "Are homeowners in denial about their house values? Comparing owner perceptions with transaction-based indexes." Finance and Economics Discussion Series 2013-79 (2013). Board of Governors of the Federal Reserve System (U.S.).
+
+Kiel, Katherine A., and Jeffrey E. Zabel. "The accuracy of ownerâprovided house values: the 1978â1991 American Housing Survey." Real Estate Economics 27.2 (1999): 263-298.
+
+Kuzmenko, Tatyana and Christopher Timmons. 2011. "Persistence in housing wealth perceptions: evidence from the census data." working paper. Durham: Duke University.
+
+1. 
+ The analysis and conclusions set forth here are those of the authors and do not indicate concurrence by other members of the research staff, the Board of Governors, or the Federal Reserve System. Our evaluation of the advantages and disadvantages of the Zillow Automated Valuation Model (AVM) are made in the context of estimating the aggregate value of own-use residential real estate. It is not an evaluation or endorsement of Zillow's AVM or website for valuing a particular home or portfolio of homes. 
+Return to text
+
+2. 
+ This estimate of housing wealth does not include the value of rental properties (including single-family homes for rent), which in the 
+Financial Accounts
+ is included in the business sector. Note that we use "housing wealth" to mean the total value of real estate assets, rather than home equity (which is housing wealth less mortgage debt). The $25 trillion aggregate quoted here corresponds to line 4 of Table B.101 in the 
+Financial Accounts
+. This total includes two other small components â the value of vacant residential land owned by households (FL155010103) and the value of mobile homes owned by households (FL155012013). The new method and estimates discussed in this note do not concern these (minor) pieces, which comprise only about 5% of the total. 
+Return to text
+
+3. 
+ See Bucks and Pence (2006); Goodman and Ittner (1992); Henriques (2013); Kiel and Zabel (1999); and Kuzmenko and Timmons (2011), among others. A consistent finding in this literature is that, even in normal times, homeowners are mildly over-optimistic by about 5-6%. Choi and Painter (2018), and Chan, Dastrup and Ellen (2016) find that the differences between owner and market valuations grew substantially during the recent downturn. 
+Return to text
+
+4. 
+ See Case, Pollakowski, and Wachter (1997), Gatzlaff and Haurin (1997), Glennon, Kiefer and Mayock (2016) and Dreiman and Pennington-Cross (2004). 
+Return to text
+
+5. 
+ Zillow. 2017. "Custom aggregation of Zillow AVM and transaction data: 2017-02." Zillow Group, Inc. http://www.zillow.com/data/. 
+Return to text
+
+6. 
+ Zillow's AVM makes use of deeds and property tax records supplemented with data from multiple listing services, mortgage servicers, and many other sources. Homeowners may even directly update the characteristics of their homes by contacting Zillow. In combination, these data are much richer than what is available from Census data (either the AHS or the ACS). 
+Return to text
+
+7. 
+ Price indexes require that at least two sales for the same property are observed in the sample in order for the property to be used in the estimation of the index, which is not the case for Zillow. 
+Return to text
+
+8. 
+ For example, Zillow's data includes information about water views, local school quality, and other local amenities. 
+Return to text
+
+9. 
+ We do this aggregation separately for single-family and multi-family properties. 
+Return to text
+
+10. 
+ For the quarters after the latest ACS year, property counts are estimated based on the county-level growth rates averaged over the prior three ACS years. 
+Return to text
+
+11. 
+ Zillow's AVM performs extremely well for higher-value properties. The errors are larger for lower-value properties, which often are missing key data or are located in rural areas with relatively few comparable recent sales. On net, the value-weighted average error for the period 2001-2006 is close to 0. The average error was positive during the Great Recession, peaking at 5 percent in 2009 before falling back to around 2 percent by 2017. This positive bias over the Great Recession is not surprising given the rapid fall in house prices at that time. Nonetheless, as shown in Figure 1, the AVM seems to recognize turning market conditions much more quickly than homeowners in survey data. 
+Return to text
+
+12. 
+ The Zillow data does not include information on ownership status, so we are not able to remove rental homes from the data. 
+Return to text
+
+13. 
+ Other surveys with homeowner-reported property values such as the AHS and the Federal Reserve's Survey of Consumer Finances (SCF) yield aggregate series that are similar to those from the ACS. We plot the ACS only because it is available annually, a higher frequency than either the AHS or the SCF. 
+Return to text
+
+Please cite this note as:
+
+Hall, Hannah, Eric Nielsen, and Kamila Sommer (2018). "A New Measure of Housing Wealth in the Financial Accounts of the United States," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 28, 2018, https://doi.org/10.17016/2380-7172.2261.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

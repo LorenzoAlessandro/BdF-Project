@@ -1,0 +1,213 @@
+FEDS Notes
+
+Twitter
+
+May 28, 2020
+
+The Geography of Small Business Dynamics
+
+Simon Firestone
+1
+
+Introduction
+
+Business dynamism is a micro-foundation for economic growth. Productivity gains come from a reallocation of resources from less efficient to more efficient firms, often through entry of new firms and exit of existing firms. Decker et al (2014) and Akcigit and Ates (2019) discuss how declining business dynamism in the US is associated with lower productivity. Gourio et al (2016) analyze the reduction in US output due to reduced new small business formation.
+
+Dynamism has two parts â entry of new businesses and exit of existing businesses. We use account-level data on small business credit cards as a proxy for small business conditions in US core-based statistical areas (CBSAs) between 2013 and 2018, identifying 'outlier' metropolitan areas whose small businesses are especially dynamic or not dynamic. We find that many CBSAs in Southern California, Arizona, Utah, and the southern parts of Texas and Florida have large rates of new small business credit card account creation and distress, consistent with a high degree of dynamism. We also map CBSAs that exhibit large new account creation rates and small rates of distress, as well as those with large distress rates and small new account creation rates. Small businesses in the Bay Area and cities in Colorado demonstrate relatively high rates of new account creation and low rates of distress, consistent with a small business environment that is growing and experiencing few failures.
+
+Data
+
+Credit cards are an important part of small business finance. According to the National Small Business Association, 31% of small businesses used personal or business credit cards as the main source of working capital,
+2
+the second-most common form of financing after retained earnings. Business owners have a strong incentive to open a separate account quickly for the purposes of tracking expenses and tax records, and to keep their accounts in good standing for the purposes of being able to transact with their vendors easily.
+
+The data is collected from the Federal Reserve's Y-14M reports.
+3
+The data covers the major credit card issuers from 2013 through 2018. As the banks required to report this data dominate the credit card market, this data set is particularly well suited for our study.
+4
+The Y-14M data is part of the Comprehensive Capital Analysis and Review (CCAR) process. CCAR, commonly known as 'stress testing,' is conducted by the Federal Reserve System on large US bank holding companies to determine their vulnerability to losses during an economic downturn. As part of CCAR, the largest banks are required to submit monthly detailed account level data on their credit card portfolio. The Federal Reserve uses the data to project credit losses in the case of macroeconomic stress. Banks reliably identify business credit cards because they are managed as separate product lines.
+5
+The data includes the age of account, permitting analysis of the rate of new small business formation. It also includes the degree of delinquency, which we use as a measure of small business financial distress. Borrower address data is available at the zip code level on a monthly basis. Data is typically available within two months. We define a new account by its reported origination date, and distressed accounts as those that enter 90 days of delinquency for the first time.
+6
+
+Comparison with Census Data
+
+We compare our data to two publicly available sources, which use other measures of small business formation and distress, and find they are strongly related. An important source of data on business formation and death is the US Census Business Dynamics Statistics (BDS).
+7
+It is a public data set assembled from the confidential Longitudinal Business Database, which in turn comes from payroll tax data. We compare the relationship between the geographic distribution of business formation and death in the BDS to account opening and becoming 90 or more days delinquent in the Y-14M small business credit card data. We also analyze the relationship between the Y-14M data and Business Formation Statistics (BFS). The BFS is a new US Census public use data set that reports the number of applications for Employer Identification Numbers (EINs) filed with the US Internal Revenue Service.
+8
+In order to get a longer time series, we include for comparison purposes data from 2009-2012. This earlier data is from a similar collection administered by the Office of the Comptroller of the Currency (OCC). It is a 10% random sample of credit cards issued by large banks rather than the full population, but otherwise is quite similar.
+
+We find a strong statistical relationship between these measures, with R
+2
+s between 12% and 32% from a simple regressions of the BDS and BFS' new business rates on the Y-14M/OCC new account shares, and the BDS' exit rate on the Y-14M/OCC new delinquency share . These are relatively modest, meaning that while the relationship is strong, there is a lot of variation in the BDS and BFS measures that is not associated with the Y-14M/OCC measures. There are several reasons for such unexplained variation. For example, the Y-14M/OCC data measures firms at a relatively early stage in the life cycle, while the BDS measures firms that have hired an employee, which is likely at a later stage.
+
+CBSA Small Business Dynamics
+
+We use the Y-14M data as a proxy for current trends in CBSA small business dynamics in the continental US.
+9
+We focus on 'outlier' CBSAs, where delinquency rates or new account formation rates are particularly high. As there is not a prior method for identifying high or low rates of account creation or delinquency we use the top and bottom quartile of each distribution, aggregating at the CBSA and calendar year level. We first consider delinquency and new account creation separately, and then study their interactions to obtain a more nuanced understanding of CBSA small business environments.
+
+Below are descriptive statistics for the CBSA/calendar year pairs. There is substantial variation across time and space for both delinquency and new account shares, ranging from less than 1% to almost 5% for delinquency share, and from 3.5% to over 20% for new account share.
+
+Table 1: Descriptive Statistics
+
+Statistic
+
+Delinquency Share
+
+New Account Share
+
+Minimum
+
+0.70%
+
+3.49%
+
+25th Percentile
+
+1.51%
+
+8.29%
+
+Median
+
+1.80%
+
+10.13%
+
+Mean
+
+1.84%
+
+10.60%
+
+75th Percentile
+
+2.12%
+
+12.60%
+
+Maximum
+
+4.88%
+
+21.25%
+
+In order to display the cross-sectional and time-series variation, we use animations and show the evolution of default and new account formation rates by MSA, as well as their interactions.
+
+We classify dynamic cities as those that show relatively high rates of new account creation and delinquency, which would be consistent with a high rate of reallocation of capital and labor among firms. Such reallocation is an important micro-foundation of productivity. We classify cities with low rates of both new account creation and delinquency as 'not dynamic.' CBSAs with high new account creation and low delinquency rates are 'growing' while those with low new account creation rates and high delinquency rates are 'distressed.' We summarize this lexicon below.
+
+Table 2: Types of Outlier Cities
+
+New Account Creation
+
+Top 25%
+
+Middle Quartiles
+
+Bottom 25%
+
+Delinquency Rate
+
+Top 25%
+
+Dynamic
+
+Distressed
+
+Middle Quartiles
+
+Bottom 25%
+
+Growing
+
+Not Dynamic
+
+Animation 1 shows the location of CBSAs that are dynamic or not dynamic.
+
+Dynamic CBSAs are concentrated in the southern part of the US, in particular California, Arizona, Utah, and the southern parts of Texas and Florida. The patterns are persistent for these regions. In the final years of our sample, the DC CBSA demonstrates this pattern for two years and New York City for one year. Several CBSAs in the Rust Belt and Farm Belt states, as well as upstate New York are not dynamic, with some appearing in the Pacific Northwest towards the end of the sample.
+
+Animation 2 shows distressed and growing CBSAs.
+
+Distressed CBSAs, with high rates of delinquency and low rates of new account creation, are relatively rare, with the greatest number appearing in a cluster that includes Arkansas, as well as CBSAs in Texas and Louisiana near the Arkansas border. A couple of CBSAs in southern New Jersey also demonstrate these dynamics, but not on a persistent basis. These dynamics are most common at the beginning of our sample in 2013 and 2014.
+
+As intuition would suggest, San Francisco and two adjacent CBSAs show growth and low distress rates for most or all years. Fort Collins and Boulder in Colorado demonstrate these dynamics for most of the sample period. Other such CBSAs are scattered with respect to both geography and time, including a subset of years for Sioux Falls in South Dakota, Charlottesville in Virginia, Asheville in North Carolina, and a few small CBSAs in the Pacific Northwest.
+
+Future Work
+
+We describe the dynamics of US small business across space and time. Future work will move beyond description to analysis. Possible causes of these patterns include cities' differing industrial composition, labor market characteristics, and variations in credit availability. Differences in small business dynamics might also have predictive power for CBSA aggregate growth and employment.
+
+References
+
+Akcigit, Ufuk, and Sina Ates (2019). Ten facts on declining business dynamism and lesson from endogenous growth theory. American Economic Journal: Macroeconomics. Forthcoming.
+
+Bayard, Kimberly, et al. (2018)
+Measuring Early-Stage Business Formation
+. No. 2018-03-07. Board of Governors of the Federal Reserve System (US).
+
+Decker, R., Haltiwanger, J., Jarmin, R., & Miranda, J. (2014). The role of entrepreneurship in US job creation and economic dynamism.
+Journal of Economic Perspectives
+,
+28
+(3), 3-24.
+
+Decker, R. A., Haltiwanger, J., Jarmin, R. S., & Miranda, J. (2016). Declining business dynamism: What we know and the way forward.
+American Economic Review
+,
+106
+(5), 203-07.
+
+Gourio, F., T. Messer, and M. Siemer. (2016). "Firm entry and macroeconomic dynamics: a state-level analysis."
+American Economic Review
+106.5 (2016): 214-18.
+
+McManus, Michael J.
+Dissecting Access to Capital.
+US Small Business Administration, September, 2017.
+
+1. Principal Economist, Board of Governors of the Federal Reserve System Washington, DC 20551.
+[email protected]
+, 202 785-6056. Thanks to Ryan Decker, Jie Feng, Hannah Kronenberg, Matthew Pritzker, and seminar participants at the Federal Reserve Bank of Boston for helpful comments. Palmer Osteen and Elizabeth Duncan provided excellent assistance. All errors are the author's responsibility. This work does not necessarily reflect the position of the members or staff of the Board of Governors of the Federal Reserve System.
+Return to text
+
+2. http://nsba.biz/wp-content/uploads/2018/02/Year-End-Economic-Report-2017.pdf
+Return to text
+
+3. The Y-14M also includes loan-level data on mortgages and home equity loans. For more information about this data collection, see
+https://www.federalreserve.gov/apps/reportforms/reportdetail.aspx?sOoYJ+5BzDYnbIw+U9pka3sMtCMopzoV
+. The Federal Reserve also collects other data on a quarterly basis for other portfolios through the Y-14Q process. For information about the Y-14Q see
+https://www.federalreserve.gov/apps/reportforms/reportdetail.aspx?sOoYJ+5BzDZGWnsSjRJKDwRxOb5Kb1hL
+.
+Return to text
+
+4. Mercator Group estimates that the entire small business credit market in 2015 was 13.9 million accounts. The corresponding figure for our sample is ten times the size our random 10% sample, or 10.2 million accounts. See
+https://www.creditcards.com/credit-card-news/business-credit-card-statistics.php
+for the Mercator estimate.
+Return to text
+
+5. We exclude corporate cards used by large businesses for employee travel and small expenses.
+Return to text
+
+6. We do not count multiple exits and entries as separate distress events, keeping only the first one.
+Return to text
+
+7. See
+https://www.census.gov/ces/dataproducts/bds/
+for more information. We analyze annual data from 2009, the first year where the Y-14M/OCC data includes all major issuers, through 2014, the last year the BDS is available. BDS years begin March 12
+th
+, so we use the reports from 2010 through 2014, as the 2010 report extends backwards into 2009.Reasons why these two data sets should not coincide exactly include that the BDS measures privately owned businesses with employees, regardless of size, where payroll taxes are paid. The Y-14M/OCC data includes only firms that have a small business credit card, which are generally small to medium sized businesses,[7] and defines a firm 'birth' as the opening of the account, rather than hiring an employee.[7] Large businesses' corporate cards that all employees can use for travel and other expenses are reported separately on the Y-14M and in the OCC data.
+Return to text
+
+8. See Bayard et al. (2018) for a detailed discussion of the BFS. We compare the Y-14M to the high propensity BFS. We scale the time series of new small business credit card accounts and EIN applications by the US Census estimate of total state population for that year,[8] calculating per capita new small business credit card applications and EIN applications. We use the period from 2009, when the Y-14M/OCC data began covering the major credit card issuers, until 2017, the final complete year of the BFS. Observations are for all 50 US states, plus the District of Columbia.
+Return to text
+
+9. We drop the OCC data from this analysis because due to it being a 10% random sample rather than the full population, it is less precise and generates CBSA-estimates that appear less reasonable.
+Return to text
+
+Please cite this note as:
+
+Firestone, Simon (2020). "The Geography of Small Business Dynamics," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 28, 2020, https://doi.org/10.17016/2380-7172.2580.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

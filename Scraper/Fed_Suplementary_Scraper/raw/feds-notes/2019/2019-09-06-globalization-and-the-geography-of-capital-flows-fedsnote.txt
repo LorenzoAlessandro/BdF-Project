@@ -1,0 +1,777 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+September 06, 2019
+
+Globalization and the Geography of Capital Flows
+
+Carol C. Bertaut
+, Beau Bressler, and 
+Stephanie Curcuru
+
+Portfolio Holdings files (CSV)
+ and 
+README file (TXT)
+ (
+Updated: 
+December 22, 2025
+).
+
+1. Introduction 
+
+
+After the global financial crisis, the G20 supported efforts to improve global capital flow and investment statistics, with the goal of better understanding cross-border financial linkages and investor exposures. These initiatives include increased participation in the International Monetary Fund's Coordinated Portfolio Investment Survey (CPIS) and efforts to increase both the frequency and granularity of the CPIS, including detail on issuer and investor sectors. However, these efforts to improve our understanding of global securities portfolios are subject to a fundamental limitation: They use the official balance of payments (BoP) framework that collects cross-border flows and positions according to 
+legal residence. 
+This concept was designed for tracking transactions between countries under the assumption that firms record financial transactions in the same country where the economic activity takes place. This framework is increasingly uninformative in a world where multinational firms structure their financial operations using a complex web of subsidiaries chosen to maximize profits. For example, firms issuing securities may not do any business at the legal residence of the subsidiary issuing the securities, and thus ownership of such securities may say little about the actual economic exposures investors face.
+
+Three main factors lead to the distortions between country of residence and economic exposure. First, multinational firms often incorporate in jurisdictions with low tax rates. This motivation is especially relevant for firms with substantial intangible and other highly portable assets that are easy to shift between subsidiaries.
+1
+ As a result, global cross-border statistics show elevated holdings of equity issued by firms incorporated in the Cayman Islands, Ireland, and other low-tax jurisdictions, locations that typically are associated with neither firm production nor expenses. Indeed, according to the CPIS, the third largest destination for equity investment by foreign investors is the Cayman Islands, after the United States and United Kingdom.
+2
+,
+ 
+3
+ Such distortions have become more pronounced in U.S. statistics over the past decade, in part because of a recent wave of cross-border mergers and corporate "inversions". As a result, the equity of several major U.S. firms is now considered "Irish" equity according to official statistics.
+4
+ Adding to these distortions is the increasing presence of emerging market economy (EME) firms incorporated in the Caribbean, including the Chinese firms Alibaba, Baidu, and Tencent.
+
+A second driver of distortions is firms seeking to improve their access to capital markets and the pool of global bond investors. Many firms, particularly those in EMEs, issue corporate bonds using a subsidiary firm or financing arm located in a market outside their home country. Residence-based statistics will attribute investment in such bonds to the location of the subsidiary rather than the location of the parent company. Factors driving the use of offshore subsidiaries include improved pricing, access to foreign investors, and the ability to issue larger, lower-rated or longer-maturity bonds.
+5
+
+A third source of distortions in official statistics comes from the growing importance of mutual funds and other managed investment funds as vehicles for cross-border investment. International statistical standards for the BoP classify holdings of investment fund shares as equity holdings, even if they consist entirely of non-equity securities such as bonds, and assign them to the country of fund incorporation. These standards apply regardless of the investment focus of the fund in terms of the type of assets that the fund invests in, or in the geographic region or country of focus.
+6
+ In many cases, funds are also located in offshore financial centers.
+
+That traditional residence-based statistics do not adequately represent exposures is gaining increasing recognition. For example, the Bank for International Settlements (BIS) publishes its statistics on international debt securities on both a legal residence basis (where the issuing subsidiary is incorporated, or "resident"), and a nationality basis (reflecting the country of the parent firm). These statistics highlight the rapid growth of bond issuance via offshore financial centers (see Gruic and Wooldridge 2012). Similarly, the world's largest sovereign wealth fund, the Norwegian Government Pension Fund, lists its roughly $1 trillion portfolio holdings on both a country of residence basis and on a country of exposure (nationality) basis.
+7
+ In the academic community, Lane and Milesi-Ferretti (2017) provide an overview of the distortionary effects of increasing offshore issuance and financial center intermediation on external exposures. Coppola et al. (2019) also discuss the distortions created by residence-based statistics and provide a methodology and adjustment factors to restate cross-border investment positions.
+
+2. The U.S. cross-border portfolio as a case study 
+
+We use the U.S. cross-border securities portfolio as a case study to document the extent of distortions in traditional residence-based portfolio statistics. With cross-border holdings of $12 trillion in stocks and bonds as of end-2017, the United States in aggregate is the single largest cross-border investor. We exploit the underlying security-level data on U.S. cross-border portfolio holdings collected as part of the Treasury International Capital (TIC) system. These data are collected on a legal residence basis for construction of the U.S. BoP statistics.
+8
+ Using security-level identifiers as well as modern text matching techniques, we map these holdings, security by security, to the country of exposure for each firm as assigned by commercial products designed for international investors, thus converting these holdings to a "nationality" basis.
+9
+ For common stock equity holdings, we rely primarily on the constituent information for Morgan Stanley Capital International (MSCI) country-focused equity indexes, supplemented with information on the primary location of operations for firms that are not included in the MSCI indexes.
+10
+ For bonds, we also rely on information about the ultimate parent company obtained from Moody's Investors Service, and, for asset-backed securities, about the underlying assets to map holdings of corporate bonds to a nationality basis.
+11
+ Finally, we draw implications for distortions created by U.S. cross-border fund shares and other equity holdings using "mirror data" on the portfolio assets of countries that account for the majority of such U.S. cross-border holdings, most notably the Cayman Islands, Ireland, and Luxembourg.
+12
+ The attached data tables provide holdings of the different security types by country on both the published residence basis and our allocated nationality basis.
+
+Common Stock
+
+Figure 1a shows the evolution of the U.S. cross-border portfolio of common stock on the BoP standard residence, or country of incorporation, basis. An increasing share of U.S. equity holdings are of firms incorporated in offshore and low-tax financial centers;
+13
+ these holdings have increased from about $400 billion in 2003 to more than $2.2 trillion by 2017. Equity holdings restated to the country of economic exposure, in other words, on a nationality basis, are reported in figure 1b, and figure 1c shows the distortions. As indicated by the grey bars in figures 1b and 1c, a growing share of what is reported as cross-border equity holdings are firms that primarily operate in the United States and that MSCI equity indexes classify as U.S. firms. Recent increases in part reflect the corporate inversions into Ireland noted above. Figure 1c also highlights the growing reallocation to EME stocks on a nationality basis (the orange bars). These reallocations largely reflect the recent trend of the Caribbean as a hub for firms with Chinese and Hong Kong exposures. Including allocations from other countries not included in our financial center definitions, we find that by 2017, roughly $1.8 trillion--nearly a fourth--of U.S. holdings of common stock in the official U.S. cross-border statistics is attributed to a different country by standard investor benchmarks.
+
+Corporate Bonds
+
+U.S. investor holdings of corporate bonds issued through financial centers have also increased over the past several years (figure 2a). By 2017, roughly 40 percent of U.S. foreign corporate bonds holdings (nearly $820 billion) consisted of securities issued out of financial center countries. Figure 2b shows holdings on a reallocated nationality basis, and figure 2c shows the distortions. As with common stock, bonds of "U.S." companies are a growing share of financial center bonds. In addition to bonds of issued by "U.S." firms incorporated abroad, these holdings also include bonds issued by other U.S. firms via offshore financing arms, notably in Europe. "U.S." bond holdings also include substantial investments in asset-backed securities issued by Cayman Islands financing vehicles of U.S. financial firms, including securities backed by U.S. mortgages in the run-up to the financial crisis and more recently, of collateralized loan obligations backed by U.S. syndicated loans.
+
+Figure 2c also shows a fairly consistent reallocation in corporate bonds to other advanced economies, primarily from European firms that issue bonds from financing subsidiaries in Luxembourg and the Netherlands, and a growing allocation to EMEs. Overall, our nationality-based estimate of U.S. investment in EME corporate debt securities is about $100 billion higher than under the residence-based statistics in 2017. Differences in corporate debt holdings are especially pronounced for some countries including Brazil, Russia, and China (figures 3a and 3b). In fact, once we take into account offshore issues, U.S. holdings of Brazilian corporate debt are roughly comparable to holdings of Mexican corporate debt--a fact that would be missed in the residence-based statistics.
+
+Fund shares and other equity
+
+U.S. investors also hold sizable cross-border investments in the form of shares in mutual funds and other types of managed funds. We estimate that of the roughly $1.3 trillion in U.S. holdings of foreign equity other than common stock, more than $1 trillion is not attributed to the country of primary economic exposure in the residence statistics. Indeed, we estimate that by 2017, more than half of these holdings actually reflect exposure to the United States; another roughly 10 percent reflect exposures to EMEs; and nearly 30 percent reflect exposures to foreign advanced economies other than the financial center where the funds are incorporated (figures 4a, 4b, and 4c).
+14
+ Moreover, these fund holdings are also distorted by asset type; that is, the underlying securities are bonds, commodities, and other assets besides equity.
+
+Total portfolio distortions
+
+Combining our findings for U.S. cross-border investment in bonds, common stock, and fund shares, we estimate that $3.5 trillion--nearly 30 percent--of the total $12 trillion in long-term foreign portfolio securities held by U.S. investors in 2017 reflects exposures to countries other than as reported in the official U.S. statistics (table 1). In contrast, in 2003, less than 15 percent of the U.S. portfolio reflected investment in a different country of exposure. We estimate that by 2017, more than $2 trillion is actually exposure to the United States, while exposures to EMEs are about $650 billion--25 percent--larger when recalculated on a nationality basis.
+
+3. Implications of the growing distortion in cross-border portfolios
+
+Our results can be generalized to draw conclusions about the extent of global distortions. We assume that U.S. investments in financial center securities are likely representative of global investments in such locations. Using CPIS data on global investment in these financial centers, we assume that global distortions are proportional to U.S. distortions. We estimate that at least $10 trillion--roughly 20 percent--of current global cross-border portfolio investment is similarly distorted in the current statistics (table 2). In particular, we estimate that global exposures to EME bonds and equity in the CPIS are likely understated by at least $2 trillion--by roughly a third--because of corporate bonds issued via offshore financing arms, the growing market cap of emerging market firms incorporated in offshore centers, and fund allocations to EMEs. Global holdings of U.S. securities are also likely understated, owing to the incorporation of U.S.-based multinationals in low-tax jurisdictions as well as the investments of funds located in offshore centers. Securities holdings of other advanced economies, including Germany, Italy, and Spain, are likely understated too, because their firms often issue debt securities via Luxembourg and Netherlands financing arms.
+
+These findings have implications for understanding the factors influencing capital flows. For example, there has been much focus on the global impact of the extraordinary policy actions undertaken by advanced economy central banks in the wake of the global financial crisis. Of particular emphasis has been how these monetary policies spill over into emerging markets and how EME asset prices would react when these policies are reversed (Bowman et al 2015, Fratzscher et al 2018, Converse et al 2019). Our results showing understated growth in holdings of EME assets also imply mismeasurement of capital flows to EMEs. We find distortions of EME asset holdings--in particular those caused by offshore bond issuance--were especially pronounced for the years 2010 through 2014, years when advanced economy policy was especially accommodative. These higher holdings suggest that the spillovers in terms of quantities may be understated.
+
+Our results also weaken the argument that capital flows arising from foreign direct investment (FDI) are generally preferable because they are less volatile than portfolio flows, in part because FDI is harder to expropriate (Albuquerque 2003) and is driven by pull rather than push factors (Eichengreen et al 2018). These arguments assume that portfolio flows in the BoP accounts fully capture investment in a country's securities. When corporations issue bonds via offshore affiliates, however, funds borrowed through the offshore entities are funneled back to the parent firm in the form of lending or "reverse investment" in the parent firm. These flows, which appear as FDI inflows, are effectively no different from typical portfolio flows, and can be just as volatile. Growing reliance on offshore financing vehicles for debt issuance can thus confound our understanding of the resilience of different types of cross-border financial flows. Similarly, our results also raise some potential flags for interpreting conclusions on the effectiveness of capital controls in preventing portfolio inflows to emerging markets (Forbes and Warnock 2012, Ahmed and Zlate 2014, Forbes et al. 2014, Forbes et al 2015, Pasricha et al. 2015). Foreign investors may still be able to gain exposures to countries via offshore-issued bonds, which typically are unaffected by controls. But because such purchases are not classified as portfolio inflows to these countries, the effectiveness of controls may be overstated.
+
+Our results are also relevant to the long-standing Lucas (1990) paradox, which arises from differences between the theoretical prediction of capital movements between developed and developing countries and what is observed. Theory predicts that capital should move toward economies with lower levels of capital per worker. Most studies, however, find that capital does not flow from more to less developed economies; rather, it flows in the other direction (see Alfaro et al. 2008). Our results suggest that advanced economy exposure to EMEs is larger than previously understood, which resolves some portion of this puzzle. This larger exposure is likely to be still more evident if we consider the global reaches of multinational firms and the full portfolios of domestic investors. For example, U.S. investors have considerable foreign exposure through their holdings of securities issued by U.S. multinational firms. In ongoing research, we factor in the global activity of multinationals to measure U.S. portfolio exposures more broadly.
+
+References: 
+
+Ahmed, S. and A. Zlate (2014), "Capital flows to emerging market economies: A brave new world?", Journal of International Money and Finance, Vol. 48(PB), pp 221-248.
+
+Albuquerque, R. (2003). "The composition of international capital flows: risk sharing through foreign direct investment." 
+Journal of International Economics
+, 
+61
+(2), 353-383.
+
+Alfaro, L., Kalemli-Ozcan, S., & Volosovych, V. (2008). "Why doesn't capital flow from rich to poor countries? An empirical investigation." 
+The Review of Economics and Statistics
+, 
+90
+(2), 347-368.
+
+Black, S., & Munro, A. (2010). Why issue bonds offshore? BIS Working Paper No. 334.
+
+Bowman, D., Londono, J. M., & Sapriza, H. (2015). "U.S. unconventional monetary policy and transmission to emerging market economies." 
+Journal of International Money and Finance
+, 
+55
+, 27-59.
+
+Cohen, Gregory J., Melanie Friedrichs, Kamran Gupta, William Hayes, Seung Jung Lee, W. Blake Marsh, Nathan Mislang, Maya Shaton, and Martin Sicilian (2018). "The U.S. Syndicated Loan Market: Matching Data," Finance and Economics Discussion Series 2018-085. Washington: Board of Governors of the Federal Reserve System, https://doi.org/10.17016/FEDS.2018.085.
+
+Coppola, A., M. Maggiori, B. Neiman, and J. Schreger (2019). "Redrawing the Map of Global Capital Flows: The Role of Cross-Border Financing and Tax Havens." Working Paper.
+
+Converse, N., S. Curcuru, A. Rosenbaum and C. Scotti (2019). "Pushing or Pulling? Quantitative Easing, Quantitative Tightening and International Capital Flows" Working paper.
+
+Desai, M. A., Foley, C. F., & Hines Jr, J. R. (2006). The demand for tax haven operations. 
+Journal of Public economics
+, 
+90
+(3), 513-531.
+
+Devereux, M. P., & Vella, J. (2017). Implications of Digitalization for International Corporate Tax Reform.
+
+Eichengreen, B., Gupta, P., & Masetti, O. (2018). Are capital flows fickle? Increasingly? and does the answer still depend on type?. 
+Asian Economic Papers
+, 
+17
+(1), 22-41.
+
+Forbes K., M. Fratzscher, T. Kostka and R. Straub (2016), "Bubble thy neighbour: Portfolio effects and externalities from capital controls", Journal of International Economics, Vol. 99, pp 85-104.
+
+Forbes K., M. Fratzscher and R. Straub (2015), "Capital-flow management measures: What are they good for?", Journal of International Economics, Vol. 96, pp S76-S97.
+
+Forbes K. and F. Warnock (2012), "Capital flow waves: Surges, stops, flight, and retrenchment", Journal of International Economics, Vol. 88, pp 235-251.
+
+Fratzscher, M., Lo Duca, M., & Straub, R. (2018). On the international spillovers of US quantitative easing. 
+The Economic Journal
+, 
+128
+(608), 330-377.
+
+Pasricha, G., Falagiarda, M., Bijsterbosch, M., & Aizenman, J. (2015). 
+Domestic and multilateral effects of capital controls in emerging markets
+ (No. w20822). National Bureau of Economic Research.
+
+GruiÄ, B., & Wooldridge, P. D. (2012), "Enhancements to the BIS debt securities statistics", BIS 
+Quarterly Review
+ (December).
+
+Hale, G., P. Jones and M. M. Spiegel (2016). "The Rise in Home Currency Issuance", Federal Reserve Bank of San Francisco Working Paper 2014-19
+
+Hebous, S., & Johannesen, N. (2015). At your service! The role of tax havens in international trade with services
+
+Keen, M., & Konrad, K. A. (2013). The theory of international tax competition and coordination. In 
+Handbook of public economics
+ (Vol. 5, pp. 257-328). Elsevier.
+
+Lane, M. P. R., & Milesi-Ferretti, M. G. M. (2017). 
+International financial integration in the aftermath of the global financial crisis
+. International Monetary Fund Working Paper No. 17/115.
+
+Lucas, R. E. (1990). Why doesn't capital flow from rich to poor countries?. 
+The American Economic Review
+, 
+80
+(2), 92-96.
+
+Mizen, P., Packer, F., Remolona, E. M., & Tsoukas, S. (2012). Why do firms issue abroad? Lessons from onshore and offshore corporate bond finance in Asian emerging markets.
+
+Pasricha, G., Falagiarda, M., Bijsterbosch, M., & Aizenman, J. (2015). 
+Domestic and multilateral effects of capital controls in emerging markets
+ (No. w20822). National Bureau of Economic Research.
+
+Pomeroy, James. 2016. "The Rise of the Digital Natives." HSBC report, September.
+
+Serena, J. M., & Moreno, R. (2016). Domestic financial markets and offshore bond financing.
+
+U.S. Department of Treasury, annual reports on U.S. Portfolio Surveys of Foreign Securities, various years. 
+https://www.treasury.gov/resource-center/data-chart-center/tic/Pages/shcreports.aspx
+
+Table 1: U.S. Portfolio Holdings of Long-term Foreign Securities
+
+Billions of dollars
+
+ 
+
+Long-term Foreign Securities Holdings
+
+Holdings with nationality country different from residence country
+
+ 
+
+Total
+
+Common stock
+
+Bonds
+
+of which: Corporate Bonds
+
+Fund shares and other equity
+
+Total
+
+Common stock
+
+Corporate Bonds
+
+Fund shares and other equity
+
+2003
+
+2,953.8
+
+2,006.3
+
+874.4
+
+559.5
+
+73.2
+
+393.7
+
+220.6
+
+149.6
+
+23.4
+
+2004
+
+3,553.4
+
+2,497.1
+
+993.0
+
+676.6
+
+63.3
+
+537.7
+
+294.3
+
+214.0
+
+29.4
+
+2005
+
+4,345.9
+
+3,223.7
+
+1,028.2
+
+735.8
+
+94.0
+
+614.8
+
+358.5
+
+222.0
+
+34.4
+
+2006
+
+5,623.0
+
+4,165.6
+
+1,294.1
+
+972.9
+
+163.4
+
+858.0
+
+455.7
+
+317.1
+
+85.3
+
+2007
+
+6,862.7
+
+4,956.1
+
+1,609.8
+
+1,217.0
+
+296.8
+
+1,236.7
+
+657.6
+
+431.4
+
+147.8
+
+2008
+
+4,009.1
+
+2,541.4
+
+1,260.6
+
+962.3
+
+207.0
+
+756.4
+
+300.6
+
+344.5
+
+111.4
+
+2009
+
+5,589.5
+
+3,704.8
+
+1,594.2
+
+1,214.1
+
+290.5
+
+1,055.5
+
+504.0
+
+415.1
+
+136.4
+
+2010
+
+6,361.7
+
+4,326.9
+
+1,714.8
+
+1,273.7
+
+320.1
+
+1,165.4
+
+633.5
+
+381.2
+
+150.6
+
+2011
+
+6,480.5
+
+3,786.4
+
+1,979.0
+
+1,442.7
+
+715.0
+
+1,518.6
+
+558.3
+
+444.4
+
+515.8
+
+2012
+
+7,593.3
+
+4,487.1
+
+2,271.5
+
+1,574.3
+
+834.8
+
+1,693.7
+
+657.1
+
+466.7
+
+569.9
+
+2013
+
+8,777.5
+
+5,715.5
+
+2,304.6
+
+1,664.4
+
+757.4
+
+2,004.4
+
+1,008.3
+
+480.6
+
+515.4
+
+2014
+
+9,235.2
+
+5,743.9
+
+2,508.5
+
+1,842.2
+
+982.7
+
+2,420.8
+
+1,130.9
+
+562.6
+
+727.3
+
+2015
+
+9,103.3
+
+5,758.7
+
+2,347.2
+
+1,739.4
+
+997.5
+
+2,634.0
+
+1,267.9
+
+576.5
+
+789.6
+
+2016
+
+9,582.8
+
+5,917.7
+
+2,436.5
+
+1,833.3
+
+1,228.7
+
+2,963.7
+
+1,350.2
+
+633.6
+
+979.9
+
+2017
+
+11,953.3
+
+7,851.5
+
+2,835.2
+
+2,098.0
+
+1,266.7
+
+3,505.3
+
+1,771.8
+
+718.4
+
+1,015.1
+
+Source: Treasury International Capital and authors' estimates
+
+Table 2: Estimated distortions in global cross-border securities holdings, 2017
+
+Trillions of dollars (except as noted)
+
+ 
+
+Total
+
+Long-term Debt
+
+Equity
+
+Total holdings of cross-border long-term securities
+*
+
+53.4
+
+22.1
+
+31.3
+
+Holdings in European financial centers:
+
+ 
+
+ 
+
+ 
+
+Ireland, Netherlands, Switzerland
+
+5.1
+
+1.8
+
+3.3
+
+Luxembourg
+
+3.8
+
+0.7
+
+3.1
+
+Holdings in Caribbean and other offshore centers
+
+5.5
+
+1.2
+
+4.3
+
+Share of holdings distorted in U.S. statistics
+
+Share in European financial centers:
+
+ 
+
+ 
+
+ 
+
+Ireland, Netherlands, Switzerland
+
+0.42
+
+0.36
+
+0.44
+
+Luxembourg
+
+0.79
+
+0.82
+
+0.76
+
+Share in Caribbean and other offshore centers
+
+0.9
+
+0.93
+
+0.9
+
+Global estimated holdings with nationality country other than as reported in CPIS
+
+10
+
+2.3
+
+7.7
+
+*
+Excluding securities held as reserve assets and by international organizations. 
+Return to text
+
+Source: IMF CPIS and authors' calculations.
+
+Figure 1a: U.S. holdings of common stock, Residence basis
+
+Accessible version
+
+ 
+
+Figure 1b: U.S. holdings of common stock, Nationality basis
+
+Accessible version
+
+ 
+
+Figure 1c: U.S. holdings of common stock, Difference between nationality and residence basis holdings
+
+
+Note: Legend entries are ordered from top to bottom. On Figure 1c, for 2003 through 2006, the bars for AFE and EME are small.
+
+Source: Authors' estimates based on Treasury International Capital data. Data only include securities that were considered "foreign" on a residence basis.
+
+Accessible version
+
+ 
+
+Figure 2a: U.S. holdings of corporate bonds, Residence basis
+
+Accessible version
+
+ 
+
+Figure 2b: U.S. holdings of corporate bonds, Nationality basis
+
+Accessible version
+
+ 
+
+Figure 2c: U.S. holdings of corporate bonds, Difference between nationality and residence basis holdings
+
+
+Note: Legend entries are ordered from top to bottom.
+
+Source: Authors' estimates based on Treasury International Capital data. Data only include securities that were considered "foreign" on a residence basis.
+
+Accessible version
+
+ 
+
+Figure 3a: U.S. holdings of foreign corporate bonds, Brazil and Mexico
+
+Accessible version
+
+ 
+
+Figure 3b: U.S. holdings of foreign corporate bonds, China and Russia
+
+
+Source: Authors' estimates based on Treasury International Capital data. Data only include securities that were considered "foreign" on a residence basis.
+
+Accessible version
+
+ 
+
+Figure 4a: U.S. holdings of fund shares and other equity, Residence basis
+
+Accessible version
+
+ 
+
+Figure 4b: U.S. holdings of fund shares and other equity, Nationality basis
+
+Accessible version
+
+ 
+
+Figure 4c: U.S. holdings of fund shares and other equity, Difference between nationality and residence basis holdings
+
+
+Note: Legend entries are ordered from top to bottom. On Figure 4c, for 2003 through 2006, the bars for AFE and EME are small.
+
+Source: Authors' estimates based on Treasury International Capital data. Data only include securities that were considered "foreign" on a residence basis.
+
+Accessible version
+
+1. 
+ See for example the survey on the tax competition literature in Keen and Konrad 2013, as well as Desai, Foley, and Hines 2006, Hebous and Johannesen 2016, Pomeroy 2016, Devereaux and Vella 2017. 
+Return to text
+
+2. 
+ See CPIS table 13: 
+http://data.imf.org/regular.aspx?key=32986
+ 
+Return to text
+
+3. 
+ Distortions from the location of incorporation are not new: Schlumberger, long one of the largest 100 global firms, has operated in the United States since the 1930s and is headquartered in Houston, Texas, but has been incorporated in CuraÒ«ao since 1956 (http://www.fundinguniverse.com/company-histories/schlumberger-limited-history/). As a result, cross-border statistics have shown large holdings of CuraÒ«ao equity for some time. 
+Return to text
+
+4. 
+ "Inversions" refer to merger and acquisition activity where the acquiring firm is typically larger than the target firm. After the merger, the combined firm "inverts" to establish its residence in the country of the target firm, which is typically a lower-tax jurisdiction. Recent high-profile U.S. inversions that resulted in U.S. firms becoming "Irish" firms include Actavis/Allergan and Medronic/Covidien, both in 2015. See https://www.allergan.com/news/news/thomson-reuters/actavis-completes-allergan-acquisition and http://newsroom.medtronic.com/phoenix.zhtml?c=251324&p=irol-newsArticle&ID=2004310. 
+Return to text
+
+5. 
+ See for example Black and Munro (2010). Serena and Moreno (2016) identify a pickup in offshore issuance by firms in EMEs following the global financial crisis, which they attribute to declining financing costs and the less developed state of EME financial markets more generally. However, since the Asian Financial Crisis in the late 1990s there has been a shift away from offshore issuance, which is generally denominated in hard currencies, toward local-currency issuance in the domestic bond market (Black and Munro 2010, Mizen et al 2012, Hale et al 2016). 
+Return to text
+
+6. 
+ While official statistics consider all fund shares to be "equity" regardless of the investment focus of the fund, other data sources such as EPFR provide breakdowns of investment by bonds and equity. 
+Return to text
+
+7. 
+ 
+https://www.nbim.no/
+ 
+Return to text
+
+8. 
+ The U.S. cross-border data also include U.S. holdings of foreign short-term debt securities (i.e. those with an original maturity of less than one year). We focus on long-term securities in our analysis, because holdings of short-term securities are relatively small compared to equity and long-term securities holdings, and only a small share is issued via offshore financial centers. Annual reports by the U.S. Department of the Treasury provide descriptive statistics and analysis on the underlying data. 
+Return to text
+
+9. 
+ Because information on security identifiers is inconsistent in our data, especially in earlier years, we use text matching to assign nationality to securities for which we cannot match by security identifiers. We extensively clean security names and then use exact and fuzzy matching techniques. See Cohen et al. (2018). 
+Return to text
+
+10. 
+ For common stock, we assign the ultimate MSCI country designation for securities of companies that have not yet been included in an MSCI index. For example, we assign any U.S. holdings of Chinese firms such as Alibaba, Tencent, and Baidu (incorporated in the Cayman Islands) to China for years prior to 2015, although these firms were not included in the MSCI China/Emerging Markets indexes until 2015. See https://www.reuters.com/article/us-msci-china-index-alibaba/msci-adds-alibaba-other-u-s-listed-china-shares-to-indexes-idUSKCN0T12RF20151112 
+Return to text
+
+11. 
+ For bonds, our reassignment primarily affects corporate debt. Although sovereign bonds of many countries are issued as international debt securities, their country assignment typically will not be distorted in residence-based statistics in the same manner as corporate bonds, because they are not issued via subsidiaries that are legally incorporated in offshore financial centers. Our reassignment to "ultimate parent" nonetheless results in a few differences in country for government debt securities. Some of these differences arise from debt securities that are primarily repackaged sovereign debt exposures. Additionally, some bonds were misclassified by country in the underlying data. Because our underlying data are from the surveys of U.S. portfolio holdings of foreign securities collected on a residence basis, we are not able to include U.S. investor holdings of bonds issued by U.S. financing arms of foreign firms. 
+Return to text
+
+12. 
+ For fund share and other equity allocations, we rely primarily on country allocations of financial center reporting to the CPIS, as their outward CPIS statistics will largely reflect the underlying securities of investment funds incorporated in those locations. For example, beginning in December 2015, the Cayman Islands submission to the CPIS includes securities holdings of resident funds. Cross-border portfolio holdings of the Cayman Islands were roughly $1.9 trillion as of December 2017, with a little over $1 trillion in debt securities and the remainder in cross-border equity. About 70 percent of these holdings are of U.S. securities, 15 percent are securities issued by other advanced economies, and the residual 15 percent those of all other countries, including EMEs. We assume that cross-border holdings of Cayman Island funds are similarly distributed for years before 2015. For Ireland, International Investment Position data indicate that investment funds account for more than half of Ireland's cross-border portfolio holdings, with about a third of the holdings of these funds invested in U.S. securities. Country allocations are quite similar to Ireland's overall CPIS reporting, and thus we use the country allocations of Ireland's outward CPIS holdings to distribute U.S. holdings of Irish fund shares. We similarly use CPIS reporting of Bermuda, Guernsey, Jersey, and Mauritius to distribute fund shares and other equity of those countries. The British Virgin Island does not participate in the CPIS. We assume that their fund holdings are distributed similarly to those in Bermuda and the Cayman Islands. Information on assets of non-monetary Luxembourg funds is available from the Central Bank of Luxembourg. Securities held by these funds were more than $4 trillion at end-2017, with nearly a quarter U.S. securities and another quarter are securities issued by non-euro area countries including EMEs. U.S. investors also hold sizable amounts of U.K. funds. For these holdings, we use country share allocations of securities held by funds registered in the United Kingdom from EPFR. 
+Return to text
+
+13. 
+ The "offshore and low-tax" financial center countries we identify in the TIC data include Bermuda, the British Virgin Islands, the Cayman Islands, CuraÒ«ao (combined as Netherlands Antilles in the TIC data until 2013), Guernsey, Ireland, Isle of Man, Jersey, Liberia, Luxembourg, the Netherlands, Malta, the Marshall Islands, Mauritius, Panama, and Switzerland. 
+Return to text
+
+14. 
+ We include both holdings of registered investment funds as well as holdings of hedge fund shares and private equity. Coverage of such fund share holdings in the U.S. data (and the distortions they generate) increased notably in December 2011 after clarification of instructions on reporting responsibilities of managed investment funds. 
+Return to text
+
+Please cite this note as:
+
+Bertaut, Carol C., Beau Bressler, and Stephanie Curcuru (2019). "Globalization and the Geography of Capital Flows," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 6, 2019, https://doi.org/10.17016/2380-7172.2446.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

@@ -1,0 +1,326 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+June 22, 2017
+
+Primary Dealers' Behavior during the 2007-08 Crisis: Part I, Repo Runs
+
+Rajkamal Iyer and 
+Marco Macchiavelli
+
+1. Introduction
+
+This is the first of two notes that empirically document the behavior of U.S. Primary Dealers during the 2007-08 financial crisis. In this note we show that dealers' exposure to risky assets drives the observed repo funding squeeze; moreover, as evident from Lehman's experience, we show that repos become subject to counterparty risk during periods of stress, even when collateralized by the safest assets. Prior to the crisis, most market participants believed that repos, if adequately collateralized, would be a stable source of funding. However, Lehman lost significant access to repos backed by any type of collateral, Treasuries included. This outcome suggests that in times of market unrest repos become sensitive to counterparty risk, notwithstanding the fact the cash lenders are granted exemption from automatic stay, and can therefore repossess the underlying collateral in case the cash borrower fails to repay. Copeland et al. (2014) and Ball (2016) provide two possible explanations for this puzzle. First, Money Market Funds (MMFs) may be sensitive to headline risk, namely the risk that investors could withdraw their money from a MMF that is mentioned in the headlines of a news story because it was funding a failing dealer. Second, Rule 2a-7 restricts the MMFs' ability to invest in assets with significant residual maturity; limits on both the residual maturity of individual securities and the weighted average maturity of the fund's assets (WAM) hinder the MMF's ability to repossess the collateral underlying the tri-party repos that MMFs invest in.
+1
+ 
+2
+
+2. Data
+
+We use confidential data from the FR2004 Primary Government Securities Dealers Reports, forms A and C from January 1, 2007 to January 1, 2009.
+3
+ These reports collect weekly positions, financing and fails data of U.S. primary dealers (reporting data as of each Wednesday at close of business). Data is reported for the "legal entity that functions as the primary dealer, including any subsidiaries that it consolidates in its regulatory reports", and thus does not include data from unconsolidated subsidiaries of the same holding company. Form A reports positions, long and short, at fair (market) value. Reportable positions include outright transactions, new positions taken at auction or as part of an underwriting syndicate, forward contracts, when-issued positions and dollar rolls involving TBA securities; other derivatives are not included. Positions are broken down by asset class (U.S. Treasuries, Agency Notes and Coupons, Agency MBS and Corporate Securities) and residual maturity buckets, which vary asset-by-asset.
+4
+ For instance, we have long and short positions in Treasury Bills, Treasury Coupons due in less than 3 years, 3-to-6 years, 6-to-11 years and more than 11 years.
+
+Form C reports financing and fails. Financing refers to the actual funds delivered or received and is divided in "Securities In" (funds are delivered) and "Securities Out" (funds are received). "Securities In" refers to agreements by which securities are received from a counterparty; these include reverse repos (dealer lends cash and receives a security as collateral), securities borrowed (reports the cash that is lent or the fair value of the securities if securities are exchanged or pledged as collateral), securities received from a counterparty as collateral for margin calls or for other derivatives. "Securities Out" similarly refers to agreements to deliver securities to counterparties, including repos (dealer borrows cash and deliver securities as collateral), securities lent (reports the cash that is borrowed or the fair value of the securities if securities are exchanged or pledged as collateral), securities delivered to a counterparty as collateral for margin calls or for other derivatives. Securities In and Out are broken down by asset class (Treasuries, Agency Debt, Agency MBS, and Corporate Securities) and maturity (overnight and term). During the period under consideration (Jan'07 to Dec'08), a subset of Securities In and Out is reported separately: overnight repos, term repos, overnight reverse repos and term reverse repos. These repos and reverse repos include bilateral, GCF (inter-dealer), and tri-party GC agreements.
+5
+
+3. Empirical Strategy and Results
+
+To understand the degree to which a drop in secured funding can be attributed to collateral risk (a loss in the value of repo collateral) or counterparty risk (troubled dealers lose funding secured by even the safest collateral), we construct a measure of dealer-specific exposure to risk, named Risky Exposure. This measure is the ratio of net positions in corporate securities to the sum of all long and short positions; the denominator measures the size of dealer's intermediation. Corporate securities are a subset of securities available to use in repo transactions. They include private-label MBS and ABS, corporate bonds, commercial paper and private equities; some of these assets were at the core of the crisis. Indeed, private-label MBS and private equities held by Lehman were considered largely overvalued and thus a source of risk for Lehman--see Ball (2016). In Tables 1 and 2, we run a set of panel regressions, such as
+
+$$$$\begin{align} Y_{i,t} =& (\alpha_0 {Risky}_{i,t} + \beta_0 LEH_{i} Risky_{i,t} ) * PRE_t + ( \alpha_1 Risky_{i,t} + \beta_1 LEH_{i} Risky_{i,t} ) * POST_t +\\ +& (\alpha_2 Risky_{i,t} + \beta_2 LEH_{i} Risky_{i,t} ) * LAST_t + \mu_t + \varepsilon_{i,t} \end{align}$$$$
+
+where Y is the weekly percentage change in one of several variables, such as repos or securities out, PRE equals one for each week between January 1, 2007 and March 14, 2008 (the pre-Bear's collapse period), POST refers to the weeks post-Bear's collapse up until a month prior to Lehman's bankruptcy, and LAST refers to the weeks between August 15, 2008 and September 15, 2008. LEH is a dummy that identifies Lehman Brothers. Finally, $$\mu_t$$ is a set of week fixed effects. We stop the analysis with Lehman's default because shortly after that Monday, a very wide set of emergency lending programs, rescues and guarantees were put in place. Standard errors are clustered at the dealer level.
+
+Table 1: Sensitivity of borrowing to risky exposures - Jan 2007 to Sep 2008
+
+ 
+
+(1) % $$\Delta$$ Repo
+
+(2) % $$\Delta$$ Sec Out
+
+(3) % $$\Delta$$ Net Fin
+
+Pre-Bear X Risky Exposure
+
+-0.676
+
+			(1.945)
+
+-0.543
+
+			(1.888)
+
+-0.750*
+
+			(0.395)
+
+Pre-Bear X Lehamn X Risky Exposure
+
+4.437
+
+			(3.886)
+
+3.420
+
+			(3.779)
+
+0.367
+
+			(0.700)
+
+Post-Bear X Risky Exposure
+
+-7.112*
+
+			(3.854)
+
+-7.492*
+
+			(3.917)
+
+-2.783
+
+			(1.937)
+
+Post-Bear X Lehamn X Risky Exposure
+
+-27.55***
+
+			(6.387)
+
+-24.97***
+
+			(6.182)
+
+-7.834**
+
+			(3.531)
+
+Last Month X Risky Exposure
+
+-9.700***
+
+			(1.826)
+
+-9.259***
+
+			(1.659)
+
+-5.672***
+
+			(1.641)
+
+Last Month X Lehamn X Risky Exposure
+
+-37.95***
+
+			(7.287)
+
+-61.60***
+
+			(6.441)
+
+-18.94***
+
+			(4.607)
+
+Sample Size
+
+2074
+
+2074
+
+2074
+
+Week FE
+
+Yes
+
+Yes
+
+Yes
+
+R^2
+
+0.231
+
+0.235
+
+0.048
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+ 
+
+First of all, Table 1 shows that indeed, right after Bear's collapse, Risk Exposure starts to be meaningfully correlated with the weekly change in funding, significantly more so for Lehman (rows three and four). Entering the last month of Lehman (rows five and six) these elasticities increase in absolute value for all dealers, and especially so for Lehman. The dependent variable is the weekly percentage change in repo financing in the first column, the weekly percentage change in securities out in the second column, and finally in the last column it is the weekly ``change" in net financing. Net financing is the difference between securities out and securities in, and as so it measures the amount of funding raised through repos and sec lending that is not channeled out to clients through reverse repos and sec borrowing. Net Financing is therefore a measure of the additional funding raised by a dealer for its own use, for instance to finance part of its net positions.
+6
+
+Coefficients in the last two rows of column (2) suggest that for the average dealer, a 10% increase in Risky Exposures is associated with a 1% weekly drop in secured funding (Securities Out) during the last month of Lehman, while it is associated with a 7% weekly drop (9.3% + 61.6% = 70.9% pass-through) in secured funding for Lehman.
+
+3.1 Repo Runs: Collateral vs Counterparty Risk
+
+While Table 1 shows that Lehman's funding is more sensitive to Risky Exposure than other dealers, we still cannot say whether it is due to Lehman using riskier collateral to back its funding or whether secured funding still carries remarkable counterparty risk. Table 2 addresses the crucial issue of whether the run on repo was mainly a run on some repos backed by risky collateral (
+collateral risk
+) regardless of the borrower's creditworthiness, or if cash lenders run on riskier counterparties regardless of the type of collateral backing the repo (
+counterparty risk
+), or possibly a mix of the two explanations.
+
+In our sample period, FR2004--Form C does not break down repos by collateral, while it does so for Securities Out (which includes repos and sec lending). Thus, when investigating the collateral vs counterparty risk question, we only use the weekly percentage change in Securities Out broken down by collateral type; specifically we focus on the safest collateral (which actually appreciates during the crisis), namely Treasuries, and on the riskiest collateral that is at the root of the crisis, namely Corporate Securities, which includes private-label MBS and private equities.
+
+Under the null hypothesis that the run was due only to collateral risk, we should not see any negative association between Risky Exposure and changes in secured funding backed by Treasuries, while observing a significant negative association between risky exposures and changes in funding backed by risky collateral. Under the alternative hypothesis of counterparty risk, we should observe a negative and significant correlation between Risky Exposures and changes in funding regardless of the collateral used. Thus, the crucial observation that would allow us to disentangle the two hypotheses is whether funding backed by Treasuries is significantly negatively associated with Risky Exposure.
+
+Table 2: Collateral and counterparty risks - Jan 2007 to Sep 2008
+
+ 
+
+(1) % $$\Delta$$ Sec Out Treasury
+
+(2) % $$\Delta$$ Sec Out Corporate
+
+Pre-Bear X Risky Exposure
+
+-1.183
+
+			(2.344)
+
+-0.607
+
+			(1.120)
+
+Pre-Bear X Lehamn X Risky Exposure
+
+-0.911
+
+			(4.491)
+
+0.854
+
+			(2.206)
+
+Post-Bear X Risky Exposure
+
+-4.412
+
+			(3.051)
+
+-2.054
+
+			(1.641)
+
+Post-Bear X Lehamn X Risky Exposure
+
+-15.33***
+
+			(6.157)
+
+-8.021***
+
+			(2.810)
+
+Last Month X Risky Exposure
+
+-18.91***
+
+			(4.089)
+
+-9.212***
+
+			(2.143)
+
+Last Month X Lehamn X Risky Exposure
+
+-104.6***
+
+			(14.45)
+
+-59.48***
+
+			(8.275)
+
+Sample Size
+
+2074
+
+2074
+
+Week FE
+
+Yes
+
+Yes
+
+R^2
+
+0.212
+
+0.240
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+ 
+
+Table 2 provides backing for the 
+counterparty risk 
+hypothesis. Indeed, for the average dealer and much more so for Lehman, Risky Exposure is negatively associated with changes in funding backed by Treasuries. The elasticities are always significantly different from zero for Lehman in the post-Bear collapse period, and only statistically significant for the other dealers during Lehman's last month. Interestingly, the elasticities are even more negative for Treasury than for corporate collateral, possibly reflecting the fact that funding backed by Treasury collateral is a much larger fraction of dealers' borrowing than funding backed by corporate collateral.
+7
+ Also, notice that using Securities Out underestimates the effect on repos, because an increase in margin/collateral calls on Lehman would require Lehman to post more collateral to keep certain positions, thus increasing the amount of securities pledged, or going out.
+
+4. Conclusion
+
+In this note we document that repos, even those collateralized by the safest assets, are still subject to counterparty risk during market stress. As many commentators have argued in the context of Lehman's run, this can be due to two separate factors: headline risk, namely the risk that investors could withdraw their money from a MMF that is mentioned in the headlines of a news story because it was funding a failing dealer, and the regulatory limits on MMFs' ability to hold the underlying collateral in case a dealer defaults on tri-party repos. The latter is due to the fact that the general collateral backing tri-party repos is of considerable residual maturity: for agency and other private collateral, there is a 13 month residual maturity limit, in addition to the overall 60 calendar days limit on the fund's WAM.
+
+References
+
+Ball, Laurence (2016). "The Fed and Lehman Brothers." 
+supplementary document for NBER Working Paper
+ 
+No. w22410
+.
+
+Bowman, David, Joshua Louria, Matthew McCormick, and Mary-Frances Styczynski (2017). "The Cleared Bilateral Repo Market and Proposed Repo Benchmark Rates." 
+FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 27, 2017.
+
+Copeland, Adam, Antoine Martin, and Michael Walker (2014). "Repo Runs: Evidence from the TriâParty Repo Market." 
+The Journal of Finance
+ 69.6 (2014): 2343-2380.
+
+1. Under Rule 2a-7, eligible securities include "private" securities with residual maturity of 397 calendar days or less determined to possess minimal credit risk, and government securities. The latter, namely securities issued or guaranteed by the United States, cannot exceed 397 days of residual maturity, with the exception of variable-rate government securities, which cannot exceed 397 days until the next reset date. Moreover, the overall WAM cannot exceed 60 calendar days. There are also additional restrictions that depend on the money fund type. 
+Return to text
+
+2. MMFs can in principle amend the master repurchase agreement to narrow the set of eligible collateral down to securities with shorter residual maturities. This contractual revision would not satisfy the dealer's funding needs, making it unlikely that the dealer would agree on the revision. In addition, repos are viewed as overnight investments, not as positions on the underlying collateral. For these and other reasons, it is easier for MMFs to drop their exposure to a risky counterparty instead of amending the master repurchase agreement. 
+Return to text
+
+3. For the instructions, see 
+https://www.federalreserve.gov/reportforms/forms/FR_200420070307_i.pdf
+. Professor Iyer did not have access to any confidential information during this analysis. 
+Return to text
+
+4. We use data from 2007 to 2008, which is less granular than the more recent FR2004 data. 
+Return to text
+
+5. For a review of different segments of the repo market, see Bowman et al. (2017). 
+Return to text
+
+6. In column (3), % change Net Fin is the weekly dollar change in Net Financing (times 100) divided by the lagged value of total Securities Out. We do not use the lagged value of Net Financing as the denominator, since Net Financing can be either positive or negative and thus can alter the direction of the numerator's change if it switches from positive to negative. 
+Return to text
+
+7. The larger sensitivity of treasury repos may also be due to the fact that Government MMFs are more risk-sensitive than Prime MMFs. The latter can invest in repos backed by corporate securities, contrary to Government MMFs. 
+Return to text
+
+Please cite this note as:
+
+Iyer, Rajkamal, and Marco Macchiavelli (2017). "Primary Dealers' Behavior during the 2007-08 Crisis: Part I, Repo Runs," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 22, 2017, https://doi.org/10.17016/2380-7172.1996.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

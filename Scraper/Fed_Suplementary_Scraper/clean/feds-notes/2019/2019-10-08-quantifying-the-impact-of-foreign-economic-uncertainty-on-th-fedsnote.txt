@@ -1,0 +1,158 @@
+FEDS Notes
+
+Twitter
+
+October 08, 2019
+
+Quantifying the Impact of Foreign Economic Uncertainty on the U.S. Economy
+
+Juan M. Londono
+,
+Sai Ma
+, and
+Beth Anne Wilson
+*
+
+Uncertainty about economic conditions abroad is frequently mentioned as a risk, a cross current, or a headwind to the U.S. outlook. However, there is little evidence linking foreign uncertainty to U.S. economic conditions. One challenge in looking for this evidence is how exactly to measure uncertainty. In this note, we construct a measure of real economic uncertainty (REU), which is based on the predictability of near-term economic performance, for the major advanced economies. We find that an increase in uncertainty about foreign economic conditions is associated with an economically meaningful decline in U.S. industrial production (IP) and U.S. stock prices, even accounting for changes in U.S. REU. Comparing this effect with that of a rise in other global uncertainty measures, we find that increases in REU have a stronger adverse effect on future U.S. economic developments than increases in more sentiment- or news-based measures of uncertainty.
+
+Constructing foreign economic uncertainty
+
+There are many kinds of uncertainty. Our measure focuses on whether a country's economy has become more or less predictable month to month; that is, on how accurately we can anticipate economic conditions in the near future based on what we know now. The less easy the economy is to predict, the more real economic uncertainty there is. We calculate this measure for the seven largest advanced economies (G-7) and Switzerland using monthly data from 1973 to 2018 and the methodology in Jurado, Ludvigson, and Ng (2015) and Ludvigson, Ng, and Ma (2019).
+
+Simply put, to calculate REU, we take a broad range of indicators of the real economy of each country (between 40 to 70 indicators depending on the country), including for output, the labor market, housing, investment, and so on. We build a forecast of each of these real economic variables using a broader set of monthly macroeconomic and financial data (almost 300 indicators), and calculate a measure of how far off our forecasts are from the actual values at each point in time (the time-varying volatility of forecast errors).
+1
+The further off we are, the more uncertainty there is about economic conditions. Aggregating the measures of the volatility of our forecast misses across all variables for a particular country gives us a REU index for that country. Aggregating across foreign countries (weighting by GDP) gives us a broader measure of foreign REU.
+2
+We also construct an analogous measure of U.S. economic uncertainty.
+
+As seen in Figure 1, uncertainty about the real economy in the U.S. and foreign countries tend to increase around recessions (shaded in grey). For example, both uncertainty measures spiked considerably during the global financial crisis. Foreign REU also increased around the time of the euro-area crisis and the Japanese earthquake in 2011.
+
+Figure 1: Real Economic Uncertainty (REU)
+
+Note: REU is calculated as the average volatility of one-month-ahead forecast errors of a set of real economic variables following the methodology in Jurado, Ludvigson, and Ng (2015) and Ludvigson, Ng, and Ma (2019). Foreign uncertainty is the GDP-weighted average of the country-specific measures for Canada, France, Germany, Italy, Japan, Switzerland, and the U.K. Shaded areas represent NBER recessions: 1973:11 to 1975:03, 1980:01 to 1980:07, 1981:07 to 1982:11, 1990:07 to 1991:03, 2001:03 to 2001:11, and 2007:12 to 2009:06.
+
+Accessible version
+
+The effects of foreign economic uncertainty
+
+To assess the effects of REU (both U.S. and foreign) on U.S. production, we estimate a relation between U.S. monthly IP and risk and uncertainty controlling for other factors that influence IP, including the state of the macroeconomy and financial conditions. Specifically, we estimate a monthly vector autoregression with twelve lags that includes a set of standard variables (in this order
+3
+): the VIX, foreign REU, U.S. REU, log S&P 500 prices, Fed fund rate, log U.S. employment, log U.S. CPI, log foreign IP, and log U.S. IP.
+4
+
+This estimation technique allows us to trace out the effect of increasing uncertainty on the U.S. economy over time (figure 2). Panel A shows that a rise in U.S. REU is followed by a decline in U.S. IP, all else equal. This result accords with other work in the literature using a variety of measures of U.S. uncertainty, such as Jurado, Ludvigson and Ng (2015) and Bloom et al (2018).
+
+The other panels of figure 2 show the effects of increasing foreign REU, the key focus of this note. We find that greater uncertainty about underlying foreign economic conditions (an increase in foreign REU) leads to greater uncertainty about the U.S economy (an increase in U.S. REU)--panel B. Moreover, analogous to our results for the United States, higher foreign REU leads to a significant decline in foreign IP (panel C), though abroad the drag from REU seems initially less strong but more sustained. Finally, an increase in foreign REU is associated with a decline in U.S. IP, all else equal (panel D). Although the effect of foreign uncertainty is smaller in magnitude to that of the U.S. uncertainty, it is statistically significant and economically meaningful. Holding all other variables, including U.S. REU, constant, a four-standard deviation increase in foreign REU, which is close to that observed after the collapse of Lehman Brothers, is followed by a 0.5 percent drop in U.S. IP after one year.
+5
+These results suggest that uncertainty about the real economy both at home and abroad amplified the decline in the U.S. economy during the global financial crisis.
+
+Figure 2: Impulse Responses
+
+Note: Impulse-response functions for a VAR(12). Order of variables in VAR: (VIX, Foreign REU, U.S. REU, Log S&P 500 prices, Fed Fund Rates, Log U.S. Employment, log U.S. CPI, log Foreign IP, log U.S. IP). Bootstrapped 68% Confidence Bands are included.
+
+Accessible version
+
+How does the effect of foreign real economic uncertainty compare to that of other uncertainty measures?
+
+To compare across uncertainty measures, we use two metrics common in the literature: the text-based measure of economic policy uncertainty (EPU) introduced in Baker, Bloom, and Davis (2016), which is an index of article counts containing words associated with uncertainty and economic conditions, and a financial market-based metric of global option-implied volatility, which is closely related to the VIX, and captures how much market participants are willing to pay to protect against outcomes that are far away from average expectations.
+6
+EPU is available for the United States and for a global aggregate.
+7
+The VIX, although calculated for U.S. equity prices, is almost perfectly correlated with implied volatility abroad and can, therefore, be considered a measure of global uncertainty.
+8
+In contrast to our REU, which captures objectively how difficult it is to predict economic activities, both EPU and VIX are more subjectively sentiment-based uncertainty measures.
+
+Figure 3 shows the time series for the global and U.S. EPU and for the VIX. These measures share some common spikes with REU (see Figure 1) but appear to be capturing different aspects of uncertainty. In particular, all uncertainty measures spiked around the global financial crisis. However, the EPU and the VIX are more volatile and moved up notably in 2018, especially the global EPU, reflecting concerns about the policy and growth environment abroad. In contrast, REU measures stayed subdued over the same period, suggesting that the underlying behavior of the economy was not that unusual.
+
+To assess the effects of other types of uncertainty, we use the VAR setup above but replacing foreign REU with either global EPU or the VIX. Overall, an increase in global uncertainty, proxied by either the global EPU or the VIX, is also followed by a significant decline in U.S. IP (left panel of Figure 4). However, the decline in U.S. IP is less pronounced and only marginally statistically significant for the two alternative measures.
+
+Figure 3: Alternative Measures of Uncertainty
+
+Note: The upper panel shows the Economic Policy Uncertainty Index normalized to mean 100 from Jan. 1985 to March 2019. Text-based from Baker, Bloom, and Davis (2015). Global EPU is average of EPU for 20 countries, including U.S. The bottom panel shows financial market-based uncertainty index (30-day S&P 500 option-implied volatility). Shaded areas represent NBER recessions: 1990:07 to 1991:03, 2001:03 to 2001:11, and 2007:12 to 2009:06.
+
+Accessible version
+
+We also assess the effect of all three uncertainty metrics on U.S. equity prices.
+9
+Irrespective of the metric used, an increase in global/foreign uncertainty is followed by a drop in U.S. equity prices (right panel of figure 4). However, the immediate effect of the VIX is much stronger than that of the other two measures; this result is not only in line with existing literature but also consistent with the stock market uncertainty captured by the VIX. An increase in foreign REU is also followed by a significant and sustained decrease in U.S. equity prices, which is, to the best of our knowledge, a new finding in the literature. Finally, the effect of the global EPU on U.S. equity prices is not statistically significant in medium and long horizons.
+
+Figure 4: Impact of Foreign Uncertainty
+
+Note: Results from VAR with following variable order (Foreign Uncertainty, U.S. Uncertainty, Log U.S. Employment, Log U.S. CPI, log Foreign IP, log U.S. IP). VAR is estimated using Cholesky Decomposition. Sample: 1985:01 to 2018:12. *, **, and *** denotes significance at the 10, 5, and 1% level for the maximum (negative) effect.
+
+Accessible version
+
+In sum, we construct a novel measure of foreign economic uncertainty and provide new empirical evidence that rising uncertainty about real economic performance abroad negatively affects the U.S. economy and U.S. stock prices. The drag from foreign economic uncertainty on U.S. industrial production is additional to that of domestic uncertainty and stronger than that of more sentiment-based global uncertainty measures, such as the VIX and the global EPU. An increase in foreign economic uncertainty is also followed by a significant drop in U.S. equity prices. Our work complements and augments earlier work on uncertainty, providing further evidence of the real economic and financial costs of uncertainty and its international transmission.
+
+Bibliography
+
+Baker, S. R., Bloom, N., and Davis, S. J. (2016), "Measuring Economic Policy Uncertainty," The Quarterly Journal of Economics 131 (4):1593-1636.
+
+Datta, D., Londono, J. M., Sun, B., Beltran, D., Ferreira, T., Iacoviello, M., Jahan-Parvar, M.R., Li, C., Rodriguez, M., and Rogers, J. (2017), "Taxonomy of Global Risk, Uncertainty, and Volatility Measures," International Finance Discussion Papers 1216. Board of Governors of the Federal Reserve System.
+
+Bloom, N., Floetotto, M., Jaimovich, N., Saporta-Eksten, I., Terry, S. (2018), "Really Uncertain Business Cycles," Econometrica 86(3): 1031-1065.
+
+Jurado, K., Ludvigson, S., and Ng, S. (2015), "Measuring Uncertainty," American Economic Review (105-3):1177-1216.
+
+Londono, J. M. (2015), "The Variance Risk Premium around the World," Working paper, Federal Reserve Board.
+
+Londono, J. M. and Wilson, B. A (2018). "Understanding Global Volatility," IFDP Notes. Board of Governors of the Federal Reserve System, January 2018.
+
+Ludvigson, S., Ma, S., and Ng, S. (2019), "Uncertainty and Business Cycles: Exogenous Impulse or Endogenous Response?," American Economic Journal: Macroeconomics, Forthcoming.
+
+*
+Juan M. Londono (
+[email protected]
+) is a Senior Economic Project Manager, Sai Ma (
+[email protected]
+) is an Economist in the International Financial Stability Section, and Beth Anne Wilson (
+[email protected]
+) is a Deputy Director in the Division of International Finance, Board of Governors of the Federal Reserve System, Washington, D.C. 20551 U.S.A. We thank Mandy Bowers for excellent research assistance, and Shaghil Ahmed, Dario Caldera, Matteo Iacoviello, and Andrea Raffo for their comments. The views in this paper are solely the responsibility of the authors and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of any other person associated with the Federal Reserve System.
+Return to text
+
+1.
+The list of real variables for each country is available upon request. The potential predictor set used to construct uncertainty includes all real variables plus 230 global financial variables. Real variables for each country are obtained from OECD's main economic indicators (MEI).
+Return to text
+
+2.
+More technically, for each country, REU is the average of the volatility of the forecasting errors of a set of real macroeconomic variables conditional on all available information. To capture "all available information", we use principal component analysis to form factors capturing shared movements in a large set of initial potential predictors. For forecasting each
+
+real economic variable, only those factors with significant incremental predictive power are included. In a second step, we use the relevant factors to predict each of the real economic variables and calculate the forecast errors as the difference between the actual and predicted values. The forecasting errors are permitted to exhibit time-varying volatility, which generates time-varying uncertainty for each real variable.
+Return to text
+
+3.
+The order refers to the recursive contemporaneous causal ordering assumed to identify the shocks. Specifically, a particular variable in the ordering is assumed to be able to contemporaneously affect variables that come after it, but can affect the variables that come before it only with a lag.
+Return to text
+
+4.
+Foreign IP is calculated as an index from the GDP-weighted average of the log IP growth of all non-U.S. countries in our sample. Our main results for the significant effects of foreign uncertainty on the U.S. economy are robust to alternative variable orderings and to adding or removing variables to and from the VAR.
+Return to text
+
+5.
+For comparison, a four-standard deviation increase in U.S. REU is followed by a 0.8 percent drop in U.S. IP after one year, which is comparable to the results in the existing literature.
+Return to text
+
+6.
+We use what is known in the literature as "the old" VIX or VXO, which is available for a much longer sample than "the new" VIX. The correlation between these two metrics for a sample starting in 1990 is above 0.98. See
+https://www.cboe.com/products/vix-index-volatility/volatility-on-stock-indexes/cboe-s-p-100-volatility-index-vxo
+.
+Return to text
+
+7.
+The global EPU is a GDP-weighted average of national EPU indices for 20 countries including US.
+Return to text
+
+8.
+See, for instance, Londono and Wilson (2018) and Londono (2016).
+Return to text
+
+9.
+There is a body of existing evidence suggesting that the EPU and VIX are useful predictors of equity prices. See Datta et al. (2017) for a summary of the literature on uncertainty measures.
+Return to text
+
+Please cite this note as:
+
+Londono, Juan M., Sai Ma, and Beth Anne Wilson (2019). "Quantifying the Impact of Foreign Economic Uncertainty on the U.S. Economy," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 8, 2019, https://doi.org/10.17016/2380-7172.2463.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

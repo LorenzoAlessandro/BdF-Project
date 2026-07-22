@@ -1,0 +1,157 @@
+FEDS Notes
+
+Twitter
+
+October 02, 2023
+
+Measuring U.S. Cross-Border Securities Flows: New Data and A Guide for Researchers
+
+Carol Bertaut and
+Ruth Judson
+â
+
+Introduction
+
+Understanding the effects of capital flows across countries depends critically on accurate and comprehensive data. For the U.S., data on cross-border securities holdings and transactions are collected through the TIC (Treasury International Capital) data system. As we have previously noted, it has long been difficult to reconcile the TIC data on securities holdings with the TIC S transactions data (see Bertaut and Tryon (2007) and Bertaut and Judson (2014, 2022)). Indeed, for several years, the most reliable portfolio securities flow data used internally at the Federal Reserve and in the official U.S. balance of payments data have been based on estimates calculated from reported holdings data. In that approach, we estimated transactions based on changes in reported positions after backing out estimates of valuation change and accounting for other changesâthat is, without any use of the collected transaction data (
+Bertaut and Judson (2022)
+. Happily, a recent change to the TIC monthly securities data collection process should eliminate the need for such an estimated approach. In the new approach, the TIC SLT has been expanded to collect transactions data from the same reporters as holdings data. In addition, the form now collects valuation change from reporters and instructs reporters to assign transactions to the residence of the ultimate buyer or seller of the securities rather than the residence of the entity executing the transaction, as was the case on the TIC S form. This note reports on the first several months of data collected on the new "expanded" TIC SLT, which began in late 2022, after the publication of Bertaut and Judson (2022).
+
+Section 1 describes the changes to the TIC SLT form. Section 2 reviews the new SLT transactions data relative to the discontinued TIC S transactions data. We show that, as we had hoped and expected, the "transactions bias" present in the old TIC S system has been diminished. Section 3 then compares recent SLT transaction data with our previous "estimated transactions" approach. Section 4 reports briefly on recent data on valuation change; these series are being collected for the first time and have not yet been released. Section 5 provides our suggested guidance for assembling a consistent time series across these different data collections and lays out our current plans for future releases of our estimated transactions.
+
+I. The TIC Data Collection System and the New SLT
+
+The original SLT collected monthly data on cross-border positions in long-term securities at market value by country of holder for U.S. liabilities to foreigners and by country of issuer for U.S. claims on foreigners. Given the long-standing difficulties in reconciling changes in holdings with measured transactions, the Treasury, Federal Reserve Board, Federal Reserve Bank of New York, and the Bureau of Economic Analysis collaborated to develop an "expanded" SLT form that would integrate transaction and holding reporting and would collect valuation change information directly from reporters.
+1
+This expanded SLT form began data collection in November 2022. Because this new form subsumed TIC S transaction reporting, the TIC S became redundant and was discontinued after an "overlap" period of three months (November 2022 through January 2023).
+2
+
+The expanded SLT form was designed with three major purposes in mind. First, the form collects positions, transactions, and valuation data on the same basis from the same reporting panel, which should allow for much easier reconciliation of changes in position and transactions and should reduce or eliminate the transactions bias that was inherent in the TIC S data.
+3
+Second, to reduce reporter burden, the original SLT's separate "A" and "B" forms for custodians and issuers and end investors have been combined.
+4
+Third, the new SLT data on valuation change allows for a more complete picture of the factors contributing to changes in holdings.
+
+In the new form, each security type has columns for positions, gross purchases and sales, and valuation change. Note that since the original SLT collected data on foreign sovereign and corporate bonds separately, transactions data are now also collected with this breakdown. The new form's sign conventions have also been altered so that purchases and sales are reported from the perspective of the cross-border investor. The full form can be found at
+Treasury: New TIC SLT form (PDF)
+.
+
+Importantly, the new TIC SLT form does not require that changes in holdings equal net transactions and valuation change. As in the calculation of estimated transactions described above, changes in position can also occur due to "other changes" such as custody shifts among custodians or outside the TIC reporting universe, stock swaps, and other events.
+5
+Part of the editing and data review conducted by the Federal Reserve Bank of New York and Federal Reserve Board is reviewing "other changes" implied by the difference between change in position and the sum of net transactions and valuation change. In the case of large gaps, reporters are consulted, and in some cases, a series break entry is created for holdings.
+
+II. TIC SLT Transactions Data Relative to Discontinued TIC S Data
+
+Figure 1 compares the country distribution of gross transactions (the sum of purchases and sales) for Treasuries and Agencies as reported on the legacy TIC S for the year 2022 (the last full year for which S data are available) with the country distribution of transactions as reported on the SLT for the first months available (February through June 2023), and also with the country distribution of TIC SLT holdings as of end-December 2022.
+
+Figure 1. Geographical Distributions of TIC S Transactions and SLT Transactions and Holdings for U.S. Government Securities
+
+Note: Transactions data are gross (purchases + sales). S transaction data are for 2022. SLT transaction data are for February to June 2023. SLT position data are for December 2022. Key identifies series in order from bottom to top.
+
+Accessible version
+
+Because the TIC S transactions were recorded against the first cross-border counterparty, they demonstrate the well-known "transactions bias" in the TIC S data. For the year 2022, 85 percent of all transactions in Treasuries were recorded against the U.K., other Europe, and the Caribbean (Figure 1, left panel, left column). Excluding the custody/fund centers of Belgium, Luxembourg, and Ireland, these locations accounted for only about a fourth of Treasuries held by foreign investors at year-end 2022 (left panel, middle column). Relatively few TIC S transactions were recorded against Asia, despite the sizable holdings of Treasuries by Asian clients. In contrast, gross trading in Treasuries on the new SLT (left panel, right column) show a noticeably smaller share of transactions with the U.K. and other Europe and larger shares of transactions recorded with Asia.
+
+The TIC SLT transactions continue to show a sizable portion of transactions with the Caribbean (primarily the Cayman Islands) relative to the quantity of Treasuries held in the Caribbean. One explanation for the continued sizable gross trading with the Caribbean is that these transactions primarily reflect behavior of hedge funds and other managed funds in the Caribbean who are active traders in Treasuries, rather than buy and hold investors. However, it is also possible that some custodian reporters have difficulty distinguishing reportable purchases or sales by their clients from movements associated with repurchase agreements and securities lending. Such activity is likely to be especially pronounced for clients in the Caribbean and is an ongoing area of analysis and investigation.
+
+Figure 2 shows a similar better alignment between the country distribution of holdings and transactions in corporate bonds and equity as collected by the new SLT, although here too transactions in equity remain sizable for the Caribbean, again likely reflecting activity of funds incorporated in the region.
+
+Figure 2. Geographical Distributions of TIC S Transactions and SLT Transactions and Holdings for U.S. Corporate Securities
+
+Note: Transactions data are gross (purchases + sales). S transaction data are for 2022. SLT transaction data are for February to June 2023. SLT position data are for December 2022. Key identifies series in order from bottom to top.
+
+Accessible version
+
+The better alignment between holdings and transactions is especially relevant for U.S. transactions in foreign securities, Figure 3. On the TIC S, transactions in foreign securities were recorded against the cross-border counterparty, regardless of the country of issuer of the security. Thus, transactions in foreign securities recorded against the United Kingdom, for example, could reflect purchases or sales of any type of foreign security, not necessarily U.K. bonds or equity.
+
+Figure 3. Geographical Distributions of TIC S Transactions and SLT Transactions and Holdings for Foreign Securities
+
+Note: Transactions data are gross (purchases + sales). S transaction data are for 2022. SLT transaction data are for February to June 2023. SLT position data are for December 2022. Key identifies series in order from bottom to top.
+
+Accessible version
+
+For the year 2022, 70 percent of gross transactions in foreign securities on the TIC S were recorded against the Caribbean financial centers, primarily reflecting purchases and sales of foreign bonds with entities in the Cayman Islands. Indeed, gross transactions in all foreign bonds amounted to more than $3 trillion per month, and in some months were nearly as large as transactions in U.S. Treasuries. By contrast, SLT holdings data indicate that at year-end 2022, U.S. investors held less than $800 billion in bonds issued from Caribbean financial centers. This outsized ratio of transactions to holdings had raised some questions, but because the transactions data were collected independently of the holdings data, it was difficult to verify what trading activity was being reported and whether reporting was accurate.
+
+The TIC SLT transactions specifically require respondents to report purchases and sales of foreign securities against the country of issuer, and as a result show a markedly different pattern across countries. Purchases and sales of foreign securities against the Caribbean are noticeably smaller, and much larger shares are recorded against other Europe, Asia, and all other countries (primarily Canada, Australia, and Latin America) â aligning much more closely with the geographic distribution of U.S. investor holdings. Overall, the magnitude of gross transactions in foreign bonds is also now substantially smaller at less than $700 billion per month.
+
+III. New TIC SLT Transactions Compared to Earlier Transaction Estimates
+
+As discussed in Bertaut and Judson (2022), the transactions bias inherent in the TIC S could not reconcile changes in positions in the original SLT, and as a result we developed a method of estimating transactions calculated from the change in SLT position, estimated valuation change, and known "other changes", or series breaks. Based on the first few months of the new SLT transactions data, our methodology produced estimates that were not far off, especially for U.S. government securities, which are a primary policy focus. In particular, for both official and private Treasuries, shown in the left-hand sets of bars in Figure 4, measured transactions, the blue bars, are aligning well with the estimates calculated using our position-based method.
+6
+The new SLT data for net transactions in agencies likewise track our estimates for both official and private investors.
+7
+SLT transactions in corporate bonds are also reasonably close to our estimates.
+
+Figure 4. Estimated and Reported Net U.S. Cross-Border Securities Purchases by Security Type, Feb. - June 2023
+
+Accessible version
+
+In contrast, there is a noticeable discrepancy between reported and estimated transactions in equity. For equity, the Bertaut-Judson approach appears to over-estimate the contribution of valuation to the change in equity holdings, especially when monthly swings in equity prices are pronounced. For the period February through June 2023, our valuation change estimate for U.S. stocks held by foreign investors, based on the U.S. MSCI index, is more than $1.1 trillion. This estimate of valuation gain was larger than the total change in SLT holdings of U.S. equity over this period ($970 billion), and thus our estimated methodology indicates foreign net sales of equity of about $175 billion. In contrast, the new SLT reported foreign net purchases of $133 billion. In particular, we may over-estimate the contribution from valuation change in locations where fund shares are a particularly important form of equity held, such as the Cayman Islands. The estimated transactions methodology applies the MSCI U.S. index to all holdings of U.S. equity. This common-stock index may not properly measure valuation changes for shares of hedge funds and other types of managed funds.
+
+Similarly, for foreign securities (the right set of bars) we also see a much larger gap between reported and estimated transactions in foreign equity than for foreign bonds. On a geographic basis (Figure 5), we see that these differences are most pronounced in the Caribbean. For both U.S. and foreign securities, regional discrepancies are primarily driven by discrepancies in equity transactions.
+
+Figure 5. SLT-Reported and Estimated Net U.S. Cross-Border Securities Purchases by Region, Feb. - June 2023
+
+Accessible version
+
+IV. Valuation change: A preview
+
+The new SLT form collects valuation change data directly but as these data elements are new they are still undergoing review; it is anticipated that they will be added to the monthly data publication early in 2024. For now, we can report that that the comparisons of collected valuation change data with our estimates are generally encouraging, with the largest discrepancies aligning with the asset classes and locations that are showing the largest transaction discrepancies. Differences are generally larger for more volatile assets (for example, equities) and for countries known to be offshore funding or trading centers. Figure 6 displays mean absolute errors by security type, across all countries and the five months of data we have in hand. Not surprisingly, mean absolute errors are smaller for securities with less valuation change overall, such as Treasuries, and larger for equities.
+
+Figure 6. Mean Absolute Errors for Valuation Change
+
+Accessible version
+
+V. Advice for researchers
+
+Our advice for researchers seeking a consistent time series of monthly holdings data remains the same as in Bertaut and Judson (2022): we recommend use of Bertaut-Tryon estimated positions through 2011 and SLT reported positions thereafter. For transactions, we recommend that researchers use the Bertaut-Judson (2022) transactions through January 2023 and the (new) SLT reported transactions thereafter. In the short run, researchers might choose to use the Bertaut-Judson (2022) estimated transactions, and thus we plan to continue updating this dataset monthly through 2023, and thereafter at least until the SLT valuation change data are released regularly, likely in early 2024. Thereafter, we will likely continue the estimates for an additional year and end their production sometime early in 2025. At that point, we expect to be able to make a recommendation about how researchers can best combine the estimated and measured transactions series.
+
+References
+
+Bertaut, Carol C., Beau Bressler, and Stephanie Curcuru (2019). "Globalization and the Geography of Capital Flows," Federal Reserve Board: FEDS Note, October 2019.
+https://www.federalreserve.gov/econres/notes/feds-notes/globalization-and-the-geography-of-capital-flows-20190906.html
+
+Bertaut, Carol, and Ruth Judson (2014), "Estimating U.S. Cross-Border Securities Positions: New Data and New Methods," Federal Reserve Board: International Finance Discussion Papers, August 2014.
+https://www.federalreserve.gov/econres/ifdp/estimating-us-cross-border-securities-positions-new-data-and-new-methods.htm
+
+Bertaut, Carol, and Ruth Judson (2022), "Estimating U.S. Cross-Border Securities Flows: Ten Years of the TIC SLT," Federal Reserve Board: FEDS Note, February 2022.
+https://www.federalreserve.gov/econres/notes/feds-notes/estimating-u-s-cross-border-securities-flows-ten-years-of-the-tic-slt-20220218.html
+
+Bertaut, Carol C., and Ralph Tryon (2007), "Monthly Estimates of U.S. Cross-Border Securities Positions," Federal Reserve Board: International Finance Discussion Papers 2007-910.
+https://www.federalreserve.gov/pubs/ifdp/2007/910/default.htm
+
+â  Authors can be reached at
+[email protected]
+and
+[email protected]
+. We would like to thank Laura DeMane, Illiyuna Islam, Nyssa Kim, Emily Liu, Andrew Loucky, Andrew H. McCallum, Anna Rowbatham, Ben Stagoff-Belfort, Maddie Yi, and Jialin Zhang for their diligent and careful work in preparing these data for publication. The views expressed are those of the authors and do not necessarily reflect those of the Federal Reserve Board and Federal Reserve System.
+Return to text
+
+1. The new form was announced in the
+Federal Register (PDF)
+.
+Return to text
+
+2. Transactions data published by the Treasury used TIC S data through January 2023 and then shifted to using new TIC SLT data for the end-February 2023 as-of date.
+Return to text
+
+3. As with the TIC annual surveys and the original SLT, however, the new SLT cannot address custodial bias (the reported holdings by non-resident clients in major custodial centers such as Belgium and Switzerland) or the distortions posed by incorporation in financial centers (see Bertaut, Bressler, and Curcuru (2019)).
+Return to text
+
+4. This change was made because nearly every reporter has reporting heavily concentrated in either custodial holdings or issuer/end-investor holdings, and it is possible to make this distinction based on annual SHL/SHL survey responses.
+Return to text
+
+5. TIC can only collect from reporters with a U.S. presence, and some investors can and do hold securities either directly or with custodians that have no U.S. subcustodial relationship.
+Return to text
+
+6. By contrast, as we noted in Bertaut and Judson (2022), S transactions for FOI Treasuries were significantly biased downward because of the S form's treatment of maturities.
+Return to text
+
+7. The SLT collection also has the advantage that it includes ABS repayments in transactions. This adjustment to data collection has two important advantages. First, users who previously relied on the TIC S for transactions no longer need to adjust the S data for ABS repayments when analyzing aggregate transactions. Second, when analyzing country-level transactions, the SLT transactions data now include ABS transactions at the country level, so users do not need to guess or estimate the country distribution of ABS repayments.
+Return to text
+
+Please cite this note as:
+
+Bertaut, Carol, and Ruth Judson (2023). "Measuring U.S. Cross-Border Securities Flows: New Data and A Guide for Researchers," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 02, 2023, https://doi.org/10.17016/2380-7172.3392.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

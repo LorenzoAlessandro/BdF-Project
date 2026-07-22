@@ -1,0 +1,571 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 08, 2026
+
+Measuring Renters in Credit Data: Evidence from Linked Survey and Administrative Data
+
+Anna Tranfaglia
+ and 
+Erin Troland
+
+Summary: Using linked survey and administrative data, we find considerable mismeasurement when researchers use traditional credit bureau data measures to classify and analyze renter households, leading to substantial mismeasurement of financial well-being outcomes. We provide practical alternative options and guidance for researchers based on information commonly found in traditional credit data that have lower mismeasurement rates.
+
+1. Motivation
+
+Historic swings in rents during the pandemic have driven increased interest in research on the financial impacts of rising rents on households. However, compared to homeowners with a mortgage, data on renters are scarce, limiting researchers' ability to analyze the 28 percent of adults who rent their home.
+1
+ Traditional credit bureau datasets, which can be used to measure household financial conditions, are attractive because they are large, timely, and some track individuals over time. However, credit bureau data do not include systematic information on housing tenure.
+2
+ Therefore, studying renters in these data requires researchers to rely on proxy measures. Typically, if an individual has a mortgage, they are counted as a homeowner. If they do not have a mortgage (or have not had one during the data sample), they are counted as a renter (Sommer, Adams, Barnes, and Bopst (2025), Bhutta (2023), Ding L., Hwang, J., and Divringi, E. (2016), Brown, Stein, and Zafar (2015)). These authors acknowledge that proxy measures have limitations, and in this paper, we are the first to explore these limitations using credit bureau data that is linked with survey data on housing tenure.
+
+The no mortgage proxy definition based on the credit data misclassifies as renters the 23 percent of adults who own their home free and clear (i.e. without a mortgage). Moreover, compared to the typical renter, homeowners who own free and clear are much better off, leading to mismeasuring and likely understating the impacts of rising rents on renter households.
+
+This paper is the first to examine the implications of research using traditional credit data to classify renters and provide practical suggestions for which types of research are best suited for those wishing to use traditional credit data to study renters. Timely microdata on renters could help researchers understand how increases in rents are affecting households across the credit score distribution, and what types of households are benefiting from increased rental housing construction in their area.
+
+2. Data and Methodology
+
+We use a unique data source linking nationally representative survey data with credit bureau information from Experian to determine (i) how much mismeasurement comes from using credit data to measure renters, (ii) the impacts of this mismeasurement on analyzing renter financial well-being, and (iii) alternative proxies for renters using information contained in traditional credit record files, such as age and credit score.
+
+2.1. SHED-Experian data merge
+
+The Survey of Household Economics and Decisionmaking (SHED) is a nationally representative survey of over 12,000 U.S. adults conducted by the Federal Reserve Board each fall.
+3
+ The survey questions cover a range of topics including overall financial well-being, ability to handle emergency expenses, and credit use. In recent years, the survey asked respondents for consent to anonymously link their credit records to their survey data. In 2024, 64 percent of respondents agreed to the credit merge. The resulting credit-merge sample includes roughly 6,900 observations containing consenting respondents' answers to the SHED, along with a snapshot of their credit history from September 2024.
+
+The full SHED sample and the credit-merge sample look similar across demographic and financial characteristics, though we expect some differences because about 10 percent of the population doesn't have a credit record (Brevoort, Grimm, and Kambara 2015). For example, the housing tenure distribution is nearly identical across the two samples. That said, median credit scores
+4
+ in the credit-merge sample) are higher than those observed among records in the credit bureau data alone.
+5
+ As discussed by Larrimore et al (2025), one reason for this difference may be that the credit-merge sample represents actual people, whereas the full set of credit bureau records includes record fragments that typically have low corresponding credit scores (or no credit scores). Another is that the SHED sample only includes non-institutionalized adults currently residing in the U.S. in non-group quarters, whereas the credit bureau records include institutionalized individuals and adults living in dorms and/or military bases.
+
+2.2. Classifying and Analyzing Credit Data Proxies for Renters
+
+Using the SHED-Experian merge, we construct various measures to proxy for renters in traditional credit data (Sommer, Adams, Barnes, and Bopst (2025), Bhutta (2023), Ding L., Hwang, J., and Divringi, E. (2016), Brown, Stein, and Zafar (2015)). As a baseline proxy measure, we first classify as renters any people who do not have a mortgage in their credit report in the previous 7 years (2016-2023). We then compare them to people in households who report paying rent in the survey data.
+6
+ We define renters measured using proxies in the credit data as "proxy renters," which includes both those who report being renters in the survey data 
+and
+ those who do not. We define renters those measured using the survey data as "survey self-reported renters." Finally, we take this baseline population of proxy renters with no mortgage in the credit data and add additional characteristics available in the credit data such as age to identify certain subpopulations that are more suitable for studying renters than others.
+
+3. Results
+
+3.1. Renter Misclassification - Magnitudes
+
+While researchers proxying for renters using traditional credit data can successfully classify a large share of renters, there is considerable mismeasurement largely in the form of false positives. Table 1 shows that only 42 percent of those classified as renters based on the credit data report paying rent in the survey data. Among proxy renters in the credit data, 32 percent are misclassified as renters because they are homeowners who own their home free and clear. An additional 16 percent report owning their home with a mortgage and 11 percent neither own nor pay rent.
+7
+ The 16 percent who report owning their home with a mortgage are misclassified as renters for a number of reasons, including living with a spouse or partner but having only one person's name on the mortgage.
+8
+
+Table 1. Classification of Renters in Survey vs. Administrative Credit Data
+
+Survey renter (SHED)
+
+Proxy Renter (No Mortgage)
+
+Proxy Non-Renter (Has Mortgage)
+
+Pay rent
+
+42.1
+
+1.8
+
+Own home free and clear
+
+31.9
+
+8.7
+
+Other cases:
+
+Own home with a mortgage
+
+15.6
+
+89.1
+
+Neither own nor pay rent
+
+10.5
+
+0.4
+
+Note: Authors' calculations using the 2024 SHED credit-merge sample. No mortgage refers to households with no mortgage trade in the past 7 years.
+
+Renter misclassification by researchers using proxy measures then leads to substantial underestimation of renter financial distress, as proxy renters have much better outcomes, on average, compared to survey self-reported renters. Table 2 shows differences in standard measures of financial well-being in the credit data between self-reported survey renters and proxy renters. Survey renters were much more likely to have a delinquency on a credit account (41 percent) than proxy renters in the credit data (28 percent). Renters in the survey data were also much more likely to have high credit card utilization: 26 percent used more than 75 percent of their available credit limit at the time of the survey versus 17 percent of credit data renters.
+9
+ Credit scores were also lower for survey renters, who were much more likely to have scores below 620 than proxy renters without a mortgage in the credit data. Finally, survey renters applied for credit nearly 20 percent more often than those without a mortgage (0.88 versus 0.74 inquiries in the past year), which can reduce credit scores.
+
+Table 2. Credit characteristics by renter definition type
+
+Credit Characteristics
+
+Renter definition type
+
+Survey renter
+
+Proxy renter
+
+Delinquency (any account), percent
+
+40.7
+
+27.6
+
+Credit card utilization, percent
+
+Less than 10%
+
+37.9
+
+51.0
+
+10â25%
+
+14.9
+
+16.0
+
+25â50%
+
+11.6
+
+9.6
+
+50â75%
+
+9.2
+
+6.9
+
+75â100%
+
+26.4
+
+16.5
+
+Credit score, percent
+
+< 620
+
+34.2
+
+23.3
+
+620 - 659
+
+9.9
+
+8.0
+
+660 - 719
+
+14.9
+
+12.8
+
+> 720
+
+41.1
+
+56.0
+
+Total inquiries in past 12 months, count
+
+0.88
+
+0.74
+
+Note: Authors' calculations using the 2024 SHED credit-merge sample. No mortgage refers to households with no mortgage trade in the past 7 years.
+
+We find similar discrepancies between survey renters and proxy renters when looking at survey data on household financial stability. Table 3 shows that 55 percent of survey renters report doing at least okay financially versus 68 percent of proxy renters.
+10
+ Survey renters are also less likely to be able to cover emergency expenses greater than $100, pay bills in full last month, or go without medical care due to cost.
+
+Table 3: Financial Well-being by renter definition type
+
+Financial Well-Being
+
+Survey renter
+
+Proxy renter
+
+Doing okay or living comfortably
+
+55.0
+
+68.3
+
+Largest emergency expense you can cover
+
+Under $100
+
+33.3
+
+23.1
+
+$100 - $499
+
+19.2
+
+14.1
+
+$500 - $999
+
+10.5
+
+9.9
+
+$1,000 - $1,999
+
+6.8
+
+8.2
+
+$2,000 or more
+
+30.2
+
+44.7
+
+Paid bills in full last month
+
+75.1
+
+81.2
+
+Went without medical care due to cost
+
+42.7
+
+33.2
+
+Note: Authors' calculations using the 2024 SHED credit-merge sample.
+
+3.2. Options for Researchers â Alterative proxies that better capture renters
+
+We now use additional information available in traditional credit data to help identify alternate proxies for renters that are more suitable for study in credit data than others. However, as estimates of renters improve on some dimensions (true positives increase), estimates of homeowners worsen (false negatives increase).
+
+Renters are typically younger, more mobile, and tend to have lower credit scores compared to homeowners (Dobre, Rush, & Wilson, 2021). In traditional credit data, researchers can often observe age, credit score, and whether the consumer moved census tracts recently. We construct three additional proxies based on these specific factors to improve classification of those who own their homes free and clear, reducing false positives. Next, we calculate the full confusion matrix (true positives, false positives, true negatives, and false negatives) for each alternative proxy. Then, we examine financial well-being characteristics of these proxy subpopulations to see if they are closer approximations to renters overall. Finally, we show what percentage of all renters are represented by each proxy subpopulation (e.g. renters have higher mobility rates than homeowners, meaning the proxy might be a tighter estimate ruling out more homeowners, but less than 30 percent of renters said they moved in the past 2 years, meaning that the proxy may be less representative of renters overall).
+
+We examine three alternative renter proxies compared to the baseline proxy of no mortgage. These alternate proxies maintain the baseline proxy condition of no mortgage but attempt to better screen out homeowners who do not have a mortgage.
+
+Overall, as the proxy criteria capture a narrower set of renters, the true positive rate increases. However, this improvement comes at the cost of a higher false negative rate and a lower percentage of renters represented by the proxy. Therefore, researchers looking to compare renters and homeowners using standard credit data variables should exercise caution as the false negative rate increases. Researchers interested in studying just renters may find the narrower proxies more useful, however they should still be mindful of the renter subgroup's representativeness to all renters. Moreover, classification criteria may be correlated with outcomes of interest. For example, if conditioning on low credit score, credit outcomes will tend to be worse in the proxy renter group compared to renters overall, as many renters have high credit scores.
+
+Table 4 presents results for these other proxies. Below, we provide details on each proxy and its usefulness for researchers interested in using measures found in traditional credit bureau data to study renters.
+
+Table 4: Alternate proxies for renters
+
+ 
+
+ 
+
+Renter household financial outcomes
+
+True positives
+
+False positives
+
+True negatives
+
+False negatives
+
+% of survey renters in group
+
+Delinquency (%)
+
+Inquiries (count)
+
+Well-Being (%)
+
+All survey renters
+
+ 
+
+ 
+
+ 
+
+ 
+
+100
+
+41
+
+0.9
+
+55
+
+Proxy renters
+
+1. No mortgage (baseline)
+
+42
+
+58
+
+98
+
+2
+
+98
+
+28
+
+0.7
+
+68
+
+2. No mortgage, age < 50
+
+56
+
+44
+
+87
+
+13
+
+69
+
+35
+
+0.8
+
+60
+
+3. No mortgage, low credit score
+
+60
+
+40
+
+81
+
+19
+
+43
+
+73
+
+1.3
+
+39
+
+4. No mortgage, moved
+
+69
+
+31
+
+78
+
+22
+
+28
+
+35
+
+1.1
+
+63
+
+Combined criteria
+
+No mortgage, < 50, low credit score
+
+61
+
+39
+
+78
+
+22
+
+30
+
+72
+
+1.3
+
+39
+
+No mortgage, moved, low credit score
+
+72
+
+28
+
+75
+
+25
+
+12
+
+75
+
+1.6
+
+38
+
+Note: Authors' calculations using the 2024 SHED credit-merge sample.
+
+(1) Adults without a mortgage
+
+Not a reasonable proxy for renters
+	
+
+High false positive rate
+
+Household financial outcomes for proxy renters are substantially better than for renters overall
+
+(2) Adults without a mortgage under age 50
+11
+
+Most reasonable proxy for renters overall among those analyzed, balancing more similar household financial outcomes to all survey renters and a higher true positive rate than (1), while capturing a sizeable share of all renters compared to (2) and (3)
+
+Adults with no mortgage under age 50 represent nearly 70 percent of all renters
+
+Household finance outcomes are fairly similar to survey renters overall
+
+Researchers should caveat that this renter proxy still includes nearly 45 percent false positives, meaning that slightly under half of proxy renters actually own their home
+
+(3) Adults without a mortgage who have a low credit score (<660)
+
+Reasonable proxy for lower credit score renters
+
+Not a reasonable proxy for all renters
+	
+
+Household financial outcomes are substantially worse than renters overall
+
+Proxy renters are less than 50 percent of all renters
+
+High false negative rate due to higher credit score renters classified as homeowners
+
+Not a reasonable proxy for homeowners, do not use to compare renters and owners
+	
+
+High false negative rate due to renters classified as homeowners
+
+(4) Adults without a mortgage who moved in the past two years
+12
+
+Reasonable proxy for high mobility renters
+
+Not a reasonable proxy for all renters
+	
+
+Proxy renters are less than 30 percent of all renters
+
+High false negative rate
+
+Small sample â adults without a mortgage who move is around 10 percent of the full survey sample
+
+Finally, we note that adding low credit score in addition to the other alternate proxies does little to improve the true positive rate (Table 4, Combined criteria). True positive rates only marginally improve, offset by marginal increases in false negative rates.
+13
+
+Conclusion
+
+The inability for researchers to properly identify renters in traditional credit data leads to artificially inflated credit statistics largely due to the inclusion of those who own their home free and clear. The renter population has higher delinquency rates, credit seeking rates, and lower credit scores when self-identified in the survey data. Credit bureau data, by design, lacks most demographic information. Researchers should exercise caution when using proxies for classifying demographic groups, including renters.
+
+However, if credit data include other information such as age, credit score, and location, researchers can use these additional factors to construct better proxies. The most reasonable proxy for all renters (not those in subpopulations) among those analyzed is those with a mortgage under age 50, because it balances more similar household financial outcomes to all survey renters and a higher true positive rate than (1), while capturing a sizeable share of all renters compared to (2) and (3). However this proxy still misclassifies nearly 45 percent of renters when they are either homeowners or do not pay cash rent.
+
+References
+
+Bhutta, Neil (2023). Are Rising Rents Raising Consumer Debt and Delinquency? Federal Reserve Bank of Philadelphia Consumer Finance Institute Research Brief.
+
+Brevoort, K., Grimm, P., & Kambara, M. (2015). Data Point: Credit Invisibles. Consumer Financial Protection Bureau Office of Research.
+
+Brown, M., Stein, S., & Zafar, B. (2015). The impact of housing markets on consumer debt: Credit report evidence from 1999 to 2012. 
+Journal of money, credit and Banking
+, 
+47
+(S1), 175-213.
+
+Brown, M., and Campbell, S. (2013). Young Student Loan Borrowers Retreat from Housing and Auto Markets. Liberty Street Economics.
+
+Cooper, D., Luengo-Prado, M, & Parker, J. (2020). The Local Aggregate Effect of Minimum Wage. 
+Journal of Money, Credit and Banking.
+
+Ding L., Hwang, J., & Divringi, E. (2016). Gentrification and residential mobility in Philadelphia,
+
+Regional Science and Urban Economics, 61, 38-51.
+
+Dobre, A., Rush, M., & Wilson, Eric (2021). Financial conditions for renters before and during the COVID-19 pandemic. CFPB Office of Research, Research Brief No. 2021-9.
+
+Mezza, A., Ringo, D., Sherlund, S., & Sommer, K. (2020). Student loans and homeownership. 
+Journal of Labor Economics
+, 
+38
+(1), 215-260.
+
+Mezza, A., Sommer, K ., & Sherlund, S. (2014). "
+Student Loans and Homeownership Trends
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System.
+
+Nicola, L. (2025). "What is a Credit Utilization Rate?" Ask Experian Blog. https://www.experian.com/blogs/ask-experian/credit-education/score-basics/credit-utilization-rate/
+
+Sommer, Kamila, Robert Adams, Connor Bopst, and Cord Barnes (2025). "
+A Note on Recent Dynamics of Consumer Delinquency Rates
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 24, 2025.
+
+Disclosure statement: The authors declare that they have no relevant or material financial interest that relate to the research described in this paper. The data agreement for the data used in this paper requires a review of the findings prior to their public release. The views expressed here are those of the authors and not those of the Federal Reserve Board.
+
+1. Federal Reserve Board. (2025). 
+Economic Well-being of U.S. Households in 2024
+.
+ Board of Governors of the Federal Reserve System. 
+Return to text
+
+2. Some rental payment data may be available in certain credit bureau data. However, since rent reporting isn't universal, the lack of rent reporting data alone does not allow a researcher to infer housing tenure status. 
+Return to text
+
+3. Board of Governors of the Federal Reserve System, 
+Survey of Household Economics and Decisionmaking
+ [dataset] (Washington: Board of Governors, 2025). 
+Return to text
+
+4. Unless otherwise noted, credit score is VantageScore 4.0 throughout this paper. 
+Return to text
+
+5. Staff calculations using New York Fed Consumer Credit Panel/Equifax data. Median credit score in the credit-merge sample is 735 compared to 700 in the credit bureau data. 
+Return to text
+
+6. The share of renter households in the SHED is similar to the American Community Survey (ACS). 
+Return to text
+
+7. This group reflects a range of living arrangements, including those who live with their parents, those who live with a spouse/partner, those who live with other individuals, and any combination of these cases. 
+Return to text
+
+8. Adults living with a spouse or partner and women are more likely to be missing a mortgage on their credit report despite saying their home has a mortgage. For younger adults, there has been an uptick of parents purchasing homes for their adult children. In these cases, the house is mortgaged but it is not under the survey respondents' name. Finally, some single individuals buy homes and then meet their current spouse/partner later. 
+Return to text
+
+9. Credit bureaus tend to decrease credit scores as utilization increases, indicating that a lower utilization rate is better (Nicola, 2025). 
+Return to text
+
+10. Self-reported financial well-being question: Overall, which one of the following best describes how well you are managing financially these days? Choice of living comfortably, doing okay, just getting by, and finding it difficult to get by. 
+Return to text
+
+11. Results are similar for age cutoffs at 45 and 55. 
+Return to text
+
+12. Moving is defined using the SHED survey data for respondents who report moving in the prior two years. The credit data in available in the SHED merge do not have fine grained geographic information, so we cannot use the credit data itself to measure movers. Unlike the credit data, this survey measure captures all moves, both within and across neighborhoods. Therefore, it is an upper bound compared to the credit data, which only measures whether people moved across census tracts and cannot measure moves within census tracts. 
+Return to text
+
+13. We also examined a geography based definition based on the percent of renters living in a respondent's census tract of residence using 2024 American Community Survey data to identify these tracts. When combined with no mortgage, this definition improves accuracy and shows similar household financial outcomes as (2). However, this definition captures a much smaller share of renters overall. 
+Return to text
+
+Please cite this note as:
+
+Tranfaglia, Anna, and Erin Troland (2026). "Measuring Renters in Credit Data: Evidence from Linked Survey and Administrative Data," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 08, 2026, https://doi.org/10.17016/2380-7172.4050.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

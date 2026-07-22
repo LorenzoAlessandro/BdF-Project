@@ -1,0 +1,1151 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+November 12, 2020
+
+How the Federal Reserve's central bank swap lines have supported U.S. corporate borrowers in the leveraged loan market
+
+Annie McCrone, Ralf Meisenzahl, 
+Friederike Niepmann
+, and 
+Tim Schmidt-Eisenlohr
+
+The cost of borrowing U.S. dollars through foreign exchange (FX) swap markets increased significantly in the beginning of the COVID-19 pandemic in February 2020, indicated by larger deviations from Covered Interest Rate Parity (CIP).
+1
+ CIP deviations narrowed again when the Federal Reserve expanded its swap lines to support U.S. dollar liquidity globallyâby enhancing and extending its swap facility with foreign central banks and introducing the new temporary Foreign and International Monetary Authorities (FIMA) repurchase agreement facility.
+2
+ Recent research by Meisenzahl, Niepmann, and Schmidt-Eisenlohr (2020) shows how wider CIP deviations result in higher borrowing costs for U.S. corporations in the leveraged loan market. In this note, we discuss this finding, which suggests that, besides other channels, the Federal Reserve's initiatives to provide global U.S. dollar liquidity contributed to easier financial conditions for U.S. corporate borrowers.
+
+In this FEDS Note, we document how disturbances in foreign exchange markets related to the international cost of borrowing U.S. dollars affect U.S. corporate borrowers. International investors depend on foreign exchange markets when participating in the market for U.S. leveraged loans---large, non-investment grade loans originated by a syndicate of lenders. Using changes in the cost of borrowing dollars during the loan origination process, we show that U.S. corporate borrowers have to pay a higher interest rate if their loans are originated when international investors face a higher cost of borrowing U.S. dollars. Federal Reserve interventions that reduce the cost of borrowing U.S. dollars internationally through lending U.S. dollars to other central banks can therefore reduce interest rates paid by U.S. corporations.
+
+The U.S. leveraged loan market is a $1.2 trillion market in which large, U.S. firms, typically with a credit rating below investment grade, obtain funding. Today, the funding for these loans comes primarily from nonbank investors. While banks act as the lead arrangers, they sell a large portion of the loans quickly to other investors, in particular to Collateralized Loan Obligations (CLOs, special purpose vehicles that invest in leveraged loans) and mutual funds. Figure 1, taken from Lee, Liu, and Stebunovs (forthcoming) shows a steady decline of the bank holdings (the red and dark orange portions of the bars) and a corresponding increase in nonbank holdings (all the other portions of the bars) of syndicated leveraged loans over the first month after origination.
+3
+
+As also shown in figure 1, foreign banks only hold a small portion of leveraged loans directly. However, it appears that foreign bank and nonbank investors are significant participants in this market through holdings of CLOs and mutual funds. While comprehensive data are difficult to obtain, DeMarco, Liu, and Schmidt-Eisenlohr (2020) estimate that foreign investors hold about 20% of U.S. CLOs.
+
+Figure 1. Lenders in leveraged loan syndications after origination
+
+
+Note: Legend entries appear in order from top to bottom. Leveraged loan syndications are defined as loan syndications with a rating of less than BBB.
+
+Source: Lee, Li, Meisenzahl, and Sicilian (2019), figure 4.
+
+Accessible version
+
+CIP deviations
+
+Foreign investors often fund their investments in U.S. securities through the FX swap market. The relative cost of borrowing U.S. dollars through the FX swap market is reflected in the cross-currency basis. The cross-currency basis is defined as the difference between the cost of borrowing U.S. dollars in the cash market 
+directly
+ and the cost of borrowing U.S. dollars 
+indirectly
+ by first borrowing in foreign currency and then swapping the foreign currency into U.S. dollars today and back into foreign currency in the future at a price fixed today. Expressed mathematically, the cross-currency basis corresponds to the 
+x
+t
+ 
+in the following equation:
+
+$$$$ (1+y^{\$}_t) = (1+y^{\ast}_t + x_t) S_t/F_t, $$$$
+
+where $$(1 + y^{\$}_t)$$ is the cost of borrowing U.S. dollars directly and $$(1 + y^{\ast}_t)$$ is the cost of borrowing foreign currency. $$(1 + y^{\ast}_t) S_t/F_t$$ reflects the cost of borrowing U.S. dollars by swapping foreign currency into U.S. dollars at the spot exchange rate $$S_t$$, and then swapping the U.S. dollars back into foreign currency in the future at the forward rate $$F_t$$.
+
+A non-zero cross-currency basis implies the failure of Covered Interest Rate Parity (CIP).
+4
+ When the cross-currency basis is negative, it is cheaper to borrow U.S. dollars directly than to borrow U.S. dollars through the FX swap market. When the cross-currency basis becomes more negative, investments in U.S. securities become less attractive to foreigners without direct access to U.S. dollar funding because for given interest received in U.S. dollars, the actual return to the foreign investor shrinks amid higher funding costs.
+
+Figure 2 displays CIP deviations (the dashed line), measured as the average five-year U.S. dollar Libor cross-currency basis against nine major currencies over time.
+5
+ Over the past decade, the average cross-currency basis widened significantly (became more negative) at times, most notably in late 2011 and early 2016, and again in February 2020 when the COVID-19 pandemic hit the world economy, as we discuss later.
+
+As figure 2 shows, there is a close connection between CIP deviations and the share of newly originated leveraged loans purchased by mutual funds and CLOs. When CIP deviations become larger, reflected in a more negative average cross-currency basis, mutual funds and CLOs participate less, presumably because CLO and mutual fund investors find leveraged loans less attractive amid higher hedging/funding costs. When these investors pull away from the market, conditions for U.S. borrowers in the leveraged loan market deteriorate, as we show below using micro data.
+6
+
+Figure 2. CIP deviations and mutual fund and CLO share in new leveraged loans
+
+
+Notes: The figure shows the average five-year U.S. dollar Libor cross-currency basis against nine major currencies (a measure of CIP deviations between the U.S. dollar and foreign currencies) over time at a monthly frequency. It also depicts the mutual fund and CLO share in new leveraged loans based on information from the Shared National Credit Reports and ends in 2018 based on the classification in Lee, Li, Meisenzahl, and Sicilian (2019). The correlation coefficient between the average cross-currency basis and the mutual fund and CLO share in leveraged loans is â0.47.
+
+Sources: Bloomberg Finance LP, Shared National Credit (SNC), and staff calculations.
+
+Accessible version
+
+Leveraged loans become more expensive when CIP deviations widen
+
+To identify the effect of CIP deviations on lending terms in the U.S. leveraged loan market, we follow the methodology in Meisenzahl, Niepmann, and Schmidt-Eisenlohr (2020). Specifically, we study price adjustment during the syndication process of leveraged loans based on data from the Standard & Poor's Leverage Loan Commentary and Data (LCD). These data provide detailed information on so-called flexes, adjustments to the loan terms over the syndication process, including when initial loan terms and final loan terms were fixed.
+7
+
+Using this information, we relate the difference between the final interest rate spread and the initial interest rate spread of a leveraged loan to changes in CIP deviations over the syndication process, which typically takes 12 days. This high-frequency identification avoids issues of borrower selection and lower-frequency confounding macroeconomic factors.
+
+As we said earlier, when the U.S. dollar Libor cross-currency basis becomes more negative, investing in leveraged loans become less attractive, all else being equal, for foreign investors that fund these positions in the FX swap market. The resulting lower demand for the loans is reflected in an upward adjustment of the interest rate spread (a positive spread flex), as illustrated in figure 3.
+
+Figure 3, which is a bin scatter plot, shows changes in the average five-year U.S. dollar Libor cross-currency basis against nine major currencies over the syndication period on the x-axis and the effective spread flex, calculated as the interest rate spread flex plus the original issues discount (OID) flex divided by four, on the y-axis.
+8
+ When CIP deviations widen over the syndication period (a leftward movement along the x-axis), the effective spread flex increases (an upward movement along the y-axis). A 1 basis point decrease in the average cross-currency basis implies a 2.9 basis points higher effective spread flexâthat is a 2.9 basis point increase in the effective interest rate the borrower pays on the loan. This effect is statistically significant at the 1% level of significance. This result is also shown in the regression table in the online appendix and is robust to alternative regression specifications.
+9
+
+The effect of CIP deviations on borrowing costs is economically meaningful as well. Consider, for example, the period between February 15 and March 14, 2020, in the early phase of the COVID-19 crisis and before the Federal Reserve expanded its swap facilities. In that period, the average CIP deviation increased by 7 basis points, accounting for an increase in borrowing costs of 20 basis points (compared to a mean interest rates spread of 370 basis points). This reflects a 5% increase in the interest rate spread within a month.
+
+Figure 3. Effect of CIP deviations on effective spread flex of leveraged loans
+
+
+Notes: The figure shows the effective spread flex (y-axis) plotted against the change in the average five-year U.S. dollar Libor cross-currency basis against nine major currencies (x-axis). The cross-currency basis change is the change in the basis from the launch date of the leverage loan deal to the flex date of the deal. The scatter plot based on 2,646 observations was created by grouping changes in the cross-currency basis into equal-sized bins, computing the mean of changes in the basis and the effective spread flex in each bin, and then plotting the points. A line of best fit is also included. The figure excludes outliers and uses a sample of U.S. borrowers only. Loan-specific variables along with macroeconomic and financial variables are used as controls. The year 2018 has been omitted from the estimation. For more details, see Meisenzahl, Niepmann, and Schmidt-Eisenlohr (2020).
+
+Sources: Staff calculations based on data from the S&P Capital IQ Leveraged Loan Commentary Data (LCD) and Bloomberg Finance LP.
+
+Accessible version
+
+Effects of CIP deviations between the U.S. dollar and foreign currencies
+
+A currency area's net U.S. investment position in long-term debt can be seen as a proxy for the extent to which a currency area may rely on FX swap markets to fund its investment in these assets. In line with our narrative, the larger a currency area's net U.S. investment position in long-term corporate debt is, the stronger are the effects of widening CIP deviations between the U.S. dollar and that currency on the interest rate spreads of leveraged loans.
+
+This is illustrated in Figure 4. The y-axis of this figure shows the regression coefficients obtained from regressing effective spread flexes on the U.S. Libor cross-currency basis against individual currencies separately (columns 2â10 in table A of the online appendix). The x-axis indicates a currency area's net U.S. investment position in long-term corporate debt. Specifically, it shows the differences between a currency area's U.S. long-term corporate debt claims and its corporate debt liabilities toward the United States divided by the currency area's GDP.
+10
+ The negative correlation suggests that CIP deviations against currency areas with a larger net U.S. investment position in long-term corporate debt relative to GDP have stronger effects on spread flexes.
+
+Figure 4. Heterogeneous effects of CIP deviations against individual currencies on the effective spread flex
+
+
+Notes: The figure shows, on the y-axis, the coefficients associated with various cross-currency bases as shown in columns 2 to 10 in the appendix table (available online, details in note 7), which were obtained by regressing the effective spread flex on changes in the five-year U.S. dollar Libor basis for individual foreign currencies. On the x-axis, the figure displays a currency area's net U.S. investment position in long-term corporate debt relative to gross domestic product (GDP). This ratio is computed by substracting from the long-term corporate debt liabilities of the U.S. toward a currency area (as of June 2019) the U.S. long-term corporate debt claims on that currency area (as of December 2019). This difference is divided by the currency area's 2019 annual nominal GDP.
+
+Sources: U.S. Dept. of the Treasury, Treasury International Capital (TIC) Data (annual surveys) and staff calculations.
+
+Accessible version
+
+Fed swap lines reduce CIP deviations and borrowing costs
+
+CIP deviations between the U.S. dollar and foreign currencies widened significantly when the COVID-19 pandemic hit the global economy.
+11
+ In response, the Federal Reserve and several other central banks announced the expansion and enhancement of U.S. dollar liquidity swap lines in the second half of March 2020. In addition, the Federal Reserve introduced a new temporary repurchase agreement facility for foreign monetary authorities (the FIMA repo facility). The expanded swap lines were met with strong demand. Subsequently, cross-currency basis spreads stabilized (figure 5).
+12
+
+According to the Federal Reserve, "the dollar liquidity swap lines [have been] designed to help maintain the flow of credit to U.S. households and businesses by reducing risks to U.S. financial markets caused by financial stresses abroad."
+13
+ Our research summarized in this article suggests that this facility helped, among other things, ease credit conditions for U.S. borrowers in the leveraged loan market.
+14
+
+Figure 5. CIP deviations in the COVID-19 era
+
+
+Notes: The figure shows the average five-year U.S. dollar Libor cross-currency basis against nine major currencies (a measure of CIP deviations between the U.S. dollar and foreign currencies) over time. The figure highlights two policy actions taken by the Federal Reserve that impacted CIP deviations. On March 15, 2020, the Federal Reserve reduced swap line pricing, leading to a narrowing of CIP deviations. On March 31, it introduced its FIMA repo facility, which also narrowed the deviations.
+
+Sources: Bloomberg Finance LP and staff calculations.
+
+Accessible version
+
+References
+
+Avdjiev, Stefan, Wenxin Du, Cathérine Koch, and Hyun Song Shin, 2019, "
+The dollar, bank leverage, and deviations from covered interest parity
+," 
+American Economic Review: Insights
+, Vol. 1, No. 2, September, pp. 193â208. Crossref.
+
+Bruche, Max, Frederic Malherbe, and Ralf R. Meisenzahl, forthcoming, "
+Pipeline risk in leveraged loan syndication
+," 
+Review of Financial Studies
+. Crossref.
+
+Cetorelli, Nicola, Linda S. Goldberg, and Fabiola Ravazzolo, 2020, "
+How Fed swap lines supported the U.S. corporate credit market amid COVID-19 strains
+," 
+Liberty Street Economics
+, Federal Reserve Bank of New York, June 12, available online.
+
+DeMarco, Laurie, Emily Liu, and Tim Schmidt-Eisenlohr, 2020, "
+Who owns U.S. CLO securities? An update by tranche
+," FEDS Notes, Board of Governors of the Federal Reserve System, June 25. Crossref.
+
+Du, Wenxin, Alexander Tepper, and Adrien Verdelhan, 2018, "
+Deviations from covered interest rate parity
+," 
+Journal of Finance
+, Vol. 73, No. 3, June, pp. 915â957. Crossref.
+
+Irani, Rustom M., Rajkamal Iyer, Ralf R. Meisenzahl, and José-Luis Peydró, forthcoming, "The rise of shadow banking: Evidence from capital regulation," 
+Review of Financial Studies
+.
+
+Lee, Seung Jung, Dan Li, Ralf R. Meisenzahl, and Martin J. Sicilian, 2019, "
+The U.S. syndicated term loan market: Who holds what and when?
+," FEDS Notes, Board of Governors of the Federal Reserve System, November 25. Crossref.
+
+Lee, Seung Jung, Lucy Qian Liu, and Viktors Stebunovs, forthcoming, "
+Risk-taking spillovers of U.S. monetary policy in the global market for U.S. dollar corporate loans
+," 
+Journal of Banking & Finance
+. Crossref, .
+
+Liao, Gordon Y., and Tony Zhang, 2020, "
+The hedging channel of exchange rate determination
+," Board of Governors of the Federal Reserve System, working paper, May. Crossref.
+
+Meisenzahl, Ralf, Friederike Niepmann, and Tim Schmidt-Eisenlohr, 2020, "
+The dollar and corporate borrowing costs
+," Centre for Economic Policy Research, discussion paper, No. DP14892, June, available by subscription.
+
+Niepmann, Friederike, and Tim Schmidt-Eisenlohr, 2019, "
+Institutional investors, the dollar, and U.S. credit conditions
+," International Finance Discussion Papers, Board of Governors of the Federal Reserve System, No. 1246, April. Crossref,
+
+Appendix
+
+Figure A. The Syndication Process and Timeline
+
+
+Source: Bruche, Malherbe, Meisenzahl (forthcoming).
+
+Accessible version
+
+Table A
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+(9)
+
+(10)
+
+Î CIP Deviations
+
+-2.742***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-1.007
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î AUD Cross-Currency Basis
+
+ 
+
+-0.953
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.637
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î CAD Cross-Currency Basis
+
+ 
+
+ 
+
+-0.226
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.838
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î CHF Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+-1.115***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.383
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î EUR Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.724*
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.403
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î JPY Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.966***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.333
+
+ 
+
+ 
+
+ 
+
+ 
+
+Î GBP Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.0858
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.621
+
+ 
+
+ 
+
+ 
+
+Î NOK Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-1.157
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.754
+
+ 
+
+ 
+
+Î NZD Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+1.369**
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.584
+
+ 
+
+Î SEK Cross-Currency Basis
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.773
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.614
+
+Î VIX (log)
+
+-26.81***
+
+-29.04***
+
+-30.17***
+
+-33.89***
+
+-26.21***
+
+-25.11***
+
+-27.59***
+
+-35.24***
+
+-24.41***
+
+-38.42***
+
+-6.888
+
+-6.984
+
+-6.923
+
+-8.6
+
+-6.914
+
+-6.928
+
+-6.918
+
+-8.377
+
+-7.351
+
+-8.399
+
+Î US Corp AAA-BBB Spread
+
+73.60***
+
+86.84***
+
+80.03***
+
+87.25***
+
+79.68***
+
+74.50***
+
+88.48***
+
+91.91***
+
+89.62***
+
+78.00***
+
+-21.85
+
+-21.61
+
+-20.38
+
+-23.66
+
+-21.67
+
+-21.34
+
+-21.89
+
+-22.36
+
+-21.91
+
+-21.92
+
+Î US Term Spread
+
+7.832
+
+7.71
+
+19.26
+
+9.206
+
+11.92
+
+13.45
+
+13.37
+
+13.87
+
+16
+
+32.96**
+
+-12.18
+
+-12.55
+
+-12.11
+
+-12.93
+
+-12.17
+
+-12.03
+
+-12.37
+
+-13.01
+
+-12.65
+
+-13.18
+
+Î Economic Conditions Index
+
+-16.15*
+
+-14.54
+
+-14.83
+
+-18.04
+
+-16.06*
+
+-14.81
+
+-13.63
+
+-13.76
+
+-18.10*
+
+-12.34
+
+-9.694
+
+-9.851
+
+-9.901
+
+-11.45
+
+-9.735
+
+-9.779
+
+-9.747
+
+-10.8
+
+-10.41
+
+-10.99
+
+Î US Libor
+
+69.6
+
+55.15
+
+80.23*
+
+36.31
+
+67
+
+73.16
+
+55.4
+
+55.9
+
+60.38
+
+54.53
+
+-47.41
+
+-45.86
+
+-47.49
+
+-61.68
+
+-47.4
+
+-47.46
+
+-45.91
+
+-54.37
+
+-50.22
+
+-52.53
+
+Î 2-Year Treasury
+
+-23.57
+
+-28.72
+
+-27.04
+
+-37.01*
+
+-23.54
+
+-23.83
+
+-26.61
+
+-25.75
+
+-30.27
+
+-35.15*
+
+-18.06
+
+-18.31
+
+-18.25
+
+-21.35
+
+-18.06
+
+-18.04
+
+-18.23
+
+-20.61
+
+-18.95
+
+-20.61
+
+Î Broad Dollar
+
+4.402***
+
+5.527***
+
+5.459***
+
+5.998***
+
+4.865***
+
+4.672***
+
+5.881***
+
+6.147***
+
+5.515***
+
+6.155***
+
+-1.433
+
+-1.496
+
+-1.504
+
+-1.729
+
+-1.455
+
+-1.458
+
+-1.456
+
+-1.697
+
+-1.592
+
+-1.686
+
+Î 1-Year Treasury Basis
+
+-0.740***
+
+-0.317
+
+-0.355
+
+-0.687**
+
+-0.570**
+
+-0.662***
+
+-0.416*
+
+-0.507*
+
+-0.337
+
+-0.555**
+
+-0.249
+
+-0.242
+
+-0.232
+
+-0.278
+
+-0.237
+
+-0.244
+
+-0.239
+
+-0.272
+
+-0.247
+
+-0.276
+
+Industry
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Purpose
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Lead Agent
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+2796
+
+2644
+
+2704
+
+2188
+
+2796
+
+2763
+
+2774
+
+2272
+
+2557
+
+2188
+
+R2
+
+0.143
+
+0.148
+
+0.142
+
+0.157
+
+0.141
+
+0.142
+
+0.139
+
+0.156
+
+0.141
+
+0.152
+
+1. CIP deviations reflect the difference between the cost of borrowing U.S. dollars in the cash market 
+directly
+ and the cost of borrowing U.S. dollars 
+indirectly
+ by first borrowing in foreign currency and then swapping the foreign currency into U.S. dollars today and back into foreign currency in the future through the FX swap market. 
+Return to text
+
+2. Details online, 
+https://www.federalreserve.gov/monetarypolicy/fima-repo-facility.htm
+. 
+Return to text
+
+3. The figure updates the analogous figure in Lee, Li, Meisenzahl, and Sicilian (2019). Irani, Iyer, Meisenzahl, and Peydro (forthcoming) document the increasing importance of nonbank lenders in this market over the past 20 years. 
+Return to text
+
+4. CIP deviations open up arbitrage opportunities that market participants, in particular banks, should take advantage of and arbitrage away. Since the Global Financial Crisis, CIP deviations have become more pronounced, likely because arbitrage activity has become more costly for banks because of changes in regulation (e.g. Du, Tepper, and Verdelhan (2018)). 
+Return to text
+
+5. This measure of CIP deviations is commonly used in the literature, for example, in Avdjiev, Du, Koch, and Shin (2018). It roughly matches the average maturity of leveraged loans, which is 6 years in our sample. The nine currencies included are: AUD (Australian dollar), CAD (Canadian dollar), CHF (Swiss franc), EUR (euro), GBP (pound sterling), JPY (Japanese yen), NOK (Norwegian krone), NZD (New Zealand dollar), and SEK (Swedish krona). 
+Return to text
+
+6. This effect of CIP deviations is distinct from the dollar channel in Meisenzahl, Niepmann, and Schmidt-Eisenlohr (2020), where an appreciation of the U.S. dollar is associated with higher interest rate spreads and smaller loan amounts in the leverage loan market. As shown in table A, changes in CIP deviations explain borrowing costs even when changes in the U.S. dollar are controlled for. See also Niepmann and Schmidt-Eisenlohr (2018), who find that dollar appreciation is linked to declines in the demand for U.S. loans by institutional investors, lower secondary market prices for loans, and reduced C&I (commercial and industrial) lending by U.S. banks. 
+Return to text
+
+7. For an overview of the syndication process, see figure A and detailed explanations in Bruche, Malherbe, and Meisenzahl (forthcoming). 
+Return to text
+
+8. The original issues discount is the difference between the agreed loan amount and the loan amount that is actually dispersed. We divide this difference by four, which corresponds to the average effective maturity in years of leveraged loans (taking into account that loans are sometimes repaid early). For more information, see Meisenzahl, Niepmann, and Schmidt-Eisenlohr (2020). 
+Return to text
+
+9. For individual currencies, the effect is smaller and close to 1 basis point, as table A of the online appendix shows. The regression specification shown in column 1 of the table includes several fixed effects, unlike the regression equation that underlies figure 3. This explains the slight difference between regression coefficients. 
+Return to text
+
+10. Information is from Treasury International Capital (TIC) and is as of June 2019 for the U.S. long-term corporate debt claims of a currency area and as of December 2019 for a currency area's long-term corporate debt liabilities toward the United States. 
+Return to text
+
+11. Liao and Zhang (2020) document that cross-currency bases became more negative in February and March 2020 for currency areas with larger positive net foreign investment positions. 
+Return to text
+
+12. Figure 5 shows again the average five-year U.S. dollar Libor cross-currency basis against nine major currencies. Movements in shorter-term cross-currency bases (for example, the 3-month U.S. dollar Libor cross-currency bases against the euro and Japanese Yen) were more pronounced in the beginning of the year and have sustainably improved. See "Federal Reserve Tools to Lessen Strains in Global Dollar Funding Markets" in the Federal Reserve's Financial Stability Report from May 2020 for more information. 
+Return to text
+
+13. See Swap Lines FAQs from March 19, 2020: 
+https://www.federalreserve.gov/newsevents/pressreleases/swap-lines-faqs.htm
+. 
+Return to text
+
+14. Cetorelli, Goldberg and Ravazzolo (2020) highlight that the central banks swap lines helped foreign banks in the United States meet the increased funding needs of their U.S. based clients. Foreign parent banks borrowed U.S. dollars from their central banks and channeled the liquidity to their U.S. offices. 
+Return to text
+
+Please cite this note as:
+
+McCrone, Annie, Ralf Meisenzahl, Friederike Niepmann, and Tim Schmidt-Eisenlohr (2020). "How the Federal Reserve's central bank swap lines have supported U.S. corporate borrowers in the leveraged loan market," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 12, 2020, https://doi.org/10.17016/2380-7172.2753.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

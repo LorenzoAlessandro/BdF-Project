@@ -1,0 +1,1064 @@
+Skip to:
+
+Skip to 
+navigation
+
+Skip to 
+content
+
+Skip to 
+footer
+
+ANYTIME 
+
+PAST MONTH 
+
+PAST YEAR 
+
+Search Options
+
+Image Preview
+
+Home
+
+Media
+
+Explainers
+
+Research & Publications
+
+Statistics
+
+Monetary Policy
+
+The €uro
+
+Payments & Markets
+
+Careers
+
+Suggestions
+
+Sort by
+
+Relevance
+                                
+
+Date
+                                
+
+ 
+
+Alexandra Born
+Principal Financial Stability Expert · Macro Prud Policy&Financial Stability, Financial Regulation and Policy
+Johanne Evrard
+Team Lead - Financial Stability · Macro Prud Policy&Financial Stability, Financial Regulation and Policy
+Claudia Lambert
+Wagner Eduardo Schuster
+Anna Tskhakaya
+
+        Tokenised bonds: assessing efficiency and liquidity in a nascent market    
+
+Prepared by Alexandra Born, Johanne Evrard, Claudia Lambert, Wagner Eduardo Schuster and Anna Tskhakaya
+Published as part of the 
+Macroprudential Bulletin 33
+, April 2026.
+Tokenisation holds the promise to automate the issuance process for bonds, reduce settlement times and enable more efficient and cheaper processes for conducting transactions. Given the transformative potential of tokenisation and distributed ledger technology (DLT) for capital markets and for the savings and investments union (see, for example, European Commission, 2025; Banu et al., 2026), this article investigates empirically whether the tokenisation of bonds – while still at an early stage – improves bond issuance efficiency and market liquidity.
+The tokenised bond market is currently still small but has seen an uptick in issuance over the past two years. To overcome the challenge presented by the limited availability of data on tokenisation, we construct a unique dataset for our analysis, primarily composed of financial and non-financial corporate bonds issued predominantly in Europe. Employing a matching procedure at the issuer-bond level, we ensure that tokenised and conventional bonds are comparable before assessing whether tokenisation has the potential to boost issuance efficiency, for example by automating processes, and to improve market liquidity by lowering entry and transaction barriers. We find that tokenised bonds reduce borrowing costs and improve market liquidity, but with no visible reduction in operational costs (all relative to the group of matched conventional bonds). Given that the market is still in its infancy, our results indicate that there may be greater benefits as the market grows. However, the future impact of tokenisation and the realisation of its potential benefits in terms of efficiency and liquidity will hinge on the underlying infrastructure and the possibility for the market to scale. Central banks initiatives – such as the Eurosystem’s explorations on the acceptance of DLT-based collateral and initiatives to improve and modernise market infrastructures - serve as key enablers that could support a scaling up of the market.
+1 Introduction
+Tokenised bonds have specific features that could potentially enhance issuance efficiency and improve market liquidity.
+ Tokenisation is the process of representing claims digitally in the form of tokens on a programmable platform, using new technologies such as distributed ledgers. By leveraging self-executing smart contracts, tokenisation could automate processes such as issuance, interest payments and principal repayment, reducing or eliminating manual paperwork and reliance on intermediaries. It could also enable faster settlement cycles, 24/7 trading and fractionalised ownership. These potential benefits could reduce issuance costs, lower entry and transaction barriers, and potentially lead to more liquid tokenised bonds. Greater liquidity could also support price discovery for conventional bonds issued by the same entities, underlining the potential of tokenisation to transform bond markets more widely.
+As tokenised markets are still at an early stage of development, the extent to which these benefits could materialise is still uncertain.
+ Some early adopters have tried to quantify the cost savings the benefits could deliver. For example, J.P. Morgan (2023) estimated that automating portfolios using distributed ledger technology (DLT) could potentially reduce portfolio management fees by approximately 24 basis points. At the same time, as with all new technology, DLT and tokenisation would require investment and the accumulation of expertise, which would entail costs, while the benefits may only materialise in the long term. In addition, deploying tokenisation on a larger scale would require significant adjustments to the infrastructure of financial markets. This could be a time-intensive process and may require legacy and new infrastructure to exist side by side (see, for example, Banu et al., 2026). This may – at least in the short term – translate into greater costs, including higher underwriting fees.
+[
+1
+]
+ It remains uncertain whether the operational efficiencies and savings from automation would outweigh these costs and frictions. In addition, the potential for tokenisation to improve bond market liquidity hinges on wider stakeholder participation.
+[
+2
+]
+ Although fractionalised ownership could broaden the investor base and promote financial inclusion, institutional investors may see only limited benefits from smaller transaction sizes.
+[
+3
+]
+ Overall, further analysis is needed to assess whether tokenisation could reduce costs for issuers (in the form of lower underwriting fees) and whether tokenisation can deliver meaningful liquidity improvements.
+[
+4
+]
+The effects of tokenisation across the asset life cycle differ greatly based on the degree to which DLT is implemented.
+ Although the tokenisation of securities is frequently highlighted for its potential to enhance digital processes and drive efficiency, these processes are still largely reliant on traditional market infrastructure (see IOSCO, 2025). Likewise, the same IOSCO report noted that, while tokenised bonds offer innovative features such as atomicity,
+[
+5
+]
+ which allows clearing and settlement to be synchronised, market participants tend to select conventional systems when given the choice. Vulnerabilities associated with tokenisation are similar to those in traditional finance. However, tokenisation may also introduce further complexities in the financial system and comes with a distinct set of challenges that can have implications for financial stability (see Financial Stability Board, 2024).
+Empirical investigation into the impact of tokenisation has so far been limited.
+ While a growing body of literature has been analysing the potential benefits of tokenisation from a theoretical perspective (see, for example, Aldasoro et al., 2023; Bank for International Settlements, 2023), empirical evidence on the impact of tokenisation is still limited. Some analysis has focused on the implications of tokenisation for bonds by assessing market efficiency, liquidity and accessibility. For example, Leung et al. (2023) provide analysis for a set of global bonds, while Aldasoro et al. (2025) focus on tokenisation in government bond markets. Both studies find improvements in liquidity – and, to some extent, issuance efficiency – for tokenised bonds compared with their traditional counterparts, while recognising the preliminary nature of these results given the limited size of the markets. By contrast, Lin (2025) illustrates a trade-off between the fast, decentralised settlement enabled by DLT and a negative impact on market liquidity.
+[
+6
+]
+This article adds to the growing body of evidence on the potential impact of tokenisation, focusing on the European bond market.
+ Our main interest lies in assessing how tokenised bonds perform in terms of efficiency compared with conventional bonds, and whether tokenisation affects the liquidity of bonds differently. This article starts by providing an overview of recent market developments based on an extensive and partially hand-collected dataset before presenting our methodological approach and the main results. The final section presents the conclusions and offers an outlook.
+2 Market overview and recent developments
+Since there is no consistent global dataset on tokenised bonds
+, 
+we create a dataset comprised of global tokenised bonds relevant to the EU.
+[
+7
+]
+ We collect a list of tokenised securities issued between August 2018 and November 2025
+[
+8
+]
+ based on a number of different sources. These include public registers, such as the crypto securities register of the German Federal Financial Supervisory Authority (
+Bundesanstalt für Finanzdienstleistungsaufsicht
+ – BaFin),
+[
+9
+]
+ and data from stock exchanges, tokenisation platforms and news articles.
+[
+10
+]
+ This leads to a dataset compromising 183 tokenised bonds, and excluding tokenised hybrid debt instruments, commercial papers and structured debt securities. To perform a comparison with conventional bonds, we amend the dataset of tokenised bonds with a set of conventional bonds collected for the same issuers and instrument types comprising almost 200,000 securities for the period from September 2013 to October 2025.
+The market for tokenised bonds is nascent, but issuance picked up strongly in 2024, partly related to the DLT real-value transactions in the context of the European Central Bank (ECB) and the Swiss National Bank (SNB) explorations.
+ Despite being in the early stages of its development, the market has recently shown significant uptake: 88% of issuances have occurred in the last three years, although the first tokenised bond was issued as early as 2018 (
+Chart 1
+, panel a). A large number of tokenised bonds issued in 2024 were related to the Eurosystem’s exploratory work on new technologies for wholesale central bank money settlement and to DLT trials by the SNB.
+[
+11
+]
+ Excluding bonds linked to these trials, a comparison of issuances over time reveals that numbers in 2025 are only slightly lower than in 2024, which could be attributed to the data sample for 2025 only extending through the third quarter.
+The sample of tokenised bonds is dominated by bonds issued in Europe and by non-financial and financial corporates.
+ Most of the bonds in our sample originate in Europe, with two-thirds of issuers domiciled in Germany (
+Chart 1
+, panel c).
+[
+12
+]
+ This concentration in the German market largely stems from the introduction of the German Electronic Securities Act (
+Gesetz über elektronische Wertpapiere
+ – eWpG), which enables the issuance of securities in purely electronic form, while also allowing the use of DLT for registering securities. So far, the EU’s DLT Pilot Regime, which is a temporary regime for applying the existing rules for tokenised assets in the EU, has not led to a substantial take-up and is currently being reviewed to increase its flexibility.
+[
+13
+]
+ Non-financial and financial corporations dominate the space, accounting for 91% of issuers (
+Chart 1
+, panel b), which also include public financial entities such as the European Investment Bank and the World Bank. Government bonds include local governments as well as sovereigns such as the Republic of Slovenia.
+[
+14
+]
+ Only about half (44%) of the issuers have issued both tokenised and conventional debt, and within this group just 38% have issued more than one tokenised bond.
+[
+15
+]
+ This underscores the exploratory nature of this market, with many traditional issuers cautiously testing its potential.
+The characteristics of tokenised and conventional bonds can vary significantly, even among securities issued by the same entity, underscoring the importance of establishing comparable samples for meaningful analysis.
+ The large majority of conventional bonds (88%) do not have the same currency, coupon type or instrument type as the tokenised bonds of the same issuer.
+[
+16
+]
+ In addition, tokenised bonds tend to have a maturity that is on average around six months shorter.
+[
+17
+]
+ Given these differences, methods for quantitative empirical research – such as matching – can be used to credibly compare bonds issued by the same entity and identify the effects of tokenisation (see the next sections, together with Boxes 1 and 2). To this end, we perform several data preparation steps, so that our main sample consists of 41 tokenised bonds and 546 conventional bonds.
+[
+18
+]
+Chart 1
+Overview of the tokenised bond market
+a) Number and total size of tokenised bonds by year
+b) Issuers by sector
+(number per year, EUR millions )
+(percentage)
+c) Number of tokenised bonds by issuer domicile
+Sources: ECB (CSDB), Bloomberg, BaFin register, International Capital Market Association, Luxembourg Stock Exchange, SIX Digital Exchange, Aldasoro et al. (2025), NYALA Digital Asset Platform and Cashlink.
+Notes: Panel a: the graph includes tokenised bonds collected up until September 2025 and shows the number and total issue size of our sample issued between August 2018 and November 2025. The issue size exclude 13 bonds for which information is missing. It is sourced from Bloomberg, with additional information taken from the CSDB and from the white papers for the securities. Issue dates are sourced from the CSDB, with additional information taken from the white papers for the securities. Panel b: financial corporations include the following supranational organisations: the European Investment Bank (EIB), the International Bank for Reconstruction and Development (IBRD), the Inter-American Development Bank (IADB) and the Asian Infrastructure Investment Bank (AIIB). Panel c: the chart excludes debt instruments irrelevant for the analyses, including a small number of debt instruments existing in other jurisdictions, including the United States, Singapore, Thailand, Japan, Finland and Spain.
+3 Does tokenisation improve efficiency?
+To identify the effects of tokenisation on key metrics for efficiency, we employ a matching approach to compare a subset of tokenised bonds with a matched subset of conventional bonds.
+ 
+Comparing bonds from the same issuer ensures that both groups of bonds are comparable prior to assessing whether tokenisation has the potential to improve issuance efficiency for bonds. Box 1 describes in more detail the matching methodology we use, which is an adaptation of the methodology employed by Leung et al. (2023). The impact of tokenisation can then be gauged by estimating the difference in key efficiency metrics. Starting from the hypothesis that tokenisation could in theory deliver efficiency gains, we estimate the mean difference in underwriting fees between the treatment group (i.e. the tokenised bonds) and the control group (i.e. the conventional bonds). Specifically, we assess how (a) operational costs (measured by underwriting fees) and (b) borrowing costs (measured as the difference between the yield and a benchmark at time of issuance
+[
+19
+]
+) differ between the subset of matched tokenised and conventional bonds.
+We find indicative evidence for a positive effect of tokenisation on efficiency for bonds, adding to the evidence in the existing literature.
+ 
+Chart 2
+ shows the main results of our analysis. We find that tokenised bonds display a yield spread at issuance which is 0.14 percentage points lower on average compared with conventional bonds, at a 5% significance level. This result is also economically significant, as it represents a 40% average reduction in the yield spread compared with similar conventional bonds (
+Chart 2
+). Significance is calculated using the Wilcoxon signed rank test. This is a non-parametric test that does not assume normality, making it particularly suitable for this small sample size.
+[
+20
+]
+ These lower yields, which enable issuers to secure funding at a reduced cost, also link with our findings on improved liquidity of tokenised bonds, reflecting lower transaction costs (see Section 4). In addition, investors may be willing to accept lower yield spreads if they are interested in taking on exposure to a nascent technology, or if they see value in the benefits of tokenised bonds (see Leung et al., 2023; Liu, Shim and Zheng, 2023; Aldasoro et al., 2025). Underwriting fees of tokenised bonds are 0.04 percentage points higher on average with no statistical significance. Overall, our results indicate improvements in efficiency that can be attributed to tokenisation. While our results shed light on aggregate effects, some heterogeneity may prevail at the issuer or tokenised security level. These results should be viewed in the context of the market’s current limited size and early stage of development – there could be greater benefits if the markets expand.
+Our findings align with previous literature to a large degree.
+ The reduction in borrowing costs confirms the findings of Leung et al. (2023), who report a 0.78 percentage point decrease in the yield spread, representing a 24% reduction in their average yield spread. While our results do not show a reduction in underwriting fees, which is consistent with the findings of Aldasoro et al. (2025), they differ from those of Leung et al. (2023), who report a 0.22 percentage point reduction.
+Chart 2
+Efficiency of tokenised bonds compared with weighted conventional bonds
+(percentage points)
+Source: authors’ calculations.
+Notes: Our matched sample consists of 49 conventional bonds, 23 tokenised bonds and 58 matches for the results on yield spread to benchmark. Since one tokenised bond among this sample does not have any available underwriting fee data, our underwriting fee subsample comprises 22 tokenised bonds with 54 matches. pp stands for percentage points.
+Box 
+1
+An empirical approach to comparing the efficiency of tokenised and conventional bonds: combined exact and propensity matching
+Empirical identification of the benefits of tokenisation is challenging.
+ This is because differences in efficiency between tokenised bonds and conventional bonds may be explained by general differences in bond characteristics independent of the tokenisation status, only some of which can be observed while other bond features are unobserved.
+[
+21
+]
+To analyse the impact of tokenisation on bond features while ensuring that differences in outcomes are not affected by the unrelated characteristics mentioned above, we employ a combined exact and propensity score matching (PSM) methodology.
+ This allows us to identify a subset of conventional bonds that are similar to tokenised bonds. For the subset of matched tokenised and conventional bonds, we then assess whether tokenised bonds fare better in terms of efficiency – as measured by (i) operational costs and (ii) borrowing costs – by examining mean differences across the two subsamples.
+The matching approach
+First, we employ exact matching based on primary characteristics.
+ These characteristics include having the same issuer, currency, coupon type, instrument type
+[
+22
+]
+ and rating
+[
+23
+]
+. Second, we perform a complementary PSM procedure using additional bond features, based on a logit model taking the following form:
+l
+n
+ϕ
+i
+1
+-
+ϕ
+i
+⁡
+=
+ 
+β
+1
++
+β
+2
+s
+i
+z
+e
+i
++
+β
+3
+i
+s
+s
+u
+e
+ 
+d
+a
+t
+e
+i
++
+ 
+β
+4
+m
+a
+t
+u
+r
+i
+t
+y
+ 
+d
+a
+t
+e
+i
++
+ 
+β
+5
+M
+O
+V
+E
+i
++
+ε
+i
+ 
+The propensity score 
+ϕ
+i
+[
+24
+]
+ is the probability that security 
+i
+ is tokenised given its features. 
+S
+i
+z
+e
+i
+ is the natural logarithm of the issuance amount of security 
+i
+, the 
+i
+s
+s
+u
+e
+ 
+d
+a
+t
+e
+i
+ and 
+m
+a
+t
+u
+r
+i
+t
+y
+ 
+d
+a
+t
+e
+i
+ are the numeric conversions of the issue and maturity date of security 
+i
+, and 
+M
+O
+V
+E
+i
+ is the three-month preceding average of the MOVE index
+[
+25
+]
+, controlling for bond market volatility at the time of issuance of security 
+i
+. 
+ε
+i
+ is the error term. The addition of the average bond market volatility is an extension to the methodology used by Leung et al. (2023). This is to account for macroeconomic conditions affecting bond markets at the time of issuance and to capture unobserved differences in bond features not captured through other controls.
+More specifically, the propensity score regression uses nearest neighbour matching with replacement, where each tokenised bond can be matched to up to 30 conventional bonds, with a caliper of 5% and common support.
+ Given the one-to-many matches for each tokenised bond, bonds are weighted by the PSM matching weights.
+[
+26
+]
+ 
+Table A
+ shows the descriptive statistics for the covariate variables used in our logistic regression for the matched dataset. Assessing the goodness of fit of the matching, 
+Table A
+ also reports normalised differences (NDs) to compare the groups of tokenised and conventional bonds with respect to the key bond features used in the PSM. NDs are a scale-free measure of the difference in distributions. According to Imbens and Rubin (2015), this is calculated as the difference in averages by treatment status, scaled by the square root of the average of the variances. Given the one-to-many matches, we employ weighted means and variances. As a rule of thumb, groups are regarded as sufficiently equal if NDs are generally in the range of ±0.25.
+[
+27
+]
+ We find that both groups are similar in terms of issue date and maturity, but do not meet the threshold for market volatility and issue size.
+Table A
+Descriptive statistics and group comparisons (tokenised bonds vs weighted conventional bonds)
+Variable
+Tokenised mean
+Conventional mean
+Normalised difference (ND)
+Issue date 
+15 October 2023
+(1.57 years)
+ 4 October 2023
+ (1.75 years)
+0.02
+Maturity date 
+8 April 2028
+(3.54 years)
+29 April 2028
+(3.18 years)
+-0.02
+Volatility at issuance
+(three-month prior average)
+ 96.93
+(22.28)
+87.45
+(22.74)
+-0.42
+Issue size (log)
+18.20
+(1.05)
+18.81
+ (1.52)
+-0.46
+N
+23
+49
+-
+Sources: ECB (CSDB), Bloomberg, BaFin register, International Capital Market Association, Luxembourg Stock Exchange, SIX Digital Exchange, Aldasoro et al. (2025), NYALA Digital Asset Platform, Cashlink and authors’ calculations.
+Notes: Weighted standard deviations are shown under parentheses. The issue and maturity dates are average dates of tokenised and conventional bonds respectively, which are implemented as numerical variables in the propensity score regression but are converted to their interpretable version for the descriptive statistics. The matched bonds include issuances between August 2018 and September 2025.
+We use underwriting fees as the measure to assess the operational effectiveness of issuing a tokenised versus a conventional bond.
+ For borrowing costs, we estimate the yield spread to benchmark by subtracting the one-year interbank lending rate of each currency denomination at the time of issuance from the yield to maturity at issuance.
+[
+28
+]
+ This helps us isolate the potential effect of interest rate movements from the observed difference in the yield at issuance between the matched tokenised and conventional bonds.
+Robustness analysis
+We ensure that our results are robust to different specifications.
+ This includes using (i) alternative per currency benchmarks for the one-year interbank lending rate, such as IBOR/RFR, (ii) the EU stock market volatility index VSTOXX as an alternative measure for bond market volatility
+[
+29
+]
+, and (iii) a combination of (i) and (ii). The alternative benchmark rates maintain the direction of effects but lose significance. However, results are robust when combined with the alternative volatility measure. Generally, we face a trade-off between using the full sample of an already small market for this analysis and employing a matching approach which ensures that differences in results are indeed solely driven by the tokenisation status of the bonds.
+4 What is the impact of tokenisation on liquidity?
+To assess whether market liquidity is higher for tokenised bonds, our methodology incorporates a dynamic approach.
+ We employ a rolling matching method (see Box 2) to take the time dimension into account, enabling us to evaluate how liquidity evolves over time as additional tokenised products enter the market. 
+We find a positive impact of tokenisation on liquidity, in line with empirical evidence in the literature.
+ We assess the impact of tokenisation on liquidity by comparing the bid-ask spreads of tokenised bonds with those of their matched counterparts. The bid-ask spread is the difference between the bid price and the ask price of a security.
+[
+30
+]
+ Lower spreads would indicate higher bond market liquidity – in terms of the tightness of the market – or lower transaction costs. Summarising our results, 
+Table 1
+ shows that the bid-ask spread of tokenised bonds is on average 0.05 percentage points lower over time, significant at 5% (column 3). This result is economically significant, corresponding to a 27% reduction in the average bid-ask spread over time compared with conventional bonds. These positive results for market liquidity are in line with those of Leung et al. (2023), who report a reduction in bid-ask spreads for tokenised bonds of 0.035 percentage points on average at a 1% level of statistical significance, and Aldasoro et al. (2025), who also find improved liquidity for tokenised bonds. 
+Reductions in bid-ask spreads are not yet observed for bonds that are accessible to retail investors.
+ The findings on improved liquidity are reversed for tokenised bonds that are accessible to retail investors. However, a very small number of retail-accessible tokenised bonds drive this outcome with a much higher average bid-ask spread.
+[
+31
+]
+ The small sample size of retail-accessible tokenised bonds suggests that these results should be interpreted with caution and may not (yet) represent broader market trends.
+[
+32
+]
+Table 1
+Impact of tokenisation on liquidity
+Tokenised bonds vs weighted conventional bonds 2022-25
+(Bid-ask spread in percentage points)
+Baseline
+With retail access 
+Full controls
+Tokenised 
+0.0369
+(0.0367)
+-0.0756 **
+(0.0355)
+-0.0513 ** 
+(0.0221)
+Accessible to retail
+No
+-0.1568 ***
+(0.0404)
+-0.0481
+(0.0291)
+Tokenised * Accessible to retail 
+No
+0.4167 ***
+(0.0964)
+0.1643 *** 
+(0.0466)
+Controls_new (
+X
+i
+,
+t
+)
+No
+No
+Yes
+Controls_PSM (
+Z
+i
+)
+No
+No
+Yes
+Matched group fixed effects 
+Yes
+Yes
+Yes
+Quarterly fixed effects
+Yes
+Yes
+Yes
+Adj. R squared
+0.61
+0.67
+0.76
+Within adj. R squared
+0.01
+0.18
+0.39
+N
+43,902
+43,902
+43,902
+Sources: ECB (CSDB), Bloomberg, Securities Holdings Statistics by Sector (SHSS), BaFin register, International Capital Market Association, Luxembourg Stock Exchange, SIX Digital Exchange, Aldasoro et al. (2025), NYALA Digital Asset Platform, Cashlink and authors’ calculations.
+Notes: *p < 0.1, **p < 0.05, ***p < 0.01.
+Weighted standard errors are reported in parentheses.
+Regressions are estimated using the within (fixed effects) estimator. The sample of conventional bonds matched to tokenised bonds (see Box 2) comprises 20 tokenised and 75 conventional bonds over the period 2022 to 2025. The matrix 
+X
+i
+,
+t
+ includes variables that are not part of the propensity score matching (age of the bond at time 
+t
+ and time to maturity of the bond at time 
+t
+), while 
+Z
+i
+ 
+comprises the set of controls already used in the propensity score matching (three-month average of the MOVE index prior to issuance and the issue size). A bond is considered accessible to retail investors if held by households (identified in SHSS) or, alternatively, if its minimum subscription amount is below €8,500 (see Box 2). The dependent variable is liquidity, measured as the bid-ask spread. Standard errors are clustered at the bond level. A Wald test confirmed that the coefficients for “Tokenised” and the interaction “Tokenised × Accessible to retail” are jointly significant for liquidity for regressions (2) and (3). The joint significance of all Control_new and Control_PSM variables is also confirmed using a Wald test for regression (3).
+Box 2
+An empirical approach to comparing the liquidity of tokenised and conventional bonds: fixed effects OLS regression conditional on matching
+Empirical identification of the benefits of tokenisation is challenging because differences in our outcome variable may be driven by differences in bond characteristics that are independent of the tokenisation status, other unobserved features or the macroeconomic environment.
+[
+33
+]
+ To assess whether tokenised bonds exhibit improved market liquidity compared with a similar subset of conventional bonds issued by the same issuer, we employ a fixed effects OLS regression approach after exact and propensity matching. The matching procedure ensures that both groups are comparable across characteristics other than the tokenisation status, so results do not reflect systematic differences between the two.
+The matching approach
+In contrast to Leung et al. (2023), for liquidity we slightly adjust our matching procedure as we are interested in the impact of tokenisation on liquidity over time.
+ In particular, we slice the sample into different time periods, namely rolling windows of two years each, to ensure comparable macroeconomic conditions at the time of issuance and to allow for time-varying reasons for deciding to issue a tokenised bond.
+[
+34
+]
+ 
+For each separate two-year time interval, we match bonds issued within that period and arrive at a comparable subset of tokenised and conventional bonds for that period. We then combine the different snapshots across time intervals to arrive at our matches for our panel dataset. Duplicate matches which arise from the overlap of the rolling window samples are removed from the sample, and tokenised bonds are grouped with their unique conventional matches.
+Exact matching
+More specifically, for each two-year issuance subsample, we first match tokenised bonds and conventional bonds using exact matching with respect to the issuer, currency, coupon type and instrument type.
+ In contrast to the approach outlined in Box 1, we do not apply exact matching on rating, and we relax the restriction on caliper given the small sample size for each rolling window regression. We also construct a variable “subclass”, a temporal issuance constraint which ensures that tokenised bonds can only be matched to conventional bonds issued at the same date or earlier.
+Propensity score matching
+To further disentangle the effect of tokenisation, we estimate a logit model that explains the probability that a bond is materially affected by the change in status (tokenised versus conventional).
+ In particular, we match tokenised bonds based on a logit model taking the following form:
+l
+n
+ 
+ϕ
+i
+1
+-
+ϕ
+i
+1,2
+,
+3
+=
+β
+1
++
+β
+2
+s
+i
+z
+e
+i
++
+β
+3
+i
+s
+s
+u
+e
+ 
+d
+a
+t
+e
+i
++
+ 
+β
+4
+m
+a
+t
+u
+r
+i
+t
+y
+ 
+d
+a
+t
+e
+i
++
+ 
+β
+5
+M
+O
+V
+E
+i
++
+β
+6
+r
+a
+t
+i
+n
+g
+i
++
+ 
+ε
+i
+ 
+where 
+ϕ
+i
+ is the probability that security 
+i
+ is tokenised given its explanatory variables. Superscripts 
+(
+1
+,
+ 
+2
+,
+ 
+3
+) indicate the different rolling window periods for which the matching is conducted separately, i.e. 2022-23, 2023-24 and 2024-25. Explanatory variables include 
+s
+i
+z
+e
+i
+, measured as the natural logarithm of the issuance amount of security 
+i
+, 
+i
+s
+s
+u
+e
+ 
+d
+a
+t
+e
+i
+ and 
+m
+a
+t
+u
+r
+i
+t
+y
+ 
+d
+a
+t
+e
+i
+ as the numeric conversions of the issue and maturity date of security 
+i
+, 
+M
+O
+V
+E
+i
+ as the three-month preceding average of the MOVE index, approximating bond market volatility at the time of issuance of security 
+i
+, and 
+r
+a
+t
+i
+n
+g
+i
+[
+35
+]
+. 
+ε
+i
+ is the error term.
+More specifically, the analysis relies on nearest neighbour matching with replacement and imposing common support; each tokenised bond is matched to up to 30 conventional bonds.
+ Given the one-to-many matches for each tokenised bond, bonds are weighted by the PSM matching weights.
+[
+36
+]
+Imposing perfect balance is not necessary given that the OLS regression (further details below) includes matched group fixed effects, the initial propensity score controls, as well as additional covariates.
+OLS panel regression approach
+To assess whether tokenised bonds exhibit improved market liquidity compared with a matched subset of conventional bonds, in a subsequent step we run an OLS model.
+ For this regression we remove matches without bid-ask spread data for both conventional and tokenised bonds in the same matched group. Our resulting panel dataset captures the period from 26 September 2022 to 18 December 2025. The model takes the following form:
+Y
+i
+,
+t
+=
+α
+i
++
+ 
+δ
+t
++
+β
+1
+t
+o
+k
+e
+n
+i
++
+β
+2
+R
+i
++
+β
+3
+t
+o
+k
+e
+n
+i
+*
+R
+i
+ 
++
+X
+i
+,
+t
++
+Z
+i
++
+ 
+ε
+i
+,
+t
+,
+where 
+Y
+i
+,
+t
+ is the outcome variable liquidity measured as the bid-ask spread for bond 
+i
+ at time 
+t
+. 
+α
+i
+ are matched group fixed effects
+[
+37
+]
+ and 
+δ
+t
+ are quarterly time fixed effects. 
+T
+o
+k
+e
+n
+i
+ is a binary variable equal to one if bond 
+i
+ is tokenised and zero otherwise, 
+R
+i
+ is a binary variable equal to one if bond 
+i
+ is accessible to retail investors and zero otherwise.
+[
+38
+]
+ It is important to note that bond fixed effects are not included since the variables 
+t
+o
+k
+e
+n
+i
+ and 
+R
+i
+ are time-invariant for each bond and would be absorbed by bond fixed effects. Standard errors are clustered at the bond level.
+X
+i
+,
+t
+ represents the matrix of control variables that are not part of the propensity score matching, which comprises (i) the age of the bond at time 
+t
+ and (ii) the time to maturity of the bond at time 
+t
+.
+ Both measures are included given the absence of bond fixed effects as they control for the life cycle effects of each security and its impact on liquidity. 
+Z
+i
+ 
+represents the set of controls already used in the propensity score matching, including the three-month average of the MOVE index prior to issuance as well as the issue size. 
+ε
+i
+,
+t
+ is the error term. In contrast to Leung et al. (2023), our model employs the average bond market volatility at the time of issuance instead of the daily variable.
+Robustness
+We ensure that our results are robust to different specifications.
+ Checks include testing whether results are robust (i) when including the daily MOVE index as a control for the daily bond market liquidity
+[
+39
+]
+ and (ii) by estimating the same OLS regression over a reduced time period of November 2024 to November 2025, limiting the effects of phasing-in and the marginal phasing-out within matched group comparisons.
+[
+40
+]
+5 Conclusion
+The tokenisation of bonds already delivers measurable, albeit moderate, gains in issuance efficiency and market liquidity, even at the current experimental scale.
+ If adopted on a broader scale, tokenisation can improve issuance efficiency and liquidity by simplifying and speeding up issuance and transactions, while allowing greater access to financial instruments. With the tokenised bond market still at an early stage of development, the small sample used in this study already shows promising results. We employ robust estimation methodologies and a number of robustness checks to validate our results. These indicate that tokenisation may potentially have wider benefits for financial markets. The extent to which these benefits materialise depends on a broad set of factors, since transitioning to a new ecosystem may entail costs that could potentially outweigh the positive outcomes, particularly in the short term.
+Given the nascent state of the market and the small sample underpinning our analysis, continued monitoring, data collection and experimentation – including through public‑private pilot projects and sandbox frameworks – are warranted.
+ The review of the DLT pilot regime and changes introduced in the Market Integration and Supervision package
+[
+41
+]
+ to promote innovation and facilitate the use of new technologies could further facilitate the trading and settlement of tokenised financial instruments, while ensuring compliance with EU-wide standards. This would enable authorities to reassess the macroprudential implications of the tokenisation of bonds as volumes grow, adjust policy tools where needed, and ensure that potential efficiency and liquidity gains are realised without compromising financial stability.
+References
+Afme (2025), “
+DLT-Based Capital Market Report
+”, September.
+Aldasoro, I. et al. (2023), “
+The tokenisation continuum
+”, 
+BIS Bulletin
+, No 72, Bank for International Settlements, April.
+Aldasoro, I. et al. (2025), “
+Tokenisation of government bonds: assessment and roadmap
+”, 
+BIS Bulletin
+, No 107, Bank for International Settlements, July.
+Baker, A. et al. (2025), “
+Difference-in-Differences Designs: A Practitioner’s Guide
+”, 
+preprint arXiv
+, June.
+Bank for International Settlements (2023), “
+Blueprint for the future monetary system: improving the old, enabling the new
+”, 
+Annual Economic Report”
+, Chapter III, June.
+Banu, E. et al. (2026), “
+Towards an efficient and integrated digital capital market in Europe: the role of tokenisation and the Eurosystem’s policy response
+”, 
+Macroprudential Bulletin
+, Issue 33, ECB, April.
+Baran, J. and Voříšek, J. (2020), “
+Volatility indices and implied uncertainty measures of European government bond futures
+”, 
+Working Paper Series
+, No 43, European Stability Mechanism. 
+European Commission (2025), “
+Further development of capital market integration and supervision within the Union
+”, 
+Communication
+, 4 December.
+Financial Stability Board (2024), “
+The Financial Stability Implications of Tokenisation
+”, October.
+Imbens, G.W. and Rubin, D. B. (2015), “Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction”, Cambridge University Press.
+IOSCO (2025), “
+Tokenization of Financial Assets
+”, November.
+J.P. Morgan (2023), “
+The Future of Wealth Management: Ultra-efficient portfolios of traditional and alternative investments powered by tokenization
+”, Kinexys by J.P. Morgan.
+Kunaratskul, T. et al. (2025), “
+Central Bank Exploration of Tokenized Reserves
+”, 
+Fintech Note
+, Vol. 2025, Issue 011, International Monetary Fund.
+Leung, V. et al. (2023), “
+An Assessment on the Benefits of Bond Tokenisation
+”, 
+Hong Kong Institute for Monetary and Financial Research (HKIMR)
+ 
+Research Paper
+, No 17/2023.
+Lin, K. (2025), “
+The Effect of DLT Settlement Latency on Market Liquidity
+”, 
+WFE Research Working Paper
+, No 5, Proceedings of the EUROFIDAI-ESSEC Paris December Finance Meeting 2024.
+Liu, J., Shim, I. and Zheng, Y. (2023), “
+Absolute blockchain strength? Evidence from the ABS market in China
+”, 
+BIS working paper
+, No 1116, Bank for International Settlements.
+OECD (2025), “
+Tokenisation of assets and distributed ledger technologies in financial markets: Potential impediments to market development and policy implications
+”, 
+OECD
+ 
+Business and Finance Policy Papers
+, No 75, OECD Publishing.
+OMFIF (2024), “
+Digital Assets 2024
+”, September.
+ 	These are the fees charged for underwriting the issuance of securities. They are deducted from the offering proceeds. 
+ 	One aspect that could drive wider adoption and potentially affect liquidity is the inclusion of DLT-based assets as eligible collateral. See ECB press release “
+ECB paves way for acceptance of DLT-based assets as eligible Eurosystem collateral
+”, published on 27 January 2026 and the discussion in Banu et al. (2026). 
+ 	Fractionalised ownership refers to the possibility of dividing traditionally indivisible or high-value assets into smaller, more accessible units represented as digital tokens. 
+ 	See OECD (2025) for an overview of potential impediments to tokenisation, explaining why it has not yet scaled. 
+ 	Atomicity is the principle that a transaction either fully completes or fully fails: all components of a transaction, such as the transfer of assets, execution of smart contracts or payment settlement, occur simultaneously and are inseparable (see, for example, Kunaratskul et al., 2025). 
+ 	The analysis covers three large crypto-assets (Bitcoin, Ether and Litecoin). 
+ 	Instruments that are either issued by EU residents, denominated in euro or likely to be held or transacted by EU residents. 
+ 	The list of tokenised assets was compiled in September 2025 and includes two tokenised bonds issued in November 2025. The bond features of these tokenised bonds were sourced from the Centralised Securities Database (CSDB) and Bloomberg in October 2025, as was the list of conventional bonds.  
+ 	The BaFin crypto securities register collects information on publications reported to BaFin under the German Electronic Securities Act (
+Gesetz über elektronische Wertpapiere
+ – eWpG) that relate to the registration of crypto securities in the Federal Gazette. The crypto securities list is an unverified compilation of the publications made by the issuers in the Federal Gazette, without any formal or substantive review by the supervisory authority. Securities are referred to as “crypto securities” because they are part of the “crypto list”, with their tokenisation status remaining likely but unconfirmed. Hence, we further check the tokenisation status by collecting information on the Digital Token Identifier (DTI) from the Association of National Numbering Agencies (ANNA) database and the white papers for the securities. 
+ 	Our sources include an ECB internal list of tokenised assets, the BaFin crypto securities register, a collection of news articles on tokenised assets provided by the International Capital Market Association, the Luxembourg Stock Exchange, SIX Digital Exchange (SDX), the NYALA Digital Asset Platform, the press page for tokenised bonds of Cashlink and the list of tokenised securities collected by Aldasoro et al. (2025). 
+ 	See 
+Exploratory work on new technologies for wholesale central bank money settlement
+ on the ECB’s website and the 
+SNB press release
+ of 2 November 2023. 
+ 	Some industry reports, for example those by Afme (2025) and OMFIF (2024), also find that issuance is concentrated in Europe. 
+ 	See 
+Proposal for a Regulation of the European Parliament and of the Council amending Regulations (EU) No 1095/2010, No 648/2012, No 600/2014, No 909/2014, 2015/2365, 2019/1156, 2021/23, 2022/858, 2023/1114, No 1060/2009, 2016/1011, 2017/2402, 2023/2631 and 2024/3005 as regards the further development of capital market integration and supervision within the Union
+. Lessons from the DLT pilot are explored in Banu et al. (2026). 
+ 	On 25 July 2024, the Republic of Slovenia was the first EU sovereign to issue a sovereign bond on DLT, which was done in the context of the ECB wholesale central bank money settlement experimentation programme, see 
+press release
+ of 26 July 2024 for further information. 
+ 	Among the 56% of issuers that have only issued tokenised bonds and no conventional bonds, only 31% have issued more than one tokenised bond, and only 12% more than two tokenised bonds. These issuers are not part of the subsequent empirical analysis since they do not have conventional bonds that can be used for the comparison. 
+ 	This result relies on the 36 issuers that have both tokenised and conventional bonds which are alive at the time of issuance (47,000+ bonds), of which only 5,700+ bonds have the same features as their tokenised counterparts by the same issuer. 
+ 	The average maturity of tokenised bonds is 3.6 years among issuers with both types of debt.  
+ 	The dataset captures bonds that have the same features as their tokenised counterparts by the same issuer (see Boxes 1 and 2) and have sufficient information that is sourced for subsequent analyses. 
+ 	Following Leung et al. (2023), the 
+yield spread to benchmark is used as an indicator for borrowing costs measured as the cost to issuers at issuance. More broadly, Liu, Shim and Zheng (2023) also employ yield spread to benchmark as an indicator of efficiency gains associated with the use of blockchain technology.  
+ 	This test assumes balance of covariates (see Box 1), and hence should be viewed with caution given the challenges in finding perfect matches. 
+ 	For instance, tokenised assets may be issued by larger issuers, with potential benefits for underwriting fees and yields. 
+ 	The instrument type criterion builds upon and extends the methodology implemented by Leung et al. (2023). 
+ 	Owing to the limited number of ratings below AA, we consolidate lower ratings ranging from B to A into a single category labelled “LowerRating”. 
+  	In other words, the propensity score 
+ϕ
+i
+=
+P
+r
+T
+i
+=
+1
+ 
+ 
+X
+i
+)
+ is the probability that security 
+i
+ receives treatment given its explanatory variables 
+X
+i
+. The variable 
+T
+i
+ is the binary treatment indicator equal to one if a security 
+i
+ is tokenised and zero otherwise. 
+ 	Merrill Lynch Option Volatility Estimate index, a daily index used to approximate bond market volatility. 
+ 	Within a matched group, tokenised bonds receive a weight of 1, while conventional bonds receive a weight between 0.03 and 1 calculated as the inverse of the number of conventional bonds within that group. 
+ 	Imbens and Rubin (2015) suggest that absolute normalised differences exceeding 0.25 or even 0.50 may signal meaningful imbalance. However, as Baker et al. (2025) emphasise, no universally accepted threshold exists. In practice, more conservative values such as 0.10 are often used as indicators of satisfactory covariate balance. Our results remain unchanged under this more conservative threshold. 
+ 	The Bloomberg variables on annualised interbank lending rates for each currency are used as the benchmark for consistency across currency and across time.  
+ 	This alternative measure is sourced from S&P Capital IQ and used as a proxy given that no universal European bond market volatility index similar to the MOVE index is available; see Baran and Voříšek (2020). 
+ 	For the bid-ask spread we use the daily historical end-of-day pricing source BVAL (Bloomberg Valuation Service) as an indicator. BVAL relies on real-time market observations from different sources and produces valuations on actively traded bonds several times per day. For bonds that are less liquid, BVAL derives a comparable relative value price. BVAL sources pricing data from contributors including TRACE, MSRB, exchanges and broker quotes. It prioritises instrument coverage, independence and consistency across instruments. 
+ 	The only three retail-accessible tokenised bonds in our matched input dataset show an average bid-ask spread of 0.42 percentage points, compared with 0.15 percentage points for non-retail-accessible tokenised bonds and 0.14 percentage points for the 20 retail-accessible conventional bonds. 
+ 	Given the joint significance of the coefficient for retail access and its interaction term with tokenisation, as well as the improvement in the (within) adj. R squared, this indicator is included in the regression despite the small sample size of retail-accessible tokenised bonds.  
+ 	For instance, tokenised assets may be issued by more reputable issuers or in more stable currencies, which could independently enhance liquidity through higher investor demand regardless of tokenisation status. Additionally, during periods of economic expansion, bonds may experience higher liquidity through greater activity and investor confidence. 
+ 	The separate two-year time windows allow for heterogenous time-varying selection into treatment. In other words, bonds are tokenised at different times for different reasons and with potentially systematically different characteristics that could have an impact on outcomes. 
+ 	As in Box 1, owing to the limited number of ratings below AA, we consolidate lower ratings ranging from B to A into a single category labelled “LowerRating”. This is included in the PSM as an ordered variable. 
+ 	Within a matched group, tokenised bonds receive a weight of 1, while conventional bonds receive a weight calculated as the inverse of the number of conventional bonds within that group. 
+ 	Matched-group fixed effects absorb issuer fixed effects given the prior exact matching on the issuer. 
+ 	A bond is considered accessible to retail investors if identified as such in the Securities Holdings Statistics by Sector (SHSS) database or, alternatively, if its minimum subscription amount is below the average minimum subscription of €8,500 among identified retail bonds. 
+ 	We use the alternative measure both instead of the three-month average and in addition to the three-month average. The results are robust to those specifications. 
+ 	The magnitude and direction of the effect stay within the same range but lose significance. This probably stems from restricting the dataset to half of its observations when analysing only a one-year period. 
+ 	For an overview of the proposals in the context of the market integration package, see 
+the European Commission's website
+.  
+
+Are you happy with this page?
+
+Yes
+
+No
+
+What made you unhappy?
+
+Page not working
+
+Information not useful
+
+Design not attractive
+
+Something else
+
+Thank you for letting us know!
+
+ 
+
+Our website uses cookies
+
+We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:
+
+Read our privacy statement 
+ 
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Thank you!
+
+Thank you!
+
+We have updated our privacy policy
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+See what has changed in our privacy policy
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Your cookie preference has expired
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+This feature requires cookies.
+
+Modify

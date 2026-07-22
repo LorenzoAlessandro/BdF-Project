@@ -1,0 +1,647 @@
+Skip to:
+
+Skip to 
+navigation
+
+Skip to 
+content
+
+Skip to 
+footer
+
+ANYTIME 
+
+PAST MONTH 
+
+PAST YEAR 
+
+Search Options
+
+Image Preview
+
+Home
+
+Media
+
+Explainers
+
+Research & Publications
+
+Statistics
+
+Monetary Policy
+
+The €uro
+
+Payments & Markets
+
+Careers
+
+Suggestions
+
+Sort by
+
+Relevance
+                                
+
+Date
+                                
+
+ 
+
+Alexandra Born
+Principal Financial Stability Expert · Macro Prud Policy&Financial Stability, Financial Regulation and Policy
+Michael Grill
+Senior Team Lead - Financial Stability · Macro Prud Policy&Financial Stability, Financial Regulation and Policy
+Claudia Lambert
+Vanessa Schöller
+David Staunton
+Anna Tskhakaya
+
+        Tokenised money market funds: new technology, familiar risks?    
+
+Prepared by 
+Alexandra Born, Michael Grill, Claudia Lambert, Vanessa Schöller, David Staunton and Anna Tskhakaya
+Published as part of the 
+Macroprudential Bulletin 33
+, April 2026.
+The market for tokenised money market funds (TMMFs) – money market funds (MMFs) whose shares are issued as tokens on distributed ledgers (DLTs) – remains small but is expanding rapidly. This article explores the specific design features of TMMFs, including the tokenisation of their underlying assets, liabilities and operational processes. It analyses key economic differences between TMMFs and traditional MMFs, with a particular focus on their implications for financial stability. Tokenisation has the potential to enhance efficiency by enabling faster settlement together with near-24/7 availability and programmability, while unlocking new use cases, such as employing TMMF tokens as collateral. However, TMMFs could also amplify risks related to liquidity mismatches and operational fragilities. A dedicated box in this article compares TMMFs with stablecoins, assessing their financial stability implications and interlinkages. Ultimately, the net financial stability impact of TMMFs will depend on how the market evolves, how it will affect prevailing business models and how it will integrate and interact with traditional financial markets.
+1 Introduction
+A tokenised money market fund (TMMF) is a money market fund (MMF) whose shares are issued and recorded as digital tokens on a distributed ledger.
+ These tokens provide a digital claim on the underlying MMF and are recorded and transferred on-chain (using distributed ledger technology – DLT
+[
+1
+]
+). Unlike traditional MMFs, which record their shares through a central securities depository, TMMFs use DLT to issue and maintain their shares. TMMFs invest in similar short-term, low-risk assets and offer returns comparable to those of traditional MMFs. In the EU, TMMFs are in the scope of the existing Money Market Fund Regulation (MMFR)
+[
+2
+]
+ (see Barbaroux et al., 2025).
+With several distinct use cases identified in the digital asset ecosystem, TMMFs are expanding quickly, although their footprint remains limited in absolute terms.
+ First, TMMFs can provide investors with a relatively stable value and returns, together with convenient access to liquidity in the digital asset ecosystem.
+[
+3
+]
+ Second, TMMFs can serve as collateral for both crypto-based and traditional derivatives and repo transactions. Lastly, investors can sell their TMMF tokens directly on-chain, so creating a secondary market for TMMF shares. Although there is uncertainty about which use cases will ultimately prove most valuable, industry reports suggest that, so far, adoption has been largely confined to the digital asset ecosystem.
+[
+4
+]
+This article provides an in-depth analysis of TMMFs, using novel, hand-collected fund-level data.
+ It outlines market size and growth trends and then discusses specific design features. The article goes on to assess the key differences between TMMFs and traditional money market funds, focusing on their implications for financial stability. Finally, in a separate box, we compare TMMFs with stablecoins, evaluating their respective financial stability implications and interlinkages.
+2 Market size and growth
+The TMMF market is relatively small at present but is growing rapidly. 
+Total market size is estimated at around €7 billion – still small compared with the total market capitalisation of traditional MMFs or crypto-assets.
+[
+5
+]
+ EU-domiciled TMMFs account for about €725 million. Among these funds, three have a floating share price, while one aims to maintain a relatively stable share price.
+[
+6
+]
+ Although TMMFs still represent a niche market (
+Chart 1
+), their market capitalisation has roughly doubled within a year, outpacing growth in both stablecoins and traditional MMFs.
+[
+7
+]
+The ten largest TMMFs worldwide account for more than 90% of the total TMMF market capitalisation.
+ Most of these funds are domiciled outside the EU, in the United States, the British Virgin Islands and Hong Kong, with only two funds based in France.
+[
+8
+]
+ These funds mainly invest in government bonds.
+[
+9
+]
+Chart 1
+The global market capitalisation of TMMFs is small but growing rapidly
+Market capitalisation
+(in EUR billions)
+Sources: rwa.xyz, MMFR, ECB Data Portal, US Securities and Exchange Commission, authors’ calculations.
+Notes: Market capitalisation refers to the global aggregate. This article excludes tokenised financial instruments that resemble TMMFs but do not have to hold only MMF-appropriate assets. Examples of such instruments are OUSG and USDY, issued by Ondo Finance.
+3 Key design characteristics
+A key design feature of TMMFs is the degree of tokenisation of assets and liabilities.
+ TMMFs can differ markedly in how their assets and liabilities are tokenised (
+Figure 1
+ and 
+Table 1
+). By definition, TMMFs issue at least a portion of their liabilities in tokenised form, enabling investors to hold and transfer fund shares via DLT. A systematic analysis of the largest TMMFs reveals that tokenisation on the liabilities side is generally high
+[
+10
+]
+, while assets predominantly remain off-chain. Only a small number of TMMFs currently hold tokenised assets (
+Table 1
+, columns headed “Asset tokenisation” and “Liability tokenisation”).
+[
+11
+]
+Figure 1
+TMMFs mainly tokenise liabilities while assets remain largely off-chain
+Stylised balance sheets of traditional MMFs and TMMFs
+Sources: MMFR data, fund prospectuses and fund websites.
+Notes: The chart shows the balance sheet compositions of TMMFs by tokenisation status as well as their total percentage share in our sample of TMMFs as listed in Table 1. Balance sheet shares shown in the chart are based on empirical data but have been stylised for readability. NAV refers to the net asset value of the fund. For funds with partially tokenised assets or liabilities, the entire tokenised NAV is included in the calculation of the proportion.
+Another key design characteristic is whether or not core fund processes run fully on-chain, with implications for settlement finality.
+ Core processes – such as issuance, subscription and redemption, record-keeping, settlement and governance – can either use traditional off-chain procedures or operate fully on-chain (
+Table 1
+). Where processes are fully on-chain, the DLT functions as the legal and operational system of record and the ultimate source of ownership. Around half of the funds still use a traditional book-entry ledger as their primary record of ownership, meaning that fund shares legally change hands only after this ledger is reconciled with the DLT. Even in cases where ownership records are maintained on-chain, other core processes, such as the management of the underlying assets, typically remain off-chain. Many TMMFs allow subscriptions and redemptions to be made by means of both off-chain methods (using fiat) and on-chain mechanisms (via stablecoins), although some funds exclusively use fiat, and two funds operate solely with stablecoins.
+[
+12
+]
+Table 1
+Core fund processes in TMMFs remain partly off-chain
+Key features of the largest TMMFs and of EU-domiciled TMMFs 
+(tokenised features are highlighted in light blue)
+ 
+Ticker
+Tokenised NAV
+(EUR m)
+Liability tokenisation
+Asset tokenisation
+Official record
+Subscription/ redemption
+EU
+EUTBL
+440
+Full
+No
+DLT
+Fiat
+USTBL
+121
+Full
+No
+DLT
+Fiat
+AAULF
+13
+Partial*
+No
+Traditional 
+Fiat and stablecoin
+UKTBL
+2
+Full
+No
+DLT
+Fiat
+United States, BVI & HK
+BUIDL
+1,481
+Full
+No
+Traditional
+Fiat and stablecoin****
+USYC
+1,294
+Full
+No
+DLT
+Stablecoin
+BENJI
+690
+Full
+No
+Traditional
+Fiat and stablecoin
+WTGXX
+624
+Full
+No
+Traditional
+Fiat and stablecoin
+USTB
+467
+Partial**
+No
+Traditional
+Fiat and stablecoin
+CUMIU
+435
+Full
+Partial***
+Traditional
+Fiat
+FDIT
+225
+Full
+No
+Traditional
+Fiat
+JTRSY
+224
+Full
+Full
+DLT
+Fiat and stablecoin
+TBILL
+91
+Full
+No
+DLT
+Stablecoin
+Sources: Information collected from TMMF (preliminary) prospectuses, fund websites and communication from tokenising agents. Net asset value as of 31 December 2025.
+Notes: Only publicly confirmed features are included. NAV refers to the net asset value of the fund. *share of < 1% (on 4 February 2026), **share of approx. 80% (on 4 February 2026), ***share of ≤10% without investment in tokenised assets (yet) ****the fund allows both fiat and stablecoins for redemption, but only fiat for subscribing to the fund. All funds use USD/USDC for subscription or redemption except UKTBL, which uses GBP/EUR; and EUTBL, which uses EUR and predominantly invests in EUR-denominated assets. BVI refers to the British Virgin Islands and HK to Hong Kong. Besides the EU-domiciled TMMFs listed above, additional partially tokenised EU-domiciled MMFs exist, such as Amundi Funds Cash Euro and funds tokenised by Archax, for which we did not have information on tokenised net asset value.
+TMMFs currently rely substantially on external service providers, particularly when operating across both traditional and DLT-based markets.
+[
+13
+]
+ Fund units can be tokenised either directly by the fund manager or through third-party intermediaries. Since DLTs are not always used as the official record of transactions, reconciling the DLT with traditional ledger entries typically requires the involvement of internal or external transfer agents. Additionally, some TMMFs rely on service providers to enable investor access to the tokenised shares using fiat currencies and to convert stablecoins received from investors into fiat to purchase the underlying traditional assets. Approximately one-third of the largest TMMFs outsource both the tokenisation of shares and the provision of investor access through fiat or stablecoins, while over half use third-party transfer agents. This reliance on multiple intermediaries to manage parallel on-chain and off-chain infrastructures is likely to increase operational risk.
+Currently, none of the largest TMMFs domiciled globally or within the EU can be classified as fully on-chain, as their underlying assets and key processes remain partially off-chain.
+ The financial stability implications of these funds depend on their specific design, particularly when compared with a hypothetical fully on-chain TMMF.
+4 Key differences compared with traditional MMFs
+While TMMFs are frequently described as enabling 24/7 trading, cut-off times like those of traditional MMFs often persist in practice.
+ Although investors in TMMFs may be able to submit requests at any hour, redemptions with the issuer can be delayed or require off-chain steps during standard business hours. This limitation arises because most TMMFs are not fully on-chain and remain subject to the legal frameworks and operational processes of traditional funds, which impose cut-off times for subscriptions and redemptions. These limitations could theoretically be relaxed through real-time on-chain processing, for example via atomic settlement, where fund shares and payment tokens are exchanged simultaneously, ensuring the transaction is finalised only if both transfers succeed.
+TMMFs can offer greater transparency and programmability, but in practice key processes often remain off-chain, restricting these benefits.
+ Traditional MMFs provide limited intraday visibility and rely on intermediaries to execute instructions and reconcile positions. By contrast, TMMFs use DLT to record transactions on-chain in real time, allowing instant insights into ownership, pricing and fund activity, as well as enabling programmability through smart contracts.
+[
+14
+]
+ The enhanced transparency and the potential for faster and programmable transfers can support use cases such as employing TMMFs as collateral in derivatives and repo transactions, with counterparties being able to verify positions directly and in an automated manner. Despite these advantages, the benefits of TMMFs are often constrained, as critical processes remain off-chain.
+[
+15
+]
+ In addition, the degree of transparency depends partly on whether the underlying DLT is public, as this determines who can observe on-chain transactions.
+[
+16
+]
+Tokenisation can broaden the range of use cases and widen investor access to TMMF shares.
+ Unlike traditional MMFs, which are primarily used for liquidity management, TMMFs enable fund shares to be transferred directly on secondary markets without requiring the involvement of a fund manager (see World Economic Forum, 2025).
+[
+17
+]
+ Some TMMFs even offer innovative features such as intraday yield, calculated in real time down to the second during each transfer. This functionality improves cash management capabilities while offering a precise yield measure, making TMMFs particularly appealing for entities engaged in high-frequency trading or intraday liquidity management, such as hedge funds (Kaul, 2025). In addition, TMMFs typically feature low minimum investment thresholds and are explicitly marketed to retail investors, thereby broadening accessibility beyond professional investors. However, participation is typically contingent upon onboarding procedures, such as wallet whitelisting.
+5 Financial stability implications
+Traditional MMFs can pose financial stability risks because they promise daily liquidity while holding instruments that may become illiquid or lose value during stress.
+ This liquidity mismatch, particularly when coupled with a promise of a stable net asset value per share, makes MMFs vulnerable to sudden investor runs, as seen in 2008 and during the March 2020 “dash for cash”. Large scale redemptions can lead to forced asset sales, amplifying market volatility and transmitting stress to core short-term funding markets. This risk is most pronounced when MMF portfolios are concentrated in instruments such as commercial paper or short-term sovereign debt. Given that banks and corporates often rely on MMFs for short-term funding, severe stress can disrupt broader market functioning.
+TMMFs inherit these vulnerabilities while introducing additional channels for liquidity and run risk.
+ Tokenised shares may be redeemable instantly and 24/7 (although this is not always the case in practice), while at present the underlying MMF can only process subscriptions and redemptions at fixed cut-off times and with delays. This discrepancy between the liquidity of the token and underlying MMF creates a potential mismatch, increasing the risk of runs. This issue becomes particularly pronounced if token market disruptions occur while underlying markets are closed, triggering forced fire sales to meet redemption pressures once the traditional markets reopen. Secondary trading of TMMF shares can also influence run dynamics: market prices may diverge from the fund’s net asset value per share, signalling distress and prompting withdrawals (see Azar et al., 2025b) or, conversely, providing an incentive for arbitrage depending on the fund’s capacity to meet redemptions.
+[
+18
+]
+ These liquidity pressures could be further intensified if redemptions are settled in stablecoins, which may themselves deviate from par if investors lose confidence.
+The speed, programmability and transparency of DLT may further amplify run dynamics and shock propagation.
+ Instant and automated settlement enabled by smart contracts
+[
+19
+]
+ may result in highly synchronised redemptions and asset sales, intensifying herding behaviour and liquidity pressures (IOSCO, 2025). Additionally, the real‑time transparency of public DLTs combined with 24/7, cross‑border tradability could further amplify first‑mover incentives – especially for tokenised shares in partially tokenised funds – thereby accelerating stress transmission compared with traditional MMFs. If TMMF tokens are used as collateral within digital asset markets, the automatic liquidation of under‑collateralised positions could transmit shocks from the token markets to the underlying MMFs and their asset holdings.
+TMMFs have the potential to increase leverage in the financial system and deepen interconnections both within and between tokenised and traditional markets.
+ While leverage at the fund level remains constrained under the MMFR, tokenisation improves the transferability and transparency of TMMF shares, making them more accessible as collateral in both traditional and tokenised markets. If broadly accepted, token collateral can be re-used via smart contracts, facilitating the build-up of leverage and fostering dense, interconnected exposures among market participants (see Aquilina et al., 2025). By operating across traditional and tokenised markets, TMMFs could also transmit stress in both directions.
+Tokenisation introduces new operational risks that may affect the core functions of MMFs.
+ Cyber incidents, data integrity breaches and service outages may disrupt subscriptions and redemptions, while network congestion could delay settlement and hinder the timely calculation of net asset value per share. Operational errors and coordination failures among service providers could lead to inaccurate valuations and undermine investor confidence. Weaknesses in smart contracts or price oracles
+[
+20
+]
+ may additionally distort net asset value per share calculation, freeze transactions or misallocate assets. These risks vary with TMMF design: TMMFs relying on permissionless DLTs may face uncertainty over settlement.
+[
+21
+]
+ Fully on-chain TMMFs are more vulnerable to operational issues tied to the underlying DLT infrastructure, while TMMFs that partly rely on off-chain processes depend on third parties to manage off-chain assets. For TMMFs that use a traditional book-entry ledger as the primary record of ownership, the legally authoritative ledger needs to be clearly defined, as parallel off-chain registers can dilute DLT immutability and increase operational complexity (IOSCO, 2025).
+At the same time, TMMFs may also bring financial stability benefits.
+ Peer-to-peer trading enables investors to access liquidity without the need to redeem from the fund, which may reduce redemption-driven asset sales. The use of TMMFs as collateral in derivatives and repo transactions could simplify investors’ cash management and increase transparency on collateral use, particularly when conducted on public DLTs (Financial Conduct Authority 2025, Azar et al., 2025a). Atomic settlement and smart contracts can lessen counterparty and settlement risk while reducing reliance on intermediaries.
+The net financial stability impact of TMMFs will depend on how tokenisation and the market evolve.
+ During the transition phase, when TMMFs with varying degrees of tokenisation co‑exist and linkages are still forming, new channels of risk – such as operational vulnerabilities, liquidity pressures and amplification mechanisms – may emerge. These risks could materialise before the offsetting benefits, such as improved collateral mobility or reduced settlement risk, are fully realised. Whether tokenisation ultimately proves net positive or negative from a financial stability perspective will therefore hinge on several factors. These include the pace and form of adoption, the resilience of the supporting infrastructure, and the ability of regulators and supervisors to effectively contain new risks while fostering efficiency gains. In addition, the financial stability implications will depend on the degree to which assets and liabilities are on-chain or off-chain, and the level of reliance on intermediaries, as the market could adopt tokenisation either fully or partially.
+6 
+Conclusion
+TMMFs are a small but rapidly growing segment integrating traditional MMFs into the digital asset ecosystem.
+ Compared with traditional MMFs, they offer potential benefits such as faster trading, enhanced transparency, programmability and broader access. However, as essential fund processes and underlying assets remain partially off-chain, it is still not certain whether the potential efficiency gains will be realised with the market continuing to evolve. At the same time, TMMFs introduce unique financial stability risks owing, in particular, to the speed, programmability and transparency of DLT, which may amplify the liquidity and leverage risks inherent in traditional MMFs. Such risks become more salient as interconnectedness between tokenised and traditional markets increases. Whether tokenisation ultimately delivers net financial benefits will depend on the scalability of these markets and the ability of regulators and supervisors to manage new risks without unduly constraining the advantages of tokenisation.
+To harness the benefits of tokenisation in a prudent and effective way, regulatory policy and supervisory responses should focus on two priorities.
+ The first is to ensure that existing MMF frameworks (such as the MMFR in the EU) are applied consistently to TMMFs, possibly considering targeted adjustments where necessary to address DLT‑specific operational risks. The second is to improve data and reporting on tokenised MMFs, focusing on size, use cases and interconnections with both traditional financial markets and the digital asset ecosystem.
+Box 1	
+The economics of TMMFs and stablecoins: key similarities, differences and interlinkages
+Prepared by Alexandra Born, Michael Grill, Claudia Lambert, Vanessa Schöller, David Staunton and Anna Tskhakaya
+This box examines the economics of TMMFs and fiat-pegged stablecoins, highlighting key similarities and differences in their functioning, use and regulation.
+ Stablecoins are often compared with traditional MMFs (see, for example, Aldasoro, et al., 2025) making it natural to extend this comparison to TMMFs given their technological proximity. Building on this, the box compares the financial stability risks posed by stablecoins with those identified earlier in the article for TMMFs. Finally, it assesses direct and indirect interlinkages between the two, and how these interlinkages may amplify or transmit shocks across the broader financial system.
+Key similarities and differences between TMMFs and stablecoins
+TMMFs and fiat-pegged
+ 
+stablecoins share key similarities.
+ First, both exist as transferable tokens on a DLT. Second, both target a stable value relative to a fiat currency, offering a low-volatility and highly liquid store of value. Third, both offer daily liquidity to investors and invest their funds in short-term debt, engaging in maturity transformation. They hold highly liquid reserves to manage mismatches between assets and liabilities. Fourth, both act as a bridge between traditional finance and the digital asset ecosystem, as their value is backed by traditional financial assets, such as government bonds, which they hold as reserves.
+TMMFs and fiat-pegged
+ 
+stablecoins differ in various aspects
+, such as (i) their primary use cases, (ii) their technical implementation, which concerns their typical redemption procedures and ownership structure, and (iii) the ability to pay yield. TMMFs and stablecoins differ economically, leading to different regulation and distinct financial stability implications.
+First, TMMFs and stablecoins differ in their primary use cases globally, with stablecoins focused on deployment in the crypto-asset ecosystem and TMMFs on liquidity management (Figure A).
+ Stablecoins are widely used for settling trades in crypto-assets and, to a small degree, for settling tokenised assets, as well as for cross-border payments and remittances.
+[
+22
+]
+ By contrast, TMMFs are primarily marketed as liquidity management instruments and are currently not widely used for payment purposes. The current demand for TMMFs is also driven by their use as collateral in the crypto-asset ecosystem. For example, on decentralised finance platforms, TMMFs can be pledged in a transaction to borrow stablecoins.
+[
+23
+]
+Figure A
+Traditional MMFs, TMMFs and stablecoins differ in their current, industry-proposed use cases
+Notes: The figure shows the current main use cases of traditional MMFs, TMMFs and stablecoins, focusing on those most relevant for financial stability. These use cases reflect activities already observed in the market or discussed in industry reports. However, comprehensive data on the importance of specific use cases are currently limited. The potential use cases for “
+Collateral (repo/derivatives)
+” refers to derivatives and repo markets in both crypto and traditional finance. Stablecoins are mainly used in crypto-asset markets, while TMMFs are currently used in the digital asset ecosystem but may also be used in traditional markets in the future. “
+Enter/exit digital asset ecosystem
+” also includes on-/off-ramping for tokenised assets.
+Second, TMMFs differ from stablecoins in their technical implementation, which affects the way in which these tokens are bought and redeemed.
+ To comply with regulatory, legal and investor-eligibility requirements, most TMMFs use smart contract standards to restrict the transfers and redemptions to know-your-customer (KYC)-verified and permitted (“whitelisted”) wallets. Some platforms allow trading among all onboarded users, effectively widening access beyond the wallets directly whitelisted by the TMMF. Most stablecoins do not restrict on-chain transfers between users.
+[
+24
+]
+ While stablecoin transactions occur entirely on-chain and holders typically exit stablecoins by selling them on secondary markets, TMMFs are mainly bought or redeemed with the fund manager itself (see Aquilina et al., 2025). In addition, many TMMFs maintain a traditional ledger as well as a DLT, meaning that inconsistencies between the two systems could lead to uncertainty regarding ownership. By contrast, stablecoins rely solely on DLT for establishing ownership.
+Third, TMMFs offer yield for investors, while stablecoins authorised in the EU are prohibited from offering such returns.
+ TMMFs distribute earnings from underlying short-term assets, allowing investors to earn a return and offset opportunity costs, especially during periods of high interest rates. Stablecoins authorised in the EU cannot pay interest directly, and nor may crypto-asset service providers pay interest in connection with stablecoins. This means that, especially during periods of high interest rates, demand may shift towards TMMFs and away from zero-yielding stablecoins (see Aldasoro, et al. 2025).
+In the EU, TMMFs and stablecoins are subject to distinct regulatory frameworks, reflecting (and in part arising from) their differing economic characteristics.
+ TMMFs in the EU are regulated under the Money Market Fund Regulation (MMFR)
+[
+25
+]
+, like traditional MMFs. Stablecoins, however, are regulated under the Markets in Crypto-Assets Regulation (MiCAR)
+[
+26
+]
+, which governs transparency, valuation and reserve asset composition. Key differences between the frameworks (
+Table A
+), such as permission to pay interest or not, will not only influence how TMMFs and stablecoins operate but will also play a role in defining their dominant future use cases.
+Table A
+Regulatory frameworks in the EU differ for TMMFs and stablecoins
+MMFs (MMFR)
+Stablecoins (MiCAR)
+Reserves
+Money market instruments, securitisations, bank deposits, reverse repos and MMF shares; public debt MMFs may hold up to 99.5% in government debt
+At least 30% in bank deposits (up to 60% for significant EMTs or ARTs) with the remainder in highly liquid assets with minimal market, credit and concentration risk
+Valuation
+Mark-to-market (or mark-to-model if data are insufficient); amortised cost allowed in some cases (e.g. constant net asset value (CNAV) funds)
+Mark-to-market (or mark-to-model if data are insufficient)
+Transparency
+Daily asset valuation (including any deviation from stable net asset value) published on website. Detailed portfolio breakdown at least weekly
+Monthly disclosure of reserve of asset’s composition and liabilities. Reserves to be audited every six months, results to be published 
+Redemption fees?
+Generally, no, but can be implemented at the board’s discretion; redemption gates and full suspensions are also allowed
+Generally, no, although recovery measures  can be applied, such as redemption fees or temporary suspension
+Pay yield?
+Yes
+No
+Stable value target?
+Yes, although some choose to have a variable net asset value
+Yes, although deviations can occur in secondary markets
+Notes: According to the definitions in MiCAR, e-money tokens (EMTs) would be stablecoins referencing one fiat currency, while asset-referenced tokens (ARTs) would be stablecoins referencing a basket of currencies or other values of rights, including commodities such as gold. 
+Financial stability implications: similarities, differences and the role of interlinkages between TMMFs and stablecoins
+Evidence suggests that both MMFs and stablecoins are subject to “flight-to-safety” dynamics in periods of stress, which could also be a risk associated with TMMFs given their similarities with MMFs.
+[
+27
+]
+ Liquidity transformation inherent in both stablecoins and TMMFs can create run risks and first-mover advantages, where early redeemers receive full value while others bear losses, leading to net flows shifting from riskier segments to safer ones. This risk is amplified through several features stemming from the use of DLT infrastructure, such as 24/7 tradability, programmability and potential operational fragilities. They also both link traditional and digital asset markets through their reserve assets, which are concentrated in short-term sovereign debt and money market instruments. If either TMMFs or stablecoins scale substantially, a run on them could lead to sudden asset sales disrupting financial markets (Gross and Senner, 2026). However, the way these vulnerabilities play out in practice would vary owing to differences in how investors access liquidity (e.g. selling a stablecoin on secondary markets versus redeeming TMMF units from the fund manager) and the different regulatory frameworks they need to comply with. If TMMFs migrate more of their assets and operational processes on-chain, and secondary markets for TMMFs scale, their run dynamics may start to resemble those of stablecoins.
+Run dynamics for TMMFs and stablecoins may differ, for example owing to the mechanism investors use to exit, potential sponsor support or liquidity management tools.
+ Currently, investors redeem TMMF units directly with the asset manager for fiat currency or stablecoins, given the limited role of secondary markets. This means that if redemptions exceed available liquidity, the asset manager may need to sell assets at a loss. By contrast, stablecoin holders use secondary markets instead of redeeming their stablecoins directly from the issuer.
+[
+28
+]
+ High selling pressure on secondary markets can cause a stablecoin to lose its peg even if the underlying reserve assets retain their full value and issuers uphold redemption commitments.
+[
+29
+]
+ Potential sponsor support for stablecoin issuers, such as from parent banks, may stabilise a stablecoin run. EU-domiciled TMMFs are prohibited from receiving external support that guarantees liquidity or stabilises net asset value per share, even though sponsors such as banks or asset managers may have strong incentives to intervene to avoid losses, reputational damage or forced asset sales (Parlatore, 2016). Certain MMFR features could mitigate TMMF run risks: constant net asset value (CNAV) and low-volatility net asset value (LVNAV) funds can use valuation procedures to maintain a stable net asset value per share, while liquidity management tools such as gating or suspending redemptions can help manage large outflows and protect remaining investors.
+[
+30
+]
+ Under MiCAR, such redemptions may be suspended only as part of a formal recovery plan. Although stablecoins often trade in secondary markets, peg stability ultimately depends on the ability to redeem with the issuer.
+Potential interlinkages between stablecoins and TMMFs may transmit shocks between these two markets and could affect broader financial stability. 
+Interlinkages between TMMFs and stablecoins can exist in both directions (
+Figure B
+). On the one hand, stablecoins are used in the subscription and redemption processes of TMMFs. On the other hand, TMMFs could be part of the reserve assets of stablecoins. These interlinkages could transmit shocks from stablecoins to TMMFs and vice versa, potentially also amplifying shocks to traditional markets.
+[
+31
+]
+ For example, most of the largest TMMFs using stablecoins (
+Table 1
+) rely on a single stablecoin (Circle’s USDC). This exposes them to risks materialising from that stablecoin, which could disrupt redemptions and undermine investor confidence. In addition, if TMMFs are part of stablecoin reserve assets, stress in TMMFs may threaten a stablecoin’s peg and trigger redemptions of the funds’ holdings, while large stablecoin outflows may in turn force TMMF sales, creating mutual liquidity pressures.
+[
+32
+]
+ 
+Figure B
+Stablecoin-TMMF interlinkages may transmit shocks between the two sectors and beyond
+Notes: The figure illustrates the interlinkages between stablecoins and TMMFs and the potential transmission of shocks between them, including spillovers to traditional financial markets. Potential spillovers to traditional financial markets include fire sales of the reserve assets such as sovereign bonds, leading to selling pressure in sovereign bond markets or liquidity strains in short-term funding markets.
+Overall, TMMFs differ from stablecoins in their use cases, redemption mechanisms, liquidity tools and regulation, and their interlinkages with stablecoins could amplify or transmit stress. 
+While both are tokenised and reserve-backed, TMMFs primarily serve liquidity management purposes and can distribute yield, whereas stablecoins are mainly used for settling trades in the crypto-asset ecosystem and cannot pay interest in the EU. These differences will shape how any potential stress materialises and how any potential runs unfold.
+References
+Adachi, M. et al. (2022), “
+Stablecoins’ role in crypto and beyond: functions, risks and policy
+”, 
+Macroprudential Bulletin
+, Issue 18, ECB, July.
+Adrian, T. et al. (2025), “
+Understanding Stablecoins
+”, 
+Departmental Papers,
+ No 009/2025, International Monetary Fund. 
+Aldasoro, I. et al. (2025), “
+Stablecoins, money market funds and monetary policy
+”, 
+Economics Letters
+, Vol. 247, Article 112203.
+Anadu, K. et al. (2025), “
+Runs and Flights to Safety: Are Stablecoins the New Money Market Funds?
+”, 
+FRB of Boston Supervisory Research & Analysis Unit Working Paper
+, No SRA 23-02.
+Aquilina, M. et al. (2025), “
+The rise of tokenised money market funds
+”, 
+BIS Bulletin
+, No 115, Bank for International Settlements, November. 
+Azar, P. et al. (2025a), “
+The Emergence of Tokenized Investment Funds and Their Use Cases
+”, 
+Liberty Street Economics
+, Federal Reserve Bank of New York, 24 September. 
+Azar, P. et al. (2025b), “
+The Financial Stability Implications of Tokenized Investment Funds
+”, 
+Liberty Street Economics
+, Federal Reserve Bank of New York, 24 September. 
+Banu, E. et al. (2026), “
+Towards an efficient and integrated digital capital market in Europe: the role of tokenisation and the Eurosystem’s policy response
+”, 
+Macroprudential Bulletin
+, Issue 33, ECB, March.
+Barbaroux, N., Brousse, C. and Zribi, D. (2025), “
+Tokenised money market funds: what are the implications for financial stability?
+”, 
+Eco Notepad
+, No 408, Banque de France, 1 July.
+Basel Committee on Banking Supervision (2024), “
+Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies
+”, 
+Working Papers
+, No 44, Bank for International Settlements.
+Financial Conduct Authority (2025), “
+Progressing Fund Tokenisation
+”, 
+Consultation Paper
+, No CP25/28, Financial Conduct Authority.
+Financial Stability Board (2023), “
+High-level Recommendations for the Regulation, Supervision and Oversight of Global Stablecoin Arrangements
+”, July.
+Financial Stability Board (2024), “
+The Financial Stability Implications of Tokenisation
+”, October.
+Gross, M. and Senner, R. (2026), “
+From Par to Pressure: Liquidity, Redemptions, and Fire Sales with a Systemic Stablecoin
+”, 
+IMF Working Papers
+, Vol. 2026, Issue 005, International Monetary Fund.
+IMMFA (2025), “
+IMMFA White Paper on Tokenisation of Money Market Funds
+”, February.
+IOSCO (2025), “
+Tokenization of Financial Assets
+”, November.
+Kaul, S. (2025), “
+Tokenized money market funds: The bridge to a new financial infrastructure
+”, 9 June. 
+Ma, Y., Zeng, Y. and Zhang, A. L. (2025), “
+Stablecoin Runs and the Centralization of Arbitrage
+”, 
+Working Paper
+, No 33882, National Bureau of Economic Research.
+OECD (2025), “
+Tokenisation of assets and distributed ledger technologies in financial markets: Potential impediments to market development and policy implications
+”, 
+OECD
+ 
+Business and Finance Policy Papers
+, No 75, OECD Publishing. 
+Parlatore, C. (2016), “
+Fragility in money market funds: Sponsor support and regulation
+”, 
+Journal of Financial Economics
+, Vol. 121, Issue 3, pp. 595-623.
+Parsons, J. (2025), “
+FCMs take wait-and-see approach to digital collateral
+”, 17 June.
+S&P Global (2025), “
+Sky Protocol Assigned ‘B-’ Rating; Outlook Stable
+”, 7 August. 
+The Investment Association (2024), “
+Further fund tokenisation: Achieving investment fund 3.0 through collaboration
+”, March.
+World Economic Forum (2025), “
+Asset Tokenization in Financial Markets: The Next Generation of Value Exchange
+”, May.
+ 	Distributed ledger technology (DLT) is a system for recording and storing data across a database that is distributed among a network or community of users, rather than being maintained by a central authority. A specific type of DLT is a blockchain, which structures data into sequential, cryptographically linked blocks. 
+ 
+Regulation
+ (EU) 2017/1131 of the European Parliament and of the Council of 14 June 2017 on money market funds (OJ L 169, 30.6.2017, pp. 8). 
+ 	Digital assets are meant here in a broad sense as including also tokenised traditional assets – in line with how this is often used in practice, while the term crypto-assets is used in a narrower way as referring only to unbacked crypto-assets such as bitcoin or stablecoins. Digital assets are not defined in EU legislation, as the EU’s Market in Crypto-asset regulation (MiCAR) defines crypto-assets in a broad sense, where a crypto-asset means a digital representation of a value or of a right that is able to be transferred and stored electronically using distributed ledger technology or similar technology. However, MiCAR does not apply to crypto-assets that fall within the scope of existing Union legislative acts on financial services, such as crypto-assets that qualify as financial instruments. 
+ 	Reliable data on TMMF use remain limited, and expectations for the use of TMMFs as collateral in traditional markets are mixed: a European MMF survey cites collateral management as a main benefit (IMMFA, 2025), yet some clearing banks do not expect TMMFs to be widely adopted any time soon (Parsons, 2025). For detailed information, see, for example, OECD (2025) or The Investment Association (2024). 
+ 	As of 4 February 2026, the TMMF market is very small compared with the total market capitalisation of the crypto-asset market (around €2 trillion) and the global stablecoin market (€248 billion), but it accounts for around one-sixth of tokenised financial and physical assets on public blockchains (€41 billion). Similarly, it is also magnitudes lower compared with MMFs regulated under the MMFR (€1.73 trillion) (rwa.xyz; CoinGecko, 4 February 2026; MMFR, 31 December 2025). 
+ 
+	The Spiko EU, US and UK T-Bills funds are short-term variable net asset value (VNAV) funds, while the abrdn Liquidity US fund is a low-volatility net asset value (LVNAV) fund. 
+ 	The market capitalisation of TMMFs grew by around 110% in 2025 compared with a 49% increase for stablecoins and an 11% decline for MMFs regulated under the MMFR over the same period (rwa.xyz; MMFR, 31 December 2025). 
+ 	See 
+Table 1 
+for the names of the largest funds and Graph 2.A in Aquilina et al. (2025) showing their market capitalisation growth measured as total value locked. 
+ 	Around 75% of the EU-domiciled TMMFs invest in European government bonds, this calculation is based on rwa.xyz data as of 4 February 2026, and the calculation excludes partially tokenised funds with unknown on-chain market capitalisation (e.g. Amundi Funds Cash Euro). Among EU-domiciled TMMFs, the Spiko EU, US and UK T-Bills funds invest only in government bonds of their respective regions; the smaller abrdn Liquidity US Fund mainly invests in non-government assets. Only the Spiko EU T-Bills Fund is euro-denominated. 
+ 	Only one of the largest TMMFs issues shares in both traditional and tokenised form, meaning that its liabilities are only partially tokenised (
+Table 1
+). 
+ 	Using tokenised assets as the underlying assets could offer further benefits, such as streamlining record-keeping, trading and settlement, as well as reducing costs and intermediation (IOSCO, 2025). The fact that this behaviour has not so far been observed may be due to the infancy of the tokenisation market more generally (for further discussion, see Banu, et al. 2026). 
+ 	For TMMFs using fiat for subscriptions or redemptions, investors interact off-chain with the fund manager or transfer agent, who subsequently maintains the on-chain DLT records. 
+ 	For an overview of the parties involved in a TMMF operational model, see Graph 1 in Aquilina et al. (2025). 
+ 	Smart contracts are self-executing computer programs. They automatically execute predefined actions when specified conditions are met. 
+  	For example, when the DLT does not represent final ownership rights as explained in Section 3. 
+ 	TMMFs are mainly issued on public, permissionless DLTs, predominantly on Ethereum but also, for example, on BNB Chain, Stellar, XRP Ledger and Arbitrum. 
+ 	For example, the Superstate Short Duration U.S. Government Securities Fund and the Franklin OnChain US Government Money Fund enable peer-to-peer transactions (see Superstate, 13 May 2024, “
+USTB now Enabled for Peer-to-Peer Transfers
+”; and Franklin Templeton, 25 April 2024,
+ “Franklin Templeton Announces Availability of Peer-to-Peer Transfers for Franklin OnChain U.S. Government Money Fund
+”). Some TMMFs restrict peer-to-peer transactions in general or restrict it to authorised investors using smart contracts or specific token standards. 
+ 	In the EU, fully tokenised MMFs are currently variable net asset value (VNAV) or low-volatility net asset value (LVNAV), not constant net asset value (CNAV), and can fluctuate slightly under stress. 
+ 	For example, by programming collateral liquidation triggers into smart contracts. 
+ 	An oracle is a service that enables smart contracts to access external or off-chain data in real time. 
+ 	“Permissionless” and “permissioned” are the terms used to describe whether participation in the consensus process used to validate transactions and data is open to anyone or restricted to authorised participants (Basel Committee on Banking Supervision, 2024).
+ 
+Permissionless blockchains often settle transactions probabilistically, leaving settlement finality ambiguous. Given that finality is legally defined, this ambiguity can create uncertainty (see Financial Stability Board, 2024, and IOSCO, 2025). 
+ 	In emerging market and developing economies in particular, stablecoins are frequently used as a store of value, reflecting demand for exposure to stable foreign currency-denominated assets. For a discussion of stablecoin use cases, see Adrian et al. (2025). 
+ 	Aquilina, et al. (2025) find that “based on Ethereum data, companies operating Decentralised Finance protocols are the main investors in BUIDL, the largest TMMF to date”. 
+ 	Stablecoins typically use standard fungible tokens (such as ERC-20) with unrestricted transfers, whereas TMMFs in some cases employ security token standards (such as ERC-1400 or ERC-3643) that prevent tokens being transferred to non-approved wallets (see Aquilina et al., 2025). 
+ 
+Regulation (EU) 2017/1131 of the European Parliament and of the Council of 14 June 2017 on money market funds (OJ L 169, 30.6.2017, pp. 8)
+. 
+ 
+Regulation (EU) 2023/1114 of the European Parliament and of the Council of 31 May 2023 on markets in crypto-assets, and amending Regulations (EU) No 1093/2010 and (EU) No 1095/2010 and Directives 2013/36/EU and (EU) 2019/1937 (OJ L 150, 9.6.2023, pp. 40).
+ 
+ 	See, for example, Anadu et al. (2025), Ma et al. (2025) and Aldasoro et al. (2025). 
+ 	Many stablecoins have so far restricted redemptions (see for example Adachi et al., 2022). However, as jurisdictions establish stablecoin frameworks this dynamic may change. This is because, according to the Financial Stability Board’s recommendations for global stablecoins, authorities should require that a robust legal claim be provided to all users against the issuer and/or underlying reserve assets (see Financial Stability Board, 2023). 
+ 	For example, during the Silicon Valley Bank turmoil in 2023, USDC briefly de-pegged, but its issuer Circle honoured redemptions at par. See, for example, Reuters,11 March 2023, “
+Circle assures market after stablecoin USDC breaks dollar peg
+”.  
+ 	Stable NAV MMFs apply amortised cost accounting, valuing securities at purchase price plus accrued adjustments, while LVNAV funds use a “valuation collar” to permit CNAV dealing within 20 basis points of mark-to-market deviations. 
+ 	Interconnections between TMMFs and stablecoins may deepen, as Circle, the issuer of USDC, one of the largest stablecoins, has acquired Hashnote, the issuer of US Yield Coin (USYC) one of the world’s largest TMMFs (see the Circle press release of 21 January 2025 entitled “
+Circle Announces Acquisition of Hashnote and USYC Tokenized Money Market Fund Alongside Strategic Partnership with Global Trading Firm DRW
+”). 
+ 	The Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act) allows eligible reserve assets, which includes MMFs, to be in tokenised form. Under MiCAR it is not clear whether TMMFs would be allowed, as the respective implementing regulation has not been adopted yet. In practice, TMMFs have not so far been used as reserve assets for fiat-pegged stablecoins, but only for decentralised finance protocols or algorithmic stablecoins. For example, USDS, the third-largest stablecoin globally, reportedly has reserves that include BUIDL and JTRSY, while Mountain Protocol’s stablecoin and frxUSD also include BUIDL in their reserves (Azar, et al. 2025a; S&P Global, 2025). 
+
+Are you happy with this page?
+
+Yes
+
+No
+
+What made you unhappy?
+
+Page not working
+
+Information not useful
+
+Design not attractive
+
+Something else
+
+Thank you for letting us know!
+
+ 
+
+Our website uses cookies
+
+We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:
+
+Read our privacy statement 
+ 
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Thank you!
+
+Thank you!
+
+We have updated our privacy policy
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+See what has changed in our privacy policy
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Your cookie preference has expired
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+This feature requires cookies.
+
+Modify

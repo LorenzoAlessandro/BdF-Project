@@ -1,0 +1,258 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 04, 2025
+
+What Do Bank Stock Returns Say About Monetary Policy Transmission?
+
+Paige Ehresmann, Juan M. Morelli, and 
+Jessie Jiaxu Wang
+1
+
+1. Introduction
+
+In this note, we build on the factor-based asset pricing framework introduced in our companion piece, "Modeling Bank Stock Returns: A Factor-Based Approach" (Ehresmann, Morelli, and Wang, 2025), to examine the transmission of monetary policy (MP) shocks through bank stock returns. Specifically, we explore two core questions. First, we ask how MP shocks affect the systematic risk factors that explain bank stock returns. Second, we study whether the stock price responses to MP shocks differ across banks with varying balance sheet characteristics, such as size, leverage, and funding structures. By doing so, we quantify the heterogeneous effects of monetary policy transmission within the banking sector.
+
+Our results show that MP shocks meaningfully shift risk factors that price bank stocks. On average, a contractionary MP shock reduces market excess returns and the default premium factor, while increasing the value factor. At the cross-section, we find that larger and more leveraged banks, as well as those with higher shares of wholesale funding and uninsured deposits, experience significantly sharper stock price declines following contractionary MP shocks. Notably, we show that the greater sensitivity of larger banks to MP shocks is primarily transmitted through the market risk factor.
+
+2. A Factor Model for Bank Stock Returns and Monetary Policy Shocks
+
+In our companion note (Ehresmann, Morelli, and Wang (2025)), we introduced a five-factor asset pricing model for bank stock returns, building on Gandhi and Lustig (2015) and Fama and French (1993). The model includes three stock market factorsâmarket excess returns (MKT), size (SMB), and value (HML)âand two bond market factorsâterm premium (TERM) and default premium (DEF). These factors explain approximately 80 percent of the variation in banks' excess returns and serve as a systematic lens to track the sector's risk dynamics.
+
+Given that unanticipated monetary policy decisions are well-known sources of exogenous shocks (for example, Bernanke and Kuttner (2005); Christiano, Eichenbaum, and Evans (2005)), we begin by examining the responsiveness of each risk factor to monetary policy shocks. We use high-frequency monetary policy shocks from JarociÅski and Karadi (2020), who isolate unexpected changes in the policy stance around FOMC announcements.
+
+We estimate the following monthly regression for each risk factor:
+
+$$$$ {FF}_{j,t}=\beta_{0,j}+\beta_{1,j}MP_t+\sum_{k\epsilon \mathcal{F}} \beta_{2,k}\ {FF}_{k,t-1}+\upsilon_{j,t}\ (1) $$$$
+
+where $${FF}_{j,t}$$ denotes factor $$j$$ in month $$t, MP_t$$ is the monetary policy shock where a positive shock means a tightening of monetary policy stance, $$\mathcal{F}=(MKT,HML,SMB,TERM, DEF)$$ is the set of five risk factors. We control for the one-month lagged values of all factors to account for persistence. All variables are expressed in percentage points.
+
+2.1 How Risk Factors Respond to Monetary Policy Shocks
+
+Table 1 presents the estimated impact of MP shocks on each risk factor. We tabulate the $$\beta_{1,j}$$ coefficient estimates for the full sample and for a subsample excluding the volatile Global Financial Crisis (GFC) period.
+
+Table 1. Response of Risk Factors to Monetary Policy Shocks
+
+$$\beta_{1,j}$$ estimates
+
+MKT
+
+HML
+
+SMB
+
+TERM
+
+DEF
+
+Observations
+
+Full Sample
+
+-18.52***
+
+7.48**
+
+-3.11
+
+-3.31
+
+-6.33**
+
+406
+
+(4.36)
+
+(3.50)
+
+(3.39)
+
+(3.26)
+
+(2.49)
+
+ 
+
+No GFC
+
+-19.41***
+
+9.26***
+
+-2.50
+
+-0.80
+
+-4.05*
+
+382
+
+(4.29)
+
+(3.51)
+
+(3.72)
+
+(3.04)
+
+(2.17)
+
+ 
+
+Note: Estimation results for $$\beta_{1,j}$$ coefficient estimates in Equation (1) using monthly data from February 1990 to December 2023. Standard errors are shown in parenthesis, and â, ââ, âââ denote statistical significance at 10%, 5%, and 1%, respectively.
+
+Source: JarociÅski and Karadi (2020), 
+Kenneth French's Data Library
+
+Consistent with prior studies (for example, Bernanke and Kuttner (2005); JarociÅski and Karadi (2020)), we find that contractionary MP shocks have a significantly negative effect on the MKT factor, indicated by the negative and statistically significant estimate for $$\beta_{1,MKT}$$. The economic magnitude is substantial: a one-standard-deviation (1-s.d.) positive monetary policy (MP) shockâequivalent to a 5 basis point (bp) surprise tightening in our sampleâlowers the MKT factor by approximately 1 percentage point (pp).
+
+The response of the HML factor is also statistically and economically significant. Specifically, a 1-s.d. positive MP shock raises HML by roughly 0.4 pp. This finding suggests that growth firmsâthose with low book-to-market ratiosâare more sensitive to contractionary MP shocks than value firms. Growth firms tend to rely more heavily on external financing and are more exposed to future cash flow discounting, making them particularly vulnerable when interest rates rise. This result aligns with the notion that monetary policy tightening disproportionately affects firms whose valuations are more dependent on long-term growth prospects and discount rates.
+
+By contrast, we find that neither the SMB factor nor the TERM factor exhibit statistically significant responses to MP shocks; this result is robust when excluding the extraordinary period of financial turmoil during the GFC from the estimation or the zero lower bound period (not shown). This suggests that size-related and term structure effects are less relevant channels for the immediate transmission of monetary policy surprises to systematic risk pricing in bank stocks.
+
+Finally, the DEF factor reacts negatively and significantly to contractionary MP shocks, with a 1-s.d. positive MP shock reducing the DEF factor by about 0.4 pp. This result is suggestive of risky firms being more negatively affected by contractionary MP shocks (see, for example, Anderson and Cesa-Bianchi (2024)).
+
+Together, these estimates underscore that MP shocks depress broad market valuations and systematically shift priced sources of risk in bank stock returns.
+
+3. Heterogeneous Effects Across Banks
+
+Having documented that MP shocks are a systematic source of risk priced by the common risk factors, we next examine whether banks with different balance sheet characteristics exhibit varying stock price responses to MP shocks. To this end, we first purge each factor of variations relating to MP shocks and retain the residual variation as controls for other systematic risks. We then regress banks' excess returns onto the MP shocks interacted with bank-level characteristics, controlling for the residualized risk factors.
+
+We construct bank characteristics variables from Call Reports data from 1990 to 2023 and estimate the following panel regression:
+
+$$$$R_{i,t}-R_{t-1}^f=\beta_0^X+\sum_{k\epsilon \mathcal{F}}\beta_k^X \widetilde{FF}_{k,t} + \sum_{d=1}^{10} \beta_d^X X_{d,t}^{y-1} + \sum_{d=1}^{10} \gamma_d^X (X_{d,t}^{y-1}\times {MP}_t )+\epsilon_{i,t},\ (2)$$$$
+
+where $$R_{i,t}-R_{t-1}^f$$ is the excess return of bank $$i$$ in month $$t$$; $$\widetilde{FF}_{k,t}$$ denote the residualized factor $$k\epsilon F$$, which captures systematic risks unrelated to monetary policy shocks; $$X_{d,t}^{y-1}$$ denote decile $$d \epsilon$$ [1,â¦,10] of a given bank characteristic $$X$$, measured in the calendar year preceding month $$t$$ (denoted by $$y-1$$).
+
+Our primary coefficients of interest are the interaction coefficients $$\gamma_d^X$$. These interaction terms trace how excess returns for banks in each decile of characteristic $$X$$ respond to an unexpected 5 basis point (bp) monetary policy shock, which corresponds to one standard deviation in our sample. This empirical design allows us to quantify the heterogeneity in banks' responses to monetary policy surprises based on their balance sheet characteristics, while controlling for other priced risk factors that may simultaneously affect bank stock returns.
+
+We find that several key bank characteristics meaningfully shape how bank stock prices react to monetary policy surprises, including bank size, leverage, and funding structure.
+
+Figure 1 illustrates the decile-specific responses of bank stock returns to MP shocks by size and leverage, where size is measured by total assets and leverage using the ratios of total assets to net worth.
+
+Figure 1. Response to MP Shocks by Bank Size and Leverage
+
+Note: The figure shows estimated stock price responses to a one-standard-deviation (5 bp) monetary policy shock by decile of bank size measured by total assets (TA) in panel (a) and leverage measured using the ratios of total assets to net worth (NW) in panel (b). Blue dots represent the coefficient estimate $$\gamma_d^X$$ for each decile, and dashed vertical lines represent 90 percent confidence intervals. The data covers the period from February 1990 to December 2023.
+
+Source: CRSP, 
+Wharton Research Data Services
+; Compustat, 
+Wharton Research Data Services
+, JarociÅski and Karadi (2020), 
+Kenneth French's Data Library
+; 
+Federal Financial Institutions Examination Council, Consolidated Reports of Condition and Income for a Bank
+; Board of Governors of the Federal Reserve, Consolidated Financial Statements for Holding Companies (FR Y-9C).
+
+Accessible version
+
+First, we find that larger banks experience significantly more negative stock price responses to contractionary MP shocks. Panel (a) of Figure 1 shows the response by size deciles follows a downward-sloping pattern, indicating that larger banks consistently experience greater stock price losses. Specifically, banks in the top decile of total assets lose about 0.6 percentage points more in excess returns following a one-standard-deviation positive MP shock than banks in the bottom decile. Following Gandhi and Lustig (2015), we also check for alternative measures of size including book value (BV) and market capitalization (MKTCAP) and find a similar pattern with these alternative size measures (not shown).
+
+Second, banks with higher leverage, measured by the ratio of total assets to net worth, also experience more negative stock price responses to MP shocks. Panel (b) of Figure 1 shows that highly leveraged banks in the top decile lose approximately 0.5 percentage points more in excess returns than banks in the least leveraged decile following a positive MP shock. These results are robust across leverage definitions using the ratio of total assets to book value of equity, or market capitalization. Additional analysis shows that the results are robust to controlling for interactions between MP shocks and banks' size deciles, and that banks with higher Tier 1 capital ratios exhibit milder stock price responses to MP shocks compared to banks with lower capital cushions (available upon request).
+
+Furthermore, Figure 2 presents results for banks' liability structures. Panel (a) shows that banks with greater reliance on wholesale fundingâwhich includes federal funds purchased, securities sold under repurchase agreements, borrowings, and brokered depositsâexperience more negative stock price responses to MP shocks. Specifically, banks in the top decile of wholesale funding ratios lose about 0.5 percentage points more in excess returns compared to those in the bottom decile.
+
+Figure 2. Response to MP Shocks by Bank Liabilities Composition
+
+Note: The figure shows estimated stock price responses to a one-standard-deviation (5 bp) monetary policy shock by decile of banks' wholesale funding ratios in panel (a) and uninsured deposit ratios in panel (b). Blue dots represent the coefficient estimate $$\gamma_d^X$$ for each decile, and dashed vertical lines represent 90 percent confidence intervals. The data covers the period from February 1990 to December 2023.
+
+Source: CRSP, 
+Wharton Research Data Services
+, JarociÅski and Karadi (2020), 
+Kenneth French's Data Library
+; 
+Federal Financial Institutions Examination Council, Consolidated Reports of Condition and Income for a Bank
+; Board of Governors of the Federal Reserve, Consolidated Financial Statements for Holding Companies (FR Y-9C).
+
+Accessible version
+
+Panel (b) shows that banks with higher ratios of uninsured deposits to total depositsâa riskier source of funding not covered by FDIC insuranceâalso tend to exhibit more negative stock price responses to MP shocks. Although the pattern of uninsured deposits is somewhat less precisely estimated, we reject the joint null hypothesis that responses for deciles 1, 2, 3, 8, 9, and 10 are statistically equal at the 5 percent level.
+
+Together, these results highlight that balance sheet characteristics shape banks' sensitivity to monetary policy, with larger, more leveraged banks, and those dependent on riskier funding sources, being particularly vulnerable with significantly sharper declines in stock prices following positive monetary policy shocks. These heterogeneous effects suggest that bank-specific characteristics play an important role in the transmission of monetary policy.
+
+4. The Transmission Channel: Role of the Market Factor
+
+Our earlier results show that the market (MKT), value (HML), and default (DEF) factors respond significantly to monetary policy shocks and that larger banks experience more negative excess returns in response to these shocks. To further understand this size-dependent sensitivity, we examine whether the pass-through of MP shocks to banks' stock returns operates differentially through these risk factors.
+
+We implement a two-step procedure. First, we instrument each risk factor with the monetary policy shock, isolating the component of each factor driven by unexpected changes in policy stance. Second, we regress banks' excess returns on the instrumented risk factors, allowing the effect to vary by bank size decile. We then examine how the estimated coefficients differ across different bank size deciles to assess the size-dependent sensitivity of excess returns to each instrumented risk factor.
+
+Figure 3 presents the results. Panel (a) shows the responses when instrumenting the market factor (MKT), while Panel (b) shows the responses when instrumenting the value factor (HML). The results indicate that the pass-through of the instrumented market factor to bank stock returns exhibits a clear size-dependent pattern: larger banks are more sensitive to changes in the market factor induced by MP shocks. In contrast, the pass-through of the value factor does not vary significantly by bank size.
+
+Figure 3. Response to Instrumented Factors by Bank Size
+
+Note: The figure shows the estimated pass-through of instrumented risk factors to banks' stock returns by size deciles. Panel (a) presents results for the market factor (MKT), and Panel (b) presents results for the value factor (HML). Bank size is total assets in the calendar year preceding each month. Blue dots represent the coefficient estimate $$\gamma_d^X$$ for each decile, and dashed vertical lines represent 90 percent confidence intervals. The data covers the period from February 1990 to December 2023.
+
+Source: CRSP, 
+Wharton Research Data Services
+, JarociÅski and Karadi (2020), 
+Kenneth French's Data Library
+; 
+Federal Financial Institutions Examination Council, Consolidated Reports of Condition and Income for a Bank
+; Board of Governors of the Federal Reserve, Consolidated Financial Statements for Holding Companies (FR Y-9C).
+
+Accessible version
+
+This result suggests that larger banks' greater exposure to aggregate market risk amplifies their stock price responses to monetary policy tightening. Possible explanations are that larger banks are more leveraged, have more diversified but market-exposed portfolios, and are more interconnected with broader financial markets, making them more sensitive to aggregate risk shifts induced by monetary policy.
+
+5. Conclusion
+
+This note extends our factor-based asset pricing framework to study the transmission of monetary policy through bank stock returns. We show that monetary policy shocks systematically affect key risk factors and that the response of bank stock prices to these shocks varies with bank-level characteristics. Larger, more leveraged banks, and those reliant on wholesale funding and uninsured deposits, experience sharper stock price declines following contractionary MP shocks. Our analysis further shows that the market factor serves as the main transmission channel explaining why larger banks are more sensitive to monetary policy shocks. These findings emphasize the importance of accounting for bank-level heterogeneity when assessing the transmission and effectiveness of monetary policy. The results suggest that monetary policy may have disproportionate effects on systemically important banks, with implications for financial stability and policy design.
+
+References
+
+Anderson, Gareth and Ambrogio Cesa-Bianchi. "Crossing the Credit Channel: Credit Spreads and Firm Heterogeneity." 
+American Economic Journal: Macroeconomics
+, July 2024, 16 (3), 417â446.
+
+Bernanke, Ben S. and Kenneth N. Kuttner. "What Explains the Stock Market's Reaction to Federal Reserve Policy?" 
+The Journal of Finance
+, 2005, 60 (3), 1221â1257.
+
+Christiano, Lawrence J., Martin Eichenbaum, and Charles L. Evans. "Nominal Rigidities and the Dynamic Effects of a Shock to Monetary Policy." 
+Journal of Political Economy
+, 2005, 113 (1), 1â45.
+
+Ehresmann, Paige, Juan M. Morelli, and Jessie Jiaxu Wang (2025). "
+Modeling Bank Stock Returns: A Factor-Based Approach
+." 
+FEDS Notes
+. Washington: Board of Governors of the Federal Reserve System, June 06, 2025.
+
+Fama, Eugene F. and Kenneth R. French, "Common risk factors in the returns on stocks and bonds," 
+Journal of Financial Economics
+, 1993, 
+33 
+(1), 3â56.
+
+Gandhi, Priyank and Hanno Lustig, "Size anomalies in US bank stock returns," 
+The Journal of Finance
+, 2015, 70
+ 
+(2), 733â768.
+
+JarociÅski, Marek and Peter Karadi. "Deconstructing Monetary Policy SurprisesâThe Role of Information Shocks," 
+American Economic Journal: Macroeconomics
+, April 2020, 12 (2), 1â43.
+
+1. Ehresmann: 
+[email protected]
+; Morelli: 
+[email protected]
+; Wang: 
+[email protected]
+. The views presented in this note are those of the authors and do not necessarily reflect those of the Federal Reserve Board or the Federal Reserve System. 
+Return to text
+
+Please cite this note as:
+
+Ehresmann, Paige, Juan M. Morelli, and Jessie Jiaxu Wang (2025). "What Do Bank Stock Returns Say About Monetary Policy Transmission?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 4, 2025, https://doi.org/10.17016/2380-7172.3864.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

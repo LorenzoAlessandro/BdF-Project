@@ -1,0 +1,444 @@
+FEDS Notes
+
+Twitter
+
+June 06, 2025
+
+Modeling Bank Stock Returns: A Factor-Based Approach
+
+Paige Ehresmann,
+Juan M. Morelli
+, and
+Jessie Jiaxu Wang
+1
+
+1. Introduction
+
+In this note, we introduce a factor asset pricing model to analyze risk-adjusted returns on bank stocks. Given their high-frequency availability, bank stock returns offer a valuable lens into the risk exposures and dynamics of the banking sector. Changes in bank stock prices may reflect both exposure to systematic risk factors and sector-specific risks. To control for common drivers of bank equity returns, our model includes five established pricing factors in the literature: three stock market factorsâmarket excess returns (MKT), size (SMB), and value (HML)âand two bond market factorsâterm premium (TERM) and default premium (DEF). This set of factors effectively captures broad movements in bank stock returns and helps isolate idiosyncratic risks. We illustrate the model's usefulness in two applications: first, for daily analysis of bank stock return drivers between policy events like FOMC meetings. Second, for detecting the propagation of banking-sector shocks, focusing on market reactions to news about New York Community Bancorp (NYCB) in early 2024 and contrasting them with responses during the collapse of Silicon Valley Bank (SVB) in early 2023.
+
+2. A Factor Model for Risk-Adjusted Bank Stock Returns
+
+Our factor model for risk-adjusted bank stock returns leverages daily and monthly stock return data. Given their high-frequency availability, bank stock returns offer real-time insights into the risk exposures and evolving dynamics of the banking sectorâsuch as regulatory changes, monetary policy shocks, macroeconomic news, and stress events.
+
+Changes in bank stock prices may reflect exposure to both systematic risks and banking sector- specific risks. To account for common determinants of bank equity returns, we follow Gandhi and Lustig (2015) and include five risk factors that explain cross-sectional variation in returns across portfolios of nonfinancial stocks and bonds. Specifically, we estimate the following model:
+
+$$$$ R_{i,t+1} â R_{t}^{f} = \alpha_{i} + \beta_{i}^{mkt} MKT_{t} + \beta_{i}^{hml} HML_{t} + \beta_{i}^{smb} SMB_{t} + \beta_{i}^{term} TERM_{t} + \beta_{i}^{def} DEF_{t} + \epsilon_{t+1}^{i} $$$$
+
+where $$ R_{i,t+1} $$ denotes the return on bank index $$i$$. We construct return series based on two stock price indexes from Bloomberg: the KBW Banking Index that tracks 24 large banks and the KBW Regional Banking Index that tracks 50 regional banks. We also compute an equally weighted average return from the stock prices of the six largest U.S. bank holding companies (BHCs).
+
+Our factor model is grounded in the canonical consumption-based asset pricing framework (CCAPM), which relates asset returns to the stochastic discount factor (SDF) that prices risks in the economy. Under the standard assumption of an affine SDFâlinearly dependent on a set of systematic risk factorsâexpected excess returns can be expressed as a linear combination of risk factors. This framework yields a linear statistical model for estimating the exposure of excess returns to various sources of systematic risk.
+
+The five factors included in our model are standard in asset pricing and span key dimensions of priced systematic risk across stock and bond markets. These include the three stock market factorsâmarket excess returns (MKT), size (SMB), and value (HML)âalong with two bond market factors: term premium (TERM) and default premium (DEF).
+2
+Each coefficient $$ \beta $$, also known as the
+factor loading
+, measures the sensitivity of a stock's excess return to movements in the corresponding factor, helping disentangle different sources of systematic exposure. Accordingly, our model captures how differences in bank stock returns reflect their heterogeneous exposures to broad sources of systematic risk.
+
+The market excess return ($$ MKT_{t}$$)âthe return on the market portfolio minus the risk-free rateâ captures overall market risk. Stocks with high (positive) loadings on $$ MKT_{t} $$ tend to covary strongly with the broad market, prompting investors to demand higher excess returns as compensation. We expect bank stock returns to load positively on this factor ($$ \beta^{mkt} > 0 $$), reflecting their procyclical behavior: bank performance typically improves during market upswings and worsens during downturns. A high market beta ($$ \beta^{mkt} $$) may stem from banks' high leverage, which amplifies their sensitivity to aggregate shocks.
+3
+
+The value factor ($$HML_t$$, or "High Minus Low") is the return spread between firms with high and low book-to-market ratios. Value firmsâthose with high book-to-market ratiosâtend to have persistently low earnings on assets and are often mature, with substantial tangible assets tied to existing operations. As Zhang (2005) notes, such "assets in place" can limit flexibility and heighten risk, as they are less adaptable to changing economic conditions. This vulnerability to negative shocks results in higher expected returns as compensation for risk. Bank stocks are often considered value-oriented and are expected to load positively on the value factor ($$ \beta^{hml} > 0 $$), reflecting the nature of their loan portfolios. As shown in Section 3.1, these portfolios are closely tied to value-oriented industriesâsuch as finance, insurance, and real estate (FIRE); wholesale trade; and energy and utilitiesâall of which typically exhibit high book-to-market ratios.
+
+The size factor ($$ SMB_{t}$$, or "Small Minus Big") is the return spread between firms with small and large market capitalizations. Controlling for book-to-market ratios, small-cap firms generally have lower earnings on assets, while large-cap firms are seen as less risky, benefit from greater analyst coverage, and are better positioned to withstand economic downturns (Hong, Lim and Stein, 2000). The size factor captures the historical tendency of small-cap stocks to outperform large-cap stocks. Bank stocks are expected to load positively on this factor ($$ \beta^{smb} > 0 $$) when their loan portfolios covary with the performance of small-cap firms, which tend to be more reliant on bank financing than large-cap firms that often have access to alternative funding sources.
+
+The term premium ($$ TERM_{t}$$), the excess return on an index of 10-year Treasury bonds over the one-month Treasury bill rate, measures the slope of the yield curve and serves as a proxy for
+interest rate risk
+. The slope of the yield curve affects banks' net interest margins (NIMs) and the valuation of their securities holdings, affecting their cash flows and valuation. Because banks engage in maturity transformationâborrowing short and lending longâtraditional commercial banks that rely heavily on net interest income tend to profit from a steeper yield curve and the associated term premium, implying $$\beta^{term} > 0$$. However, banks heavily exposed to long-duration fixed-income securities may face valuation losses from a steepening of the yield curve, potentially leading to a negative loading on the term factor ($$ \beta^{term} < 0 $$).
+
+The default premium ($$ DEF_{t} $$), the excess return on an index of 10-year investment-grade corporate bonds over an index of 10-year Treasury bonds, captures credit risk conditions by comparing returns on risky versus safe assets. Since banks hold substantial portfolios of credit-sensitive assets, including loans and corporate bonds, their valuations and cash flows generally improve when credit risk is rewarded, leading to positive loadings on the DEF factor.
+
+Finally, the constant term, $$\alpha_{i}$$, captures the average excess return not explained by exposures to the five systematic risk factors, known as
+abnormal returns
+. An alpha significantly different from zero may indicate bank-specific performance factors or pricing anomalies unexplained by the model. The residual term, $$ \epsilon_{t+1}^{i} $$ represents idiosyncratic risk, reflecting fluctuations in bank returns unique to a given bank index and uncorrelated with the systematic risk factors.
+
+We estimate the factor model using monthly return data from 2012 to 2024, following specification (1). Panel (A) of Table 1 presents the estimation results for the three indexes. The model performs well, explaining about 80 percent of the variation in banks' excess returns, demonstrating its effectiveness in capturing the risk exposures driving bank equity returns, even amid periods of heightened volatility and structural change.
+
+Table 1. Estimation of the Factor Model Using Monthly Data
+
+Panel A: Observed MKT
+
+Panel B: Orthogonalized MKT
+
+KBW
+
+KBW Regional
+
+Top 6 BHCs
+
+KBW
+
+KBW Regional
+
+Top 6 BHCs
+
+MKT
+
+1.05âââ
+
+1.01âââ
+
+1.19âââ
+
+1.05âââ
+
+1.01âââ
+
+1.19âââ
+
+(0.09)
+
+(0.08)
+
+(0.1)
+
+(0.09)
+
+(0.08)
+
+(0.1)
+
+HML
+
+0.90âââ
+
+1.04âââ
+
+0.78âââ
+
+0.76âââ
+
+0.89âââ
+
+0.61âââ
+
+(0.08)
+
+(0.08)
+
+(0.09)
+
+(0.08)
+
+(0.07)
+
+(0.09)
+
+SMB
+
+0.45âââ
+
+1.05âââ
+
+0.17
+
+0.70âââ
+
+1.29âââ
+
+0.46âââ
+
+(0.1)
+
+(0.09)
+
+(0.11)
+
+(0.1)
+
+(0.09)
+
+(0.11)
+
+TERM
+
+-0.25
+
+-0.23
+
+-0.34â
+
+0.27â
+
+0.27â
+
+0.24
+
+(0.16)
+
+(0.15)
+
+(0.18)
+
+(0.15)
+
+(0.14)
+
+(0.17)
+
+DEF
+
+0.34
+
+-0.51â
+
+0.56
+
+2.95âââ
+
+2.00âââ
+
+3.51âââ
+
+(0.31)
+
+(0.29)
+
+(0.34)
+
+(0.21)
+
+(0.2)
+
+(0.23)
+
+$$ \alpha $$
+
+-0.27
+
+-0.17
+
+0.07
+
+-0.27
+
+-0.17
+
+0.07
+
+(0.26)
+
+(0.24)
+
+(0.29)
+
+(0.26)
+
+(0.24)
+
+(-0.29)
+
+Adjusted $$R^2$$
+
+0.81
+
+0.84
+
+0.79
+
+0.81
+
+0.84
+
+0.79
+
+Observations
+
+151
+
+151
+
+151
+
+151
+
+151
+
+151
+
+Note: Estimation results of Equation (1) for KBW, KBW Regional, and top 6 BHCs, using monthly data from 2012â2024. Panel (A) uses the market risk factor and Panel (B) the orthogonalized version. Standard errors are shown in parenthesis, and â, ââ, âââ denote statistical significance at 10%, 5%, and 1%, respectively.
+
+Source: Bloomberg Finance L.P., Bloomberg Per Security, https://www.bloomberg.com/professional/product/reference-data;
+Kenneth French's Data Library
+.
+
+The estimated loadings on $$ MKT_{t} $$ consistently exceed one across all bank indexes, with particularly large values for the top 6 BHCs. This aligns with Gandhi and Lustig (2015) who note that larger banks have higher market betas due to greater leverage and procyclicality. Loadings on $$ HML_{t} $$ are positive and statistically significant for all three indexes, though smaller for the largest banks, suggesting that value effects are more pronounced among smaller institutions. Similarly, $$ SMB_{t} $$ loadings are positive and significant for the KBW and KBW Regional indexes but insignificant for the top 6 BHCs, indicating the size premium is concentrated among smaller and mid-sized banks.
+
+The bond factors are generally insignificant, suggesting either limited time-series variation or weak relevance of fixed-income risks for bank equity returns after controlling for other risk factors. Finally, the estimated monthly abnormal returns (alphas) are not statistically different from zero, implying that the five-factor model successfully explains systematic variation in bank stock returns.
+
+While $$ MKT_{t} $$ effectively captures broad market risk, it may be correlated with the other four factors. This arises because systematic variation in stock returns is embedded in the market return, which is a value-weighted average of individual stock returns (Fama and French, 1993). To isolate the unique contribution of each factor, we orthogonalize $$ MKT_{t} $$ with respect to the other four factors. Specifically, we regress $$ MKT_{t} $$ on the remaining factors and use the residuals (plus the intercept) to construct an orthogonalized market return factor, $$ RMO_{t} $$. This ensures that the estimated factor loadings reflect exposure to independent sources of risk, not overlapping effects driven by market co-movement.
+
+Panel (B) of Table 1 reports the estimation results using $$ RMO_{t} $$ alongside the other four factors. As expected, loadings on the residualized market factor ($$ \beta^{rmo} $$) and the $$ R^2 $$ remain unchanged, since orthogonalization preserves the explanatory power of the market factor. However, coefficients on the other factors now represent risk exposures independent of market movements, sharpening interpretation. The HML factor remains positive and significant for all bank indexes, and the SMB factor turns positive and significant for the top 6 BHCs. Notably, DEF loadings become positive and statistically significant across all indexes, consistent with banks' exposure to credit-sensitive assets. TERM loadings turn positive but remain statistically weak, reflecting the ambiguous effects of yield curve steepening on bank stock performance.
+
+3. Application 1: Studying Price Drivers in-between Events
+
+In this section, we present our first application of the model: monitoring the drivers of bank stock returns between FOMC events. Valuation changes during inter-meeting periods can signal shifts in underlying risk exposures, factor premia, or banking-sector specific volatility. Our factor model offers a systematic and interpretable framework to track these developments in real time by decomposing return fluctuations into contributions from priced risk factors. This allows staff to assess whether observed price changes in the banking sector reflect macroeconomic forces, sectoral differences in valuation, evolving credit or term risk, or bank-specific fundamentals.
+
+To illustrate this use case, we apply the model to daily bank stock returns during a recent inter-meeting period. Following Fama and French (1993), we extend their five risk factors to the most recent daily data.
+4
+To capture time-varying exposures, we run rolling regressions using one-, three-, and twelve-month windows of daily returns, recording the resulting loadings for each bank index. This high-frequency approach allows us to track evolving risk sensitivities and enhances the model's responsiveness to changing market conditions.
+
+Figure 1. Decomposition of Cumulative Excess Returns into Risk Factors
+
+Note: The decomposition of the KBW cumulative excess returns into the predicted components of each of the five risk factors and the cumulative alpha term, over the intermeeting period starting on May 3rd, 2022, based on daily data and rolling regressions with a one-month window.
+
+Source: Bloomberg Finance L.P., Bloomberg Per Security, https://www.bloomberg.com/professional/product/reference-data; CRSP, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+; Compustat, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+.
+
+Accessible version
+
+Figure 1 presents a decomposition of the cumulative excess returns into the predicted components of each risk factor and the cumulative alpha term, over the intermeeting period starting on May 3rd, 2022. Results are obtained from the one-month rolling window specification. MKT and HML explain most of the variations in the KBW cumulative excess returns, with MKT (blue bars) largely having a negative impact and HML (green bars) acting as an opposing positive force.
+5
+Conversely, cumulative abnormal returns (the alphas) and residuals are relatively small.
+6
+
+To better understand each factor's contribution to cumulative stock price variation, panel (a) of Figure 2 shows the dynamics of each cumulative risk factor during the inter-meeting period, while panel (b) shows the estimated factor loading of KBW excess returns to each factor. As is typical, the exposure to MKT was positive and greater than one, reflecting banks' high leverage. Combined with a negative cumulative MKT in this period, this yields a negative driving force on KBW price dynamics. The exposure to HML is also positive and economically significant, and since HML factor was positive during this periodâhigh book-to-market firms outperformed low-ratio firmsâthis contributed a positive force to KBW return dynamics.
+
+Figure 2. Risk Factors and Exposures to Risk During Inter-Meeting Period
+
+Note: Panel (a) shows the cumulative values of each risk factor during the inter-meeting period; Panel (b) shows the estimated exposure (factor loading) of KBW excess returns to each risk factor during this period.
+
+Source: Bloomberg Finance L.P., Bloomberg Per Security, https://www.bloomberg.com/professional/product/reference-data; CRSP, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+; Compustat, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+.
+
+Accessible version
+
+3.1 Interpreting Banks' Exposures to Risk Factors
+
+As shown, $$ MKT_{t} $$ and $$ HML_{t} $$ are typically the primary drivers of banks' excess returns. While existing literature attributes banks' positive exposure to the market factor to their high leverage, empirical evidence explaining the positive loading on the value factor ($$ HML_{t} $$) remains limited. Next, we provide direct evidence by combining granular loan-level data from Y-14Q with Compustat to link banks' commercial and industrial (C&I) loan exposures to the prevalence of high book-to-market borrowers across industries.
+
+Banks' equity is likely to be mechanically correlated with value firms, as banks themselves often fall into the value category. Figure 3 shows the unweighted fraction of value (blue) and growth (red) firms by 2-digit NAICS industry, based on Compustat data. The Finance and Insurance industry ranks second in the fraction of value firms and third lowest in growth firms. Within this industry, the Depository Credit Intermediation sub-sector (NAICS code 5221 and primarily commercial banks) consists of 59% value firms and just 3% growth firms.
+
+Figure 3. Fraction of Value and Growth Firms by Industry
+
+Note: This figure shows the unweighted fraction of value (green) and growth (blue) firms by 2-digit NAICS industry based on Compustat data from 2015 to 2019. The key identifies bars in order from top to bottom.
+
+Source: CRSP, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+; Compustat, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+.
+
+Accessible version
+
+Turning to banks' asset side, we further show that banks' C&I loan portfolio is concentrated in high book-to-market ratio borrowers. To this end, we use granular data on banks' C&I lending from Y-14Q to compute their C&I portfolio committed exposure to each 4-digit NAICS category and contrast these exposures with the fraction of value firms in each industry. From Figure 4, industries to which banks have higher committed exposure are more likely to be populated with value firms. Blue (red) dots are cases in which the fraction of value (growth) firms is greater than of growth (value) firms.
+7
+We note a positive relation between committed exposure and fraction of value firms across industries.
+
+Figure 4. Fractions and Banks' C&I exposure to Value Firms
+
+Note: Fraction of value firms against banks' committed exposure for each 4-digit NAICS category based on Compustat data from 2015 to 2019. Blue (red) circles (triangles) are cases in which the fraction of value (growth) firms is greater than of growth (value) firms. Industries with a larger fraction of value firms and to which banks have high C&I committed exposures are labeled with their NAICS code.
+
+Source: Compustat, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+; Board of Governors of the Federal Reserve, Capital Assessments and Stress Testing (FR Y-14).
+
+Accessible version
+
+4. Application 2: Propagation of Banking-sector Shocks
+
+While the risk factors in our model usually explain most of the variation in bank stock prices (i.e., high $$R^{2}$$ and small residuals), residuals can be large at times for some bank indexes, suggestive of a banking-sector-specific shock. This was the case, for instance, during the NYCB turmoil in early 2024.
+8
+We use this event to showcase how to apply our factor model for the identification of banking-sector-specific shocks and the measurement of their propagation.
+
+Panel (a) of Figure 5 shows the fraction of stock return movements following the NYCB event that could not be explained by the five risk factors. As much as 50% of the decline in the KBW Regional index was not captured by the estimated sensitivity to the five factors, while dynamics in the KBW bank index continued to be largely explained. These observations suggest that the effect of the "NYCB" shock was limited to the regional banks.
+
+Figure 5. Fraction of Bank Stock Prices Unexplained by Risk Factors
+
+Note: Fraction of stock return movements for three indexes that could not be explained by the five factors following the NYCB turmoil beginning on January 31st, 2024, in Panel (a) and the closure of SVB on March 10th, 2023, in Panel (b). KBW Regional (modified) is reconstructed to exclude NYCB. KBW (modified) is reconstructed to exclude SVB, Signature Bank, and First Republic Bank.
+
+Source: Bloomberg Finance L.P., Bloomberg Per Security, https://www.bloomberg.com/professional/product/reference-data; CRSP, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+; Compustat, Wharton Research Data Services,
+http://wrds.wharton.upenn.edu/
+.
+
+Accessible version
+
+To understand the propagation of the NYCB shock, we construct a measure of the NYCB shock that is orthogonal to the common factors. In particular, we regress excess returns on NYCB stock on the risk factors and use the residuals from the regression as our proxy for the NYCB shock. We then estimate the stock price sensitivity to the NYCB shock for each bank in the KBW and KBW Regional indexes, controlling for common risk factors. Panel (a) of Figure 6 show that banks with a larger exposure to the NYCB shock experienced larger drops in stock prices, with most of these banks being regional banks constituents of the KBW Regional index (red dots). Panel (b) shows that the estimated sensitivities is positively correlated with regional banks' exposures to nonfarm nonresidential CRE loans.
+
+Figure 6. Exposure to the NYCB Shock
+
+Note: Exposure of banks to the NYCB shock. Panel (A) shows individual bank's stock price change in 01/30/2024â 03/05/2024 against their sensitivity to the NYCB shock. Panel (B) shows the exposure of each bank to nonfarm nonresidential loans against their sensitivity to the NYCB shock.
+
+Source: Bloomberg Finance L.P., Bloomberg Per Security, https://www.bloomberg.com/professional/product/reference-data;
+Federal Financial Institutions Examination Council, Consolidated Reports of Condition and Income for a Bank
+; Board of Governors of the Federal Reserve, Consolidated Financial Statements for Holding Companies (FR Y-9C).
+
+Accessible version
+
+The insight of the NYCB shock propagating as a banking-section specific shock is in sharp contrast to the SVB event. Panel (b) of Figure 5 shows that during the SVB collapse in March 2023, the unexplained fraction of stock movements was low. Although the shock originated from a single bank, SVB was a large regional bank and the initial shock rapidly translated to the broad economy, effectively becoming a systematic source of risk captured by the common risk factors.
+
+5. Conclusion
+
+This note introduces a five-factor asset pricing model that effectively explains bank stock returns and isolates idiosyncratic risks. We show that the model is a useful tool for real-time monitoring of risk exposures and tracing the propagation of sector-specific shocks. Given its flexibility and granularity, the model could potentially support a wider range of banking-sector applications, including market monitoring, risk assessment, and policy design.
+
+References
+
+Fama, Eugene F. and Kenneth R. French, "Common risk factors in the returns on stocks and bonds,"
+Journal of Financial Economics
+, 1993,
+33
+(1), 3â56.
+
+Gandhi, Priyank and Hanno Lustig, "Size anomalies in US bank stock returns,"
+The Journal of Finance
+, 2015,
+70
+(2), 733â768.
+
+Hong, Harrison, Terence Lim, and Jeremy C. Stein, "Bad news travels slowly: Size, analyst coverage, and the profitability of momentum strategies,"
+Journal of Finance
+, 2000,
+55
+(1), 265â295.
+
+Zhang, Lu, "The value premium,"
+The Journal of Finance
+, 2005,
+60
+(1), 67â103.
+
+1. We thank Felicia Ionescu and seminar participants at the Federal Reserve Board for feedback. Ehresmann:
+[email protected]
+; Morelli:
+[email protected]
+; Wang:
+[email protected]
+. The views presented in this note are those of the authors and do not necessarily reflect those of the Federal Reserve Board or the Federal Reserve System.
+Return to text
+
+2. The market excess return was first introduced in the Capital Asset Pricing Model (CAPM) as a proxy for returns on total wealth. Fama and French (1993) extended this approach by adding two additional factors, SMB and HML, which explain cross-sectional variations in stock market. They also showed that stock returns exhibit common variation with bond returns through two bond market factors, TERM and DEF. Gandhi and Lustig (2015) applied this extended factor structure specifically to bank stocks, highlighting a size premium within the banking sector.
+Return to text
+
+3. Gandhi and Lustig (2015) show that MKT loadings increase monotonically with bank size: small banks tend to have market betas below one, while large banks have betas above one. Notably, large banks are also more leveraged than small banks.
+Return to text
+
+4. Daily factors are updated in Kenneth French's data library with some lag:
+https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+
+Return to text
+
+5. While not shown, switching $$MKT_t$$ for $$RMO_t$$ gives a significant role to $$DEF_t$$ and $$SMB_t$$ factors, in line with findings shown in panel (b) of Table 1.
+Return to text
+
+6. If the alpha estimates are stable throughout the period, the cumulative alpha (the orange bars) will mechanically increase (for a positive alpha) or decrease (for a negative alpha).
+Return to text
+
+7. Industries to which banks have high C&I committed exposure and that contain a relatively larger fraction of value firms are in sectors such as finance and insurance (5259, 5221, 5239, 5222, 5241); lessors of real estate (5311); and electricity generation and distribution, and oil and gas extraction (2211, 2111).
+Return to text
+
+8. The turmoil began when the stock price of NYCB dropped 60% after its fourth-quarter earnings call on January 31, 2024 when the bank announced a surprising loss, driven by provisions allocated to some stressed CRE loans, and a 70% dividend cut intended to improve its capital position to meet a higher regulatory standard after the bank crossed the $100 billion asset threshold.
+Return to text
+
+Please cite this note as:
+
+Ehresmann, Paige, Juan M. Morelli, and Jessie Jiaxu Wang (2025). "Modeling Bank Stock Returns: A Factor-Based Approach," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 06, 2025, https://doi.org/10.17016/2380-7172.3824.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

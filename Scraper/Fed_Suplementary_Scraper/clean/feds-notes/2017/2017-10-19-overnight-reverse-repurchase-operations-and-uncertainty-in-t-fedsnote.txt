@@ -1,0 +1,294 @@
+FEDS Notes
+
+Twitter
+
+October 19, 2017
+
+Overnight Reverse Repurchase (ON RRP) Operations and Uncertainty in the Repo Market
+1
+
+Zeynep Senyuz
+and
+Manjola Tase
+
+In its post-crisis monetary policy implementation framework, the Federal Reserve (Fed) sets a target range for the federal funds rate that is supported by two administered rates: the interest on reserves (IOR), which is earned by banks, and the offering rate at the overnight reverse repurchase (ON RRP) operations , which is earned by a broader set of financial institutions. IOR has been the primary monetary policy tool used to move the federal funds rate into the target range, while the ON RRP offering rate has been used to enhance rate control. In this note, we analyze the effects of the ON RRP operations on daily repo rate uncertainty--based on revisions to the repo rate forecast--and intraday repo rate volatility. Our results suggest that uncertainty around the repo rate decreased amid the introduction of ON RRP operations in September 2013, while it increased following the release of two statements--on policy normalization and on the design of ON RRP operations--in September 2014. Overall, rate uncertainty has mostly been driven by announcements regarding changes in parameters of ON RRP operations: as repo rate forecasts are being revised with respect to these announcements, rate uncertainty tends to be higher around these days. Finally, our results suggest that the ON RRP offering rate has been an anchor for repo rates quoted at different times during the day, reducing intraday volatility.
+
+ON RRP Operations
+
+The Fed started test ON RRP operations on September 23, 2013, in order to gain operational experience and garner information about how such operations might be used to help control the federal funds rate during the policy normalization process.
+2
+ON RRPs are offered to a broad set of counterparties, which includes money market mutual funds (MMFs) and Government Sponsored Enterprises (GSEs).
+3
+In an ON RRP operation, the Fed sells securities held in the System Open Market Account (SOMA) to eligible RRP counterparties, with an agreement to buy the assets back the next business day. Eligible counterparties lend cash to the Fed in exchange, and earn the fixed offering rate at the ON RRP operations. The ON RRP operations provide an alternative investment option for cash lenders, which may require private market borrowers to bid more aggressively for funds. As a result, the offering rate should provide a floor for money market rates. When the ON RRP test operations started, the offering rate was set at 1 basis point with an individual maximum bid size of $0.5 billion. During the first year of testing, these parameters were modified frequently: the fixed rate ranged from 1 to 5 basis points and the maximum bid size was gradually increased from $0.5 to $30 billion.
+
+In the statement on Policy Normalization Principles and Plans issued on September 17, 2014, the Federal Open Market Committee (FOMC) indicated its intention to move the federal funds rate into the target range set by the FOMC primarily by adjusting the IOR and using ON RRP operations as a supplementary policy tool to help control the federal funds rate.
+4
+On that same day, the counterparty bid limit was increased to $30 billion per day, and the overall aggregate cap was set at $300 billion. An auction format was also introduced for when the total amount of bids exceeds the aggregate cap.
+5
+On December 16, 2015, at the time of the first Fed rate hike in seven years, the aggregate cap on ON RRP operations was suspended though the counterparty limit remained. To this date, these are the parameters in the operations, with capacity limited only by the value of Treasury securities held outright in the System Open Market Account that are available for such operations.
+6
+
+Repo Rate Uncertainty
+
+Our measure of repo rate uncertainty is based on the General Collateral Finance (GCF) segment of the repo market. GCF is a blind-brokered, inter-dealer repo platform, which provides funding for dealers that may not have sustainable access to cash in the broader triparty market.
+7
+
+8
+We measure uncertainty by considering revisions to the rate forecasts published by the Wrightson ICAP Overnight Funding Monitor.
+9
+We use the Wrightson forecast that is monitored by a wide range of financial market participants, to serve as a proxy for the market forecast. We retrieve forecasts of the overnight GCF Treasury repo rate that are usually available for a 2-week horizon. The data are daily from June 15, 2012 to May 27, 2016.
+
+We construct an uncertainty measure for the repo rate by estimating the volatility of forecast revisions to the rate. Let $$F_{t+i+1,t}$$ be the forecast at time
+t
+for the rate at time
+t+i+1
+, and $$F_{t+i+1,t+1}$$ be the forecast at time
+t+1
+for the rate at time
+t+i+1
+. Then, the revision to the
+i-
+period ahead rate forecast at time
+t+1
+, denoted as $$R_{t+1}^i$$, can be written as the difference between these two forecasts:
+
+(1)    $$ R_{t+1}^i=F_{t+i+1,t+1}-F_{t+i+1,t} $$
+
+To measure the volatility of repo rate forecast revisions, we estimate a GARCH (1, 1) specification for $$R_{t+1}^i$$ that is augmented with various exogenous variables potentially affecting the repo rate uncertainty. Our empirical model can be written as follows,
+
+$$ R_{t+1}^i= \sqrt{h}_{t+1} \varepsilon_{t+1} , \varepsilon_{t+1} \sim IID(0,1) $$
+
+(2)    $$ h_{t+1} = \omega + \alpha ( R_t^i )^2 + \beta h_t + \theta' X_{t+1} $$
+
+where the conditional variance of forecast revisions, $$h_{t+1}$$, is specified as a function of the long-run average variance, the most recent forecast revision and the conditional variance, and
+k
+exogenous variables of interest that may affect the volatility of repo rate revisions stacked in a $$k \times 1$$ vector, $$X_{t+1}$$.
+
+We estimate the model in Equation (2), for
+i
+= 1, as most of the repo rate revisions are made for the next day. We include indicator variables to capture the effects of important policy variables, specifically: i) inception of ON RRP test operations on September 23, 2013; ii) announcements of changes to various parameters of the ON RRP operations, and iii) the September 17, 2014 statements described above.
+10
+
+Another important factor affecting repo market dynamics is financial reporting requirements of institutions which are major participants in the repo market. One prominent example is the implementation of the Basel III leverage ratio regulations. Most foreign dealers are required to report their leverage ratios based on month-end or quarter-end snapshots of their balance sheets, while domestic dealers ratios are calculated from daily averages. The former calculation incentivizes most foreign dealers to contract their balance sheets on financial reporting days. The withdrawal of primary cash borrowers from the market on financial reporting dates leaves MMFs, the main cash lenders in the repo market, looking for alternatives. The ON RRP operations provide an investment vehicle for MMFs on these days and generally prevents the market repo rate from falling below the offering rate.
+11
+Therefore, take-up at the ON RRP operations tends to be elevated at month-ends due to increased investments by MMFs. We include an indicator variable that takes the value 1 on month-ends and 0 otherwise to account for this calendar effect. Given the limited number of quarter-ends in our sample, we capture the effects on financial reporting days through the month-end indicator variable.
+
+Various other calendar day factors are also known to affect collateral and cash flows in the repo market, including monthly settlement days of MBS transactions, MBS principal and interest payment dates of Fannie Mae and Freddie Mac and settlement days of Treasury nominal coupon auctions and cash management bills .
+12
+Since these dates, that Wrightson refers to as pressure points, are known in advance, and are already incorporated in the forecasting process, they are not likely to generate revisions in the rate forecasts. Indeed, we do not find a significant effect of these pressure points in any considered specification. After ON RRP an aggregate cap was introduced in September 2014, the Fed started to offer term RRPs spanning over quarter-ends to offer extra capacity when the ON RRP cap was likely to be binding. We control for the days when announcements related to upcoming term RRP operations are made. Finally, we also include the level of the GCF repo rate from the prior day in our specifications.
+
+Table 1 shows the estimated effects of variables related to the ON RRP operations and other calendar effects on repo rate uncertainty. We find that after the inception of the ON RRP operations repo rate uncertainty as measured by the volatility of forecast revisions has been lower on average by about 1 basis point, which is sizable given that the average of rate uncertainty for the period covered in this analysis was 1.5 basis points. This result is in line with Klee et al. (2015) who find that volatility in the repo rate has substantially dampened after the ON RRP operations have started. Although our focus is on the volatility of forecast revisions, not the volatility of the rate itself, a reduction in the level of rate volatility would potentially lead to fewer or smaller revisions. In our sample there are 25 days on which announcements regarding changes in the offering rate, counterparty cap and the aggregate cap were made. As the forecast is revised in response to these announcements, we find that uncertainty around the repo rate tends to be around 1 basis point higher on these days. The statements released on September 17, 2014--the FOMC statement on Policy Normalization Principles and Plans that noted the use of the ON RRP as a supplementary tool, and the statement to revise the terms of the operations parameters including the introduction of an aggregate cap--led to an increase of about 1 basis point on repo rate uncertainty.
+
+Table 1: Estimated Effects of ON RRP on Repo Rate Uncertainty (basis points)
+
+ON RRP Inception
+
+-0.81
+***
+
+Sep.17, 2014 Statements
+
+0.94
+***
+
+ON RRP Announcements
+
+1.10
+***
+
+Month-end
+
+0.92
+*
+
+Note: *** (*) indicates significance at 1 (10) percent level based on robust standard errors.
+
+The implied volatility of repo rate forecast revisions, the uncertainty measure from our empirical model, is plotted in Figure 1. There was a slight downward trend in repo rate uncertainty prior to the inception of the ON RRP operations which became much steeper after the operations had started.
+13
+With the ON RRP operations, drops in the repo rate below the offering rate have been mostly eliminated, which contributed to the downward shift in rate uncertainty.
+
+The statements released on September 17, 2014 regarding the normalization plans and changes to the design of the ON RRP facility marked an upward shift in the level of repo uncertainty. The statement for normalization plans revealed for the first time that the facility offering rate would be one of the two tools that would be used for rate control once the rate hikes started. Therefore, the elevated uncertainty from this date on may be attributed to an increase in the perceived importance of the ON RRP operations, likely resulting in stronger signals for market rates inferred from ON RRP operation parameters and take-up. Another potential explanation is that the introduction of the aggregate cap increased uncertainty about daily usage at the facility, especially around financial reporting days when the overall size limit is more likely to be binding, even though counterparty take-up has been significantly less than their associated caps since the facility was put in place.
+
+Although month-ends should be accounted for in the repo forecasts, we find some evidence of increased rate uncertainty on these days. However, the coefficient estimate is significant only at the 10 percent level, perhaps suggesting that month-end flows are less predictable compared to other factors. Regarding the term RRP operations, while they reportedly helped ease downward pressures on rates on quarter-ends, the announcement or effective days of these operations are too few in our sample to statistically identify their effect on repo rate volatility.
+
+Figure 1: Repo Rate Uncertainty
+
+Accessible version
+
+Overall, the estimated coefficients for the inception of the ON RRP operations and for the September 17, 2014, statements roughly offset each other. After accounting for various market factors that affect repo dynamics, rate uncertainty has mostly been driven by announcements regarding changes in parameters of ON RRP operations. As forecasts for the repo rate are being revised with respect to these announcements, uncertainty around the next-day market repo rate increases by 1 basis point.
+
+Intraday Repo Rate Volatility
+
+We measure the intraday volatility of the repo rate with the difference between GCF trading quotes for the 10AM and 3PM repo rates, plotted in Figure 2.
+14
+Trading quotes for these times represent repo rates before and after the execution of daily ON RRP operations.
+15
+In the absence of ON RRP operations the effective floor for the repo rate is zero. With the ON RRP operations, for transactions taking place earlier in the day, eligible counterparties can credibly bargain for a rate that is at least as high as the ON RRP offering rate. Thus, the ON RRP offering rate should be setting a floor at the offering rate for the 10AM rate for eligible counterparties, while still leaving the floor for the 3PM rate at zero. If that were the case, then we could potentially see an increase in intraday volatility after the onset of ON RRP operations. However, if trading relationships induce cash borrowers to consider the ON RRP offering rate as a floor even for the trades taking place after the operation, then the intraday spread should not be affected by the introduction of the ON RRP operations.
+
+Figure 2: Intraday GCF Repo Rate Volatility, 10am - 3pm spread
+
+Accessible version
+
+To identify the factors affecting the intraday volatility in the repo market, we take the absolute value of the difference between the 10 AM and 3 PM rates plotted in Figure 2 and regress it on variables that affect repo market dynamics. Table 2 shows the estimated effects of selected variables on intraday volatility.
+
+First of all, we find no significant effect of the inception of ON RRP operations on intraday repo volatility, supporting the view that the ON RRP offering rate has been serving as an anchor for rates throughout the day in the repo market. In other words, while the operations take place in the middle of the day, they have no differential effect on the morning versus the afternoon rate. Indeed, Frost et al. (2015) show that the ON RRP offering rate has generally been an effective floor for overnight funding rates.
+
+Second, our results suggest that the inception of the ON RRP facility helped decrease intraday volatility at month-ends--around 3/4 basis point compared to month-ends before the ON RRP introduction--likely relieving some pressure on the repo rate due to balance sheet adjustments.
+16
+Klee et al. (2016) show that volatility in the repo rate increases on month-ends (and quarter-ends). We find that month-ends were also associated with higher intraday repo volatility until the ON RRP operations have started.
+
+Table 2: Estimated Effects of ON RRP on Intraday Repo Volatility (basis points)
+
+ON RRP Inception
+
+-0.09
+
+Sep.17, 2014 Statements
+
+0.44
+***
+
+Month-end
+
+1.04
+**
+
+(Month-end)x(ON RRP Inception)
+
+-0.75
+*
+
+(Month-end)x(Sep 2014 Statements)
+
+1.18
+**
+
+Note: ***, **, * indicate significance at 1, 5, 10 percent level respectively.
+
+Robust standard errors are calculated as in Newey and West (1987).
+
+On the other hand, we find that intraday volatility has increased by about 1 basis point on month-ends after September 2014, compared to the period before the introduction of the aggregate cap, likely reflecting the effects of both the September 2014 statements and the beginning of the daily balance sheet data collection from institutions supervised by the Fed, the FR 2052a report.
+17
+Since both events took place in September 2014, it is not possible to parse out the total increase in intraday volatility. There is some anecdotal evidence that with the start of the FR 2052a daily data collection, dealers became reluctant to take on large positions late in the day, resulting in smaller trading volume associated with higher rate volatility. Although we find evidence of elevated intraday volatility on month-ends after September 2014 compared to the period before the introduction of the cap, the introduction of the ON RRP cap is not likely to affect intraday volatility on other days when the cap is not expected to be binding.
+18
+
+Wrap Up
+
+We examine how the ON RRP facility affected uncertainty around the daily GCF repo rate and intraday volatility of the rate after accounting for other market factors that affect repo rate dynamics. We show that while the ON RRP operations initially reduced uncertainty around the repo rate, the upward shift in the level of uncertainty in September 2014, which corresponds to the release of important statements regarding the facility, offset this reduction. Overall, the rate uncertainty remains quite responsive to announcements regarding changes in facility parameters and increases by 1 basis point in the next day following announcements. We also find that intraday volatility has increased by 1/2 basis point after September 2014, compared to the prior period. This increase likely reflects the effects of September 2014 statements and the beginning of the daily balance sheet data collection that incentivized institutions supervised by the Fed to reduce repo volumes later in the day. The increase in intraday volatility on month-ends is estimated to be 1 basis point after this date.
+
+References
+
+Anbil, Sriya, and Zeynep Senyuz (2016) "Window Dressing and Trading Relationships in the Tri-party Repo Market", SSRN Working Paper, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2888163
+
+Agueci, Paul, Leila Alkan, Adam Copeland, Isaac Davis, Antoine Martin, Kate Pingitore, Caroline Prugar, and Tyisha Rivas (2014). "A Primer on the GCF Repo Service," Federal Reserve Bank of New York Staff Reports No.671.
+
+Anderson, Alyssa, and Jeffrey Huther (2016). "Modelling Overnight RRP Participation,"
+
+Finance and Economics Discussion Series 2016-023. Washington: Board of Governors of the
+
+Federal Reserve System, http://dx.doi.org/10.17016/FEDS.2016.023
+
+Frost, Josh, Lorie Logan, Antoine Martin, Patrick McCabe, Fabio Natalucci, and Julie Remache (2015). "Overnight RRP Operations as a Monetary Policy Tool: Some Design Considerations," Finance and Economics Discussion Series 2015-010. Washington: Board of Governors of the Federal Reserve System,
+http://dx.doi.org/10.17016/FEDS.2015.010
+.
+
+Ihrig, Jane E., Gretchen Weinbach, Ellen E. Meade (2015) Rewriting Monetary Policy 101: "What's the Feds Preferred Post-Crisis Approach to Raising Interest Rates?",
+Journal of Economic Perspectives
+, 29, 177-198.
+
+Klee, Elizabeth, Zeynep Senyuz, and Emre Yoldas (2016). "Effects of Changing Monetary and Regulatory Policy on Overnight Money Markets" Finance and Economics Discussion Series 2016-084 Board of Governors of the Federal Reserve System (U.S.).
+
+1.
+We thank Jane Ihrig, Beth Klee and Jeff Huther for helpful comments. The analysis and conclusions set forth are our own and do not necessarily reflect the views of the Board of Governors or the staff of the Federal Reserve System.
+Return to text
+
+2.
+See Ihrig et al. (2015) for details on monetary policy implementation.
+Return to text
+
+3.
+See
+https://www.newyorkfed.org/markets/rrp_counterparties.html
+for details on counterparties.
+Return to text
+
+4.
+See
+http://www.federalreserve.gov/monetarypolicy/policy-normalization.htm
+for further details on monetary policy normalization.
+Return to text
+
+5.
+Each submitted request was required to include a rate of interest. Awards would be allocated using a single-price auction based on the "stopout" rate at which the overall size limit is reached, with all bids below this rate awarded in full and all bids at this rate awarded on a pro rata basis.
+Return to text
+
+See
+https://www.newyorkfed.org/markets/rrp_faq.html
+for further details on changes to operating policies for conducting open market operations.
+
+6.
+See
+https://www.newyorkfed.org/markets/opolicy/operating_policy_151216
+for details.
+Return to text
+
+7.
+For an in depth analysis of the GCF repo service see Agueci et.al (2014).
+Return to text
+
+8.
+The GCF rate is highly correlated with other repo market rates, such as the FRBNY's Primary Dealer survey rate that covers GC repo trades by primary dealers in bilateral and triparty segments; the correlation between these two rates is 0.98 for the time period covered in this note (from June 15, 2012 to May 27, 2016).
+Return to text
+
+9.
+Daily repo rate forecasts are from Wrightson ICAP Web Service, http://www.wrightson.com/daily_summary/.
+Return to text
+
+10.
+See "Federal Reserve Issues FOMC Statement on Policy Normalization Principles and Plans," press release, September 17, 2014,
+https://www.federalreserve.gov/newsevents/press/monetary/20140917c.htm
+, and "Statement to Revise the Terms of the Overnight Reverse Repurchase Agreement Operational Exercise", September 17, 2014,
+https://www.newyorkfed.org/markets/opolicy/operating_policy_140917.html
+.
+Return to text
+
+11.
+See Klee et al. (2016) and Anbil and Senyuz (2016) for further details on repo market dynamics on financial reporting days, and the effects of Basel III leverage ratio requirements.
+Return to text
+
+12.
+Anderson and Huther (2016) show that ON RRP participation by MMFs is sensitive to Treasury bill issuance, and GSEs participation is more heavily driven by calendar effects.
+Return to text
+
+13.
+The spike immediately following this date is associated with the U.S. debt limit episode and the government shutdown.
+Return to text
+
+14.
+Quotes for the 10AM and 3PM repo rates are from Wrightson ICAP, Wrightson ICAP Web Service, http://www.wrightson.com/daily_summary/.
+Return to text
+
+15.
+On quarter-end dates for 2014Q3, 2014Q4, 2015Q1 ON RRP operations were executed at 8AM, 9:30AM and 9:30AM respectively.
+Return to text
+
+16.
+As a reference, average intraday volatility was 0.9 basis point for the period covered in this analysis.
+Return to text
+
+17.
+The FR 2052a report is used to collect confidential daily data on certain balance sheet items to monitor the liquidity profile for institutions supervised by the Fed. For further details, see
+https://www.federalreserve.gov/apps/reportforms/default.aspx
+
+Return to text
+
+18.
+In addition to the variables shown in Table 2 we also consider: i) the level of the repo rate, ii) indicator variables to label the effective days of changes to the ON RRP or term RRP facility parameters, pressure points in the repo market as described earlier, the U.S. debt limit suspension period in October 2013, and the rate hike in December 2015 that also corresponds to the suspension of the aggregate ON RRP cap. Of these additional variables only the level of the repo rate, which already controls for the level shift at the rate hike in December 2015, was statistically significant.
+Return to text
+
+Please cite this note as:
+
+Senyuz, Zeynep, and Manjola Tase (2017). "Overnight Reverse Repurchase (ON RRP) Operations and Uncertainty in the Repo Market," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 19, 2017, https://doi.org/10.17016/2380-7172.2069.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

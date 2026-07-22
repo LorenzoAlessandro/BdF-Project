@@ -1,0 +1,455 @@
+Skip to:
+
+Skip to 
+navigation
+
+Skip to 
+content
+
+Skip to 
+footer
+
+ANYTIME 
+
+PAST MONTH 
+
+PAST YEAR 
+
+Search Options
+
+Image Preview
+
+Home
+
+Media
+
+Explainers
+
+Research & Publications
+
+Statistics
+
+Monetary Policy
+
+The €uro
+
+Payments & Markets
+
+Careers
+
+Suggestions
+
+Sort by
+
+Relevance
+                                
+
+Date
+                                
+
+ 
+
+Tomasz Dubiel-Teleszynski
+Fabio Franch
+Gábor Fukker
+Debora Miccio
+Michela Pellegrino
+Matthias Sydow
+
+        System-wide amplification of climate risk    
+
+System-wide amplification of climate risk
+Prepared by Tomasz Dubiel-Teleszynski, Fabio Franch, Gábor Fukker, Debora Miccio, Michela Pellegrino and Matthias Sydow
+Published as part of the 
+Macroprudential Bulletin 17
+, June 2022.
+The article discusses the importance of developing a system-wide stress testing framework for a comprehensive assessment of financial stability risks. It analyses the impact of a severe climate risk scenario and shows that the endogenous reactions of banks, investment funds and insurers combined amplify losses in the financial system. The system-wide stress testing framework not only uses firm-level data but, in contrast to single-sector stress testing models, also operates through a joint liquidity and solvency channel combined with fire sales. Initial results show that under a climate stress scenario the fire sale losses of investment funds would amplify banks’ capital depletion.
+1 Introduction
+Climate change may represent a major source of systemic risk in the financial system.
+ The financial impacts of climate risk are expected to be widespread, exacerbating already existing financial vulnerabilities and facilitating disruption of the proper functioning of financial markets and institutions. To understand the climate risk-related implications, supervisors and central banks are developing tailored stress testing exercises.
+ 
+However, while significant progress has been made on developing these frameworks, critical interconnection effects among sectors in the financial system remain poorly understood.
+This article proposes a system-wide stress testing framework to analyse the impact of a climate change stress scenario (disorderly transition) on banks, funds, and insurance companies simultaneously.
+ The corresponding macro-financial shocks translate into price shocks for bond and stock markets (
+NGFS, 2021
+); they also increase corporate and household probability of default (PD) and loss given default (LGD). These shocks generate losses on the balance sheets of banks, funds, and insurers. The reactions of these institutions to the initial shocks, combined with their interconnectedness, amplify the system’s overall losses. Acknowledging the interactions between financial institutions produces a more realistic indication of the effects of climate change on the financial system.
+A system-wide perspective improves our understanding of the amplification effects of a climate-change stress scenario within the financial system.
+ The main amplification channel is contagion stemming from cross-holdings of securities and overlapping portfolios. Banks and insurers adjust their balance sheets at all times to meet their liquidity and solvency requirements. 
+The analysis presented in this article uses real-world data to assess climate change implications using an agent-based model.
+ The model builds on and adds to a number of contributions in this field. It leverages institution-level balance sheet data
+[
+1
+]
+ to realistically reconstruct interinstitutional exposures with the goal of studying contagion channels.
+[
+2
+]
+ Our multi-agent model contributes not only to a growing body of climate change studies,
+[
+3
+]
+ but also to the wider literature on system-wide stress testing. Lastly, our framework uses institution-level data to investigate different risk contagion channels within the financial system.
+The article is structured as follows.
+ Section 2 introduces our financial system of banks, funds and insurers, how their balance sheets are modelled, the datasets used for the analysis, as well as further details on the model dynamics. Section 3 describes the climate risk scenario implemented for applying a realistic shock in the financial system. Section 4 discusses the results of the model. Section 5 draws conclusions.
+2 Modelling framework
+The model represents
+ 
+three types of agents: banks, investment funds and insurers.
+ The banking sector comprises 166 large consolidated banking groups, the investment fund sector includes 10,555 open-ended funds, and 18 country-level company aggregates, all domiciled in the euro area, constitute the insurance sector.
+The banking sector is composed of significant and less significant institutions.
+[
+4
+]
+ On the assets side, each consolidated banking group has portfolios of loans, tradable securities, and redeemable fund holdings. Interbank liabilities are on the liabilities side. Banks’ balance sheets are constructed using granular data from the Common Reporting (COREP) and Financial Reporting (FINREP) frameworks, and securities holdings information derives from the Securities Holdings Statistics by banking group (SHS-G) collated by the ECB.
+[
+5
+]
+Banks’ behaviour is determined by a requirement to fulfil contractual obligations and to satisfy regulatory constraints.
+ The regulatory constraints include liquidity and solvency requirements, and are implemented through distress and default thresholds computed at bank level using COREP data and capital information from the national authorities in the European System of Central Banks (ESCB).
+The fund sector is composed of open-ended investment funds and consists of three main fund categories: bond, equity and mixed funds.
+ On the asset side, funds mainly hold securities, deposits and claims, non-financial assets and remaining assets. On the liabilities side, they predominantly carry fund shares, which are purchased by investors, as well as loans. For this model, fund portfolios are constructed on the basis of balance sheet information provided in the Lipper database by Refinitiv.
+[
+6
+]
+Investment funds are interconnected and strongly linked to the wider financial system.
+ Funds’ actions are constrained by a fund-specific solvency default threshold, while distress thresholds are not computed given the lack of regulatory constraints in this sector. Funds’ flows are volatile given that fund shares have a strong market liquidity impact, meaning that investors can redeem them on request. Moreover, fund balance sheets are not generally coupled to high leverage, so it is unlikely that fund defaults would take place. However, funds may be forced to liquidate securities in the event of a major redemption shock.
+The insurance sector in the model is based on a mix of aggregated balance sheet information featuring Solvency II data collated at country level combined with highly granular securities holdings statistics.
+[
+7
+]
+ Insurance corporations are constrained by their solvency capital requirements (no liquidity constraints are considered) and engage in asset fire sales if these requirements are breached.
+[
+8
+]
+There are multiple interconnections between the sectors.
+ The final step in building the complete network of linked agents, over which the system is to evolve after a shock, involves identification of the entities and group consolidation.
+[
+9
+]
+ Banks provide loans to funds and insurers. Moreover, all three sectors hold each other’s securities. The data for banks’ counterparty-level loan exposure to large exposures to non-financial and financial corporates derive from large exposure reporting and ISIN-level Securities Holdings Statistics (SHS) information.
+The initial shocks caused by our scenario result in contagion effects through credit and market risk channels.
+ Given firms’ deteriorating credit risk parameters, we include the corresponding market price changes in tradable assets issued by these firms. The agents more exposed to credit risk losses are banks owing to their exposures to households, non-financial corporations (NFCs), financial corporations (FCs), and other sectors, which in the model are aggregated at the country-sector level. The initial shock is translated into changes in the valuation of securities holdings within the financial system, with funds and insurers holding the majority of securities issued by NFCs, FCs and other sectors. Direct contagion through credit risk and bank defaults propagates risks from the liabilities side of defaulting entities to other financial firms through incurred losses. This situation triggers direct contagion through market risk. The prices of bonds and equities issued by stressed institutions decrease, leading to losses for their holders.
+The direct exposure channel of fund shares assumes that counterparties holding fund shares would be affected by a decrease in net asset value.
+ Funds’ net asset value is hit, and investors may start to redeem their investments. In addition, funds may also hold shares in other funds. When funds are in need of liquidity, they will be inclined to sell substantial portions of their securities given the restricted amount of cash they hold.
+Figure 1 shows the exposure network and gives a detailed indication of the interconnections captured by the granular dataset.
+ Panel a) shows the loan exposure network from banks to all sectors at entity level. Therefore, each edge in the figure is related to an individual loan from a bank to another entity in a specified sector. Panel b) depicts the securities holding exposure network from banks, funds and insurers to all sectors at entity level. More precisely, every edge in the figure represents an asset held by a bank/fund/insurer that is issued by another entity in each sector.
+Figure 1
+Exposure networks
+Sources: Authors’ calculations.
+An unsustainable situation in the system triggers agents’ reactions needed to meet their contractual obligations and regulatory constraints, leading to an amplification of the initial effects.
+ The model includes different interrelated channels of contagion risk as a result of market, liquidity and solvency dynamics within the financial system. The first endogenous reaction is the update of the solvency status of the different agents in the system, followed by further effects from defaults and from equilibrium price changes as a result of interlinkages between the three sectors modelled.
+The endogenous reactions of financial institutions to credit and market risk losses are interbank withdrawals and unsecured borrowings, followed by fire sales and redemptions to cover liquidity needs.
+ In the case of banks, to meet their liquidity needs, they start short-term funding withdrawals among their counterparties, based on the level of distress or distance-to-default of those counterparties. At the same time, well-capitalised banks are able to provide loans to their solvent peers in need of liquidity.
+ 
+Banks with liquidity shortfalls can access funding from their central banks using their high-quality liquid assets. The last resort for banks is to sell their non-eligible assets at discounted prices. All financial institutions in the system may redeem their investment fund shares. In the case of funds, although they cannot access funding from central banks, they can sell all types of securities held in their portfolios, irrespective of their level of liquidity. When this point is reached, the liquidity status of agents in the system is updated in our model and all the endogenous reactions are repeated until no further losses appear in the system.
+The model is solved iteratively for each macro-financial scenario.
+ Each scenario translates into direct default effects and market shocks. First, the agents react to these shocks. Second, these reactions result in a cascade of agents’ reactions in subsequent periods. As explained above, these dynamics are related to indirect contagion effects driven by the institutions’ solvency and liquidity status, interbank liquidity withdrawals, unsecured borrowing, as well as redemptions and fire sales. Convergence is achieved when no further losses occur in the network. Since the goal is to measure the magnitude of the exogenous scenario impact, policy responses are not modelled in our simulations.
+3 Climate scenarios
+In our exercise, we investigate the impact of a severe macro-financial shock applying a scenario created by the Network for Greening the Financial System (NGFS).
+[
+10
+]
+ NGFS scenarios include financial and macroeconomic variables, which are then connected with agent-specific risk drivers in the model. We consider the 
+disorderly transition scenario. The latter foresees higher transition risk due to policies being delayed or divergent across countries and sectors. Also, carbon prices are typically higher for a given temperature outcome (
+NGFS, 2021
+).
+NGFS scenarios explore a distinct set of assumptions as to how climate policy, emissions and temperatures are about to evolve.
+ For instance, within the orderly transition scenario, these assumptions include future pathways consistent with capping the rise in global average temperatures to well below 2 degrees Celsius above industrial levels. To meet this target under the 2015 Paris Agreement, global emissions would have to drop by 3% each year until 2030, meaning that the transition to a low-carbon economy takes place in an orderly manner. Further, emissions prices increase gradually, allowing firms to adjust their business models and develop green technologies and for households to change their consumption patterns. The disorderly transition scenario emphasises the risks ensuing from late implementation of policy measures to fight climate change. The goals of the Paris Agreement are met but policy measures are implemented late and abruptly, resulting in an equally abrupt revision of the emissions prices. More stringent measures need to be implemented from 2030 onwards to meet climate targets, such that emissions prices jump to USD 700 per tonne of CO2 by 2050 leading to higher transition risk (
+ECB/ESRB, 2021
+).
+The banking-sector climate stress scenario implemented is built on the methodology developed for the ECB economy-wide climate stress test (
+Alogoskoufis et al., 2021
+).
+ Specifically, it evaluates how transition and physical risks stemming from the given scenario affect the credit risk parameters of individual firms through changes in their profitability and leverage.
+ 
+The impact of climate risk on the banking sector is then computed by introducing credit risk parameters from the real economy for the disorderly transition scenario. The corresponding PDs and LGDs for non-financial corporations are broken down by country and by NACE level 2 classification.
+[
+11
+]
+The effects of the climate stress scenario on the balance sheets of investment funds and insurance companies are determined by mapping in our system the 2021 climate stress test results calculated by ESMA and EIOPA for the NGFS scenarios.
+ For funds, the disorderly transition scenario implemented in the model is based on the sector and country-level bond and equity valuations that affect the assets under management held by funds (see 
+ECB/ESRB, 2021ECB/ESRB, 2021
+). For insurers, the scenario translation affects the valuation of bond and equity holdings determined by mapping those sectors that are relevant from a climate risk perspective, such as power generation and the extraction of fossil fuels (see also ).
+4 System-wide assessment of climate risk
+Our model emphasises the relevance of second-round effects stemming from the interaction of banks, funds and insurers.
+[
+12
+]
+ Chart 1, panel a), shows joint losses for the three sectors using deterministic exogenous credit risk and market shocks under a disorderly transition scenario in 2050.
+[
+13
+]
+ These losses are presented for two different price impact parameter calibrations. These parameters represent different levels of sensitivity to asset deleveraging, estimated at the level of individual securities (see Fukker et al., 2022). For the more sensitive price-at-risk
+[
+14
+]
+ calibration (left-hand side bars), second-round losses include almost exclusively losses from market reactions and produce more than half (56%) of our aggregate losses.
+[
+15
+]
+ On the other hand, when choosing a less sensitive model (right-hand side bars), smaller overall system losses are observed.
+Chart 1
+System and sector-specific losses under the 2050 disorderly transition scenario
+(x-axis: price impact quantile; y-axis: losses expressed as percentages of total assets in the system)
+Source: Authors’ calculations.
+Note: For investment funds “Default, exogenous” and “Default, endogenous” losses are too small to be visible. ’Default, exogenous’ refers to NFC defaults. ’Market, exogenous’ refers to exogenous market losses both from the market scenario and from the price drop of exogenously defaulting NFCs issuing securities. ’Endogenous’ losses are model-driven. 
+The highest contribution to overall system losses (2.3% of total assets in the system), under a price-at-risk calibration, is observed for investment funds (55%), followed by the insurance sector (39%).
+ Chart 1, panels c) and d), show that both funds and insurers increase total system losses due to their exposure to each other and to the banking sector.
+[
+16
+]
+ The amount of losses is represented here across banks, funds and insurers, with the latter two experiencing second-round (endogenous), market-driven losses of a rather large magnitude, even when the sensitivity to asset deleveraging is changed. The modelled market losses, as a percentage of total assets of the respective sector (not shown in Chart 1), are very similar for both investment funds and insurers (5.9% and 7.5% respectively). For banks, these losses are relatively limited, but still much larger than default losses. There are no insurer defaults in our model; their default losses (panel d) stem from price adjustments following banks’ initial loan losses and from endogenously defaulting investment funds.
+5 Conclusions
+Our analysis shows that climate risk could substantially amplify losses in an interconnected financial system of banks, investment funds and insurers.
+ The three-sector model builds a network of euro area financial institutions that are interconnected through their loans and securities holdings.
+The inclusion of funds and insurers produces total system losses that are significantly larger than in a system with banks only.
+ Consequently, studies aimed at achieving a realistic view of the climate change implications for the financial system should include non-bank financial institutions.
+Introducing multiple and intertwined risk channels would ensure more effective assessment of second-round amplifications effects.
+ The interaction between the modelled institutions results in additional and large losses in all three sectors modelled. We conclude, therefore, that the inclusion of the contagion channels responsible for these additional losses is also of fundamental importance to the analysis of the effects of climate change on the financial system. A sound modelling framework not only requires a system encompassing both banks and non-bank institutions, but also a correct understanding of the many ways in which these institutions may interact.
+Microprudential and macroprudential authorities should cooperate to prevent disruptions of the financial system.
+ The size of the second-round effects presented in this article speaks to the need for these authorities to work together to maximise the health of individual financial institutions to preserve the stability of the entire financial system.
+System-wide stress testing models are not only useful for the evaluation of climate risk but can also be used to analyse different macroprudential policies or changes in monetary policy stances.
+ The analysis presented in this article deliberately focuses on a no-policy-response scenario to gain a better understanding of the severity of the climate risk that would unfold for the financial system at large. However, additional bank-specific capital buffer requirements or, for example, fund-level redemption restrictions could be included as additional constraints to see whether these macroprudential measures would dampen the overall effect of specific adverse scenarios. Moreover, explicitly including granular Eurosystem asset holdings in our network of financial institutions would make it possible, for instance, to evaluate second-round amplification effects conditional on changes in the future path of central bank asset purchases.
+References
+Aikman, D., Chichkanov, P., Douglas, G., Georgiev, Y., Howat, J. and King, B. (2019), “
+System-wide stress simulation
+”, 
+Staff Working Paper
+, No 809, Bank of England, London, 12 July.
+Alogoskoufis, S., Dunz, N., Emambakhsh, T., Hennig, T., Kaijser, M., Kouratzoglou, C., Muñoz, M. A., Parisi, L. and Salleo, C. (2021), “
+ECB economy-wide climate stress test – Methodology and Results
+”, 
+Occasional Paper Series
+, No 281, European Central Bank, Frankfurt am Main, September.
+Battiston, S., Mandel, A., Monasterolo, I., Schutze, F. and Visentin, G. (2017), “
+A climate stress-test of the financial system
+”, 
+Nature Climate Change
+, Vol. 7(4), 27 March, pp. 283-288.
+Battiston, S., Monasterolo, I., Riahi, K. and Van Ruijven, B. J. (2021), “
+Accounting for finance is key for climate mitigation pathways
+”, 
+Science
+, Vol. 372, Issue 6545, May, pp. 918-920.
+Berdin, E., Grundl, H. and Kubitza, C. (2019), “
+Rising interest rates and liquidity risk in the life insurance sector
+”, 
+Working Paper Series
+, No 29/17, International Center for Insurance Regulation, Frankfurt am Main, 1 March.
+Berdin, E., Kok, C. and Pancaro, C. (2017), “
+A stochastic forward-looking model to assess the profitability and solvency of European insurers
+”, 
+Working Paper Series
+, No 2028, European Central Bank, Frankfurt am Main, February.
+Caccioli, F., Ferrara, G. and Ramadiah, A. (2020), “
+Modelling fire sale contagion across banks and non-banks
+”, 
+Staff Working Paper
+, No 878, Bank of England, London, 3 July.
+Calimani, S., Hałaj, G. and Żochowski, D. (2020), “
+Simulating fire sales in a system of banks and asset managers
+”, 
+Working Paper Series
+, No 2373, European Central Bank, Frankfurt am Main, February.
+Chrétien, É., Darpeix, P-E., Gallet, S., Grillet-Aubert, L., Lalanne, G., Malessan, A., Novakovic, M., Salakhova, D., Samegni-Kepgnou, B. and Vansteenberghe, É. (2020), “
+Exposures through common portfolio and contagion via bilateral crossholdings among funds, banks and insurance companies
+”, 
+Working Paper Series
+, Haut Conseil de Stabilité Financière, June.
+Cont, R., Kotlicki, A. and Valderrama, L. (2019), “
+Liquidity at Risk: Joint Stress Testing of Solvency and Liquidity
+”, 
+SSRN Electronic Journal
+, Social Science Research Network, 21 June.
+ECB/ESRB Project Team on Climate Risk Monitoring (2021), “
+Climate-related risk and financial stability
+”, European Central Bank, Frankfurt am Main, July.
+EIOPA, (2021), “
+Insurance stress test 2021
+”, European Insurance and Occupational Pensions Authority, Frankfurt am Main, December.
+Farmer, J. D., Kleinnijenhuis, A. M., Nahai-Williamson, P. and Wetzer, T. (2020), “
+Foundations of system-wide financial stress testing with heterogeneous institutions
+”, 
+Staff Working Paper
+, No 861, Bank of England, London, 15 May.
+Fricke, C. and Fricke, D. (2021), “
+Vulnerable asset management? The case of mutual funds
+”, 
+Journal of Financial Stability
+, Vol. 52, February.
+Fukker, G., Kaijser, M., Mingarelli, L. and Sydow, M. (2022), “Contagion from market price impact: a price-at-risk perspective”, 
+Working Paper Series
+, European Central Bank, Frankfurt am Main, forthcoming.
+Gourdel, R., Maqui, E. and Sydow, M. (2019), “
+Investment funds under stress
+”, 
+Working Paper Series
+, No 2323, European Central Bank, Frankfurt am Main, October.
+Gourdel, R. and Sydow, M. (2022), “Risk on both sides: dualities in shock transmission and climate stress for investment funds”, 
+Working Paper Series
+, European Central Bank, Frankfurt am Main, forthcoming.
+Hałaj, G. (2018), “
+System-wide implications of funding risk
+”, 
+Physica A: Statistical Mechanics and its Application
+, Vol. 503, pp. 1151-1181, August.
+Hałaj, G. and Laliotis, D. (2017), “
+A top-down liquidity stress test framework
+”, 
+STAMP€: Stress-Test Analytics for Macroprudential Purposes in the euro area
+, Chapter 14, European Central Bank, Frankfurt am Main, February, pp. 168-191.
+Hesse, H., Schmieder, C., Puhr, C., Neudorfer, B. and Schmitz, S. W. (2012), “
+Next Generation System-Wide Liquidity Stress Testing
+”, 
+IMF Working Paper
+, No 12/3, International Monetary Fund, Washington, January.
+Mirza, H., Moccero, D., Palligkinis, S. and Pancaro, C. (2020), “
+Fire sales by euro area banks and funds: what is their asset price impact?
+”, 
+Working Paper Series
+, No 2491, European Central Bank, Frankfurt am Main, November.
+Network for Greening the Financial System (2021), “
+NGFS Climate Scenarios for Central Banks and Supervisors
+”, Paris, June. 
+Roncoroni, A., Battiston, S., Escobar-Farfàn, L. O. L. and Martinez-Jaramillo, S. (2021), “
+Climate risk and financial stability in the network of banks and investment funds
+”, 
+Journal of Financial Stability
+, Vol. 54, June.
+Stern, N. and Stiglitz, J. E. (2021), “
+The Social Cost of Carbon, Risk, Distribution, Market Failures: An Alternative Approach
+”, National Bureau of Economic Research, 15 February.
+Sydow, M., Schilte, A., Covi, G., Deipenbrock, M., Del Vecchio, L., Fiedor, P., Fukker, G., Gehrend, M., Gourdel, R., Grassi, A., Hilberg, B., Kaijser, M., Kaoudis, G., Mingarelli, L., Montagna, M., Piquard, T., Salakhova, D. and Tente N. (2021), “
+Shock amplification in an interconnected financial system of banks and investment funds
+”, 
+Working Paper Series
+, No 2581, European Central Bank, Frankfurt am Main, August.
+ 	As also 
+Hałaj (2018)
+; 
+Caccioli et al. (2020)
+; 
+Chrétien et al. (2020)
+; 
+Farmer et al. (2020)
+; 
+Fricke and Fricke (2021)
+; and 
+Roncoroni et al. (2021)
+. 
+ 	Contagion channels are also discussed in 
+Hałaj and Laliotis (2017)
+; 
+Calimani et al. (2020)
+; 
+Cont et al. (2019)
+; 
+Chrétien et al. (2020)
+; 
+Mirza et al. (2020)
+; 
+Battiston et al. (2021)
+; 
+Roncoroni et al. (2021)
+; 
+Stern and Stiglitz (2021)
+; and Gourdel and Sydow (2022). 
+ 	For related works, see 
+Battiston et al. (2017)
+; 
+Roncoroni et al. (2021)
+, 
+Stern and Stiglitz (2021)
+; and Gourdel and Sydow (2022). 
+ 
+	Less significant institutions are banks that do not fulfil any of the significance criteria specified in the 
+SSM Regulation
+ – in contrast to significant institutions that do fulfil at least one of them. They are supervised by their national supervisors, under the oversight of the ECB, whereas significant institutions are directly supervised by the ECB. 
+ 	Derivatives positions are not included. 
+ 	In addition, we incorporate statistics at the aggregate fund-sector level from the Quarterly Sector Accounts and Investment Funds Balance Sheet Statistics data compiled by the ECB. 
+ 
+Solvency II
+ data are based on country-level balance sheet information, as provided in the EIOPA insurance statistics, and securities holdings are based on the Securities Holdings Statistics Sector Module (SHS-S). 
+     The model assumes the instantaneous fire sale of assets as the only management actions to be enforced against the breach of the capital requirement. This represents a strong assumption based on the fact that: i) while being a microprudential regulatory framework, Solvency II encompasses macroprudential tools to account for the long-term nature of the insurance business, such as the long-term guarantees package. This package includes a tool to absorb volatility in the financial markets and avoid fire sales of assets; ii) the Solvency II framework allows a 6-month period to re-establish the level of eligible own funds to cover the solvency capital requirement, or to reduce the risk profile of the undertaking to ensure compliance. The period can be extended if appropriate or in case of an exceptional crisis in the financial markets; iii) insurers have at their hands a wide array of management actions to cope with drops in their solvency position. The fire sale of assets, as shown in the 2021 EU-wide Insurance stress test exercise is not the first option triggered (see 
+EIOPA insurance stress test 2021
+). It is also worth noting that the model does not account for changes in the values of the liabilities triggered by long-term guarantees and discretionary benefits. Also, the effect of the Loss Absorbing Capacity of Technical Provisions and Deferred Taxes are neglected. 
+ 	First, a unique identification code is assigned to each reported counterparty in the system by implementing an auxiliary database. The specific LEI (Legal Entity Identifier), RIAD (Register of Institutions and Affiliates Data) and ISINs (International Securities Identification Numbers) are extrapolated from Moody’s, GLEIF (Global Legal Entity Identifier Foundation) and CSDB (Centralised Securities Database) databases to uniquely identify each issued security and the corresponding issuer. Second, a tailored data-matching procedure makes it possible for all the entities in the sample to be included under the network nodes to which they are related. 
+ 	See the website of the 
+Network for Greening the Financial System
+. 
+ 	Statistical Classification of Economic Activities in the European Community. 
+ 	The initial modelling framework, as illustrated in 
+Sydow et al. (2021)
+, covered only banks and investment funds. 
+ 	Under the current framework, our system is shocked once with a cumulative shock of 28 years from 2022 until 2050 using current balance sheet information; losses resulting from the starting shock and the interaction among the three sectors represent the total system losses accrued until convergence of the model. 
+ 	Price-at-risk refers to a parameter calibration based on the tail results of an ISIN-level quantile regression involving the returns and volumes traded of a given security. 
+ 	Initial, exogenous default or market losses originate from aggregate NFC defaults and subsequent price adjustments. 
+ 	Funds resort to much more significant fire sales than banks, which can access interbank and central bank funding. 
+
+Are you happy with this page?
+
+Yes
+
+No
+
+What made you unhappy?
+
+Page not working
+
+Information not useful
+
+Design not attractive
+
+Something else
+
+Thank you for letting us know!
+
+ 
+
+Our website uses cookies
+
+We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:
+
+Read our privacy statement 
+ 
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Thank you!
+
+Thank you!
+
+We have updated our privacy policy
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+See what has changed in our privacy policy
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Your cookie preference has expired
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+This feature requires cookies.
+
+Modify

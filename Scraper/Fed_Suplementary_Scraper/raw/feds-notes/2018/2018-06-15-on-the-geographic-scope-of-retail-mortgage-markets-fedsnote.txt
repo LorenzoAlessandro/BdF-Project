@@ -1,0 +1,603 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+June 15, 2018
+
+On the Geographic Scope of Retail Mortgage Markets
+
+Dean Amel, 
+Elliot Anenberg
+, and Rebecca Jorgensen
+
+1. Introduction
+
+Recently, a rising and elevated spread between the primary mortgage rate and the mortgage backed security (MBS) yield has raised some concerns that a lack of competition in the mortgage market may be raising prices for borrowers and impeding the pass-through of monetary policy to households. Such a hypothesis is somewhat at odds with the traditional notion that the mortgage market is national in geographic scope, as the national market is relatively unconcentrated. If, however, borrowers shop locally for their mortgages, then local market concentration could be relevant for determining the degree of competition in the mortgage industry. In this case and if local mortgage concentration is higher than at the national level, it is possible that market power is contributing to higher prices for borrowers.
+
+In this note, we first discuss why markets for mortgage originations are likely to be national in scope. We then show that even if mortgage markets were local, they would be unconcentrated. Finally, we test for an empirical relationship between the local concentration of mortgage lending and changes in mortgage rates and find essentially no correlation of concentration and rates. Our results are consistent with the interpretation that mortgage markets are national and that local concentration in the mortgage industry is not a primary driver of movements in mortgage rates, suggesting that other factors may be contributing to the rising primary-secondary spread (Fuster et al. (2013); Sharpe and Sherlund (2016); Boyarchenko et al. (2017)).
+
+2. A Description of Markets for Mortgage Origination
+
+Policymakers with some expertise in mortgage markets, such as the Federal Reserve, now consider markets for both mortgage origination and mortgage servicing to be nationwide in geographic scope.
+1
+ Markets for mortgage servicing have long been considered to be national in scope, but markets for mortgage originations were considered to be geographically local until 2008. In that year, the Fed stated publicly that the market for mortgage originations had become national in scope, and subsequently, the Fed's antitrust analysis of bank mergers has treated the geographic market for mortgage originations to be national in scope. The Fed's declaration that mortgage originations are made within a national market was based on both price and quantity data. On the price side, the Fed stated that the differential between mortgage rates offered at long distance (over the Internet) and rates offered by local originators had decreased over time. On the quantity side, the Fed noted that almost half of all mortgages made in a Metropolitan Statistical Area (MSA) were made by firms that had no offices in that MSA. In fact, over one-third of mortgages were originated by firms with no office in the same state as the location of the mortgage. Many large, nonbank mortgage lenders have no branch presence at all.
+
+In Table 1, we update the statistics showing that many borrowers do not exclusively shop locally for their mortgage. We obtain data on mortgage originations for 2010-2014 from the Home Mortgage Disclosure Act (HMDA). The HMDA data report the lender name associated with each origination, but not branch locations. To identify the branch locations, we merge the HMDA data with the FDIC's annual Summary of Deposits (SOD) reports, which contain branch locations of all FDIC-insured institutions for each year. For each of six mortgage product types listed in Table 1, we compute the share of originations for which the mortgage originator does and does not have a branch location in the same county as the home that is associated with the mortgage.
+2
+ Across all product categories, our results indicate that over half of mortgage originations are made by non-local lenders, with the percentage of non-local lending ranging from 57 percent to 83 percent, depending on the type of mortgage. This suggests that a sizable share of borrowers do not exclusively shop locally for their mortgage.
+3
+
+The hypothesis that mortgage markets are not local gains further support from the Survey of Consumer Finances (SCF), conducted every three years by the Federal Reserve Board. In surveys conducted from 1989 to 2016, the percentage of mortgage borrowers who cited the location of a firm's branches as primary reason for choosing a lender ranged from 2.4 percent to 4.1 percent, with no discernable trend over time. This contrasts with answers to questions about the choice of checking account provider, where about 40 percent of respondents cited the location of offices as the primary criterion.
+
+Even if the relevant geographic market were local, most local markets would seem to be too uncon- cencentrated for the participants to have market power and the individual ability to affect prices. We compute the Herfindahl-Hirschman index (HHI) in mortgage originations, treating each county-year- product type combination as a separate market. Table 2 reports the median HHI for each product type over the previous five years and the share of counties with HHIs above 2500, which is the level at which the Department of Justice and Federal Trade Commission believe a market is sufficiently concentrated to raise competitive concerns. For every product category, the median HHI is below 2500 and the share of counties with HHIs above 2500 ranges from 38 percent down to 14 percent, depending on the type of mortgage. Since there are relatively few barriers preventing lenders from switching from one product category to another, we are likely overstating the concentration of the mortgage market by segmenting the mortgage market into product types.
+
+The Effect of Local Concentration on Changes in Mortgage Rates
+
+In this section, we test for a relationship between the local concentration of mortgage lending and changes in mortgage rates. Scharfstein and Sunderam (2013) describe publicly available data sources and an empirical model for testing this relationship, and we follow their approach in this note. For each quarter and county, we compute the average 30-year, fixed mortgage rate using Fannie Mae's Single Family Loan Performance Data on mortgage originations. We residualize the mortgage rate of observed borrower characteristics, so movements over time in our mortgage rate should largely reflect changes in broader market conditions, not changes in the types of borrowers demanding loans. We measure concentration (HHI) by county and year using the HMDA data.
+4
+ Our complete sample of mortgage rates and HHIs runs from 2000-2014. The Appendix contains further details of our sample and data.
+
+Our main regression relates changes in mortgage rates to changes in MBS yields and market con- centration. We estimate:
+
+Î
+R
+k,t
+ = Î± + Î²
+1
+ÎMBSyield
+t
+ + Î²
+2
+HHI
+k,t-1
+ + Î²
+3
+ÎMBSyield
+t
+ * HHI
+k,t-1
+ + Î³
+1
+X
+k,t
+ + Ïµ
+k,t
+ (1)
+
+â
+R
+k,t 
+is the quarterly change in the mortgage rate in county 
+k
+. â
+MBSyield
+t
+ is the quarterly change in the Fannie Mae 30-year current coupon mortgage-backed security (MBS) yield. The market for MBS is a national one; as a result â
+MBSyield
+t
+ does not depend on 
+k
+. 
+HHI
+k,t
+â
+1
+ is the county- level HHI lagged one year. 
+X
+k,t 
+ is a vector of county-quarter controls for population, the population share over 65, the population share under 18, and the population share that is African-American. The coefficient of interest is 
+Î²
+3
+ because it measures the extent to which the pass-through of MBS yields to mortgage rates depends on local concentration. Standard errors are clustered by county and time. To reduce the influence of potentially noisy estimates of concentration in sparsely populated counties, we restrict the sample to the top 1000 counties by population for our main results. We verified that our results are robust to alternative sample restrictions.
+
+Table 3 presents the results. In all specifications, we find essentially a zero effect of local concen- tration on changes in mortgage rates, consistent with our finding in Table 2 that the typical market seems too unconcentrated for the participants to have market power and the ability to affect prices. Our preferred specification includes year and county fixed effects and is shown in column 4. Our point estimate of 
+Î²
+3
+ implies that for a 100 basis point increase in the MBS yield, a one standard deviation increase in local concentration (908 HHI points) results in a less than one basis point increase in the mortgage rate, which is a negligible effect. At the same time, 
+Î²
+1
+ is estimated to be about two-thirds, suggesting that there is a strong correlation between changes in local mortgage rates and changes in nationwide MBS yields, but that the correlation is not dependent on local concentration.
+
+In Table 4, we present the results from equation 1 when we restrict the sample to counties where the HHI is 2500 or above, but do not restrict the sample to just the 1000 most populous counties. These are counties in which it seems more plausible 
+a priori 
+that local lenders could exert market power, if the geographic scope of mortgage markets is local. However, even for this sample of more concentrated counties, our estimate of 
+Î²
+3
+ is close to zero, consistent with the interpretation that mortgage markets are national.
+
+We ran several other variations on the results reported in Table 3 to test the robustness of our results. We split the sample period into times when MBS rates were increasing and times when those rates were decreasing and estimated (1) separately for the two periods. In all cases, our estimate of 
+Î²
+3
+ remains statistically and economically insignificant, in seven of eight cases with a 
+t
+-statistic well below 1. We split our sample period into three five-year periods corresponding roughly to the period just before the recent financial crisis, a period containing the crisis, and a period containing the recovery and estimated (1) on each five-year period. The coefficient of interest, 
+Î²
+3
+, has a marginally significant and small negative coefficient in the period covering the crisis (2005-09), but is insignificant in the other two periods. Replacing the HHI by either the four-firm concentration ratio or by the change in the HHI has no notable effect on the results. We also estimated (1) in levels--i.e. we replaced â
+R 
+and â
+MBSyield
+ with 
+R 
+and 
+MBSyield
+. Both 
+Î²
+2
+ and 
+Î²
+3
+ remain statistically and economically insignificant in all specifications.
+
+We also tried to address the endogeneity of HHI using variation in concentration created by bank mergers in counties that are arguably not central to the banks' merger decisions. Our estimates exploiting this type of variation are imprecise and did not provide any evidence that 
+Î²
+3
+ is significantly different from zero. Finally, while our main results describe correlations between concentration and mortgage rates associated with refinance mortgage originations (following Scharfstein and Sunderam (2013)), we confirmed that our results are little changed when we use purchase originations instead.
+
+Conclusion
+
+We have provided evidence that the Federal Reserve's treatment of mortgage markets as being national in scope is appropriate. First, we show that a majority of borrowers obtain their mortgages from lenders that do not have a local branch presence. Second, we show that local mortgage markets appear too unconcentrated, in most cases, for the participants to have market power and the individual ability to affect prices. Consistent with these empirical facts, we then show that local concentration of mortgage lending has essentially no effect on changes in mortgage rates.
+
+References
+
+Boyarchenko, Nina, Andreas Fuster, and David Lucca
+, "Understanding mortgage spreads," 2017.
+
+Federal 
+Deposit Insurance Corporation (U.S.)
+, " Summary of Deposits Data."
+
+Federal
+ 
+Financial Institutions Examination Council (U.S)
+, " Home Mortgage Disclosure Act (Public Data)."
+
+Fuster,
+ 
+Andreas, Laurie Goodman, David O Lucca, Laurel Madar, Linsey Molloy, Paul S Willen et al.
+, "The rising gap between primary and secondary mortgage rates," 
+Economic Policy 
+Review
+, 2013, (Dec), 17--39.
+
+Scharfstein, David S and Adi Sunderam
+, "Concentration in mortgage lending, refinancing activity and mortgage rates," Technical Report, National Bureau of Economic Research 2013.
+
+Sharpe, Steve A and Shane M Sherlund
+, "Crowding out effects of refinancing on new purchase mortgages," 
+Review of Industrial Organization
+, 2016, 
+48 
+(2), 209--239.
+
+Table 1: Share of Mortgage Originations Made by Local and Non-Local Lenders
+
+Product Type
+
+Local Share
+
+Non-Local Share
+
+Purchase, GSE
+
+0.43
+
+0.57
+
+Purchase, FHA
+
+0.41
+
+0.59
+
+Purchase, Other
+
+0.17
+
+0.83
+
+Refinance, GSE
+
+0.43
+
+0.57
+
+Refinance, FHA
+
+0.32
+
+0.68
+
+Refinance, Other
+
+0.25
+
+0.75
+
+Shows the share of originations for which the mortgage originator has a branch location in the same county as the home that is associated with the mortgage. Data on mortgage originations over the previous five years are from HMDA. Branch locations come from banks' annual Summary of Deposit reports. GSE denotes Fannie Mae and Freddie Mac loans. FHA denotes Federal Housing Administration loans.
+
+Table 2: HHI By Product Type
+
+Product Type
+
+Median HHI
+
+Share of Counties with HHI above 2500
+
+Purchase, GSE
+
+1527
+
+28.4
+
+Purchase, FHA
+
+2067
+
+37.8
+
+Purchase, Other
+
+1341
+
+23.4
+
+Refinance, GSE
+
+1084
+
+14
+
+Refinance, FHA
+
+1915
+
+33.9
+
+Refinance, Other
+
+1078
+
+22.7
+
+We compute the Herfindahl-Hirschman index (HHI) in mortgage originations, treating each county- year-product type combination as a separate market. Table reports the median HHI and the share of counties with HHIs above the Departmet of Justice threshold of 2500 for each product type over the previous five years. GSE denotes Fannie Mae and Freddie Mac loans. FHA denotes Federal Housing Administration loans. The HHIs are computed using HMDA data.
+
+Table 3: Effect of Changes in MBS Yields on Changes in Mortgage Rates
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+MBS Yield Change
+
+0.647***
+
+			(0.112)
+
+0.622***
+
+			(0.110)
+
+0.618***
+
+			(0.111)
+
+0.672***
+
+			(0.179)
+
+HHI/10000
+
+0.196
+
+			(0.400)
+
+-0.0665
+
+			(0.0572)
+
+-0.0218
+
+			(0.0540)
+
+-0.0315
+
+			(0.0581)
+
+MBS Yield Change X HHI/10000
+
+0.453
+
+			(1.006)
+
+-0.135
+
+			(0.888)
+
+-0.0425
+
+			(0.905)
+
+-0.0628
+
+			(0.934)
+
+County FE
+
+No
+
+No
+
+Yes
+
+Yes
+
+Year FE
+
+No
+
+Yes
+
+Yes
+
+Yes
+
+Other Controls
+
+No
+
+No
+
+No
+
+Yes
+
+N
+
+62390
+
+62390
+
+62338
+
+62338
+
+Standard errors in parentheses
+
+* 
+p < 
+0
+.
+1, **
+ 
+p < 
+0
+.
+05, ***
+ 
+p < 
+0
+.
+01
+
+Changes are quarterly changes. Rates and yields are in percentage points. "Other controls" include an interaction of HHI with population, share of population with age above 65, share black, and share of population with age under 18. Standard errors are clustered by county and quarter and are reported in parenthesis. Sample restricted to the top 1000 counties by population.
+
+Table 4: Effect of Changes in MBS Yields on Changes in Mortgage Rates, Concentrated Counties Only
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+Mortg. Rate Change
+
+MBS Yield Change
+
+0.639***
+
+			(0.0818)
+
+0.608***
+
+			(0.0853)
+
+0.607***
+
+			(0.0852)
+
+0.666***
+
+			(0.162)
+
+HHI/10000
+
+-0.00637
+
+			(0.0253)
+
+-0.00132
+
+			(0.00606)
+
+-0.0108***
+
+			(0.00163)
+
+-0.00822***
+
+			(0.00183)
+
+MBS Yield Change X HHI/10000
+
+0.100
+
+			(0.0741)
+
+0.0592
+
+			(0.0648)
+
+0.0649
+
+			(0.0641)
+
+0.102
+
+			(0.0759)
+
+County FE
+
+No
+
+No
+
+Yes
+
+Yes
+
+Year FE
+
+No
+
+Yes
+
+Yes
+
+Yes
+
+Other Controls
+
+No
+
+No
+
+No
+
+Yes
+
+N
+
+27297
+
+27297
+
+27297
+
+27114
+
+Standard errors in parentheses
+
+* 
+p < 
+0
+.
+1, 
+** 
+p < 
+0
+.
+05, 
+*** 
+p < 
+0
+.
+01
+
+Concentrated counties are those with HHI above 2500. Changes are quarterly changes. Rates and yields are in percentage points. "Other controls" include an interaction of HHI with population, share of population with age above 65, share black, and share of population with age under 18. Standard errors are clustered by county and quarter and are reported in parenthesis.
+
+Appendix
+
+Most of our variables come from Fannie Mae Loan Disclosure data and Home Mortgage Disclosure Act (HMDA) data. From the Fannie Mae data, we obtain borrower FICO credit score, loan-to-value ratio, and the interest rate charged on the loan. Unfortunately, the Fannie Mae data do not contain information on points paid or received by the borrower. To purge the observations of any relationship between the interest rate and borrower characteristics which may also be correlated with concentration, we first regress the interest rate on monthly dummies and FICO-LTV bins. We save the residuals from this regression and use them in the main analysis.
+
+From the Fannie Mae data, we only keep loans that were used for refinancing single family homes with a credit score of at least 660. The Fannie Mae data include three-digit zip codes, so we merge this with the HUD county/zip crosswalk. We next create bins based on FICO score and loan-to-value ratios, and then run the following regression:
+
+Rate
+ikm
+ = Î±
+0,m
+ + Î±
+1,m
+X
+i,m
+ + Î·
+ikm
+
+where 
+i
+ indexes the loan, 
+k
+ indexes the county in which the property associated with the loan is located, and 
+m
+ indexes the month-year of origination. 
+Î±
+0,m
+ is a series of month-year dummies and 
+X
+i,m
+ is our vector of FICO/loan-to-value groupings. We allow the coefficient on the groupings to vary by time in the style of Scharfstein and Sunderam (2013). We take the residuals from this regression and use them as the dependent variable in our main regression.
+
+For the HMDA data, we keep only loan applications for refinancings that were approved and accepted and that were originated or purchased by the responding institution. We drop applications that have missing counties, missing incomes, and loan amounts that are either less than zero or at least one million. We then calculate market share for each lender in a county and concentration measures for each county.
+
+We then merge this dataset with the Fannie Mae data on county and year, allowing each loan in the Fannie Mae data to match with all potential matches in the HMDA data.
+
+After merging the data, we collapse the file to have one observation per county quarter, weighting the results by the frequency with which that county appears with that three digit ZIP code in the crosswalk files.
+
+We obtain our MBS yields from Barclay's, and collapse them first to a monthly, and then a quarterly average. Our demographic variables are pulled from the United States Census and American Community Survey data.
+
+The average standard deviation in the residualized mortgage rate across counties during our sample period is about 10 basis points, implying that the heterogeneity in mortgage rates across counties is fairly low. The unconditional correlation between the residualized mortgage rate and the HHI in our sample is close to zero.
+
+1.
+ 
+https://www.federalreserve.gov/newsevents/pressreleases/orders20080605a.htm.
+ 
+Return to text
+
+2.
+ This will tend to overstate the share of borrowers who use local lenders because a lenderâs local presence does not necessarily mean that the borrower obtained the mortgage through the local branch. This overstatement likely has grown over time as large banking organizations have increased their national branch networks through interstate acquisitions. However, the SOD does not include credit unions, which are likely to be local lenders. Thus, this will tend to understate the share of borrowers who use local lenders. The true direction of the error is dependent on which effect dominates. 
+Return to text
+
+3.
+ One limitation of the HMDA data is that they are not complete for rural areas, so our results are likely over-representative of urban areas. However, data from the Survey of Consumer Finances, which samples both urban and rural households, also show that a sizeable share of mortgage borrowers obtain their mortgage from a non-local institution. 
+Return to text
+
+4.
+ We compute concentration at an annual frequency partly because the public-version of the HMDA data report the origination year but not the origination month or quarter. 
+Return to text
+
+Please cite this note as:
+
+Amel, Dean, Elliot Anenberg, and Rebecca Jorgensen (2018). "On the Geographic Scope of Retail Mortgage Markets," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 15, 2018, https://doi.org/10.17016/2380-7172.2184.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

@@ -1,0 +1,238 @@
+FEDS Notes
+
+Twitter
+
+March 30, 2020
+
+Regulatory Arbitrage in the Use of Insurance in the New Standardized Approach for Operational Risk Capital
+1
+
+Marco Migueis
+
+1 â Background
+
+In December 2017, the Basel Committee on Banking Supervision (BCBS) published a new set of regulatory capital standards for internationally active banks, which includes a new standardized approach (SA) for operational risk capital (BCBS 2017). The new SA calculates capital requirements according to a regulatory formula that uses as inputs income and expense items from banks' financial statements as well as banks' historical operational losses. Specifically, SA capital requirements correspond to the product of the Business Indicator Component (BIC) and the Internal Loss Multiplier (ILM).
+
+$$$$ {Operational\ Risk\ SA\ Capital} = {BIC} \cdot {ILM} $$$$
+
+where the BIC is a function of banks' income statement items while the ILM depends positively on the ratio between the Loss Component, which is a function of the bank's historical operational losses, and the BIC.
+
+$$$$ {ILM} = \ln \left( \exp(1) - 1 + \left(\frac{Loss Component}{BIC}\right)^{0.8} \right) $$$$
+
+where $${Loss\ Component} = 15 \cdot {Average\ Net\  Annual\ Operational\ Losses} $$.
+
+Average net annual operational losses are calculated for the ten-year window preceding the year for which the capital requirements will be in effect. The BIC is intended as a business volume proxy for the operational loss exposure, while the ILM is an adjusting factor that increases or decreases capital requirements depending on how a bankâs Loss Component (a proxy for operational loss exposure based on historical operational losses) compares with the BIC.
+
+When calculating net annual operational losses, banks can net out the amounts that they have recovered on operational loss events, including the insurance payouts that they have received. The netting of recoveries in the Loss Component follows the logic that, because recoveries reduce the financial losses of a firm, they reduce its operational loss exposure and thus should reduce the proxy for operational loss exposure used in the SA.
+
+Section 2 of this note discusses how banks may be able to use insurance contracts to arbitrage requirements if the SA is implemented as defined in the Basel text. Section 3 discusses possible approaches to mitigate this arbitrage opportunity. Section 4 concludes.
+
+2 â Regulatory arbitrage on the use of insurance in the new SA
+
+To the extent that recoveries, including insurance recoveries, reduce operational loss exposure, it is sensible for them to reduce the proxy for operational loss exposure in the SA. However, the possibility of regulatory arbitrage arises if banks can take actions to reduce the SA proxy for operational loss exposure without a commensurate reduction of the true operational loss exposure.
+2
+
+The Loss Component of the new SA uses average net annual operational losses â measured over the prior ten years â to proxy for tail operational loss exposure. Given that net annual operational losses are calculated net of insurance recoveries, the regulation incentivizes banks to purchase insurance policies. But insurance does not need to focus on reducing exposure to large tail loss events to be successful in reducing average net annual operational losses. Instead, banks may be able to achieve meaningful regulatory capital reduction through insurance policies that cover recurring losses. To do so, banks could adopt insurance policies that cover losses up to certain a maximum annual limit, which may be meaningfully lower than true tail exposure. Such policies could focus on covering recurring, small operational losses, or not specify the types of losses covered and only specify the maximum annual coverage. Insurance policies of this kind can meaningfully reduce average net annual operational losses, but if the maximum coverage is low relative to potential tail losses, true operational loss exposure would not be meaningfully reduced.
+
+To illustrate this arbitrage opportunity, consider the following example: First, assume there is a bank with average net annual operational losses of $1 billion and for which the 99
+th
+percentile of the annual operational loss distribution is $15 billion. Under the new SA, the Loss Component of this bank would be $15 billion (15 times $1Bln), which would cover the 99th percentile of the annual operational loss distribution.
+3
+Second, assume that almost every year the bankâs operational losses are at least $400 million (i.e., 40% of average losses are recurring losses), and assume that this bank takes on an insurance policy that covers up to $400 million in operational losses per year. In this scenario, the bankâs average net annual operational losses would become $600 million and the Loss Component would decrease to $9 billion. However, the 99
+th
+percentile of the operational loss exposure of this bank would remain at $14.6 billion (i.e., $15 billion - $400 million) because insurance only covers losses up to $400 million, and thus the Loss Component would only cover 61.6% of the 99
+th
+percentile of exposure under this scenario.
+
+This example illustrates how insurance can be used to introduce a wedge between the Loss Component and the true tail exposure of a bank. This wedge results from the framework implicitly assuming that, when determining tail operational loss exposure, scaling up past average insurance recoveries in the same proportion as past average losses is appropriate. However, the example exemplifies how insurance contracts can be designed to make such equivalent scaling unreasonable. Insurance can only protect a bank from tail losses if it contractually covers such tail events; coverage of smaller losses through insurance does not necessarily scale to coverage of large losses. So, insurance netting in the Loss Component may result in arbitrage opportunities as banks can reduce their capital requirements without a commensurate decrease in risk.
+
+Empirically quantifying the possible impact of such arbitrage opportunity is challenging because the impact depends on the insurance contracts that banks and insurance companies can feasibly adopt. Data on the prevalence of insurance recoveries in operational risk is scarce. The most recent public information on the issue suggests that only 3% of operational losses are recovered through insurance (BCBS 2009). Nevertheless, operational risk insurance contracts include a variety of products such as bankersâ blanket bonds, property insurance, business interruption insurance, professional indemnity insurance, directors and officersâ liability, cyber crime, general liability, and employment practices liability (BCBS 2010). Thus, it is plausible that operational risk insurance could grow substantially given meaningfully capital arbitrage opportunities and that there would be scope to characterize such insurance contracts as similar to existing operational risk insurance contracts (e.g., bankerâs blanket bonds).
+
+Assuming that insurance coverage could only be contracted year-by-year (thus the premiums collected in one year could only be used to pay for that yearâs coverage) and the bank wants to limit the insurance contract to recurring losses (i.e., a loss total the bank is fairly certain is going to occur), then the maximum reduction to the average net losses that a firm could obtain from an insurance contract corresponds to the percentage of recurring losses. Based on a 2009-2018 sample of ten large US firms participating in the Basel Quantitative Impact Study (QIS), Table 1 presents the average across firms of the ratio of the 10
+th
+, 20
+th
+, and 30
+th
+percentiles of net annual operational losses to the average net annual operational losses. These ratios provide an approximation for the percentage of losses of firms that are recurring.
+
+Table 1
+
+Percentiles
+
+Average across firms of the ratio of a percentile of net annual losses to average net annual losses
+
+10th Percentile
+
+22.8%
+
+20th Percentile
+
+36.5%
+
+30th Percentile
+
+44.6%
+
+Notes: N = 10.
+
+These statistics suggest that between 20% to 45% of the financial impact of operational losses recurs almost every year for the average internationally active US bank. These estimates give a range for the maximum impact of this arbitrage opportunity in the Loss Component to a bank that aggressively attempted to minimize the operational risk SA requirement, but was limited to contract insurance year-by-year.
+
+However, the amount of losses that reoccurs every year may not be the upper bound to how much can be netted out of the Loss Component through insurance contracts. For example, suppose that the bank in the previous example purchased an insurance policy with a maximum coverage of $800 million per year and that the unused portion of this coverage would slide from one year to the next (e.g., if the bank experienced $650 million in losses in one year, $150 million of the coverage would apply to the next year, without the bank having to pay again for this portion of the coverage). Under this somewhat more complicated insurance product, the bank would potentially be able to reduce average net annual operational losses further and consequently the Loss Component, while the 99th percentile of operational loss exposure would remain at $14.2 billion (i.e., $15 billion - $800 million).
+
+Other components of SA calculation besides the Loss Component mitigate the impact of such arbitrage seeking behavior in operational risk capital requirements. Because such insurance transactions would not meaningfully affect the BI, their impact on SA capital requirements would be smaller than their impact on the Loss Component. Table 2 presents the potential impact on operational risk capital requirements of using insurance to reduce net operational losses, over a range of percent netted losses and a range of initial values of the ILM.
+
+Table 2
+
+% reduction in operational risk SA capital requirements
+
+% Recurring losses netted from average annual losses through insurance
+
+Starting ILM
+
+0.8
+
+1
+
+1.5
+
+20%
+
+-4.7%
+
+-6.2%
+
+-7.1%
+
+40%
+
+-9.9%
+
+-13.2%
+
+-15.4%
+
+60%
+
+-15.8%
+
+-21.2%
+
+-25.7%
+
+For a given percent reduction in average net annual operational losses, banks with higher ILM see their operational risk capital requirement decrease more. Also, as the percent of losses netted increases, the ratio of the percent reduction in operational risk capital requirements to percent netted losses increases (e.g., |-15.8%/60%| > |-4.7%/20%|). Thus, banks with larger proportion of losses to BIC and that achieve a larger proportion of loss netting would achieve a larger proportional benefit from these transactions.
+
+Despite the reduction in operational risk requirements being smaller than the reduction of the Loss Component, this arbitrage opportunity is likely to be profitable for most banks under the operational risk SA. For a bank with ILM = 1, a $1 decrease in average net annual operational losses results in approximately a $4.4 decrease in SA capital.
+4
+Assuming that the cost of equity and debt is initially 9.8% and a 2.8%, respectively, and a 50% Modigliani-Miller offset,
+5
+a $4.4 decrease in capital requirement is worth approximately $0.154 to such bank annually. Banks with ILM < 1 would receive a larger benefit per dollar and banks with ILM > 1 a smaller benefit per dollar.
+6
+For each dollar of coverage, the firm would need to pay a premium to the insurance company, which if the repayment of losses is certain would include the $1 dollar in reduced net average losses plus the insurance company profit margin. If the insurance profit was zero and assuming that the insurance payouts for the operational losses are accrued uniformly throughout the year, using insurance to prepay one dollar of losses would cost the bank approximately $0.05 per year due to the cost of capital of this transaction. Predicting with confidence how insurance companies would price such contracts is not possible, but given the limited downside risk insurers would face, it is likely that they may seek a small return thus making such contracts viable from a bankâs perspective.
+
+To receive the insurance coverage described so far, banks would need to pay insurance premiums that, on an annual basis, would be close to the insurance payouts. This is not what is typically conceived as insurance. Pooling risk is the core purpose of insurance, and thus the regular premium payments made by the insured party in an insurance contract are usually considerably lower than the maximum coverage, which is only supposed to be triggered infrequently. However, the Basel operational risk SA standard does not define what insurance means and, thus, banks could plausibly argue that the scheme described, if involving an insurance company, is insurance. In effect, this scheme amounts to pre-funding operational losses. Prefunding of probable and estimable losses is required under accounting rules and takes the form of reserves. However, provisions to fund reserve accounts are included as losses in the new operational risk SA, while insurance premiums are not. Thus, the SA results in a differentiated treatment of reserves (treated as losses) and insurance premiums (not treated as losses, and thus incentivized).
+
+The scheme described would not compromise the conservatism of the SA if regulators already expected this reaction, and thus designed and calibrated the SA taking it into account. However, this is unlikely to have been the case because banks did not have incentive to adopt the insurance scheme described in this paper prior to the new SA announcement; thus, regulators would not have been able to appropriately account for this arbitrage opportunity in their calibration of the new SA. If unaddressed, this arbitrage opportunity may have meaningful impacts on operational risk capital requirements.
+
+3 â Possible solutions
+
+This section describes four possibilities that regulators could pursue to mitigate or eliminate this arbitrage opportunity, and discusses their pros-and-cons.
+
+Defining insurance
+
+One approach that would not require changes to the calculation of the SA would be for regulators to attempt to define "insurance" in the context of the operational risk SA, so as to rule out the arbitrage scheme described so far. Unfortunately, such undertaking is likely to be challenging.
+
+For example, one possible approach to test the difference between "typical" insurance and the arbitrage scheme described would be to calculate the ratio of maximum coverage to annual premiums, and disallow loss netting for insurance policies with low such ratios. However, such an arrangement would give banks and insurance companies incentive to devise insurance products that have the characteristics described above, but also promise a very large payment in situations that are impossible (or nearly impossible) in practice. In addition, determining the ratio above which insurance should not be considered an arbitrage scheme may be difficult in practice and would potentially introduce cliff effects.
+
+Perhaps regulators could come up with cleverer approaches than this simple ratio to distinguish between insurance and this arbitrage scheme, but any such approaches would likely be complex and could introduce other arbitrage opportunities of their own.
+
+Rather than defining a specific test for whether an insurance contract should be allowed to offset losses in the operational risk SA, banking regulators may instead use the supervisory process to identify which insurance offsets should be allowed and which ones should not. Such a flexible approach may be able to constrain this regulatory arbitrage, but will inherently be more subjective and may lead to different treatment in some cases.
+
+Counting insurance premiums as operational losses
+
+A second alternative would be to redefine operational losses to include insurance premiums paid for operational risk coverage. This approach eliminates the arbitrage opportunity described and would not require substantial changes to the SA design. Only the definition of operational loss in the standard would need to be amended.
+
+However, this approach would discourage all types of insurance, including normal insurance products with a high maximum coverage to premium ratio. Insurance is a valuable tool to manage operational risk, which has been explicitly encouraged in the Basel Principles for Sound Management of Operational Risk (BCBS 2011) and the Basel II regulatory capital standards (BCBS 2006) and implicitly encouraged in the new operational risk SA. Discouraging insurance risk mitigation by equating insurance premiums with operational losses is likely inappropriate.
+
+No netting of insurance recoveries
+
+A third possibility to eliminate this arbitrage opportunity is to eliminate the netting of amounts recovered though insurance. This approach would require only minimal changes to the Basel standard.
+
+If not accompanied by a recalibration, this approach would somewhat increase capital requirements relative to the new SA standard as it stands. More importantly, this modification would sever the link between insurance mitigation and capital requirements, thus likely reducing the risk sensitivity of the framework. Consequently, this approach also diminishes banks' incentives to adopt insurance mitigation â although not as severely as counting insurance premiums as operational losses â thus departing from the incentives provided under Basel II and the new SA (as it stands).
+
+Besides the arbitrage argument described, an alternative argument for not allowing insurance recoveries to reduce the exposure metric in the SA is that insurance recoveries â particularly those that are distant in time from the loss event â do not truly reduce a firm's likelihood of insolvency. Indeed, if recoveries occur multiple years after the losses, they are unlikely to prevent a bank from facing a capital shortfall.
+7
+Thus, such recoveries should likely not reduce the proxy for exposure in the SA either. However, when insurance payments are received in a timely manner, insurance can truly mitigate the impact of operational losses on a firm's capital position, and thus should be accounted for in a risk sensitive framework.
+
+A possible compromise modification to the SA would be to limit insurance netting to a certain percentage of total losses. Such approach would limit but not fully eliminate this arbitrage opportunity and is similar to the limits imposed on insurance mitigation in Basel II's Advanced Measurement Approach (BCBS 2006). Under the Advanced Measurement Approach, insurance mitigation could not be used to reduce regulatory capital requirements by more than 20%. A similar limit could be adopted in the new SA.
+
+Adopting a forward-looking approach
+
+The genesis of the arbitrage opportunity described in this paper is the differentiated impact of insurance on the SA proxy for operational loss exposure and on true operational loss exposure. Unfortunately, it is unclear how to build a backward-looking, standardized, and simple framework to approximate true exposure that gives appropriate credit to insurance mitigation and does not face arbitrage opportunities.
+
+A more drastic approach to eliminate this arbitrage opportunity is to fundamentally re-think the operational risk capital framework, and base it in forward-looking estimates of exposure instead of a backward-looking regulator-determined proxy. Migueis (2018) describes a possible approach to implement a forward-looking framework and discusses its multiple other advantages. This forward-looking framework could appropriately account for insurance mitigation by providing banks with appropriate incentives to estimate the amount of insurance mitigation that they would receive in the ensuing year.
+
+Adoption of forward-looking approach could also mitigate a related argument against the current treatment of insurance in the operational risk SA: due to its backward-looking nature, the treatment of insurance in the SA may not appropriately reflect the risk reduction that insurance provides moving forward. Banks that had insurance coverage in the past and thus received insurance recoveries would get credit for this insurance, even if at present these banks no longer have equivalent insurance policies. Conversely, a bank that purchased a new insurance policy, but did not have one in the past, would receive no credit in the SA until this new policy started producing recoveries. Eliminating or limiting insurance netting from the SA would remove the possible undue credit given to insurance recoveries in the past, but would not address the lack of credit to new insurance coverage. Ultimately, the backward-looking nature of the SA limits its risk sensitivity more broadly. SA requirements are based on historical operational losses, which may have been caused by different risks than the ones the bank faces moving forward. Only moving to a forward-looking approach could truly mitigate this weakness of the operational risk regulatory framework.
+
+4 â Conclusion
+
+This note described how the treatment of insurance in the new SA for operational risk presents regulatory arbitrage opportunities. Specifically, banks likely have incentive to take insurance on their recurring losses to reduce the Loss Component, a proxy for operational loss exposure used in the SA, without an equivalent reduction in true exposure. Several alternatives for addressing this regulatory arbitrage opportunity are discussed, including three options based on the current framework and, as a fourth option, adoption of a forward-looking approach to operational risk capital.
+
+Given that the new operational risk SA is yet to be implemented, the attractiveness of this regulatory arbitrage opportunity to firms is uncertain. In particular, it is unclear the extent to which banks and insurance companies will be able to develop insurance contracts targeting recurring operational losses, and whether regular supervisory review will constrain such arbitrage. Nevertheless, the potential for such arbitrage is clear in theory. This note does not attempt to quantify whether banks have changed their approach to insurance to benefit from this arbitrage opportunity. Future research should do so. Moving forward, regulators should consider this arbitrage opportunity seriously as it can meaningfully affect the risk sensitivity, comparability, and degree of conservatism of the new operational risk SA
+
+References
+
+Basel Committee on Banking Supervision (2006).
+International Convergence of Capital Measurement and Capital Standards â A Revised Framework.
+Basel, Switzerland: Bank for International Settlements.
+
+Basel Committee on Banking Supervision (2009).
+Results from the 2008 Loss Data Collection Exercise for Operational Risk.
+Basel, Switzerland: Bank for International Settlements.
+
+Basel Committee on Banking Supervision (2010).
+Recognising the risk-mitigating impact of insurance in operational risk modelling.
+Basel, Switzerland: Bank for International Settlements.
+
+Basel Committee on Banking Supervision (2011).
+Principles for the Sound Management of Operational Risk.
+Basel, Switzerland: Bank for International Settlements.
+
+Basel Committee on Banking Supervision (2017).
+Basel III: Finalising post-crisis reforms.
+Basel, Switzerland: Bank for International Settlements.
+
+Firestone, Simon, Amy Lorenc, and Ben Ranish (2019).
+An Empirical Economic Assessment of the Costs and Benefits of Bank Capital in the US. Federal Reserve Bank of St. Louis Review Third Quarter 2019: 203-230. doi.org/10.20955/r.101.203-30
+
+Migueis, Marco (2018).
+Forward-looking and Incentive-compatible Operational Risk Capital Framework.
+Journal of Operational Risk Vol. 13 (3), 1-15. doi.org/10.21314/JOP.2018.219
+
+1. The views expressed in this manuscript belong to the author and do not represent official positions of the Federal Reserve Board of the Federal Reserve System. The author thanks Christopher Finger, Alex Jiron, and Ben Ranish for helpful suggestions.
+Return to text
+
+2. In this manuscript, the expression "regulatory arbitrage" is used to mean situations where banksâ structure their activities to reduce regulatory requirements without a commensurate reduction in risk.
+Return to text
+
+3. The correspondence between Loss Component and the 99th percentile of loss exposure is given as an example. The BCBS has not published which percentile of annual operational loss distribution the new SA (or the BIC or the Loss Component) aims to reflect.
+Return to text
+
+4. Given that operational risk SA requirements are given by the expression below: $$$$ {OperationalRiskSA} = {ILM} \cdot {BIC} = ln ( exp(1)-1 + ( \frac{15NetAvgLosses}{BIC} )^{0.8} ) \cdot {BIC} $$$$ The derivative of operational risk SA requirement to net average losses is as follows: $$$$ \frac{d{OperationalRiskSA}}{d{NetAvgLosses}} = \frac{12(\frac{1}{R})^{0.2}}{expâ¡(1) - 1+R^{0.8}} $$$$ where R = 15NetAvgLosses/BIC. This derivative is increasing in R (and thus in ILM), and is approximately equal to 4.4 for R (and ILM) equal to 1.
+Return to text
+
+5. These assumptions follow Firestone et al. (2019).
+Return to text
+
+6. Note that the capital benefit per dollar of reduced average net annual operational losses is larger for banks with ILM < 1 than for banks with ILM > 1, despite the percent reduction in operational risk capital requirements for a given percent reduction in average net annual operational losses being bigger for banks with ILM > 1. This happens because, all else about a bank being equal, a given percent reduction in net average losses for a bank with a larger ILM represents a larger total loss reduction than the same percent reduction in average net annual operational losses for a bank with a smaller ILM.
+Return to text
+
+7. The same reasoning also discourages using other, non-insurance, recoveries that occur multiple years after losses to net out losses as is done in the operational loss exposure proxy of the SA.
+Return to text
+
+Please cite this note as:
+
+Migueis, Marco (2020). " Regulatory Arbitrage in the Use of Insurance in the New Standardized Approach for Operational Risk Capital," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, March 30, 2020, https://doi.org/10.17016/2380-7172.2479.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

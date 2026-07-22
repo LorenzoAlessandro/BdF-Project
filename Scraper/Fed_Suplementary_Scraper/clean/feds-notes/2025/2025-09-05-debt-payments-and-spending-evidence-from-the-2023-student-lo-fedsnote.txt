@@ -1,0 +1,302 @@
+FEDS Notes
+
+Twitter
+
+September 05, 2025
+
+Debt Payments and Spending: Evidence from the 2023 Student Loan Payment Restart
+
+Aditya Aladangady
+,
+Edmund Crawley
+,
+William Gamber
+,
+Patrick Moran
+, and Jose Nino
+
+Introduction
+
+In October 2023, roughly 40 million Americans faced a new monthly bill as federal student loan payments resumed after a three-year pandemic-induced pause.
+1
+The restart of loan payments effectively reduced disposable income for borrowers, raising a critical question: How do debt payments affect household spending? Despite a growing academic literature studying the economic effects of student debt, there is surprisingly little empirical evidence on the link between student debt and household spending, largely due to data limitations.
+2
+And yet, understanding the effects of student debt on household spending is crucial given that consumption plays a central role in any measure of household well-being and is a key channel through which student loan policy may affect the macroeconomy.
+
+In this note, we exploit a unique natural experiment and granular, ZIP-code-level data on consumer spending to better understand how changes in student loan payments and interest accrual affect household spending. Following the announcement in June 2023 that student loan payments would resume in October 2023, we find that households began to significantly curtail spending in areas with higher exposure to student debt relative to those with lower exposure. The cutback in spending grows further following the actual resumption of required payments. This finding indicates that the payment pause had supported consumption in those areas. Our results imply that the end of forbearance amounted to a noticeable drag on aggregate demand of roughly $80 billion at an annual rate. More generally, our results suggest student loan forbearanceâand its removalâmay have meaningful impacts on aggregate demand.
+
+Data
+
+We study spending responses to the resumption of student loan payments using a ZIP code by week panel of aggregate transactions from Verisk Commerce Signals Spend Tracker (2024), which covers 55 million individuals and 89 million credit and debit cards, capturing $800 billion in annual sales over our sample period.
+3
+Importantly for our use, the transaction for an individual and their card is attached to the ZIP code of the card owner's billing address, not where the transaction was made. This feature allows us to link spending with student debt and demographic information, which are also measured at the ZIP code of residence.
+
+We construct aggregate federal student loan balances for each ZIP code from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel (CCP), following the methodology of Goss, Mangrum, and Scally (2024).
+4
+Specifically, this algorithm identifies federal student loans that were subject to the statutory pause and resumption in loan payments.
+5
+A limitation of the CCP is that while we observe student loan balances in each quarter, the one-year "on-ramp" period during which legislation mandated student loan payments and delinquencies are not reported to credit bureau means we do not observe actual or required payments on these loans until October 2024. As a result, we estimate the response of consumer spending per dollar of outstanding debt to the resumption of required payments on student debt. With this quantity in hand, we can estimate the aggregate stimulative effect of the resumption of payments, the primary policy-relevant object of interest.
+6
+
+We supplement our data with household income, education, and demographic information for each ZIP code from the 2015-2019 American Community Survey (ACS) extract and the Internal Revenue Service's Statistics of Income (SOI). We use ACS estimates of the total population, the share of college graduates, the share of individuals in various ages bins, and the share of White and Black individuals at a ZIP code level (Manson et al. 2024).
+7
+From the SOI, we use ZIP code level data on mean adjusted gross income (AGI) and the distribution of households across six AGI bins for Tax Year 2020.
+
+Table 1 shows key ZIP code-level summary statistics in our final sample, after sample restrictions.
+8
+Figure 1 shows binscatter relationships between student loan balances and four key demographic characteristics. Areas with higher student loan balances per capita tend to have higher fractions of college educated workers and higher average incomes as shown in Figure 1 (a). These areas also have higher fractions of young workers and lower fractions of subprime borrowers except in regions with highest college shares, as shown Figure 1 (b).
+
+Table 1: Sample Summary Statistics
+
+Variable
+
+Mean
+
+SD
+
+Student Loan Balance Per Capita ($)
+
+3,800
+
+1,731
+
+Adjusted Gross Income Per Capita ($)
+
+79,393
+
+62,798
+
+College Share (%)
+
+29.8
+
+12.5
+
+Black Share (%)
+
+12.8
+
+17.5
+
+White Share (%)
+
+65.2
+
+22.9
+
+Note: This table provides summary statistics for the main demographic variables used as covariates as well as the main variable of interestâstudent loan levels per capita. All summary statistics are weighted at a ZIP code level by the total ACS population.
+
+Sources: FRBNY/Equifax Consumer Credit Panel, American Community Survey, and IRS Statistics of Income.
+
+Figure 1. Student Loan Balances and Demographic Relationships
+
+Figure 1a: College Share and Average Income
+
+Figure 1b: Aged 25â34 and Subprime Share
+
+Note: This figure shows the relationship at a ZIP code level of student loan per capita deciles against mean income, the share of college degrees, share of individuals aged 25-34, and share of subprime borrowers.
+
+Source: FRBNY/Equifax Consumer Credit Panel, American Community Survey, and IRS Statistics of Income.
+
+Accessible version
+
+Empirical Methodology
+
+With our merged data in hand, we estimate a two-way fixed effects model to evaluate how the change in ZIP code spending varied with student loan balances per adult over the sample period January 2022 through April 2024:
+
+$$$$\Delta_{52}SpendPC_{it}=\sum_\tau \beta_\tau\ 1_{\{t=\tau\}}SLBalPC_i+\sum_\tau \gamma_\tau 1_{\{t=\tau\}}X_i+\delta_{s(i)t}+\alpha_i+\epsilon_{it}â(1)$$$$
+
+The specification relates the 52-week change in per capita spending in ZIP code $$i$$ in week $$t$$ ($$\Delta_{52}SpendPC_{it}$$) to its per capita student loan balances as of September 2023 ($$SLBalPC_i$$). Our main object of interest is $$\beta_\tau$$, which captures the time-varying response of consumer spending to differential exposure to student debt per capita. Because areas with different demographic, income, or credit risk characteristics may have different spending trends over this period, and because these characteristics are clearly correlated with student loan balances (as shown in Figure 1), our empirical model must account for differential spending trends driven by these factors. As such, we include flexible time trends that may vary with a vector of ZIP code-level variables $$X_i$$, which includes: (i) college share; (ii) share of population in various age ranges; (iii) share of tax filing units in various adjusted gross income ranges; and (iv) share of population across subprime, near prime, and prime risk score bins. We also include state-time fixed effects, $$\delta_{s(i)t}$$, to account for aggregate trends at the state-level such as differences in spending patterns owing to weather or regional economic trends, and weight the regression by the ACS adult population for each ZIP code.
+
+Effects of Payment Resumption and Aggregate Implications
+
+Estimates from our regression are summarized in Figure 2, which shows the causal effect of an extra $10,000 of student loan debt on consumer spending.
+
+Figure 2. Dynamic Response of Student Debt on Spending
+
+Note: This figure shows the evolution of spending following the resumption of student loan repayment for all 18,178 ZIP codes in the model sample, which is obtained from running the model specified in Equation 1. The dotted lines signify 95 percent confidence bands using standard errors clustered at the ZIP code-level. The thin solid burnt orange line signifies
+June 2, 2023
+âthe date at which Congress passed legislation blocking President Biden's plan for student loan relief. The thick solid blue line signifies
+September 1, 2023
+, which is the date at which interest began to accrue on student loan balances. The purple dashed line is
+October 15, 2023
+, the period in which monthly payments for student loan balances restarted following the end of student loan forbearance.
+
+Sources: Authors' calculations using Verisk Commerce Signals Spend Tracker, FRBNY/Equifax Consumer Credit Panel, American Community Survey, and IRS Statistics of Income.
+
+Accessible version
+
+Notably, causal interpretation of $$\beta_\tau$$ rests upon the assumption that, absent the student loan payment resumption, the difference between spending growth in high- and low-student loan ZIP codes would be zero after controlling for potentially different spending trends by income, demographic, and credit composition at the ZIP code level, as well as state-time and ZIP code fixed effects. While we cannot test this assumption directly, results in Figure 2 show no evidence of differential pre-trends between areas with more or less student debt in months prior to the payment resumption being announced in June 2023 (thin solid burnt orange line), suggesting spending growth would have evolved similarly in these ZIP codes absent the end of forbearance.
+9
+
+Following the announcement in June 2023 that interest accrual would resume in September 2023 and loan payments would resume in October 2023, we see only a gradual, though persistent decline in consumer spending, consistent with widely-documented features of household behavior, including inattention, consumption commitments, and habits.
+10
+Spending appears to decline further following the October 2023 resumption of payments. While servicers did begin assessing interest and requiring borrowers to make payments by October 2023, because of the "on-ramp", the consequences of non-payment were somewhat minimal initially, as servicers could not report delinquencies until October 2024. Nonetheless, it appears many borrowers did resume payments and cut back on spending quickly.
+
+To better understand the magnitude and timing of the consumption response, Figure 3 shows the average weekly effect of an extra $10,000 of student loan debt on consumer spending for the post-announcement period up to the actual resumption of repayments, and the period following the resumption of payments. The figure shows a statistically significant consumption response following the policy announcement in anticipation of the payment change. While not as large as the post-resumption effect, this anticipatory effect is still large: households reduce their spending in this post-announcement period by about $6.20 per $10,000 of student loan debt, compared to $12.20 in the period after payments resume. This finding is somewhat in contrast to results in the existing literature, which tend to find limited anticipatory effects, and it potentially reflects the salience of the policy change.
+
+Figure 3. Average Response of Student Debt on Spending
+
+Note: This figure shows the evolution of spending over for 18,178 ZIP codes over three time periods: (1) "Pre-Announcement", defined as
+June 2, 2023
+when Congress passed legislation blocking President Biden's plan for student loan relief; (2) "Post-Announcement", defined as after June 2, 2023 and up until payment resumption on
+October 15, 2023
+; (3) "Payment Resumption", defined as after October 15, 2023. We obtain the estimates by running the model specified in Equation 1 using "Pre-Announcement" as the base period. We include 95 percent confidence bands for the "Post-Announcement" and "Payment Resumption" periods using standard errors clustered at the ZIP code-level.
+
+Sources: Authors' calculations using Verisk Commerce Signals Spend Tracker, FRBNY/Equifax Consumer Credit Panel, American Community Survey, and IRS Statistics of Income.
+
+Accessible version
+
+To further contextualize our estimates, consider the following back-of-the-envelope calculations for the implied partial equilibrium effect of the end of student loan forbearance on the level of nominal PCE and GDP. We begin with our estimate of the weekly effect of the resumption of student loan payments on spending: $12.20 per $10,000 of balances. This estimate translates to an annualized reduction in spending of $630 per year for every $10,000 in student loan balances. These numbers imply an annualized cutback in spending of $1,590 for the median student loan borrower and $2,980 for the mean.
+11
+Given that we find about $1.25 trillion of eligible student debt at the time the policy ended, our estimates imply that the resumption of student loan payments reduced consumer spending by $80 billion at an annual rate, which is roughly 0.3 percent of GDP or 0.4 percent of personal consumption expenditures (PCE) in the first quarter of 2024.
+12
+
+While much of the literature on spending responses to policy changes focuses on measuring the marginal propensity to consume (MPC) from a shock, we estimate a somewhat different conceptâthe spending response to the resumption of payments given a certain level of outstanding debt. As mentioned previously, the CCP provides reliable measures of debt levels but not required payments in the quarters immediately after payment resumption due to the one-year payment on-ramp period. However, we are able to translate the spending response to debt into an MPC by utilizing information after servicers began reporting required payments and delinquencies in 2024:Q3. Overall, these data imply an aggregate payment-to-balance ratio of roughly 5.75 percent per year.
+13
+Applying these ratios to our estimated effects per-dollar-of-debt, our results are consistent with an MPC of 1âsomewhat high, but not out of the realm of other estimates of MPCs out of salient, permanent income shocks.
+14
+
+Our study provides the first evidence on the response in consumer spending following the restart of student loan repayment using actual spending data, and it complements existing work by Chakrabarti, et al. (2023) who conduct a survey prior to student loan payment resumption asking borrowers how they plan to adjust their spending between October and December 2023 due to the resumption of student loan repayment. The authors find that borrowers expect to reduce consumption by around $56 per month. Following payment resumption, the University of Michigan's Survey of Consumers also asked households how they had responded to student loan payments, with 40 percent of respondents with student loans reporting they would cut back on spending.
+15
+Our numbers suggest that the effect of the resumption of payments may have been larger than survey responses suggested, with the median borrower reducing consumption by about $130 per month. That said, both approaches provide evidence that forbearance may have significant impacts on aggregate demand.
+
+References
+
+Amromin, Gene, and Janice Eberly. 2016. "Education Financing and Student Lending."
+Annual Review of Financial Economics
+8 (1): 289â315.
+
+Armona, Luis, Rajashri Chakrabarti, and Michael F Lovenheim. 2022. "Student Debt and Default: The Role of for-Profit Colleges."
+Journal of Financial Economics
+144 (1): 67â92.
+
+Chakrabarti, Rajashri, Vyacheslav Fos, Andres Liberman, and Constantine Yannelis. 2023. "Tuition, Debt, and Human Capital."
+The Review of Financial Studies
+36 (4): 1667â1702.
+
+Chakrabarti, Rajashri, Daniel Mangrum, Sasha Thomas, and Wilbert Van der Klaauw. 2023. "Borrower Expectations for the Return of Student Loan Repayment." Federal Reserve Bank of New York.
+
+Dinerstein, Michael, Constantine Yannelis, and Ching-Tse Chen. 2024. "
+Debt Moratoria: Evidence from Student Loan Forbearance
+."
+American Economic Review: Insights
+6 (2): 196â213.
+
+Field, Erica. 2009. "Educational Debt Burden and Career Choice: Evidence from a Financial Aid Experiment at NYU Law School."
+American Economic Journal: Applied Economics
+1 (1): 1â21.
+
+Gelman, Michael, Yuriy Gorodnichenko, Shachar Kariv, Dmitri Koustas, Matthew D. Shapiro, Dan Silverman, and Steven Tadelis. 2023. "
+The Response of Consumer Spending to Changes in Gasoline Prices
+."
+American Economic Journal: Macroeconomics
+15 (2): 129â60.
+
+Goss, Jacob, Daniel Mangrum, and Joelle Scally. 2024. "
+Assessing the Relative Progressivity of the Biden Administration's Federal Student Loan Forgiveness Proposal
+."
+Education Finance and Policy
+19 (4): 716â33.
+
+Jacob, Brian A, Damon Jones, and Benjamin J Keys. 2024. "The Value of Student Debt Relief and the Role of Administrative Barriers: Evidence from the Teacher Loan Forgiveness Program."
+Journal of Labor Economics
+42 (S1): S261â92.
+
+Krishnan, Karthik, and Pinshuo Wang. 2019. "The Cost of Financing Education: Can Student Debt Hinder Entrepreneurship?"
+Management Science
+65 (10): 4522â54.
+
+Lochner, Lance, and Alexander Monge-Naranjo. 2016. "Student Loans and Repayment: Theory, Evidence, and Policy." In
+Handbook of the Economics of Education
+, 5:397â478. Elsevier.
+
+Luo, Mi, and Simon Mongey. 2019. "Assets and Job Choice: Student Debt, Wages and Amenities."
+
+Manson, Steven, Jonathan Schroeder, David Van Riper, Katherine Nowles, Tracy Kugler, Finn Roberts, and Steven Ruggles. 2024. "
+IPUMS National Historical Geographic Information System: Version 19.0 [Dataset]
+."
+
+Mezza, Alvaro, Daniel Ringo, Shane Sherlund, and Kamila Sommer. 2020. "Student Loans and Homeownership."
+Journal of Labor Economics
+38 (1): 215â60.
+
+Mian, Atif, Amir Sufi, and Nasim Khoshkhou. 2023. "
+Partisan Bias, Economic Expectations, and Household Spending
+."
+The Review of Economics and Statistics
+105 (3): 493â510.
+
+Mueller, Holger M, and Constantine Yannelis. 2019. "The Rise in Student Loan Defaults."
+Journal of Financial Economics
+131 (1): 1â19.
+
+Rothstein, Jesse, and Cecilia Elena Rouse. 2011. "Constrained After College: Student Loans and Early-Career Occupational Choices."
+Journal of Public Economics
+95 (1-2): 149â63.
+
+Verisk Commerce Signals Spend Tracker. 2024. "Verisk Commerce Signals Spend Tracker."
+
+Yannelis, Constantine, and Greg Tracey. 2022. "Student Loans and Borrower Outcomes."
+Annual Review of Financial Economics
+14 (1): 167â86.
+
+1. See:
+https://www.gao.gov/products/gao-24-107150
+.
+Return to text
+
+2. For more comprehensive reviews of the literature, see Amromin and Eberly (2016), Lochner and Monge-Naranjo (2016), and Yannelis and Tracey (2022). Numerous papers document relationships between student debt and economic outcomes, such as home ownership (Mezza et al. 2020), job match quality (Field 2009; Rothstein and Rouse 2011; Luo and Mongey 2019), entrepreneurship (Krishnan and Wang 2019), the likelihood of default (Armona, Chakrabarti, and Lovenheim 2022; Mueller and Yannelis 2019), borrowing (Dinerstein, Yannelis, and Chen 2024), graduate school enrollment (Chakrabarti, Fos, et al. 2023), and job mobility (Jacob, Jones, and Keys 2024). Chakrabarti, Mangrum, et al. (2023) conducted a survey in August 2023, immediately prior to the resumption of student loan payments, and found that American consumers expected modest reductions in spending when payments resumed.
+Return to text
+
+3. Raw data were processed by Verisk (now owned by Transunion), who then aggregated and scaled the data to provide us with estimates of the total number and value of credit and debit card transactions in every ZIP code at a weekly frequency. Similar data at a monthly frequency from Verisk are used in Mian, Sufi, and Khoshkhou (2023).
+Return to text
+
+4. The CCP is an anonymized, 5 percent random sample of quarterly credit records from Equifax. The data also provides loan-level information on student loans held by borrowers in the main sample. Data are aggregated to ZIP code for use in this note.
+Return to text
+
+5. As discussed by Dinerstein, Yannelis, and Chen (2024), the payment pause only applied to "federal" loans, which included all loans in the Direct Loan program, as well as roughly $100 billion in FFEL loans issued by private lenders and later bought by the Department of Education. These loans comprise the majority of overall student loan balances. The CCP does not provide a federal loan identifier, and we utilize the method proposed by Goss, Mangrum, and Scally (2024) to classify servicer sub-portfolios as "federal" if they showed past-due balances fall to zero by 2020:Q3 and remain at zero through the forbearance period. Our approach leads us to classify a total of $1.25 trillion of the total $1.45 trillion in student loan balances in 2023:Q3 as "federal" balances, and the aggregate series aligns well over time with data from the Department of Education (not shown here).
+Return to text
+
+6. As we discuss later in this note, we estimate that the average annual payment-to-balance ratio is roughly 5.75 percent per year.
+Return to text
+
+7. We convert the ZIP Code Tabulation Area (ZCTA) level ACS aggregates from NHGIS to ZIP codes using the crosswalk provided by the Health Resources and Services Administration:
+https://geocarenavigator.hrsa.gov/
+.
+Return to text
+
+8. We drop ZIP codes with a total ACS population below 2,000 as well as areas like college towns and military bases where the ACS and CCP populations do not align due to differences in billing addresses and residences. In total, our final sample includes 18,178 ZIP codes out of a total of 32,341 in Verisk. However, because most of the ZIP codes we drop have a low population, we maintain over 96 percent of the total ACS population and close to 98 percent of total student loan balances.
+Return to text
+
+9. To further assess the validity of our empirical design, we perform a placebo test using auto loan debt, which was unaffected by the restart of student loan payments in October 2023, and which we therefore expect to be uncorrelated with any trends in consumer spending. To perform this placebo test, we re-estimate Equation 1 using auto loan debt rather than student loan debt as the main independent variable. Reassuringly, we find no significant effect of auto loan debt on consumer spending during the entirety of our sample period.
+Return to text
+
+10. We note that while payments were not required until October, interest began accruing in September (thick solid blue line). Furthermore, student loan payments began at different times for different borrowers during the month of October. The pink dashed line denotes October 15, roughly the midpoint of this window.
+Return to text
+
+11. These numbers are based on the median debt level for a borrower in the 2022 Survey of Consumer Finances, about $25,000 and the mean student loan debt per borrower, about $47,000.
+Return to text
+
+12. Note that while our estimates may include very local (i.e., within-ZIP code) general equilibrium effects, these estimates and do not consider the numerous national general equilibrium effects that could either offset or magnify this change in aggregate demand.
+Return to text
+
+13. Because of changes in Income Driven Repayment plans and deferrals due to the SAVES Act in 2024, we opt to utilize data after reporting resumed rather than older data on payments. We find the ratio of annual required payments to balances for federal loans in the CCP where required payments are positive was 10.4 percent per year in 2024:Q3 through 2025:Q1. In addition, roughly 30 percent of federal loans by balance had required payments of 0. (Zero required payments reflect a combination of grace periods/deferrals, in-school status, and forbearance. See:
+https://www.congress.gov/crs-product/IF12896
+)
+Return to text
+
+14. See, for example, Gelman et al. (2023).
+Return to text
+
+15. See:
+https://www.sca.isr.umich.edu/files/studentloans202401.pdf
+
+Return to text
+
+Please cite this note as:
+
+Aladangady, Aditya, Edmund Crawley, William Gamber, Patrick Moran, and Jose Nino (2025). "Debt Payments and Spending: Evidence from the 2023 Student Loan Payment Restart," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 05, 2025, https://doi.org/10.17016/2380-7172.3879.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

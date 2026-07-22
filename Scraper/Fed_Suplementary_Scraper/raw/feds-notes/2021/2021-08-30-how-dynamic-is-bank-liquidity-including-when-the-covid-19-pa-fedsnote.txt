@@ -1,0 +1,588 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 30, 2021
+
+How Dynamic is Bank Liquidity, Including when the COVID-19 Pandemic First Set In?
+
+Jane Ihrig
+, 
+Cindy M. Vojtech
+, Gretchen C. Weinbach, and Maureen Cowhey
+1
+
+Banks need sufficient liquidityâcash and other assets that may be easily and immediately converted into cashâto meet their financial obligations, such as when households withdraw deposits or businesses tap credit lines. One key takeaway from the Global Financial Crisis of 2007â09 was that continuity of bank intermediation is particularly important in times of stress to limit pressure on the financial system, and that banks need to consistently maintain sufficient liquidity to achieve that outcome. As a result, global minimum liquidity standards were developed for banks by the Bank for International Settlements (BIS) and endorsed by the G20 leaders. One of these standards that was implemented by the United States was the liquidity coverage ratio (LCR), which requires banks to hold enough high-quality liquid assets (HQLA) to ensure their ongoing ability to meet short-term financial obligations, even in a time of financial stress. Large U.S. banks publicly disclose their LCRs quarterly, based on average daily balance sheet amounts across a given quarter, and these ratios typically do not exhibit much variation over time. But how does bank liquidity change on a day-to-day basis, and why? And, what can we learn about banks' liquidityâboth its sources and usesâaround a stress event such as the COVID-19 pandemic? In this Note, we use confidential supervisory data to explore the behavior of bank liquidity at a much higher frequency and level of detail than public data allow.
+
+To establish a baseline of information, we begin by looking at the publicly available data on banks' LCRs, and focus on the period through 2019, prior to the onset of the COVID-19 pandemic. Table 1 shows the average LCR value that each of the eight U.S. global systemically important banks (G-SIBs) reported for 2019:Q4 (column 1).
+2
+ In that quarter, as well as in the previous several quarters, each G-SIB consistently disclosed an LCR that was well above the required level of 100 percent. In addition, the variation in most banks' quarter-to-quarter disclosures was small; over the two-year period from 2018 to 2019, six of the eight banks reported a quarterly LCR that deviated from its typical (mean) level by less than 3 percentage points.
+
+Table 1: U.S. G-SIBs' Pre-Pandemic Public LCR Disclosures
+
+Bank Group (based on 2019:Q4 LCR level)
+
+U.S. G-SIB (listed in descending order of LCR level)
+
+2019:Q4 Quarterly Level (percent)
+
+"High LCR" bank group
+
+Morgan Stanley
+
+134
+
+Goldman Sachs
+
+127
+
+Bank of NY Mellon
+
+120
+
+Wells Fargo
+
+120
+
+"Low LCR" bank group
+
+JPMorgan Chase
+
+116
+
+Bank of America
+
+116
+
+Citigroup
+
+115
+
+State Street
+
+110
+
+Memo: Average
+
+119.8
+
+Source: Firm public disclosures.
+
+The LCR is computed from a wide range of balance sheet items. The ratio's numerator, HQLA, is calculated by applying haircuts and caps to various asset categories based on liquidity characteristics. The ratio's denominator, net cash outflows, is calculated by applying weights to various asset and liability items, where outflows reduce the overall ratio and inflows increase the ratio. For example, deposits owned by households and institutions contribute to outflows that reduce the ratio. Near-term payments due from customers or counterparties contribute to inflows that increase the ratio. Because the LCR was implemented to build banks' resiliency against short-term liquidity shortages, it is calibrated to a 30-day window of stress.
+
+Bank balance sheets are always changing based on activities associated with customer demands, economic and market forces, bank strategy, and risk management. The quarterly-average ratios do not capture this dynamism. To enable a better view into the underlying behavior of banks' LCRs, we construct 
+daily
+ LCR ratios. We also decompose our daily ratios into their major subcomponents to shed light on the causes of their variation.
+
+Our high-frequency LCR measures
+
+Using confidential supervisory data collected by the Federal Reserve Board via its 
+Complex Institution Liquidity Monitoring Report
+ (FR 2052a), we calculate daily LCRs for each of the eight G-SIBs at the consolidated bank holding company level.
+3
+ These data are confidential. For illustration in this Note, we will review data for three U.S. G-SIB bank groups: All eight U.S. G-SIBs and two bank subsetsâthe four G-SIBs with the highest LCR levels in late 2019 ("high LCR" bank group; see column 2 of Table 1) and the four G-SIBs with the lowest LCR levels at that time ("low LCR" bank group). To construct each of these three measures, we take a simple average of the individual LCRs across each bank group, where the individual LCRs are derived from our daily LCR measures at the desired frequency. Averaging preserves the confidentiality of the underlying data, and it allows us to produce "composite" LCRs at a range of frequencies (daily, weekly, monthly, etc.). Our composite LCRs can be thought of as a single representative measure of each bank group's daily LCR.
+
+Figure 1 shows our composite LCR measure for all eight G-SIBs at two frequencies, quarterly (blue line) and daily (black line). The blue line is the average of the individual G-SIB's quarterly average daily LCR values. For example, for all the days in 2019:Q4, the level of the blue line is a bit less than 120, very close to the average LCR value that these banks publicly disclosed that quarter, as shown in Table 1, column 1. This blue line moves up or down at the start of each new quarter as the individual G-SIBs' quarterly average daily LCR values change. In contrast, the black line is the average of the G-SIBs' daily LCR values themselves, and so it changes daily. Within a given quarter, movements in this line are driven by the higher-frequency changes in the individual G-SIB's balance sheets, as recorded in their confidential daily submissions. As the figure makes clear, the daily measure exhibits noticeable variation within each quarter.
+
+Figure 1. Composite LCR Measures: 2017-19. All Eight G-SIBs
+
+Source: FR 2052a.
+
+Accessible version
+
+Figure 2 zooms in on the distance between the two lines in Figure 1âit shows the daily difference, in percentage points, between our quarterly and daily LCR composite measures. On more than half of the days between 2017 and 2019 (or 53 percent of the days), the difference between the two measures, in absolute value, is less than one percentage point. However, roughly one-quarter of the time, the measures differ by more than 1 1/2 percentage pointsâ2 standard deviationsâand the maximum distance is 4 percentage points.
+4
+ Clearly, the quarterly measures mask underlying variation in banks' LCRs.
+
+Figure 2. Difference Between Daily and Quarterly Composite LCR Measures: 2019-20. All Eight G-SIBs
+
+Source: FR 2052a.
+
+Accessible version
+
+Of course, it is entirely reasonable for banks' daily and quarterly LCR measures to differ. Now that these differences may be seen, they raise several interesting questions: Do all banks contribute similarly to the variation in our daily measure? And why does the daily measure move around? Are there particular driversâcertain piece(s) of banks' LCRsâresponsible for the variation? If so, do the drivers mainly stem from banks' liquidity sources (one or more pieces of the LCR numerator) or from banks' liquidity uses (one or more pieces of the denominator)? We examine these questions below.
+
+Do all banks contribute similarly to the variation in the daily LCR measure?
+
+In short, the answer is no. One way to illuminate this finding while preserving bank anonymity is to consider the behavior of the daily composite LCR measure for each of our two bank subgroups. Figure 3 repeats Figure 1 for both the high-LCR and low-LCR bank subgroups. As shown, between January 2017 and the end of 2019, the high LCR bank group's daily composite LCR measure is both larger and more variable than that of the low group. In particular, the high group's daily measure moves in a range of values between 115 and 135 with a standard deviation of 1.3 percentage points. In contrast, the low group's daily measure resides in a narrower range, between 110 and 125, with a standard deviation of 0.8 percentage point. The larger variation in the high group's daily LCR measure likely helps explain why these banks tend to maintain a relatively higher liquidity buffer above the minimum required amount.
+
+Figure 3.1. Composite LCR Measures: 2017-19. High LCR G-SIB Group*
+
+* High LCR group consists of Bank of NY Mellon, Goldman Sachs, Morgan Stanley, and Wells Fargo.
+
+Source: FR 2052a.
+
+Accessible version
+
+Figure 3.2. Composite LCR Measures: 2017-19. Low LCR G-SIB Group**
+
+** Low LCR group consists of Bank of America, Citigroup, JPMorgan Chase, and State Street.
+
+Source: FR 2052a.
+
+Accessible version
+
+In addition, we see that each bank group exhibited a period in which the member banks, on balance, appear to have adjusted their balance sheets and practices to meet the liquidity requirement with a noticeably lower buffer: After rising the year before, the high LCR group's daily measure declined over 2019, while the low group's measure exhibited a long downward trend in the middle of the period shown, and then stabilized in 2019 at a relatively low level. We will see below that 2020 brought a substantial interruption to each of these patterns.
+
+Which LCR components drive the variation in the daily composite measures?
+
+As noted above, movements in the daily composite LCR measures relative to their quarterly counterparts could be driven by either of the LCR's two major componentsâsources of bank liquidity, or banks' HQLA, the numerator of the ratio, or uses of bank liquidity, or banks' net cash outflows, the denominatorâor both. And we can further decompose the numerator and denominator of the ratio into a few major sub pieces. As shown in Table 2, we break down both the numerator and denominator into the two categories of balance sheet items that contribute the most to the composite ratio's daily variation, and group all remaining LCR items into an "all else" category.
+
+To unpack the LCR numerator, our chosen subcategories are reserve balances and level 1 securities. These categories account for a sizable share of the numerator. As shown in Table 2, for the eight G-SIBs during 2019:Q4, these components accounted for 31 percent and 53 percent, respectively, of these banks' total HQLA. "All else"âall other HQLA components taken togetherâaccounted for the remaining portion of the numerator, or 16 percent. We similarly decomposed the LCR denominator into its two most variable outflow categoriesâdeposit outflows and secured outflowsâand everything else. Deposit outflows accounted for 64 percent of the collective denominator, while net secured outflows accounted for just 3 percent. However, as a share of 
+all outflows
+ (that is, abstracting from offsetting inflows), the importance of the latter component is clearerâdeposits and secured outflows accounted for 45 percent and 25 percent, respectively, of banks' total outflows. In Table 2 and in the charts that follow, our chosen components of the LCR's numerator are consistently shown in red hues (shading, horizontal lines, or slants to the right), and our chosen components of the denominator are shown in blue hues (empty, vertical lines, or slants to the left).
+
+Table 2: Major Components of G-SIBs' LCRs*
+
+(based on contribution to variation in daily LCR composite measure)
+
+ 
+
+Share of numerator or denominator (2019:Q4; percent)
+
+Numerator
+: High quality liquid assets (HQLA)
+
+Reserve balances
+
+31
+
+Level 1 securities
+
+53
+
+All else
+
+16
+
+Denominator
+: Net cash outflows
+
+Deposit outflows
+
+64â 
+
+Net secured outflows
+
+3â 
+
+All else
+
+33
+
+* Reserve balances are banks' deposits at the Federal Reserve; level 1 securities include marketable securities representing claims on sovereigns and assigned a 0 percent risk weight under Basel II; numerator all else includes level 2 assets such as Fannie Mae and Freddie Mac mortgage-backed securities; deposit outflows include those of retail and wholesale customers; net secured outflows pertain to certain types of outstanding maturing collateralized funding such as that backed by level 2 assets; denominator all else pertains to many balance sheet items, including unused credit and liquidity commitments, contractual loan drawdowns, derivatives, and potential valuation changes on posted collateral.
+
+â  Deposit and secured outflows make up 45 percent and 25 percent of all outflows, respectively.
+
+We next analyze how each of these six major LCR components contributed to changes in the G-SIBs' daily LCR measures. For this analysis, we create a virtual, aggregate bank to represent each of our two bank subgroupsâthat is, for both the high and low LCR bank groups, we sum the data at the LCR component level each day across the individual G-SIBs in the group, and then create a single daily LCR measure from those aggregated data. This approach allows us to calculate contributions to the daily variation in each bank group's aggregate LCR from each of our six chosen LCR components. Our Data Appendix explains in more detail how we calculate these component contributions. On a daily basis, the six individual contribution amounts 
+sum
+ to the total growth in our daily LCR measure that day.
+5
+ Figure 4 plots the average daily contribution of each of our six components for each 
+month
+ during our pre-pandemic period, between 2017 and 2019. Data for the high LCR bank group are shown in the top panel, and those for the low LCR bank group are shown in the bottom panel.
+
+Figure 4.1. Component Contributions to Changes in Aggregate LCR: 2017-19. High LCR G-SIB Group*
+
+* High LCR group consists of Bank of NY Mellon, Goldman Sachs, Morgan Stanley, and Wells Fargo.
+
+Source: FR 2052a.
+
+Accessible version
+
+Figure 4.2. Component Contributions to Changes in Aggregate LCR: 2017-19. Low LCR G-SIB Group**
+
+** Low LCR group consists of Bank of America, Citigroup, JPMorgan Chase, and State Street.
+
+Source: FR 2052a.
+
+Accessible version
+
+While these figures are somewhat dense to interpret, some patterns are evident. As expected given our discussion above, comparing the two figures reveals that the extent of the variation in the six subcategoriesâthe length of the barsâis greater for the high LCR group (top panel). For this group, deposit outflows (blue vertical lines) is the single biggest contributor to changes in these banks' daily LCR, measured on a monthly average basis. Three other components are also important, albeit somewhat less so: secured outflows (blue lines slanted left), level 1 securities (red lines slanted right), and reserve balances (red horizontal lines). The "all else" denominator category (empty), a combination of many components (see the notes to Table 2), is also active in driving the variation in the high LCR group's monthly composite measure. We also see that the month-average variation in these banks' daily LCR rises in many quarter-end months. In addition, when deposit outflows shiftâeither by raising or lowering the daily LCR measureâthe offset on these banks' balance sheets varies. Sometimes the reserve balance or level 1 security components of HQLA shift in the opposite direction; at other times, secured outflows or our "all else" portion of the denominator predominantly counters. And we know these offsets are generally incomplete, as the daily LCR measure rises and falls, overall, for these banks over the 2017â19 period (Figure 3).
+
+In contrast, in many months, the LCR measure for the low LCR group (bottom panel) does not change very much, including at the component level. And when there are significant underlying component changes in these banks' LCRs, relatively fewer component categories are notable in their contributions. As was the case with the high LCR bank group, deposit outflows (blue vertical lines) is the largest driver of the daily changes in the low bank group's LCR measure on a month-average basis. The next largest contributor to LCR changes for this bank group, on average, is the reserves component (red horizontal lines), and the "all else" LCR denominator category (empty) also causes notable variation. As might be expected given the relatively smaller overall variation in the LCR for this bank group, the extent of the offsetting movements in LCR components is more complete for this group.
+
+Now we turn from the monthly averages shown in these figures to the daily data themselves. Table 3 shows the variation in the daily data that underlie the figures aboveâthe standard deviation of the contributions from each of our six LCR components to the daily changes in the composite LCR measures, covering our two bank subgroups. Comparing the two columns, the component data for the high LCR group show more variation on all fronts, including in HQLA (numerator), net outflows (denominator), as well as in nearly all of the six LCR components themselves. But similarities are also evident: The two leading drivers of change in our daily LCR measures is the same for both bank groups. In particular, on a daily basis, the most volatile single component of the LCR for both the high and low LCR bank groups is deposit outflows, with reserve balances next in importance. However, as we will next see, these patterns did not hold as the pandemic set in.
+
+Table 3: Standard Deviation of Daily LCR Component Contributions: 2017-19
+
+(percentage points)
+
+LCR component*
+
+High LCR group
+
+Low LCR group
+
+Numerator
+: HQLA
+
+1.2
+
+0.9
+
+Reserve balances
+
+1.3
+
+1.2
+
+Level 1 securities
+
+1
+
+0.7
+
+All else
+
+0.7
+
+0.7
+
+Denominator
+: Net outflows
+
+1.4
+
+1
+
+Deposit outflows
+
+1.8
+
+1.4
+
+Secured outflows
+
+0.8
+
+0.5
+
+All else
+
+1.3
+
+1.1
+
+Total LCR
+
+0.8
+
+0.6
+
+* Reserve balances are banksâ deposits at the Federal Reserve; level 1 securities include marketable securities representing claims on sovereigns and assigned a 0 percent risk weight under Basel II; numerator all else includes level 2 assets such as Fannie Mae and Freddie Mac mortgage-backed securities; deposit outflows include those of retail and wholesale customers; secured outflows pertain to certain types of outstanding maturing collateralized funding such as that backed by level 2 assets; denominator all else pertains to many balance sheet items, including unused credit and liquidity commitments, contractual loan drawdowns, derivatives, and potential valuation changes on posted collateral.
+
+Source: FR 2052a.
+
+What happened to banks' LCRs in 2020 when the pandemic first set in?
+
+We have thus far focused on the period prior to the pandemic to establish some typical LCR patterns. The arrival of the COVID-19 pandemic in 2020 set off a highly unusual period of economic and financial activity, one that included an initial period of severe stresses in global financial markets. Now we look specifically at four months in 2020âMarch through June, the time when U.S. financial markets were most affected by the pandemicâto see if the patterns we identified changed. We will refer to this four-month period as our "pandemic period."
+
+As seen in Figure 5, the daily LCRs of both bank groups shifted substantially higher with the onset of the pandemic in global financial markets in March 2020. For the high LCR group (left panel), the sharp rise in the daily ratioâfrom a low of about 115 in early March to nearly 135 by month-endâwas sustained for a few months before significantly unwinding. In contrast, the daily ratio for the low LCR group (right panel), which rose less dramatically, stayed elevated for a much longer period. In fact, while this group's daily measure subsequently dropped back some, by year-end, it was again close to its pandemic period peak.
+
+Figure 5.1. Composite LCR Measures: 2019-20. High LCR G-SIB Group*
+
+* High LCR group consists of Bank of NY Mellon, Goldman Sachs, Morgan Stanley, and Wells Fargo.
+
+Source: FR 2052a.
+
+Accessible version
+
+Figure 5.2. Composite LCR Measures: 2019-20. Low LCR G-SIB Group**
+
+** Low LCR group consists of Bank of America, Citigroup, JPMorgan Chase, and State Street.
+
+Source: FR 2052a.
+
+Accessible version
+
+To see what drove these pandemic period patterns, we again consider the individual contributions of our six LCR components to the changes in our daily composite LCR measure. As in Figure 4, Figure 6 shows these daily contributions on a monthly average basis, for each bank group, for 2019â20. We focus on the time span between the two vertical lines, which contain data for the initial four months of the pandemic, March through June 2020. As shown, the LCR components for both bank groups were rocked in March 2020. The contributions from reserves (an asset) and deposits (a liability) were key in shifting the G-SIBs' LCRs.
+
+Each bank group booked a significant amount of additional reserves (red horizontal lines) at the onset of the pandemic. The increases reflect the Federal Reserve's quick actions to stabilize financial markets and to support the economy when the pandemic set in. Specifically, the Fed conducted large-scale asset purchases, which resulted in a very abrupt expansion in the amount of reserve balances in the banking system. Comparing the average share of banks' HQLA accounted for by reserves in the pre-pandemic (2019:Q4 average) versus the pandemic (MarchâJune 2020 average) periods, we find that the G-SIBs in our low LCR bank group took on the most reserves, on balance. This may be the case because the banks in our high LCR group had relatively less balance sheet capacity to do so, in the following sense: As the pandemic set in, banks in the high LCR group experienced a disproportionately higher surge in business lending as many firms scrambled to raise cash.
+6
+ In any case, at the same time, with a substantial flight to safety underway in financial markets, deposits flooded into the banking sector. As a result, each bank group experienced a large drain in their LCRs from the need to account for the associated potential deposit outflows (blue vertical lines).
+
+Figure 6.1. Component Contributions to Changes in LCR: 2019-20. High LCR G-SIB Group*
+
+* High LCR group consists of Bank of NY Mellon, Goldman Sachs, Morgan Stanley, and Wells Fargo.
+
+Note: Vertical lines indicate our pandemic period, March to June 2020.
+
+Source: FR 2052a.
+
+Accessible version
+
+Figure 6.2. Component Contributions to Changes in LCR: 2019-20. Low LCR G-SIB Group**
+
+** Low LCR group consists of Bank of America, Citigroup, JPMorgan Chase, and State Street.
+
+Note: Vertical lines indicate our pandemic period, March to June 2020.
+
+Source: FR 2052a.
+
+Accessible version
+
+Looking out a few more months, both bank groups' LCR components continued to shift more than usual over the remainder of our pandemic period. For the most part, over these subsequent months, the changes seen in March 2020 in the month-average composite ratio of the high LCR group largely unwoundâthe LCR components for this bank group subsequently moved in their opposite (offsetting) directions, on balance. But, as might be expected from our discussion so far, this is not the case for the low LCR group; the composition of this group's LCR changed, on balance, over the four-month pandemic period. In particular, the low LCR group continued to absorb reserves, and hold more deposits, over these months than it did prior to the onset of the pandemic.
+
+Turning to our underlying daily data, Table 4 compares the standard deviation of the contributions to changes in the 
+daily
+ LCR composite measures during the pre-pandemic and pandemic four-month periods for both bank groups. Comparing the two pairs of columns, we see that the pandemic period values are higher across nearly all LCR components for both bank groups. This pandemic-induced upshift in balance sheet variation is particularly evident in the secured outflow and deposit outflow components of the high LCR bank group's daily LCR measure. One exception to this pattern is the behavior of reserve balances: The variation in this component increased significantly for the low LCR group (from a standard deviation of 1.4 to 1.8) while it was unchanged for the high LCR group, perhaps reflecting the disparate pattern of reserves absorption over this period described above. Overall, the shifts in the GSIBs' LCRs over the pandemic period stand in stark contrast to their behavior in typical times.
+
+Table 4: Standard Deviation of Daily Contributions from LCR Components: Pre-pandemic vs. Pandemic Four-month Periods
+
+(percentage points; based on daily LCR data)
+
+Standard Deviation
+
+High LCR Group
+
+Low LCR Group
+
+Pre-pandemic
+
+Pandemic
+
+Pre-pandemic
+
+Pandemic
+
+(Nov-Feb 2020)
+
+(Mar-Jun 2020)
+
+(Nov-Feb 2020)
+
+(Mar-Jun 2020)
+
+Numerator
+: HQLA
+
+1.2
+
+1.5
+
+1
+
+1
+
+Reserve balances
+
+1.7
+
+1.7
+
+1.4
+
+1.8
+
+Level 1 securities
+
+1.4
+
+1.3
+
+0.9
+
+1.2
+
+All else
+
+0.8
+
+1
+
+1.1
+
+0.9
+
+Denominator
+: Net outflows
+
+1.4
+
+1.8
+
+1
+
+1.2
+
+Secured outflows
+
+0.9
+
+2
+
+0.6
+
+0.9
+
+All else
+
+1.3
+
+1.9
+
+1.3
+
+1.5
+
+Total LCR
+
+0.8
+
+1
+
+0.7
+
+0.7
+
+* Reserve balances are banksâ deposits at the Federal Reserve; level 1 securities include marketable securities representing claims on sovereigns and assigned a 0 percent risk weight under Basel II; numerator all else includes level 2 assets such as Fannie Mae and Freddie Mac mortgage-backed securities; deposit outflows include those of retail and wholesale customers; secured outflows pertain to certain types of outstanding maturing collateralized funding such as that backed by level 2 assets; denominator all else pertains to many balance sheet items, including unused credit and liquidity commitments, contractual loan drawdowns, derivatives, and potential valuation changes on posted collateral.
+
+Source: FR 2052a.
+
+Conclusion
+
+In this Note we explored the dynamism of large banks' liquidity, including the contributions to both its sources and uses. To do so, we constructed novel daily composite LCR measures using the Federal Reserve Board's confidential supervisory data. We showed that large banks' underlying daily LCRs are much more dynamic than the average figures that are publicly disclosed each quarter. In typical times, banks with relatively higher LCRsâthose that keep larger liquidity buffers over the minimum required than other large banksâtend to have more volatile LCR subcomponents than their lower LCR level counterparts. Regardless of banks' relative LCR levels, we found that "deposit outflows" is the single biggest component contributor to the variation in banks' daily LCRs in recent years. Reserve balances have also consistently played an important role in driving the high-frequency movements in banks' LCRs. Using data for 2020, we showed that banks' balance sheets were rocked by the onset of the pandemic in March of that year. And in contrast to typical times, banks that maintain a relatively lower LCR level experienced very large gyrations at that time, ones that, unlike their higher-level counterparts, had not reversed by year-end. Of course, many questions may be examined using these data, and we have only scratched the surface. Looking ahead, it is important to continue to study the behavior of banks' liquidity, including during periods of severe stress in financial markets.
+
+Data Appendix: Construction of Component Contributions
+
+(Figures 4 and 6; Tables 3 and 4)
+
+Decomposition of daily LCR
+
+LCR growth = LCR
+t 
+/ LCR
+t-1
+ â 1
+
+Log of numerator growth = ln[1 + ((HQLA
+t
+/HQLA
+t-1
+) â 1)]
+
+Log of denominator growth = (ln[1 + ((denominator
+t
+/ denominator
+t-1
+) â 1)])*-1
+
+Contribution of HQLA to LCR growth = Log of HQLA growth / LCR growth
+
+Contribution of denominator to LCR growth = Log of denominator growth / LCR growth
+
+Six components of numerator and denominator
+
+Numerator = HQLA = reserve balances + level 1 securities + all else
+
+Denominator = net outflows = net deposit outflows + net secured outflows + all else
+7
+
+Daily contribution to LCR growth from components in numerator and denominator
+
+reserves share of HQLA change = (reserves
+t
+ â reserves
+t-1
+)/(HQLA
+t
+ â HQLA
+t-1
+)
+
+level 1 securities share of HQLA change = (lev 1 sec
+t
+ â lev 1 sec
+t-1
+)/(HQLA
+t
+ â HQLA
+t-1
+)
+
+all else HQLA share of HQLA change = (all else HQLA
+t
+ â all else HQLA
+t-1
+)/(HQLA
+t
+ â HQLA
+t-1
+)
+
+deposits share of denominator change = (deposits
+t
+ â deposits
+t-1
+)/(denominator
+t
+ â denominator
+t-1
+)
+
+secured outflows share of denominator change = (secured
+t
+ âsecured
+t-1
+)/(denominator
+t
+ â denominator
+t-1
+)
+
+all else net outflows share of denominator change = (all else net outflows
+t
+ â all else net outflows
+t-1
+)/(denominator
+t
+ â denominator
+t-1
+)
+
+HQLA component contribution to LCR growth = share of HQLA * (contribution of HQLA to LCR growth * LCR growth)
+
+Denominator component contribution to LCR growth = share of denominator * (contribution of denominator to LCR growth * LCR growth)
+
+1. Vojtech and Cowhey are staff in the Division of Financial Stability and Ihrig and Weinbach are staff in the Division of Monetary Affairs at the Federal Reserve Board. The views in this Note are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of any other person associated with the Federal Reserve System. 
+Return to text
+
+2. G-SIBs are designated annually by the Financial Stability Board (FSB), in consultation with the Basel Committee on Banking Supervision and national authorities. The current domestic list is shown in Table 1. Information about the LCR may be found here: 
+https://www.bis.org/publ/bcbs238.htm
+. 
+Return to text
+
+3. For information on this data collection and how the LCR is calculated, see the Federal Reserve Board's web site (including in particular Appendix VI, "LCR to FR 2052a Mapping," of the reporting form file): 
+https://www.federalreserve.gov/apps/reportforms/reportdetail.aspx?sOoYJ+5BzDbpqbklRe3/1zdGfyNn/SeV
+. The LCR applies to holding companies and to large depository institutions within a given holding company. This note focuses on data for the consolidated holding company, and, for simplicity, we refer to this consolidated entity as a "bank." 
+Return to text
+
+4. Specifically, the daily and quarterly composite LCR measures for all eight G-SIBs differ by more than 2 standard deviations (1.6 percentage points) 29 percent of the days in 2017 (73 of 251 business days), 26 percent of the days in 2018 (64 of 250 days), and 20 percent in 2019 (49 of 250 days). 
+Return to text
+
+5. Because our ratio contribution computations are based on log differences, it is more accurate to describe our results as contributions to LCR 
+growth
+. However, because the value of the LCR ratios in our dataset are bounded between approximately 110 percent and 135 percent, our growth contribution results are of roughly the same magnitude as 
+changes
+ in the LCR. To simplify our exposition, we will describe our results as "contributions to a change" in the LCR. 
+Return to text
+
+6. C&I loans booked by the high LCR group grew nearly 30 percent in 2020:Q1 while those booked by the low LCR group grew 20 percent over that period (quarterly rates of growth, based on the Federal Reserve Board's FR Y9-C data). 
+Return to text
+
+7. Each denominator component is also allocated a portion of the total inflow offset based on how big the component is relative to other outflow categories. 
+Return to text
+
+Please cite this note as:
+
+Ihrig, Jane, Cindy M. Vojtech, Gretchen C. Weinbach, and Maureen Cowhey (2021). "How Dynamic is Bank Liquidity, Including when the COVID-19 Pandemic First Set In?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 30, 2021, https://doi.org/10.17016/2380-7172.2969.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

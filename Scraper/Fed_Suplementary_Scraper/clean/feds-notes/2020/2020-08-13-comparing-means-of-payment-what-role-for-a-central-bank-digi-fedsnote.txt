@@ -1,0 +1,721 @@
+FEDS Notes
+
+Twitter
+
+August 13, 2020
+
+Comparing Means of Payment: What Role for a Central Bank Digital Currency?
+
+Paul Wong and Jesse Leigh Maniff
+1
+
+Note: This note was revised on April 12, 2021 to correct a typo in Figure 3 so as to match the correct score listed in the appendix.
+
+Abstract
+
+This paper looks at the potential benefit that a central bank digital currency (CBDC) could provide in the context of existing payment mechanisms. Central banks today provide the primary payment mechanisms for trade and commerce: cash, used by the public, and electronic payment services, used by eligible financial institutions. In recent years, there has been a growing conversation about whether central banks should offer a digital version of cash. A comparison of a general-purpose CBDC with existing means of payments across seven categories reveals how an appropriately designed CBDC could provide value in certain areas. These technological benefits could include a digital form of a bearer instrument, more cost-effective payment services, greater anonymity than current digital transactions, and a catalyst for greater innovation through programmable money.
+
+Introduction
+
+The concept of a central bank digital currency (CBDC) has sparked the imagination of many who envision a new means of payment that would revolutionize payments in much the same way the internet revolutionized the exchange of information. The introduction of a widely available CBDC has the potential to create new processes for end-to-end payments transactions, founded on newer technologies. Many hope that such a potential CBDC ecosystem could result in enhanced payments efficiency, greater financial inclusion, and payments innovation. Yet as discussions on a general-purpose CBDC progress, it is important to consider how this potential payment mechanism compares with existing ones offered by central banks. More simply put, what is the potential benefit of a CBDC as a means of payment?
+
+Provision of central bank payment services
+
+Today, central banks offer a number of payment mechanisms to facilitate trade and commerce; these systems are essential to the smooth functioning of an economy. Central banks typically issue money in the form of banknotes and bank deposits. Central bank money is a monetary instrument that is a liability of the central bank. Central banks typically have the lowest credit risk among financial institutions and are the source of liquidity in their currency of issue, and so central bank money is often the preferred instrument of payment in most countries.
+2
+Central bank money complements commercial bank money, which is a liability of commercial banks and is commonly used by individual consumers when making electronic payments.
+3
+Convertibility between commercial bank money and central bank money, within a jurisdiction, is typically at par.
+
+Banknotes are the most visible form of central bank money because they are widely available to the public. The Federal Reserve note, which is the official currency of the United States, was first issued in 1914 with the establishment of the Federal Reserve.
+4
+As of March 31, 2020, roughly $1.8 trillion in Federal Reserve notes were in circulation.
+5
+According to one economic study, about half of US currency in circulation is held abroad.
+6
+Contrary to popular reports on the "death of cash," end users continue to hold Federal Reserve notes even if cash usage for payment transactions may be declining.
+7
+Graph 1 shows the growth in the value of outstanding Federal Reserve notes in circulation over the last two decades.
+
+Graph 1. Value of currency in circulation, in billions as of December 31 of each year
+
+Note: currency denominations are displayed in order with $100 on the top and $1 on the bottom.
+
+Source: Federal Reserve Board, https://www.federalreserve.gov/paymentsystems/coin_data.htm
+
+Accessible version
+
+Bank deposits are the other form of central bank money. Eligible financial institutions are able to deposit funds at the central bank. As of March 31, 2020, the Federal Reserve had roughly $2.5 trillion in deposits made by commercial banks.
+8
+Financial institutions are able to move these funds from one institution to another through central bank-operated payment services. The Federal Reserve maintains several services to facilitate wholesale and retail payments. These include a check-processing service; FedACH
+®
+, which is an automated clearinghouse service that supports credit transfers and direct debits; and the Fedwire
+®
+Funds and National Settlement Services, which support wholesale payments.
+9
+On a typical day in 2019, these systems processed more than $3 trillion in transaction value.
+10
+
+In August 2019, the Federal Reserve announced that it would develop the FedNow
+sm
+Service, a new interbank 24x7x365 real-time gross settlement (RTGS) service with integrated clearing functionality to support instant payments in the United States. The new service will provide interbank settlement and funds availability to payment recipients in near real time with finality, with potentially enormous implications for consumers: banks participating in the service will provide their customers immediate access to funds received through the FedNow
+sm
+Service including on nights, weekends, and holidays. In contrast, with today's retail payments, it can take as many as a few days for consumers to gain access to funds.
+
+Potential for central bank digital currency
+
+The rise of private digital currencies that operate without a central entity and financial intermediation has sparked interest in how value can be exchanged. Distributed ledger technology (DLT) has the potential to allow a broad range of participants to update a shared, synchronized ledger, a departure from traditional payment systems that rely on a single entity managing a centralized ledger.
+11
+As a result, central bankers and others have begun to rethink the fundamentals of payment systems in light of DLT and other technologies.
+12
+
+While central banks have researched DLT and CBDC for more than a decade, interest has escalated significantly over the last few years, in part because of an acceleration in declining cash use in some jurisdictions, further technological developments that have addressed some of the early limitations of DLT implementation, and, more recently, the emergence of privately issued global stablecoins (such as Facebook's proposed Libra).
+13
+The COVID-19 pandemic has also led central banks to think further about potential enhancements to the general safety and efficiency of payment systems, including developing a digital currency, and to the conduct of monetary and fiscal actions.
+14
+
+In addition, proponents of CBDC have highlighted its potential to address a number of other policy goals. For example, CBDC has been promoted as a way to lower transaction fees, help financial inclusion, facilitate cross-border payments, encourage innovation in the form of new services and features, improve the conduct of monetary policy, reduce financial crimes, and enhance privacy of digital transactions. The degree to which CBDC can in fact offer these benefits will largely depend on its design. Because no clear consensus exists on the key design characteristics of a CBDC, proponents of CBDC tend to envision a CBDC that can provide a long list of benefits. However, it is unlikely that all benefits of a CBDC will be able to co-exist in practice.
+15
+
+Framework for comparing means of payment
+
+The benefits a CBDC could provide over existing means of payment can be considered in the context of contemporary payment systems, such as cash and RTGS systems. RTGS systems vary significantly in designâfrom wholesale payment use, such as the Fedwire® Funds Service, to retail payment use, such as the FedNow
+sm
+Service currently being built. The benefits of a CBDC should also be compared with the additional functionality that could be provided through enhancements that could be made to these RTGS systems. For the purpose of this note, such potential enhancements are considered to be "RTGS+" systems, meaning RTGS systems designed to maximize their full technological potential, including areas where RTGS systems have been limited for policy reasons (for example, a 24x7 RTGS system that allows nonbank participation).
+
+For the comparison conducted in this paper, a payment mechanism is measured along seven broad categories: accessibility, anonymity, bearer instrumentality, independence, operational efficiency, programmability, and service availability. These categories are not exhaustive and focus on the areas with the potential for greater differences.
+16
+In some cases, there may be strong correlations between categories. For example, bearer instruments will likely have a stronger degree of "independence" as fewer intermediaries are needed. Other important categories are not considered because they represent a known difference (for example, central bank vs. commercial bank liability) or because technology plays a secondary role to legislative, regulatory, or policy solutions (for example, privacy).
+17
+
+Accessibility
+
+"Accessibility" in payments refers to consumer access to a payment mechanism. Cash is typically available to everyone, whereas access to an RTGS system is typically limited to eligible financial institutions. In the United States, cash is readily available thanks to a large bank branch network, automated teller machines, and near-universal retail store acceptance. RTGS systems that have achieved ubiquity remain limited to those with a bank account (up to 93.5% of U.S. households).
+18
+The remaining 6.5%, or approximately 8.4 million U.S. households, are unbanked and therefore without access. If RTGS systems were extended to include the nonbank participants who currently offer prepaid cards, they would reach 95.2% of households. A CBDC that used either bank accounts or smartphones as an entry point could reach 96.7% of households. If the CBDC used bank accounts and ran over mobile networks without requiring the use of smartphones, it could reach 98% of households.
+19
+
+Anonymity
+20
+
+Consumers often want the option to conduct anonymous private transactions when practical.
+21
+Cash allows consumers to transact anonymously in the physical world. Most electronic payment systems, including RTGS, do not allow for anonymity because providers of these payment services must comply with rules and regulations, including AML, BSA, KYC, and electronic recordkeeping requirements. A CBDC would almost certainly need to comply with AML, BSA, and KYC regulations as well, making it unlikely that a CBDC would provide anonymity to the same degree as cash. Furthermore, as a digital payment system, a CBDC would maintain an electronic history of transactions. While technologies may exist to provide anonymity for CBDC, it is extremely unlikely that any central bank would embrace a fully anonymous instrument, given the potential for money laundering and other illicit financial activity.
+
+Bearer Instrument
+
+In the physical world, a bearer instrument is an instrument that is "payable" to anyone in possession of it. Bearer instruments are "unique" in that whoever is holding the instrument has a direct claim with the issuer. Cash, and sometimes checks, are bearer instruments. Purely digital payment mechanisms, such as RTGS systems, rely on an accounting record maintained by a third party and are not considered bearer instruments. A CBDC could be designed to be a bearer instrument either through ownership of a digital object or ownership of a private key that allows for transfer of an object, allowing consumers to make payments simply by holding and transferring a valid instrument.
+22
+If such an instrument were to have offline transaction capability, a CBDC could become functionally equivalent to cash or an endorsed check.
+
+Independence
+
+Independence refers to the degree of intermediation needed to use a payment mechanism (that is, the greater the need for financial or operational intermediaries, the lower the degree of independence and vice versa) from the perspective of an end user. Cash has a high degree of independence because the exchange of paper currency requires a physical exchange between two parties. Electronic transfers, however, require some degree of intermediation. Electronic systems require the use of a physical device by the end user, such as a chip-embedded card or smartphone. RTGS systems also require the use of a financial institution to access the network. An RTGS+ system could expand participation to include nonfinancial institutions. A CBDC, as a digital payment system, would need some form of intermediation, such as a chip-embedded card, mobile device, mobile service provider, or digital wallet provider.
+
+Operational efficiency
+
+Operational efficiency is an important component of payment mechanisms. Two aspects of efficiency are considered in this analysisâcentral bank costs and other societal costs. Central bank costs associated with cash operations are significant. The Federal Reserve's currency budget was about $960 million in 2019.
+23
+This amount includes the printing of banknotes, capital improvements to production facilities, and other support costs.
+24
+In comparison, the budgeted 2020 total expense for the Federal Reserve's FedACH® service is roughly $155 million and for Fedwire® Funds Service is $140 million.
+25
+These amounts include general operating costs for the service, technology modernization projects, other service investments, and allocated costs associated with maintaining the network to connect to these payment services. Broadly, central bank costs associated with the provision of an electronic payment service are roughly 15% of cash operation costs. A CBDC will likely have an operational cost structure that is more similar to that of an electronic system than cash operations.
+
+Ultimately, however, a central bank's operating costs for a CBDC would depend greatly on its design. In some cases, these costs could be lower than that of an automated clearinghouse, instant payment system, or large value payment system if a decentralized arrangement involving the private sector were used to process transactions. In such arrangements, the private sector would maintain and operate some of the hardware used to settle and record transactions. Some implementations could have costs significantly higher than that of existing electronic systems. If the central bank were to service all households and businesses directly, the cost of doing so would be significant, as the central bank would need to add appropriate customer support services.
+
+Any cost analysis needs to include other societal costs, which are never easy to quantify. Still, some conclusions can be drawn from market observations and data. For example, the cost of accepting and holding cash is so high for some businesses that they are considering going cashless altogether, even though accepting electronic payments incurs a cost as well.
+26
+This indicates that cash may be more costly to businesses than electronic payments and as a result, a CBDC could be less costly than cash. Alternatively, studies have shown that consumers rate cash higher than payment cards with respect to perceived cost (possibly because there are no transactions costs for consumers using cash).
+27
+Should the cost of a CBDC to a consumer be greater than zero, a CBDC might be considered more costly than cash. The societal cost of a CBDC, inclusive of costs associated with banks, service providers, merchants, and consumers are simply unknown.
+
+Programmability
+
+Programmability is a potential feature of digital money. A CBDC designed to allow for programmability, such as smart contracts, as part of the core platform could enable automated execution of certain operations, such as payment of interest. These contracts perform any number of actions depending on the platform's software protocol and may be designed to have certain constraints on automated code execution, such as time-based gating of certain payments. While current RTGS systems do not have the same level of programmability built into their platforms that some DLTs have, RTGS systems could achieve similar results through application programming interfaces (APIs).
+28
+This design pattern requires the RTGS system operator to expose an API to external participants, who may themselves build additional API functionality for their own services. RTGS+ systems could also build partner APIs for customers.
+
+Service availability
+
+From an end-user perspective, a payment mechanism would function 24 hour days, 7 days a week, 365 days a year. Historically, only cash has had this feature, whereas electronic payment systems have been subject to certain operating hours. The emergence of fast payments that can operate with continuous availability has eliminated the "service availability" gap that once existed between cash and electronic payments. A CBDC would likely also be designed with 24x7x365 availability. If the CBDC has offline capabilities, the system could come close to matching the "service availability" of cash. A key difference, however, is that an offline CBDC would still require a physical device to complete transactions.
+
+Comparison of means of payment
+
+Figure 1 provides a graphical depiction of how CBDC, cash, RTGS, and RTGS+ compare in each of the broad categories. The points on the radar chart represent the potential
+maximum
+value in a particular category for each payment mechanism; the points are illustrative of relative qualitative comparisons and not quantitative scores.
+29
+In this assessment, CBDC scores higher than cash and RTGS on programmability because smart contracts can be built into a CBDC platform; it scores higher than cash and RTGS on potential operational efficiency; it scores lower than cash on anonymity and independence; and it scores close to RTGS and cash on service availability and accessibility. The points, however, do not consider tradeoffs between categories. A CBDC that is a bearer instrument designed with offline capability, for example, is less likely to have the same level of programmability than a CBDC that relies on a connected network.
+30
+
+Figure 1. Comparison of central bank payment mechanisms
+
+Accessible version
+
+But the design of the CBDC involves tradeoffs that will change the shape of the chart above. A CBDC can broadly be designed along three archetypes: (a) a cash equivalent, (b) an account-based CBDC built on a new platform, and (3) a hybrid CBDC. A cash equivalent is one in which the CBDC is designed as a bearer instrument with offline capability.
+31
+An account-based CBDC is the effective equivalent of providing the public with direct access to central bank accounts. A hybrid CBDC is one in which CBDC is distributed through third parties â similar to intermediated structures found in today's payment systems. Cash equivalent and account-based CBDC would likely be more accessible and require less intermediation than a hybrid CBDC. A hybrid CBDC and an account-based CBDC would likely be more programmable since they may not require offline capability.
+
+The three types of CBDC are compared to existing means of payment below. The points on the charts are illustrative, use relative scaling, and are based on design assumptions inherent in that type of CBDC.
+
+Cash equivalent CBDC
+
+If appropriately designed, a CBDC could serve as a potential cash equivalent. As shown in Figure 2, the only categories where such a CBDC cannot fully match the features of cash are anonymity and independence.
+32
+AML, BSA, and KYC requirements are likely to apply to a CBDC arrangement. This is crucial because there are concerns that some may want a cash equivalent CBDC to circumvent these requirements. In addition, because a CBDC involves a transfer of digital information, a CBDC will retain an electronic record somewhere in the ether. A CBDC cash equivalent would likely be more expensive to operate than an RTGS system given the operational complexities involved with decentralized systems with offline functionality, but it would likely be cheaper than cash operations. A CBDC cash equivalent could potentially have the same level of programmability as an RTGS system that allows for external APIs.
+
+Figure 2. Cash-equivalent CBDC
+
+Accessible version
+
+Account-based CBDC
+
+In many cases, an account-based CBDC would be the effective equivalent of a central bank providing accounts directly to the public.
+33
+This approach would also extend the digital perimeter of what RTGS systems could do. Relative to an RTGS system, a CBDC could support greater anonymity of electronic transactions (given fewer intermediaries in the settlement process that may be subject to AML/BSA requirements). If built on a new platform, a CBDC could expand programmability through smart contracts and, depending on the design, be more cost effective for a central bank to operate than cash or an RTGS system. As shown in Figure 3, an account-based CBDC would likely not be a good cash equivalent in terms of anonymity, bearer instrument, or degree of independence.
+
+Figure 3. Account-based CBDC
+
+Accessible version
+
+Hybrid CBDC
+
+A CBDC can also be designed to have a tiered structure in which CBDC is issued by the central bank and intermediaries handle payments.
+34
+Figure 4 highlights the potential benefits of this model. The key advantage of a hybrid CBDC over an RTGS system is the potential programmability of a CBDC instrument. A CBDC could allow for smart contracts, whereas an RTGS system would be limited to API programmability, which is not built into the platform itself. In other ways, a hybrid CBDC would be comparable to an RTGS+ system, which would be useful to a central bank if some of the work and costs of maintaining the ledger are shifted to participants, given that the model would make intermediaries responsible for enabling transactions.
+
+Figure 4. Hybrid CBDC
+
+Accessible version
+
+Conclusion
+
+While central banks and others think about CBDC and its potential design, it is critical to assess the benefits of such a new payment mechanism. Though a CBDC will never be able to fully replicate all characteristics of cash and RTGS simultaneously, in certain circumstances, it has the potential to be an improvement over both existing modes of payment. However, central banks will need to decide which features a CBDC should improve upon and choose the archetype that can best achieve these goals. Such decisions determine the value proposition of a CBDC as a means of payment and will likely determine whether a CBDC is a mere enhancement of existing payment mechanisms or a more revolutionary development.
+
+Appendix A: Mapping of radar chart
+
+The following appendix provides a rationale on how the points on the radar chart (Figure 1) were selected. The points are for illustrative purposes only and intended to show the relative strengths and weaknesses of the payment mechanisms in a particular category. Some of the radar scores are based on data (such as accessibility and service availability) and some are based on assigning scores to the sliding scale of options (such as anonymity, bearer instrument, independence, operational efficiency, and programmability). Actual strengths and weaknesses of a particular mechanism will depend on the design of the system. In some cases, the points will require tradeoffs that are not shown on the radar chart. For example, a programmable CBDC would likely need to live on the network vs an offline digital wallet.
+
+Figure 1: Broad Categories
+
+Accessibility
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+5.0 (High)
+
+Accessible to everyone
+
+CBDC
+
+4.9 (High)
+
+Accessible to those with a mobile access, which is 98% of households
+
+RTGS+
+
+4.8 (High)
+
+Accessible to those with a financial account, which is 95% of households
+
+RTGS
+
+4.7 (High)
+
+Accessible to those with a bank account, which is 94% of households
+
+Anonymity
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+5 (High)
+
+Instrument is fully anonymous
+
+CBDC
+
+4 (Med/High)
+
+Technology allows for pseudo-anonymity (though policy decisions may likely lower this score)
+
+RTGS+
+
+1 (Low)
+
+Electronic record subject to AML, BSA, and KYC requirements with transaction records accessible by the intermediaries
+
+RTGS
+
+1 (Low)
+
+Electronic record subject to AML, BSA, and KYC requirements with transaction records accessible by the intermediaries
+
+Bearer instrument
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+5 (Yes)
+
+Ability to possess physical instrument
+
+CBDC
+
+5 (Yes)
+
+Ability to possess digital instrument or hold private key
+
+RTGS+
+
+1 (No)
+
+No ability to possess digital instrument
+
+RTGS
+
+1 (No)
+
+No ability to possess digital instrument
+
+Independence
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+5 (High)
+
+No intermediaries or equipment needed
+
+CBDC
+
+4 (Med/High)
+
+Requires, at a minimum, electronic equipment
+
+RTGS+
+
+3 (Med)
+
+Requires an intermediary and electronic equipment
+
+RTGS
+
+1 (Low)
+
+Requires a bank and electronic equipment
+
+Operational efficiency (as measured by costs)
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+1 (Low)
+
+High fixed costs and high variable costs
+
+CBDC
+
+5 (High)
+
+Potentially more cost-effective than other electronic payment systems depending on the design
+
+RTGS+
+
+4 (Med/High)
+
+High fixed costs and low variable costs
+
+RTGS
+
+4 (Med/High)
+
+High fixed costs and low variable costs
+
+Programmability
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+1 (Low)
+
+Not programmable
+
+CBDC
+
+5 (High)
+
+Potentially self-executing smart contracts
+
+RTGS+
+
+4 (Med/High)
+
+Potential "programmability" using partner and external APIs
+
+RTGS
+
+3 (Med)
+
+Potential "programmability" using external APIs
+
+Service availability
+
+Payment option
+
+Radar score
+
+Basis for radar score
+
+Cash
+
+5 (High)
+
+Available 24/7; high operational resilience
+
+CBDC
+
+5 (High)
+
+Available 24/7 with offline capability; transfer requires tech equipment
+
+RTGS+
+
+4.99 (High)
+
+Potentially available 24/7 with an assumed availability target of 99.9%
+
+RTGS
+
+4.99 (High)
+
+Potentially available 24/7 with an assumed availability target of 99.9%
+
+Appendix B: Mapping of CBDC scenario
+
+Figure 2: Cash-equivalent CBDC
+
+Radar score
+
+Basis for radar score
+
+Accessibility
+
+4.9
+
+Accessible to those with mobile access, which is 98% of households
+
+Anonymity
+
+4
+
+Technology allows for pseudo-anonymity (though policy decisions may likely lower this score)
+
+Bearer instrument
+
+5
+
+Digital instrument can be possessed
+
+Independence
+
+4
+
+Requires, at a minimum, electronic equipment
+
+Operational efficiency
+
+3
+
+Potentially higher than RTGS systems but lower than cash, depending on design
+
+Programmability
+
+3
+
+Potential programmability using external APIs
+
+Service availability
+
+5
+
+Available 24/7 with offline capability; transfer requires tech equipment
+
+Figure 3: Account-based CBDC
+
+Radar score
+
+Basis for radar score
+
+Accessibility
+
+4.9
+
+Accessible to those with mobile access, which is 98% of households
+
+Anonymity
+
+3
+
+AML, BSA, and KYC requirements with transaction records accessible by the central bank
+
+Bearer instrument
+
+1
+
+Digital instrument cannot be possessed
+
+Independence
+
+4
+
+Requires, at a minimum, electronic equipment
+
+Operational efficiency
+
+5
+
+Potentially more cost-effective than other electronic payment systems
+
+Programmability
+
+5
+
+Potentially self-executing smart contracts
+
+Service availability
+
+4.99
+
+Potentially available 24/7 with an assumed availability target of 99.9%
+
+Figure 4: Hybrid CBDC
+
+Radar score
+
+Basis for radar score
+
+Accessibility
+
+4.8
+
+Accessible to those with a financial account, which is 95% of households
+
+Anonymity
+
+1
+
+AML, BSA, and KYC requirements with transaction records accessible by the intermediaries
+
+Bearer instrument
+
+1
+
+Digital instrument cannot be possessed
+
+Independence
+
+3
+
+Requires an intermediary and electronic equipment
+
+Operational efficiency
+
+5
+
+Potentially more cost-effective than other electronic payment systems
+
+Programmability
+
+5
+
+Potentially self-executing smart contracts
+
+Service availability
+
+4.99
+
+Potentially available 24/7 with an assumed availability target of 99.9%
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the staff of the Federal Reserve System. The authors would like to thank Francesca Carapella, Jacqueline Cremos, Jean Flemming, David Mills, Kirstin Wells, Krzysztof Wozniak, and Sarah Wright of the Federal Reserve Board; Anders Brownworth, Robert Bench, and Tyler Frederick of the Federal Reserve Bank of Boston; Susan Zubradt of the Federal Reserve Bank of Kansas City; Alexander Lee of the Federal Reserve Bank of New York; and Amy Burr of the Federal Reserve Bank of San Francisco for their contributions and assistance towards this note.
+Return to text
+
+2. See, for example, Committee on Payment and Settlement Systems,
+The role of central bank money in payment systems
+, August 2003.
+Return to text
+
+3. Nonbanks may also issue their own forms of money, such as gift certificates and pre-paid store cards. Nonbank money is not covered in this discussion.
+Return to text
+
+4. Board of Governors of the Federal Reserve System,
+The Federal Reserve System: Purposes and Functions
+, October 2016.
+Return to text
+
+5. See Board of Governors of the Federal Reserve System,
+Federal Reserve Banks Combined Quarterly Financial Report (Unaudited)
+, March 31, 2020.
+Return to text
+
+6. Judson, Ruth, "
+The Death of Cash? Not so fast: Demand for U.S. Currency at Home and Abroad, 1990-2016
+," International Cash Conference 2017 â War on Cash: Is there a Future for Cash? 25 - 27 April 2017, Island of Mainau, Germany.
+Return to text
+
+7. Cash has been declining as a percentage of payments, in part due to the increase in total payments. See Kumar, Raynil and Shaun O'Brien, "
+2019 Findings from the Diary of Consumer Payment Choice
+,"
+FedNotes
+, Federal Reserve Bank of San Francisco, June 2019.
+Return to text
+
+8. See Board of Governors of the Federal Reserve System,
+Federal Reserve Banks Combined Quarterly Financial Report (Unaudited)
+, March 31, 2020.
+Return to text
+
+9. See
+https://www.frbservices.org
+.
+Return to text
+
+10. Authors' calculation using data from
+https://www.federalreserve.gov/paymentsystems.htm
+.
+Return to text
+
+11. See, for example, Mills et al., "Distributed ledger technology in payments, clearing and settlement," Finance and Economics Discussion Series 2016-096, Washington: Board of Governors of the Federal Reserve System,
+https://doi.org/10.17016/FEDS.2016.095
+.
+Return to text
+
+12. While an impetus for reimagining money, DLT is not required for a CBDC.
+Return to text
+
+13. Stablecoins are a type of private digital currency that seek to stabilize the price by tying its value to that of an underlying asset.
+Return to text
+
+14. Not all rationales for implementing a CBDC are payments-related, such as monetary or fiscal policy transmission. While potentially important considerations, these are outside the scope of this paper.
+Return to text
+
+15. Maniff, Jesse Leigh, "
+Motives Matter: Examining Potential Tension in Central Bank Digital Currency Designs
+," Payments System Research Briefing, Federal Reserve Bank of Kansas City, July 2020.
+Return to text
+
+16. While this paper chooses to focus on these seven categories, others may choose to compare different aspects.
+Return to text
+
+17. Privacy is distinguishable from anonymity: broadly, anonymity concerns identity whereas privacy concerns transaction information.
+Return to text
+
+18. Federal Deposit Insurance Corporation, "
+2017 FDIC National Survey of Unbanked and Underbanked Households
+," October 2018.
+Return to text
+
+19. Author calculations using Federal Deposit Insurance Corporation, "
+2017 FDIC National Survey of Unbanked and Underbanked Households
+," October 2018.
+Return to text
+
+20. The paper does not take a position on whether anonymity is a desirable attribute. It merely uses anonymity to help differentiate means of payment. As a result, more anonymity is not considered superior to less anonymity.
+Return to text
+
+21. Research has found that one of the reasons consumers have adopted a private digital currency is that it allows them to make payments anonymously. See, for example, Schuh, Scott, and Oz Shy, "
+U.S. Consumers' Adoption and Use of Bitcoin and Other Virtual Currencies
+," DeNederlandsche Bank conference entitled "Retail payments: mapping out the road ahead," 2016.
+Return to text
+
+22. Some consider recent private digital currencies to be bearer instruments because whoever holds a digital wallet's private key can spend its contents, just as whoever is holding a dollar bill can spend it.
+Return to text
+
+23. Budget costs are offset by seigniorage and interest earned.
+Return to text
+
+24. This number includes more than $400 million in fixed printing costs and $22 million in currency transportation. See
+https://www.federalreserve.gov/publications/2018-ar-federal-system-budgets.htm#xsystembudgetsoverview-25105c48
+.
+Return to text
+
+25. See
+https://www.federalreserve.gov/newsevents/pressreleases/files/other20191127a1.pdf
+.
+Return to text
+
+26. See, for example,
+https://www.cnn.com/2019/03/26/business/cashless-stores-amazon-go-sweetgreen-dos-toros/index.html
+.
+Return to text
+
+27. Bagnall, John et al.,"
+Consumer cash usage: a cross-country comparison with payment diary survey data
+," ECB Working Paper, No. 1685, 2014.
+Return to text
+
+28. APIs allow for interactions between multiple software intermediaries.
+Return to text
+
+29. Appendix A provides more a detailed discussion of the selected points.
+Return to text
+
+30. Presumably, certain checks with the network will be required of all self-executing contracts.
+Return to text
+
+31. For this analysis, cash equivalent is meant to mimic properties of cash, especially its ability to function without a network. Technologists are still discussing whether this is entirely feasible, highlighting some of the problems associated with proposed solutions. See, for example, Allen et al. "
+Design Choices for Central Bank Digital Currency: Policy and Technical Considerations
+," Brookings Global Economy and Development Working Paper, No 140, July 2020.
+Return to text
+
+32. Appendix B provides more a detailed discussion of the selected points.
+Return to text
+
+33. While outside the scope of this analysis, there are concerns as to how an account-based CBDC would affect commercial banks. This would factor into any policy decision.
+Return to text
+
+34. See, for example, Auer, Raphael and Rainer Böhme, "
+The technology of retail central bank digital currency
+,"
+BIS Quarterly Review
+, March 2020.
+Return to text
+
+Please cite this note as:
+
+Wong, Paul, and Jesse Leigh Maniff (2020). "Comparing Means of Payment: What Role for a Central Bank Digital Currency?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 13, 2020, https://doi.org/10.17016/2380-7172.2739.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

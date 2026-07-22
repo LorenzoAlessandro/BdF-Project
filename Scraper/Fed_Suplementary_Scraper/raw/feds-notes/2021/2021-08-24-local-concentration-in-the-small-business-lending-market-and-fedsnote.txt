@@ -1,0 +1,962 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 24, 2021
+
+Local Concentration in the Small Business Lending Market and Its Relationship to the Deposit Market
+
+Ken Onishi
+
+This note analyzes competition and concentration in the small business lending market using data obtained from Community Reinvestment Act (CRA) disclosures and data on local branches from the Federal Deposit Insurance Corporation's (FDIC) Summary of Deposits (SOD). In 1963, the Supreme Court defined the product market for commercial banking.
+1
+ This product market, commonly called "the cluster of banking products and services," includes all products and services generally offered by a full-service bank, including checking and savings accounts and commercial and personal loans. For purposes of computing market share and other structural measures, the cluster is routinely proxied by total deposits of the depository institutions included in the market.
+2
+ When banks file merger applications, the initial screenings are based on the deposit market share in each Fed market.
+
+In this note, we investigate how well the market share and other structural measures calculated by the deposit share approximate the competitive conditions in the small business lending (SBL) market. In particular, we examine whether merger screening based on the deposit market share leads to an appropriate screening in the SBL market. To this end, we first define the geographic market for SBL by Federal Reserve banking markets (Fed markets). Then, we further examine how banks' deposit shares are related to their shares and other structural measures in the SBL market.
+
+Data and Market Definitions
+
+We collect data on SBL activity from two sources. The primary data set is constructed using CRA disclosures. The CRA mandates that banks that exceed an asset threshold of about $1 billion must report small business loans to the Federal Reserve Board annually. Based on the filing, we construct a county-level total loan origination amount for three categories: $100,000 or less, $100,001 to $250,000, and $250,001 to $1 million.
+3
+ CRA disclosures are the most detailed data on SBL activity that are available publicly. However, not all banks and thrift institutions are required to file CRA disclosures. To complement the CRA data, we use Consolidated Reports of Condition and Income (Call Report) as a second source of data. Every national bank, state member bank, insured state nonmember bank, and savings association is required to file a Call Report, and the Call Report contains data on the total outstanding loan amount for the same three loan categories as in the CRA data. Note that the CRA data provide "flow" variables in the sense that they state the amount of loans originated in a given year, and the Call Report data provide "stock" variables because they state the total outstanding amount. We construct bank-level data on SBL using the Call Report data.
+
+The location of branches and their associated deposit amount are obtained from SOD. We define the geographic boundaries of SBL using Fed markets, which are defined by the Federal Reserve System as economically integrated areas around a central city or large town. Fed markets are considered to be suitable for analyzing competitive conditions of products and services that are known to be provided locally, such as deposits and small business loans (Amel and Brevoort, 2005; FDIC, 2018). Using the SOD data, we construct the Fed market-level aggregate deposit amount of each bank.
+
+Market Share and Market Structure within CRA Filers
+
+We investigate how well the competitive condition in the deposit market represents the competitive condition in the SBL market. To this end, we first construct the aggregate SBL amount of each bank in each Fed market.
+4
+ In this section, we focus on the CRA filers and analyze the competition among them. Table 1 presents the Fed market- and bank-level summary statistics for the 50 U.S. states and Washington, D.C. Rows 1 through 5 show the Fed market-level summary statistics of the total deposits, the Herfindahl-Hirschman Index (HHI) calculated by the relative deposit share of each institution among CRA filers, the total small business loan origination amount, the HHI calculated by the relative small business loan origination amount share, and the total CRA share of institutions that have physical branches in the Fed market. Rows 6 through 8 show the institution-level summary statistics of the total deposits, the total small business origination amount, and the fraction of loans that are originated in Fed markets where the institution has physical branches. The columns show number of observations, mean value, standard deviation, 10th percentile, 25th percentile, 50th percentile, 75th percentile, and 90th percentile.
+
+Table 1: Summary Statistics
+
+ 
+
+N
+
+Mean
+
+s.d.
+
+10%
+
+25%
+
+50%
+
+75%
+
+90%
+
+Fed Market-Level
+
+Deposit Market Size
+
+1,306
+
+8,066
+
+61,053
+
+61
+
+149
+
+434
+
+1,600
+
+6,786
+
+Deposit HHI
+
+1,306
+
+4,258
+
+2,689
+
+1,598
+
+2,188
+
+3,419
+
+5,337
+
+1,000
+
+CRA Market Size
+
+1,398
+
+216
+
+928
+
+3
+
+9
+
+25
+
+103
+
+405
+
+CRA HHI
+
+1,398
+
+1,692
+
+1,073
+
+738
+
+992
+
+1,405
+
+2,013
+
+2,961
+
+Share of In-Market Banks
+
+1,398
+
+50.8%
+
+25.6%
+
+7.5%
+
+32.9%
+
+57.5%
+
+72.2%
+
+79.0%
+
+Bank-Level
+
+Total Deposit Amount
+
+660
+
+160,148
+
+92,348
+
+622
+
+1,129
+
+1,889
+
+4,748
+
+18,244
+
+Total CRA Report Amount
+
+660
+
+457
+
+1,941
+
+22
+
+48
+
+114
+
+252
+
+770
+
+Share of In-Market Loans
+
+660
+
+77.3%
+
+23.5%
+
+47.7%
+
+70.6%
+
+85.0%
+
+92.3%
+
+96.7%
+
+As of 2018, there are 660 CRA-filing institutions originating small business loans in 1,398 markets, and these institutions have physical branches in 1,306 markets. Deposit HHI is high, with a mean value of 4,258, which is considered to be highly concentrated. HHI numbers are high because we only look at the relative market share among CRA filers. We believe the actual market concentration is lower due to the presence of non-CRA filers, as we will discuss in the next section. Compared to deposit market HHI, CRA HHI is much smaller, suggesting that SBL market concentration is generally lower. One reason for the difference in HHI is the existence of out-of-market banks, which are banks that do not have physical branches in the market but originate small business loans. Row 5 shows the market share of in-market banks, which are banks that have physical branches in the market. On average, only about 50 percent of the loans are originated by in-market banks.
+5
+
+Table 1 suggests that small business loan market concentration is lower than deposit market concentration. To further investigate how well concentration and market share in the deposit market approximate those in the small business loan market, we calculate the correlation of HHI and market share in the two markets. Because we expect smaller firms to seek local lenders, we also expect the correlation to be different depending on the size of the loan. Also, the functioning of the SBL market may differ depending on market size. To account for such loan- and market-level heterogeneity, we calculate the correlation with different groups of loan and market sizes.
+
+Table 2 summarizes the correlation among different HHI measures and market shares. We divide the sample into two groups by the total deposits in the market. Panel (a) shows the correlation in all markets, panel (b) shows the correlation in markets with total deposits below or equal to the median, and panel (c) shows the correlation in markets with total deposits above the median. The left side of each panel shows the correlation among different HHI measures, and the right side of each panel shows the correlation among market shares. In each panel, row (i) shows the HHI/market shares in the deposit market, row (ii) shows the HHI/market shares based on all CRA-reported loans, and rows (iii) through (v) show the HHI/market shares based on different categories of CRA-reported loans based on the origination amount. In each panel, N represents the number of observations: the number of markets in the left and the number of market-institution pairs in the right.
+
+Table 2: Correlation between Deposit and CRA HHI/Share
+
+Panel (a): All Market
+
+N=1,306
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+N=60,504
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+(i) Deposit HHI
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(i) Deposit Share
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(ii) CRA HHI
+
+0.42
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(ii) CRA Share
+
+0.65
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(iii) CRA HHI ( <= 100K)
+
+0.34
+
+0.78
+
+1.00
+
+ 
+
+ 
+
+(iii) CRA Share (<= 100K)
+
+0.59
+
+0.79
+
+1.00
+
+ 
+
+ 
+
+(iv) CRA HHI (100K to 250K)
+
+0.53
+
+0.66
+
+0.46
+
+1.00
+
+ 
+
+(iv) CRA Share (100K to 250K)
+
+0.55
+
+0.80
+
+0.60
+
+1.00
+
+ 
+
+(v) CRA HHI (>250K)
+
+0.53
+
+0.63
+
+0.40
+
+0.60
+
+1.00
+
+(v) CRA Share (>250K)
+
+0.52
+
+0.88
+
+0.50
+
+0.60
+
+1.00
+
+Panel (b): Below Median Market
+
+N=653
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+N=18,807
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+(i) Deposit HHI
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(i) Deposit Share
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(ii) CRA HHI
+
+0.24
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(ii) CRA Share
+
+0.62
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(iii) CRA HHI ( <= 100K)
+
+0.19
+
+0.77
+
+1.00
+
+ 
+
+ 
+
+(iii) CRA Share (<= 100K)
+
+0.58
+
+0.77
+
+1.00
+
+ 
+
+ 
+
+(iv) CRA HHI (100K to 250K)
+
+0.33
+
+0.53
+
+0.35
+
+1.00
+
+ 
+
+(iv) CRA Share (100K to 250K)
+
+0.51
+
+0.75
+
+0.56
+
+1.00
+
+ 
+
+(v) CRA HHI (>250K)
+
+0.32
+
+0.51
+
+0.30
+
+0.45
+
+1.00
+
+(v) CRA Share (>250K)
+
+0.46
+
+0.85
+
+0.45
+
+0.50
+
+1.00
+
+Panel (c): Above Median Market
+
+N=653
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+ 
+
+(i)
+
+(ii)
+
+(iii)
+
+(iv)
+
+(v)
+
+(i) Deposit HHI
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(i) Deposit Share
+
+1.00
+
+ 
+
+ 
+
+ 
+
+ 
+
+(ii) CRA HHI
+
+0.61
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(ii) CRA Share
+
+0.71
+
+1.00
+
+ 
+
+ 
+
+ 
+
+(iii) CRA HHI ( <= 100K)
+
+0.48
+
+0.74
+
+1.00
+
+ 
+
+ 
+
+(iii) CRA Share (<= 100K)
+
+0.61
+
+0.80
+
+1.00
+
+ 
+
+ 
+
+(iv) CRA HHI (100K to 250K)
+
+0.59
+
+0.90
+
+0.62
+
+1.00
+
+ 
+
+(iv) CRA Share (100K to 250K)
+
+0.62
+
+0.85
+
+0.63
+
+1.00
+
+ 
+
+(v) CRA HHI (>250K)
+
+0.57
+
+0.91
+
+0.54
+
+0.82
+
+1.00
+
+(v) CRA Share (>250K)
+
+0.62
+
+0.92
+
+0.55
+
+0.73
+
+1.00
+
+All correlations are positive, which suggests that the competitive presence in the deposit market is in fact indicative of the competitive presence in the SBL market. However, at the same time, the correlation between deposit HHI and CRA HHI, 0.424, is not so high, and it is lower in small markets, 0.244, and higher in larger markets, 0.607. The same tendency can be found in the correlation results for market shares, though the level of correlation is higher, ranging from 0.6 to 0.7. When looking at the correlation between row (i) and rows (iii) through (v), one notable finding is that the correlation between deposit market HHI/shares is higher for loan categories with larger origination amounts even though we typically expect that smaller loan origination has closer ties to local banking and, thus, we also expect higher correlation with deposit market HHI/market shares.
+6
+
+Table 1 suggests that the relationship between deposit market concentration and SBL market concentration is different depending on the market size. To further investigate the relationship, figure 1 plots the average HHI in the deposit market and the SBL market for different market sizes. The horizontal axis shows the market size categorized into six groups, the vertical axis shows the HHI, the black solid line represents the average HHI in the deposit market, and the gray dashed line represents the average HHI in the SBL market. Both HHI measures decrease as the size of the market increases. However, the level of average HHI and the change in average HHI are quite different. Average deposit HHI starts very high, decreases quickly, and becomes flat when the market size is very large, whereas average SBL HHI starts lower and the curve is relatively flat. A standard free-entry model in economicsâfor example, Mankiw and Whinston (1986)âpredicts that market concentration decreases as market size increases and fixed cost of entry decreases. The decreasing curves in figure 1 are consistent with this prediction, and the low level of SBL HHI suggests that the entry cost in the SBL market is lower than that in the deposit market, where entry requires opening a physical branch.
+
+Figure 1. Average HHI
+
+Accessible version
+
+Figure 2 also supports the hypothesis that entry cost in the SBL market is lower. The black solid line in figure 2 plots the average small business loan market share of in-market banks in each Fed market, with the horizontal axis showing the same deposit market size categories as in figure 1. Figures 1 and 2 suggest that the difference in deposit HHI and CRA HHI is due to the competition from out-of-market banks. The fact that out-of-market bank share is larger in smaller markets suggests that entry cost in the SBL market is smaller and, thus, induces higher competitive presence of out-of-market banks.
+
+Figure 2. In-Market Bank Share
+
+Accessible version
+
+One may be concerned that these results suffer from selection bias; CRA filing institutions are larger institutions that tend to be active in markets with no physical branch. To see whether an institution's size affects its competitive presence in a market without a physical branch, the solid black line in figure 3 plots the average share of loans for each institution that are originated in markets where the institution has physical branches. The horizontal axis in figure 3 shows the size of institutions measured by nationwide total deposits categorized into six groups. Except for the two largest categories, which account for about 50 institutions, the average share of in-market loans is high and stable at around 80 percent, suggesting that data selection due to CRA filing does not significantly affect the results previously discussed.
+
+Figure 3. In-Market Loan Share
+
+Accessible version
+
+The previously discussed results indicate that the competitive condition in the deposit market is indicative of the competitive condition in the SBL market, but the former is not a perfect approximation for the latter. The difference between the two exists because the SBL market is generally more competitive due to the presence of out-of-market institutions. Therefore, when competition authorities need to screen markets for a detailed assessment of the competitive condition in a given Fed market, screening mergers based on deposit market HHI would be efficient compared to screening based on both deposit market HHI and small business loan HHI, especially given the incompleteness of small business loan origination data.
+
+Complementing the CRA Filing with the Call Report
+
+Limiting our analysis to institutions that report small business loan origination under the CRA may not allow us to understand the actual local competitive conditions. Because the actual number of banks present in the market is small with only CRA data, the analysis in the previous section would likely overstate market concentration. To account for all institutions in each market, we need to rely on Call Report data. One possible way to incorporate Call Report data into our analysis is to impute small business loan origination from the total outstanding loan amount in the Call Report. As the amount reported in the Call Report is an aggregate amount at the bank level and it is a "stock" variable, we need to impute the "flow" variable, new loan origination, and the allocation of the imputed amount to each market. For the former, we use the fraction of the bank-level aggregated CRA amount to the Call Report amount of the CRA filing institutions, 0.5248.
+7
+ For the latter, we allocate the Call Report amount of a given institution to each Fed market proportional to the fraction of the institution's deposit amount in the market to the institution's national aggregate deposit amount. This within-institution allocation would be reasonable if the within-institution SBL shares were perfectly correlated with the within-institution deposit shares, which we can examine for CRA filing institutions. In fact, the correlation is very high, 0.8772, for CRA filers.
+
+Table 3 presents the summary statistics of a subset of the variables in table 1 with all depository institutions. Here, we define the small business loan origination amount to be the CRA-reported amount for CRA filers and the amount imputed by the above method for non-CRA filers. Because more institutions are included in the statistics, both the deposit market size and SBL market size increase. At the institution level, because the newly added institutions are smaller, the average size in both deposits and SBL significantly decrease. The HHI distribution also changes, but the effect is different between deposit HHI and SBL HHI. The newly added institutions are smaller institutions, and their presence tends to decrease concentration in smaller markets for deposit HHI. On the other hand, in smaller markets, CRA filers have a relatively weaker presence in the SBL market compared to the deposit market. As a result, the previous analysis with only CRA filers may underestimate concentration in the SBL market by ignoring smaller institutions with a strong presence in the SBL market. Table 4 presents the same correlation matrix as in panel (a) in table 2. The correlation becomes higher for each variable pair, suggesting that deposit shares and deposit HHI are a good proxy to understand competitive conditions in the SBL market after accounting for the non-CRA filers.
+
+Table 3: Summary Statistics
+
+ 
+
+N
+
+Mean
+
+s.d.
+
+10%
+
+25%
+
+50%
+
+75%
+
+90%
+
+Fed Market-Level
+
+Deposit Market Size
+
+1,398
+
+8,648
+
+64,097
+
+181
+
+350
+
+781
+
+2,005
+
+7,764
+
+Deposit HHI
+
+1,398
+
+2590
+
+1634
+
+1124
+
+1467
+
+2135
+
+3175
+
+4754
+
+SBL Market Size
+
+1,398
+
+291
+
+1,073
+
+13
+
+26
+
+63
+
+172
+
+530
+
+SBL HHI
+
+1,398
+
+1710
+
+1226
+
+611
+
+854
+
+1353
+
+2199
+
+3312
+
+Institution-Level
+
+Total Deposit Amount
+
+5,212
+
+2,335
+
+33,327
+
+41
+
+82
+
+181
+
+438
+
+1,245
+
+Total CRA Report Amount
+
+5,236
+
+77
+
+706
+
+1
+
+5
+
+16
+
+38
+
+88
+
+To understand how the inclusion of the additional institutions affects market concentration depending on the market size, we summarize the average HHI for different deposit market size categories in figure 4. Figure 4 plots the same statistics with all depository institutions, whereas the statistics for figure 1 are based only on CRA filers. The difference between the black solid line and the gray dashed line is smaller due to two factors: higher SBL HHI in smaller markets and overall lower deposit HHI. As previously discussed, the additional included institutions are smaller institutions. They enhance competition in the deposit market, which decreases HHI, especially in mid-sized markets. At the same time, these institutions have a stronger competitive presence in the SBL market compared to the deposit market, which increases concentration in smaller markets. Overall, the observation in figure 4 is consistent with that in table 3.
+
+Figure 4. Average HHI
+
+Accessible version
+
+Alternative Measure of Small Business Lending Market Shares
+
+Because the categories of small business loans based on loan origination amount match the categories reported in the Call Report, the existing research often uses these categories when analyzing the SBL market. However, one may worry that loans in these categories may include loan origination to large firms. To address this concern, we use a different category of loan origination amounts based on the size of the borrower because CRA filers also report loan origination for borrowers with annual sales below $1 million.
+
+In this section, we investigate how the SBL market share based on the borrower size category differs from that based on the origination amount category. If these two are similar, we would be less concerned about the analysis in the previous section driven by loan origination to large firms. To examine the relationship between the borrower size-based CRA variable and other variables, we first calculate the correlation between these variables. Then, to see the relationship between the borrower size-based CRA market share and the loan size-based CRA market share, we estimate an ordinary least squares (OSL) regression. Formally, we estimate
+
+$$$$ {BorrowerSizeBasedShare}_{ij} = \beta_0 + \beta_1{LoanSizeBasedShare}_{ij} + \varepsilon_{ij}, $$$$
+
+where $$i$$ is an index for the CRA filer, $$j$$ is an index for the Fed market, $$\varepsilon_{ij}$$ is an error term, and $$\beta$$s are the parameters to be estimated.
+
+Tables 4 and 5 summarize the results. Table 4 presents the correlation statistics between the borrower size-based share/HHI and the deposit share/HHI, the total loan size-based share/HHI, and the loan size-based share/HHI in each category. The correlation between the deposit share/HHI and the borrower size-based share/HHI is similar to the correlation between the deposit share/HHI and the loan size-based share/HHI. Also, the correlations between the borrower size-based share/HHI and the different categories of loan size-based share/HHI are generally high. These results suggest that the local competitive presence captured by the borrower size-based share/HHI and the loan size-based share/HHI are similar. Table 5 presents the regression result. The estimated coefficient is very close to 1, with a high R
+2
+, which suggests that both the borrower size-based share and the loan size-based share measure the same local competitive conditions. Overall, the results presented in tables 4 and 5 show no qualitative difference when using either of the shares for the analysis of competitive conditions and justify the use of loan size-based share in the existing literature.
+
+Table 4: Correlation to Borrower Size-Based CRA
+
+ 
+
+HHI
+
+Share
+
+Deposit
+
+0.48
+
+0.65
+
+Loan Size CRA
+
+0.86
+
+0.88
+
+Loan Size CRA (<= 100K)
+
+0.80
+
+0.78
+
+Loan Size CRA (100K to 250K)
+
+0.64
+
+0.73
+
+Loan Size CRA (>250K)
+
+0.55
+
+0.71
+
+N
+
+1,306.00
+
+60,504.00
+
+Table 5: OLS Regression
+
+Borrower Size-Based Share
+
+Loan Size-Based Share
+
+Constant
+
+Estimated Coefficient
+
+0.99
+
+0.02
+
+Standard Error
+
+(0.00227)
+
+(0.01412)
+
+N = 61,441
+
+ 
+
+ 
+
+R-Squared = 0.7560
+
+ 
+
+ 
+
+Conclusion
+
+In this note, we analyze whether the merger screening methods based on deposit share provide appropriate screening for the small business lending market. The small business lending market is generally more competitive than the deposit market. Also, after accounting for non-CRA filers, the deposit market share provides good approximation to the small business lending market share. These two results suggest that screening based on the deposit share works well for screening for the small business lending market as well, with more conservative results. When analyzing the competitive conditions in more detail, using the loan size-based share and the borrower size-based share would result in a similar conclusion.
+
+Bibliography
+
+Amel, Dean F., and Kenneth P. Brevoort (2005). "The Perceived Size of Small Business Banking Markets," 
+Journal of Competition Law and Economics,
+ vol. 1 (December), pp. 771â84.
+
+Anenberg, Elliot, Andrew C. Chang, Serafin Grundl, Kevin B. Moore, and Richard Windle (2018). "
+The Branch Puzzle: Why Are there Still Bank Branches?
+" FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 20.
+
+Canner, Glenn B. (1999). "Evaluation of CRA Data on Small Business Lending," 
+Business Access to Capital and Credit.
+
+Federal Deposit Insurance Corporation (2018). "FDIC Small Business Lending Survey." Washington: FDIC.
+
+Mankiw, N. Gregory, and Michael D. Whinston (1986). "Free Entry and Social Inefficiency," 
+RAND Journal of Economics,
+ vol. 17 (Spring).
+
+1. See United States v. Philadelphia National Bank, 374 U.S. 321 (1963). 
+Return to text
+
+2. Deposits are used as a proxy because they are thought to be the best available measure of depositories' ability to engage in the full range of products and services included in the cluster of banking products and services. In fact, deposits are the only balance sheet item for which office-level data are available for all banks and thrift institutions. 
+Return to text
+
+3. For a detailed description of the data, see Anenberg and others (2018); Canner (1999). 
+Return to text
+
+4. We cannot calculate the exact amount of SBL because the CRA geographic boundaries and the Fed market boundaries do not exactly coincide. In our data construction, the CRA-reported SBL amount is aggregated at the county level. However, one county may be divided into multiple Fed markets. To approximate the SBL amount in a given Fed market, we aggregate the lending amount of all counties that are partly or fully included in the Fed market. 
+Return to text
+
+5. Nationally, 65.2 percent of loans are originated by in-market banks. 
+Return to text
+
+6. The low correlation of deposit market HHI/share and CRA market HHI/share may be because the smallest loan category includes credit card loans. 
+Return to text
+
+7. A rough back-of-envelope calculation suggests that the average loan term is about three years. For example, if all loan terms are three years and a bank originates the same amount every year, the flow-to-stock ratio will be 1/(1+0.67+0.33) = 0.5. 
+Return to text
+
+Please cite this note as:
+
+Onishi, Ken (2021). "Local Concentration in the Small Business Lending Market and Its Relationship to the Deposit Market," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 24, 2021, https://doi.org/10.17016/2380-7172.2972.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

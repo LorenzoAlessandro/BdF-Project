@@ -1,0 +1,577 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 12, 2021
+
+Foreign banksâ asset reallocation in response to the introduction of the Intermediate Holding Company rule of 2016
+1
+
+Teodora Paligorova
+ and 
+Judit Temesvary
+
+Introduction
+
+The implementation of the 2016 intermediate holding company (IHC) rule required foreign banking organizations (FBOs) operating with more than $50 billion total global consolidated assets and with $50 billion or more in U.S. non-branch assets to consolidate their non-branch activities â including their U.S. subsidiaries and U.S. broker-dealers â into holding companies, to be supervised by the Federal Reserve (Figure 1). As per the final rule, these IHCs then became subject to capital planning and stress testing requirements as an enhanced prudential standard, and are also required to comply with enhanced risk-management and liquidity risk-management standards. This rule, which aims to facilitate consistent supervision and regulation of the U.S. operations of FBOs, was required by Section 165 of the Dodd-Frank Wall Street Reform and Consumer Protection Act.
+2
+ Although U.S. branches and agencies of the parent FBO are not folded into the IHC structure, they are still subject to (less stringent) enhanced prudential standards regarding risk-management, capital, liquidity and debt-to-equity limits.
+3
+ The most notable differences between the FBO's IHC structures and their U.S branches and agencies are that the latter are not subject to the U.S. Basel III standardized approach, CCAR and Dodd-Frank Act Stress Test (DFAST) stress testing requirements, or additional capital and stress-testing reporting.
+
+Figure 1. Description of the Intermediate Holding Company Structure
+
+
+Source: Authors' description; based on Davis Polk (2014)
+
+Accessible version
+
+Given the significant costs to establish and maintain an IHC, it is not surprising that FBOs may try to reduce the regulatory burden by reallocating assets away from the US-regulated IHC-subject activities towards less regulated branches and agencies (including those in the United States and located abroad) and/or downsize the total assets of the IHC. We use detailed regulatory data on within-FBO transactions to examine whether FBOs had engaged in asset reallocation prior to the implementation of the IHC rule. Our findings show that the introduction of the IHC rule spurred FBOs to reallocate their assets from ("US-regulated") U.S. subsidiaries toward their ("less regulated") U.S. branches and agencies.
+4
+ This response to the IHC rule may have financial stability implications, as U.S. regulators have limited oversight of the growing assets held via U.S. branches and agencies of FBOs.
+
+Estimation methodology
+
+The empirical evidence on the impact of the Intermediate Holding Company (IHC) rule on foreign banks' asset allocation is scarce and mixed. DiSalvo (2019) looks at changes in foreign banks' organizational structure from before to after the enactment of the 2016 IHC rule, and finds some evidence that FBOs shifted some activities away from the U.S. market. Kreicher and McCauley (2018) examine aggregate trends and find that the IHC rule had two effects on foreign banks: the rule led banks to reduce total assets, and to reallocate assets from subsidiaries to branches, including offshore branches.
+
+Depending on their existing organizational structure, foreign banks responded to the implementation of the IHC rule differently. Based on Kreicher and McCauley (2018), we allocate affected FBOs into two groups. Those that already held U.S.-regulated bank holding companies prior to the IHC rule is our "control" group; these banks were minimally affected, as they were already in compliance with the U.S. rules. Those banks that had no holding company structure prior to the IHC rule, and thus had to set up new U.S.-regulated IHCs altogether, form our "treatment" group. We also include here those IHC-subject banks that were able to reduce their U.S. non-branch and agency assets below $50 billion, and thus avoided the IHC rule.
+5
+ Our testable hypothesis is that IHC-affected banks that had to set up new holding companies to comply with the IHC rule responded by transferring assets from their US-regulated entities (i.e., subsidiaries, broker-dealers, etc.) to their less regulated entities â namely, U.S. branches and agencies.
+6
+
+We use the rarely accessed FR Y-7Q reports for our analysis, which collect quarterly consolidated regulatory data on assets and capitalization from all FBOs that were on the path to become holding companies.
+7
+
+In our difference-in-differences analysis, we compare changes in the branch (less regulated) and non-branch (US-regulated) assets of our control and treatment groups. We focus on the 2014 Q4 to 2018 Q1 period, comprising a symmetric window of seven quarters before vs. seven quarters after the IHC rule became binding in July of 2016. For our "benchmark date," we choose the end of Q4 of 2015. We choose this date for two reasons. First, January 2016 was the deadline for banks to submit any written request for multiple IHCs or alternative structures to the Federal Reserve â and the Federal Reserve provided a decision on the majority of such requests in February 2016. Therefore, FBOs learned of their post-IHC organizational structure prior to end-Q1 2016.
+8
+ Second, a test of parallel trends indicates 2016 Q1 as the period at which asset trends for our treatment and control groups start to diverge.
+9
+
+A quick review of the data reveals that FBOs that were required to form a new holding company to meet the IHC rule (our treatment group) have increased their less regulated U.S. branch assets (Figures 2 and 3). Furthermore, FBOs have reduced their US-regulated non-branch assets (Figure 4) substantially relative to those banks which already had a holding company in place (our control group). In fact, the reduction in FBO assets that would be subject to the IHC rule began in advance of the benchmark date in 2015 (Figure 4), as affected FBOs not only shifted assets to branches, but also migrated assets abroad. As banks reduced their US-based assets primarily by cutting their IHC rule-affected non-branch assets, the ratio of less regulated branch assets to US-regulated non-branch assets shows a similar evolution as the ratio of branch to total US assets (Figure 5). Notably, the overall migration from IHC-subject assets to less regulated units (either their US-based branches and agencies or foreign entities) has continued for a long time period, past the end of our sample in 2018 Q1. Most assets have moved from primary dealer and repo operations, together with US loans and commercial paper funding, all of which are USD denominated.
+
+Figure 2. Non-US regulated US branch assets before/after IHC rule
+
+Accessible version
+
+Figure 3. Non-US regulated US branch over total US-based assets
+
+Accessible version
+
+Figure 4. US-regulated IHC assets before/after IHC rule
+
+Accessible version
+
+Figure 5. Non-US regulated US branch over US-regulated IHC assets
+
+Accessible version
+
+Table A1 provides summary statistics for our control and treatment groups.
+
+We estimate the following difference-in-differences specifications:
+
+$$ (1) \ \ \ {ln(X)}_{j,t} = \alpha_1 + \alpha_2 {POST\_IHC}_t + \alpha_3 {Post\_IHC}_t \times {Treated}_j + {Controls}_{j,t} + \varepsilon_{j,t} $$
+
+where $$ln(X)_{j,t}$$ denotes the natural logarithm of US-based branch assets of bank $$j$$ in year-quarter $$t$$. The vector $$Controls$$ contains lagged total assets and combinations of bank and time fixed effects. In additional estimations, we also use the share of bank j's US-based branch assets in total US assets as the dependent variable. We do not have a prior on the sign of $$\alpha_2$$ â it depends on whether our control banks chose to reduce their US-based branch assets relative to the pre-IHC period. Importantly for our identification, we expect FBOs which were required to set up new IHCs to reallocate assets from US-regulated non-branches to less regulated U.S. branches. As such, we expect that these banks increased their branch assets more relative to banks that already had holding companies in place: $$\alpha_3>0$$.
+
+Similarly, for the share of FBOs' holdings of US-regulated non-branch assets, we estimate:
+
+$$ (2) \ \ \ {ln(Y)}_{j,t}=\beta_1+\beta_2{Post\_IHC}_t+\beta_3{Post\_IHC}_t\times{Treated}_j+\beta_4{Treated}_j+{Controls}_{j,t}+\varepsilon_{j,t} $$
+
+where $${ln(Y)}_{j,t}$$ denotes the natural logarithm of US-based non-branch assets of bank $$j$$ in year-quarter $$t$$. Again, we do not have priors for the sign of $$\beta_2$$. But, importantly, we expect FBOs which were required to set up new IHCs to reduce US-regulated non-branch assets more relative to banks that already had holding companies: $$\beta_3<0$$.
+
+Lastly, we look at the overall composition of FBOs' US-based assets, and examine the ratio of less-regulated branch assets to US-regulated non-branch assets.
+
+$$ (3) \ \ \ Z_{j,t}=\gamma_1+\gamma_2{Post\_IHC}_t+\gamma_3{Post\_IHC}_t\times{Treated}_j+\gamma_4{Treated}_j+{Controls}_{j,t}+\varepsilon_{j,t} $$
+
+where $$Z_{j,t}$$ denotes the ratio of branch to non-branch assets of bank $$j$$ in year-quarter $$t$$. We expect FBOs, which were required to set up new IHCs, to increase branch assets relative to non-branch assets 
+more
+ relative to banks that already had holding companies: $$\gamma_3>0$$.
+
+Estimation results
+
+We find compelling evidence that US-based FBOs with no pre-existing holding companies increased their less regulated branch assets and reduced their US-regulated non-branch assets relative to those FBOs which already had a holding company in place.
+
+Table 1 shows the results of estimating Equations (1) and (2), using total branch assets (Columns 1 and 2) and total non-branch assets (Columns 3 and 4) as dependent variables. Columns 1 and 3 include lagged total assets as controls, and Columns 2 and 4 add bank and time fixed effects. Consistent with our hypothesis, we find significant and positive coefficient estimates on the interaction terms: after their IHC status became certain at the end of 2015 Q4, FBOs with no pre-existing holding companies increased their less regulated branch assets in the U.S. by around 27 percent more than banks in our control group. At the same time, they also lowered their non-branch assets that would be subject to the IHC regulations by around 20 percent (top row). Validating our difference-in-differences setup, there is no systematic difference in the branch or non-branch assets of banks in our control group before vs. after 2015 Q4 (second row). In addition, there is no systematic difference between our treatment or control groups before 2015 Q4 (third row).
+
+Table 1
+
+VARIABLES
+
+Assets of U.S. Branches and Agencies
+
+Assets of U.S. Branches and Agencies
+
+US-regulated IHC-subject Assets
+
+US-regulated IHC-subject Assets
+
+Post-IHC dummy * Treatment dummy
+
+0.273**
+
+0.288**
+
+-0.212*
+
+-0.192*
+
+ 
+
+[0.122]
+
+[0.127]
+
+[0.125]
+
+[0.0915]
+
+Post-IHC dummy
+
+-0.0805
+
+ 
+
+0.0373
+
+ 
+
+ 
+
+[0.0627]
+
+ 
+
+[0.0321]
+
+ 
+
+Treatment dummy
+
+0.496
+
+ 
+
+0.11
+
+ 
+
+ 
+
+[0.491]
+
+ 
+
+[0.179]
+
+ 
+
+Total U.S. assets (t-1)
+
+0.615***
+
+0.663***
+
+0.690***
+
+0.646***
+
+ 
+
+[0.163]
+
+[0.174]
+
+[0.184]
+
+[0.203]
+
+Constant
+
+2.909
+
+2.696
+
+3.496
+
+4.01
+
+ 
+
+[1.870]
+
+[2.171]
+
+[2.241]
+
+[2.544]
+
+Observations
+
+190
+
+190
+
+196
+
+196
+
+Number of banks
+
+14
+
+14
+
+14
+
+14
+
+Bank Fixed Effects
+
+No
+
+Yes
+
+No
+
+Yes
+
+Time Fixed Effects
+
+No
+
+Yes
+
+No
+
+Yes
+
+Robust standard errors in parentheses
+
+*** p<0.01, ** p<0.05, * p<0.1
+
+In Table 2, we study the share of branch assets in total assets (Columns 1 and 2) and the ratio of branch to non-branch assets (Columns 3 and 4) as dependent variables. These results also consistently and significantly support the asset reallocation story. We find that FBOs with no pre-existing holding companies increased the share of branch assets in total U.S. assets by about 10 percentage points (Columns 1 and 2), and the gap in the share of branch vs non-branch assets also increased by nearly 20 percentage points (top row). As before, and supporting our empirical specification, there is no significant difference in the branch or non-branch assets of banks in our control group before vs. after 2015 Q4 and there is no systematic difference between our treatment or control groups before 2015 Q4.
+
+Table 2
+
+VARIABLES
+
+Ratio of Assets of U.S. Branches and Agencies to total US-based assets
+
+Ratio of Assets of U.S. Branches and Agencies to total US-based assets
+
+Ratio of Assets of U.S. Branches and Agencies to US-regulated IHC-subject assets
+
+Ratio of Assets of U.S. Branches and Agencies to US-regulated IHC-subject assets
+
+Post-IHC dummy * Treatment dummy
+
+0.0947**
+
+0.0947**
+
+0.189**
+
+0.163**
+
+ 
+
+[0.0396]
+
+[0.0407]
+
+[0.0793]
+
+[0.0722]
+
+Post-IHC dummy
+
+-0.0156
+
+ 
+
+-0.0312
+
+ 
+
+ 
+
+[0.0133]
+
+ 
+
+[0.0265]
+
+ 
+
+Treatment dummy
+
+0.00969
+
+ 
+
+0.0194
+
+ 
+
+ 
+
+[0.0814]
+
+ 
+
+[0.163]
+
+ 
+
+Constant
+
+0.242***
+
+0.277***
+
+-0.516***
+
+-0.447***
+
+ 
+
+[0.0617]
+
+[0.0193]
+
+[0.123]
+
+[0.0363]
+
+Observations
+
+196
+
+196
+
+196
+
+196
+
+Number of banks
+
+14
+
+14
+
+14
+
+14
+
+Bank Fixed Effects
+
+No
+
+Yes
+
+No
+
+Yes
+
+Time Fixed Effects
+
+No
+
+Yes
+
+No
+
+Yes
+
+Robust standard errors in parentheses
+
+*** p<0.01, ** p<0.05, * p<0.1
+
+Conclusion
+
+We use detailed regulatory data to examine whether FBOs responded to the implementation of the IHC rule, and find consistent evidence that this rule had spurred FBOs to reallocate their assets from their US-regulated non-branch assets toward their less regulated branches in the US. This behavior highlights an additional consequence of the IHC rule, and is consistent with regulatory arbitrage â with possible financial stability implications, as U.S. regulators have limited purview of growing assets held via US-based branches of FBOs.
+
+References
+
+David Polk (2014). "U.S. Intermediate Holding Company: Structuring and Regulatory Considerations for Foreign Banks" (April 2).
+
+DiSalvo, James (2019). "Banking trends: How Foreign Banks Changed after DoddâFrank," 
+FRB Philadelphia Research Department
+
+Fillat, José L., Stefania Garetto and Arthur V. Smith. "Global banking, local stress: How multinational banks transmit shocks," voxeu.org (November 2018).
+
+Financial Times (2019). "European banks slash $280bn from main U.S. businesses," November 24.
+
+Kreicher, Lawrence L and Robert N McCauley (2018). "The new U.S. intermediate holding companies: reducing or shifting assets?," 
+BIS Quarterly Review
+ (March 2018)
+
+Parchimowicz, Katarzyna M. (2019). "Missed targets and misplaced incentives? The case of parent undertaking requirement in the USA and in the EU," 
+Journal of Banking Regulation
+, pp. 1â12.
+
+Wall, Larry D. (2017). "Recent changes in U.S. regulation of large foreign banking organizations," 
+Journal of Financial Regulation and Compliance
+ 25(3), pp. 318-332
+
+Appendix
+
+Table A1
+
+VARIABLES
+
+mean
+
+sd
+
+p25
+
+p50
+
+p75
+
+N
+
+Total US assets ($ million)
+
+263,658
+
+94,321
+
+193,486
+
+270,656
+
+336,957
+
+204
+
+Total US non-branch assets ($ million)
+
+188,282
+
+77,576
+
+134,654
+
+152,764
+
+260,388
+
+168
+
+Total US branch assets ($ million)
+
+68,529
+
+49,518
+
+31,471
+
+61,305
+
+91,602
+
+168
+
+Post-IHC dummy
+
+0.529
+
+0.5
+
+0
+
+1
+
+1
+
+204
+
+Treatment dummy
+
+0.417
+
+0.494
+
+0
+
+0
+
+1
+
+204
+
+Ratio of Assets of U.S. Branches and Agencies to total US-based assets
+
+0.262
+
+0.152
+
+0.144
+
+0.261
+
+0.371
+
+168
+
+Ratio of Assets of U.S. Branches and Agencies to US-regulated IHC-subject assets
+
+-0.477
+
+0.303
+
+-0.712
+
+-0.478
+
+-0.257
+
+168
+
+1. We thank Mark Fischer at the FRB of New York and Jose Berrospide and Rebecca Zarutskie at the Federal Reserve Board for useful comments. 
+Return to text
+
+2. 
+https://www.federalreserve.gov/newsevents/pressreleases/bcreg20140218a.htm
+. Also see, Parchimowicz (2019). 
+Return to text
+
+3. For example, each large FBO is required to establish a U.S. risk committee with at least one independent director which oversees all U.S. operations. Furthermore, U.S. branches and agencies must certify they meet capital standards on a consolidated basis consistent with Basel capital standards, and they have to maintain a 14-day U.S. liquidity buffer. 
+Return to text
+
+4. In the note we use the term US-regulated assets/subsidiaries to refer to those assets that are subject to the IHC, and less regulated assets refer to U.S. branches and agencies that are outside the IHC. 
+Return to text
+
+5. In alternative specifications, we exclude the two banks that had avoided the IHC rule through asset reduction, and find that our results are robust to the exclusion of these banks. 
+Return to text
+
+6. A similarly important issue, which we do not address in this note, is the cross-border asset migration from the US-based entities of FBOs to units of the global bank in other countries, in response to the IHC rule implementation (see, for instance, Financial Times, 2019). 
+Return to text
+
+7. Comprehensive FBO-level data on total U.S. assets, broken down by total US-regulated assets and less regulated assets, is available starting in Q4 of 2014: 
+https://www.federalreserve.gov/apps/reportforms/reportdetail.aspx?sOoYJ+5BzDYZF7OsZFXqBA==
+. 
+Return to text
+
+8. 
+https://www.federalreserve.gov/supervisionreg/regulation-yy-foreign-banking-organization-requests.htm
+. 
+Return to text
+
+9. An alternative benchmark date is of course the date the IHC rule became binding, July 1, 2016. However, we prefer the earlier benchmark as banks, aware of their upcoming structural changes, began the reallocation of their assets several quarters ahead of the binding deadline (Kreicher and McCauley, 2018). Our results are robust to using July 1 2016 as the benchmark date. 
+Return to text
+
+Please cite this note as:
+
+Paligorova, Teodora, and Judit Temesvary (2021). "Foreign banks' asset reallocation in response to the introduction of the Intermediate Holding Company rule of 2016," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 12, 2021, https://doi.org/10.17016/2380-7172.2886.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

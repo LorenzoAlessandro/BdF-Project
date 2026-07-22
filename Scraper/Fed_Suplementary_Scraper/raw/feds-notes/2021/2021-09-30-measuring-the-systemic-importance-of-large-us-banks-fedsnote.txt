@@ -1,0 +1,1106 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+September 30, 2021
+
+Measuring the systemic importance of large US banks
+1
+
+Andrew Hawley, and Marco Migueis
+
+1 â Introduction
+
+The failure of large and connected financial institutions often leads to system-wide financial crises and economic downturns (Labonte 2015). Even absent outright failure and bankruptcy, perceived weakness of a large and connected financial firm can result in decrease valuation of other firms â due to perceived linkages â and overall decrease in market liquidity. Therefore, identifying the firms that pose the largest systemic risks is critical to appropriately developing regulatory and supervisory strategies that minimize financial instability. This note researches a novel approach to identifying systemically important firms, based on high-frequency stock return data.
+
+The 07-09 financial crisis motivated much academic research into identifying systemically important firms, partly with the goal of informing which firms should be subject to higher regulatory requirements and scrutiny. Prominent methodologies include "Distress Insurance Premium" of Huang et al. (2012), Hautsch et al. (2015), "$$\Delta$$CoVaR" of Adrian and Brunnermeier (2016), "SRISK" of Brownlees and Engle (2017), and "Marginal Expected Shortfall" of Acharya et al. (2017). These methodologies can generally be divided into those that focus on how vulnerable a firm is to a systemic shock (e.g., SRISK, Marginal Expected Shortfall) and those that focus on how stress in a firm contributes to market-wide stress (e.g., $$\Delta$$CoVaR, Hautsch et al. (2015). This note adds to the latter group by researching an alternative approach to identify the contribution of financial firms to systemic risk.
+
+Our measure of the systemic risk contribution of a firm relies on whether the negative stock returns of a firm directly precede negative tail returns of a market-wide index of financial stocks. Such relation between the stock returns of firms and the returns of the financial index indicates that losses for the firm precede losses for the generality of firms, which suggests that the firm is systemically important. In contrast to previous studies, we include a set of potential systemically important firms simultaneously in the regression analysis and focus on prediction over short periods of time. The simultaneous inclusion of multiple large financial firms in the regression analysis aims to separately account for the systemic effects of each firm, and thus ensure that their measured systemic importance is not improperly attributed given omitted variable bias. The use of lagged returns in predicting market-wide returns aims to measure effects of each firm on the returns of the financial stock index, rather than the other way around (as may be the case in methodologies that use contemporaneous returns of firms and the market to measure the systemic effects of individual firms). Our choice of basing the analysis on high-frequency returns allows us to plausibly measure the effect of a firm's lagged return on other financial firms.
+
+We find that stock returns of the eight US banking organizations currently defined as Global Systemically Important Banks (GSIBs) predict the size of the tail returns of a financial firm index in subsequent periods. Negative returns from these GSIBs are associated with subsequent more negative tail returns for a broad index of financial firms. These potential effects suggest that US GSIBs have systemic effects on other financial firms, and therefore should experience closer regulatory scrutiny.
+
+Section 2 of this note discusses in more depth the motivation for this analysis and contextualizes our methods relative to other metrics in the systemic risk literature. Section 3 describes our data. Section 4 defines our econometric methodology and presents our empirical results. Section 5 concludes.
+
+2 â Motivation and previous literature
+
+Large and connected financial institutions pose substantial risks to the broad financial system. For this reason, firms that are assessed to pose large systemic risks are subject to enhanced regulatory requirements, such as the Global Systemically Important Bank (GSIB) framework of the Basel Committee (Basel Committee on Banking Supervision 2018) and the Enhanced Prudential Requirements introduced in the US by the 2010 Dodd-Frank Act.
+
+However, appropriately measuring the systemic importance of financial firms is challenging. Multiple approaches have been proposed since the 07-09 financial crisis, including $$\Delta$$CoVaR from Adrien and Brunnermeier (2016), the methodology of Hautsch et al. (2015), SRISK from Brownlees and Engle (2017), Marginal Expected Shortfall (MES) from Acharya et al. (2017), and Distress Insurance Premium (DIP) from Huang et al. (2012). Methodologies such as SRISK, MES, and DIP measure the vulnerability of firms to systemic crisis by estimating a firm's losses conditional on a systemic crisis. Generally, these metrics rank firm systemic risk closely to firm size and correlation with market returns.
+
+Methodologies such as $$\Delta$$CoVaR and Hautsch et al. (2015) attempt to answer the more challenging question of how much does stress in a firm contribute to stress in the market. This question is hard to answer because the financial resilience of financial firms is very correlated, not only due to direct linkages (i.e., interbank lending) but also due to market perception of similarities across firms and their common vulnerabilities (e.g., liquidity runs).
+
+$$\Delta$$CoVaR defines the systemic contribution of individual firms as follows:
+
+$$$$ \Delta {CoVaR}^{fs|i}_q = {CoVaR}^{fs|X^i={VaR}^i_q}_q - {CoVaR}^{fs|X^i={VaR}^i_{50}}_q $$$$
+
+where $${CoVaR}^{fs|X^i={VaR}^i_q}_q$$ is value at risk of the financial system ($$fs$$) at quantile $$q$$, conditional on the value at risk of firm $$i$$ being at its quantile $$q$$; and $${CoVaR}^{fs|X^i={VaR}^i_{50}}_q$$ is the value at risk of the financial system at quantile $$q$$, conditional on the value at risk of firm i being at its 50th percentile. $${CoVaR}^{fs|i}_q$$ is dynamically estimated as follows:
+
+$$$$ {CoVaR}^{fs|i}_{q,t} = \hat{\alpha}^{fs|i}_q + \hat{\Upsilon}^{fs|i}_q \vert M_{t-1} + \hat{\beta}^{fs|i}_q{VaR}^i_{q,t} $$$$
+
+and thus
+
+$$$$ \Delta{CoVaR}^{fs|i}_{q,t} = \hat{\beta}^{fs|i}_q ( {VaR}^i_{q,t} - {VaR}^i_{50,t} ) $$$$
+
+where $$M_{t-1}$$ is lagged vector of state variables likely to influence the value at risk of the financial system (e.g., market interest rates, market index stock returns).
+
+In estimating the effect of firms on the financial system's value at risk, $$\Delta$$CoVaR only considers one firm at a time. Given the substantial correlation across financial firm returns, particularly during stress periods, $$\Delta$$CoVaR estimates of the systemic contribution of firms are likely to suffer from substantial omitted variable bias, and inappropriately attribute other firms' systemic contributions to a firm's $$\Delta$$CoVaR.
+2
+ Additionally, by measuring the value-at-risk of the financial system and the value-at-risk of a given systemic firm simultaneously, the $$\Delta$$CoVaR methodology is likely to reflect reverse causality, as increases in the value-at-risk of the financial system as a whole are generally more likely to drive the value-at-risk of an individual firm (even a large, systemically important firm) than the other way around.
+3
+
+Hautsch et al. (2015) improves on $$\Delta$$CoVaR by including the value-at-risk of firms that are selected as "explaining" firm $$i$$ returns by the least absolute shrinkage and selection operator (LASSO) as additional controls in a regression that aims to identify the systemic contribution of firm $$i$$:
+
+$$$$ {VaR}^s_{p,t} = V^{i\prime}_t \gamma^s_p + \beta^{s|i}_{p,q}{VaR}^i_{q,t} $$$$
+
+where $${VaR}^s_{p,t}$$ is the p
+th
+ percentile of the value-at-risk of the financial system at time $$t$$, $$V^i_t$$ is a vector of control variables that includes lagged macroeconomic state variables and the value-at-risk of firms that are selected by LASSO to predict value-at-risk of firm $$i$$, and $${VaR}^i_{q,t}$$ is the q
+th
+ percentile of the value-at-risk of firm $$i$$ at time $$t$$.
+
+The inclusion of the value-at-risk of firms that are predictive of firm $$i$$ as controls in firm $$i$$'s systemic contribution regression mitigates the omitted variable and reverse causality weaknesses associated with $$\Delta$$CoVaR but is unlikely to fully address them. The LASSO procedure selects variables that jointly provide an optimal prediction of a variable of interest; however, LASSO does not guarantee that excluded variables (in this case, the value-at-risk of other large financial firms) do not meaningfully influence the variable to predict (in this case, the value-at-risk of firm $$i$$) â LASSO optimizes prediction, not identification of effects. Also, information on other firms not included in the LASSO procedure may influence the value-at-risk of firm $$i$$. For these reasons, the systemic contributions identified under Hautsch et al. (2015) approach may still reflect reverse causality. In addition, the excluded firms may influence the value-at-risk of the financial system (and be correlated with the value-at-risk of firm $$i$$), and thus their exclusion in the systemic contribution regression of firm $$i$$ is likely to result in omitted variable bias.
+4
+
+Improving upon the previous academic research on identifying the effect of individual financial firms on systemic risk requires addressing omitted variable bias and reverse causality. This note researches an alternative approach to estimate the systemic contribution of firms that addresses these weaknesses through 1) simultaneous inclusion of relevant firms, 2) lagging of explanatory variables, and 3) use of high frequency returns. Our regression specification is as follows:
+
+$$$$\begin{split} r^q_{fi,t} = \alpha + & \sum_{i=1}^N {(\beta_i r_{i,t-1} + \beta^l_i r^-_{i,t-1})} + \beta_{fi}r_{fi,t-1} + \beta^l_{fi} r^-_{fi,t-1} + \beta_{mkt}r_{mkt,t-1} + \beta^l_{mkt}r^-_{mkt,t-1} \\ & + \beta_{vol}{Vol}_{mkt,t-1} \end{split}$$$$
+
+where $$r^q_{fi,t}$$ is the quantile $$q$$ of the return of the financial firms index at time $$t$$ conditional on this modelâs explanatory variables; $$r_{i,t-1}$$ is the return of firm $$i$$ at time $$t-1$$; $$r^-_{i,t-1}$$ is the return of firm $$i$$ in time $$t-1$$ if the return is below zero, and is zero otherwise; $$r_{fi,t-1}$$ is the return of the financial firm index at time $$t-1$$; $$r^-_{fi,t-1}$$ is the return of the financial firm index in time $$t-1$$ if the return is below zero, and is zero otherwise; $$r_{mkt,t-1}$$ is the return of the SP 500 at time $$t-1$$; and $$r^-_{mkt,t-1}$$ is the return of the SP 500 in time $$t-1$$ if the return is below zero, and is zero otherwise; and $${Vol}_{mkt,t-1}$$ is a measure of volatility of the SP 500 in the day prior to $$t-1$$.
+5
+
+The simultaneous inclusion of relevant systemically important firms in the regression reduces the likelihood that the effects attributed to individual firms suffer from the omitted variable bias that may result from excluding systemically important firms that are correlated with a given firm. However, the inclusion of multiple firms with correlated returns in the regression estimating systemic contributions does increase the sample size needed to identify individual effects.
+
+Lagging the returns of firms relative to the financial services aggregate return mitigates reverse causality concerns. We also ensure that the effect of a lagged firm return on the financial index return is not simply a proxy for aggregate factors by controlling for the lagged financial index return and the lagged SP500 return and volatility. However, lagging returns reduces the relationship between a firm's return and the financial index return. In an efficient market where information is incorporated into stock prices very quickly, one day lagged returns, for example, have little predictive power over ensuing returns.
+
+The use of high frequency data aims to address the limitations introduced by the approaches adopted to mitigate omitted variable bias (i.e., inclusion of a comprehensive set of systemically important firms in regressions) and reverse causality (i.e., lagging of explanatory returns). Use of high frequency returns, such as thirty- or ten-second returns, results in a substantially larger dataset, which can provide more statistical power to tease apart the systemic effects of multiple firms. Meanwhile, higher frequency returns are more likely to display lagged effects than, for example, daily returns, as long as returns of other financial firms do not respond instantaneously to the returns of systemic firms.
+6
+
+Two conceptual criticisms can be levied on this high-frequency approach to measuring the systemic importance of firms: 1) whether any measured coefficient truly reflects a systemic effect of financial firms in the financial system, rather than these firms simply reacting more quickly to common shocks (e.g., due to higher liquidity); and 2) whether any measured high frequency systemic effects are relevant from a prudential standpoint.
+
+Absent identification of exogenous and idiosyncratic shocks to a firm's return, establishing that the coefficient of a firm's return on the regression explaining the return of the financial firms' index is causal is challenging. Still, the approach followed in this note, whereby we control for the lagged financial index return and the lagged stock-market return, should ensure that systemic effects are controlled for and thus mitigate the concern that effects identified for specific firms simply reflect that these firms' returns react quicker to common shocks.
+
+A thirty- or ten-seconds window is certainly not the ideal window length to fully measure the size of the effect of a shock to a firm on aggregate financial system returns. However, reliance on a larger time window to measure the effects of returns of one firm on aggregate returns requires strong identification assumptions around the direction of causality and the irrelevance of excluded covariates (as those implicit in $$\Delta$$CoVaR and Hautsch et al. 2015 methodologies) that are unlikely to hold. Also, to the extent that the main mechanism through which losses in one firm propagate into financial difficulties for other firms are the trading decisions of investors in the stock market, understanding how aggregate returns react at high frequencies to idiosyncratic shocks to certain firms is a plausible approach to understand the relationship between a firm's return and the aggregate returns of the financial system.
+
+Our regression specification allows negative returns to have a different effect on the tail quantile of the financial firm index than positive returns. We hypothesize that negative returns will have a more negative effect in tail quantiles when their effect is measured separately from positive returns. Such differentiated effect of negative returns from positive returns on tail quantiles of the financial firm index would be consistent with prior research that found that negative returns increase return volatility, while positive returns reduce it (Rabemananjara and Zakoian 1993).
+
+3 â Data
+
+Our data consists of stock prices for the eight US GSIBs;
+7
+ a financial sector index, the Financial Select Sector SPDR (NYSE: XLF); and the S&P 500, through the SPDR S&P 500 ETF (NYSE: SPY). All data was obtained from the NYSE Trade and Quote (TAQ) dataset in the Wharton Research Data Services (WRDS). The data spans from 1/2/2017 â 12/31/2020.
+8
+ Log returns are calculated only for the periods when the market is trading. The return between the market close and when the market opens in the next day is not included in the regression analysis. To create a measure of volatility, we calculate the standard deviation of the minute-to-minute returns of the SPY over a one-day rolling period, which we label $${Vol}_{mkt,t-1}$$. Table 1 presents the descriptive statistics of our data at the thirty-second frequency.
+
+Table 1
+
+Statistic
+
+JPM
+
+BAC
+
+C
+
+WFC
+
+GS
+
+Mean Return
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Standard Deviation of Returns
+
+0.07%
+
+0.08%
+
+0.09%
+
+0.08%
+
+0.07%
+
+1% Quantile of Returns
+
+-0.15%
+
+-0.16%
+
+-0.18%
+
+-0.17%
+
+-0.16%
+
+5% Quantile of Returns
+
+-0.07%
+
+-0.08%
+
+-0.08%
+
+-0.08%
+
+-0.08%
+
+95% Quantile of Returns
+
+0.07%
+
+0.08%
+
+0.08%
+
+0.08%
+
+0.08%
+
+Minimum 30 Second Return
+
+-20.09%
+
+-18.44%
+
+-24.22%
+
+-13.72%
+
+-16.71%
+
+Maximum 30 Second Return
+
+7.56%
+
+9.68%
+
+9.63%
+
+12.03%
+
+5.21%
+
+Autocorrelation Lag 1
+
+-21.90%
+
+-19.30%
+
+-18.30%
+
+-19.40%
+
+-9.40%
+
+Statistic
+
+MS
+
+BK
+
+STT
+
+XLF
+
+SPY
+
+Mean Return
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+0.00%
+
+Standard Deviation of Returns
+
+0.07%
+
+0.06%
+
+0.09%
+
+0.07%
+
+0.04%
+
+1% Quantile of Returns
+
+-0.17%
+
+-0.16%
+
+-0.19%
+
+-0.12%
+
+-0.10%
+
+5% Quantile of Returns
+
+-0.08%
+
+-0.08%
+
+-0.09%
+
+-0.06%
+
+-0.04%
+
+95% Quantile of Returns
+
+0.08%
+
+0.08%
+
+0.09%
+
+0.06%
+
+0.04%
+
+Minimum 30 Second Return
+
+-18.52%
+
+-15.94%
+
+-19.34%
+
+-16.83%
+
+-12.00%
+
+Maximum 30 Second Return
+
+7.54%
+
+9.74%
+
+10.77%
+
+10.13%
+
+6.44%
+
+Autocorrelation Lag 1
+
+-8.50%
+
+-11.30%
+
+-16.20%
+
+-25.30%
+
+-18.10%
+
+Due to the high frequency of the data, some observations are missing in our dataset. Most of the missing data is concentrated in early afternoons and relates to firms that have less trading volume. To not discard available data from other firms, we assume that missing stock prices did not change during these intervals. For the return data calculated at a thirty-second frequency, State Street and Bank of NY Mellon have the largest amount of missing data at 5% and 1%, respectively, while missing data is less than 0.005% of the observations for other firms. Meanwhile, for the return data calculated at a ten-second frequency, State Street and Bank of NY Mellon have 18% and 9% missing data, respectively, while missing data is less than 0.05% of the observations for other firms. To assess the robustness of results, we use both the thirty-second and the ten-second frequencies throughout the analysis.
+
+4 â Empirical approach and results
+
+To understand the effect of US GSIB returns on the tail returns of the financial index, we start by comparing these effects at different time windows â ten seconds, thirty seconds, one minute, thirty minutes, and one day â according to the following type of quantile regression (discussed in the previous section):
+9
+
+$$$$\begin{split} r^q_{fi,t} = \alpha + & \sum_{i=1}^N {(\beta_i r_{i,t-1} + \beta^l_i r^-_{i,t-1})} + \beta_{fi}r_{fi,t-1} + \beta^l_{fi} r^-_{fi,t-1} + \beta_{mkt}r_{mkt,t-1} + \beta^l_{mkt}r^-_{mkt,t-1} \\ & + \beta_{vol}{Vol}_{mkt,t-1} \end{split}$$$$
+
+A challenge in comparing effects across time windows of different length is defining the appropriate quantile to compare. Using the same quantile (e.g., 5th) for a regression based on daily return data and for a regression based on ten-second return data would lead to consideration of observations that are substantially less in the "tail" at the ten-second frequency, as most ten-second intervals, even in days of substantial market volatility, are not tail observations. If, alternatively, we set the quantile used in the regression of each return frequency such that it results in the same number of observations above it (e.g., if the number of daily observations below the 5th quantile is 50 and we set the quantile for the regression using ten-second return data such that the number of observations below this quantile is also 50), the result would be that tail observations in the higher frequency regressions would be substantially more in the tail than the observations for the lower observation frequencies. There is no theory-driven approach that we are aware that outlines how to perform this comparison while addressing these concerns, so we tried to balance these two extremes by setting the quantile used in the regression according to the following formula of the number of observations and days:
+
+$$$$ q = \frac{0.05}{(N / {Number\ of\ days})^{0.5}} $$$$
+
+Applying this formula, the quantile used in the quantile regression for each of the return frequencies considered is provided in Table 2.
+
+Table 2
+
+Return Frequency
+
+Daily
+
+30 Minutes
+
+1 Minute
+
+30 Seconds
+
+10 Seconds
+
+Quantile
+
+0.05
+
+0.01387
+
+0.00253
+
+0.00179
+
+0.00103
+
+Table 3 presents the quantile regression results.
+
+Table 3
+
+ 
+
+Daily
+
+30 Min
+
+1 Min
+
+30 Sec
+
+10 Sec
+
+Intercept
+
+-0.6364
+
+-0.164**
+
+-0.0456**
+
+-0.0414**
+
+-0.0254***
+
+$$r_{JPM,t-1}$$
+
+-0.1949
+
+-0.0815
+
+0.0025
+
+-0.378***
+
+-0.3389***
+
+$$r^-_{JPM,t-1}$$
+
+0.1983
+
+0.3882
+
+0.2072
+
+0.583***
+
+1.0713***
+
+$$r_{BAC,t-1}$$
+
+0.1406
+
+0.0774
+
+-0.2363**
+
+-0.0204
+
+-0.3354**
+
+$$r^-_{BAC,t-1}$$
+
+-0.1999
+
+-0.0341
+
+0.5298**
+
+0.2201***
+
+0.7274***
+
+$$r_{C,t-1}$$
+
+0.0207
+
+-0.0811
+
+-0.0155
+
+-0.1039**
+
+-0.6524*
+
+$$r^-_{C,t-1}$$
+
+-0.2387
+
+0.0996
+
+-0.0018
+
+0.4451***
+
+0.973**
+
+$$r_{WFC,t-1}$$
+
+0.2475
+
+-0.0318
+
+-0.1189**
+
+0.0083
+
+-0.2397**
+
+$$r^-_{WFC,t-1}$$
+
+0.0608
+
+0.0769
+
+0.3168**
+
+0.1127*
+
+0.5857***
+
+$$r_{GS,t-1}$$
+
+0.2182
+
+-0.088
+
+-0.0867
+
+-0.0995***
+
+-0.1049***
+
+$$r^-_{GS,t-1}$$
+
+0.2729
+
+0.151
+
+0.2665**
+
+0.3307***
+
+0.5159***
+
+$$r_{MS,t-1}$$
+
+-0.2733
+
+0.0178
+
+0.0157
+
+-0.0086
+
+-0.0226
+
+$$r^-_{MS,t-1}$$
+
+0.2795
+
+-0.0531
+
+-2.00E-04
+
+0.0173
+
+0.1247
+
+$$r_{BK,t-1}$$
+
+0.2496
+
+-0.048
+
+-0.0775**
+
+-0.1466***
+
+-0.0249
+
+$$r^-_{BK,t-1}$$
+
+-0.4899
+
+0.2887
+
+0.2584**
+
+0.394***
+
+0.2479**
+
+$$r_{STT,t-1}$$
+
+0.0959
+
+-0.0158
+
+-0.0924**
+
+-0.0438**
+
+-0.2333***
+
+$$r^-_{STT,t-1}$$
+
+-0.1451
+
+0.0716
+
+0.2836**
+
+0.2169***
+
+0.8565***
+
+$$r_{fi,t-1}$$
+
+-0.5069
+
+0.0346
+
+-0.8698**
+
+-0.9753**
+
+-0.9756**
+
+$$r^-_{fi,t-1}$$
+
+0.0395
+
+0.5468
+
+0.7988**
+
+0.9528**
+
+0.9667**
+
+$$r_{mk,t-1}$$
+
+0.5685
+
+-0.4638**
+
+-0.2087**
+
+-0.6514***
+
+-0.4837***
+
+$$r^-_{mk,t-1}$$
+
+0.0816
+
+0.8434**
+
+0.8185**
+
+1.54***
+
+0.8655***
+
+$$Vol_{mk,t-1}$$
+
+-2.0227
+
+-1.379***
+
+-1.2615**
+
+-1.0081***
+
+-0.7412***
+
+$$R^2$$
+
+0.2349
+
+0.3009
+
+0.3862
+
+0.4165
+
+0.3894
+
+$$N$$
+
+1006
+
+12,075
+
+391,239
+
+775,549
+
+2,317,302
+
+Notes: ***, **, and * denote statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Unsurprisingly, the returns of the US GSIBs are not statistically significant predictors of the tail quantile of the return of the financial firm index at the daily and thirty-minute frequency. Given the quick incorporation of new information in market prices of highly liquid stocks such as US GSIBs, the effect of lag GSIB returns cannot be detected under these longer windows.
+
+On the other hand, most of the coefficients associated with the returns of GSIBs and with the negative portion of the returns of GSIBs are statistically significant at higher frequencies. When statistically significant, the coefficients of lagged returns are negative while the coefficients of the negative portion of lagged returns are positive. These results indicate that the tail quantile of the return of the financial firm index generally becomes lower after positive returns from the GSIBs, which implies that the effect of GSIB positive returns on the tail quantile of the financial firm index follow a mean reversion logic. Meanwhile, to understand the effect of negative returns we need to sum the coefficient of the GSIB return with the coefficient of the negative portion of the GSIB return, as is done in Table 4 below.
+
+Table 4
+
+Firm
+
+1 Min
+
+30 Sec
+
+10 Sec
+
+JPM
+
+0.210*
+
+0.205*
+
+0.733***
+
+BAC
+
+0.293**
+
+0.200***
+
+0.392***
+
+C
+
+-0.017
+
+0.342***
+
+0.321***
+
+WFC
+
+0.198***
+
+0.120***
+
+0.345***
+
+GS
+
+0.180***
+
+0.231***
+
+0.411***
+
+MS
+
+0.016
+
+0.009
+
+0.102*
+
+BK
+
+0.181***
+
+0.248***
+
+0.223***
+
+STT
+
+0.191***
+
+0.173***
+
+0.623***
+
+Notes: ***, **, and * denote statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Negative returns are statistically significant predictors of a lower tail quantile of the financial firm index for all US GSIBs at the ten-second frequency, and for all but Morgan Stanley at the thirty-second frequency. The estimated effects are meaningful. For example, a one percentage point lower negative return by JP Morgan is associated with a 0.73 percentage points lower tail quantile of the financial firm index at the ten-second frequency. The effects of other GSIBs are smaller but still material.
+10
+ The measured effects of the negative returns of US GSIB on the tail quantiles of the financial firm index return display the opposite of mean reversion; losses by the US GSIBs are followed by the potential for larger tail losses by financial firms as a whole.
+
+The relationship between the returns of US GSIBs and the financial firms index may strengthen further at even higher frequencies. However, the data becomes substantially more incomplete for some of the firms at higher frequencies, which would challenge the estimation. Therefore, we have not pursued regressions at higher frequency.
+
+To assess the robustness of our regression results, we explore how our regression results compare when the four years are sampled separately at the thirty-second and ten-second frequencies. For simplicity, we focus on the sum of coefficients for the effect of a negative lag return of a GSIB on the return of the financial firm index. See Table 5 below for estimated effects.
+
+Table 5
+
+Firm
+
+10-seconds regressions
+
+2017
+
+2018
+
+2019
+
+2020
+
+JPM
+
+0.2665*
+
+0.1932
+
+0.4463**
+
+0.9379***
+
+BAC
+
+0.052
+
+0.1132
+
+0.4152***
+
+0.6351***
+
+C
+
+0.1717*
+
+0.1732
+
+0.1439
+
+0.6696***
+
+WFC
+
+0.2399***
+
+0.2811
+
+0.2984**
+
+0.2003
+
+GS
+
+0.3494***
+
+0.4794***
+
+0.8023**
+
+0.1395
+
+MS
+
+0.2789***
+
+0.0409
+
+0.1921*
+
+-0.0104
+
+BK
+
+0.289***
+
+0.4244***
+
+0.1644
+
+0.1044
+
+STT
+
+0.4424***
+
+0.4978***
+
+0.4879**
+
+0.9005***
+
+$$R^2$$
+
+0.1902
+
+0.3656
+
+0.323
+
+0.4105
+
+Firm
+
+30-seconds regressions
+
+2017
+
+2018
+
+2019
+
+2020
+
+JPM
+
+0.2316*
+
+0.0263
+
+0.1364
+
+0.2758**
+
+BAC
+
+0.2175***
+
+0.0262
+
+0.022
+
+0.2909*
+
+C
+
+0.1294*
+
+0.3022***
+
+0.1051
+
+0.586***
+
+WFC
+
+0.129*
+
+0.1037*
+
+-0.3168***
+
+0.032
+
+GS
+
+0.2111***
+
+0.2675***
+
+0.4569**
+
+0.1046*
+
+MS
+
+0.1012*
+
+0.1128
+
+0.0637
+
+0.0164
+
+BK
+
+0.2446***
+
+0.406***
+
+-0.2584***
+
+0.2178***
+
+STT
+
+0.3164***
+
+0.1192
+
+-0.2836***
+
+0.1068*
+
+$$R^2$$
+
+0.1792
+
+0.3283
+
+0.2306
+
+0.4334
+
+Notes: ***, **, and * denote statistical significance at the 1%, 5%, and 10% level, respectively.
+
+The effects of lagged GSIB negative returns retain similar magnitude and sign, although they generally lose statistical significance. In 2020, the effects of larger firms grew, which suggests that they became more impactful during the market stress that ensued upon the COVID pandemic.
+
+The Basel Committee publishes yearly G-SIB scores for five measures of systemic importance: complexity (Comp), cross jurisdictional (CJ), interconnectedness (IC), size, and substitutability (Sub). An aggregate GSIB score is assessed to each firm as an average of their scores across these five measures. To understand how our metric of systemic importance â the effect of negative returns of the firm on the financial firm index â compares with these regulatory metrics of systemic risk, we calculate their correlation. Table 6 shows the correlation between the regression coefficients and the Basel Committee GSIB Scores for the 8 US GSIBs based on end-2019 data.
+
+Table 6 â Correlation between effects of negative returns and GSIB scores
+
+ 
+
+Aggregate Score
+
+Comp
+
+CJ
+
+IC
+
+Size
+
+Sub
+
+30 Sec
+
+0.384
+
+-0.133
+
+0.554
+
+0.035
+
+0.195
+
+0.587
+
+10 Sec
+
+0.377
+
+0.112
+
+0.121
+
+0.086
+
+0.323
+
+0.441
+
+10 Sec (w/o STT)
+
+0.741
+
+0.555
+
+0.359
+
+0.664
+
+0.743
+
+0.349
+
+Our metrics of systemic importance have approximately a 38% correlation with GSIBs aggregate scores, both when based on a 30-seconds and a 10-seconds regression. This correlation increases to 74% at the 10-seconds regression, when excluding State Street whose results may be spurious due to sparse data. When considering the 10-seconds regression and excluding State Street, our metric correlates the most with the size, interconnectedness, and complexity systemic risk indicators.
+
+5 â Conclusion
+
+This note proposes a novel approach to identify the systemic effects of financial firms, which aims to address the weaknesses of the leading methodologies in the literature, namely omitted variable bias and reverse causality. This is accomplished by considering a range of potential systemically important institutions simultaneously when identifying effects, using lagged returns, and using high frequency data.
+
+The empirical analysis in this note supports that losses at the eight US GSIBs are predictive of worse tail losses for financial firms as a whole and thus support that these firms are systemically important. Ranking firms according to the effect of their losses on the financial firm index provides a mostly plausible ranking of their systemic importance â which is confirmed by high correlation of our metric with regulatory GSIB indicators â although data limitations suggest the need for caution. Future research may consider different frequencies of analysis and extend this analysis to a wider range of financial firms, including insurance companies, investment firms, and non-GSIB banks.
+
+References
+
+Acharya, Viral; Lasse Pedersen; Thomas Philippon; and Matthew Richardson (2017). Measuring Systemic Risk. 
+The Review of Financial Studies
+ Volume 30, Issue 1, Pages 2â47. doi.org/10.1093/rfs/hhw088.
+
+Basel Committee on Banking Supervision (2018). Global systemically important banks: revised assessment methodology and the higher loss absorbency requirement. Basel, Switzerland.
+
+Brownlees, Christian; and Robert Engle (2017). SRISK: A Conditional Capital Shortfall Measure of Systemic Risk. 
+The Review of Financial Studies
+ Volume 30, Issue 1, Pages 48â79. doi.org/10.1093/rfs/hhw060.
+
+Dong, Xi; Shu Feng; Leng Ling; and Pingping Song (2017). Dynamic autocorrelation of intraday stock returns. 
+Finance Research Letters
+ Volume 20, Pages 274â280. doi.org/10.1016/j.frl.2016.10.008.
+
+Hautsch, Nikolaus; Julia Schaumburg; and Melanie Schienle (2015). Financial Network Systemic Risk Contributions. 
+Review of Finance
+ Volume 19, Issue 2, Pages 685â738. doi.org/10.1093/rof/rfu010.
+
+Huang, Xin; Hao Zhou; and Haibin Zhu (2012). Assessing the systemic risk of a heterogeneous portfolio of banks during the recent financial crisis. 
+Journal of Financial Stability
+ Volume 8, Issue 3, Pages 193-205. doi.org/10.1016/j.jfs.2011.10.004.
+
+Labonte, Marc (2018). Systemically important or "too big to fail" financial institutions. Congressional Research Service, R42150. Washington, DC.
+
+Rabemananjara, R.; and J. M. Zakoian (1993). Threshold Arch Models and Asymmetries in Volatility. 
+Journal of Applied Econometrics 
+Volume 8, Number 1, Pages: 31-49.
+
+Sun, Licheng; Mohammad Najand; and Jiancheng Shen (2016). Stock return predictability and investor sentiment: A high-frequency perspective. 
+Journal of Banking and Finance 
+Volume 73, Pages 147-164. doi.org/10.1016/j.jbankfin.2016.09.010.
+
+Tobias, Adrian; and Markus Brunnermeier (2016). 
+The American Economic Review
+ Volume 106, Issue 7, Pages 1705-1741. 
+doi.org/10.1257/aer.20120555
+.
+
+1. The views expressed in this manuscript belong to the authors and do not represent official positions of the Federal Reserve Board or the Federal Reserve System. The authors thank participants in a seminar at the Federal Reserve Board for their helpful comments. 
+Return to text
+
+2. Replicating the $$\Delta$$CoVaR methodology with data from large US banks generally results in $$\Delta$$CoVaR of similar magnitude across firms with very different size and systemic importance. Adrian and Brunnermeier (2016) suggest the use of a "dollar $$\Delta$$CoVaR" as an alternative metric of systemic importance that corresponds to $$\Delta$$CoVaR times the market value of the equity of a firm, and thus generally results in meaningfully larger $$\Delta$$CoVaR for larger firms. However, it is unclear why it is relevant to scale $$\Delta$$CoVaR by the equity value of a firm when $$\Delta$$CoVaR is meant to measure the effect of a firm on a financial firm index. 
+Return to text
+
+3. The use of lagged state variables to model changes in the value-at-risk of the financial system may mitigate this concern but does not eliminate it. The value-at-risk of the financial system is likely to be driven by multiple factors beyond those that are considered as state variables in Adrian and Brunnermeier (2016), and the effect of such unidentified systemic factors is more likely to propagate from the financial system to a specific firm than the idiosyncratic factors influencing a firm's value-at-risk are to meaningfully influence the value-at-risk of the financial system as a whole. 
+Return to text
+
+4. Belloni et al. (2014) describe conditions under which consistent estimates of the impact of a treatment variable can be obtained for least squares regressions in the context of a large number of potential control variables. Unlike the approach followed in Hautsch et al. (2015), their recommended estimation procedure includes as control variables both the variables selected by LASSO to predict the treatment variable (in this case value-at-risk of firm $$i$$) as well as the variables selected by LASSO to predict the dependent variable (in this case value-at-risk of the financial system). The methodology of Hautsch et al. (2015) only includes in the systemic contribution regression the value-at-risk of firms that predict the treatment variable (i.e., the value-at-risk of firm $$i$$), and thus is likely to suffer from omitted variable bias. 
+Return to text
+
+5. $${Vol}_{mkt,t}$$ is calculated in this note as the standard deviation of the minute-to-minute returns of a S&P 500 ETF over a one-day rolling period. 
+Return to text
+
+6. If stock returns follow a random walk, past return information should provide no information about future returns. In practice, predictability is likely more present over short windows (see for example Sun et al. (2016) and Dong et al. (2017)). 
+Return to text
+
+7. JP Morgan Chase (JPM), Bank of America (BAC), Citigroup (C), Wells Fargo (WFC), Goldman Sachs (GS), Morgan Stanley (MS), Bank of NY Mellon (BK), and State Street (STT). 
+Return to text
+
+8. There are certain dates where the TAQ dataset has significantly less observations than for other dates. To avoid an excess of interpolated observations we removed December 24, the Friday following Thanksgiving, and July 3rd for 2017-2020. Additionally, there was an excess of missing observations from December 25-28 in 2017, therefore these dates were removed as well. These dates were only removed for the data at a frequency below 30 minutes. 
+Return to text
+
+9. Note that the eight GSIBs that we examine are included in the Financial Select Sector Fund, which is also a lagged explanatory variable. However, collinearity is not a concern because this index also includes dozens of other smaller banks as well as insurance firms and brokerage firms. 
+Return to text
+
+10. State Street, which is the smallest of the US GSIBs, has the second largest coefficient among the analyzed firms at the ten-second frequency. While it is possible that State Street is very systemically important, it is perhaps more likely that State Street missing a substantial amount of data at the 10-second frequency is influencing its effect on the tail quantile of the financial firm index, as it may make returns of State Street more correlated with other sources of volatility that are not captured by the controls. 
+Return to text
+
+Please cite this note as:
+
+Hawley, Andrew, and Marco Migueis (2021). "Measuring the systemic importance of large US banks," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 30, 2021, https://doi.org/10.17016/2380-7172.2988.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

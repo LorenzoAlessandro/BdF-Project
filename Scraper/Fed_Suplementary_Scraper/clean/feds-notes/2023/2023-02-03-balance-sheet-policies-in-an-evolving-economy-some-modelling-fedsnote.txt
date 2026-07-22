@@ -1,0 +1,248 @@
+FEDS Notes
+
+Twitter
+
+February 03, 2023
+
+Balance Sheet Policies in an Evolving Economy: Some Modelling Advances and Illustrative Simulations
+
+Hess Chung
+,
+Etienne Gagnon
+, James Hebden,
+Kyungmin Kim
+,
+Bernd Schlusche
+, Eric Till, James Trevino, and
+Diego Vilán
+1
+
+1. Introduction
+
+Once considered "unconventional," balance sheet policies have become an integral part of the toolkit of many central banks. Increased reliance on balance sheet policies reflects in part a decline in the neutral level of interest rates, which limits central banks' ability to cut their policy rates to support the economy during downturns, and many observers expect that neutral level to remain low relative to its historical average in the coming decades. Therefore, developing models that reflect the multi-tool nature of monetary policy and the various decisions around balance sheet actions over the economic cycle is paramount for comprehensively capturing the policy strategies of central banks and for assessing their effects on the economy. This note describes some advances toward building such a model for the U.S. economy and illustrates how the active use of balance sheet policies might affect policy rate settings, macroeconomic outcomes, and the size of the Federal Reserve's balance sheet over time.
+
+2. Background
+
+Similar to its response to the Global Financial Crisis, the FOMC responded to the pandemic-driven downturn by quickly lowering its target range for the federal funds rate to its effective lower bound (ELB); providing forward guidance that this target range would remain low to support the economic recovery; and purchasing large amounts of Treasury securities and agency mortgage-backed securities (MBS). By the time net asset purchases concluded in early 2022, the Federal Reserve's balance sheet had expanded about $4.8 trillion (nearly 20 percent of annual GDP). Policymakers have since turned to removing policy accommodation, with both hikes in the policy rate and reductions in securities holdings expected to contribute to a tightening of the stance of monetary policy.
+2
+Many foreign central banks have similarly employed balance sheet policies in response to the pandemic-driven recession and the preceding Global Financial Crisis.
+3
+
+While forceful recourse to balance sheet policies arguably reflects to some degree the exceptional severity of these economic downturns, a persistently low neutral level of interest rates makes ELB episodes more likely to recur, and asset purchase programs more likely to be enacted, than has been the case in the past.
+4
+Against this backdrop, researchers have developed models in which balance sheet policies provide monetary accommodation.
+5
+However, existing models usually greatly simplify, or abstract from, the many important decisions that must be made when asset purchase programs are deployed, including what assets to purchase, in what amounts, when to stop purchasing assets, when and how rapidly to reduce securities holdings once the economic expansion is underway, and what holdings to maintain over the longer run. Each of these decisions can affect expectations about the evolution of the balance sheet and associated effects on financial conditions and the macroeconomy. This complexity makes the consideration of empirically plausible balance sheet scenariosâlet alone the performance of stochastic simulations in which policymakers actively use balance sheet policiesâchallenging.
+
+3. Improvements to the Model
+
+In this note, we improve on the approach of Chung and others (2018), which combines the FRB/US model of the U.S. economy with a detailed model of the Federal Reserve's balance sheet and its financial effects. In the integrated model, balance sheet policies affect the economy through portfolio balance effects, as captured by the duration risk channel, so that decisions about which assets to hold, and for how long, affect medium- to longer-term interest rates and financial conditions more broadly. A key strength of this model is that it tracks the Treasury-MBS mix and maturity compositions of securities holdings over time, allowing one to assess the effects of decisions about asset purchases, reinvestment, and runoff as balance sheet policies are deployed over economic cycles.
+6
+
+An important limitation of the model of Chung and others (2018) is that performing stochastic simulations is computationally onerous. We make two improvements to their approach to address this limitation. First, we consolidate the balance sheet block of the model to a quarterly frequency. Second, we design a more efficient algorithm for computing a solution when the policy rate and balance sheet instruments are both active. Together, these improvements facilitate the search for a solution and greatly reduce the computational time, allowing us to perform stochastic simulations over longer periods than was previously possible.
+
+Simplified Balance Sheet Block
+
+In the model, holdings of securities by the Federal Reserve exert downward pressure on medium- to longer-term interest rates via a reduction in the term premia embedded in these rates. The term premium effects (TPEs) of securities holdings depend on the current and projected size and maturity composition of the balance sheet.
+7
+In the original version of the model used by Chung and others (2018), holdings are tracked at the level of individual securities ("CUSIP" level) and at a monthly frequency. In addition, the balance sheet block embeds a model of MBS prepayment to capture the change in refinancing activities that results from movements in mortgage rates. Given that we are primarily interested in the macroeconomic effects of balance sheet policies, we aggregate individual securities to quarterly frequencyâthe same frequency as the FRB/US modelâbased on these securities' residual maturities. In addition, we assume that principal payments on the Federal Reserve's MBS holdings follow a pre-determined path consistent with the baseline economic outcomes in the simulation.
+8
+
+Improved Solution Algorithm
+
+To describe our solution method, it is useful to break down the model into four sets of equations. The first two sets describe the central bank's overall strategy for conducting monetary policy. They consist of a policy rule for setting the federal funds rate and a collection of balance sheet policies that guide decisions about asset purchase programs, reinvestment, runoff, and asset purchases to maintain reserves at an ample level over timeâthat is, to accommodate the "organic growth" of the balance sheet. The third set describes Federal Reserve's securities holdings and their financial effects. The fourth set comprises the equations of the FRB/US model that, given the overall monetary policy strategy and the securities holdings, determine the various economic outcomes such as GDP growth, inflation, and employment. A solution is a set of policy rate settings, balance sheet policies, securities holdings and associated financial effects, and economic outcomes that satisfy the overall policy strategy and the various equations of the model over the simulation period.
+
+A key challenge to finding a solution is that the overall monetary policy strategy is highly nonlinear: Not only is the policy rate rule subject to an ELB constraint but decisions about the balance sheet entail distinct phases whose start dates and durations are potentially endogenous. In addition, there are feedbacks across the equations. Settings of the policy rate and balance sheet holdings depend on one another and the economic outlook. Similarly, the economic outlook is affected by expected policy rate settings and balance sheet holdings.
+9
+To overcome the challenges created by nonlinearities and the endogeneity of policy choices and economic outcomes, we make a number of simplifying assumptions. First, we posit that the start and end of asset purchase programs are directly linked to the duration of ELB episodes. Second, we assume that the reinvestment period that follows an asset purchase program lasts for a predetermined number of quarters. Together, these assumptions imply that knowledge of an ELB episode's start date and expected termination date pin down the projected path of the balance sheet during that ELB episode and the subsequent reinvestment period, leaving only the date at which organic growth of the balance sheet resumes to be determined.
+10
+
+Our approach to finding the solution in each period of a simulation is as follows: Given the latest set of shocks to the economy, we first compute the solution to the model under the assumption of no current or future asset purchase programs (that is, no ELB episode). The balance sheet path, the TPE paths, and the remaining variables (including the policy rate path) are calculated through a guess-and-verify method. Given a guess of the economic variables and policy rate paths, we back out the path of the balance sheet (including the date at which organic growth resumes, if applicable) and associated TPEs. Taking these TPE paths as given, we then solve the FRB/US model to extract new paths for the policy rate and macroeconomic variables. We iterate between these two steps until we have found a fixed point. If the resulting policy rate path is consistent with the assumed absence of asset purchases, then we have found a solution and move on to the next period of the simulation. Otherwise, we conduct a grid search over possible quarterly start and end dates for an ELB episode. For each combination of ELB start and end dates on the grid, we repeat the steps above with a balance sheet that includes asset purchases consistent with the assumed ELB episode. The solution is the combination of ELB start and end dates that is consistent with the combination prescribed by the overall policy rate strategy.
+11
+
+4. Illustrative Simulations
+
+In the remainder of this note, we simulate the model under an illustrative combination of a policy rate strategy and balance sheet policies to investigate how active recourse to balance sheet policies in response to ELB episodes might improve macroeconomic outcomes.
+
+Policy Assumptions
+
+For our illustrative purposes, we posit that the federal funds rate is set according to an inertial version of the Taylor (1999) rule, subject to the ELB.
+12
+For balance sheet policies, we assume that:
+
+Asset purchases
+: An asset purchase program consisting entirely of Treasury securities is initiated as soon as the federal funds rate reaches the ELB and terminates two quarters before the federal funds rate is expected to depart the ELB. During the program, the Federal Reserve is assumed to buy $120 billion in securities per month (about 1/2 percent of annual GDP), a pace that is similar in proportion to the economy to the pace observed during the third large-scale asset purchase program ("LSAP3") following the Global Financial Crisis. The maturity composition of asset purchases is assumed to be similar to the composition under LSAP3.
+13
+
+Reinvestment
+: As soon as net purchases of securities end, all principal payments received on the Federal Reserve's securities holdings are reinvested into Treasury securities across the maturity curve. The reinvestment period lasts four quarters. Securities that mature during an asset purchase program are similarly reinvested across the maturity curve.
+
+Runoff and organic growth
+: Once the reinvestment period ends, the balance sheet shrinks through the full runoff of maturing Treasury securities and MBS as well as prepayments on MBS. Once the ratio of total assets to nominal GDP has fallen to its pre-pandemic level, net asset purchases resume to maintain that ratio over time, consistent with the central bank operating an ample reserves regime.
+14
+
+Simulation Results
+
+We conduct two sets of stochastic simulations to isolate the effects of active recourse to balance sheet policies on economic outcomes. In the first set of simulations, we assume that policymakers react to incoming shocks based on the policy rate strategy and balance sheet policies described above. In the second set of simulations, we assume that policymakers stick with their announced plans to shrink the balance sheet to its longer-run size irrespective of the evolution of the economy. We refer to the first and second sets of simulations as being "with active balance sheet policies" and "with passive balance sheet policies," respectively. For comparability, we use identical sequences of unexpected shocks across simulations with active and passive balance sheet policies. We then compute differences in policy variables and economic outcomes between pairs of simulations with identical shock sequences to extract the marginal effects of actively using balance sheet policies. We use a linearized version of the FRB/US model and carry out stochastic simulations employing the historical shock sampling approach of González-Astudillo and Vilán (2019).
+15
+We perform 5,000 simulations, iteratively feeding shocks for 40 quarters.
+16
+We assume that financial market participants, price setters, and wage setters in the model form model-consistent expectations, so that they correctly anticipate balance sheet policies and their effects given the current economic shocks (all other expectations are projections based on vector autoregressions using historical data only).
+17
+
+Figures 1 and 2 compare the results from the subsets of simulations in which the economy returns to the ELB between three and five years from the beginning of the simulation period and asset purchases are enacted for at least one year. For comparability, we align differences in policies and outcomes such that the reference period (period 0) corresponds to the first quarter of ELB episodes.
+18
+Figure 1 plots the median and interquartile range of the effects of active balance sheet policies on the federal funds rate, the Federal Reserve's Treasury securities holdings, and the associated term premium effects on the 10-year Treasury yield. The median effects are consistent with an expansion of Treasury securities holdings by about $2.7 trillion and a decline in term premium effects of approximately 80 basis points from the beginning of asset purchases until about the 8th quarter. The peak expansion of Treasury securities holdings is somewhat dispersed across simulations, with an interquartile range of roughly $1.7 to $4.2 trillion.
+
+Figure 1. Differences in Policy Variables Between Simulations with Active and Passive Balance Sheet Policies
+
+Note: The panels show the median and interquartile range of differences in policy variables between pairs of simulations with active and passive balance sheet policies, holding constant the sequence of economic shocks in each pair. Only simulations in which the economy returns to the ELB within three to five years and an asset purchase program is enacted for at least one year are included. For comparability, the differences are plotted such that period 0 corresponds to the start of the ELB episodes.
+
+Source: Authorsâ simulations.
+
+Accessible version
+
+Figure 2. Differences in Macroeconomic Outcomes Between Simulations with Active and Passive Balance Sheet Policies
+
+Note: The panels show the median and interquartile range of differences in policy variables between pairs of simulations with active and passive balance sheet policies, holding constant the sequence of economic shocks in each pair. Only simulations in which the economy returns to the ELB within three to five years and an asset purchase program is enacted for at least one year are included. For comparability, the differences are plotted such that period 0 corresponds to the start of the ELB episodes.
+
+Source: Authorsâ simulations.
+
+Accessible version
+
+The additional policy accommodation stemming from asset purchases results in a stronger economy and, thus, calls for a higher path of the policy rate during the economic recoveryâincluding an earlier departure from the ELBâthan under passive balance sheet policies. Expectations of balance sheet accommodation help support the economy even before balance sheet policies are enacted in the model, as evidenced by declines in term premium effects in the quarters before the beginning of asset purchases.
+19
+
+Figure 2 shows differences in outcomes under active and passive balance sheet policies for the unemployment rate, the output gap, real output growth, and inflation. With the additional accommodation provided by asset purchases, the unemployment rate is systemically lower, and the output gap systematically higher, than if balance sheet policies were not actively employed. Under the median differences, the effect of active balance sheet policies on the unemployment rate peaks at about negative 45 basis points two to three years after the start of the ELB episode. The corresponding median effects on the output gap peak at about 1 percentage point. Real GDP growth (shown on a non-annualized, quarterly basis) also tends to be higher when balance sheet policies are actively used to provide policy accommodation than when they are not, with an initial median real GDP growth difference of 14 basis points that subsequently decreases. The stronger economy under active balance sheet policies is also associated with higher inflation. The median effect on the inflation rate (measured on a four-quarter basis) is a little over 20 basis points and persists for several years. As noted earlier, the expectation of future asset purchases softens the impact of negative economic shocks even before the start of asset purchases in the model, as evidenced by the improvement in outcomes before period 0.
+
+Finally, we note that the interquartile ranges in Figure 2 show significant dispersion in the effects of active balance sheet policies on macroeconomic outcomes across the simulations. In general, the simulations with the strongest effects are associated with the largest asset purchase programs. Under our assumption of a constant pace of asset purchases, the largest programs are those for which the ELB constraint binds the longestâthat is, active balance sheet policies in the simulations provide the largest amount of policy accommodation in the scenarios in which they are most needed to support economic outcomes. As illustrated in Chung and others (2019), active balance sheet policies in the model offset only some of the effects stemming from the adverse economic shocks that give rise to ELB episodes.
+
+References
+
+Anderson, Alyssa, Philippa Marks, Dave Na, Bernd Schlusche, and Zeynep Senyuz (2022). "An Analysis of the Interest Rate Risk of the Federal Reserve's Balance Sheet, Part 2: Projections under Alternative Interest Rate Paths," FEDS Notes, Washington: Board of Governors of the Federal Reserve System, July 15,
+https://doi.org/10.17016/2380-7172.3174
+.
+
+Bank for International Settlements (2019). "Unconventional Monetary Policy Tools: a Cross-Country Analysis," CGFS Papers, number 63. Basel: Bank for International Settlements.
+
+Bhattarai, Saroj and Christopher J., Neely (2022). "An Analysis of the Literature on International Unconventional Monetary Policy,"
+Journal of Economic Literature
+, vol. 60 (2), pp. 527â97.
+
+Brayton, Flint, and David Reifschneider (2022). "LINVER: The Linear Version of FRB/US," Finance and Economics Discussion Series 2022â053, Washington: Board of Governors of the Federal Reserve System,
+https://doi.org/10.17016/FEDS.2022.053
+.
+
+Cantú, Carlos, Paolo Cavallino, Fiorella De Fiore, and James Yetman (2021). "A Global Database on Central Banks' Monetary Responses to Covid-19," BIS Working Papers No 934. Basel, Switzerland: Bank of International Settlements, March 30.
+
+Crawley, Edmund, Etienne Gagnon, James Hebden, and James Trevino (2022). "Substitutability between Balance Sheet Reductions and Policy Rate Hikes: Some Illustrations and a Discussion," FEDS Notes, Washington: Board of Governors of the Federal Reserve System, June 3,
+https://doi.org/10.17016/2380-7172.3147
+.
+
+Chung, Hess T., Cynthia L. Doniger, Cristina Fuentes-Albero, Bernd Schlusche, and Wei Zheng (2018). "
+Simulating the Macroeconomic Effects of Unconventional Monetary Policies
+," FEDS Notes, Washington: Board of Governors of the Federal Reserve System, July 20,
+https://doi.org/10.17016/2380-7172.2225
+.
+
+Chung, Hess T., Etienne Gagnon, Taisuke Nakata, Matthias Paustian, Bernd Schlusche, James Trevino, Diego Vilán, and Wei Zheng (2019). "Monetary Policy Options at the Effective Lower Bound: Assessing the Federal Reserve's Current Policy Toolkit," Finance and Economics Discussion Series 2019â003, Washington: Board of Governors of the Federal Reserve System,
+https://doi.org/10.17016/FEDS.2019.003
+.
+
+Engen, Eric M., Thomas Laubach, and David Reifschneider (2015). "The Macroeconomic Effects of the Federal Reserve's Unconventional Monetary Policies," Finance and Economics Discussion Series 2015â005, Washington: Board of Governors of the Federal Reserve System,
+http://dx.doi.org/10.17016/FEDS.2015.005
+.
+
+González-Astudillo, Manuel, and Diego Vilán (2019). "A New Procedure for Generating the Stochastic Simulations in FRB/US," FEDS Notes, Washington: Board of Governors of the Federal Reserve System, March 7,
+https://doi.org/10.17016/2380-7172.2314
+.
+
+Gopinath, Gita (2022). "How Will the Pandemic and War Shape Future Monetary Policy?" remarks delivered at "Reassessing Constraints on the Economy and Policy," an economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 26.
+
+Ihrig, Jane, Elizabeth Klee, Canlin Li, Min Wei, and Joe Kachovec (2018). "Expectations about the Federal Reserve's Balance Sheet and the Term Structure of Interest Rates,"
+International Journal of Central Banking
+, vol. 14 (2), pp. 341â90.
+
+Kiley, Michael T. (2018). "Quantitative Easing and the New Normal' in Monetary Policy,"
+The Manchester School
+, vol. 86(S1), pp. 21â49.
+
+Li, Canlin and Min Wei (2013). "Term Structure Modeling with Supply Factors and the Federal Reserve's Large Scale Asset Purchase Programs,"
+International Journal of Central Banking
+, vol. 9, pp. 3â39.
+
+Taylor, John B. (1999). "A Historical Analysis of Monetary Policy Rules," in John B. Taylor, ed.,
+Monetary Policy Rules
+. Chicago: University of Chicago Press, pp. 319â41.
+
+1. The authors thank Taisuke Nakata and Matthias Paustian for their suggestions on the design of the model, as well as Alyssa Anderson, Eric Engen, Christopher J. Gust, Benjamin Johannsen, and Zeynep Senyuz for their comments and suggestions on this note. The analysis and conclusions set forth are those of the authors and
+do not
+indicate concurrence either by
+the Board of Governors of the Federal Reserve System or
+by other members of
+its staff
+.
+Return to text
+
+2. The FOMC's Plans for Reducing the Size of the Federal Reserve's Balance Sheet, released on May 4, 2022, are available at
+https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504b.htm
+. See Crawley and others (2022) for an exploration and discussion of the substitutability between policy rate hikes and balance sheet reductions for tightening the stance of policy.
+Return to text
+
+3. For reviews of central banks' use of balance sheet tools in response to the Global Financial Crisis and the pandemic-driven downturn, see Bank of International Settlements (2019) and Cantú and others (2021), respectively.
+Return to text
+
+4. See Gopinath (2022) for a discussion of the factors that influence the neutral level of interest rates over time and how those factors might have evolved in recent years.
+Return to text
+
+5. For a review of theoretical and empirical contributions to the analysis of balance sheet policies, see Bhattarai and Neely (2022).
+Return to text
+
+6. A related contribution is Kiley (2018), who considers various criteria for expanding the size of the Federal Reserve's balance sheet when the economy experiences slumps in the FRB/US model. He posits a simple autoregressive process for the evolution of the total size of the Federal Reserve's balance sheet and otherwise abstracts from the composition of securities holdings, assuming instead that the financial effects are proportional to total holdings. Under these assumptions, decisions about balance sheet reinvestment and runoff are implicitly determined by the autoregressive equation. His approach lends itself to performing stochastic simulations over extended periods at low computational costs.
+Return to text
+
+7. The effects on term premiums are based on the term structure model developed by Li and Wei (2013). For discussions and illustrations of how TPEs are derived from balance sheet holdings, see Ihrig and others (2018).
+Return to text
+
+8. These simplifications are of limited consequence for assessing the overall financial and macroeconomic effects of balance sheet policies. The assumption of a fixed path of prepayment is least likely to hold when the level of interest rates declines, which incentivizes homeowners to refinance their mortgages. However, periods when interest rates decline tend to be periods when the central bank is reinvesting the principal of maturing and prepaid prepaying securities. In such a situation, a reduction in MBS holdings stemming from excess prepayment relative to modal outcomes is compensated by offsetting reinvestment activities. Thus, the assumption of modal prepayment mostly affects the MBS-Treasury mix on the central bank's balance sheet, with limited consequences for total securities holdings. Similarly, when interest rates rise, prepayments may slow, which affects the MBS-Treasury mix but not the total size of the balance sheet when a central bank reinvests maturing and prepaid securities or grows its securities holdings in line with the economy.
+Return to text
+
+9. See Chung and others (2018) for a discussion of this mutual dependence of policy choices and outcomes.
+Return to text
+
+10. The tying of asset purchases and reinvestment to the ELB episode greatly increase the stability of the solution method compared with the approach of Chung and others (2018), who instead assumed that the asset purchases and reinvestment phases are determined endogenously based on specified economic thresholds.
+Return to text
+
+11. Because time is discrete in the model and balance sheet actions are lumpy, situations can arise in which, say, ending asset purchases in a particular quarter leaves the ELB binding but extending asset purchases by one quarter provides enough accommodation at the margin for the policy rate strategy to call for ELB departure before the extended horizon. In such rare instances, we accept as a solution the combination of ELB start and end dates that minimally extends the ELB duration and deviates the least from the policy rate strategy. In addition, the algorithm employs several heuristics to speed up the search for a solution. Overall, the speed gains relative to the earlier contribution of Chung and others (2018) are roughly equivalent to an order of magnitude, though a direct comparison is difficult because of different modeling and simulation choices.
+Return to text
+
+12. The rule is specified as, $$ R_t = 0.85R_{t-1}+0.15(r^{LR}+\pi_t^4+0.5 (\pi_t^4- \pi^{LR} )+{ygap}_t ) $$ where $$ R_t $$ denotes the nominal federal funds rate for quarter $$ t $$, $$ \pi_t^4 $$ is four-quarter core PCE price inflation, and $$ {ygap}_t $$ is the output gap. The ELB is set to 12.5 basis points, which corresponds to the midpoint of the lowest target range observed during the Global Financial Crisis and the pandemic-related downturn.
+Return to text
+
+13. While we fix the pace and composition of asset purchases, the model is amenable to modulating these elements in response to economic shocks.
+Return to text
+
+14. For our illustrative purposes, the runoff period abstracts from any caps on redemptions. The model can be modified to account for such caps.
+Return to text
+
+15. For a description of this linearized model, see Brayton and Reifschneider (2022).
+Return to text
+
+16. The simulations are conducted around a baseline economic projection consistent with the June 2022 Summary of Economic Projections. See Anderson and others (2022) for a description of that baseline. The shocks to the model are sampled from the 1969â2019 historical period and, thus, exclude the pandemic-driven recession and its aftermath.
+Return to text
+
+17. The assumption that financial market participants and other members of the public anticipate asset purchases and their effects is consistent with balance sheet policies being increasingly perceived as part of the Federal Reserve's toolkit at the ELB. See Engen, Laubach, and Reifschneider (2015) for a discussion of how the public has come to anticipate asset purchase programs given the GFC experience.
+Return to text
+
+18. Specifically, the start of ELB episodes corresponds to the dates when the ELB is reached and asset purchases begin in the simulations with active use of balance sheet policies. For most shock sequences, the ELB starts to bind at the same date in both sets of simulations. The subset of simulations in which the economy returns to the ELB within three to five years and an asset purchase program is enacted for at least one year comprises about 5 percent of the total.
+Return to text
+
+19. Because of our assumption that financial market participants, price setters, and wage setters form model-consistent (that is, forward-looking) expectations, the economy is a bit stronger and the path for the federal funds rate is slightly higher before the start of ELB episodes under active balance sheet policies than under passive balance sheet policies; this difference disappears once the policy rate reaches the ELB in both sets of simulations. The fact that the ELB episodes and associated asset purchases do not begin as soon as adverse shocks hit the economy stems in part from the assumed inertia in the policy rate rule.
+Return to text
+
+Please cite this note as:
+
+Chung, Hess, Etienne Gagnon, James Hebden, Kyungmin Kim, Bernd Schlusche, Eric Till, James Trevino, and Diego Vilán (2023). "Balance Sheet Policies in an Evolving Economy: Some Modelling Advances and Illustrative Simulations," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 03, 2023, https://doi.org/10.17016/2380-7172.3246.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

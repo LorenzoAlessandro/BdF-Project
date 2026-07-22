@@ -1,0 +1,626 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+June 21, 2021
+
+Primary markets for short-term debt and the stabilizing effects of the PDCF
+
+Mark Carlson
+ and Marco Macchiavelli
+
+Introduction
+
+During early March 2020, amid rapidly spreading restrictions associated with preventing the spread of COVID-19, financial markets came under immense strain. These strains ultimately spilled over to funding markets and to institutions that are highly dependent on such markets. Included among those affected financial institutions were the primary dealers, who are key intermediaries in many financial markets. The Federal Reserve took actions to support the liquidity of the primary dealers through the establishment of the Primary Dealer Credit Facility (PDCF). The PDCF provided the primary dealers with a stable funding backstop and was intended to enhance the ability of the dealer to, in turn, support smooth market functioning and facilitate the availability of credit to businesses and households. In this Note, we examine whether the PDCF enhanced the ability of the dealers to provide intermediation services in ways that benefitted their customers. We find evidence that this was indeed the case.
+
+The particular intermediation service provided by the primary dealers that we investigate in this Note is their role in facilitating the issuance of commercial paper (CP) and negotiable certificates of deposit (CDs). Commercial paper is a short-term debt security issued by both financial and non-financial companies to raise money that directly supports a wide range of economic activityâlike meeting the issuers' day-to-day operational needs such as payments for inventories and payrolls. Negotiable certificates of deposit are issued by banks in large denominations, well above the deposit insurance limit, to raise dollar funding in wholesale funding markets.
+1
+ Many CP and CDs issuers depend on dealers to help in the issuance process.
+2
+ Dealers provide this support by purchasing the paper from the issuers and then re-selling it to other investors, such as money market mutual funds, other mutual funds, and corporations with excess cash. In fulfilling this intermediation role, dealers incur funding risk. To the extent that dealers were experiencing funding challenges during the early days of the pandemic, they might have charged CP and CD issuers more to assist with the issuance process or only been able to assist with issuance of smaller amounts.
+
+We are interested in testing whether the funding backstop provided to the primary dealers by the PDCF benefited the dealers' customers, specifically corporations that rely on dealers for issuing CP and CDs. Our results show that the ability of dealers to pledge CP and CDs to the PDCF did benefit the issuers of those securities. Specifically, these issuers were able to issue in greater size or at lower cost when the CP or CD that was issued was pledged as collateral to the PDCF by the dealer.
+
+It is commonly understood that merely providing the option to pledge collateral at the PDCF, whether exercised or not, should contribute significantly to stabilizing short-term funding markets by providing a source of funding backstop to the dealers that intermediate these markets. In this Note we go one step further and show that the actual pledge of a specific security to the PDCF provided additional benefits to the issuer of such security. This result suggests that, during a stress event, dealers may be more challenged in providing intermediation services amid heightened funding risks. As a result, being able to pledge a newly issued security may be particularly beneficial in alleviating those funding risks while the dealer is in the process of placing the security to the ultimate investors.
+
+Background on the PDCF and its use by the primary dealers
+
+The PDCF supported dealer funding liquidity by offering loans to the dealers at a rate of 25 basis points, which implies a spread to reference rates higher than typically paid by dealers in ordinary times but considerably below the rates available in the market during periods of stress. Loans from the PDCF had a maturity of up to 90 days but could be pre-paid at any time by the dealer. All PDCF loans were collateralized, with a wide range of securities eligible to serve as collateral. Importantly for our analysis, dealers were able to pledge investment grade CP and CDs as collateral when receiving a loan through the PDCF. By allowing dealers to borrow against such collateral, that should have helped alleviate funding pressures at the dealers themselves.
+
+Use of the PDCF by the primary dealers was heaviest in late March 2020. Within a few days of the facility being opened on March 20, the primary dealers had borrowed over $30 billion from the facility. Use stayed fairly steady for a few weeks and then began to decline around the end of April. By mid-May dealer borrowing from the PDCF had dropped quite substantially as funding markets normalized. (See Figure 1 which reports total PDCF loans outstanding each week from March 2020 to December 2020.)
+
+Figure 1. Total PDCF Loans Outstanding ($ billion)
+
+Source: 
+H.4.1 Release, Federal Reserve
+
+Accessible version
+
+Dealers were able to pledge a wide range of collateral to the PDCF, all subject to appropriate haircuts. We estimate that, by value, roughly 20 percent of collateral pledged during the period we study consisted of CP or CDs.
+3
+
+Impact on CP and CD issuers
+
+We are interested in whether there were any benefits to issuers of CP and CDs from dealer use of the PDCF. As noted above, we certainly expect that this is true in a general sense. The existence of the PDCF as a funding market backstop generally improved conditions in money markets, including for CP and CD issuers. However, during a stress event, dealers may face more liquidity risks and challenges in providing intermediation services. In this case, the ability of dealers to pledge CP and CDs to the PDCF may have been particularly beneficial to the issuers of those instruments. To examine this, we test whether pledges of particular pieces of collateral, as indicated by the CUSIP, are associated with higher issuance volumes or lower primary market spreads on that CUSIP.
+4
+
+We conduct our analysis using two datasets. Security-level data on primary market issuance of CP and CDs is obtained from DTCC Solutions LLC, an affiliate of The Depository Trust & Clearing Corporation (DTCC).
+5
+ The data include CUSIP, issuer name, issuance and maturity dates, amount issued, and yield. We compute the primary market spread of each security by taking the difference between its yield at issuance and the overnight indexed swap (OIS) rate at equivalent tenor. A further piece of information available in this data that we use later is whether the CP or CD was placed to investors directly by the issuer or through a dealer who purchases the issuance and then sells it to investors. The CP data also include the credit ratings associated with the issue, with most of the issuance in the top two notches, A1/P1 and A2/P2.
+6
+
+We also use data on usage of the PDCF.
+7
+ In particular, we use information on the identity of the dealer borrowing/pledging particular pieces of collateral, the CUSIP of the pledged securities, the value of the collateral pledged, the amount of the loan to the dealer, the date the loan is extended, and the interest rate. The PDCF was announced on March 17 and became operational on March 20.
+
+These two data sets are merged so that we have information on the amounts and pricing of particular CP and CDs when they are issued and we also know whether they were pledged at the PDCF. Our sample spans the period from March 1, 2020, at the eve of the crisis, to April 30, 2020 when, as noted above, use of the PDCF had diminished notably. Data prior to the implementation of the PDCF (March 1 to March 19), while not used to estimate the effect of the PDCF, are nevertheless useful for estimating fixed effects and standard errors more precisely.
+
+In our analysis, we first regress issuance volumes on an indicator for whether or not CP or CDs from that issuer were pledged as collateral to the PDCF. Specifically, we estimate the following panel regression:
+
+$$$ Log(Issuance)_{ct} = \beta \cdot {Pledged}_{ct} + \mu_t + \mu_i + \varepsilon_{ct} $$$
+
+Where $$Log(Issuance)_{ct}$$ is the logarithm of one plus $${Issuance}_{ct}$$ in $ million. $${Issuance}_{ct}$$ equals zero if CUSIP $$c$$ has no issuance on day $$t$$ or the amount of CUSIP $$c$$ issued if strictly positive. Therefore, the panel contains days in which a CUSIP is issued $$(Log(Issuance)_{ct} > 0)$$ and days in which it is not $$(Log(Issuance)_{ct} = 0$$. This way we can capture instances in which a CUSIP is issued and pledged as well as instances in which there is no issuance but the CUSIP is nevertheless pledged, possibly to finance secondary market transactions. The independent variable of interest, $${Pledged}_{ct}$$, equals one if CUSIP $$c$$ is pledged as collateral at the PDCF for a new loan on day $$t$$. Since we are interested in whether the PDCF supports primary market issuance, we set $${Pledged}_{ct}$$ to equal one only if a new PDCF loan is originated on day $$t$$ with CUSIP $$c$$ pledged as collateral. During the subsequent days in the life of the PDCF loan that has CUSIP $$c$$ pledged as collateral, $${Pledged}_{ct}$$ is set to zero. We look separately at the highest quality of CP (rated A1/P1), slightly lower quality CP (rated A2/P2), and CDs. Day fixed effects ($$\mu_t$$) are included in all specifications and issuer fixed effects ($$\mu_i$$) are included in some specifications. Notice that each issuer $$i$$ can issue multiple CUSIPs, each one with different maturity. Standard errors are double-clustered at the issuer and day levels.
+
+Table 1. Primary Market Issuance and PDCF Usage
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+Pledged
+
+0.585***
+
+0.306***
+
+0.765***
+
+0.524***
+
+0.086
+
+0.056
+
+(0.166)
+
+(0.104)
+
+(0.251)
+
+(0.188)
+
+(0.102)
+
+(0.097)
+
+Sample
+
+A1P1 CP
+
+A1P1 CP
+
+A2P2 CP
+
+A2P2 CP
+
+CD
+
+CD
+
+Obs.
+
+319,742
+
+319,738
+
+92,544
+
+92,540
+
+639,324
+
+639,324
+
+R-squared
+
+0.002
+
+0.269
+
+0.006
+
+0.261
+
+0.001
+
+0.021
+
+Day FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Issuer FE
+
+ 
+
+â
+
+ 
+
+â
+
+ 
+
+â
+
+Dependent variable: Log(1+Issuance).
+
+Standard errors are twoâway clustered at the issuer and day level.
+
+***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+Under the hypothesis that the PDCF supports primary market issuance, we should observe that pledging a CUSIP at the PDCF is associated with a greater amount issued. The results of this analysis are in Table 1. We indeed find that there is a positive association between the amount of CP that an issuer issued during the stress period and having that security pledged by a dealer to the PDCF. For instance, as indicated in column (2), a new pledge of A1/P1 commercial paper is associated with an increase in Log(Issuance) by 0.3, which represents a boost in issuance of about 10% of the average Log(Issuance). This association is even stronger for A2/P2 paper. We do not find a similar association for CDs.
+
+These results overall suggest that the PDCF supported primary market issuance. Even if our simple regression cannot demonstrate a strict causal relationship between pledging CP and issuance, the positive association between issuance and PDCF pledge indicates that dealers used PDCF loans to finance the purchase of larger CP issuances. This is consistent with the PDCF providing support to CP issuance by offering backstop financing to the dealers. Indeed, under normal circumstances, there would be no need for dealers to use the PDCF even for larger CP issuances.
+
+Next, we look at the pricing of CP and CDs and whether or not securities that were pledged at the PDCF as collateral were priced differently than other similar securities. To do so, we conduct similar regressions to issuance, but this time using the spread on each CUSIP as our dependent variable and whether or not that CUSIP was pledged to the PDCF as our independent variable. The spread (in percent) is computed as the yield at issuance minus the OIS rate at comparable tenor. In this sample, we only keep issuance days so that we only have observations with non-missing spreads. We find, as shown in Table 2, that the primary market spread was lower for CDs that were pledge to the PDCF as collateral than for other CDs.
+8
+ Indeed, the primary market spread on CDs that were pledged was 30 basis points (or 0.3 percent) lower than similar CDs. The effect is not only statistically but also economically significant, as the average spread for CDs is 130 basis points in the same time period (March 1 to April 30, 2020). The coefficients for both A1/P1 and A2/P2 CP are not statistically significant.
+
+Table 2. Primary Market Spreads and PDCF Usage
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+Pledged
+
+-0.045
+
+-0.123
+
+0.109
+
+0.108
+
+-0.311***
+
+-0.274***
+
+(0.123)
+
+(0.084)
+
+(0.105)
+
+(0.072)
+
+(0.058)
+
+(0.003)
+
+Sample
+
+A1P1 CP
+
+A1P1 CP
+
+A2P2 CP
+
+A2P2 CP
+
+CD
+
+CD
+
+Obs.
+
+13,402
+
+13,397
+
+7,390
+
+7,383
+
+7,895
+
+7,886
+
+R-squared
+
+0.428
+
+0.696
+
+0.583
+
+0.799
+
+0.158
+
+0.311
+
+Day FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Issuer FE
+
+ 
+
+â
+
+ 
+
+â
+
+ 
+
+â
+
+Dependent variable: Yield Spread to OIS in percent.
+
+Standard errors are twoâway clustered at the issuer and day level.
+
+***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+While these associations are suggestive, we are able to dig further into the data to try to get a better sense of the mechanism at work. We do so by comparing outcomes for securities that are "dealer-placed" versus "directly placed". Direct placement corresponds to about 20 percent of total issuance of CP and CDs, with the remainder being dealer-placed. Our hypothesis is that being able to pledge CP and CDs enhances the ability of the dealers to provide intermediation services for those securities. Such a mechanism would be consistent with the findings of Carlson and Macchiavelli (2020) regarding the effects of the emergency lending facilities for dealers from the 2008 financial crisis. If that enhanced ability is passed on to the issuers of the securities, then we would expect that there should be increased issuance of dealer-placed CP and CDs that are pledged as collateral but not for issuance of directly placed CP or CDs.
+
+We conduct this test by repeating the regressions above separately for dealer-placed and directly placed securities. The results, shown in Tables 3 and 4, are in line with our hypothesis. As shown in Table 3, we find positive effects on issuance volumes for dealer-placed CP, but not on directly placed CP.
+9
+ This finding suggests that being able to use CP as collateral at the PDCF enabled the dealers to support larger CP issuance volumes. The small and negative coefficient for directly placed CDs in column (3) suggests that these CDs are less likely to be pledged on the issuance date. As shown in Table 4, we find that the dealer-placed CDs pledged to the PDCF had lower rates in the primary market than similar dealer-placed CDs that were not pledged to the PDCF. For high-quality (A1/P1) dealer-placed commercial paper the sign on the coefficient is again as expected, but it is not statistically significant. For directly placed commercial paper there is no effect. Thus, these results are consistent with the idea that the PDCF enhanced the ability of the dealers to provide intermediation services and that this benefit was passed on to their customers.
+
+Table 3. Direct vs Dealer Placement and Primary Market Issuance
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+Pledged
+
+-0.002
+
+-0.004
+
+-0.010***
+
+0.307***
+
+0.526***
+
+0.065
+
+(0.009)
+
+(0.004)
+
+(0.002)
+
+(0.108)
+
+(0.188)
+
+(0.096)
+
+Placement
+
+Direct
+
+Direct
+
+Direct
+
+Dealer
+
+Dealer
+
+Dealer
+
+Sample
+
+A1P1 CP
+
+A2P2 CP
+
+CD
+
+A1P1 CP
+
+A2P2 CP
+
+CD
+
+Obs.
+
+319,738
+
+92,540
+
+639,324
+
+319,738
+
+92,540
+
+639,324
+
+R-squared
+
+0.329
+
+0.209
+
+0.007
+
+0.238
+
+0.263
+
+0.02
+
+Day FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Issuer FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Dependent variable: Log(1+Issuance).
+
+Standard errors are twoâway clustered at the issuer and day level.
+
+***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+Table 4. Direct vs Dealer Placement and Primary Market Spreads
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+Pledged
+
+0.39
+
+-
+
+-
+
+-0.131
+
+0.091
+
+-0.272***
+
+(0.249)
+
+ 
+
+ 
+
+(0.087)
+
+(0.07)
+
+(0.003)
+
+Placement
+
+Direct
+
+Direct
+
+Direct
+
+Dealer
+
+Dealer
+
+Dealer
+
+Sample
+
+A1P1 CP
+
+A2P2 CP
+
+CD
+
+A1P1 CP
+
+A2P2 CP
+
+CD
+
+Obs.
+
+1,395
+
+310
+
+499
+
+12,429
+
+7,145
+
+7,431
+
+R-squared
+
+0.692
+
+0.745
+
+0.636
+
+0.703
+
+0.809
+
+0.285
+
+Day FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Issuer FE
+
+â
+
+â
+
+â
+
+â
+
+â
+
+â
+
+Dependent variable: Yield Spread to OIS in percent.
+
+Standard errors are twoâway clustered at the issuer and day level.
+
+***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+References.
+
+Carlson, Mark, and Marco Macchiavelli (2020). "Emergency Loans and Collateral Upgrades: How Broker-Dealers Used Federal Reserve Credit During the 2008 Financial Crisis," 
+Journal of Financial Economics
+, vol. 137, no. 3 pp. 701-722.
+
+Li, Lei and Li, Yi and Macchiavelli, Marco and Zhou, Xing (Alex) (2020). "Liquidity Restrictions, Runs, and Central Bank Interventions: Evidence from Money Market Funds," (December 29, 2020). Available at SSRN: https://ssrn.com/abstract=3607593.
+
+1. These CDs are an important funding instrument for foreign banks operating in the United States that lack access to the retail deposit market. 
+Return to text
+
+2. Very large corporations can issue directly to the market. 
+Return to text
+
+3. In its August 2020 Quarterly Report on Balance Sheet Developments the Federal Reserve reported that collateral securing PDCF loans during peak usage included investment-grade debt securities (31 percent), commercial paper (19 percent), municipal bonds (16 percent), asset-backed securities (8 percent), and other eligible securities (26 percent). 
+https://www.federalreserve.gov/monetarypolicy/bds-purpose-202008.htm
+ 
+Return to text
+
+4. CUSIPs consist of 9 digits that can be used to identify both particular firms and the securities that they issue. 
+Return to text
+
+5. This data set is confidential. Neither DTCC Solutions LLC nor any of its affiliates shall be responsible for any errors or omissions in any DTCC data included in this publication, regardless of the cause and, in no event, shall DTCC or any of its affiliates be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit, trading losses and opportunity costs) in connection with this publication. 
+Return to text
+
+6. CP with split ratings is grouped with the lower rated paper. 
+Return to text
+
+7. This data set is also currently confidential. Information about borrowers from the PDCF, like a number of other emergency credit facilities established under section 13(3) of the Federal Reserve Act, will be disclosed one year after the authorization for the facility is terminated. For the other facilities, such as the PPPLF, the Federal Reserve has been releasing information earlier than is required by law. 
+Return to text
+
+8. As noted above, we are not able to determine the causality of the associations we find. However, we are sometimes able to point out where the evidence is inconsistent with some explanations and that is the case here. One potential hypothesis is that PDCF usage was merely opportunistic, that is, pledging followed issuance, with dealers having an incentive to purchase and pledge the highest-yielding paper, earning a spread to the Fed's loan rate. Under this hypothesis, one would expect to find a positive and significant coefficient in the regressions using spreads, which is the opposite of what we find. Hence our evidence is inconsistent with an opportunistic use hypothesis. 
+Return to text
+
+9. The fact that these effects are apparent for dealer-placed paper point to the value specially of the PDCF. We would not necessarily expect similar effects, for instance, from the Money Market Liquidity Facility (MMLF). The MMLF provided money market funds with secondary market liquidity for their CP and CD holdings and was not used to support the primary markets directly. Nevertheless, the MMLF stabilized the flows of money markets and, as a result, indirectly supported primary markets in the CUSIPs more heavily held by money market funds (Li, Li, Macchiavelli, and Zhou, 2020). This indirect MMLF effect and our PDCF effect are independent from one another. The Commercial Paper Funding Facility (CPFF) on the other hand started operations almost a month after the PDCF and saw limited usage. Since our results tend to be concentrated in the first month of the PDCF, they are unlikely to originate from the CPFF. 
+Return to text
+
+Please cite this note as:
+
+Carlson, Mark, and Marco Macchiavelli (2021). "Primary markets for short-term debt and the stabilizing effects of the PDCF," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 18, 2021, https://doi.org/10.17016/2380-7172.2917.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

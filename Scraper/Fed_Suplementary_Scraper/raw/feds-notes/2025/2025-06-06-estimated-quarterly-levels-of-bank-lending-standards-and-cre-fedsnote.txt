@@ -1,0 +1,822 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+June 06, 2025
+
+Estimated Quarterly Levels of Bank Lending Standards and Credit Availability
+
+Jaron Berman, 
+Felicia Ionescu
+, and 
+Carlo Wix
+1
+
+Levels of bank lending standards are an important gauge of the availability of credit to businesses and households, especially during times of high economic uncertainty. Yet while the Senior Loan Officer Opinion Survey on Bank Lending Practices (SLOOS) asks directly about banks' changes in standards each quarter, it only asks about levels once a year, in July. In this note, we aim to fill this gap and provide a measure of the levels of bank lending standards at a quarterly frequency. Specifically, we study the relationship between SLOOS banks' responses about the 
+quarterly changes
+ in their lending standards and their assessment of the 
+annual levels
+ of standards (every July SLOOS) relative to the historical range between 2005 and the present.
+
+A challenge is that banks' reported quarterly changes are qualitative in nature, being reported on an ordinal scale. As a result, a naïve approach of simply adding quarterly changes in standards to previously reported levels fails to deliver reliable estimates of the levels of lending standards, as cumulated quarterly changes and levels of standards are only weakly correlated (Bassett and Rezende, 2015).
+
+We develop a mixed-data sampling (MIDAS) regression-based approach that generates accurate estimates for the levels of standards, improving significantly over the naïve additive approach. This outperformance is especially notable in turbulent times, such as during the COVID-19 pandemic or during the March 2023 bank stress episode, when a correct assessment of the levels of standards is most useful for policymakers. Importantly, our models' estimates are significantly negatively correlated with loan growth on banks' balance sheets, both in the aggregate and for major loan categories.
+
+Our estimated quarterly levels of lending standards complement survey responses about quarterly changes in standards, which capture only the 
+direction of travel
+ in lending conditions. Consequently, the estimated levels should be used in conjunction with survey responses about the changes in standards, rather than as a substitute, to obtain a more comprehensive view of bank lending conditions.
+
+Data
+
+The data used in this note are based on the answers of domestic commercial banks to all quarterly SLOOS from July 2011, when annual questions about the levels of standards were first asked, to the most recent April 2025 survey. The SLOOS asks banks about changes in their lending standards at a quarterly frequency and about their levels of standards at an annual frequency for multiple subcategories of the four major loan categories: commercial and industrial (C&I) loans, commercial real estate (CRE) loans, residential real estate (RRE) loans, and consumer loans.
+
+To calculate an aggregate index of bank lending standards S (both in terms of changes and levels) for each loan category $$l$$, responses are first aggregated across banks $$i$$ for each period $$t$$:
+
+$$$$ S_t [l]=100* \Sigma_{i \epsilon N}\ Ï_{i,t-1} [l] I_{it}^S [l], $$$$
+
+where $$I_{it}^S [l]$$ is an indicator variable taking on the following values. When computing 
+net changes in standards
+, the indicator is 1 if bank $$i$$ tightened standards for loan category $$l$$ in period $$t$$, 0 if the bank left standards unchanged, and negative 1 if the bank eased standards. Analogously, when computing 
+net levels of standards
+, the indicator is 1 if bank $$i$$ reported levels at the tighter end of the range between 2005 and the present, 0 if the bank reported levels near the midpoint, and negative 1 if the bank reported standards at the easier end of the range. Bank weights $$Ï_{i,t-1} [l]$$ are determined by bank $$i$$'s share of loans for each category $$l$$ within the universe of SLOOS banks in the previous quarter based on Call Report data. Values are computed for net changes in standards at a quarterly frequency and for net levels of standards at an annual frequency.
+
+Once each series is calculated for a given loan category $$l$$, the following method is used to aggregate the series across loan categories:
+
+$$$$ A_t= \Sigma_{l \epsilon L}\ \eta_{l,t-1} S_t [l], $$$$
+
+where $$ \eta_{l,t-1} $$ is the weight given to each loan category $$l$$, calculated as the share of overall loans in the universe of SLOOS banks based on Call Report data. This process is done iteratively to group subcategories of loans into broader buckets. The aggregation method is applied consistently to both changes and levels questions and, at the final stage, yields two univariate time series for the 
+net changes in standards (NCS)
+ at a quarterly frequency and for the 
+net levels of standards (NLS)
+ at an annual frequency. Subsets of loan categories are used to aggregate series for business loans (C&I and CRE) and household loans (RRE and consumer) for both time series for NLS and NCS.
+
+Methodology: The MIDAS Regression Framework
+
+The MIDAS approach is a regression framework designed to "nowcast" low-frequency variablesâin our case, annual net levels of standards (NLS)âusing high-frequency predictorsâin our case, quarterly net changes in standards (NCS)âby imposing a parsimonious polynomial structure on the predictor coefficients to mitigate noise and overfitting.
+2
+ We follow Ghysels, Sinko, Valkanov (2007) and consider the following simple linear autoregressive MIDAS-SLOOS model:
+
+$$$$ NLS_t=c+ \lambda NLS_{t-4} + \beta B(L^{\frac{1}{4}};\theta)\ NCS_t^{(4)} + \epsilon_t^{(4)},\ (1) $$$$
+
+where $$ B(L^{\frac{1}{4}};\theta)= \sum_{k=0}^3\ B(k,\theta)\ L^{\frac{k}{4}} $$ and where we parametrize the $$k$$ lag coefficients via a simple standard Almon first-degree polynomialâthat is, $$ B(k;\theta)=\ \theta_0+\theta_1 k $$, which performs well in estimating the observed NLS each July and which yields smooth quarterly estimates for the NLS in the quarters between. This parametric choice of the lag polynomial produces linearly decreasing coefficients such that more recent changes in standards are assigned greater weights than those from earlier quarters. The coefficient $$\lambda$$ captures the effect of the lagged and most recently observed NLS from the previous second quarter survey, while the parameter $$\beta$$ captures the overall effect of the contemporaneous and lagged NCS.
+
+We then use the estimated MIDAS-SLOOS coefficients from equation (1) to estimate quarterly NLS by calculating
+
+$$$$ \widehat{NLS}_t\ = \hat c\ + \hat\lambda^{\frac{j}{4}} \times NLS_{t-j} + \sum_{i=1}^j \hat\beta_i \times NCS_{t+1-i}\ (2) $$$$
+
+where the index $$j$$ denotes the number of quarters between the current quarter $$t$$ and the previous second quarter survey with the annually observed NLS. This approach warrants some further discussions.
+3
+ First, the model resets every second quarter to be equal to the newly observed NLS, thus incorporating information about the most recent realization of the outcome variable. Each quarter, the estimated NLS are the sum of the most recently observed second quarter NLS and the observed changes since, weighted by the estimated coefficients at corresponding lags. Second, as the model can only be estimated when observed NLS are available, this implies that the estimated coefficients on the lagged NCS are based on the lag structure in the second quarter. Thus, when estimating the quarterly NLS, we implicitly assume that the effect of each lag is constant throughout the year. Moreover, by geometrically scaling the parameter $$\lambda$$, we recover the implied oneâquarter autoregressive coefficient that is consistent with the estimated persistence of the fourâquarter lagged levels. In each second quarter, we can then benchmark the estimated NLS from the model against the observed NLS.
+
+We compare the estimates of our MIDAS-SLOOS approach with a naïve approach that simply adds quarterly NCS to the previously observed NLS:
+
+$$$$ \widehat{NLS_t^{Naive}}\ = NLS_{t-j} + \sum_{i=1}^j NCS_{t+1-j}\ (3) $$$$
+
+The naïve approach is identical to the MIDAS-SLOOS approach in equation (2) when setting the constant $$c$$ to zero and coefficients $$\hat \lambda$$ and $$\hat \beta_i$$ to 1. Thus, while the MIDAS-SLOOS approach weights the lagged NLS and NCS to account for the historical relationship between changes and levels, the naïve approach does not.
+
+Estimated Quarterly Levels of Bank Lending Standards
+
+We first present the implied estimates for the coefficients $$\hat c$$, $$\hat \lambda$$, and $$\hat \beta_i$$ from equation (2), both for the overall bank lending standards (BLS) index (aggregated across all loan categories), as well as for the subset of business loans (C&I and CRE loans) and household loans (RRE and consumer loans). Table 1 illustrates both the discounted effect of the lagged observed NLS as well as the decaying influence of more distant NCS, showing that coefficients decline from about 0.7 toward zero and become slightly negative in two instances. The number of observations refers to the 13 years from 2012 to 2024 when the SLOOS asked banks about their levels of lending standards for these loan categories.
+
+Table 1: MIDAS Regression Results
+
+ 
+
+BLS
+
+Business
+
+Household
+
+Constant
+
+-2.37
+
+-3.39
+
+2.07
+
+NLS (t-4)
+
+0.84
+
+0.58
+
+0.84
+
+NCS (t)
+
+0.73
+
+0.71
+
+0.54
+
+NCS (t-1)
+
+0.43
+
+0.46
+
+0.39
+
+NCS (t-2)
+
+0.14
+
+0.21
+
+0.24
+
+NCS (t-3)
+
+-0.16
+
+-0.04
+
+0.1
+
+Observations
+
+13
+
+13
+
+13
+
+We use the regression results from table 1 to estimate quarterly NLS, both for the aggregate BLS index as well as for business loans and household loans separately. Figure 1 shows the estimated quarterly NLS aggregated across all loans using both the MIDAS-SLOOS approach (red line) and the naïve approach (dashed gray line), together with the observed annual NLS for each second quarter (blue bars) and the observed quarterly NCS (black line).
+
+Figure 1. Estimated Quarterly Levels of the Bank Lending Standards Index
+
+Accessible version
+
+The figure illustrates three main findings. First, the MIDAS approach yields accurate estimates for the observed NLS as reported in the July surveys. This conclusion holds both in sample (the red line), when coefficients are estimated using data over the full sample, and out of sample (orange diamonds, for the years 2023 and 2024), when the coefficients are estimated using data up to that quarter. For example, in July 2024, the out-of-sample estimate predicts a 41.3 percent net share of banks reporting standards as being at the tighter end of the range, close to the observed net share of 39.7 percent. By both measures, levels are judged to be significantly tight.
+4
+
+Second, the MIDAS approach outperforms the naïve approach, which often generates predictions of NLS that are much easier (2014 and 2015) or much tighter (2020, 2023, and 2024) than subsequently observed in the July survey for those respective years. The outperformance of the MIDAS-SLOOS approach is especially notable in periods of severe stress, such as during the COVID-19 pandemic in 2020 or the post-SVB period in 2023. For example, during the bank stress episode in 2023, we estimate that the levels of standards are significantly tight with an out-of-sample estimate of a 49.4 percent net share of banks reporting standards as being at the tighter end of the range. By comparison, the naïve approach yields a 145.7 percent net share of banks reporting standards being at the tighter end of the range, which is difficult to interpret in a meaningful way. The MIDAS-SLOOS estimate is therefore much closer to the observed net share of banks of 38.9 percent reporting the levels of standards at the tighter end of the range in the second quarter of 2023.
+
+Lastly, the model can be used to estimate the most recent levels of standards, taking into account their most recently reported changes. As of the end of first quarter of 2025, the MIDAS-SLOOS model estimates the quarterly NLS to be significantly tight (30.0 percent).
+
+Furthermore, we use our method to estimate the current levels of standards across loan categories using the regression analysis at a more disaggregated level. Figure 2 and figure 3 illustrate the results for business loans and household loans, respectively. As shown, we estimate the level of standards for business loans as of the end of first quarter of 2025 to be 27.4 percent and for household loans to be 29.8 percent. As in the case of BLS, we validate our method using an out-of-sample estimate against observed levels of standards according to the July SLOOS and show that the method performs well for disaggregated loan categories. As for the aggregate index, the levels of business and household bank lending standards are overestimated in times of stress by an alternative naïve approach, and so our method is particularly insightful in turbulent times, precisely when a correct assessment of the levels of banking conditions is most useful for policymakers.
+
+Figure 2. Estimated Quarterly Levels of Standards for Business Loans
+
+Accessible version
+
+Figure 3. Estimated Quarterly Levels of Standards for Household Loans
+
+Accessible version
+
+How Are Estimated Levels of Lending Standards Related to Loan Growth
+
+We now examine to what extent our estimated levels of bank lending standards are correlated with loan growth on banks' balance sheets. As credit availability to businesses and households is arguably driven by levels of standards rather than changes in standards, we would expect to see a negative relationship between levels and loan growth. To this end, we regress aggregated seasonally adjusted quarterly loan growth rates from the Federal Reserve's Form FR 2644 data on the estimated quarterly levels of bank lending standards presented in figures 1 to 3. For overall bank lending standards, we study core loan growth, and for business and household lending standards, we study business loan growth (C&I and CRE loans) and household loan growth (RRE and consumer loans), respectively.
+
+Figure 4 illustrates the negative correlation between the net level of overall bank lending standards and core loan growth over time. Quarters with tighter (easier) estimated levels of standards tend to exhibit lower (stronger) core loan growth. One notable exception is the onset of the COVID-19 pandemic during the first and second quarters of 2020, which saw extremely strong core loan growth amid very tight levels of lending standards. Core loan growth, during these two quarters, however, was driven by firms drawing down revolving lines of credit to make up for revenue and funding disruptions during the pandemic (Glancy, Gross, and Ionescu, 2020).
+
+Figure 4. Estimated Levels of Lending Standards and Core Loan Growth
+
+Accessible version
+
+This pattern can also be seen in figure 5, which illustrates the negative correlation between the estimated net levels of lending standards for business loans and business loan growth. Meanwhile, for household loans, the negative correlation between estimated net levels of standards and loan growth also holds during the pandemic, as shown in figure 6.
+
+Figure 5. Estimated Levels of Business Lending Standards and Business Loan Growth
+
+Accessible version
+
+Figure 6. Estimated Levels of Business Lending Standards and Household Loan Growth
+
+Accessible version
+
+Table 2 shows that the illustrated negative correlation between the estimated net levels of standards and loan growth also holds when tested in a regression framework. Panel A of table 2 shows the results for core loan growth. Contemporaneous levels of lending standards are negatively, albeit statistically insignificantly, correlated with core loan growth (column 1), while the one-quarter lagged levels are significantly negatively correlated with core loan growth (column 2).
+
+Table 2: Loan Growth Analysis
+
+ 
+
+Estimated Levels
+
+Observed Changes
+
+ 
+
+Full Sample
+
+Excluding Covid
+
+Full Sample
+
+Excluding Covid
+
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+Panel A. Core Loan Growth
+
+BLS: Estimated NLS (t)
+
+-0.05
+
+ 
+
+-0.08***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.04)
+
+ 
+
+(0.02)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+BLS: Estimated NLS (t-1)
+
+ 
+
+-0.10***
+
+ 
+
+-0.11***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.02)
+
+ 
+
+(0.02)
+
+ 
+
+ 
+
+ 
+
+ 
+
+Changes: BLS (t)
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.11**
+
+ 
+
+0.07*
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.04)
+
+ 
+
+(0.04)
+
+ 
+
+Changes: BLS (t-1)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.01
+
+ 
+
+-0.03
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.06)
+
+ 
+
+(0.04)
+
+Observations
+
+55
+
+54
+
+53
+
+52
+
+57
+
+57
+
+55
+
+55
+
+$$R^2$$
+
+0.08
+
+0.31
+
+0.31
+
+0.55
+
+0.24
+
+0
+
+0.09
+
+0.02
+
+Panel B. Business Loan Growth
+
+Business: Estimated NLS (t)
+
+-0.04
+
+ 
+
+-0.08***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.05)
+
+ 
+
+(0.02)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Business: Estimated NLS (t-1)
+
+ 
+
+-0.08***
+
+ 
+
+-0.10***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.02)
+
+ 
+
+(0.02)
+
+ 
+
+ 
+
+ 
+
+ 
+
+Changes: Business (t)
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.14
+
+ 
+
+0.04
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.10)
+
+ 
+
+(0.05)
+
+ 
+
+Changes: Business (t-1)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.04
+
+ 
+
+-0.06
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.10)
+
+ 
+
+(0.05)
+
+Observations
+
+55
+
+54
+
+53
+
+52
+
+57
+
+57
+
+55
+
+55
+
+$$R^2$$
+
+0.03
+
+0.14
+
+0.28
+
+0.47
+
+0.15
+
+0.02
+
+0.02
+
+0.05
+
+Panel C. Household Loan Growth
+
+Household: Estimated NLS (t)
+
+-0.10***
+
+ 
+
+-0.09***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.01)
+
+ 
+
+(0.01)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Household: Estimated NLS (t-1)
+
+ 
+
+-0.10***
+
+ 
+
+-0.10***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.01)
+
+ 
+
+(0.01)
+
+ 
+
+ 
+
+ 
+
+ 
+
+Changes: Household (t)
+
+ 
+
+ 
+
+ 
+
+ 
+
+0.01
+
+ 
+
+0.08***
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.04)
+
+ 
+
+(0.02)
+
+ 
+
+Changes: Household (t-1)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+-0.01
+
+ 
+
+0
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(0.02)
+
+ 
+
+(0.03)
+
+Observations
+
+55
+
+54
+
+53
+
+52
+
+57
+
+57
+
+55
+
+55
+
+$$R^2$$
+
+0.57
+
+0.58
+
+0.53
+
+0.65
+
+0.01
+
+0.01
+
+0.16
+
+0
+
+The coefficient in column 1 is rendered insignificant by the COVID-19 period in the first and second quarters of 2020, when levels of standards were estimated to be very tight while firms drew on their credit lines, causing a spike in C&I loan volumes on banks' balance sheets.
+5
+ When we exclude the first and second quarters of 2020 from the regression, we find a significant negative correlation between estimated levels and core loan growth, both for contemporaneous and one-quarter lagged 
+net
+ 
+levels
+ of bank lending standards. Meanwhile, as shown in columns 5 to 8 of panel A, 
+net
+ 
+changes
+ in lending standards are either uncorrelated (lagged changes) or even positively correlated (contemporaneous changes) with core loan growth.
+
+Panels B and C of table 2 show the analogous disaggregate results for business loan growth and household, respectively. In panel A, we find that levels of lending standards for business loans are negatively correlated with business loan growth when excluding the COVID-19 period and levels of lending standards for household loans are negatively correlated with household loan growth both when including and excluding the COVID-19 period. As expected, the pandemic does not make a difference for the relationship between standards and loan growth for household loans as the effect of the COVID-19 pandemic is transmitted through C&I loan drawdowns. Meanwhile, changes in lending standards for neither business loans nor household loans are negatively correlated with business loan growth and household loan growth, respectively.
+
+The combined results in table 2 provide evidence that bank credit availability is driven by our estimated levels of bank lending standards rather than by changes in standards.
+
+Conclusion
+
+We provide estimates for the levels of bank lending standards at the quarterly frequency, by developing a MIDAS regression-based model that combines information from the annual levels of lending standards and their quarterly changes, as reported in the SLOOS since 2011. We demonstrate that our MIDAS-SLOOS model is well suited to deliver accurate estimates of the levels of bank lending standards. Based on our model, the level of aggregate lending standards as of the end of the first quarter of 2025 is significantly tight on net; across loan categories, the model estimates the current levels of standards to be also significantly tight for both business loans and household loans. Overall, using the information on changes received since July 2024, our model shows that the levels of standards are slightly easier relative to the tight levels from the middle of last year.
+
+With the caveat that our analysis is based on a relatively short sample period, the MIDAS-SLOOS model-based estimates improve significantly over those produced by a naïve additive approach. Furthermore, unlike changes in bank lending standards, the estimated levels of standards are negatively correlated with core loan growth, both overall and across loan categories. This indicates that our NLS index is an informative measure for bank credit availability for businesses and households, potentially useful for assessing the relationship between standards and economic activity.
+
+References
+
+Bassett, William F., Mary Beth Chosak, John C. Driscoll, and Egon ZakrajÅ¡ek (2014). "Changes in Bank Lending Standards and the Macroeconomy," 
+Journal of Monetary Economics
+, vol. 62 (March), pp. 23â40.
+
+Bassett, William F., and Marcelo Rezende (2015). "
+Relation Between Levels and Changes in Lending Standards Reported by Banks in the Senior Loan Officer Opinion Survey on Bank Lending Practices
+,: FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 16.
+
+Cascaldi-Garcia, Danilo, Matteo Luciani, and Michele Modugno (2023). "
+Lessons from Nowcasting GDP across the World
+," International Finance Discussion Papers 1385. Washington: Board of Governors of the Federal Reserve System.
+
+Ghysels, Eric, Arthur Sinko, and Rossen Valkanov (2007). "MIDAS Regressions: Further Results and New Directions," 
+Econometric Reviews
+, vol. 26 (1), pp. 53â90.
+
+Glancy, David, Max Gross, and Felicia Ionescu (2020). "
+How Did Banks Fund C&I Drawdowns at the Onset of the COVID-19 Crisis?
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 31.
+
+1. The views presented in this note are those of the authors and do not necessarily reflect those of the Federal Reserve Board or the Federal Reserve System. 
+Return to text
+
+2. See e.g., Cascaldi-Garcia, Luciani, and Modugno (2023) for a discussion of the use of MIDAS models as nowcasting tools. 
+Return to text
+
+3. Note that the coefficient $$\beta$$ in equation (1) denotes the 
+overall
+ effect of the contemporaneous and lagged NCS, while the coefficients $$\beta _k$$ in equation (2) denote the 
+individual
+ contributions of each contemporaneous and lagged NCS. 
+Return to text
+
+4. Consistent with the terminology in the published SLOOS reports, we refer to net percentages greater than 20 and less than 50 percent as "significantly tight". 
+Return to text
+
+5. While we find a significant negative correlation between the estimated levels of standards and loan growth and the corresponding univariate regressions in Table 2 yield high $$R^2$$ values, loan growth is also driven by demand for credit. The analysis in Table 2 shows that the estimated levels of lending standards are highly informative about credit availability but should not be considered the sole determinant of loan growth. For a supply and demand analysis based on information form the SLOOS, see Bassett et al (2014). 
+Return to text
+
+Please cite this note as:
+
+Berman, Jaron, Felicia Ionescu, and Carlo Wix (2025). "Estimated Quarterly Levels of Bank Lending Standards and Credit Availability," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 06, 2025, https://doi.org/10.17016/2380-7172.3805.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

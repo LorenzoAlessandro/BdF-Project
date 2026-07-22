@@ -1,0 +1,306 @@
+FEDS Notes
+
+Twitter
+
+June 03, 2025
+
+What Drives the Rise in Remote Work? Preliminary Evidence from Utilization Rates and Wage Trends
+
+Maria D. Tito
+1
+
+The COVID-19 pandemic has propelled a dramatic increase in the demand for remote work across geographies, sectors, and occupations. While many firms transitioned to remote operations almost overnight, the shift in the firm demand for remote work has not merely been a temporary adjustment as a substantial number of firms have retained hybrid or fully remote models. Indeed, according to the October 2024 Survey of Working Arrangements and Attitudes (SWAA), employers plan for around 2.3 days of remote work per week for workers with the ability to work from home (WFH), about double the levels in the beginning of 2020. Similarly, job postings that allow for remote work, a timely indicator of the firm demand for remote work, reached 10 percent in September 2024, roughly three times above the pre-pandemic levels (figure 1).
+
+Figure 1. Demand for Remote Work Has Soared
+
+Note: Three-month moving average of the percent of new vacancy postings that allow one or more remote workday per week. Data through September 2024.
+
+Source: Hansen et al (2023).
+
+Accessible version
+
+Consistent with these aggregate changes,
+remote work utilization
+âdefined as the share of workers working remotely relative to those in occupations where remote work is technologically feasibleâ has also risen meaningfully since the onset of the pandemic.
+2
+Average utilization reached almost 45 percent in February 2024, more than doubling from 20 percent in February 2020 (figure 2).
+
+Figure 2. Remote Work Utilization
+
+Note: Ratio of remote usage to remote ability. Black dashed line represents remote utilization as of February 2020. Data through August 2024.
+
+Source: U.S. Census Bureau; USDOL/ETA.
+
+Accessible version
+
+At the same time, the upward trend in utilization conceals striking variation, with utilization rates differing widely across states, industries, and occupations and showing a rightward shift in recent years. As illustrated in Figure 3, by 2024 a sizeable mass of sectors and occupations had utilization rates exceeding 80 percent, even as others remained far lower. The rising heterogeneity is especially notable given that remote
+ability
+âbased on the occupation-specific reliance on email, phone, and memo communication, as in Montenovo et al. (2020)âhas changed little since 2019.
+
+Figure 3. Remote Work Utilization: How the Distribution Evolved between 2020 and 2024
+
+Note: Distribution of remote utilization rates across U.S. states (panel a), three-digit NAICS industries (panel b), and three-digit SOC occupations (panel c).
+
+Source: U.S. Census Bureau; USDOL/ETA.
+
+Accessible version
+
+While improvements in communications technologies have undoubtedly expanded the technological possibility of WFH over long time horizons, the recently widening rates of adoption across occupations, industries, and geographies are more likely driven by a combination of preferences and economic incentives. On the one hand, workers may increasingly value remote work as an amenity and are willing to accept lower wages in exchange for flexibility, consistent with the empirical evidence from the SWAA surveys or earlier findings by Mas and Pallais (2017).
+3
+On the other hand, firms may be adopting remote work arrangements to reduce costs, particularly those related to office space and physical infrastructure.
+4
+
+To distinguish between worker preferences and firm cost-saving motives, I examine the relationship between wage growth and changes in remote work utilization across states, industries, or occupations,
+
+$$$$\Delta_{t,t-6}\ \text{log}\ â¡w_{jt} = \beta_0+\beta_1 \text{Utilization}_{j,t-6}+\beta_2 \Delta_{t-6,t-12}\ \text{log}\ w_{jt}+d_j+d_t+\epsilon_{jt}\ (1)$$$$
+
+where $$\Delta_{t,t-6}\ log\ â¡w_{jt}$$ denotes the change in (log) average wages for state, industry, or occupation $$j$$ between month $$t$$ and month $$t-6$$ and $$\text{Utilization}_{j,t-6}$$ characterizes the share of workers working remotely relative to those with the ability to do so at month $$t-6$$. Importantly, this approach relies on utilization, holding the ability to work from home constant and controlling for other factorsâsuch as lagged wage inflation as well as fixed effectsâto help isolate the impact of post-pandemic shifts in remote work from other confounders that may, instead, reflect the persistence in the wage process, common shocks, or underlying unobserved heterogeneity.
+5
+The coefficient $$\beta_1$$ is key in differentiating between the impact of preferences and that of firm incentives. If $$\beta_1<0$$ , increases in utilization would be associated with slower wage growth, suggesting that workers value remote work as a non-wage amenity and are willing to accept lower compensation in exchange for flexibility. In contrast, if $$\beta_1>0$$ , utilization rises alongside wage growth, an outcome consistent with firms valuing remote work as a way to reduce non-wage costs.
+
+Table (1) reports the empirical estimates for model (1) for the period starting in October 2022, when remote usage reflects a broader definition of remote work uptake.
+6
+Looking at columns (1)-(3), which present the baseline version of model (1), I find no significant association between remote utilization and wage inflation over the following six months. The results in table 1, however, are a little more suggestive of firm cost-savings motives when separately including measures of usage and remote ability (columns (4)-(6)). Indeed, the coefficient on $$\text{Usage}_{j,t-6}$$ is positive and significant across industries (column 5) and occupations (column 6), with the magnitudes implying an increase in six-month wage inflation of 30 percent of a standard deviation across industries and of 50 percent of a standard deviation across occupations per standard deviation increase in usageâor an increase in reported usage of about 17 percentage points. Even so, these estimates amount to only relatively muted wage pressures over the sample period: With reported usage rising approximately 5 percentage points between late 2022 and mid-2024 and with remote ability essentially unchanged, the effects translate into a modest 0.3 percentage point increase in annualized wage inflation over that time.
+
+Table 1. Remote Utilization and Wage Inflation
+
+Variables
+
+$$\Delta_{t,t-6}$$ Log Average Hourly Wage
+
+(1)
+
+States
+
+(2)
+
+Industries
+
+(3)
+
+Occupations
+
+(4)
+
+States
+
+(5)
+
+Industries
+
+(6)
+
+Occupations
+
+$$\text{Utilization}_{t-6}$$
+
+-0.012
+
+0.166
+
+0.027
+
+(0.124)
+
+(0.132)
+
+(0.078)
+
+$$\text{Usage}_{t-6}$$
+
+0.012
+
+0.503*
+
+0.442***
+
+(0.191)
+
+(0.258)
+
+(0.113)
+
+$$\text{Remote Ability}_{t-6}$$
+
+-0.032
+
+-0.226
+
+0.086
+
+(0.264)
+
+(0.366)
+
+(0.065)
+
+$$\Delta_{t-6,t-12}$$ Log Average Hourly Wage
+
+-0.132**
+
+-0.610***
+
+-0.548***
+
+-0.705***
+
+-0.614***
+
+-0.571***
+
+(0.064)
+
+(0.061)
+
+(0.065)
+
+(0.054)
+
+(0.060)
+
+(0.067)
+
+ID FE
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+Date FE
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+Obs.
+
+357
+
+536
+
+354
+
+357
+
+536
+
+354
+
+$$R^2$$
+
+0.038
+
+0.348
+
+0.251
+
+0.430
+
+0.359
+
+0.286
+
+Number of IDs
+
+51
+
+83
+
+55
+
+51
+
+83
+
+55
+
+$$\Delta_{t,t-6}$$ Log Average Hourly Wage: change in the log average hourly wage between month $$t$$ and month $$t-6$$.
+
+$$\text{Utilization}_{t-6}$$: Ratio of remote usage to remote ability at $$t-6$$.
+
+$$\text{Usage}_{t-6}$$: Share of individuals reporting to have worked from home at $$t-6$$.
+
+$$\text{Remote Ability}_{t-6}$$: Share of employment in jobs that can be performed remotely at $$t-6$$.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent, and * significance at 10 percent.
+
+Notes: Phillips Curve Fixed Effect (FE) Regressions, 2022m10-2024m9. The unit of observation is states in columns (1) and (4), three-digit NAICS industries in columns (2) and (5), and three-digit SOC occupations in columns (3) and (6). Robust standard errors, clustered at the ID level, are reported in parenthesis.
+
+Source: BLS and DOL/ETA.
+
+In all, the relatively weak correlation between remote utilization and wage inflation suggests that both worker preferences and firm cost-savings strategies are likely contributing to the rise in utilization. These findings also leave room for more complex dynamics that could arise, for example, in the presence of heterogenous worker preferences for remote work, a feature documented by Drake et al. (2022). In this setting, remote positions may initially be filled by workers who strongly value flexibility and are willing to accept lower pay at low levels of remote work utilization; as utilization rises, however, firms may need to offer higher wages to attract workers who are more reluctant to work remotely, resulting in a nonlinear relationship between utilization and wage growth.
+
+In conclusion, while the expansion of remote work has been clear and substantial along a number of indicators, the underlying drivers of remote utilization remain less certain. Further research is needed to clearly untangle these drivers and their long-run implications for wages, productivity, and workplace structure.
+
+References
+
+Bagga, Sadhika, Lukas Mann, AyÅegül Åahin, and Giovanni L. Violante (2025). "
+Job Amenity Shocks and Labor Reallocation
+," NBER Working Paper Series 33787. Cambridge, Mass.: National Bureau of Economic Research, May.
+
+Barrero, Jose Maria, Nicholas Bloom, and Steven J. Davis (2021). "
+Why Working from Home Will Stick
+," NBER Working Paper Series 28731. Cambridge, Mass.: National Bureau of Economic Research, April.
+
+Drake, Marshall, Neil Thakral, and Linh T. Tô (2022). "
+Wage Differentials and the Price of Workplace Flexibility (PDF)
+." Working Paper.
+
+Hansen, Stephen, Peter John Lambert, Nicholas Bloom, Steven J. Davis, Raffaella Sadun, and Bledi Taska (2023). "
+Remote Work across Jobs, Companies, and Space
+," NBER Working Paper Series 31007. Cambridge, Mass.: National Bureau of Economic Research, March.
+
+Mas, Alexandre, and Amanda Pallais. "
+Valuing Alternative Work Arrangements
+."
+American Economic Review
+107.12 (2017): 3722-3759.
+
+Montenovo, Laura, Xuan Jiang, Felipe Lozano Rojas, Ian M. Schmutte, Kosali I. Simon, Bruce A. Weinberg, and Coady Wing (2020). "
+Determinants of Disparities in Covid-19 Job Losses
+," NBER Working Paper Series 27132. Cambridge, Mass.: National Bureau of Economic Research, May (revised June 2021).
+
+Tito, Maria D. (2024). "Does the Ability to Work Remotely Alter Labor Force Attachment? An Analysis of Female Labor Force Participation," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 19, 2024, https://doi.org/10.17016/2380-7172.3433.
+
+1. I would like to thank Andrew Figura for insightful comments. The views expressed in the article are those of the author and do not necessarily reflect those of the Federal Reserve Board, the Federal Reserve System, or its staff.
+Return to text
+
+2. Data on remote usage are from the Current Population Survey, while remote ability is based on occupation characteristicsânamely, use of memo, phone, and e-mail; in particular, an occupation is identified as having the ability to be performed remotely if the usage of memo, phone, and e-mail is either important or very important. Remote utilization then is constructed as the ratio of remote work usage to remote ability. See Tito (2024) for more details.
+Return to text
+
+3. In particular, according to the October 2024 SWAA, workers were willing to take a 2.5-4 percent pay cut for two or three days of remote work per week. In addition, Bagga et al. (2025) find that post-pandemic labor market dynamics can be explained by a shift in worker preferences in favor of the ability to work remotely.
+Return to text
+
+4. For example, Barrero, Bloom, and Davis (2021) suggest that firms increasingly view remote work as a long-term feature due to productivity gains and cost savings.
+Return to text
+
+5. In particular, lagged wage trends capture the persistence in the wage process, while fixed effects identify either common shocks or time invariant characteristics of states, sectors, and occupations.
+Return to text
+
+6. CPS data on remote usage are available since May 2020; data between May 2020 and September 2022, however, reflect remote usage only because of the Coronavirus pandemic and, thus, may not be representative of overall remote work uptake. Starting in October 2022, instead, responses in CPS reflect reports of WFH for
+any
+reason at any time during the week that includes the 12th of the month.
+Return to text
+
+Please cite this note as:
+
+Tito, Maria D. (2025). "What Drives the Rise in Remote Work? Preliminary Evidence from Utilization Rates and Wage Trends," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 03, 2025, https://doi.org/10.17016/2380-7172.3706.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

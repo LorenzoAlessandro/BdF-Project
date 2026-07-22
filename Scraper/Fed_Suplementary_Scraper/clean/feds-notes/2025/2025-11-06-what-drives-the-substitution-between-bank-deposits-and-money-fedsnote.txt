@@ -1,0 +1,540 @@
+FEDS Notes
+
+Twitter
+
+November 06, 2025
+
+What Drives the Substitution Between Bank Deposits and Money Market Funds?
+
+Jay Im
+,
+Yi Li
+, and
+Ashley Wang
+
+1. Introduction
+
+With fast growing combined assets exceeding $20 trillion, bank deposits and money market funds (MMFs) play increasingly important roles in monetary policy transmission and in providing funding to the broader economy. Although they differ in terms of their payment functionality, deposit insurance coverage, and roles in monetary policy transmission, bank deposits and MMF shares are often viewed as potential substitutes from investors' perspectives due to their shared role as safe, cash-like assets.
+
+This note presents a systematic analysis, based on 30 years of data, of whether and to what extent bank deposits and MMF shares act as substitutes. A high degree of substitution would suggest that investors actively reallocate funds between these two cash-management vehicles in response to changing macroeconomic and monetary conditions, implying competition between banks and MMFs for investors' funding. We find that on average, from 1995 to 2025, a one-percentage-point increase in bank deposits is associated with a 0.2-percentage-point decline in MMF assets. This substitution effect is evident in both directions of fund flows, that is, from MMFs to banks and from banks to MMFs.
+
+Importantly, we find that the substitution between bank deposits and MMF assets changes notably over time. Two key factors contribute to this variation. First, the strength of substitution is influenced by the availability of cash or overall level of liquidity in the financial system. In particular, the substitution effect in tight-cash environments is about 1.5 times the full-sample estimate, but the effect largely disappears under ample-cash conditions. This pattern suggests that abundant cash dampens substitution between bank deposits and MMFs, allowing both sectors to expand or contract relatively independently without directly competing for funds when liquidity is plentiful.
+
+The second factor is investors' response to relative yields. In particular, relative yield differentials between MMFs and bank deposits have a significant impact on both the direction and magnitude of flows. When MMF yields substantially exceed deposit rates, substitution from bank deposits into MMFs becomes markedly more pronounced. These findings indicate that the interest rate environment affects substitution between two sectors.
+
+2. Data sources and long-term trends
+
+We construct our dataset using weekly aggregate data from multiple sources, covering the period from January 1995 to May 2025. For deposit flows to the U.S. commercial banking sector, we use data from the Federal Reserve's H.8 release, accessed via FRED.
+1
+We examine total deposits excluding large time deposits, which typically lack on-demand liquidity and are less comparable to MMF liabilities.
+2
+Weekly average retail bank deposit rates are constructed using the RateWatch data. Weekly flow and yield data on U.S. MMFs are obtained from iMoneyNet. Information on macro and monetary conditions, such as banks' aggregate reserve balances and other indicators, is sourced from FRED.
+
+Figure 1 presents the time series of bank deposits and MMF assets (in trillions of dollars). As of May 2025, total bank depositsâexcluding large time depositsâstood at approximately $15 trillion, while total MMF assets amounted to about $7 trillion. Both sectors have experienced substantial growth over the past 30 years, with current bank deposits approximately seven times their 1995 level and MMF assets about eleven times their 1995 level. The MMF sector experienced a decline in assets following the global financial crisis, while bank deposits continued to grow steadily over the same periodâpotentially reflecting the effects of MMF regulatory reforms and the narrow spread between MMF yields and deposit rates in the zero lower bound environment.
+
+Figure 1. Bank Deposits and MMF Assets under Management (AUM)
+
+Notes: Panel A shows bank deposits and MMF AUM. Bank deposits refer to total deposits at domestically chartered banks minus their large time deposits. MMF AUM represents the assets under management of all U.S. money market funds. Panel B shows the sum of bank deposits and MMF AUM as share of nominal GDP. All series are weekly. Gray vertical lines indicate major policy and market stress events.
+
+Accessible version
+
+Both sectors experienced a marked increase in assets following the outbreak of the COVID-19 pandemic in early 2020, driven by broad-based monetary and fiscal stimulus, as well as a rise in precautionary savings. From early 2022 to mid-2024, MMFs attracted cumulative inflows while bank deposits declined, amid a series of policy rate hikes. The relative attractiveness of MMFs during this period likely reflects their faster and more complete passthrough of rising interest rates, in contrast to bank deposit rates, which tend to adjust more slowly and incompletely.
+
+While long-term trends in Figure 1 suggest that MMF assets and bank deposits may move in opposite directions in response to certain regulatory and monetary policy developments, a closer examination shows that the relationship is more complex. For instance, although MMF assets generally increased while bank deposits declined over the 2022â2024 period, their weekly (and monthly) changes were actually positively correlated during this time.
+
+3. Substitution effects
+
+In this section, we start by analyzing whether a significant substitution or funding competition effect exists between the MMF and banking sectors. We then examine how this relationship evolves over time.
+
+3.1 Substitution effects: full sample
+
+As a starting point, we compute the weekly growth rates of bank deposits and MMF assets and examine their relationship by regressing MMF asset growth on contemporaneous bank deposit growth. Specifically, using weekly data from January 1995 to May 2025, we estimate the following regression:
+
+$$$${Growth}_t^{MMF}=\ \alpha\ +\ \beta{Growth}_t^{Bank}+\gamma X_{t-1}+\epsilon_t,\ (1)$$$$
+
+where $${Growth}_t^j$$ is the net percentage growth rates of sector $$j$$ and $$X_{t-1}$$ denotes a set of lagged control variables, including the target federal funds rate, the 3-month Treasury term premium, the VIX, and S&P 500 returns, all measured in week $$tâ 1$$. Our regression results remain qualitatively similar when the set of control variables is excluded.
+
+Table 1 reports estimated $$\beta$$ coefficient from Model (1), with coefficients on control variables omitted for brevity. Column (1) presents the full-sample regression results, showing that a one-percentage-point increase in bank deposits is associated with a 0.2-percentage-point decline in MMF assets, which is statistically significant at the 1% level. This result suggests a significant substitution effect between bank deposits and MMF assets over the 30-year sample period, consistent with investors actively reallocating funds between the two sectors in response to evolving market conditions.
+
+Table 1. Weekly substitution between MMF assets and bank deposits
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Bank deposit growth
+
+-0.213***
+
+-0.289***
+
+-0.148**
+
+(0.027)
+
+(0.055)
+
+(0.072)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.116
+
+0.108
+
+0.109
+
+Observations
+
+1585
+
+877
+
+707
+
+Notes: Weekly MMF asset growth is regressed on bank deposit growth from January 1995 to May 2025. Column (1) reports results for the full sample, while columns (2) and (3) present results for the bank deposit growth and bank deposit contraction subsamples, respectively. Robust standard errors are in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% levels, respectively.
+
+We next examine whether the substitution effect is concentrated in one directionâthat is, whether it is primarily driven by funds moving from MMFs to bank deposits or vice versa. Columns (2) and (3) of Table 1 present the regression results, with Column (2) focusing on sample periods of bank deposit growth and Column (3) on periods of deposit contraction. The results show that the substitution effect is significant in both directions, suggesting that investors allocate flexibly between MMF shares and bank deposits, and that there is potential funding competition between the two sectors.
+
+3.2
+Evolvement of substitution effects
+
+To further examine the dynamics in the relationship between MMF assets and bank deposits, we estimate a one-year (52-week) rolling regression based on the specification in Model (1). The rolling estimates of the coefficient $$\beta$$ capture the time-varying relationship between MMF asset growth and deposit growth.
+
+Figure 2 plots the rolling estimates of $$\beta$$ over time, with 95% confidence bands (shaded areas). The results indicate that the substitution effect between MMF assets and bank deposits has changed substantially over time. Prior to the GFC, the estimated substitution effect was generally significant and typically ranged from â0.2 to â0.5, implying that a 1-percentage-point increase in bank deposits was associated with a 0.2- to 0.5-percentage-point decline in MMF assets. In contrast, post-GFC, the substitution effect largely disappears, with estimated coefficients fluctuating more widely and not significantly different from zero. These patterns highlight that substitution dynamics vary considerably over time. The next section examines potential drivers of this time variation.
+
+Figure 2. Evolvement of substitution between MMF assets and bank deposits
+
+Notes: The plot shows 52-week rolling coefficients from Model (1), with 95% confidence bands indicated by the shaded area. The confidence intervals are estimated using robust standard errors.
+
+Accessible version
+
+4. Factors that influence the substitution effect
+
+In this section, we examine two key factors that influence the strength of the substitution effect between MMF assets and bank deposits: first, the availability of cash reserves or overall liquidity level in the financial system; and second, cash investors' yield-seeking behavior.
+
+4.1 Cash availability
+
+Intuitively, when cash or liquidity in the financial system is ample, competition between banks and MMFs for funding may be muted, since investors can allocate additional cash to one sector without necessarily withdrawing from the other.
+
+We employ two proxies to capture the degree of cash or liquidity abundance in the financial system. The first is volume-based and focuses on the total reserve balances held by depository institutions at the Federal Reserve. As shown in Panel A of Figure 3, reserve balances generally remained very small relative to GDP prior to October 2008 but expanded substantially in the post-financial-crisis period, reflecting structural changes in the Fed's balance sheet and broader liquidity conditions.
+
+Figure 3. Substitution effect and cash availability
+
+Notes: The red line plots the 52-week rolling coefficients from Model (1), with 95% confidence bands shown as shaded areas. The confidence intervals are calculated using robust standard errors. In Panel A, the blue line represents total reserve balances held by depository institutions at the Federal Reserve scaled by nominal GDP. In Panel B, the IORBâEFFR spread is defined as IOER minus EFFR from October 2008 to July 2021, and as IORB minus EFFR thereafter. The dashed line marks the pre-IOER regime, when banks did not earn interest on reserve balances.
+
+Accessible version
+
+The second measure is rate-based: the spread between the interest on reserve balances (IORB) and the effective federal funds rate (EFFR). Prior to October 2008, the Federal Reserve operated a so-called "corridor system" for implementing monetary policy. The Federal Reserve kept aggregate bank reserves relatively tight and adjusted reserve supply to maintain its target for the EFFR.
+
+In October 2008, the Fed introduced interest on reserve balances and began operating a "floor system" for implementing monetary policy.
+3
+Amid an expansion in reserves, the interest rate on reserve balances effectively established a floor under the federal funds rate, as banks were unwilling to lend at rates below what they could earn risk-free at the Fed. In contrast, nonbanks such as government-sponsored enterprises (GSEs), ineligible to receive interest on reserves, continued to lend excess cash in the federal funds market at the EFFR.
+
+As shown in Panel B of Figure 3, in the post-GFC period, when reserves are abundant, EFFR typically trades below IORB, creating a positive spread. However, when reserves become scarce, such as during periods of quantitative tightening or market stress, banks may need to borrow funds, pushing up the EFFR and narrowing or even reversing the IORBâEFFR spread.
+
+Using these two proxies, we construct two dummy variables to indicate ample-cash environments. The first, $${High Reserves}_t$$, equals one when total reserve balances scaled by GDP exceed their time-series median, and zero otherwise. The second, $${High Spread}_t$$, equals one when the IORBâEFFR spread is positive, and zero when the spread is negative or before October 2008. We then estimate the following regression to test whether substitution effects between MMFs and bank deposits are attenuated in periods with ample cash or liquidity:
+
+$$$${Growth}_t^{MMF}=\ \alpha\ +\ \beta{Growth}_t^{Bank}+\theta{{AmpleCash}_t\cdot Growth}_t^{Bank}+\delta{AmpleCash}_t+\gamma X_{t-1}+\epsilon_t,\ (2)$$$$
+
+where $$X_{t-1}$$ is as defined in Equation (1), and $${AmpleCash}_t$$ refers to either $${High Reserves}_t$$ or $${High Spread}_t$$, depending on the specification.
+
+Table 2 reports the estimated $$\beta$$ and $$\theta$$ coefficients from Model (2), with coefficients on control variables omitted for brevity. In Panel A, ample cash is proxied by $${High Reserves}_t$$. Column (1) shows that when reserves are relatively tight (i.e., $${High Reserves}_t = 0$$), a one-percentage-point increase in bank deposits is associated with a 0.3-percentage-point decline in MMF assetsâabout 1.5 times the magnitude in the baseline estimate. Notably, the positive interaction term between deposit growth and the $$High Reserves$$ dummy more than offsets the negative coefficient on deposit growth, indicating a diminished substitution effect in cash-rich environments. Columns (2) and (3) focus on periods of positive and negative bank deposit growth respectively. Column (3) yields result consistent with the full-sample findings, whereas Column (2) shows an insignificant interaction term, suggesting that the dampening effect of a high-reserve environment is more pronounced during episodes of deposit contraction. In Panel B, ample cash is proxied by $${High Spread}_t$$, and the regression results are broadly consistent with those in Panel A.
+
+Table 2. Diminished substitution effects in ample-cash environments
+
+Panel A. High reserve indicator
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Deposit growth
+
+-0.299***
+
+-0.274***
+
+-0.244***
+
+(0.029)
+
+(0.061)
+
+(0.082)
+
+Deposit growth × High Reserve
+
+0.380***
+
+0.176
+
+0.554***
+
+(0.07)
+
+(0.167)
+
+(0.142)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.156
+
+0.15
+
+0.14
+
+Observations
+
+1585
+
+877
+
+707
+
+Panel B. High IORB-EFFR spread indicator
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Deposit growth
+
+-0.289***
+
+-0.253***
+
+-0.263***
+
+(0.032)
+
+(0.065)
+
+(0.081)
+
+Deposit growth × High Spread
+
+0.317***
+
+-0.034
+
+0.614***
+
+(0.058)
+
+(0.128)
+
+(0.137)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.142
+
+0.118
+
+0.153
+
+Observations
+
+1585
+
+877
+
+707
+
+Notes: Weekly MMF asset growth is regressed on bank deposit growth and its interaction with ample-cash indicators. Panel A uses a high-reserve dummy (equal to one if reserves scaled by GDP exceed the sample median); Panel B uses a high-spread dummy (equal to one if the IORBâEFFR spread is positive). Column (1) reports results for the full sample, while columns (2) and (3) present results for the bank deposit growth and bank deposit contraction subsamples, respectively. Robust standard errors are in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% levels, respectively.
+
+These findings suggest that substitution between MMF investments and bank deposits is more pronounced when the overall liquidity is constrained in the financial system (primarily during the pre-2008 period) and that this dynamic weakens considerably in the presence of ample cash reserves or abundant liquidity.
+
+4.2 Relative yields
+
+Another factor that could influence investors' incentives to substitute between bank deposits and MMF shares is the relative yield. Intuitively, when MMFs offer yields substantially higher than deposit rates, cash investors have a stronger motivation to shift funds from bank deposits into MMFs.
+
+Based on this intuition, we construct two dummy variables to capture periods when the return for holding MMF shares is high relative to holding bank deposits. The first,
+High MMF-Bank Spread
+, equals one when the difference between MMF net yields and retail deposit rates exceeds its time-series median, and zero otherwise. The second,
+MMF-Bank Spread >
+50
+bps
+, equals one when this difference is greater than 50 basis points. We then estimate the following regression to test how relative yields influence the substitution dynamics between MMFs and bank deposits:
+
+$$$${Growth}_t^{MMF}=\ \alpha\ +\ \beta{Growth}_t^{Bank}+\theta{{HighMMFYield}_t\cdot Growth}_t^{Bank}+\delta{HighMMFYield}_t+\gamma X_{t-1}+\epsilon_t,\ (3)$$$$
+
+where $$X_{t-1}$$ is as defined in Equation (1), and $${HighMMFYield}_t$$ equals 1 when the yield spread between MMFs and bank deposits is either above its historical median or exceeds 50 basis points, depending on the specification.
+
+Table 3 reports the estimated $$\beta$$ and $$\theta$$ coefficients from Model (3), with coefficients on control variables omitted for brevity. To interpret the findings on investors' response to relative yields, it is important to distinguish between periods when money flows into banks and when it flows out. Unlike the previous factorâcash abundanceâwhich influences the overall strength of substitution, the response to the high MMF yield is directional and affects inflows and outflows in distinct ways.
+
+Table 3. Substitution effects under different rate environments
+
+Panel A. High MMF-Bank deposit spread indicator
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Deposit growth
+
+-0.217***
+
+-0.486***
+
+0.067
+
+(0.042)
+
+(0.069)
+
+(0.105)
+
+Deposit growth × High MMF-Bank Spread
+
+0.094
+
+0.403***
+
+-0.282*
+
+(0.065)
+
+(0.108)
+
+(0.155)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.102
+
+0.17
+
+0.092
+
+Observations
+
+1324
+
+752
+
+571
+
+Panel B. MMF-Bank deposit spread greater than 50 basis points indicator
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Deposit growth
+
+-0.180***
+
+-0.412***
+
+0.075
+
+(0.04)
+
+(0.072)
+
+(0.1)
+
+Deposit growth × (MMF-Bank Spread > 50bps)
+
+0.035
+
+0.321***
+
+-0.311**
+
+(0.066)
+
+(0.113)
+
+(0.151)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.094
+
+0.141
+
+0.094
+
+Observations
+
+1324
+
+752
+
+571
+
+Notes: Weekly MMF asset growth is regressed on bank deposit growth and its interaction with indicators of high yield spreads between MMF investments and bank deposits. Panel A uses a high-spread dummy (equal to one if the MMF net yield minus the retail deposit rate exceeds the sample median). Panel B uses a dummy equal to one if this spread exceeds 50 basis points. Column (1) reports results for the sample from Jan 2000 to May 2025 (when deposit rate data are available), while columns (2) and (3) present results for the bank deposit growth and bank deposit contraction subsamples, respectively. Robust standard errors are in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% levels, respectively.
+
+Panel A of Table 3 uses
+High MMF-Bank Spread
+to capture strong response for the MMF yields. Column (1) shows that the interaction between deposit growth and the
+High MMF-Bank Spread
+dummy is statistically insignificant. However, when the sample is split into periods of positive versus negative bank deposit growth, the interaction terms become statistically significant.
+
+Specifically, Column (2) shows that during periods of bank deposit growth, a one-percentage-point increase in deposit growth is associated with a 0.5-percentage-point decline in MMF assets when the yield spread between MMFs and deposits is low. This is consistent with the idea that investors may shift funds from MMFs to bank accounts when MMFs do not offer sufficiently attractive yields to retain their capital. However, when this spread is high, the substitution effect nearly disappears, suggesting that when MMFs offer attractive yields relative to bank deposits, investors are much less likely to withdraw from MMFs even as they increase their bank deposits. Meanwhile, Column (3) shows that during periods of bank deposit contraction, there is no substitution into MMF investments when the yield spread between MMFs and deposits is low. However, when the spread is high, a one-percentage-point decrease in deposits is associated with a 0.3-percentage-point inflow to MMFs. In other words, the substitution effect from bank deposits to MMF investments is concentrated in periods when MMFs offer high yields relative to bank deposit rates.
+
+Panel B of Table 3 uses an indicator variable that takes the value of 1 when
+MMF-Bank Spread
+is above 50
+
+basis points to capture strong incentive to invest in MMFs. The rationale for this alternative measure is that investors may require a minimum yield advantage, i.e., a threshold in the relative spread, before reallocating funds from bank deposits to MMFs. The regression results in Panel B are consistent with those in Panel A. To sum up, the results in Table 3 provide evidence that investors' response to relative yields are a significant factor influencing fund flows between MMFs and banks.
+
+A period that warrants closer examination of investors' response to relative yields is when the policy rate is at the zero lower bound. Two distinct considerations in this environment can lead to different predictions about the substitution dynamics between MMF investments and bank deposits. One view argues that during zero-lower-bound periods, the difference between MMF yields and deposit rates is negligible, giving investors little incentive to reallocate funds between the two products and thus dampening the substitution effect. An alternative perspective suggests that when overall yields are near zero, every basis point may matter, potentially amplifying the substitution effect as investors respond to narrow yield advantages.
+
+To assess which prediction about yield-seeking behavior during zero-lower-bound periods aligns more closely with the empirical evidence, we estimate the following regression:
+
+$$$${Growth}_t^{MMF}=\ \alpha\ +\ \beta{Growth}_t^{Bank}+\theta{{ZeroLowerBound}_t\cdot Growth}_t^{Bank}+\delta{ZeroLowerBound}_t+\gamma X_{t-1}+\epsilon_t,\ (4)$$$$
+
+where $$X_{t-1}$$ is as defined in Equation (1).
+
+Table 4 reports the estimated $$\beta$$ and $$\theta$$ coefficients from Model (4), with coefficients on control variables omitted for brevity. Outside the zero-lower-bound policy regime, investors actively substitute between MMF shares and bank deposits (Column (1)), whether banks experience deposit inflows (Column (2)) or deposit outflows (Column (3)). However, the interaction terms indicate that within the zero-lower-bound regime, such substitution largely dissipates, driven by investors' limited incentive to shift funds from bank deposits to MMFs. These findings align more closely with the first prediction: At the zero lower bound, minimal yield differences leave investors little incentive to shift funds between the two products. It is possible that at the zero lower bound, rather than reallocating between MMFs and bank deposits, investors focus more on shifting funds between safe assets and other capital markets, such as equities or bonds.
+
+Table 4. Substitution in the zero-lower bound environment
+
+Dependent variable: MMF asset growth (weekly)
+
+(1) Full Sample
+
+(2) Deposit growth > 0
+
+(3) Deposit growth < 0
+
+Deposit growth
+
+-0.258***
+
+-0.305***
+
+-0.223***
+
+(0.028)
+
+(0.058)
+
+(0.079)
+
+Deposit growth × Zero-lower bound
+
+0.267***
+
+0.097
+
+0.496***
+
+(0.08)
+
+(0.193)
+
+(0.142)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.129
+
+0.108
+
+0.123
+
+Observations
+
+1585
+
+877
+
+707
+
+Notes: Weekly MMF asset growth is regressed on bank deposit growth and its interaction with a zero-lower bound dummy, equal to one if the lower bound of policy rate is set to be zero. Column (1) reports results for the full sample, while columns (2) and (3) present results for the bank deposit growth and bank deposit contraction subsamples, respectively. Robust standard errors are in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% levels, respectively.
+
+5. Conclusion
+
+Our analysis demonstrates that bank deposits and MMFs function as substitutes for investor's cash management, but the strength of this substitution weakens markedly when cash availability or overall liquidity is abundant in the financial system. Moreover, investors' yield-seeking behavior plays a critical role in shaping investor flows between the two products, with relative yields influencing both the direction and magnitude of substitution.
+
+These findings offer fresh perspectives into the competitive dynamics between banks and MMFs, highlighting how market conditions and relative yield advantage shape investor behavior. They also carry important implications for monetary policy transmission: changes in overall liquidity conditions and interest rate differentials can influence both the channels and composition of funding provision through banks versus MMFs.
+
+1. Our analysis focuses on domestically chartered banks, excluding U.S. branches and agencies of foreign banks.
+Return to text
+
+2. One additional reason for excluding large time deposits is that MMFs invest in negotiable certificates of deposit, which are included in large time deposits. Therefore, by focusing on total deposits excluding large time deposits, we can estimate cleaner substitution effects by isolating the portion of bank deposits that MMFs do not hold.
+Return to text
+
+3. From October 2008 to July 2021, the Fed paid interest separately on required reserves (IORR) and excess reserves (IOER), with our spread calculation based on IOER. Since July 2021, the Fed has eliminated this distinction and instead applies the Interest on Reserve Balances (IORB), a single rate on all reserve balances.
+Return to text
+
+Please cite this note as:
+
+Im, Jay, Yi Li, and Ashley Wang (2025). "What Drives the Substitution Between Bank Deposits and Money Market Funds?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 06, 2025, https://doi.org/10.17016/2380-7172.3914.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

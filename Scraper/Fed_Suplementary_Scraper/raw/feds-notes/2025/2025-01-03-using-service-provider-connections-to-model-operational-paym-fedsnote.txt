@@ -1,0 +1,335 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+January 03, 2025
+
+Using Service Provider Connections to Model Operational Payment Networks
+
+Chase Englund and 
+Zach Modig
+1
+
+1 â Introduction
+
+Due to increasing reliance on technology service providers to facilitate critical functions within financial markets, such as transaction settlement or funds transfer, increased attention is being paid to how disruptions to such technology could impact financial stability. Recent studies have demonstrated that such disruptions can have systemic implications (e.g. Eisenbach, Kovner, & Lee 2020). Recent high-profile cyber-attacks on technology firms such as Finastra, ION Derivatives, and EquiLend have underscored these findings by creating significant disruptions to financial market function. As such, measuring the extent to which markets are dependent on particular technology service providers is becoming increasingly important. Despite this fact, techniques for measuring the degree of operational risk exposure are still nascent. This paper aims to contribute to this body of knowledge by using data on bank connections with payment service providers alongside payments data to illustrate a method for estimating operational risk exposures.
+
+In recent years, the use of metrics and measurements in discussing operational resilience has become more widespread. The introduction of interagency guidance such as 
+Sound Practices for Operational Resilience
+, issued by the US federal banking agencies, as well as international policy such as 
+Operational resilience: Impact tolerances for important business services
+, issued jointly by the Bank of England and the UK Prudential Regulatory Authority, have created greater urgency around answering key questions in how to measure operational resilience outcomes.
+
+A key component of this measurement will involve the estimation of operational risk exposures, as well as constructing realistic scenarios to test how disruption events will impact the ability of banks to deliver services. We aim to advance both of these goals with the contributions in this paper, which will use data on bank connections with service providers to construct a simulated operational network used to facilitate the sending of Fedwire transactions.
+
+In the first part of this paper, we construct a network of banks and payment products using client list data we obtained from technology service providers. By associating each bank in the network with a mean daily Fedwire payments volume, we use this payment data to estimate operational exposures associated with each of the payment service platforms we examine. We also look at some popular benchmarks used in relevant literature (i.e. Curti et al. 2019) and examine how these correlate with the operational exposures we estimate. In the latter part of the paper, we apply network analysis concepts to the model, such as node centrality. We also relate how such concepts can be used to estimate the impact of operational outages such as those resulting from cyber-attacks.
+
+Our results demonstrate the magnitude of daily Fedwire-facilitated payment activity between banks that relies on the use of a third-party payment platform provider. These exposures vary widely across banks of all sizes, and represent a significant portion of daily US GDP. Our results also demonstrate that public benchmarks, particularly total bank assets, can be used to estimate operational risk exposure with regard to payment activity. We find ratios that are consistent across bank sizes. This is useful in cases where bank payment data are unavailable.
+
+Lastly, our results also illustrate how operational network models can be used in assessing the impact of operational risk events. For example, we use node concentration and other network analysis techniques to provide an estimate of first- and second-order payment disruptions stemming from a hypothesized ransomware attack that disables a service provider providing payment platform services. We find that many of the most-impacted firms are not direct clients of the service provider.
+
+The remainder of this paper is organized as follows: Section 2 discusses recent literature on this subject and provides a basis for the empirical analysis that follows. Section 3 is focused on using payment provider connections and payment data to construct exposure estimates and test the reliability of benchmarks. Section 4 provides a network analysis approach to estimating the first and second order effects of a payment service provider outage. The conclusion summarizes our findings and highlights areas for future research.
+
+2 â Modeling Exposures to Service Provider Payment Risk
+
+Recent literature provides some indications of how to construct estimates of operational risk exposure by using Fedwire payment data. For example, in a recent study by Eisenbach, Kovner and Lee (2020), the authors examine a hypothetical cyber-attack that disconnects targeted firms from the Fedwire Funds Service. They use data on intraday payments between banks in the Fedwire Funds Service payment system to estimate the size of the resulting disruption, and further estimate which firms would drop below their average liquidity "impairment threshold" as a result of the event. They estimate that 60% of firms within that payment network would become impaired in the event of the hypothetical scenario they describe. The Fedwire Funds Service payment system services several trillion in transactions per day, and they estimate that a total disruption to service for one of the top 5 payment system users would result in a disruption size several times larger than US daily GDP.
+
+Another recent study that shares a similar premise is found in Kotidis & Schreft (2022). Instead of hypothesizing a disruption event, this paper uses data from an actual cyber event that caused the outage of a third-party software that firms used to send Fedwire payments. They quantify part of the operational impact on banks by measuring Fedwire payments among banks that used the service in comparison with those that did not. Their work finds that firms impacted by the outage sent as many as 36% fewer payments through Fedwire on the first day of the incident, and 16% fewer payments on average through the duration of the incident. This study is important because it provides an actual example of an operational disruption caused by an operational risk event and attempts to quantify the resulting disruption. By estimating a regression coefficient for the reduction in payment activity statistically attributable to this particular cyber event, it provides a plausible estimate of how resilient firms might be to a critical service outage.
+
+While these studies provide insight into how we can estimate the size of an operational disruption using bank payment data, such data is often confidential in nature and difficult to access. For this reason, other related fields, such as the literature on estimating operational risk losses, have had to develop means to use publicly available benchmarks to estimate proximate values for rare events where data are limited. An example of this is found in Curti, Migueis & Stewart (2019). In this paper, the authors examine data on actual operational risk losses as reported as part of the Comprehensive Capital Analysis and Review (CCAR) program. They compare this loss data with several commonly available benchmarks: total assets, risk weighted assets, and gross income. They find reliable correlations between operational risk losses and the benchmark values in a sample of 38 banks. While the application for this paper is primarily directed towards estimating financial losses for the purpose of determining appropriate capital charges, such techniques can also be borrowed and applied to estimating operational disruption sizes. If reliable correlations exist between average aggregate payment activity and benchmark values such as those used in Curti, Migueis & Stewart (2019), then such benchmarks could be useful in estimating how large a financial disruption is likely to result from an outage to a payment service provider servicing a group of banks, so long as the benchmark values for the group of banks are known.
+
+Lastly, we seek to measure the impact of a hypothetical service provider disruption event by developing a network analysis using our data. In order to do this, we incorporate a bipartite network structure directly using linkages between the banks and their payment service provider. Similar network topologies have been studied in the context of systemic risk to the banking system via bank assets (Huang et. al., 2013; Vodenska et. al. 2021). Large, complex firms do not generally rely solely on third-party payment processing vendors to facilitate Fedwire transactions; however, small firms that transact with the large institutions do. By projecting the firm-to-firm network from the firm-payments provider bipartite network, it is clear that even firms who are not direct clients of third-party payment providers are still subject to operational risks associated with payment-provider outages.
+
+3 âExposure Estimates and Benchmarks
+
+Our dataset covers 227 connections between 215 banks and four payment products used by banks to send and receive Fedwire transactions.
+2
+ Most of the banks in the dataset are community banks, although a number of larger banks are also present. The data was collected from supervisory client lists, whereby service providers of payment products provided lists of their bank clients. Only clients who had purchased products used to send Fedwire payments were counted. This data was use in coordination with data on Fedwire payments by banks contained in the client lists. This data contained information on Fedwire payments sent by the banks, including the amount, date, time, as well as the identity of the sender and receiver. By looking at the Fedwire payments activity of the providers' clients, we estimate the volume of transactions that the providers are facilitating. We used a twenty-day sample from dates in August and September of 2023 to construct the sample.
+
+In order to maintain the anonymity of the providers we sampled we do not present the results of this data aggregation here. However, the tables below provide a summary of what the data aggregation looks like, which is the operational risk exposure for each payment product, calculated as a sum of mean daily Fedwire payments of their associated clients. With similar data, industry practitioners should be able to create similar summaries and identify trends similar to those we discuss below.
+
+The relative daily volumes for each payment product were highly idiosyncratic and did not correlate with the market share of their respective service provider. Inbound and outbound exposures were highly correlated and generally of similar magnitude. The range of estimated aggregate payment volumes for the products ranged from the tens of millions for the product with the smallest volumes to the upper billions for the products with the largest volumes. According to the Federal Reserve, the average daily total for Fedwire Funds transfers in 2023 were approximately $4.3 trillion (FRFS 2024), meaning the volumes estimated for these products could represent a significant portion of daily activity in some cases.
+
+Overall, these data illustrated a wide variation in the operational exposure associated with a particular payment service provider depending on the number and size of clients. For example, the provider which facilitated the largest volume of payments did not have the largest overall number of clients, with the high volume being attributed primarily to several large bank clients. Across the providers, large banks tended to account for most of the total exposure. Therefore, while this data illustrated the significant risk that could stem from an outage to an important payment product, it also illustrates the risk stemming from individual banks.
+
+This data is helpful because it gives an estimate of the size of the disruption that would result from an outage to any one of the products in the sample. However, there is some nuance in using estimates such as these to predict the size of an outage. An important aspect of estimating risk exposure is the use of a "disruption coefficient", which discounts the mean daily total transaction volume by some ratio to arrive at an estimate of the actual transaction volume that would become unavailable during an operational disruption. A disruption coefficient is a value between 0 and 1 that estimates the percentage of payments a bank will still be able to send during such an outage. Banks may have alternate payment systems to use in substitute of their primary channel in the event of an outage and may also be able to send payments manually. Prior research (Kotidis & Schreft 2022) has identified a mean drop of roughly 50% in daily Fedwire payments volume when impacted firms lose access to their primary payment system, indicating that firms do indeed have such workarounds. Because this study looked mostly at smaller banks, and larger banks often have sophisticated operational resilience protocols (such as alternative payment systems), there is reason to believe that this drop may be smaller for the largest products whose volumes are dominated by a few large banks.
+
+However, even when we discount the estimates described in Table 1 by up to 50% or more, they still represent significant disruptions that would be likely to have ramifications for orderly financial market function. For example, a two day outage at the largest provider, assuming that client banks were still able to send 70% of their normal payments using workarounds or alternative means, would result in a disruption to the payments market in the order of magnitude of hundreds of billions of dollars. While many missed payments can and will be sent once the disruption ends, large operational disruptions, even if temporary, can represent a significant threat to financial stability (as discussed in Section 2. i.e. Eisenbach, Kovner and Lee, 2020). While payment service providers are certainly not the only (or perhaps even the largest) source of operational risk to markets, these findings highlight the importance of payment system resilience.
+3
+
+Table 1: Example of Inbound/Outbound Payment Exposures by Product Summary Table
+
+Product
+
+Inbound/Outbound Fedwire Exposure
+
+Number of Clients in Data
+
+Product 1
+
+X
+1
+
+Y
+1
+
+Product 2
+
+X
+2
+
+Y
+2
+
+Product 3
+
+X
+3
+
+Y
+3
+
+Product 4
+
+X
+4
+
+Y
+4
+
+Another factor to consider is that many outages do not last for an entire settlement day, and if resolved before settlement, are significantly less likely to have serious financial impacts. The Fedwire payment system ends the settlement day at 1900 EST during trading days. Therefore, the hour between 1800 and 1900 is the most important, and outages which occur lasting past 1900 are most likely to have significant ramifications.
+
+Figure 1 illustrates the mean daily variation in payment volumes across the entire sample. The two highest-volume trading hours were 0700-0800 and 1800-1900. Out of a mean aggregate daily payment volume of $176 billion among the sample banks, approximately 26% of this volume occurs after 1700. The hour between 0700 and 0800 comprises roughly 10% of the total daily mean, and the hour between 1800 and 1900 represented 14% of the total daily mean.
+
+Figure 1. Daily Variation in Payment Volume
+
+Accessible version
+
+What this indicates is that the values expressed in Tables 1 and 2 are occurring mostly at the 
+end of the trading day
+. Therefore, an outage which occurs towards the end of the day is likely to have an impact greater than 50% of the value of the exposures listed in Tables 1 and 2, because banks will have limited time to implement manual workarounds or other means to make payments.
+
+Table 2: Network Centrality by Bank Type
+
+Portfolio Name
+
+Portfolio Group
+
+Number of Central Firms
+
+CBO BHC
+
+Community Bank
+
+8
+
+FBO > $100B
+
+Small Foreign Bank
+
+3
+
+LFBO
+
+Large Foreign Bank
+
+3
+
+LISCC
+
+Large Bank
+
+2
+
+FDIC
+
+NOT FED SUPERVISED
+
+2
+
+CU-NCUA
+
+NOT FED SUPERVISED
+
+1
+
+RBO BHC
+
+Regional Bank
+
+3
+
+RBO SLHC
+
+Regional Bank
+
+1
+
+Data such as this is helpful in contextualizing the importance of technology service providers to financial market function. However, given the difficulty of collecting and sharing such information, it is also a useful exercise to determine how the metrics are correlated with publicly available financial benchmarks, such as total net assets. If reliable correlations can be found, researchers and policymakers can use these more-accessible benchmarks to develop estimates in future work. If aggregate payments activity can be benchmarked to publicly available metrics, then benchmarks can be used in combination with data on connections between banks and payment service providers to create exposure estimates similar to those presented here.
+
+In order to expand our analysis of operational risk exposures, we examine the usefulness of benchmarks in estimating these values. For this, we first examine a commonly available benchmark, total net assets, which is available for all publicly traded institutions.
+
+Given the full sample of 2,464 banks of all sizes, there is a positive correlation between total assets and aggregate payment activity using the random twenty-day sample used to construct the data. There is a strong correlation (60%), and one additional dollar of total assets is associated with 0.131 additional dollars in daily payment activity, given a baseline of approximately $1 million USD. A simple linear model explains about 35% of variation in daily payments. The average ratio of one-day aggregate payments to total assets is 0.129.
+
+Figure 2 provides an illustration of the relationship between total assets and aggregate payment activity among the sample. Particularly for larger banks ($75 billion and above), total net assets provides a good estimate of aggregate mean daily payment activity.
+
+Figure 2. Relationship between Total Assets and Aggregate Payment Activity
+
+Accessible version
+
+These estimates showed some variation across banks of different sizes.
+4
+ The ratio results for the large banks in the sample (those with total assets greater than $100 billion) was 0.137. The correlation between total assets and aggregate daily payment amount for banks of this size was stronger, at about 65%. This indicates that for large banks, the value of total assets provides a good indication of both how large aggregate payment activity is likely to be for an individual large bank and the group of large banks as a whole.
+
+The performance for regional banks was similar. The ratio results for regional banks in the sample (those with total assets greater than $10 billion but less than $100 billion) was 0.175. This indicates that, as a group, these banks tended to have more payments activity relative to their size. The correlation between bank total asset size and payment activity for these banks was weaker, meaning that total assets was not a good predictor of aggregate payments for an individual bank. This is intuitive, because while large banks tend to send larger payments, smaller banks have greater variation in their aggregate daily payment activity (i.e. some smaller banks facilitate large volumes of payments while others do not). However, as with large banks, the value of total assets still provides a good indication of how large aggregate payment activity is likely to be for the group of regional banks as a whole.
+
+The ratio of aggregate payments to total assets was smallest for community banks (0.026), indicating that these banks tended to have less payments activity relative to their size. As with regional banks, the correlation between bank size and payment activity for these banks was also weak.
+
+Another plausible benchmark value that can serve to provide an estimate of daily mean aggregate payment activity is the reported yearly payments activity value taken from Schedule C of the Systemic Risk Report FR Y-15 (see Board of Governors 2020). This report provides various yearly aggregates of bank payment activity in major currencies. These reports are made publicly available by the FFIEC (FFIEC 2022). While not every bank is required to submit a Y-15 report, 24 large banks in our sample did submit this report for the period we examined. In order to examine the relationship between these reported values
+5
+ and the daily mean aggregate payments activity for these banks, we tested the relationship over the twenty day sample in the same manner as total assets.
+
+Generally speaking, most banks reported yearly payments activity that was significantly larger than their total assets. As a result, the ratio for a typical day was quite small, roughly 1/1000th on most days in the sample. This also indicates that these large banks tended to have large payments activity on particular days that comprised a larger portion of their yearly total, for example at quarter or fiscal year ends. Among this sample of large banks, the correlation between bank total asset size, yearly aggregate payment activity, and daily aggregate payment activity was strong. Across the sample of Y-15 reporting banks, the correlation between yearly and daily aggregate payments volume was roughly 90%, the correlation between total assets and daily aggregate payment volume was roughly 87%, and the correlation between yearly aggregate payments volume and total assets was roughly 77%.
+
+In sum, the correlation results for this benchmark measure were quite strong. This indicates that the yearly aggregate payments activity as reported in the Y-15 can serve as a useful alternative measure for benchmarking daily payments activity for large banks, and is likely to be more accurate than using total assets. While the small ratio values indicated that estimates of daily payments activity calculated using this method may be too conservative for certain high-volume days, this feature is likely also present for the total assets estimation method.
+
+For both total assets and yearly aggregate payments, these figures were similar for both inbound and outbound payments exposure. Overall, these results indicate that both total assets and reported yearly aggregate payment activity can be used to get an estimate of aggregate daily payments exposure, particularly for large and regional banks. This is important because these benchmarks are readily available metrics that can easily be used to estimate the payments exposure for groups of banks without the need for actual payments data.
+
+4 â Network Analysis
+
+In order to conduct a network analysis, we used one of the Fedwire sample days to construct a payment network. As discussed previously, the Fedwire data contained information on the payments activities of banks contained within the client lists we collected, including the payment data, time, amount, and the identity of the sender and receiver. In this case, the Fedwire data was filtered to include only transactions involving at least one client firm of Provider 2 payment products as the sender or receiver. Mean pairwise directional transactions were then computed on a per-hour basis. The network and analysis in the sections below uses Fedwire transaction data from 1500 to 1600 hours on the sample date of August 19th, 2023.
+
+The initial network is a directed bipartite network. Edges between client firms of Provider 2 are weighted by the mean pair-wise transaction amount during the date sampled. Therefore, we study the weighted, directed firm-to-firm network projected from the firm-to-Provider 2 bipartite network. This network contains firms that are clients of Provider 2, as well as firms connected to these clients (indirectly connected), and the firms are connected by their payments activity with one another.
+
+We then computed several node centrality measures based on the resulting graph. Centrality measures indicate how important a firm was to the entire network based on the number and volume of payments activity with other nodes in the network. For each centrality measure, the top 15 firms were identified. This results in the identification of 23 
+most important firms
+ across the various centrality measures for the hour analyzed. Of these most important firms, only one bank was a direct customer of Provider 2. Table 2 groups these 23 firms by type.
+
+The banks in the network are grouped by their respective "portfolio", which is a designation based on their size and location (foreign or domestic). As can be seen, central nodes in the Fedwire payments network facilitated by Provider 2 span portfolio groups, to include those outside of the supervision of the Federal Reserve. Outages to Provider 2 will therefore impact those firms, despite the fact that they are not direct customers of Provider 2. It should be noted that we did not quantify these impacts relative to the total Fedwire transactions for these secondary firms, relevant to a full investigation into second-order impacts. In principle, we expect that the actual ripple effect from an outage would likely be significantly larger.
+
+This type of analysis is important because it provides a perspective on which firms are most central to the network of Provider 2 clients and their counterparties. This allows us to estimate which firms would be most impacted by an outage. Notably, only one of the firms identified in the top 23 was a client of Provider 2, illustrating the degree to which a service provider outage could have secondary effects. A disruption to Provider 2 (for example as the result of a ransomware attack that prevents client firms from accessing their software) can therefore be expected to have wide-ranging impacts beyond merely the client firms of Provider 2.
+
+This network analysis can be constructed using any data that connects banks to service providers. By examining the network centrality of a firm, we can determine its importance to a network via a measure other than its aggregate payment exposure. Furthermore, by combining estimates of payment exposures with network data, we can see where the liquidity impacts are likely to be strongest. For example, while Provider 2 was not the largest of the four in terms of payment exposure, impacts from an outage could still have severe liquidity impacts if payment shortfalls are concentrated on vulnerable parts of the network.
+
+5 â Conclusion
+
+This paper proposes a framework for measuring the aggregate operational exposure of banks to payment service providers. In doing so, we establish that some payment service providers are likely to be facilitating a volume of payments that is large enough in size to cause significant disruptions to the financial industry in the event of an outage. We also examine how these exposures compare with publicly available benchmarks. Using several different approaches, we demonstrate that a bank's total assets under management, particularly for large and regional banks, is likely to provide a good indication of their aggregate daily payment activity and can be used to derive a statistically stable ratio that can be used to estimate the payment activity of a group of such banks. Yearly aggregate payments activity, reported by some large banks, can also serve as a useful and potentially more accurate alternative.
+
+Last, we use the network model to conduct analysis on network concentration, which provides an example of how such networks could be used in analyzing the likely impact of operational outages. By combining estimates of the aggregate exposure that banks have to a service provider with data on how those banks are interconnected, we can paint a picture of how such an outage is likely to ripple throughout a financial network. Future extensions of this work could incorporate more complex network analysis techniques to explore secondary or tertiary follow-on effects (for example, see Smolyak et al. 2020).
+
+Our results indicate that data on service provider connections can provide important insights into the extent to which disruptions to such a provider can impact payment networks and by extension the entire financial sector. By combining payment service provider client lists with data or estimates of payment activity, we can generate a picture of the likely financial impact of an outage. As research like that of Eisenbach, Kovner, and Lee (2020) illustrates, large payment disruptions can quickly spiral into financial stability risks. However, just as publicly available data on total assets can help estimate payment activity, analysts need more ways to estimate likely connections between banks and service providers. Some private data companies are now innovating methods by which this can be done. In addition, there is ample room for the exploration of additional benchmarks that can be used to estimate payments activity, as well as other types of financial activity that can be disrupted by outages to software service providers, such as clearing and settlement.
+
+At a time when the landscape of cyber risk is becoming increasingly unpredictable and significant cyber attacks seem more likely, this analysis is an important step in better understanding how such events might impact the financial sector. Increased understanding of how cyber risks can manifest into financial stability events will provide policymakers with better options for ensuring the safety and soundness of global financial markets.
+
+References
+
+Alderson, D. L., Brown, G. G., & Carlyle, W. M. (2015). Operational models of infrastructure resilience. Risk Analysis, 35(4), 562-586.
+
+Argonne National Laboratory (2013). Resilience Measurement Index: An Indicator of Critical Infrastructure Resilience. Study in Partnership with the US Department of Homeland Security.
+
+Bank of England (2019). Building operational resilience: Impact tolerances for important business services. Consultative paper.
+
+Basel Committee on Banking Supervision (2020). Principles for operational resilience. Consultative Document.
+
+Berger, A. N., Curti, F., Mihov, A., & Sedunov, J. (2020). Operational risk is more systemic than you think: Evidence from US bank holding companies. Available at SSRN 3210808.
+
+Board of Governors of the Federal Reserve System (2020). Sound Practices to Strengthen Operational Resilience. Interagency paper.
+
+Board of Governors of the Federal Reserve System (2020). Reporting Forms. FR Y-15 Systemic Risk Report.
+
+Boer, M., and J. Vasquez (2017). "Cyber security and financial stability: How cyber-attacks could materially impact the global financial system," Institute of International Finance, online publication, September.
+
+Crosignani, Matteo, Marco Macchiavelli, Andre F. Silva (2021). "Pirates without borders: The propagation of cyberattacks through firms' supply chains," Staff Report No. 937. New York: Federal Reserve Bank of New York, May.
+
+Curti, F., Migueis, M., & Stewart, R. (2019). Benchmarking operational risk stress testing models. Journal of Operational Risk, 15(2).
+
+Eisenbach, T. M., Kovner, A., & Lee, M. (2020). Cyber risk and the us financial system: A pre-mortem analysis. FRB of New York Staff Report, (909).
+
+Ellul, A., & Kim, D. (2021). Counterparty Choice, Bank Interconnectedness, and Systemic Risk. Bank Interconnectedness, and Systemic Risk (July 14, 2021).
+
+Englund, C. & Sosa, C. (2022). An Approach to Quantifying Operational Resilience Concepts.
+
+Essuman, D., Boso, N., & Annan, J. (2020). Operational resilience, disruption, and efficiency: Conceptual and empirical analyses. International journal of production economics, 229, 107762.
+
+FFIEC (2021). Business Continuity Management, III.A.3 "Impact of Disruption". IT Examination Handbook Infobase.
+
+FFIEC (2022). FR Y-15 Snapshots Reports. 
+National Information Center.
+
+Fisher, R. E., Bassett, G. W., Buehring, W. A., Collins, M. J., Dickinson, D. C., Eaton, L. K., ... & Peerenboom, J. P. (2010). Constructing a resilience index for the enhanced critical infrastructure protection program (No. ANL/DIS-10-9). Argonne National Lab.(ANL), Argonne, IL (United States). Decision and Information Sciences.
+
+FRFS (2024). Fedwire® Funds Service - Annual Statistics (January 26, 2024).
+
+Ganin, A. A., Massaro, E., Gutfraind, A., Steen, N., Keisler, J. M., Kott, A., ... & Linkov, I. (2016). Operational resilience: concepts, design and analysis. 
+Scientific reports
+, 6(1), 1-12.
+
+Healey, J., Mosser, P., Rosen, K., & Tache, A. (2018). The Future of Financial Stability and Cyber Risk. 
+The Brookings Institution Cybersecurity Project
+, October.
+
+Huang, X., Vodenska, I., Havlin, S., & Stanley, H. E. (2013). Cascading failures in bi-partite graphs: model for systemic risk propagation. 
+Scientific reports
+, 
+3
+(1), 1219.
+
+Kopp, Emanuel, Lincoln Kaffenberger, and Christopher Wilson (2017). "Cyber risk, market failures, and financial stability," IMF Working Paper 17/185. Washington, DC: International Monetary Fund, August.
+
+Kotidis, A., & Schreft, S. L. (2022). Cyberattacks and Financial Stability: Evidence from a Natural Experiment.
+
+Martinez-Jaramillo, S., & Battiston, S. (2020). Network models and stress testing for financial stability: the conference.
+
+Moutsinas, G., & Guo, W. (2020). Node-level resilience loss in dynamic complex networks. 
+Scientific reports
+, 10(1), 1-12.
+
+Ros, G., & Schaanning, E. (2020). The making of a cyber crash: a conceptual model for systemic risk in the financial sector. 
+ESRB Occasional Paper Series
+, (16).
+
+Sterbenz, J. P., Çetinkaya, E. K., Hameed, M. A., Jabbar, A., Qian, S., & Rohrer, J. P. (2013). Evaluation of network resilience, survivability, and disruption tolerance: analysis, topology generation, simulation, and experimentation. 
+Telecommunication systems
+, 52(2), 705-736.
+
+Vodenska, I., Dehmamy, N., Becker, A. P., Buldyrev, S. V., & Havlin, S. (2021). Systemic stress test model for shared portfolio networks. 
+Scientific reports
+, 
+11
+(1), 3358.
+
+Warren, Phil, Kim Kaivanto, and Dan Prince (2018). "Could a cyber attack cause a systemic impact in the financial sector?" 
+Quarterly Bulletin
+, 2018 Q4. London: Bank of England, Fourth Quarter.
+
+1. The authors are thankful to Antonis Kotidis and Stacey Schreft for their helpful guidance and assistance with this research. The views expressed in this paper are those of the authors and do not necessarily reflect those of the Federal Reserve board of Governors or the Federal Reserve System.
+
+Chase Englund - Analyst, Specialized Policy.
+
+Zach Modig - Analyst, Policy Research and Analytics. 
+Return to text
+
+2. The date the sample was taken was 12/31/2021. While some banks may have switched providers or closed, these estimates still reflect typical values. 
+Return to text
+
+3. As illustrated in Table 1 by the volume of payments stemming from just a few large banks, a payment stoppage at such a bank due to an operational issue is also a significant source of operational risk. This work should not be read to imply that operational outages are more likely at payment service providers than at other financial services institutions. 
+Return to text
+
+4. Among the sample, the total number of large banks in the sample was 32. The total number of regional banks in the sample was 137. The total number of community banks in the sample was 2,291. 
+Return to text
+
+5. For our analysis, we used item "RISKM390" from the Y-15, which records yearly aggregate payment activity in all currencies. 
+Return to text
+
+Please cite this note as:
+
+Englund, Chase, and Modig, Zach (2025). "Using Service Provider Connections to Model Operational Payment Networks," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 03, 2025, https://doi.org/10.17016/2380-7172.3515.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

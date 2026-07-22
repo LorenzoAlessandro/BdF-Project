@@ -1,0 +1,222 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+February 03, 2022
+
+Using Distributed Ledger Technology for Payment Directories
+
+Peter Lone, Kumar Nagarajan, Trish Supples, and Paul Wong
+1
+
+Introduction
+
+The use of widely accessible and comprehensive payment directories can enable a safer, more efficient, and more accessible payments system. Payment directories, which are informational databases that support the exchange of payment information, could allow for more end-user convenience, easier fraud mitigation techniques, greater payment routing accuracy, easier switching of service providers, and faster exchange of e-invoices and remittance information. Two common types of payment directories include a peer-to-peer (P2P) payments alias directory to support consumer payments and a business-to-business (B2B) e-invoicing registry to support business payments.
+
+Currently, payment directories in the United Statesâboth P2P and B2Bâare highly fragmented and not interoperable. Directories operate in closed ecosystems because service providers treat their network and accompanying information as a valuable asset. Closed ecosystems typically arise from a lack of common standards, which may lead a firm to protect a network that they have spent months and years building over time. Distributed ledger technology (DLT) has the potential to change this dynamic by offering new ways to think about how directory services can operate. A potentially defining feature of DLT is that it allows information exchange without the need to transfer ownership of data assets through a distributed (and possibly federated) database model.
+
+Distributed ledgers have the potential to provide new opportunities for value creation and to address market inefficiencies by reducing the costs of managing a common ledger, democratizing control of information among participants, eliminating the need for a central entity to manage the database, and allowing for localized control of potentially sensitive business and customer information. DLT encompasses the processes and related technologies that enable participants in a network to maintain a synchronized, distributed ledger without the need for a central administrator.
+2
+ Cooperative management of a common directory could connect separate directories in support of greater payments efficiency.
+
+Payment directories
+
+Payment directories enable payers to send money more easily by supporting a more efficient lookup of payee information, such as which payment system to use, which account to pay, and what bills may be outstanding. There are two broad types of payment directories: payment (or account) alias directories that support consumer payments and business registries that support business-to-business (B2B) payments and the delivery of supporting information like invoices and remittance information. Payment alias directories typically tie a public identifier, such as a telephone number or email address, to a payment account at a bank or elsewhere. B2B registries can support a variety of data lookups, including information on the routing of e-invoices and payment details, such as where and how to send payments. The registries may only carry metadata details for routing and no sensitive information that is considered a business asset.
+
+Payment alias directories
+
+When consumers make electronic payments, they typically use retail bank accounts. In such cases, the payer needs to know the transacting bank routing number and associated account to initiate the payment. This requires a payer to provide a 9-digit bank routing number followed by an account number that could be 17 digits long for the payment order. Entering these numbers manually into a payment order is cumbersome and allows for data entry mistakes. Over the past two decades, new payment services have emerged that permit users to originate or validate payments with easy-to-remember public information such as a phone number, email address, or username.
+
+Zelle operates the largest such payment alias directory for bank-initiated transactions in the United States, and Venmo and PayPal are two nonbank payment service providers (PSPs) whose payment services have also driven the use of aliases in the United States.
+3
+ All three services allow users to link their account information to an email address or phone number. In the case of Venmo and PayPal, users can also send payments using a user-generated identifier. The three services are not interoperable, even though Venmo and Paypal are owned by the same company. Indeed, most payment networks operate in closed ecosystems; users can send payments to only other users on the platform.
+
+A common payment alias directory, or a directory of directories, could improve efficiency and integrity in the payments market. Payments made using alias information, for example, could avoid a situation where an individual or business does not have an individual's latest bank account information. Inaccurate bank account information could delay receipt of a payment. In addition, a payment alias directory could enhance consumer choice by reducing the costs of switching payment service providers, including switching between banks.
+4
+ The use of an alias could eliminate the need to inform counterparties of service provider account changes.
+
+Such a common directory, or directory of directories, could be built in several ways, depending on market objectives. Figure 1 outlines how a directory service could fit into the broader payments landscape. If a payer uses an alias of a payee in lieu of the person's banking information, the payer's bank or other payment service provider could retrieve the payee's banking information using the designated alias. A payment alias database could provide guidance on where to route the payment, which could include information on which payment system to use and the associated account numbers. Depending on design, nonbank service providers could also be included to support alias interoperability between bank and nonbank systems.
+
+Figure 1. Stylized process flow for payment alias directory in a payment transaction
+
+ 
+
+Accessible version
+
+Business-to-business payment registries
+
+Payment directories can also be used in B2B payments, including e-invoicing and bill payment routing.
+5
+ Companies often receive paper invoices from trading partners. Paper invoices may require manual processing and are therefore subject to processing errors and delays. E-invoicing, in contrast, can be received and paid by automated processes. While e-invoicing is gaining momentum in other jurisdictions, e-invoicing represented only 25 percent of invoices in the United States as of 2019.
+6
+ This relatively low number compared to other markets can be attributed to technical hurdles including the existing IT infrastructure and fragmented ecosystems supporting e-invoice delivery.
+7
+
+A B2B registry could facilitate information lookup and e-invoice exchange across a fragmented landscape.
+8
+ The registry would allow a business or its service provider to discover important information about the e-invoice processing capability of a recipient, including what types of documents the recipient can receive, in what format, and with which service provider. Figure 2 highlights how the directory could allow a user to discover e-invoicing information in the proposed "four-corner network" (that is, the business, access point A, access point B, and the customer) being considered by industry.
+9
+ The B2B registry could connect different service metadata publishers (SMPs).
+10
+ The SMPs maintain the information about which service provider works with the target business to receive the e-invoice or other electronic document like payment remittance information. This model allows SMPs to maintain the metadata of their customers, providing localization of data.
+
+Figure 2. Stylized process flow for queries to B2B e-invoice registry
+
+ 
+
+Accessible version
+
+DLT for decentralized and distributed recordkeeping
+
+DLT provides a different way to maintain records, which could be especially useful in certain circumstances. While traditional technologies for recordkeeping rely on a central entity managing updates to a single ledger, DLT enables the management of synchronized ledger copies by multiple participants in a network.
+11
+ Participants can simultaneously propose, validate, and record updates, also called "state changes," to the network's distributed ledger. State changes are often made by grouping changes in a batched transaction referred to as a block, with new blocks including references to their preceding blocks in a data structure known as a blockchain.
+12
+ State changes are replicated across the entire network, creating a resilient shared database. Figure 3 shows how a distributed ledger differs from a traditional one.
+
+Figure 3. Traditional vs distributed ledger
+
+Note: The distributed ledger diagram is modified from CPMI (2017).
+
+Accessible version
+
+DLT systems can be open (that is, permissionless) or closed (permissioned) networks. In a permissionless network, anyone can participate in the network's activities. There is no central entity managing the arrangement, and all participants have the same rights to update the DLT's ledger. In a permissioned system, only authorized users can update the ledger. Authorization is typically managed by some administrator that serves as a gatekeeper for the network. The gatekeeper could also assign different roles in the arrangement (for example, deciding which participants can submit transactions, which can validate transactions, and which can only look up information).
+
+DLT leverages several technologies to create a synchronized authoritative ledger. Authorized participants (or nodes) submit transactions, commonly known in DLT as "proposed state changes," to the network by cryptographically signing the transaction.
+13
+ The signed transactions are then broadcast to all the nodes in the network for processing and replication. This processing and replication are performed using an agreed-upon method for achieving consensus from participating nodes that the transaction can now be added to the shared ledger. State changes to the ledger are transparent to all network participants. In some cases, such as when the ledger is publicly available, state changes to the ledger are available to everyone.
+
+Using DLT for directory services
+
+Given the fragmentation of payment directories in the United States, decentralized recordkeeping could be an attractive proposition for the development of a common directory. A universal directory could be operated jointly by directory service providers and all related payments information would be stored within a single database. For example, a telephone number or email address in the directory would contain the payees name, bank routing number, and bank account number. Alternatively, a federated directory could support a "directory of directories." For example, looking up a telephone number would direct users to a second, proprietary database containing payment-related information.
+
+A stylized system design option 
+
+There are many designs that support the use of DLT in building a decentralized recordkeeping solution to facilitate the exchanges of information needed prior to routing a payment or invoice. One novel design to support recordkeeping for payment alias and business remittance information involves the use of smart contracts and tokens. A smart contract is a collection of code that executes the contract's functions and the data that represents its state on a blockchain. A token, in this context, is a representation of data that has been created by the smart contract on the blockchain. Figure 4 provides a high-level schematic of how such a recordkeeping arrangement could work.
+
+Figure 4. Stylized process flows for a payment alias non-fungible token on a blockchain
+
+Accessible version
+
+In the schematic above, a user initiates a smart contract, through a network participant (or node). The smart contract would create a unique cryptographic element on the blockchain.
+14
+ This unique cryptographic element, known as a non-fungible token or "NFT," is a representation of a payment alias, like an email address, phone number, or other identifier.
+15
+ A service provider or even an individual could own these NFTs, depending on the design of the system. Changes to the underlying information in an NFT can be managed by a similar process using smart contracts. This would allow for an up-to-date record of payment information being available for all participants with the appropriate credentials to view them. Smart contracts would also be used to look up alias information on the blockchain.
+
+Creating, modifying, and burning an NFT on the blockchain may incur a small transaction fee depending on design. For public blockchains, creating, modifying, and burning an NFT would involve computation on the blockchain. Such activity could be subject to a "gas fee," which is akin to a transaction fee for the processing of the smart contract. Lookup of information on a blockchain would likely not incur any fee because (1) the information may be public information or (2) the lookup function does not require computation in effecting the smart contract to lookup information. Permissioned systems can also disable gas fees if desired or charge transaction fees using a different mechanism.
+
+Key decision points in system design
+
+Designing a DLT-based directory service will involve a number of key decisions. Perhaps first and foremost is deciding whether the system will be permissioned or permissionless. In permissioned systems, key decisions are needed on different roles and responsibilities of participants. This determination will have significant impact on the design of the system, its foundational technology, its functionality, and its risk profile. A permissioned system, for example, would likely require a central administrator to control access to the network. A permissionless system would not require a central administrator but would require a consensus mechanism for synchronizing the ledger.
+
+A second set of key decisions is who can propose and validate state changes to the ledger, what data are maintained on the ledger, and who can see the ledger. In some use cases, participants may prefer a public information arrangement in which information is readily accessible to everyone (such as for domain name systems). In other cases, participants may choose to limit sharing of personally identifiable information (such as telephone-based alias information) or other sensitive information (such as individual bank account information). The use case, along with industry preferences, will determine the degree of transparency and openness of the underlying data. Technology can accommodate a range of industry preferences on data transparency.
+
+An equally important design decision for any DLT system is governance, particularly for a system that may effectively serve as an industry-operated utility. Where there is a central authority or administrator, typically needed for a permissioned system, governance of that entity can be supported through a board of directors, a management committee, and an auditing firm. For a permissionless system, governance may become much more challenging. An industry collective or "advisory" committee may be able to provide some degree of coordination among stakeholders. For payment directories, decentralized arrangements â regardless of whether they are permissioned or permissionless â may benefit from an industry body to provide governance of the arrangement.
+
+There are other design considerations for the use of DLT for directories. Some considerations include whether to use smart contract events to enable participants to "listen" for or receive notifications of directory updates or certain relevant activity. This feature, for example, can alert participants in an information exchange that action is needed on their part to complete relevant activity in progress. How maintenance of the directory metadata will be performed is another important consideration. For example, if an end user is moving their account and alias to a new provider, will the initial provider update the record with the new provider's information and then seek a user authorization? Or will the new provider initiate a transfer of the record and seek user authentication? These and other questions require further exploration.
+
+Conclusion
+
+DLT allows for a rethinking of how information is kept, shared, and managed. Despite the potential power of this technology, it has not been widely adopted in the financial sector or elsewhere. This is in part because DLT was built for a specific purpose for which they may not be many practical use cases. And where some deployments exist, the arrangements require tremendous resources to maintain. The payment directory and registry landscapes, however, offer areas for potential exploration, because decentralized management and use of high perceived value data assets to support a common directory may be useful and indeed may increase efficiency of the ecosystem. The information exchanges associated with a payment alias directory or a business registry could capitalize on DLT's capabilities to promote secure, efficient, exchanges of information that result in a higher level of data integrity.
+
+References
+
+Bijlsma, Michiel, Harro Boven, Carin van der Cruijsen, and Marc van der Maarel (2020), 
+Lowering switching barriers in the Dutch payment system: no number portability, but use of alias?
+ (PDF)
+, Amsterdam: De Nederlandsche Bank.
+
+Business Payments Coalition (2019), 
+Overview of e-Invoice Interoperability Framework
+ (PDF)
+, November.
+
+Business Payments Coalition (2021), 
+e-Invoice Exchange Framework: Approach to Managing a Federated Registry Services Model in a Four Corner Network
+ (PDF)
+, March.
+
+Committee on Payments and Market Infrastructures (2017), 
+Distributed ledger technology in payment, clearing, and settlement
+ (PDF)
+, Basel: Bank for International Settlements, February.
+
+Hers, Johannes, Ward Rougoor, and Marilou Vlaanderen (2020), 
+Costs and benefits of alias use in the payment system
+ (PDF)
+, Amsterdam: SEO, March.
+
+Mills, David, Kathy Wang, Brendan Malone, Anjana Ravi, Jeff Marquardt, Clinton Chen, Anton Badev, Timothy Brezinski, Linda Fahy, Kimberley Liao, Vanessa Kargenian, Max Ellithorpe, Wendy Ng, and Maria Baird (2016), "
+Distributed ledger technology in payments, clearing, and settlement
+," 
+Finance and Economics Discussion Series
+ 2016-095, Washington: Board of Governors of the Federal Reserve System.
+
+Payments, Standards and Outreach Group (2016), 
+U.S. Adoption of Electronic Invoicing: Challenges and Opportunities
+ (PDF)
+, Minneapolis: Federal Reserve Bank of Minneapolis, June 30.
+
+Yaga, Dylan, Peter Mell, Nik Roby, and Karen Scarfone (2018), 
+Blockchain Technology Overview
+ (PDF)
+, Gaithersburg, MD: National Institute of Standards and Technology, October.
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of any other person associated with the Federal Reserve System. The authors would like to thank Guy Berg, Todd Albers, and Angela N Lawson of the Federal Reserve Bank of Minneapolis; Alexander Lee of the Federal Reserve Bank of New York; and David Mills, Katya Delak, Jillian Mascelli, Kirstin Wells, and Sarah Wright of the Federal Reserve Board for their contributions to and assistance with this note. 
+Return to text
+
+2. For additional information on DLT, see, for example, Yaga et al. (2018) and Mills et al. (2016). 
+Return to text
+
+3. Today, Zelle has more than 1,000 banks in its network with over 100 million customers. See https://www.zellepay.com/partners. 
+Return to text
+
+4. For a discussion on the use of payment aliases and bank switching costs in the Netherlands, see Hers, Rougoor, and Vlaanderen (2020) and Bijlsma et al (2020). 
+Return to text
+
+5. Payments, Standards and Outreach Group (2016). 
+Return to text
+
+6. Business Payments Coalition (2019). 
+Return to text
+
+7. Payments, Standards and Outreach Group (2016). 
+Return to text
+
+8. Fragmentation occurs when different customers use different systems that are non-interoperable. Trading partners belonging to different systems must then choose between subscribing to multiple systems to achieve electronic transmission of the information or make other arrangements. 
+Return to text
+
+9. For additional information on the "four-corner network" being proposed by industry, see Business Payments Coalition (2021). 
+Return to text
+
+10. In a four-corner model, an SMP maintains information on a participant's e-invoicing capabilities. The metadata could include information about business document types and formats that the participant can receive electronically, their business processes, and what information it expects to receive within a certain business document. The metadata could also include information about the technical endpoints and transport protocols where the participant can receive business documents. 
+Return to text
+
+11. Distributed ledger designs can vary significantly based on the use case. For example, a distributed ledger could also be operated by a central entity that maintains all copies of the ledger. 
+Return to text
+
+12. As more blocks are added to the blockchain it becomes more difficult to modify information in a previous block. This difficulty of modifying previously recorded information holds under certain algorithms for achieving consensus on the canonical set of blocks, notably proof-of-work in a public context. Other consensus algorithms may make changes to historical blocks similarly evident but will not make the changes difficult to perform. In addition, a permissioned ledger with a single administrator (or small set of administrators) may be unilaterally revised by those administrators regardless of the consensus algorithm used by the ledger, though this may again be evident to any participant replicating previous versions of the ledger locally. 
+Return to text
+
+13. A cryptographic signature provides other participants a mechanism to verify the integrity and authenticity of the transaction. 
+Return to text
+
+14. Not all blockchains support the issuance and use of NFTs. More-popular blockchain solutions that do include the Ethereum, Quorum, and Solana networks. 
+Return to text
+
+15. Although every NFT is unique, its contents are not necessarily unique. For example, there could be two NFTs for the same payment alias. Additional programming would be required to ensure that there is only NFT per payment alias. That is, each payment alias would have only one NFT. 
+Return to text
+
+Please cite this note as:
+
+Lone, Peter, Kumar Nagarajan, Trish Supples, and Paul Wong (2021). "Using Distributed Ledger Technology for Payment Directories," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 03, 2022, https://doi.org/10.17016/2380-7172.3042.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

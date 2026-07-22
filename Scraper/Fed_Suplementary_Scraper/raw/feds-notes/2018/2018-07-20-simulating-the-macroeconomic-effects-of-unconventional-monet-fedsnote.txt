@@ -1,0 +1,213 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+July 20, 2018
+
+Simulating the Macroeconomic Effects of Unconventional Monetary Policies
+
+Hess T. Chung
+, 
+Cynthia L. Doniger
+, 
+Cristina Fuentes-Albero
+, 
+Bernd Schlusche
+, and Wei Zheng
+1
+
+1. Introduction
+
+Monetary policy analysis at many central banks employs large-scale macroeconomic models, whose endogenous dynamics link the central bank's policy instruments, via their effect on financial conditions, to policy-relevant macroeconomic outcomes, such as inflation and unemployment. While differing in the details, models of monetary transmission in use at central banks have largely converged upon a common core set of structural assumptions. In particular, these models take as given an estimated degree of nominal rigidity in the economy. As a result of these nominal rigidities, a higher expected path for the short-term interest rate raises real interest rates. In turn, higher real interest rates provide households and firms additional incentives to defer current spending. This mechanism restrains real activity and, hence, inflation.
+
+Prior to the Great Recession, many central banks employed a short-term interest rate as their focal policy instrument. However, during the Great Recession, in an number of cases, the effective floor on these short-term rates became binding and central banks began to employ additional tools in order to provide additional stimulus. In particular, in the United States, the Federal Reserve significantly expanded its holdings of Treasury securities and agency mortgage-backed securities (MBS) in an effort to exert downward pressure on term premiums embodied in longer-term interest rates (see, for example, Bonis et al., 2017). The introduction of these asset-purchase programs has motivated the development of highly detailed models of the Federal Reserve's balance sheet (Carpenter et al., 2015), as estimates of their effect on longer-term interest rates depend on the projected path of the Federal Reserve's securities holdings.
+
+A number of recent efforts have been undertaken to integrate balance sheet policies in the monetary transmission mechanism outlined by macroeconomic models.
+2
+ In particular, under the assumption that balance sheet policy affects the economy mainly through term premium effects (TPEs) on the yield curve, which then transmits conventionally to real activity and inflation, it is possible to simulate macroeconomic effects of balance sheet policies using the same large-scale models used in the assessment of conventional policy.
+3
+
+However, the integration of large-scale macroeconomic models and detailed models of the central bank's balance sheet is challenging because of the models' mutual dependence. In balance sheet models, the size and composition of the balance sheet depends on other macroeconomic variables, such as the yield curve and mortgage rates, whose dynamics are specified in macroeconomic models. However, macroeconomic models will also feature channels through which the TPEs affect those conditioning variables.
+4
+ In this note, we describe a method for calculating simulation results that are simultaneously consistent with both models.
+5
+
+In this note, we also demonstrate the benefits of the integrated model by analyzing a policy that entails an endogenous balance sheet response.
+6
+ In particular, we argue that the integration of macroeconomic and balance sheet models is particularly relevant for assessing downside risks to the macroeconomy that may warrant active unconventional monetary policy. We emphasize that the scenario presented below is intended only to illustrate the behavior of our model system and should not be taken as an indication of any potential future Federal Reserve policy or as indicative of any policymaker's forecast.
+
+In the following section, we outline the macroeconomic model--the FRB/US model--and the balance sheet model that we use and illustrate their mutual dependence.
+7
+ Then, in Section 3, we demonstrate the integration of the two models via an example of a balance sheet policy for a particular scenario.
+
+2. The Models and their Mutual Dependence
+
+For our simulations, we employ a linearized version of the FRB/US model. The FRB/US model is a large-scale quarterly model of the U.S. economy used in forecasting and policy analysis at the Board of Governors of the Federal Reserve System. To model the Federal Reserve's balance sheet and to estimate its effects on term premiums, we follow the methodology in Ihrig et al. (2018), which relies on the term structure model developed by Li and Wei (2013).
+
+The FRB/US and balance sheet models are integrated as follows. At a given time, macroeconomic outcomes in the FRB/US model can be represented as
+
+y = f
+ (Ï, Îµ),               [1]
+
+where 
+y
+ is the vector of endogenous variables (GDP, interest rates, etc.), Îµ is a vector of error terms/shocks, Ï represents the anticipated path of term premium effects (TPEs) on 5-, 10-, and 30-year Treasury yields induced by the central bank's balance sheet policy, and 
+f
+ is a function that is generally linear but that can capture nonlinearities linked to the effective lower bound (ELB) on the policy rate.
+ In turn, the TPEs in the balance sheet model depend, through a function h, on the expected evolution of macroeconomic variables--including the nominal yield curve, mortgage rates, and nominal GDP--as well as the Federal Reserve's balance sheet policy (BSP)--the reinvestment policy and the size, duration, and economic triggers of any potential LSAP program. We represent the TPEs as
+
+Ï = h 
+(
+y, BSP
+)            [2]
+
+We calculate equilibrium outcomes by finding paths of the term premium effects and macroeconomic outcomes consistent with both equation [1] and equation [2].
+
+Mechanically, we calculate these paths by seeking a fixed point to equations [1] and [2] using an iterative "guess-and-verify" strategy: given an initial guess for the path of the TPEs stemming from a particular configuration of the Federal Reserve's balance sheet, Ï
+0
+, the FRB/US model is simulated, and the resulting outcomes for macroeconomic variables, 
+y
+1
+, are passed to the balance sheet model, which produces updated paths for the TPEs under the given BSP, Ï
+1
+. Based on the discrepancy between the initial guess and the updated paths, (Ï
+1
+ â Ï
+0
+), the paths for the next iteration, Ï
+2
+, are updated. This process continues until the discrepancy for the 10-year TPE is less than 1/2 basis point at any point in the simulation.
+
+In settings where agents can revise their expectations due to the arrival of unexpected shocks, consistent simulation of the coupled system requires careful attention to the information set used to evaluate expectations. More specifically, in our simulations, financial market participants and firms are assumed to have expectations which are consistent with the model dynamics, 
+in the absence of future shocks
+; this is also the assumption made when solving the balance sheet model.
+9
+ Accordingly, as agents update their expectations in reaction to unforeseen shocks, the fixed point must be recalculated.
+
+3. Illustration of the Information Set and Fixed Point Problems in the Integrated System
+
+In this section, we review the technical challenges arising when integrating the FRB/US model and the balance sheet model. In particular, we show the effects on economic outcomes of changes in agents' information set and the relevance of solving accurately for the fixed point between the two models.
+
+To illustrate the operation of the integrated system, we pick an arbitrary history of stochastic shocks in which an LSAP is endogenously triggered by a set of adverse shocks that brings the federal funds rate to the ELB. In this scenario, as information sets evolve in response to shocks, there is a large degree of variation in agents' projections of the balance sheet and, hence, sizeable two-way interactions between the FRB/US model and the balance sheet model.
+10
+
+For the purposes of this scenario, we choose a balance sheet policy that prescribes the resumption of reinvestment of principal payments on the Federal Reserve's securities and initiates purchases of $85 billion per month in Treasury securities beginning in the first month in which the federal funds rate drops below 13 basis points. These purchases continue until the federal funds rate rises above 25 basis points. For the duration of the purchase program and, subsequently, for the 12 months after the conclusion of the program, principal payments from both Treasury securities and mortgage-backed securities (MBS) are fully reinvested. After that period, only principal payments on Treasury securities in excess of $30 billion per month and on agency securities in excess of $20 billion per month are reinvested until the balance sheet size normalizes, which is expected to occur when reserve balances decline to a level of $500 billion.
+
+Figure 1 displays the evolution of the projected paths for macroeconomic variables, the TPEs, and the Federal Reserve's balance sheet size as the information set gets updated in response to shocks. The solid black lines represent the realized simulated paths. The dash-dotted green lines indicate the projected paths conditional on information available in the first quarter in which the unemployment rate rises, which is two quarters before the ELB binds. The dashed red lines represent the projected paths in the quarter when the ELB first binds. The sizeable differences between the expected paths at different points in time and the realized path in the simulation illustrate how sensitive the integrated model is to changes in the information set.
+
+As indicated by the dash-dotted green lines, as of two quarters before the federal funds rate reaches the ELB, agents in the model expect a mild economic deterioration in the medium run with the unemployment rate rising slowly to 4 1/2 percent (Figure 1.A) and the inflation rate falling in the next few quarters (Figure 1.B). As shown in Figure 1.C, the federal funds rate falls accordingly. Consistent with the rule for endogenous balance sheet policy, agents do not anticipate an asset purchase program by the Federal Reserve as shown in Figure 1.F.
+
+Once the ELB binds and the purchase program is initiated, expectations shift markedly, as shown by the dashed red lines. In the seventh quarter of the simulation, agents expect the unemployment rate to peak at 6.1 percent, while inflation is expected to bottom out at about 1/2 percent. The federal funds rate is thus expected to remain below 1/4 percent for ten quarters and Federal Reserve assets are expected to rise to $5.5 trillion, exerting a sizeable negative effect on the 10-year term premium.
+
+Ultimately, shocks unanticipated from the perspective of the seventh quarter of the simulation continue to raise the unemployment rate to 6.6 percent by the eighth quarter, but unemployment then declines much more rapidly and inflation is higher than expected. With these surprisingly favorable shocks, the federal funds rate exits the ELB several quarters earlier than initially expected. In accordance with the balance sheet rule, the balance sheet reaches around $4.8 trillion, and the effect on term premiums is notably reduced relative to previous expectations at all horizons, even well before the actual cessation of purchases.
+
+In Figure 2, we illustrate in detail how we have ensured consistency between the balance sheet model and the FRB/US model. To that end, we consider the expected dynamics in the seventh quarter when the federal funds rate reaches the ELB and the LSAP program is triggered. Absent any additional feedback from the balance sheet model, the paths for the macroeconomic variables in the FRB/US simulation imply an LSAP program under which the Federal Reserve's balance sheet peaks at around $6 trillion, as indicated by the solid blue line in Figure 2.A. A program of this size puts appreciable downward pressure on longer-term interest rates as demonstrated by the corresponding path for the TPEs on the 10-year Treasury yield, depicted as the solid blue line in Figure 2.B.
+
+Figure 1: Illustrating the effects of evolving information sets
+
+
+Note: The solid black line is the ex-post path, the dash-dotted green line is the projected path conditional on information as of the quarter before the ELB binds, and the dashed red line is the projected path conditional on information as of the quarter when the ELB first binds.
+
+Accessible version
+
+In the next iteration, given these estimates for the TPEs, the FRB/US model generates updated macroeconomic variables. Specifically, the policy accommodation provided by the LSAP program leads to improved macroeconomic outcomes, which, in turn, imply a smaller program--and therefore a smaller increase in the balance sheet (the dotted blue line in Figure 2.A) than initially assumed by agents. The updated TPE path is depicted as the dotted blue line in Figure 2.B. The final paths for the TPEs as well as the balance sheet are reached after 4 iterations and are depicted as the dashed red lines.
+11
+ These paths correspond to the projected paths as of quarter 7--the dashed red lines--in Figure 1.
+
+4. Summary 
+
+This note develops a new methodology that can be used to simulate macroeconomic outcomes in the presence of rules governing both the federal funds rate and the size and composition of the Federal Reserve's balance sheet. The integrated system facilitates analysis of monetary policy as a coordinated set of policy instruments and is an innovation compared to existing machinery which evaluated each instrument in isolation. We illustrate the usefulness of this approach by studying how macroeconomic outcomes, the federal funds rate, and the central bank's balance sheet jointly evolve when both the central bank's short-term interest rate and balance sheet policies follow a "rule" based on economic developments.
+
+Figure 2: Illustrating convergence
+
+
+Note: The solid blue lines indicate the projected paths for the Federal Reserve's balance sheet (top panel) and the TPE (bottom panel) in the first iteration. The dotted blue lines show the paths for the second iteration. The dashed red lines show the outcomes after the final iteration.
+
+Accessible version
+
+References
+
+Bonis, Brian, Ihrig, Jane, and Wei, Min: "The Effect of the Federal Reserve's Securities Holdings on Longer-term Interest Rates", FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 20, 2017
+
+Brayton, Flint, Mauskopf, Eileen, Reifschneider, David, Tinsley, Peter, and Williams, John (1997): "The Role of Expectations in the FRB/US Macroeconomic Model", 
+Federal Reserve Bulletin
+, April, 227-245.
+
+Carpenter, Seth, Ihrig, Jane, Klee, Elizabeth, Quinn, Daniel, and Boote, Alexander (2015): "The Federal Reserve's Balance Sheet and Earnings: A Primer and Projections", International Journal of Central Banking, vol. 11, pp. 237-283.
+
+Chen Han, Cúrdia, Vasco, and Ferrero, Andrea (2012): "The Macroeconomic Effects of Large-Scale Asset Purchase Programmes", The Economic Journal, vol. 112, pp. 289-315.
+
+Christensen, Jens H. E., Lopez, Jose A., and Rudebusch, Glenn D. (2015): "A probability-based stress test of Federal Reserve assets and income", Journal of Monetary Economics, vol. 73, pp. 26-43.
+
+Chung, Hess, Laforte, Jean-Phillipe, Reifschneider, David, and Williams, John C. (2012): "Have We Underestimated the Likelihood and Severity of Zero Lower Bound Events?", Journal of Money, Credit and Banking, Supplement to vol. 44, pp. 54-79.
+
+Cúrdia, Vasco, and Woodford, Michael (2011): "The Central-Bank Balance Sheet as an Instrument of Monetary Policy", Journal of Monetary Economics, vol. 58, pp. 54-79.
+
+Engen, Eric M., Laubach, Thomas, and Reifschneider, David (2015): "The Macroeconomic Effects of the Federal Reserve's Unconventional Monetary Policies", FEDS Working Paper No. 2015-005
+
+Ferris, Erin E. Syron, Kim, Soo Jeong, and Schlusche, Bernd: "Confidence Interval Projections of the Federal Reserve Balance Sheet and Income", FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 13, 2017
+
+Ihrig, Jane, Klee, Elizabeth, Li, Canlin, Schulte, Brett, and Wei, Min (2018): "Expectations about the Federal Reserve's Balance Sheet and the Term Structure of Interest Rates", International Journal of Central Banking, vol. 14, pp. 341-390
+
+Kiley, Michael and Robert, John (2017): "Monetary Policy in a Low Interest Rate World", Brookings Papers on Economy Activity, 2017.
+
+Li, Canlin and Wei, Min (2013): "Term Structure Modeling with Supply Factors and the Federal Reserve's Large Scale Asset Purchase Programs", International Journal of Central Banking, vol. 9, pp. 3-39.
+
+Reifschneider, David (2016): "Gauging the Ability of the FOMC to Respond to Future Recessions", FEDS Working Paper No. 2016-068, 2016
+
+1.
+ We thank Michele Cavallo, James Clouse, Jane Ihrig, and David Lopez-Salido for feedback. 
+Return to text
+
+2.
+ For example, Cúrdia and Woodford (2011) and Chen et al. (2012), among others, have incorporated central bank balance sheet policies in macroeconomic models. However, the modeling of the central bank's balance sheet is relatively simple compared with the highly detailed models referred to in the main text. 
+Return to text
+
+3.
+ See, for example, Chung et al. (2012) and Engen et al. (2015). 
+Return to text
+
+4.
+ In particular, the effects of balance sheet policy in the Federal Reserve Board's macroeconomic model--the FRB/US model--are represented by shocks to the equations for term premiums on longer-dated securities. 
+Return to text
+
+5.
+ In other words, simulations of the combined system require that the macroeconomic outcomes from the FRB/US model are consistent with the TPEs from the balance sheet model induced by that macroeconomic configuration, which amounts to solving for a fixed point between the two models. . 
+Return to text
+
+6.
+ Prior work on projections of the Federal Reserve's balance sheet derived from stochastic simulations has focused on the interest rate risk stemming from the Federal Reserve's portfolio (Christensen et al., 2015, and Ferris et al., 2017) and on the distribution of term premium effects (Bonis et al. 2017), but did not allow for endogenous balance sheet responses by the Federal Reserve. 
+Return to text
+
+7.
+ The FRB/US model is one of the macroeconomic models used at the Federal Reserve Board. The basic structure of FRB/US is described in Brayton et al. (1997). 
+Return to text
+
+8.
+ For simplicity, in the remainder of the note, we will abstract from TPEs on 5- and 30-year Treasury yields, and limit the discussion to the 10-year TPE. 
+Return to text
+
+9.
+ The effect of balance sheet policy in the context of the FRB/US model can be sensitive to a number of assumptions. Of particular significance, we assume model-consistent expectations for financial market participants and price-and-wage setters; other forward-looking decision makers are assumed to forecast using VARs estimated on historical data. This configuration of expectations differs from prior work with the FRB/US model, such as Chung et. al. (2012), Reifschneider (2016), and Kiley and Roberts (2017), who assume fully rational expectations on the part of all forward-looking agents in the model. Our more limited assumption is technically useful in the context of stochastic simulations subject to the ELB and provides a relatively conservative perspective on the efficacy of monetary policy. 
+Return to text
+
+10.
+ To illustrate our solution method, we constructed this scenario to imply a number of quarters at the ELB and hence noticeable movements in the balance sheet. It is not necessarily representative of a typical recession under a probability distribution generated by stochastic simulations with the FRB/US model, which would, in any case, depend sensitively on a range of assumptions outside the scope of this note. 
+Return to text
+
+11.
+ The projected paths for the third iteration are not shown in Figure 2. 
+Return to text
+
+Please cite this note as:
+
+Chung, Hess, Cynthia Doniger, Cristina Fuentes-Albero, Bernd Schlusche, and Wei Zheng (2018). "Simulating the Macroeconomic Effects of Unconventional Monetary Policies," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 20, 2018, https://doi.org/10.17016/2380-7172.2225.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

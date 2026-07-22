@@ -1,0 +1,95 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+September 04, 2024
+
+Introducing a Credit Bureau-Based Measure of U.S. Household Debt Service
+
+Daniel Ringo
+
+Each quarter, the Board publishes an estimate of the ratio of aggregate required household debt service payments to income. The numerator of this Debt Service Ratio (DSR) is calculated using estimates of the outstanding balances of household debts in various product categories, their average interest rates, and times until maturity. The denominator is total disposable personal income, sourced from the National Income and Product Accounts of the United States (NIPA).
+
+As described by Dynan, Johnson, and Pence (2003), calculating total required payments from these aggregate measures necessarily involves simplifying assumptions since the joint distributions of balances, interest rates, and terms are not known. To the extent that these assumptions are violated, the estimated amount of scheduled debt service may diverge from the actual amount households are required to pay. For example, the DSR did not account for widespread student loan forbearance during the Covid-19 pandemic. This limitation of the DSR has long been acknowledged but was seen as an inevitable consequence of limited data. From the description of the Data Release on the Board's website:
+
+"The ideal data set for such a calculation would have the required payments on every loan held by every household in the United States. Such a data set is not available, and thus the calculated series is only an approximationâ¦"
+1
+
+Credit bureau data, which were not available at the time the current method for calculating the DSR was implemented, provide a close match to the ideal data set described in the above excerpt. This note explains how I use credit bureau data to construct a new version of the DSR based on direct observation of household debt service obligations. This new version will take the place of the old DSR going forward.
+
+Estimating Aggregate Debt Service Obligations from Credit Bureau Data
+
+The Federal Reserve Bank of New York/Equifax Consumer Credit Panel (CCP) provides the Board with the anonymized credit bureau records of a randomly selected sample of 5 percent of adults in the U.S. with a social security number and a credit record. These data include monthly scheduled payments for each open tradeline (i.e., loan or line of credit) as reported by the servicer to the credit bureau. They also report product type (e.g., mortgage, student loan, credit card, etc.), outstanding balance, the credit limit or maximum balance of the account, origination date, and whether the tradeline has multiple borrowers or co-signers, among other fields.
+
+To calculate total scheduled debt payments, I clean the data to address the following issues:
+
+Duplicates
+. Occasionally, the same tradeline appears duplicated in an individual's credit record. This can happen, for example, when servicing rights are transferred between servicers. Duplicates are identified as tradelines held by the same borrower with identical type, balance, high-credit amount, and origination date. All but one instance of each duplicated tradeline is dropped.
+
+Misreported values
+. Some observations report unrealistic values for scheduled payments, likely corresponding to data entry errors. I drop any observations for which the scheduled monthly payment was greater than the outstanding balance of the loan, or greater than $10 million.
+
+Co
+-
+borrowers
+. If more than one individual is responsible for payment, a loan can appear on each of their credit reports. The CCP samples individuals, not loans, so a simple sum of obligated payments across individuals would double-count loans with a co-borrower and overstate the amount of debt service payments. To adjust for this, I divide in half all payments on tradelines that were reported as a joint account.
+
+After these cleaning steps, all scheduled monthly payments are summed up across tradelines.
+2
+ Scheduled payments on both delinquent and performing loans are included. The sum of payments is then inflated to account for the CCP representing only a random sample of the population.
+3
+ To calculate the DSR, these monthly aggregate payments are annualized and divided by the NIPA aggregate disposable income.
+4
+
+Comparison to the Old DSR
+
+The advantage to calculating the DSR using credit bureau data, rather than via the old method, is that I can use direct observations of required household debt payments. This should improve the accuracy of the measure. However, there are other differences between the measures as well. Coverage of the full range of tradeline types in the CCP only begins in 2005, so the new method lacks the long history of the old version. Furthermore, the reported payments in the credit bureau data and the payments estimated in the old DSR measure slightly different concepts of debt service.
+
+The old DSR was designed to estimate only payments of principal and interest. Particularly for mortgage borrowers, however, the scheduled payment owed to the servicer often includes other payments. Many mortgage borrowers pay property taxes, property insurance, and mortgage insurance obligations (if any is owed) through an escrow account managed by their servicer, and the escrow payments are lumped together with principal and interest into a single monthly mortgage payment. This comprehensive payment is what the servicer reports to the credit bureau. The credit bureau-based DSR therefore covers a somewhat more expansive set of payments than the old DSR does. Escrow payments are typically 1 to 2 percent of the purchase price of the home, so their inclusion could meaningfully affect the measure of DSR.
+
+For comparison purposes, the new credit bureau-based DSR is plotted against the old DSR in Figure 1. The time series begins in 2005, when payment data on all tradeline types became available. The series show similar contours, although the CCP indicates a greater dip and recovery in payments during the pandemic. The level of payments in the CCP is also consistently higher than that from the old DSR.
+
+To see the importance of escrow payments, I split the CCP-based DSR into that for mortgage payments and that for all other loans. The old DSR is similarly split. I plot these subcomponents separately in Figure 2. The mortgage DSRs do show a persistent level difference that may be attributable to escrow payments. However, both the mortgage and other consumer loan series display some differences in contour, particularly in recent years, that may be due to the limitations of the old DSR methodology (for example, out-of-date assumptions about average loan terms).
+
+Figure 1. Ratio of Required Debt Service Payments to Disposable Income
+
+Source: For credit bureau methodology, Equifax/Federal Reserve Board of New York Consumer Credit Panel and the Bureau of Economic Analysis. For the old methodology, the Federal Reserve Board.
+
+Accessible version
+
+Figure 2. Ratios of Mortgage and Consumer Debt Payments to Disposable Income
+
+Source: For credit bureau methodology, Equifax/Federal Reserve Board of New York Consumer Credit Panel and the Bureau of Economic Analysis. For the old methodology, the Federal Reserve Board.
+
+Accessible version
+
+References
+
+Dynan, Karen, Kathleen Johnson, and Karen Pence. "Recent changes to a measure of U.S. household debt service." Fed. Res. Bull. 89 (2003): 417.
+
+1. 
+https://www.federalreserve.gov/releases/housedebt/about.htm
+. Accessed 6/21/2024. 
+Return to text
+
+2. The scheduled payment reported for credit cards is the minimum required payment. The old method of calculating the DSR from aggregate data likewise used estimates of minimum required payments for credit cards. 
+Return to text
+
+3. To keep the size of the requisite data files small and speed calculation, I use a 1 percent random sample of the individuals in the CCP itself. That is, 0.05 percent of U.S. adults with a social security number and credit record are included, so the sum of their payments is multiplied by 20,000 to estimate the total amount of scheduled household debt payments in the U.S. 
+Return to text
+
+4. Aggregate data on household income are necessary because the CCP does not track the incomes of individuals, only their credit records. 
+Return to text
+
+Please cite this note as:
+
+Ringo, Daniel (2024). "Introducing a Credit Bureau-Based Measure of U.S. Household Debt Service," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 04, 2024, https://doi.org/10.17016/2380-7172.3615.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

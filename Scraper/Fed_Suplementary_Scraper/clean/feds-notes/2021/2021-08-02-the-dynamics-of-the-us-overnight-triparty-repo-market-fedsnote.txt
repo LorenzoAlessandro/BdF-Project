@@ -1,0 +1,564 @@
+FEDS Notes
+
+Twitter
+
+August 02, 2021
+
+The Dynamics of the U.S. Overnight Triparty Repo Market
+
+Mark E. Paddrik,
+Carlos A. Ramírez
+, and Matthew J. McCormick
+1
+
+The overnight segment of the triparty repurchase agreement (repo) market plays a pivotal role in the normal functioning of the U.S. financial system by acting as an important source of secured short-term funding and supporting the liquidity of key fixed income markets, including U.S. Treasury and agency securities. This over-the-counter market accounts for over $1 trillion in daily transactions and provides a unique venue in which a diverse set of market participants invest their cash as well as obtain short-term funding. Despite the importance of the overnight segment, little analysis has been undertaken about its intraday trading and pricing. Using supervisory transaction-level data, this note aims to fill this gap by providing an overview of the pricing and clearing process of this segment. Besides highlighting the relevance of the overnight segment within the greater U.S. repo market, we present novel facts about how this segment behaves, emphasizing the role that participants, collateral, and trading relationships play in its pricing and clearing process.
+
+The remainder of this note is organized as follows. Section I describes the institutional background of the U.S. repo market with a focus on the triparty repo segment. Section II describes our data. Sections III and IV describe the triparty segment's major participants as well as the types of collateral frequently used in overnight triparty repos. Section V documents several stylized facts about the intraday dynamics of the overnight segment of the triparty repo market. Section VI concludes.
+
+I. Background
+
+This section provides a brief overview of the U.S. repo market and its triparty segment.
+2
+A repo transaction is the sale of assets combined with an agreement to repurchase them on a specified future date at a prearranged price. At a simpler level, these transactions resemble a collateralized loan, in which one party lends cash against the collateral of the other party. Thus, repos are commonly used as a bankruptcy-remote form of secured borrowing. Assets underlying the repo are used as collateral to protect cash lenders against the risk that cash borrowers fail to return the cash. Market participants use repos for many reasons, including financing their portfolios or using cash as collateral to borrow securities. Central banks also use repos as an important policy tool. The interest rate on these transactions is calculated from the difference between the sale price and the repurchase price of the assets underlying the repo and can be negotiated on either a fixed or floating basis.
+
+To protect themselves against the decline in the value of the assets subject to repurchase, cash lenders typically require overcollateralization, and, thus, the value of the assets pledged as collateral is discounted, which is typically referred to as a haircut. Additionally, repo transactions specify the terms, including the securities that are acceptable as collateral, and the associated haircuts or initial margin requirements. Although most repos are overnight transactions, they can be entered into with longer maturities.
+
+The repo market has four distinct segments in the United States. One way of describing these segments is to distinguish between transactions that are settled on the books of a third party and transactions that are settled on a delivery-versus-payment (DVP) basis. Two segments rely on a third party for settlement. There is a non-centrally cleared segment, traditionally referred to as the
+triparty repo
+(because of the involvement of a clearing bank). And there is a centrally cleared segment, consisting of General Collateral Finance (GCF) repo, that provides trade matching and netting services. DVP transactions also occur in two segments: centrally cleared DVP repos; and uncleared DVP repos, typically referred to as
+bilateral repos,
+which involve two parties contracting directly without a central counterparty.
+
+Although
+triparty repo
+transactions are bilaterally negotiated, they are settled through a clearing bank. As of 2019, Bank of New York Mellon (BNYM) is the only provider of this service. Besides providing collateral valuation, margining, and management services, the clearing bank also provides back-office support to both parties by settling transactions on its books and confirming that the terms of the repo are met. Additionally, the clearing bank acts as custodian for the securities held as collateral and allocates collateral to trades at the close of the business day.
+3
+This process ensures that the party receiving securities obtains the correct asset class, value, and haircut while confirming that any newly posted collateral meets the cash lender's requirements.
+
+The services provided by the triparty custodian enable less-sophisticated market participants to engage in repo lending and reduce the risks to them of doing so. Because the triparty custodian handles most of the back-office tasks related to clearing and settlement, participants can lend in repo without having to take possession of the collateral themselves. Relatedly, the use of a triparty custodian reduces risks to cash lenders relative to "hold in custody" (HIC) repos. In an HIC repo, the cash borrower pledges the collateral to the lender but does not deliver it, exposing the cash lender to fraud and operational errors and complicating recovery in the event of the borrower's default.
+
+Our analysis focuses on overnight triparty repos because the largest portion of the U.S. triparty repo market across all collateral classes is represented by its overnight segment, making up roughly 80 percent of daily traded volume. Figure 1 depicts the daily amount of overnight funding (in billions of dollars) and the average dollar-weighted interest rate (in percent). Although rates remain relatively stable day to day, volume has seen large spikes and steady growth since 2018âwith the noticeable exception of early 2020 due to an increase in usage of term repos.
+
+Figure 1. Overnight Triparty Repo Daily Volumes and Rates
+
+Note: This figure depicts the daily amount of traded volume in overall and overnight triparty repos (in billions of dollars) and the average dollar-weighted interest rate (in percent) in the overnight triparty repo market.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+II. Data
+
+The Federal Reserve Board, through the Federal Reserve Bank of New York (FRBNY), supervises triparty custodian banks and, on a mandatory basis pursuant to its supervisory authority, collects transaction-level data at the daily frequency. Although BNYM and JPMorgan Chase (JPMC) have served as the two clearing banks in the U.S. triparty repo market, since 2019 BNYM became the predominant clearing bank in the triparty repo market for U.S. government securities. Because of JPMC's all but complete exit from triparty, our analysis will focus on data from BNYM.
+4
+
+Our data sample covers the period from September 2015 through March 2021 and includes granular information such as interest rates; counterparties; collateral CUSIP pledged; type of transaction; transaction initiation date; transaction effective date; maturity date; whether the transaction has a fixed maturity; the value of the funds borrowed; whether the transaction includes an option (e.g., the ability to extend or terminate early); and, if the transaction includes an option, the minimum notice period required to exercise it. The data are organized by the time submitted to BNYM. Consequently, trades are agreed to somewhat earlier than the time stamp reported in the data. That said, it is a market best practice to submit trades quickly after execution.
+
+III. Market Participants
+
+Although participants have varying business models, the incentives of cash lenders and cash borrowers differ. Within the overnight segment, most cash lenders seek interest income at very short maturities and/or a secured alternative to bank deposits for balances that exceed the deposit insurance cap. Most cash borrowers use this segment to obtain large amounts of short-term financing for their securities inventories and their own secured lending to clients at a low cost.
+
+Following Kahn and Olson (2021), we classify participants into several major categories: asset managers (e.g., money market funds and hedge funds), clearinghouses, commercial banks, the Federal Reserve (e.g., open market operations), government-sponsored enterprises (GSEs) (e.g., Federal Home Loan Banks, Fannie Mae, Freddie Mac, etc.), municipalities (e.g., state and municipality treasurers), primary and non-primary dealers (that is, government securities dealers that are permitted to trade directly with the Federal Reserve versus those that are not), and securities lending agents (that is, banks or other market participants that facilitate securities lending transactions by offering theirâor their clients'âavailable securities). This classification is based on the names of participants as well as other information such as their legal entity identifiers where possible.
+
+Table 1 presents the average daily activity of different types of market participants. Nearly all participants act only as either a cash lender or a cash borrower, with the Federal Reserve being the only major participant that trades on both sides of the market. We find that primary dealers, non-primary dealers, and commercial banks account for the majority of cash borrowers, while collective investment vehicles (mostly money market funds), securities lenders, and commercial banks represent the majority of cash lenders.
+
+Table 1: Participants in the Overnight Triparty Repo Market
+
+Accounts
+
+Volume (billions)
+
+Trades
+
+Participation (%)
+
+Cash Lender Type
+
+Asset Manager
+
+2,359
+
+542
+
+2,107
+
+37
+
+Clearinghouse
+
+6
+
+2
+
+10
+
+60
+
+Commercial Bank
+
+308
+
+142
+
+125
+
+20
+
+Federal Reserve
+
+4
+
+7
+
+3
+
+10
+
+GSE
+
+32
+
+32
+
+30
+
+37
+
+Municipality
+
+52
+
+8
+
+37
+
+41
+
+Securities Lender
+
+653
+
+156
+
+658
+
+36
+
+Cash Borrower Type
+
+Asset Manager
+
+5
+
+6
+
+14
+
+31
+
+Commercial Bank
+
+26
+
+160
+
+368
+
+49
+
+Federal Reserve
+
+1
+
+54
+
+21
+
+93
+
+Non-Primary Dealer
+
+36
+
+71
+
+279
+
+66
+
+Primary Dealer
+
+50
+
+603
+
+2,297
+
+70
+
+Note: This table reports statistics for major market participants. Column "Accounts" reports the total number of accounts in BNYM associated with each market participant type. Column "Volume" reports the average daily sum of funding (in billions of dollars) per market participant type. Column "Trades" reports the average daily number of transactions associated with each market participant type. Column "Participation" reports the average percentage of days a market participant appears within our sample, where the average is taken across participants within the same type.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Consistent with Copeland et al. (2021b), we find that there are substantially more accounts in BNYM associated with lenders than accounts associated with borrowers, and accounts associated with borrowers are significantly more active. For example, when comparing the daily activity of accounts from Table 1, only 74 accounts associated with borrowers participate on an average day, versus 1,207 accounts associated with lenders. That is, borrowers arrange nearly 17 times more transactions than lenders, who typically engage in three agreements per day. Additionally, borrowers tend to participate on most days, while lenders participate less frequently, consistent with the idea that lenders use triparty repos as a place to temporarily house their cash balances exceeding deposit insurance caps.
+5
+
+IV. Collateral
+
+Although different types of securities can be used as collateral in triparty repos, most overnight triparty repos are collateralized with U.S. Treasury and agency securities.
+6
+Figures 2(a) and 2(b) depict volumes (in billions of dollars) and rates (in percent) separated by different collateral types. We classify collateral into three major types: (1)
+U.S. Treasury securities
+, referring to U.S. Treasury bills, notes, and bonds; (2)
+U.S. agency securities
+, referring to mortgage-backed securities, and debt issued by U.S. government agencies and GSEs; and (3)
+other,
+referring to the remaining mix of collateral, which includes securities such as corporate bonds, non-U.S. sovereign debt, equity, municipal debt, and commercial paper. Figure 2(a) shows that overnight funding has steadily been increasing mainly for Treasury and agency securities, with Treasury securities accounting for most of the collateral used in overnight funding. Figure 2(b) shows that weighted average interest rates move in relative lockstep. Additionally, spreads between different collateral classes narrowed in the years prior to the onset of COVID-19 to then widen again. Average interest rates across collateral classes are generally steady, with occasional spikes, as highlighted by the events of September 2019.
+
+Figure 2. Repo Daily Volumes and Interest Rates by Collateral Type
+
+Note: This figure depicts volumes and rates by collateral type. Plot (a) shows that overnight funding has steadily been increasing, with Treasury and agency securities making up most transactions. Plot (b) shows that the difference between the weighted average interest rate (by collateral classes) and the federal funds target midpoint rate moves in relative lockstep. We subtract the federal funds midpoint rate from triparty repo interest rates, as the Federal Reserve can influence repo rates through interest on excess reserves and its overnight reverse repo operations.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+As repos resemble a collateralized loan, the perceived credit quality and liquidity of collateral potentially alter their pricingâsee, for example, Hu, Pan, and Wang (2021). Importantly, both rates and haircuts reshape the expected benefits associated with a repo trade. Figures 3(a) and 3(b) depict the distribution of rates and haircuts by collateral type. Figure 3(a) underscores that collateral with higher credit quality and liquidity is generally associated with trades with lower rates, while Figure 3(b) emphasizes that haircuts vary significantly across collateral types.
+7
+For example,Treasury haircuts are quite standard at 2 percent, with generally little variation.
+
+Figure 3. Interest Rates and Haircuts by Collateral Type
+
+Note: The credit quality and liquidity of collateral matter for repo pricing. This figure presents the distribution of rates and haircuts by collateral type (in percent). Plot (a) highlights that collateral of greater credit quality and liquidity is associated with transactions with lower interest rates. Notably, haircuts across collateral classes, presented in plot (b), do vary, reflecting the importance of collateral's credit quality and liquidity for financing costs.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+V. Intraday Dynamics
+
+This section takes a closer look at the intraday dynamics of the overnight segment of the U.S. triparty repo market, emphasizing the role that collateral and trading relationships play in pricing and the clearing process. We first provide a descriptive account of market clearing and participation. We then investigate how collateral and trading relationships can alter intraday market dynamics.
+8
+
+a. Intraday Clearing
+
+The large quantity of funding that overnight triparty repos provide to the U.S. financial system makes it important to understand the daily clearing cycle of this segmentâthat is, the process through which cash lenders and cash borrowers are matched with one another. Figure 4 presents two views of the intraday clearing cycle.
+9
+Figure 4(a) shows how lending is distributed over the course of the day, where "6 AM â¥" represents the early morning activity as well as overnight lending negotiated days prior. This figure highlights activities peaking at 8 a.m. and slowly declining until 1 p.m. Figure 4(b) shows a different view of the intraday clearing cycle by presenting the average portion of the market cleared throughout the day. This figure highlights a somewhat persistent clearing process, with overnight agreements typically taking place between 8 and 9 a.m., with a modest late day spike around 1 p.m. In contrast to centrally cleared DVP and GCF, discussed in Chow et al. (2021) and Copeland, Duffie, and Yang (2021), we find that the overnight triparty repo market clears slightly later in the day, in part because of Federal Reserve operations and settlement timing differences.
+
+Figure 4. Intraday Clearing Cycle
+
+Note: This figure shows that the overnight segment of the U.S. triparty repo market has a persistent daily clearing cycle. Plot (a) presents the probability density function of funding at each hour of the day, where "6 AM â¥" represents the early morning activity as well as overnight lending negotiated days prior. Plot (b) presents the mean (+/- 2 standard deviation bands) of the cumulative density function of funding at each hour of the day.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+b. Intraday Market Participation
+
+Figure 5 underscores that the composition of market participants varies over the course of the day. Figures 5(a) and 5(b) depict the hourly volumes (in billions of dollars) of activity by type of participant. Figure 5(a) highlights the importance of asset managers in providing cash, while Figure 5(b) emphasizes the importance of primary dealers as the primary cash borrower. Interestingly, among cash lenders, GSEs and securities lenders tend to participate in the first half of the day, while commercial banks make up most of late day trades. Among cash borrowers, non-primary dealers participate only in the first half of the day, while the Federal Reserve's reverse repo facility has historically made up a large portion of the activity during the second half of the day (mostly at 1 p.m.).
+
+Figure 5. Intraday Market Participation
+
+Note: The business models of market participants influence why and when they choose to arrange overnight triparty repos. This figure presents the hourly volumes of different types of cash lenders and borrowers. In each plot, legends identify bars in order from bottom to top.
+
+Source: Authorsâ calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+c. Intraday Collateral Allocation
+
+The perceived credit quality and liquidity of collateral can alter the timing of triparty repo trades, as riskier collateral can be accepted by a narrower pool of counterparties and selling assets may be costly for cash borrowers when funding becomes scarce. Consequently, borrowers might prefer to arrange trades with collateral of perceived lower credit quality/liquidity earlier in the day or based on the time in which the collateral's secondary market is most heavily traded. Figure 6 provides support for this idea. Figure 6(a) depicts the aggregate dollar volume (in billions of dollars) of trades collateralized by
+U.S. Treasury, U.S. agency
+, and
+other
+securities, where
+U.S. Treasury
+is frequently regarded as the collateral with the highest credit quality/liquidity, whereas
+other
+is regarded as the collateral with the lowest credit quality/liquidity. Figure 6(b) reemphasizes the aforementioned idea by depicting the intraday probability density function per collateral group and showing how different classes of collateral are allocated over the course of the day.
+10
+
+Figure 6. Intraday Collateral Allocation
+
+Note: The credit quality/liquidity of collateral play an important role in intraday trading behavior. This figure presents average hourly transaction volumes for overnight funding. Plot (a) presents the aggregate dollar volume (in billions of dollars) by type of collateral. Plot (b) presents the intraday probability density function per collateral group. In each plot, legends identify bars in order from bottom to top.
+
+Source: Authorsâ calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+d. Trading Relationships
+
+Trading relationships potentially play an important role in determining the terms and timing of overnight triparty repos because trading takes place over the counter.
+11
+Notably, participants can engage in triparty repos only when they have previously signed a master agreement, wherein they agree on the types of securities they are willing to accept as collateral as well as on haircuts. That is, for a given type of collateral, not every lender can trade with every borrower. Figure 7 highlights this idea by depicting the trading network among participants, where nodes represent accounts while edges represent the existence of a repo trade collateralized by U.S. Treasury securities between accounts within our sample.
+
+Figure 7. Trading Network of Triparty Repos Collateralized with U.S. Treasury Securities
+
+Note: Trading relationships can play an important role in determining the terms of triparty repos. Although we do not observe master agreements, we do observe trades, which is how we uncover trading relationships among accounts for different types of collateral. In the figure, nodes represent accounts, and edges represent the historical set of trades collateralized by U.S. Treasury securities between accounts. Colors differentiate cash lenders (in red) from cash borrowers (in black). The size of nodes is selected to emphasize the importance of accounts associated with cash borrowers. Nodes associated with cash lenders are given a fixed size, whereas the size of cash borrowers' nodes is proportional to their number of trading relationships.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Accessible version
+
+Table 2 depicts the size, concentration, and dynamics of the network formed by trading relationships on an average day. Table 2 presents daily statistics on overnight triparty repo agreements collateralized by U.S. Treasury securities. We find that lending relationships are generally persistentâwhich emphasizes the importance of relationship managementâand much of the variation comes from a steady growth in participation. However, the amount of funding does change day over day on an account level. We find that the
+gross
+daily change in trade account pairs is 21.15 percent, which suggests that just over one-fifth of overnight funding is arranged with a different account than the day prior.
+12
+Further, while it is rare for the
+net
+quantity of funding to change heavily, when it does, trade relationships can become important to fulfill funding demand in secured short-term funding markets, as highlighted by Hüser, Lepore, and Veraart (2021).
+
+Table 2: Trading Network on Treasury Collateral
+
+Trading Network
+
+Daily Change in Funding
+
+# of Cash Borrower Accounts
+
+# of Cash Lender Accounts
+
+Trade Account Pairs
+
+Gross
+
+Net
+
+Average
+
+40.81
+
+542.47
+
+1,092.27
+
+21.15%
+
+0.15%
+
+Std. Dev
+
+8.15
+
+56.7
+
+226.61
+
+7.58%
+
+5.39%
+
+Note: This table presents network statistics for overnight triparty repos collateralized by U.S. Treasury securities. The table reports the average number and standard deviation of borrowers, lenders, borrowerâlender pairs, and daily change in the total repo funding (in percent) with respect to the gross and net variation. The gross variation expresses the absolute aggregate difference in cash lent between pairs of accounts compared with the day prior. Irrespective of cash lenderâcash borrower pairs, the net variation expresses the aggregate change in total cash lent compared with the day prior.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+Relationships can alter participants' bargaining power, as they effectively represent the set of potential options market participants maintain to secure their repo transactions. Importantly, for a given type of collateral, the existence of more trading options can be beneficial, as it might become very difficult to raise funds, especially when economic conditions deteriorate. To investigate this idea, Table 3 takes a deeper dive into the implications of trading relationships in pricing, considering triparty repos collateralized by U.S Treasury securities. This table presents the mean interest rate and haircut by lenderâborrower pairs.
+13
+Consistent with Anbil, Anderson, and Senyuz's (2021) findings, Table 3 shows that participants with more relationships tend to receive more favorable rates and haircuts than participants with fewer relationships. As trading relationships might alter bargaining power, it is thus not surprising that cash borrowers with more trading options obtain relatively better rates and haircuts. While rates do not significantly differ between poorly and well-connected cash lenders, haircuts do vary, emphasizing the relevance of having more trading options when initially arranging master agreements.
+14
+
+Table 3: Relationships, Rates, and Haircuts on Treasury Collateral
+
+Lender
+
+Interest Rate
+
+Haircuts
+
+Borrower
+
+Borrower
+
+Low
+
+High
+
+Low
+
+High
+
+Low
+
+1.134
+
+1.021
+
+1.022
+
+1.993
+
+1.663
+
+1.667
+
+High
+
+1.026
+
+1.015
+
+1.015
+
+2.001
+
+2.021
+
+2.021
+
+Average
+
+1.038
+
+1.015
+
+1.999
+
+1.926
+
+Note: Trading relationships alter repo pricing, as observed in interest rates and haircuts (in percent). Considering only trades collateralized by U.S. Treasury securities, this table presents the mean interest rate and haircut by lender-borrower-CUSIP tuple, divided by market participants with different numbers of trading relationships. "Low" represents accounts with a single trading relationship, whereas "High" represents accounts with three or more trading relationships. The Federal Reserve's transactions have been removed from the haircut sample given the set haircuts required.
+
+Source: Authors' calculations, which use data provided by Bank of New York Mellon and the Federal Reserve Bank of New York.
+
+VI. Conclusion
+
+Using supervisory transaction-level data, this note sheds light on the dynamics of the overnight segment of the U.S. triparty repo market by documenting key features of the behavior of its participants and its intraday dynamics. This analysis helps us better understand how features such as collateral and trading relationships determine how funding is allocated and priced within this important market.
+
+References
+
+Tobias Adrian, Brian Begalle, Adam Copeland, and Antoine Martin (2012).
+Repo and Securities Lending.
+NBER Working Paper No. 18549.
+
+Sriya Anbil, and Zeynep Senyuz (2020).
+How Does Policy Affect Trading Relationships? Evidence from the U.S. Repo Market.
+Working Paper.
+
+Sriya Anbil, Alyssa Anderson, and Zeynep Senyuz (2021).
+Are Repo Markets Fragile? Evidence from September 2019.
+Finance and Economics Discussion Series 2021-028.Washington. Board of Governors of the Federal Reserve System.
+
+Alyssa Anderson and John Kandrac (2017).
+Monetary Policy Implementation and Financial Vulnerability: Evidence from the Overnight Reverse Repurchase Facility.
+Review of Financial Studies, 31, 3643â3686.
+
+Viktoria Baklanova, Adam Copeland, and Rebecca McCaughrin (2015).
+Reference Guide to U.S. Repo and Securities Lending Markets.
+Federal Reserve Bank of New York Staff Reports, No. 740.
+
+Yan Chow, Kevin Clark, Adam Copeland, R. Jay Kahn, Michael Koslow, Antoine Martin, Mark Paddrik, and Benjamin Taylor (2021).
+Intra-day Timing of General Collateral Repo Markets.
+Liberty Street Economics (forthcoming).
+
+Adam Copeland, Antoine Martin, and Michael Walker (2010).
+The Tri-Party Repo Market before the 2010 Reforms.
+
+Federal Reserve Bank of New York Staff Reports, No. 477
+.
+
+Adam Copeland, Darrell Duffie, Antoine Martin, and Susan McLaughlin (2012).
+Key Mechanics of Tri-Party Repo Markets.
+Federal Reserve Bank of New York Economic Policy Review.
+
+Adam Copeland, Darrell Duffie, and Yilin Yang (2021).
+Reserves Were Not So Ample After All.
+Working Paper.
+
+Adam Copeland, R. Jay Kahn, Antoine Martin, Matthew McCormick, William Riordan, Kevin Clark, and Tim Wessel (2021b).
+How Competitive Are U.S. Treasury Repo Markets?
+Liberty Street Economics.
+
+Marco Di Maggio, Amir Kermani, and Zhaogang Song (2017).
+The Value of Trading Relations in Turbulent Times.
+Journal of Financial Economics, 124, 266â284.
+
+Song Han and Kleopatra Nikolaou (2016).
+Trading Relationships in the OTC Market for Secured Claims: Evidence from Tri-party Repos.
+Finance and Economics Discussion Series 2016-064. Washington. Board of Governors of the Federal Reserve System.
+
+Terrence Hendershott, Dan Li, Dmitry Livdan, and Norman Shurhoff (2019).
+Relationship Trading in Over-the-Counter Markets.
+Journal of Finance, 75, 683â734.
+
+Grace Xing Hu, Jun Pan, and Jiang Wang (2021).
+Tri-party Repo Pricing.
+Journal of Financial and Quantitative Analysis, 56(1), 337â371.
+
+Anne-Caroline Hüser, Caterina Lepore, and Luitgard Veraart (2021).
+How Do Secured Funding Markets Behave under Stress? Evidence from the Gilt Repo Market.
+Bank of England Staff Working Paper, No. 910.
+
+Sebastian Infante (2019).
+Liquidity Windfalls: The Consequences of Repo Rehypothecation.
+Journal of Financial Economics, 133, 42â63.
+
+R. Jay Kahn and Luke M. Olson (2021).
+Who Participates in Cleared Repo?
+Office of Financial Research Brief.
+
+Marco Macchiavelli and Luke Pettit (2020).
+Liquidity Regulation and Financial Intermediaries.
+Journal of Financial and Quantitative Analysis, 1â35.
+
+Marco Macchiavelli and Alex Zhou (2021).
+Funding Liquidity and Market Liquidity: The Broker-Dealer Perspective.
+Management Science (forthcoming).
+
+Li Yi (2021).
+Reciprocal Lending Relationships in Shadow Banking.
+Journal of Financial Economics (forthcoming).
+
+1. We thank Sriya Anbil, Alyssa Anderson, David Bowman, Celso Brunetti, Jill Cetina, Kevin Clark, Nathan Foley-Fisher, Sebastián Infante, R. Jay Kahn, Marco Macchiavelli, Borghan Narajabad, Luke Olson, Sriram Rajan, Stéphane Verani, and H. Peyton Young for helpful comments and feedback. The views expressed in this note are those of the authors and do not necessarily represent the views of the Office of Financial Research, the U.S. Department of the Treasury, the Federal Reserve Board, or the Federal Reserve Bank of Dallas. Paddrik: Office of Financial Research, U.S. Department of the Treasury,
+[email protected]
+. Ramírez: Federal Reserve Board,
+[email protected]
+. McCormick: Federal Reserve Bank of Dallas,
+[email protected]
+.
+Return to text
+
+2. For more detailed reviews about the repo market, see Copeland, Martin, and Walker (2010); Copeland, Duffie, Martin, and McLaughin (2012); Adrian, Begalle, Copeland, and Martin (2014); Baklanova, Copeland, and McCaughrin (2015); and Anbil, Anderson, and Senyuz (2021).
+Return to text
+
+3. In contrast to a central counterparty, such as the Fixed Income Clearing Corporation, Bank of New York Mellon does not provide novation and netting services.
+Return to text
+
+4. Our results are not significantly affected by the omission of JPMC data, as JPMC's volume was much smaller than BNYM's before 2019.
+Return to text
+
+5. Although statistics in Table 1 are given at an account level, participants can manage theirâor their clients'ârepo operation over several accounts. As a result, the number of participants in triparty repo is smaller than the number of accounts, especially for lenders, who tend to use various accounts when trading.
+Return to text
+
+6. For example, within the overall triparty repo market, Macchiavelli and Pettit (2020) show that nongovernment collateral is typically associated with repos exhibiting longer maturities.
+Return to text
+
+7. This result may be affected in part to regulations that limit the set of potential counterparties that can trade triparty repos backed by lower-quality collateral.
+Return to text
+
+8. Our approach to describe intraday clearing and pricing should not be understood as downplaying the important role that the interplay among different collateral markets, market participant needs, and the timing of Federal Reserve operations (such as the Fed's repo, reverse repo, and securities lending facilities) plays in intraday patterns in overnight triparty repos. Although the triparty repo market is one of the largest secured short-term funding markets, several other markets and funding vehicles are likely to create spillover effects that may alter triparty repo intraday timing. The fact that different markets are intertwined might alter the incentives of institutions to participate in triparty repos and dealers to intermediate between final lenders and borrowers, potentially reshaping contracting terms across markets, as shown in Infante (2019).
+Return to text
+
+9. Although we observe the time stamps of all transactions, we have reason to believe that certain transactions do not necessarily report the precise time in which a lender and borrower agreed on a repo. While most participants follow market best practices and submit the terms of their repos to BNYM shortly after trading, certain types of trades submit later. For example, consider the trades of a large lender that manages several accounts with BNYM. It is not uncommon for these lenders to agree to a single large repo transaction early in the day. However, to allow themselves time to allocate these agreements across accounts with available cash, these transactions are submitted to BNYM typically after noon but prior to the 3:30 p.m. unwind. To overcome this issue, we redistribute the volume associated with each of these trades according to the empirical intraday distribution of transactions in which we believe time stamps are properly reported to BNYM.
+Return to text
+
+10. Once Federal Reserve transactions are removed from the sample, the probability density function associated with Treasury collateral resembles that of agency collateral in Figure 6(b).
+Return to text
+
+11. Prior literature and anecdotal evidence suggest that trading relationships are important in over-the-counter markets and money markets. See Han and Nikolaou (2016); Anderson and Kandrac (2017); Hollifield, Neklyudov, and Spatt (2017); Di Maggio, Kermani, and Song (2017); Hendershott et al. (2019); Anbil and Senyuz (2020); Anbil, Anderson, and Senyuz (2021); Hüser, Lepore, and Veraart (2021); Macchiavelli and Zhou (2021); and Li (2021), among others.
+Return to text
+
+12. This result should be viewed as an upper bound on turnover in relationships, due to the significant presence of block trades in this market. In a block trade, a bank and asset manager agree to overall terms for a trade early in the day, and the asset manager allocates the trade to individual accounts later in the day, after fund redemption flows are known.
+Return to text
+
+13. Unreported regressions show that the more relationships a cash borrower maintains, the lower the interest rates and haircuts associated to its trades, whereas the more relationships a cash lender maintains, the higher the interest rates and haircuts. Importantly, these effects are statistically and economically significant.
+Return to text
+
+14. In Table 3, the volume associated with low borrowers is a relatively small fraction of that of high borrowers, whereas volumes associated with low and high lenders are somewhat evenly distributed. Additionally, the findings of Table 3 continue to hold in a regression specification after controlling for volume and market size.
+Return to text
+
+Please cite this note as:
+
+Paddrik, Mark E., Carlos A. Ramírez, and Matthew J. McCormick (2021). "The Dynamics of the U.S. Overnight Triparty Repo Market," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 02, 2021, https://doi.org/10.17016/2380-7172.2948.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

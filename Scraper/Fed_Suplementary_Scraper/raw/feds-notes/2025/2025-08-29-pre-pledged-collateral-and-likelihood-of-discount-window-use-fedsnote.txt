@@ -1,0 +1,320 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 29, 2025
+
+Pre-Pledged Collateral and Likelihood of Discount Window Use
+
+Mark Carlson
+ and 
+Mary-Frances Styczynski
+
+Depository institutions (DIs) periodically experience liquidity shocks, for instance due to unusually large customer payment needs or deposit withdrawals. In such cases, the DI may need to obtain funding on a short-term basis in order to bolster their liquidity position. One possible source of such funding is the Federal Reserve's discount window.
+
+In order to borrow from the discount window, a DI needs to pledge collateral to the Federal Reserve. Some types of collateral, especially liquid securities such as U.S. Treasury securities, may be pledged quickly. Other types of collateral, such as loans, take some time to pledge as the Federal Reserve needs to ensure that it has an appropriate security interest in that collateral. There is no requirement that DIs pre-pledged collateral to the discount window but doing so can make it easier for institutions to borrow. When DIs do pre-pledge collateral, they most often pre-pledge their less liquid loan collateral. As of 2023, nearly 3000 institutions had pre-pledged collateral with about two-thirds of that collateral consisting of loans.
+1
+
+In this note, we examine whether the likelihood of borrowing from the discount window is related to having collateral pre-pledged in situations where the DI experiences a sudden and substantial drop in reserve balances (our liquidity shock indicator). Our analysis indicates that this is indeed the case; having pre-pledged collateral increases the probability a DI borrows primary credit. The effect is larger in the post-Covid period and when the reserves at the bank were already relatively low.
+
+Data
+
+The data for the analysis are daily and cover the period from January 1, 2015, to June 15, 2025. The sample consists of DIs (both banks and credit unions) that have filed the legal documents to be able to borrow (Operating Circular 10). This means that all the institutions have established arrangements to borrow; the key difference is the level of engagement and preparedness that is indicated by pre-pledging collateral. Overall, about half of the institutions that have filed the legal documents to enable them to borrow have also pledged collateral.
+
+We focus on days in which the DIs have experienced a liquidity shock. To determine whether a DI has experienced such a shock, we calculate the standard deviation in changes in a DI's reserve balances over the entire sample period. We select the days in which a DI experiences a three standard deviation or greater decrease in reserves.
+2
+ The resulting sample consists of 79,957 observations.
+
+For each observation, we determine whether the DI had loan and/or securities collateral pledged to the discount window the day before the shock occurred. That allows us to see whether pre-pledging collateral boosted the likelihood of borrowing. As noted above, it is also possible that DIs can pledge some securities the same day in order to borrow, but that would not be captured by our measure.
+
+We also determine whether the DI borrowed from the discount window on the day that it experienced a shock. (When determining whether an institution borrowed, test loans are excluded.
+3
+) There are 3,166 instances of borrowings in the sample. Thus, in our sample of about 80,000 observations where a DI experienced a sizeable drop in reserves, about 4 percent involved borrowing from the discount window.
+
+There are a few other aspects of the DIs' operations that we want to account for in our analysis. These are mainly related to the ability to access funding options other than the discount window. For instance, larger banks typically have access to a broader array of wholesale private market funding sources than smaller banks. To account for this difference, we include total assets based on quarterly call report data in our dataset. (We tried conducting the analysis using different size categories of banks, but the number of larger banks in the sample was too limited to produce meaningful results.) Another alternative source of funding is the Federal Home Loan Bank (FHLB) system where DIs are able to obtain advances collateralized by their residential mortgages or residential mortgage-backed securities.
+4
+ Hence we include whether or not the DI is an FHLB system member in our dataset.
+
+Baseline results
+
+For our baseline specification, we relate whether or not a DI borrowed from the discount window to whether the DI had loans pledged to the window the prior day, whether the DI had securities pledged the prior day, and the size of the DI as indicated by log of its total assets. We consider loans and securities separately since there are differences between the two assets classes in how easy it is to pledge them. Loans take longer to pledge and DIs need to provide more information about the loans that they pledge so that the Federal Reserve is able to value and haircut this collateral appropriately.
+5
+ Those differences might mean that there are differences in whether having that particular type of asset pre-pledged affects the likelihood of borrowing.
+
+Since our outcome variable is binary, we run a probit regression. The regression takes the form:
+
+$$$$\text{Borrowed}_{j,t} = f (\beta_1 \ast \text{pledged loans}_{j,t-1} + \beta_2 \ast \text{pledged securities}_{j,t-1} + \beta_3 \ast \text{log assets}_j + \epsilon_{j,t})$$$$
+
+where all information is available for each DI, $$j$$, at time $$t$$ and $$\epsilon$$ is an error term.
+
+The results are presented in Table 1 as marginal effects at the means. The marginal effects of the two indicators of collateral are positive and significant. This suggests that having pledged collateral in place the day before a drop in reserve balances increases the likelihood of borrowing primary credit in instances where a DI experiences a shock. For example, having pre-pledged securities collateral increases the likelihood of borrowing by 5 percent. The marginal effect of securities collateral is slightly larger than for loan collateral (the marginal effect of loan collateral is 4.7 percent).
+
+Table 1. Propensity to Borrow Primary Credit: Baseline
+
+ 
+
+Borrowed
+
+Had Loan Collateral on the Prior Day
+
+0.047**
+
+(0.001)
+
+Had Securities Collateral on the Prior Day
+
+0.053**
+
+(0.001)
+
+Log of Assets
+
+-0.004**
+
+(0.000)
+
+Observations
+
+79,957
+
+Wald
+
+5,838
+
+Notes: Standard errors in parentheses. * p < 0.05, ** p < 0.01.
+
+Source: Data from internal Federal Reserve records and Call Reports.
+
+The marginal effect of being larger is negative and significant. That is consistent with our hypothesis that larger DIs are likely to have more funding options and thus are less likely to turn to the discount window when they experience a shock.
+
+Extensions
+
+To further investigate, we consider several extensions to our baseline result. The first is to see whether there are differences between FHLB members and non-members in whether having pre-pledged collateral affects their decision to use the Federal Reserve's discount window. We do so by estimating the regression separately for these two groups of DIs. We expect that, because they have an alternative funding source, having pre-pledged collateral should matter less for FHLB members. It is noteworthy that our sample is skewed towards DIs with FHLB membership (89 percent).
+
+The results as marginal effects are presented in Table 2 and are consistent with the results from the baseline specification. Somewhat surprisingly, the effects of pre-pledged collateral on the likelihood of borrowing are slightly larger for FHLB members than non-FHLB members. That result is particularly true in the case of securities where having securities collateral pre-pledged increased the likelihood of borrowing by 5.4 percent for FHLB members but only 3.1 percent for non-members. Some previous research has found that banks that borrow from the FHLBs also tend to be more likely to use the discount window, so these results are broadly in line with those findings (see, for instance, Ashcraft, Bech, and Frame (2001) and Ennis and Klee (2024)). It is also worth keeping in mind that the coefficients are related to the effect of pre-pledged collateral on using the discount window and do not indicate differences in the overall propensity to use the discount window. The marginal effect of the bank asset measure is negative and statistically significant for both groups of banks.
+
+Table 2. Propensity to Borrow Primary Credit by FHLB status
+
+ 
+
+FHLBs
+
+Non-FHLBs
+
+Had Loan Collateral on the Prior Day
+
+0.045**
+
+0.041**
+
+(0.001)
+
+(0.003)
+
+Had Securities Collateral on the Prior Day
+
+0.054**
+
+0.031**
+
+(0.001)
+
+(0.003)
+
+Log of Assets
+
+-0.002**
+
+-0.009**
+
+(0.000)
+
+(0.001)
+
+Observations
+
+71,260
+
+8,697
+
+Wald
+
+5,183
+
+637
+
+Notes: Standard errors in parentheses. * p < 0.05, ** p < 0.01.
+
+Source: Data from internal Federal Reserve records and Call Reports.
+
+Our second extension is to consider whether the effect of pre-pledge collateral has varied over time. Importantly, the rate on discount window borrowings was brought much more in line with market rates in March 2020 when the discount rate was changed to be set at the top of the Federal Open Market Committee's target range for the federal funds rate rather than 50 basis points above the target range. It is quite likely that DIs are more likely to use the discount window when the discount rate is relatively more attractive.
+
+In addition, there have been several episodes of financial stress over the past decade. The first occurred in March 2020 with the onset of the Covid pandemic and the second was in March 2023 with the collapse of Silicon Valley Bank. Discount window borrowing increased during both those episodes, but perhaps for reasons that differ from reasons that might result in discount window borrowing during other times.
+
+Thus, we divide our sample period into two periods. The first is a pre-covid period that includes dates prior to March 1, 2020. The second is a post-covid without stress period that represents dates after the initial shock of the pandemic had waned and also excludes the days immediately following the March 2023 banking stress period (e.g., March and April 2023). The volatility of reserves is higher in this second period as it accounts for a significant portion of the observations in our sample.
+
+Table 3 presents results of this extension. The marginal effects of having pre-positioned collateral in the pre-covid period are lower than the baseline. Correspondingly, the effects in the post-covid period are larger than the baseline for both loan and securities collateral. These results are consistent with the idea that DIs changed their willingness to use the discount window due to the more attractive pricing and increased marketing of the discount window in the period since 2020. Larger DIs are less likely to borrow in both periods.
+
+Table 3. Propensity to Borrow Primary Credit by Time Period
+
+ 
+
+Pre-Covid
+
+Post-Covid w/o Stress
+
+Had Loan Collateral on the Prior Day
+
+0.002**
+
+0.052**
+
+(0.001)
+
+(0.001)
+
+Had Securities Collateral on the Prior Day
+
+0.002**
+
+0.057**
+
+(0.001)
+
+(0.001)
+
+Log of Assets
+
+-0.000**
+
+-0.006**
+
+(0.000)
+
+(0.000)
+
+Observations
+
+8,581
+
+69,108
+
+Wald
+
+81
+
+5,266
+
+Notes: Standard errors in parentheses. * p < 0.05, ** p < 0.01.
+
+Source: Data from internal Federal Reserve records and Call Reports.
+
+As a final extension, we explore whether there are differences in whether having pre-pledged collateral affected the likelihood of using the discount window depending on whether the bank started out with a more-plentiful reserves or less-based on the overall level of reserves. (Carlson and Styczynski (2025) find that banks with low levels of reserves relative to their typical reserve levels are more likely to borrow.) Here we assess the plentifulness of reserves by considering whether a DIs' reserve-to-assets ratios are above or below the median across the DIs in our sample at the time that they experienced a liquidity shock. Presumably when a DI has more reserves, then a sharp drop in reserves would be less likely to result in a need to borrow so there should be less of a role for pre-pledged collateral. Alternatively, when a DI has fewer reserves and experiences a shock, it is more likely to need to borrowâfor instance if it has a deficit in its reserve accountâand having pre-pledged collateral may in turn be more likely to facilitate that.
+
+The results are presented as marginal effects at the means in Table 4 and support our hypothesis. Column 1 shows that, for DIs where the reserve-to-asset ratio is above the median, the marginal effects of pre-pledged collateral are much smaller than the baseline. The results in Column 2 show that, when the ratio is below the median or reserves are relatively scarce on the balance sheet, the marginal effects are much higher than the baseline. Indeed, pre-pledging securities collateral increases the likelihood of borrowing when the reserves to assets ratio is below the median by 10.5 percent, double the baseline effect. That finding suggests that having pre-pledged collateral is strongly related to use of the discount window in cases when the shock reduced reserves to relatively low levels. The coefficient on bank size is positive when reserve ratios are above the median but is negative and notably larger in cases when DI have ratios below the median.
+
+Table 4. Propensity to Borrow Primary Credit based on Reserves to Assets Ratio
+
+ 
+
+Above Median
+
+Below Median
+
+Had Loan Collateral on the Prior Day
+
+0.001**
+
+0.095**
+
+(0.000)
+
+(0.003)
+
+Had Securities Collateral on the Prior Day
+
+0.001**
+
+0.105**
+
+(0.000)
+
+(0.002)
+
+Log of Assets
+
+0.000**
+
+-0.009**
+
+(0.000)
+
+(0.001)
+
+Observations
+
+39,145
+
+40,812
+
+Wald
+
+147
+
+4,947
+
+Notes: Standard errors in parentheses. * p < 0.05, ** p < 0.01.
+
+Source: Data from internal Federal Reserve records and Call Reports.
+
+Summary
+
+We find that having pre-pledged collateral in place with the Federal Reserve increases the likelihood that a DI borrows from the discount window when it experiences a sizeable one-day reduction in its reserve balances. That effect is larger in the period where the discount rate has been set to be more attractive relative to market rates and for DIs where reserve holdings were relatively scarce. These results are consistent with the idea that voluntarily pre-pledging collateral to the discount window makes the window a more viable option for DIs in the event of a shock.
+
+References
+
+Ashcraft, Adam, Morten Bech, and W. Scott Frame (2010). "The Federal Home Loan Bank system: The Lender of Next-to-Last Resort?," 
+Journal of Money, Credit, and Banking
+, vol. 42(4), pp. 551-583.
+
+Calson, Mark and Mary-Frances Styczynski (2025). "
+Discount window borrowing and the role of reserves and interest rates
+," 
+Finance and Economics Discussion Series
+, No. 2025-015. Washington: Board of Governors of the Federal Reserve System.
+
+Ennis, Huberto M., and Elizabeth Klee (2024). "
+The Fed's Discount Window in 'Normal' Times
+," 
+Finance and Economics Discussion Series
+, No. 2021-016. Washington: Board of Governors of the Federal Reserve System.
+
+1. See 
+Federal Reserve Board - Discount Window Readiness
+. 
+Return to text
+
+2. We deduct the amount borrowed on a given day from balances before running the difference calculation to account for the fact that borrowing increases reserves and thus could obscure a shock. In some cases, a DI would have had a negative reserves position in the absence of borrowing. 
+Return to text
+
+3. These loans are determined using an internal flag. 
+Return to text
+
+4. Other assets, such as U.S. Treasury securities may also serve as collateral for FHLB advances. 
+Return to text
+
+5. The Federal Reserve Act requires that Reserve Banks are secured to their satisfaction when lending. 
+Return to text
+
+Please cite this note as:
+
+Carlson, Mark, and Mary-Frances Styczynski (2025). "Pre-Pledged Collateral and Likelihood of Discount Window Use," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 29, 2025, https://doi.org/10.17016/2380-7172.3906.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

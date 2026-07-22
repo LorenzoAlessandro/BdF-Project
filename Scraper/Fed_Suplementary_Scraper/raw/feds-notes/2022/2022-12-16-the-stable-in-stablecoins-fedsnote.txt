@@ -1,0 +1,314 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+December 16, 2022
+
+The stable in stablecoins
+
+Garth Baughman
+, 
+Francesca Carapella
+, Jacob Gerszten, and 
+David Mills
+
+Introduction
+
+Stablecoins have garnered much attention as a key part of the emerging decentralized finance (or "DeFi") ecosystem, and as a potential way to pay for goods and services. Stablecoins facilitate trades on crypto exchanges, serve as the underlying asset for many crypto loans, and allow market participants to avoid inefficiencies stemming from converting back to fiat currency for crypto trades. They essentially serve as both a means of payment and store of value for these transactions. As the name suggests, stablecoins attempt to provide a stable value relative to other crypto assets by pegging their value to a real-world asset, known as the reference asset, such as the US dollar.
+1
+ This is done through a stablecoin's "stabilization mechanism," the process by which a stablecoin maintains its peg against the real-world asset. Existing stablecoins today utilize a variety of stabilization mechanisms.
+
+In this note we describe the general lifecycle of a stablecoin from its issuance to its redemption. We then categorize various stabilization mechanisms and discuss how they work in practice. A key observation is that, although several stablecoins may peg their value to the same real-world asset, stabilization mechanisms can vary greatly in terms of maintaining stability with the reference asset, and so may have varying susceptibilities to the risk of runs from the stablecoin to the reference asset.
+2
+
+Background on stablecoins
+
+Stablecoins are cryptocurrencies that peg their value to a real-world asset, typically the US dollar (USD).
+3
+ Despite a recent retrenchment, stablecoins have experienced rapid growth over the past 22 months, as illustrated in Figure 1, with Tether (blue) and USD Coin (brown) accounting for the largest market capitalization as of November 10, 2022.
+4
+
+Figure 1. Market cap by stablecoin
+
+Source: DeFi Llama.
+
+Accessible version
+
+Stablecoins' primary role is to provide media of exchange â means of payment â within the digital asset ecosystem, a role they serve because of their utility across 
+blockchains
+ (see Glossary). Over 80 percent of trade volume on major centralized crypto exchanges involves stablecoins as part of the traded pair, illustrating this medium-of-exchange role.
+5
+ The role of stablecoins as media of exchange is intrinsically linked to their role as a store of value in crypto markets, which are otherwise populated with very volatile assets. As illustrated in Figure 2, the prices of the three largest stablecoins have experienced only small fluctuations relative to those of other crypto assets.
+6
+
+Figure 2. Stablecoin (LHS) and non-stablecoin prices (RHS)
+
+Note: Prices are the daily close price at 00:00 GMT.
+
+Source: CryptoCompare.
+
+Accessible version
+
+A stablecoin begins life at issuance. To initiate issuance, someone who wants a newly minted stablecoin sends some other asset in exchange to a designated party. This designated party may be a custodian, e.g. a bank, a wallet provider, or some other real-world party, or a smart contract, depending on the type of stablecoin. Upon confirmation that the assets have been received, the issuer creates (in jargon "mints") and allocates an equivalent amount of stablecoins to the user's account or wallet.
+7
+ In the case of uncollateralized stablecoins, issuance happens via a smart contract but follows a different mechanism, described below, as assets are not generally kept in reserve.
+
+Transfers of stablecoins typically take place on distributed ledgers and involve network participants. The sender of stablecoins initiates the transfer to a receiving user by instructing a smart contract accordingly. Network participants verify that the transfer is in line with the rules of the stablecoin protocol and validate the transfer, possibly charging transaction fees. Typically, a validated transaction is stored on a publicly visible distributed ledger, such as a blockchain. But, in some cases, a transaction can be recorded on the books of the entity providing custody and other services, known as a wallet provider.
+8
+ This methodology was Facebook's proposal for the transfer of Libra/Diem, which was never launched, and can also be adopted for the transfer of stablecoins that are issued by and traded within institutions with the aim to settle internal transactions involving tokenized securities.
+9
+
+The process of redeeming stablecoins is similar to their issuance, but in reverse. A user instructs a smart contract to send stablecoins to an account â a dedicated network address â specified by the issuer, who then withdraws them from circulation (in jargon -"burns" them). Once these units are burned, the custodian is instructed to transfer an equivalent amount of the assets transferred at issuance back to the user.
+10
+
+Stabilization mechanisms
+
+With respect to the commitment to stabilize their value relative to another asset, stablecoin issuers are similar to a currency board, which is required to maintain a fixed exchange rate with a foreign currency and holding that foreign currency in reserves.
+11
+ In the world of crypto currencies, a stablecoin's strategy to maintain its target price is referred to as its "stabilization mechanism." Stabilization mechanisms differ according to whether a stablecoin is collateralized by some type of asset or is uncollateralized. Collateralized stablecoins can be described according to two broad categories:
+
+Off-chain collateralized stablecoins are backed by bank deposits or other cash-like assets traded in the traditional financial system. Because traditional assets are not represented by tokens on a blockchain, these stablecoins are referred to as "off-chain". The collateral assets require a custodian for their safekeeping until the user redeems the stablecoins. Off-chain stablecoins are typically fully collateralized by dollar-denominated assets. Examples include Tether and USD Coin.
+
+On-chain collateralized stablecoins are backed by assets that can be represented by tokens on a blockchain, so the collateral can be held in smart contracts.
+12
+ Hence, these stablecoins are referred to as "on-chain" and do not need either an issuer or a custodian to satisfy any claims. On-chain stablecoins are collateralized by crypto assets. Examples include Liquity USD (LUSD) and Dollar on Chain (DoC).
+*
+
+In contrast, uncollateralized stablecoins are not backed by any external assets. Examples include Decentralized USD (USDD) and Terra Classic USD (USTC) (formerly Terra USD).
+
+As shown in Figure 3, while off-chain collateralized stablecoins maintained the lion's share of the stablecoins market since 2020, uncollateralized stablecoins experienced the most rapid growth during the first half of 2022. The collapse of the uncollateralized stablecoin Terra in May 2022, however, reverberated throughout the digital asset ecosystem, causing the market capitalization of uncollateralized stablecoins to fall back to 2021 levels.
+
+Figure 3. Market cap by stabilization mechanism
+
+Source: DeFi Llama.
+
+Accessible version
+
+Off-chain collateralized
+
+Issuers of off-chain collateralized stablecoins usually promise to redeem their tokens 1:1 in a real-world asset on demand, typically the USD. Redeemability of these tokens for USD is what inspires trust in this system, although redemptions are usually subject to minimum transaction sizes, fees, processing delays, or other requirements.
+13
+
+The stabilization mechanism for off-chain collateralized stablecoins works through arbitrage. In normal times, there's a self-stabilizing nature to such stablecoins. Market participants, armed with a belief in the stablecoin's long-run peg, have an arbitrage incentive to keep the stablecoin from deviating too far from the peg. Any difference between the market price and the 1:1 redemption guarantee by the issuer offers a profit opportunity to current or potential holders of the stablecoin. If the market price is above 1:1, potential holders can earn a profit by converting USD to stablecoins with the issuer, then selling the stablecoins for USD on the secondary market and ending up with more USD than they started with.
+14
+ If the market price is below 1:1, then holders can earn a profit by redeeming their current holdings at the issuer and taking the proceeds to the market to buy more stablecoin than they had originally. In either case, the actions of stablecoin holders to take advantage of the arbitrage opportunity work to drive the market price toward 1:1.
+
+This mechanism breaks down, however, when the market loses faith in its ability to maintain the peg. Expecting the stablecoin to lose value, stablecoin holders have an incentive to request redemption of their stablecoins in an attempt to recover the collateral. The incentives of stablecoin holders are similar to those of depositors who withdraw their real-world currency from an uninsured brick-and-mortar bank if they suspect it might fail, thus precipitating a run on such a bank. Once redemptions are underway, the value of the collateral assets might decrease further if such assets are sold to be converted into currency in a fire sale. This mechanism would amplify the run and potentially increase its speed as stablecoin holders have an incentive to front-run each other and redeem their stablecoins before others redeem as well, and, in doing so, cause the value of the collateral assets to fall.
+
+A wide range of events might trigger a loss of confidence in the stablecoin's ability to maintain the peg. On the one hand, a drop in the price of the collateral assets, or a lack of trust in the custodian of those assets, could trigger a run. On the other hand, the trigger for a run can be merely a sudden lack of confidence in the stablecoin, which could be self-fulfilling and might be the result of a speculative or short sellers' attack on the stablecoin protocol analogous to the attacks that have threatened currency boards in the past.
+
+It is worth emphasizing that the risk of a run driven purely by a change in market sentiment will only disappear when the collateral asset is the same as the one to which the stablecoin is pegged, for example, a dollar of stablecoin is fully backed by a dollar held in reserve. There still exist risks related to the custody of the collateral, which might trigger runs, but such risk is common to many financial arrangements, and is why modern financial market infrastructures are held to rigorous standards regarding custody, operational risk, and related factors.
+15
+
+On-chain collateralized
+
+Similar to off-chain collateralized stablecoins, the stabilization mechanism for on-chain collateralized stablecoins relies on the option of the holder to redeem the stablecoins for the collateral assets on demand. At the time of writing, most traditional financial assets are not tokenized, resulting in all on-chain stablecoins being largely collateralized by crypto assets or other stablecoins, although some are attempting to include real-world assets, described below. Due to the high volatility of such assets, on-chain stablecoins are typically over-collateralized and their stabilization mechanisms rely on continuous valuation of collateral.
+16
+
+Stablecoin protocols typically contain provisions for the re-valuation of collateral to ensure that the ratio of the market value of collateral to issued stablecoin is always greater than a given collateralization ratio, set by the stablecoin issuer. In particular, protocols demand that the users either provide additional collateral or reduce the amount of stablecoins held in order to meet the minimum collateral requirement. Should the user fail to take these actions, the protocol relies on smart contracts and economic incentives of users to guarantee that all circulating stablecoins are appropriately collateralized. In particular, the smart contract needs to find sufficient resources to buy back circulating stablecoins and burn them. Doing so ensures that all the stablecoins in circulation are appropriately collateralized. The resources necessary to implement the buyback can either be in the form of revenues accumulated via transaction fees or can be raised via auctions of held collateral or can be collected from the collateral buffer of the initiative, if any. One additional strategy to raise resources is to sell rights to future revenues against circulating stablecoins.
+
+Some decentralized on-chain stablecoins employ as part of their design auxiliary tokens, which provide incentives to stablecoins holders to return their stablecoins to the initiative. Typically, a smart contract issues auxiliary tokens in exchange for the same number of stablecoins that need to be bought back to restore the proper ratio of collateral to stablecoins and burns these stablecoins. Such a mechanism rests on incentives of the holder of undercollateralized stablecoins to either deposit their coins with the issuer for some period of time â after which, presumably, the market price of the stablecoin returns to the desired range/peg â or exchange their coins for auxiliary tokens. In practice, an auxiliary token is typically designed either: i) to remunerate its holders with part of the revenues from transaction fees that the stablecoin initiative generates over time (this would make it similar to a bond, hence the auxiliary token is referred to as a bond token); ii) or to give its holder the right to participate in the governance of a stablecoin initiative (this would make it similar to an equity claim, hence the auxiliary token is referred to as an equity or governance token).
+
+The stabilization mechanisms for on-chain collateralized stablecoins rely on market participants' beliefs in the stablecoins' long-run pegs, as do the ones for off-chain collateralized stablecoins. However, on-chain collateralized stablecoin introduce an additional weakness, as the collateral is another cryptocurrency whose value can fluctuate significantly relative to the USD. Hence, on-chain collateralized stablecoins might experience more frequent and pronounced runs. Moreover, some of these stablecoins allow for investment strategies that resemble margin trading and leveraged exchange traded funds (ETFs) catering to users trying to increase the exposure to the price risk of specific cryptocurrencies. As a result, runs on the stablecoin might be amplified by the desire to liquidate positions whose losses are amplified by the leveraged trade.
+
+Although the majority of collateral for these stablecoins is made up of on-chain crypto assets, recent legal and technological developments have allowed on-chain collateralized stablecoin protocols to begin onboarding real-world assets as collateral. Some methods involve having traditional legal entities, such as trusts, hold the assets and a tokenized version of the collateral is added to the on-chain treasury. Adding off-chain assets, such as U.S. Treasury Bills or investment-grade corporate bonds, helps on-chain stablecoins to offset the volatility of crypto-assets and reduce their exposure to other crypto-currencies.
+17
+ As of July 2022, there are instances of on-chain stablecoin protocols opening credit facilities with traditional financial entities. In exchange for stablecoins, traditional financial firms could provide as collateral loans that they originated, which would become part of the stablecoin's collateral alongside the other on-chain crypto assets.
+18
+
+Uncollateralized or algorithmic
+
+Uncollateralized stablecoins, also known as algorithmic stablecoins, aim to maintain exchange rate stability by employing a set of rules and strategies, usually implemented by smart contracts, to dynamically match the supply of the stablecoin with user demand. In contrast with collateralized stablecoins, few or no assets are held in reserve with the aim of supporting the stablecoin's exchange rate.
+19
+ Rather, algorithmic stablecoins rely on smart contracts for the issuance and redemption of units, and for maintaining parity with the reference entity. Suppose, for example, that the peg to the USD is 1:1. Similar to expansion and contraction of the money supply for central banks, if the price of the coin goes above $1, new coins are issued to devalue each existing token; if the price of the coin goes below $1, coins are removed from circulation to increase the value of each token. However, while increasing the supply can be implemented by simply distributing new coins, decreasing supply can be more challenging. One option is for the smart contract to issue rights to future revenues in exchange for circulating stablecoins, which are taken out of circulation. This can be done by issuing an auxiliary token, or bond token, that can be exchanged for stablecoins and rewards its owner with future rights over the governance of the stablecoin initiative or with newly issued stablecoins once their price returns at or above the peg, as described in further detail below.
+
+Algorithmic stablecoins can be divided into two subgroups according to the stabilization mechanism they adopt: the rebase model and the coupon model. The rebase model operates by adjusting the supply of stablecoins based on its prevailing market price, typically with a tolerance band above and below the peg. The total supply is reduced or increased at regular time intervals across all wallets that hold the coin, and it is proportional to the percentage of price increase/decrease from the peg.
+20
+ Importantly, the rebase mechanism adjusts the supply until the peg is reached.
+
+The supply adjustment, however, can guarantee that the stablecoin maintains the peg only if enough market participants believe that the price will revert to the peg eventually. To see this, consider a rebase modeled stablecoin pegged to 1 USD. If its price increases to 1.1 USD (a 10% increase), the rebase protocol will automatically increase the total supply of stablecoins by 10%. The owner of a stablecoin has an incentive to sell at a higher price (1.1 USD) than the price he expects to prevail, that is the peg (1 USD). Hence, stablecoin owners who expect the price to eventually fall (i.e. expect other owners to sell) will sell anticipating a profit, thus causing the stablecoin price to decrease towards its peg. This stabilization mechanism works in the opposite direction as well, causing a loss rather than a capital gain for stablecoin holders.
+
+However, the rebase mechanism is not able to keep the peg if market participants believe that the value of the stablecoin will fall. In this event, each stablecoin holder has an incentive to sell his/her stablecoins before other holders sell, as a large volume of sales would cause the stablecoin price to fall. Such incentives generate a run as a self-reinforcing prophecy and drive the price of the stablecoin to near zero, where the rebase mechanism fails.
+21
+ An example of an algorithmic stablecoin adopting the rebase model is Ampleforth (AMPL).
+
+The coupon model for algorithmic stablecoins, like the rebase model, is designed to maintain exchange rate stability by adjusting the supply of stablecoins to match demand. Unlike the rebase model, however, the coupon model operates by giving incentives to stablecoin owners to deliberately change their holdings. Incentive mechanisms are typically based on rewards, whose features differ according to the direction of deviation from the peg. For example, rewards can be the issuance of new stablecoins when their price rises above the peg and the sale of bonds/coupons when their price falls below the peg. In the first case, the stablecoins supply expands and continues to do so until their price returns at the peg. In the second case, the contraction in the supply of a stablecoin takes place by incentivizing users to exchange their stablecoins in favor of interest-bearing coupons or bond tokens, which will pay in periods of supply expansion when the price is above the peg. Changes in the supply of stablecoins can guarantee that their price reverts to the peg only if enough market participants expect it to happen, as it is the case for the rebase model. Likewise, if enough market participants believe that the value of the stablecoin will drift away from the peg, stablecoin holders have an incentive to sell their stablecoins before their price falls, thus generating a self-fulfilling run on the stablecoin. An example of an algorithmic stablecoin adopting the coupon model is Terra Classic USD (UST) (formerly Terra USD).
+22
+ The coupon model is also referred to as the seigniorage model as its stabilization mechanism relies on the issuance of new coins and the sale of bond tokens in similar fashion to central bank's open market operations.
+
+While most stablecoins utilize exclusively one of the three stabilization mechanisms described above, a newly emerging class of stablecoin aims to combine the stability and safety of collateralization with the capital efficiency of algorithmic models. These hybrid models incorporate a collateral ratio that changes depending on demand for the stablecoin and the stablecoin's price.
+23
+
+Conclusion
+
+Stablecoins serve as both a means of payment and store of value for a range of DeFi transactions and could be used more generally to buy goods and services in the future.
+24
+ Stablecoins tie their value to the value of a real-world asset such as the US dollar through a variety of stabilization mechanisms.
+
+This note categorizes these stabilization mechanisms as one of three types: off-chain collateralization, on-chain collateralization, and algorithmic. Understanding a stablecoin's particular stabilization mechanism helps identify the potential risk of a run on the stablecoin in times of stress, when users might panic amid lack of information about or appreciation of the possible scenarios that might be triggered by a stablecoin breaking the peg.
+
+Table : Glossary
+
+Algorithmic Stablecoin
+
+An algorithmic stablecoin is a stablecoin which intends to maintain its peg without maintaining reserve assets, instead relying on an on-chain algorithm and/or smart contract that manages the supply of tokens in circulation. A common feature is a set relationship to a second crypto-asset token, wherein trading between the stablecoin and second token is intended to provide arbitrageurs profitable opportunities to return the stablecoin to its peg. However, the algorithm fails if both the stablecoin and the crypto-asset token simultaneously drop in price, resulting in what is colloquially called a âdeath spiral.â
+
+Blockchain
+
+A distributed digital ledger of cryptographically signed transactions that are grouped into blocks. Each block is cryptographically linked to the previous one (making it tamper evident) after validation and undergoing a consensus decision. As new blocks are added, older blocks become more difficult to modify (creating tamper resistance). New blocks are replicated across copies of the ledger within the network, and any conflicts are resolved automatically using established rules.
+
+Consensus Mechanism
+
+A process to achieve agreement within a distributed system on the valid state. Also known as a consensus algorithm, consensus mechanism, consensus method.
+
+Crypto-asset
+
+A digital asset implemented using cryptographic techniques
+
+Cryptocurrency
+
+A crypto-asset designed to work as a medium of exchange that uses strong cryptography to secure financial transactions, control the creation of additional units, and verify the transfer of assets.
+
+DeFi
+
+Decentralized finance generally refers to open-source software programs running on open-access blockchains that aim to provide financial products without traditional financial intermediaries. DeFi applications are an important subset of âdAppsâ.
+
+dApps
+
+Abbreviation for decentralized applications. Software applications built from smart contracts, often integrated with user interfaces using traditional web technology. Run on peer-to-peer network or blockchain network instead of centralized servers
+
+Decentralized Autonomous Organization (DAO)
+
+A blockchain enforced organizational structure that emphasizes on community, as compared to centralized, governance. DAOs usually involve mechanisms such as decision making based on votes by âgovernance tokenâ holders, rather than control by management or a board of directors.
+
+Digital asset
+
+An electronic representation of value.
+
+Governance token
+
+Usually associated with a Decentralized Autonomous Organization, a governance token act as a decentralized governance body to vote on the direction of a blockchain project or DeFi protocol or for resetting specific parameters (e.g., the level of collateral needed for borrowing in a DeFi protocol).
+
+On- and off- ramps
+
+Centralized exchanges or other financial institutions that allow users to trade their fiat currency for digital assets, and vice versa.
+
+Programmable blockchain
+
+A blockchain that can be programmed to include logic and conditionality. These blockchains can run code stored on the blockchain, facilitating execution of transactions more complex than direct asset transfer, such as financial applications (e.g., lending and trading).
+
+Protocol
+
+The specific combinations of crypto-assets, smart contracts, and user applications that are necessary for a specific stablecoin to operate, including any related functional components like user interfaces, oracles, governance and voting mechanisms, development grants and foundations, and financial assets such as tokens, treasuries and funds. Some of those components may be automated, and some may be carried out by individuals and entities.
+
+Smart Contract
+
+A collection of code and data (sometimes referred to as functions and state) that is deployed using cryptographically signed transactions on the blockchain network. The smart contract is executed by nodes within the blockchain network; all nodes must derive the same results for the execution, and the results of execution are recorded on the blockchain.
+
+Stablecoin (SC)
+
+Digital assets that seek to maintain a constant value relative to some asset, most commonly the U.S. dollar or other major fiat currency (e.g., Tether, USDC)
+
+Token
+
+A representation of a particular asset that typically relies on a blockchain or other types of distributed ledgers.
+
+Wallet
+
+Software used to store and manage asymmetric-keys and addresses used for transactions.
+
+A wallet may be hosted or unhosted. A âhosted walletâ (or âcustodial walletâ) is administered by a third party where (a) the value belongs to the owner of the virtual currency; (b) the value may be stored in a wallet or represented as an entry in the accounts of the host; (c) the owner interacts directly with the host, and not with the payment system; and (d) the host has total independent control over the value (although it is contractually obligated to access the value only on instructions from the owner).
+
+An âunhosted walletâ (or âpersonal walletâ) is software hosted on a personâs computer, phone, or other device that allow the person to store and conduct transactions in crypto-assets and do not require an additional third party to conduct transactions. The value is the property of the owner and is stored in a wallet, while the owner interacts with the payment system directly and has total independent control over the value.
+
+A wallet may be hot or cold. A hot wallet is connected to the Internet and a cold wallet is offline.
+
+1. A real-world asset is any asset that does not only exist in the crypto ecosystem. 
+Return to text
+
+2. For a discussion of potential impacts of stablecoins, and digital assets more generally, on financial stability see Azar, Pablo D., Garth Baughman, Francesca Carapella, Jacob Gerszten, Arazi Lubis, JP Perez-Sangimino, David E. Rappoport, Chiara Scotti, Nathan Swem, Alexandros Vardoulakis, and Aurite Werman (2022). "The Financial Stability Implications of Digital Assets," Finance and Economics Discussion Series 2022-058, Board of Governors of the Federal Reserve System, https://doi.org/10.17016/FEDS.2022.058 
+Return to text
+
+3. Despite being less common, stablecoins pegged to assets other than the US dollar exist. Examples are the Euro pegged stablecoin issued by Tether (EURt) and the gold pegged stablecoins issued by Tether (XAUt) and Paxos (PAXG). 
+Return to text
+
+4. Figure 1 also shows the collapse of TerraUSD (light green), which occurred in May 2022 and spilled over to smaller stablecoins (brown) and, to a lesser extent, to the larger ones, particularly Tether. 
+Return to text
+
+5. See Share of Trade Volume by Pair Denomination (theblock.co). https://www.theblock.co/data/crypto-markets/spot/share-of-trade-volume-by-pair-denomination 
+Return to text
+
+6. The three largest stablecoins, Tether, USD Coin, and Binance USD, comprise 91.4% of the total market cap of all stablecoins, as of November 10, 2022. 
+Return to text
+
+7. Stablecoin users are both individuals and other entities, such as major exchanges. 
+Return to text
+
+8. A digital currency wallet is a software application (or other mechanism) that provides a means for holding, storing, and transferring digital currency (see 
+Treasury
+). 
+Return to text
+
+9. Tokenized securities are traditional financial securities that can be stored, sold, and exchanged on blockchain networks. For an application, see JPM Coin. 
+Return to text
+
+10. It is worth clarifying that redemption of stablecoins with the issuer is a separate process from the sale of stablecoins on the secondary market. The market value of stablecoins only comes in to play when stablecoins are sold on the secondary market, not when being redeemed by the issuer. Also, although outside of the scope of this Note, one should be aware that there is settlement risk in redemption, as payment-vs-payment settlement is not feasible when one leg is off-chain and the other is on-chain. 
+Return to text
+
+11. Examples of currency boards are those adopted in Estonia, Lithuania and Bulgaria in Europe, as these countries were preparing for European Union membership, and Argentina between 1991 and 2002 in Latin America, as a means for the Argentine government to end the chronic inflation it had been facing. 
+Return to text
+
+12. Asset tokenization is the process by which an issuer creates digital tokens on a blockchain. Tokens represent either digital or physical assets whose transfer takes place on the blockchain. A smart contract is a self-executing contract that exists on a blockchain. It is self-executing in the sense that the smart contract contains the instructions to achieve its specified effect without recourse to any executor. 
+Return to text
+
+13. Redemption fees have occasionally appeared the history of currency boards as well, as discussed by Fieleke (PDF), 1992. https://www.bostonfed.org/-/media/Documents/neer/neer692b.pdf 
+Return to text
+
+14. Due to costly on- and off-ramps to crypto markets, in practice this trade is typically conducted with other stablecoins, often on decentralized exchanges, rather than directly with USD. 
+Return to text
+
+15. An internationally agreed set of principles for this sort of risk management are maintained by the Committee on Payments and Market Infrastructure and the International Committee of Securities Commissions as the "Principles for Financial Market Infrastructures." See https://www.bis.org/cpmi/info_pfmi.htm 
+Return to text
+
+16. While, in principle, off-chain stablecoins could require the re-evaluation of the collateral, off-chain collateral is typically less volatile and can be liquidated in traditional financial markets with more certainty about the proceeds, which are then used to honor the redemption requests. 
+Return to text
+
+17. MakerDAO, the decentralized issuer of the Dai stablecoin, voted to allocate $500 million of its treasury to purchase U.S. Treasury bills and investment-grade corporate bonds. For more information about the decision, see Signal Request: Asset Allocation of MIP65/Clydesdale - Governance / Signal Archive - The Maker Forum (makerdao.com). https://forum.makerdao.com/t/signal-request-asset-allocation-of-mip65-clydesdale/15922/2 
+Return to text
+
+18. For an example of a collateralized loan to a real-world entity, see MakerDAO's vote to open a $100 million credit facility to Huntingdon Valley Bank, a federally-chartered bank, in July 2022. For more information on the credit facility, see MIP6: Huntingdon Valley Bank Loan Syndication Collateral Onboarding Application - Collateral Onboarding / Collateral Onboarding Applications (MIP6) - The Maker Forum (makerdao.com). https://forum.makerdao.com/t/mip6-huntingdon-valley-bank-loan-syndication-collateral-onboarding-application/14219 
+Return to text
+
+19. Although some uncollateralized stablecoin protocols hold assets, as was the case for Terra USD for example, these assets 1) have significantly lower value than the market capitalization of the stablecoins themselves, and 2) are never part of a redemption process to which the issuer commits itself, as is the case for collateralized stablecoins. 
+Return to text
+
+20. This rebasing mechanism is non-dilutive as all wallets automatically have their coins increased or decreased, resulting in a constant share of the total supply by the wallet owner. 
+Return to text
+
+21. For example, if the price of the stablecoin decreases by 90% relative to the reference asset, dropping to near zero, the supply of stablecoins should be reduced by 90%. This is achieved by reducing the holdings of each stablecoin user by 90%. However, when each stablecoin is priced at near zero, the rebase mechanism requires taxing away almost the entire value of the stablecoins' portfolio, which is then stuck at near zero. 
+Return to text
+
+22. Terra's protocol is unique in the class of stablecoins adopting a coupon model, as it incentivizes users to hold an auxiliary token through exogenous incentives â that is, incentives external to the algorithmic mechanism that is supposed to stabilize the peg. Such exogenous incentives rest on the usefulness of the auxiliary token within the Terra ecosystem, including its own full-fledge smart contract blockchain. 
+Return to text
+
+23. For an example of a hybrid stabilization, see the Frax stablecoin's whitepaper, Frax: Fractional-Algorithmic Stablecoin Protocol - Frax Finance ¤. https://docs.frax.finance/ 
+Return to text
+
+24. Fore a fulsome discussion of DeFi, see Carapella, Francesca, Edward Dumas, Jacob Gerszten, Nathan Swem, and Larry Wall (2022). "Decentralized Finance (DeFi): Transformative Potential & Associated Risks," Finance and Economics Discussion Series 2022-057, Board of Governors of the Federal Reserve System, https://doi.org/10.17016/FEDS.2022.057. 
+Return to text
+
+*Note: On January 11, 2022, this note was updated to correct a miscategorization of a stablecoin protocol. 
+Return to text
+
+Please cite this note as:
+
+Baughman, Garth, Francesca Carapella, Jacob Gerszten, and David Mills (2022). "The stable in stablecoins," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, December 16, 2022, https://doi.org/10.17016/2380-7172.3224.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

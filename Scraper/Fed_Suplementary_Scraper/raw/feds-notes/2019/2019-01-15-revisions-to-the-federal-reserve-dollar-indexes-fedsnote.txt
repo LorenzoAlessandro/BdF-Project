@@ -1,0 +1,1044 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+January 15, 2019
+
+Revisions to the Federal Reserve Dollar Indexes
+
+Bastian von Beschwitz
+, Christopher G. Collins, and 
+Deepa D. Datta
+1
+
+Data appendix available 
+here
+.
+
+Starting in February 2019, the Federal Reserve will make important changes to the foreign exchange rate indexes included in the H.10, G.5, and G.5A releases. The changes include revisions to the weighting scheme and country composition. This note details the construction of the indexes and describes the motives for the changes to the methodology.
+2
+
+I. Index construction
+
+The Federal Reserve dollar indexes are designed to help estimate the overall effects of U.S. dollar exchange rate movements on U.S. international trade. There are three indexes: the broad dollar index, which is constructed using the currencies of the most important U.S. trading partners by volume of bilateral trade, and two sub-indexes, which split the currencies in the broad index into advanced foreign economies (AFE) and emerging market economies (EME).
+3
+ This section describes the methodology for constructing these indexes that goes into effect starting in February 2019; the next section describes how this methodology differs from the prior approach; section 3 describes how these changes are implemented; and section 4 examines the effects of these changes.
+
+The broad dollar index contains the currencies of 26 economies for which bilateral trade with the United States accounts for at least 0.5 percent of total U.S. bilateral trade. These economies are listed in Table 1. The AFE dollar index contains seven currencies, and the EME dollar index contains the remaining 19 currencies.
+
+Consistent with market practice, daily changes in the indexes are computed using geometrically-weighted averages of changes in bilateral exchange rates. The index at time $$t$$ $$(I_{t})$$ is:
+
+$$I_{t}=I_{t-1}*\Pi^{N(t)}_{j=1}(e_{j,t}/e_{j,t-1})^{w_{j,t}}$$, (1)
+
+where $$\Pi$$ represents the product operator, $$I_{t-1}$$ is the value of the index at time $$t-1$$; $$e_{j,t}$$ and $$e_{j,t-1}$$ are the prices of the U.S. dollar in terms of foreign currency $$j$$ at times $$t$$ and $$t-1$$
+;
+ $$w_{j,t}$$ is the weight of currency $$j$$ in the index at time $$t$$; $$N(t)$$ is the number of foreign currencies in the index at time $$t$$; and the weights sum to one $$(\sum_{j}w_{j,t}=1)$$.
+
+The weights are computed using annual bilateral trade data published by the Bureau of Economic Analysis (BEA). For each economy $$j$$, the weight at time $$t$$ is:
+
+$$w_{j,t}=\frac{T_{US,j,t}}{\sum^{N(t)}_{j=1}T_{US,j,t}}$$ (2)
+
+$$T_{US,j,t}=M^{goods}_{US,j,t}+M^{services}_{US,j,t}+X^{goods}_{US,j,t}+X^{services}_{US,j,t}$$. (3)
+
+$$T_{US,j,t}$$ is the total bilateral trade between the United States and economy $$j$$ in year $$t$$
+. 
+As equation (3) shows, it is the sum of four components: 1) goods imports from economy $$j$$ to the United States $$(M^{goods}_{US,j,t})$$; 2) services imports from economy $$j$$ to the United States $$(M^{services}_{US,j,t})$$; 3) goods exports from the United States to economy $$j$$ $$(X^{goods}_{US,j,t})$$; and 4) services exports from the United States to economy $$j$$ $$(X^{services}_{US,j,t})$$. We exclude from this computation trade in oil, gold, and military equipment, as exchange rate fluctuations usually have little effect on trade in these goods.
+
+The weights for the different currencies in the broad, AFE, and EME dollar indexes are reported in Table 1. The four currencies with the largest weights are the euro (19 percent), the Chinese renminbi (16 percent), the Canadian dollar (14 percent), and the Mexican peso (13 percent). These currencies account for 62 percent of the broad dollar index.
+
+II. Changes to the index construction
+
+The staff of the Federal Reserve Board has computed the broad, major, and OITP dollar indexes since 1998 (major and OITP are the previous names for the AFE and EME dollar indexes). While weights of the different currencies in the index are updated annually, the currency composition of the indexes and the methodology to compute currency weights have largely stayed unchanged until now. The following changes will be implemented starting in February 2019:
+
+Addition of services.
+
+Trade weights will be based on both goods and services trade. Historically, only goods trade was used to calculate trade weights.
+
+Simplification of weight calculations.
+
+Trade weights will be computed as a simple fraction of total bilateral trade. Previously they were comprised of 50 percent bilateral import weight, 25 percent bilateral export weight, and 25 percent export competitiveness weight, which measured how much products from the specific economy compete with U.S. products in third markets.
+
+Periodic review of index currency composition.
+
+The currency composition of the indexes will be periodically reviewed and currencies will be added and/or dropped based on the most recent bilateral trade figures. In the new indexes, Vietnam will be added, and Venezuela will be removed.
+
+Renaming of indexes.
+
+The major index will be renamed to the advanced foreign economies (AFE) index and the other important trading partners (OITP) index will be renamed to the emerging market economies (EME) index. This change reflects the increased U.S. trade with countries in the EME dollar index.
+
+The remainder of this section describes and motivates these changes in more detail.
+
+1. 
+Addition of services 
+
+Historically, the weights in the Federal Reserve dollar indexes were based solely on trade in goods, as data on services trade were not widely available. However, data availability has improved in recent years and the relative importance of services trade to the United States has increased (see Figure 1). In 2017, U.S. services exports accounted for 34 percent of total U.S. exports and services imports accounted for 19 percent of total U.S. imports. In contrast, in 1999, services accounted for only 28 percent of exports and 16 percent of imports. To capture the increased importance of services trade, starting in 2019 the index weights will be constructed including trade in services.
+
+2. 
+Simplification of weight calculations
+
+Historically, the Federal Reserve's dollar index weighted imports and exports equally, and export weights included a measure of export competition in third markets: The third-party competitiveness weight was intended to capture the extent to which economy $$j$$ and the U.S. economy competed in third markets.
+
+Going forward, the trade weights will be computed as a simple fraction of total bilateral trade using equation (2). This change has two advantages, in addition to simplifying the calculation of weights. First, since U.S. imports are larger than U.S. exports, this measure more accurately reflects the U.S. trade balance. Second, since the services share of U.S. exports (34 percent) is much larger than the services share of U.S. imports (19 percent), this measure also captures the relative importance of services in imports and exports. There will no longer be an adjustment for global market competitiveness because data on global trade in services is not widely available.
+4
+
+3. 
+Periodic review of index currency composition
+
+Starting in 2019, the currency composition of the broad index will be periodically reviewed. When the broad, major, and OITP dollar indexes were created in 1998, 26 economies that made up at least 0.5 percent of either bilateral goods exports or goods imports were included in the index. While currency weights have been updated each year, the set of currencies has stayed the same. (The set of countries did expand as additional countries adopted the euro.)
+
+Future inclusion in the index will be based on the same metric as the index weights: the fraction of U.S. bilateral goods and services trade with each economy as a share of total trade (excluding trade in oil, gold, and military equipment). To avoid frequent changes, an economy will only be included in the index once its bilateral trade with the United States accounts for 
+significantly
+ more than 0.5 percent of total U.S. trade for an extended period of time. Similarly, we will only remove economies from the index once they account for 
+significantly
+ less than 0.5 percent of U.S. bilateral trade for an extended period of time.
+5
+
+In Table 2, we list economies in decreasing order of total bilateral trade share. There are 24 economies with a total trade share of at least 0.5 percent. Twenty-three of these economies are already included in the broad dollar index. The only economy not included is Vietnam. Vietnam has a trade share of 1.2 percent, which is more than double the threshold of 0.5 percent. Furthermore, the trade share of Vietnam has been increasing in recent years. Accordingly, Vietnam will be added to the broad and EME dollar indexes.
+
+Of the economies below 0.5 percent total trade share, three economies are currently in the broad dollar index: Russia, Sweden, and Venezuela. Of these economies, Russia and Sweden have a total trade share that is very close to 0.5 percent and has been close to or even above that level in the past four years. Thus, we decided to keep these economies in the dollar indexes. In contrast, the total trade share of Venezuela is only 0.2 percent and has been declining. In addition, the official exchange rate of the Venezuelan bolivar has little effect on trade flows as most transactions are conducted at the black market exchange rate.
+6
+ As a result, Venezuela is being removed from the exchange rate indexes.
+
+After these adjustments, the 26 currencies included in our exchange rate indexes cover about 90 percent of the total bilateral trade with the United States.
+
+III. Implementation of the changes
+
+The changes outlined in Section II will become effective on February 4, 2019. As of that date, the term broad dollar index will refer to the new dollar index as described in Section I. We will also provide a historical series for the new dollar indexes going back to January 2, 2006. The weights of these dollar indexes will be based on the respective total bilateral trade with the United States (including goods and services), and Vietnam will be included while Venezuela will be excluded. In addition, we provide a time series of the new dollar indexes going back to 1973 
+here
+. This series is based on estimated services trade weights before 2006 (the estimation method is outlined in the appendix below).
+
+To ease the transition, we will continue to release the historical dollar indexes based solely on goods trade until December 31, 2019. We will refer to these indexes as "broad -- goods only", "major -- goods only", and "OITP -- goods only". The weights for these indexes will remain at their "current" weights (based on 2016 data). Vietnam will not be added to these indexes and Venezuela will not be removed from these indexes.
+
+IV. Effect of changes on index composition
+
+A comparison of the old and new weights is shown in Table 2 (columns 2-4). Because there is relatively more services trade between the United States and the economies in the AFE index, the weight of the AFEs in the broad dollar index increases 5.1 percentage points from 43.2 to 48.3 percent.
+
+The AFEs with the largest increases in weight are Canada (1.7 percentage points), the United Kingdom (1.5 percentage points), and the euro area (1.4 percentage points). In contrast, China's weight in the broad dollar index decreases 5.4 percentage points from 21.6 to 16.2 percent. This relatively large decline is explained by two factors: there is relatively little trade in services between China and the United States, and China has a high competitiveness weight in goods trade. The weight of Mexico increases 0.5 percentage points and the weight of India increases 0.7 percentage points, and Vietnam is added with a weight of 1.3 percent. The weights of other countries are little changed.
+
+In Figure 2, we compare the exchange value of the nominal broad dollar using trade weights calculated according to the old and new methodologies. We show the official series from January 2006, which is the year in which services trade data becomes available for all countries in our dollar indexes. In addition, we provide an estimate of what the new dollar series would look like going back to 1973.
+7
+ Overall, the differences between the two series are very small. From January 2006 to November 2018, the broad nominal dollar increased 0.2 percent less under the new definition. In Figure 3, we repeat the same exercise using the 
+real
+ broad dollar. Here, the difference is slightly larger and goes in the opposite direction with the dollar appreciating 1.9 percent more under the new methodology. In Figures 4 to 7, we show the same comparisons for the AFE and EME dollar indexes. In all cases, the difference between the two methodologies is small, especially over the period since 2006.
+
+Table 1: Currency weights in the dollar indexes, 2017
+
+ 
+
+Broad weights
+
+			(percent)
+
+AFE weights
+
+			(percent)
+
+EME weights
+
+			(percent)
+
+Euro Area
+
+18.6
+
+38.5
+
+ 
+
+China
+
+16.2
+
+ 
+
+31.3
+
+Canada
+
+13.6
+
+28.1
+
+ 
+
+Mexico
+
+13.3
+
+ 
+
+25.7
+
+Japan
+
+6.4
+
+13.2
+
+ 
+
+United Kingdom
+
+5.1
+
+10.6
+
+ 
+
+Korea
+
+3.4
+
+ 
+
+6.6
+
+India
+
+2.7
+
+ 
+
+5.3
+
+Switzerland
+
+2.7
+
+5.5
+
+ 
+
+Brazil
+
+2
+
+ 
+
+3.9
+
+Taiwan
+
+2
+
+ 
+
+3.8
+
+Singapore
+
+1.6
+
+ 
+
+3.1
+
+Hong Kong
+
+1.5
+
+ 
+
+2.9
+
+Australia
+
+1.4
+
+3
+
+ 
+
+Vietnam
+
+1.3
+
+ 
+
+2.6
+
+Malaysia
+
+1.3
+
+ 
+
+2.4
+
+Thailand
+
+1.1
+
+ 
+
+2.2
+
+Israel
+
+1.1
+
+ 
+
+2.1
+
+Indonesia
+
+0.7
+
+ 
+
+1.3
+
+Philippines
+
+0.7
+
+ 
+
+1.3
+
+Chile
+
+0.6
+
+ 
+
+1.2
+
+Colombia
+
+0.6
+
+ 
+
+1.1
+
+Saudi Arabia
+
+0.6
+
+ 
+
+1.1
+
+Argentina
+
+0.6
+
+ 
+
+1.1
+
+Russia
+
+0.5
+
+ 
+
+1
+
+Sweden
+
+0.5
+
+1.1
+
+ 
+
+Memo:
+
+AFE currencies
+
+48.3
+
+ 
+
+ 
+
+EME currencies
+
+51.7
+
+ 
+
+ 
+
+Table 2. Bilateral trade shares for selected trading partners, 2017
+
+ 
+
+Total bilateral trade share
+
+			(percent)
+
+New weight
+
+			(percent)
+
+Old weight
+
+			(percent)
+
+Change
+
+			(percentage points)
+
+Euro Area
+
+16.5
+
+18.6
+
+17.2
+
+1.4
+
+China
+
+14.3
+
+16.2
+
+21.6
+
+-5.4
+
+Canada
+
+12
+
+13.6
+
+11.9
+
+1.7
+
+Mexico
+
+11.8
+
+13.3
+
+12.8
+
+0.5
+
+Japan
+
+5.7
+
+6.4
+
+6.5
+
+-0.1
+
+United Kingdom
+
+4.6
+
+5.1
+
+3.6
+
+1.5
+
+Korea
+
+3
+
+3.4
+
+3.9
+
+-0.5
+
+India
+
+2.4
+
+2.7
+
+2.1
+
+0.6
+
+Switzerland
+
+2.4
+
+2.7
+
+2.2
+
+0.5
+
+Brazil
+
+1.8
+
+2
+
+1.8
+
+0.2
+
+Taiwan
+
+1.7
+
+2
+
+2.3
+
+-0.3
+
+Singapore
+
+1.4
+
+1.6
+
+1.7
+
+-0.1
+
+Hong Kong
+
+1.3
+
+1.5
+
+1.4
+
+0.1
+
+Australia
+
+1.3
+
+1.4
+
+1.1
+
+0.3
+
+Vietnam
+
+1.2
+
+1.3
+
+ 
+
+1.3
+
+Malaysia
+
+1.1
+
+1.3
+
+1.7
+
+-0.4
+
+Thailand
+
+1
+
+1.1
+
+1.5
+
+-0.4
+
+Israel
+
+1
+
+1.1
+
+1
+
+0.1
+
+Indonesia
+
+0.6
+
+0.7
+
+1
+
+-0.3
+
+Philippines
+
+0.6
+
+0.7
+
+0.6
+
+0.1
+
+Chile
+
+0.6
+
+0.6
+
+0.7
+
+-0.1
+
+Colombia
+
+0.5
+
+0.6
+
+0.5
+
+0.1
+
+Saudi Arabia
+
+0.5
+
+0.6
+
+0.8
+
+-0.2
+
+Argentina
+
+0.5
+
+0.6
+
+0.5
+
+0.1
+
+Russia
+
+0.5
+
+0.5
+
+0.9
+
+-0.4
+
+Sweden
+
+0.5
+
+0.5
+
+0.7
+
+-0.2
+
+Turkey
+
+0.5
+
+ 
+
+ 
+
+ 
+
+United Arab Emirates
+8
+
+0.4
+
+ 
+
+ 
+
+ 
+
+Dominican Republic
+
+0.4
+
+ 
+
+ 
+
+ 
+
+Peru
+
+0.3
+
+ 
+
+ 
+
+ 
+
+Venezuela
+
+0.2
+
+ 
+
+0.2
+
+-0.2
+
+Memo:
+
+Total of new index
+
+90.2
+
+ 
+
+ 
+
+ 
+
+Figure 1: U.S. Trade in Services
+
+
+Source: Bureau of Economic Analysis.
+
+Accessible version
+
+Figure 2: Nominal Broad Dollar Indexes
+
+
+Note: Pre-2006 values for the Broad (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Figure 3: Real Broad Dollar Indexes
+
+
+Note: Pre-2006 values for the Broad (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Figure 4: Nominal AFE Dollar Indexes
+
+
+Note: Pre-2006 values for the AFE (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Figure 5: Real AFE Dollar Indexes
+
+
+Note: Pre-2006 values for the AFE (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Figure 6: Nominal EME Dollar Indexes
+
+
+Note: Pre-2006 values for the EME (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Figure 7: Real EME Dollar Indexes
+
+
+Note: Pre-2006 values for the EME (new) series are based on estimated services trade data.
+
+Source: Federal Reserve Board staff calculations.
+
+Accessible version
+
+Appendix: Construction of Dollar Weights
+
+This documentation details the construction of the dollar weights over the period 1973 to 2017. The weights will be extended each year as the data become available.
+
+I. Trade weighting scheme
+
+The trade weights are computed using annual bilateral trade data published, primarily, by the Bureau of Economic Analysis (BEA). As described in the main text of the note, for each economy $$j$$, the weight at time $$t$$ is:
+
+$$w_{j,t}=\frac{T_{US,j,t}}{\sum^{N(t)}_{j=1}T_{US,j,t}}$$ (1)
+
+where,
+
+$$T_{US,j,t}=M^{goods}_{US,j,t}+M^{services}_{US,j,t}+X^{goods}_{US,j,t}+X^{services}_{US,j,t}$$. (2)
+
+In equation (1), $$w_{j,t}$$ is the weight of currency $$j$$ in the dollar index at time $$t$$, $$T_{US,j,t}$$ is total bilateral trade between the United States and economy $$j$$
+ 
+(in year $$t$$), $$N(t)$$ is the number of foreign currencies in the dollar index at time $$t$$, and $$\sum_j{w_{j,t}}=1$$. Equation (2) captures the four components that comprise $$T_{US,j,t}$$:
+
+goods imports from economy 
+j
+ to the United States $$(M^{goods}_{US,j,t})$$;
+
+services imports from economy 
+j
+ to the United States $$(M^{services}_{US,j,t})$$;
+
+goods exports from the United States to economy $$j$$ $$(X^{goods}_{US,j,t})$$; and
+
+services exports from the United States to economy $$j$$ $$(X^{services}_{US,j,t})$$
+.
+
+We exclude goods trade in oil, gold, and military equipment when computing $$M^{goods}_{US,j,t}$$ and $$X^{goods}_{US,j,t}$$, since exchange rate fluctuations have little effect on trade in these goods.
+
+We create the new trade weights in three steps:
+
+We generate goods imports and exports series that exclude trade in oil, gold, and military equipment.
+
+We generate services imports and exports series.
+
+We compute trade weights.
+
+II. Country composition
+
+Before proceeding to a discussion of each of the three steps involved, a short word on the sample of economies. We provide trade weights for the following 37 economies:
+
+the 26 economies in the broad dollar index;
+
+the 10 original countries of the euro area; and
+
+Venezuela, which is included through 2005.
+
+For the euro area, we follow the original implementation, and calculate trade weights for the 10 initial members of the euro area from 1973 to 1998, and for the euro area 1999 onwards.
+9
+ For post-1999, the euro area series are aggregates of its constituent countries in any given year. For example, Greece is first included in 2001 because it joined the euro area on January 1, 2001. Lastly, consistent with the old dollar series, Russia is only included from 1993.
+
+III. Goods imports and exports
+
+We construct bilateral goods imports and exports series excluding oil, gold, and military equipment, from 1973 to 2017. Although this document details the goods import data construction, the procedure for exports is analogous.
+
+For each country, we use bilateral goods trade data from the Bureau of Economic Analysis (BEA) and the International Monetary Fund (IMF). BEA data on a Balance of Payments basis go as far back as 1978, while IMF data from the Direction of Trade Statistics (DOTS) provide coverage back to 1973. The trade flows series are generated at annual frequency and in millions of U.S. dollars. We construct our desired goods imports series from 1973 to 2017 for each economy in three steps:
+
+We create total goods imports series.
+
+We create the sum of imports of excluded categories (gold, oil, and military equipment).
+
+We create our desired goods imports series (net of excluded categories).
+
+1. 
+Total goods imports series
+
+Depending on the country, the BEA data start in 1978, 1986, or 1979.
+10
+ Earlier years are filled in using the DOTS database.
+
+2. 
+Excluded goods imports series
+
+We compute excluded goods as the sum of trade in oil, gold, and military equipment.
+11
+ Specifically, we exclude trade in the following end-use category codes:
+
+Nonmonetary gold: 14270 (imports), 12260 (exports);
+
+Special category (military-type goods): 50000 and 50010 (imports), 5 (exports); and
+
+Total oil: 100 (imports), 111(exports).
+
+If data are available for at least one of the three categories, missing observations in other series are treated as zeros for that year. If data in all three categories are missing, we backfill them by assuming that the fraction of excluded goods of total imports remains constant. For example, suppose the sum of excluded goods for a given country only goes back to year $$t^{*}$$, where $$t^{*}>1973$$. We assume that, between 1973 and year $$t^{*}$$, the 
+share
+ of excluded categories as a fraction of total goods imports remains constant at the value observed in year $$t^{*}$$:
+
+$$\text{Excluded goods}_{j,t}=\frac{\text{Excluded goods}_{j,t^{*}}}{\text{Total goods}_{j,t^{*}}}*\text{Total goods}_{j,t}$$. (3)
+
+3. 
+Goods imports series
+
+Finally, we create our desired goods imports series $$(M^{goods}_{US,j,t})$$ by subtracting the sum of excluded categories from total goods imports.
+
+A special case is Taiwan, for which we do not have total goods imports observations for the years 1973 to 1977. For this time period, we assume a constant ratio between Taiwan and all the other countries, $$O$$, included in the dollar index in 1978, for the desired goods series:
+
+$$M^{goods}_{US,Taiwan,t}=\frac{M^{goods}_{US,Taiwan,1978}}{M^{goods}_{US,O,1978}}*M^{goods}_{US,O,t}$$. (4)
+
+IV. Services imports and exports
+
+Similar to trade in goods, we construct bilateral services imports and exports series, from 1973 to 2017. The text below describes the construction for imports. The procedure for exports is analogous.
+
+1. 
+2006 to present
+
+Services trade data are taken from BEA Table 2.2. U.S. Trade in Services, by Type of Service and by Country or Affiliation.
+12
+ For countries with missing values in the most recent years (namely, Cyprus and Slovakia in the 2018 data release), we fill forward using the most recently available value.
+
+2. 
+1999 to 2005
+
+As in the most recent period, services trade data are taken from BEA Table 2.2. U.S. Trade in Services, by Type of Service and by Country or Affiliation. However, a number of countries have missing data, which must be estimated.
+
+Where available, individual country-level data are taken from BEA Table 2.2.
+
+If no country-level data are available, services imports for country 
+j
+ in year 
+t
+ are computed as:
+	
+$$\text{Services imports}_{j,t}=\text{Services imports}_{O,t}*\frac{\text{Services imports}_{j,2006}}{\text{Services imports}_{O,2006}}$$, (5)
+
+where $$ O$$ is the "other countries in region"-value for the region of country $$ j$$. For example, if country $$ j$$ is Austria, the $$ O$$ will be "other" in the region "Europe".
+
+3. 
+1986 to 1998
+
+During this period only private services trade data are available at the country level. We obtain these data from BEA Table 2. Private Services Trade by Area and Country, 1986-2012.
+13
+ In addition, we use data on total services trade from BEA Table 1.1 U.S. International Transactions.
+14
+
+First, we generate country-level series for annual private services trade. For different countries, private services trade data become available in 1986, 1992, 2006, or not at all. This is how we treat those different cases:
+	
+
+If private services trade data are available from 1986, we take the series without further adjustments from BEA Table 2. Private Services Trade by Area and Country, 1986-2012.
+
+If country-level data are available only beginning in 1992, private services imports for country 
+j
+ in year 
+t
+ are backfilled to 1986 as follows:
+		
+$$\text{Private services imports}_{j,t}=\text{Private services imports}_{O,t}*\frac{\text{Private services imports}_{j,1992}}{\text{Private services imports}_{O,1992}},$$ (6)
+
+where $$ O$$ is the "other countries in region"-value.
+15
+
+For Ireland, private services trade data are available only back to 2006. Consequently, we backfill in two steps. First, we backfill to 1992 using the 2006 ratio of Ireland's trade to "other countries in Europe." In 2006, this "other countries in Europe" aggregate excludes 10 European countries with data reported back to 1992:
+		
+$$\text{Private services imports}_{j,t}=\text{Private services imports}_{O,t}*\frac{\text{Private services imports}_{j,2006}}{\text{Private services imports}_{O,2006}}$$. (7)
+
+Second, we backfill to 1986 using the ratio of the backfilled value of Ireland's trade in 1992 to the value of "other countries in Europe" in 1992, which excludes only 6 European countries with data reported back to 1986:
+
+$$\text{Private services imports}_{j,t}=\text{Private services imports}_{O,t}*\frac{\text{Private services imports}_{j,1992}}{\text{Private services imports}_{O,1992}}$$. (8)
+
+For countries without any annual private services trade data, we estimate private services imports using their share of 
+total
+ services imports:
+
+		
+$$\text{Private services imports}_{j,t}=\text{Private services imports}_{O,t}*\frac{\text{Private services imports}_{j,2006}}{\text{Private services imports}_{O,2006}}$$, (9)
+
+where $$ O$$ is the "other countries in region"-value.
+
+Using these private services imports data, we generate a 
+preliminary
+ estimate for services imports for each country and "other countries in region"-category. This preliminary estimate is obtained by assuming that 
+for each country
+, the ratio of private services imports to total services imports stays constant. Consequently, we apply the observed ratio in 1999 to the private services data for 1986 through 1998:
+
+$$\text{Preliminary services imports}_{j,t}=\text{Private services imports}_{j,t}*\frac{\text{Services imports}_{j,1999}}{\text{Private services imports}_{j,1999}}$$.
+ (10)
+
+Finally, because the sum of the preliminary services estimates for 1986 to 1998 do not sum to the actual total services imports taken from BEA Table 1.1 U.S. International Transactions, we rescale them once more to match it:
+
+$$\text{Services imports}_{j,t}=\text{Preliminary services imports}_{j,t}*\frac{\text{Total services imports}_{t}}{\sum_{j}\text{Preliminary services imports}_{j,t}}$$. (11)
+
+4. 
+1973 to 1985
+
+During this period, we do not have access to any country-level data. We obtain aggregate trade data from BEA Table 1.1 U.S. International Transactions. Individual country trade flows are estimated by applying the 1986 shares of total services imports to data on total services imports in earlier years:
+
+$$\text{Services imports}_{j,t}=\text{Total services imports}_{t}*\frac{\text{Services imports}_{j,1986}}{\text{Total services imports}_{1986}}$$. (12)
+
+1. 
+ We thank Daliah R. Al-Shakhshir, Vickie L. Chang, and Samantha A. Sharkoff for excellent research assistance. 
+Return to text
+
+2. 
+ More details on the prior methodology are provided in "Indexes of the Foreign Exchange Value of the Dollar," Federal Reserve Bulletin, 91:1 (Winter 2005), pp. 1-8 (http://www.federalreserve.gov/pubs/bulletin/2005/winter05_index.pdf). 
+Return to text
+
+3. 
+ The AFE dollar index was formerly called the major index, and the EME dollar index was called the other important trading partners (OITP) index. 
+Return to text
+
+4. 
+ There are two additional reasons to drop competitiveness weights: First, they are based on the fairly strong assumption that economy 
+j 
+and the United States export similar goods to third markets. Second, recent work by the IMF suggests that the third-market competitiveness weights for the United States should only be 11 percent rather than the 25 percent used in the old weighting scheme. See Bayoumi, T. J. Lee and S. Jayanthi (2005): "New rates from new weights", IMF Working Paper WP/05/99, May. 
+Return to text
+
+5. 
+ Note that due to the different weighting calculation, this cut-off is more restrictive than the original 0.5 percent cut-off. While originally it was enough to have either goods imports or goods exports make up at least 0.5 percent, it is now necessary for total trade (including exports and imports) to make up at least 0.5 percent. 
+Return to text
+
+6. 
+ The black market rate started to increasingly deviate from the official exchange rate in recent years and by the end of 2017, the official exchange rate was about 10,000 times higher than the black market rate. Since then, the official rate has been devalued substantially, but even by the end of November 2018 it was about 4 times higher than the black market rate. 
+Return to text
+
+7. 
+ Before 2006, bilateral services trade weights are not available for all economies in the index and need to be estimated (see appendix). For the new methodology, we include Venezuela until end of 2005 and include Vietnam from the beginning of 2006, the year the official series of the new dollar index starts. 
+Return to text
+
+8. 
+ The weight for the United Arab Emirates includes only goods trade because services data is not available. 
+Return to text
+
+9. 
+ Note that we treat Belgium and Luxembourg as a single entity because they de facto shared a currency since 1944. 
+Return to text
+
+10. 
+ While we use Balance of Payments basis data that are not publicly available, Census-basis total bilateral trade data are broadly similar and are publicly available from 
+https://usatrade.census.gov
+. 
+Return to text
+
+11. 
+ The concordance between these end-use codes and the 10-digit HTS codes can be used along with Census-basis data to generate data that are broadly similar. See 
+https://www.census.gov/foreign-trade/reference/codes/index.html
+ for more information. 
+Return to text
+
+12. 
+ These data are available from 
+BEA International Services (Expanded Detail)
+, Table 2.2. U.S. Trade in Services, by Type of Service and by Country or Affiliation (Total Services). 
+Return to text
+
+13. 
+ These data are available from the 
+BEA Data Archive
+, International Accounts, International Services, 2012 data (posted in 2013). Table 2 is posted as Tab2a (1992 to 2012) and Tab2b (1986 to 1991). 
+Return to text
+
+14. 
+ These data are available from the 
+BEA International Transactions
+, International Transactions (ITA), Table 1.1, Lines 4 and 12 (for services imports and exports). 
+Return to text
+
+15. 
+ Note that we estimate annual private services for more economies than needed for the dollar index, as we use these trade flows in a subsequent step that scales up private services trade data to obtain total services trade data. 
+Return to text
+
+Please cite this note as:
+
+von Beschwitz, Bastian, Christopher G. Collins, and Deepa D. Datta (2019). âRevisions to the Federal Reserve Dollar Indexes,â FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 2019., https://doi.org/10.17016/2573-2129.48.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

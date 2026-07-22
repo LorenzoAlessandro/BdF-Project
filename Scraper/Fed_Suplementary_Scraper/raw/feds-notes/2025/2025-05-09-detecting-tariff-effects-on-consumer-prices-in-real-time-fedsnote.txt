@@ -1,0 +1,461 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 09, 2025
+
+Detecting Tariff Effects on Consumer Prices in Real Time
+
+Robbie Minton
+ and 
+Mariano Somale
+
+Introduction
+
+Economic researchers and forecasters face the difficult task of differentiating the effects of tariffs on consumer prices from the effects of other factorsâsuch as inflation expectations, supply chain disruptions, labor market tightness, and energy pricesâwhich may influence prices independently. The methods available for this task in the economics literature, however, are not suitable for assessing tariffs' effects on consumer prices in real time. Most studies in the literature analyze effects on goods prices at the port of entry (import prices
+1
+) and, in some cases, on domestic producer prices. The few studies that assess tariff effects on consumer prices typically focus on a subset of consumer goods or rely on data that are not publicly available in real time.
+2
+
+In this note, we propose a methodology to detect tariffs' effects on personal consumption expenditure (PCE) prices in real time. We first construct theoretical predictions of tariffs' effects on individual PCE categories based on implemented tariff changes, the prevalence of imports in each category, and specific assumptions about pass-through from tariffs to consumer prices.
+3
+ We then assess whether our predicted tariff effects are able to explain observed changes in incoming PCE prices. We use an event-study approach to analyze consumer price pass-through from a particular tariff event and a local-projections approach to jointly analyze pass-though from multiple tariff events. We apply our methodology to evaluate the impact of US import tariffs implemented in 2018-19, and then we turn to the impact of tariffs implemented in February and March of 2025.
+
+In both periods, we find that US import tariffs led to a statistically significant increase in consumer goods prices. For the 2018-19 tariffs, our local-projections approach reveals that tariff changes were passed through fully and quicklyâwithin two months of tariff implementationâto consumer goods prices. 
+4
+ For the February and March 2025 tariffs implemented on imports from China, we find that tariffs have already passed through partially to the consumer goods prices that we can observe through March. Our results indicate that the 2025 tariffs have so far led to a 0.3 percent increase in core 
+goods
+ PCE prices, contributing to a 0.1 percent increase in core PCE prices (goods and services prices, excluding food and energy) as a whole.
+
+Data
+
+In addition to monthly PCE price data published by the Bureau of Economic Analysis (BEA),
+5
+ our analysis requires a measure of the prevalence of imports in each PCE category to construct our theoretical predictions for the effect of import tariffs. For each PCE category, this measure must account for both the direct imports of finished/final consumer goods as well as any indirect effects coming from imported intermediate inputs used in the domestic production of consumer goods and services.
+6
+ Both of these channels can contribute to our theoretical tariffs' effects on PCE prices.
+
+Because estimates of the direct and indirect prevalence of imports across PCE categories are not available, we construct our own measures. We do so using the 2022 release of the BEA's Input-Output (IO) tables.
+7
+ These tables classify PCE according to the industry supplying the final good or service to consumers and according to the region of origin of these goods and services.
+8
+ Specifically, this release of BEA's IO tables features 81 industries, of which 25 belong to the manufacturing sector, 50 to the service sector, and 6 to the agricultural, mining, and construction sectors. For U.S. production in each of these industries, information is available on gross output, value added, and expenditure on intermediate inputs, with the latter broken down by input type and region of origin. Given this information, we can compute both the direct and indirect prevalence of imports in each PCE classification available in these tables.
+
+The PCE data in the BEA's IO tables, which classifies PCE by supplying industry, are not directly compatible with the BEA's PCE price data, which classify PCE according to consumption categories. Many industries can contribute to the consumption bundle represented by a single PCE consumption category, and industries can contribute to multiple PCE consumption categories at once. Further, the BEA's PCE price releases value consumer expenditure at consumer prices, which includes retail, wholesale, and transportation margins, while PCE expenditure by supplying industry in the IO tables is valued at producer prices. The PCE bridge data published by the BEA allow us to merge the IO tables to the price data.
+9
+
+For our statistical analyses, we drop three PCE categories that experience outsized inflation readings during several tariff episodes we study and in which the consumer price index (CPI) measures underlying the PCE prices have a large margin of error as quantified by the Bureau of Labor Statistics (BLS):
+10
+ (1) Glassware, tableware, and household utensils, (2) Magazines, newspapers, and stationery, and (3) Jewelry and watches. Compared to the average goods PCE category in our data, these categories are about half as important in overall core goods PCE but have three times the measured variance.
+11
+
+Theoretical Effect of Tariffs on PCE Prices under Full Pass-through
+
+We compute the theoretical effect of tariffs on PCE prices under the following full pass-through assumption: prices of affected imports at the port of entry increase by the full amount of the tariffs, and domestic producers, wholesalers, and retailers maintain constant dollar markups
+ (
+rather than constant percent markups). Specifically, for each PCE category, we first compute the import content from each country by taking the ratio of total imports (direct and indirect) from the country to PCE valued at consumer prices. We then compute a country-specific tariff effect for each PCE category as the product of tariff changes applied to that country and the PCE category's import content from that country. To compute the total tariff effect for each PCE category, we sum these country-specific tariff effects.
+12
+
+Figure 1 below shows the theoretical effect of a 10 percentage-point tariff increase on imports from China on consumer prices across a variety of core goods PCE categories under our full pass-through assumption. We distinguish between direct pass-through effects related to imports of finished/final consumer goods and indirect effects arising from imported intermediate inputs used in the production of domestic consumer goods and services.
+13
+
+Figure 1. Theoretical Pass-through of a 10 percentage-point Tariff Increase on China to Core Goods (excl. motor vehicles) Prices
+
+Note: Predicted tariff effects assume a 10 percentage-point tariff increase on China. The key identifies bars in order from right to left.
+
+Source: Authors' calculations using BEA IO data from 2019 and BEA PCE bridge data from 2019.
+
+Accessible version
+
+First, note that a large share of goods PCE categories are predicted to experience at least a 1 percent price increase following a 10 percentage-point tariff increase on imports from China. Second, note that direct pass-through effects account for the vast majority of total tariff effects, as most imports from China affecting goods PCE categories are final consumer goods. Compared to a scenario where tariffs primarily affect intermediate input prices, effects on PCE prices from tariffs on China are more likely to appear quickly.
+14
+ Third, note the advantages of using data that distinguishes the import country of origin: the pharmaceutical and other medical products category, for example, has a relatively high import share when taking all countries into account, but relatively few of these imports come from China. The category is therefore predicted to experience very small effects from tariffs on China.
+
+Our theoretical predictions for the effect of tariff changes on PCE prices are constructed under specific assumptions about the response of import prices and post-production margins, the substitutability between domestic and foreign goods in consumption and production, as well as the response of domestic producer prices. However, actual changes in PCE prices could be higher or lower than implied by our theoretical predictions if our assumptions do not hold.
+
+First, our theoretical measures capture first-order effects from tariffs, as they implicitly assume that underlying import content remains constant. Second-order effects, which become increasingly important as the size of the tariff change increases, relate to consumers' and firms' ability to substitute away from more expensive goods and inputs. Our theoretical measures will tend to overestimate the impact of tariffs on PCE prices when substituting away from more expensive goods and inputs is particularly easy, and they will understate the impacts when substitution is particularly hard.
+15
+
+Second, we have assumed that tariffs lead to higher domestic producer prices only thorough higher prices for imported inputs as domestic producers maintain constant dollar markups. However, Flaaen at al. (2020) and Amiti et al. (2019) find evidence suggesting that U.S. producers also increased prices based on the "protection" that the tariffs granted to some industries. In this case, our measures would underestimate the effect of tariffs on PCE prices.
+
+Third, we only include effects due to tariffs the US imposes on other countries. Retaliatory tariffs could also increase costs that domestic producers face through their global supply chains.
+
+Fourth, our theoretical measures assume unchanged import prices exclusive of tariffs, consistent with the empirical evidence on the effects of the 2018-19 tariffs that we discuss in our literature appendix. However, ex-tariff import prices could decline for sufficiently large tariff changes, leading tariff-inclusive import prices to increase by less than the full amount of the tariff. This effect would result in a lower tariff effects on PCE prices than implied by our measures.
+
+Fifth, we have assumed that retailers and wholesalers maintain constant dollar markups. If these sectors increase margins to maintain constant percent markups instead, our theoretical measures will understate the effect of tariffs on PCE prices.
+16
+ Recent work by Sangani (2024) argues that markup adjustment may not be an important determinant of long-run pass-through of cost shocks.
+17
+
+Assessing the Effects of the 2018-19 Tariffs: An Event-study Approach
+
+Our methodology assesses the effects of tariffs on consumer prices according to the ability of the theoretical tariff effects described in the previous section to explain actual changes in PCE prices. In this section, we use an event-study approach to analyze the effects on PCE prices of the 2018-19 tariffs waves implemented by the U.S. government. As illustrated by our analysis below, this approach can be used to assess tariffs effects in real time as new PCE price data becomes available following any tariff event. Table 1 provides information on the implementation dates of these tariffs, the change in tariff rates, and the value of U.S. imports affected.
+
+Table 1. 2018-19 Tariffs
+
+Economies/Products Affected
+
+Effective Date
+
+Tariff Change (pp)
+
+Imports Affected (bil $)
+
+Solar & Washing Machines
+
+22-Jan-18
+
+28
+
+10
+
+Steel
+
+1-Jun-18
+
+25
+
+15
+
+Aluminum
+
+1-Jun-18
+
+10
+
+9
+
+China
+
+6-Jul-18
+
+25
+
+34
+
+China
+
+23-Aug-18
+
+25
+
+16
+
+China*
+
+24-Sep-18
+
+10
+
+180
+
+China*
+
+10-May-19
+
+15
+
+180
+
+China**
+
+1-Sep-19
+
+15
+
+100
+
+E.U. (Airbus)
+
+18-Oct-19
+
+25
+
+7.5
+
+China**
+
+14-Feb-20
+
+-7.5
+
+100
+
+*These actions raise the tariff rate on the same $180 billion of U.S. imports.
+
+**These actions affect the tariff rate on the same $100 billion of U.S. imports.
+
+Focusing on the May 2019 episodeâwhich imposed additional tariffs on a large subset of goods already tariffed in September 2018âwe plot cumulative excess percent changes in PCE prices from April to July of 2019 against our predicted tariff effects. To compute excess inflation for the y-axis, we subtract each category's average 3-month inflation rate from 2000-2017 from its three-month inflation rate from April to July 2019. To compute the predicted tariff effects, we multiply the PCE category's import content from China by the size of the tariff change, 15 percentage points, and the share of Chinese imports affected, $180b / $545.5b.
+
+We also display a regression line estimated from the regression
+
+$$$$\Delta P_{it}=\alpha+\beta\ \Delta{\hat{P}}_{it}+\epsilon_{it},$$$$
+
+where $$\Delta P_{it}$$ is the excess percent change in prices for PCE category $$i$$, and $$\Delta{\hat{P}}_{it}$$ is the predicted percent change in the PCE category's prices due to tariffs. The coefficient $$\beta$$ shows how much of predicted pass-through is consistent with the inflation data we have seen, and the standard errors allow us to assess our confidence.
+
+Figure 2 shows the results. We find a strongly upward sloping relationship between predicted tariff effects and excess inflation in these PCE categories that is significant at a 99% level of confidence. Notably, we also see evidence of a negative intercept, suggesting that PCE categories that were not as exposed to the tariffs on China experienced less inflation than was typical over the 2000-2017 period. As such, while the May 2019 tariffs had sizeable effects on relative prices of PCE categories differentially exposed to the tariffs, other factors leading to less inflation than is typical made these effects difficult to see in aggregate core goods inflation rates.
+18
+
+Figure 2. Effects of May 2019 Tariffs on Core Goods (excl. Motor Vehicles) Prices
+
+Note: Predicted tariff effects assume a 15% x ($180b / $545.5b) tariff on China. The regression line has slope coefficient 2.12 (std. error 0.74, p-value 0.009). Standard errors are robust for heteroskedasticity, and 95% confidence intervals for predicted values are displayed.
+
+Source: Authors' calculations using BEA IO data from 2017, BEA PCE bridge data from 2017, and BEA PCE price data.
+
+Accessible version
+
+More specifically, our regression estimates are $$\beta=2.12$$ (std. error 0.74) and $$\alpha=-1.08$$ (std. error 0.40), where standard errors are robust for heteroskedasticity. Note that, while we cannot statistically reject full pass-through of tariffs into consumer prices ($$\beta=1$$), the point estimate suggests (an economically notable) more than double the amount of full pass-through. Exploring this issue further is one of the topics of the next section.
+
+We also find similar results when repeating this event-study exercise for other tariff events in Table 1, albeit the positive associationâwhile still presentâis less significant than in the case considered in Figure 2. As a validation exercise, we do not find a positive association between prices and import content during periods when tariffs were not imposed, a point we will also make more formally in a pre-trend analysis in the next section.
+
+Assessing the Effects of the 2018-19 Tariffs: A Local Projections Approach
+
+The scatter plot in Figure 2 visualized the inflationary effects of a single tariff episode over a fixed time horizon. To broaden this analysis and assess the dynamic effects of tariffs on prices over time, we show how our methodology can also accommodate a local projections methodology using all the China tariff episodes in Table 1. Formally, we estimate how cumulative price changes at different horizons relative to tariffs' implementation dates can be explained by our theoretical tariff effects:
+
+$$$$\frac{P_{i,t+h}-P_{i,t-1}}{P_{i,t-1}}=\mu_{i,h}+\alpha_{t,h}+\beta_h\ \Delta{\hat{P}}_{it}+\epsilon_{i,t,h}$$$$
+
+The dependent variable on the left hand side is the percent change in PCE category $$i$$'s prices from time $$t-1$$ to time $$t+h$$, and $$\Delta{\hat{P}}_{it}$$ is the predicted effects of tariffs implemented in period $$t$$ on prices in PCE category $$i$$, computed in the same way as we outlined above. We also include a category fixed effect, which controls for category average inflation rates at each horizon, and a time fixed effect, which controls for movements in potentially correlated aggregates (changes in aggregate import prices and exchange rates, etc.).
+19
+ The interpretation of $$\beta_h$$ is the fraction of total predicted pass-through that has occurred $$h$$ months after the imposition of the tariffs.
+
+Figure 3 shows the results. We find evidence consistent with full pass-through occurring within two months of tariff implementation. The pass-through coefficient is around 1.75 on average, suggesting somewhat higher pass-through than predicted by our theoretical measure, but the 90% confidence intervals shown in Figure 3 reveal that we cannot statistically reject a pass-through coefficient of 1. Further, Figure 3 shows only weak evidence of anticipatory effects of tariffs on prices during this episode, since the coefficients $$\beta_{-3}$$ and $$\beta_{-2}$$ are small relative to pass-through coefficients after tariff implementation.
+20
+
+Figure 3. Dynamic Effects of 2018-19 Tariffs on China
+
+Note: Standard errors are clustered by PCE category, and 90% confidence intervals are displayed. All China tariff episodes in Table 1 are included. The dashed vertical line designates that tariffs were implemented between time -1 and time 0.
+
+Source: Author's calculations using BEA IO data from 2017, BEA PCE bridge data from 2017, and BEA PCE price data. The sample period is January 2000 - February 2020.
+
+Accessible version
+
+For the case of the 2018-19 tariffs, another factor may have contributed to higher tariff effects on PCE prices than implied by our theoretical measuresâleading to pass-through coefficients above one. These tariffs were implemented during an environment of relatively infrequent price adjustment, so sellers may have used them as coordination devices to raise prices above and beyond what these tariffs would implyâincorporating other increases in costs that had occurred but were not yet reflected in prices.
+21
+
+Effects of the 2018-19 Tariffs in the Literature
+
+The evidence on the effects of 2018-19 tariffs on specific components of consumer prices in this literature is somewhat mixed. Using proprietary data, Flaaen et al. (2020) find fast and strong pass-through from tariffs to retail prices in the case of washing machines. However, using online prices from two large U.S. retailers, Cavallo et al. (2021) find little effects from tariffs on retail prices when a broader set of goods is considered. Contrary to the results in this last study, we find significant pass-through from 2018-19 tariffs to PCE prices. A couple of methodological differences may be behind the differences.
+
+First, compared to Cavallo et al. (2021), our price data is more representative of the US economy. We use PCE price data that is more representative of prices overall than online prices from two large retailers, and our data disproportionately includes the prices of goods in stores rather than prices online. Second, armed with price data by product and origin country, Cavallo et al. (2021) use an identification strategy that focuses on relative price changes between tariffed and non-tariffed goods within narrowly defined categories. However, this strategy may underestimate the effect of tariffs on PCE prices if U.S. retailers distribute price increases across related non-tariffed products (Flaaen et al. 2020) or if domestic producers raise prices due to the "protection" offered by tariffs (Flaaen et al. 2020, Amiti et al. 2019).
+22
+ To the extent that these endogenous responses by domestic retailers and producers are more prevalent in product categories more affected by tariffs, our analysis captures both of these effects on PCE prices.
+
+Tariff Effects, February-March 2025
+
+We now apply our event-study approach in Figure 2 but for the tariffs on China implemented in February and March of 2025. We update our predicted tariff effect measures with data from 2019, and we compute excess inflation relative to the 2000-19 period.
+23
+
+The results are shown in Figure 4. We again find a strong upward sloping relationship between excess inflation from January 2025 to March 2025 and the predicted tariff effect from a 20% tariff on China. Compared to Figures 2 and 3, the pass-through coefficient is lower: $$\beta=0.54$$ (std. error 0.25). The coefficient is significant at a 95% level of confidence (p-value 0.04).
+24
+ We again find evidence of a negative intercept, $$\alpha=-0.83$$ (std. error 0.51), suggesting that goods with little import content from China experienced less inflation than was typical in the pre-pandemic period over the two-month period from January to March 2025.
+25
+
+Figure 4. Effects of Feb-Mar 2025 China Tariffs on PCE Core Goods (excl. Motor Vehicles) Prices
+
+Note: Predicted tariff effects assume a 20% tariff on China. The regression line has slope coefficient 0.54 (std. error 0.25, p-value 0.04). Standard errors are robust for heteroskedasticity, and 95% confidence intervals for predicted values are displayed.
+
+Source: Authors' calculations using BEA IO data from 2019, BEA PCE bridge data from 2019, and BEA PCE price data.
+
+Accessible version
+
+There are three major factors that we think may explain why the pass-through coefficient is lower than we found over the 2018-2019 tariff episodes. One factor is that China's share of total U.S. goods imports has fallen significantly since the last year when we can measure import content from China by PCE category directly from BEA's IO tablesâfrom about 18 percent in 2019 to a bit over 13 percent in 2024.
+26
+ A second factor is that tariffs were not implemented immediately. For example, even though the first 10 percentage points of the China tariffs were implemented in early February, they exempted goods that left China before February 1 and entered the US before March 7âso that the tariffs would not affect import costs of goods already being shipped overseas. Combined with the evidence from Figure 3, this explanation suggests that we should expect additional pass-through of the February and March tariffs to prices in April.
+27
+ Third, the recent inflation led to an increase in the frequency with which firms change prices (Montag and Villar 2023). Compared to the 2018-19 tariff episodes, tariffs in 2025 may not play as important a role in coordinating price increases across firms to account for other cost increases not yet reflected in prices.
+
+According to our theoretical full pass-through measures, a 20 percentage point tariff increase on China raises core goods PCE prices by 0.62 percentage points.
+28
+ As such, our pass-through estimate of $$\beta=.54$$ over the period from January to March 2025 suggests that these tariffs have so far increased core goods PCE prices by 0.33 percentage points (=.54 x 0.62%). Staff estimates show that the core goods PCE inflation rate from January to March 2025 was 0.15 percent, suggesting that, in the absence of the tariffs on China, core goods PCE inflation over this period would have been -0.18 percent, a number fairly consistent with typical two-month core goods PCE inflation rates over the pre-pandemic period and the last quarter of 2024. With core goods representing about 25% of core PCE as a whole, we estimate that the tariff increase on China has so far contributed 0.08 percentage points (=.25 x 0.33%) to core PCE inflation.
+
+Conclusions
+
+Existing methodologies in the economics literature are insufficient to estimate the effects of tariffs on consumer prices in real time. We develop a methodology to solve this problem. In a historical analysis, we show that the 2018-19 tariffs on China passed through fully and quickly to consumer prices. We then apply our methodology in real time, showing that tariffs implemented on China in February and March of 2025 have already affected consumer prices. So far, the effect of these tariffs has been a 0.33 percentage point increase in core 
+goods
+ PCE prices, contributing to a 0.08 percentage point increase in core PCE prices. As more or higher tariffs are imposed, we think our methodology will continue to be useful in assessing tariff effects on consumer prices.
+
+We caution that our analysis pertains only to the consumer price effects of tariffs that the US has imposed on other countries. Our methodology is silent about the effects of retaliatory tariffs. It is also silent about any potential tariff effects on other outcomes, such as productivity and employment.
+
+Appendix: Other Related Literature
+
+In the main body of the note, we discussed two papers assessing tariffs' effects on consumer prices: Flaaen et al. (2020) and Cavallo et al. (2021). In this section, we briefly describe additional approaches and findings of a recent body of trade literature that attempts to identify the effects of the 2018-19 U.S. tariffs on different sets of prices.
+29
+
+A group of studies analyze the effect of U.S. 2018-19 tariffs on U.S. import prices (Amiti et al. 2019, Fajgelbaum et al. 2019, Flaaen et al. 2020, Cavallo et al. 2021). A robust finding across these studies is that the pass-through from 2018-19 tariffs to tariff-inclusive import prices was essentially complete; that is, the price faced by U.S. importers rose by the full amount of the tariff. They also find that this pass-through was fast. With data on U.S. import prices and tariffs available at the product-by-origin level, these studies typically exploit differential variation in tariff changes across origins within a product to identify tariffs effects on prices. By construction, these specifications can only identify relative prices changes across origins for a given products. As discussed in the main body of the note, this approach can understate the effect of tariffs through pricing spillovers. In relation to our work, besides focusing on a different set of prices, the methodology in these studies is ill-suited for our purposes as monthly PCE price data is not available at the product-by-origin level.
+
+Amiti et al. (2019) also present evidence suggesting that tariffs increased U.S. producer prices by "protecting the output" of U.S. industries from competition and by raising inputs costs to domestic producers. Specifically, the authors use BEA's IO tables to construct industry-level measures of "output tariffs" and "input tariffs" by interacting relevant tariff changes with the share of imports in domestic consumption and in domestic producers' input costs, respectively. Amiti et al. (2019) find that both of these measures have a positive and statistically significant effect on industry-level changes in producer price indices (PPI). While the authors' approach is similar to ours, we focus on the effect of tariffs on PCE prices, which requires additionally accounting for the potential direct effect of tariffs on the prices of imported final goods faced by U.S. consumers. This distinction is particularly important when studying tariffs on China, since most imports from China are final goods imports rather than intermediate imports.
+
+Appendix: Related Literature Addendum
+
+In the final publication stages of this note, Cavallo et al. (2025) released preliminary findings regarding the effect of 2025 tariffs on retail prices using high frequency online price data. We think their analysis is complementary to ours. While the data we use are publicly available, are more representative of the economy as a whole, and disproportionately feature prices from stores rather than online prices, the proprietary data they use is much more granular, which allows them to explore the impact of tariffs on other dimensions. Consistent with our results, Cavallo et al. (2025) find that recent tariffs are already impacting retail prices.
+
+Acknowledgements
+
+We thank Katia Peneva for extensive feedback on our methodological framework throughout the many months we have been working on this research. We thank Shaghil Ahmed, Andrew Figura, Aaron Flaaen, Etienne Gagnon, Logan Lewis, Andrea De Michelis, Ed Nelson, and Katia Peneva for their comments on earlier versions of this note. We also thank the members of the Prices and Wages (PW) and Trade and Quantitative Studies (TQS) Sections for their comments. We thank Daniel Villar for his assistance measuring goods PCE prices with CPI data. We thank Jeremy Rudd for his assistance measuring the profit share of value added in the retail and wholesale sectors. All errors are our own.
+
+References
+
+Amiti, Mary, Stephen Redding, and David Weinstein. 2019. "
+The Impact of the 2018 Tariffs on Prices and Welfare
+." 
+Journal of Economic Perspectives
+ 33(4): 187â210.
+
+Barbiero Omar and Hillary Stein. 2025. "The impact of Tariffs on Inflation." 
+Current Policy Perspectives
+. Federal Reserve Bank of Boston, February 6, 2025.
+
+Cavallo, Alberto, Gita Gopinath, Brent Neiman, and Jenny Tang. 2021. "
+Tariff Pass-through at the Border and at the Store: Evidence from US Trade Policy
+." 
+American Economic Review Insights 
+3(1): 19â34.
+
+Cavallo, Alberto, Paola Llamas, and Franco Vazquez. 2025. "
+Tracking the Short-Run Price Impact of U.S. Tariffs (PDF)
+" Unpublished.
+
+De Michelis, Andrea, and Mariano Somale. 2023. "
+A Sourcing Risk Index for U.S. Manufacturing Industries
+." 
+FEDS Notes
+. Washington: Board of Governors of the Federal Reserve System, September 08, 2023.
+
+DellaVigna, Stefano and Matthew Gentzkow. 2019. "Uniform Pricing in U.S. Retail Chains." 
+The Quarterly Journal of Economics
+ 134 (4): 2011â84, https://doi.org/10.1093/qje/qjz019
+
+Fajgelbaum, Pablo, Pinelopi Goldberg, Patrick Kennedy, and Amit Khandelwal. 2019. "The Return to Protectionism." 
+The Quarterly Journal of Economics 
+135(1): 1â55. https://doi.org/10.1093/qje/qjz036
+
+Fajgelbaum, Pablo and Amit Khandelwal. 2022. "The Economic Impacts of the USâChina Trade War." 
+Annual Review of Economics
+ 14:205-228.
+
+Flaaen, Aaron., Ali Hortaçsu., and Felix Tintelnot. 2020. "The production relocation and price effects of U.S. trade policy: The case of washing machines." 
+American Economic Review
+ 110 (7): 2103â27
+.
+
+Minton Robert and Brian Wheaton. 2023. "Delayed Inflation and Supply Chains: Theory and Evidence," Available at SSRN: https://ssrn.com/abstract=4470302 or http://dx.doi.org/10.2139/ssrn.4470302
+
+Minton, Robert and Casey Mulligan. 2024. "A Market Interpretation of Treatment Effects." 
+NBER Working Paper Series
+, 33228, National Bureau of Economic Research.
+
+Montag, Hugh, and Daniel Villar (2023). "
+Price-Setting During the Covid Era
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 29, 2023.
+
+Sangani, Kunal. 2024. "Pass-Through in Levels and the Incidence of Commodity Shocks." Available at SSRN: https://ssrn.com/abstract=4574233 or http://dx.doi.org/10.2139/ssrn.4574233
+
+Wolf, Christian K. 2023. "The Missing Intercept: A Demand Equivalence Approach." 
+American Economic Review
+ 113 (8): 2232â69.
+
+1. Import price indices published by the Bureau of Labor Statistics are measured exclusive of tariffs. 
+Return to text
+
+2. We discuss these papers later in the note and in the literature review appendix. 
+Return to text
+
+3. These theoretical predictions do not capture all the channels through which tariffs can affect consumer prices as we discuss later in the note. 
+Return to text
+
+4. We contrast our results to those in the existing literature later in the note. 
+Return to text
+
+5. For PCE goods price data in March 2025, we use Board staff estimates constructed using the consumer price index measures underlying those PCE categories. 
+Return to text
+
+6. For more details on the dependence of domestic production on imported intermediate inputs, see De Michelis and Somale (2023). 
+Return to text
+
+7. The 2022 release of BEA Input-Output tables covers the period 2007-20 and features 81 industries and five foreign regions--Canada, Mexico, Europe, China, and Rest of the World. For access to the dataset and a detailed description, see 
+https://www.bea.gov/data/special-topics/global-value-chains
+. For our analysis on the 2018-19 tariffs, we use this data from 2017, and for our analysis on the 2025 tariffs, we use this data from 2019. 
+Return to text
+
+8. The classification of PCE by supplying sector and region of origin in our data is directly provided by the BEA based on underlying production and trade data for thousands of commodities. This is an important difference between our data and that of other studies, such as Barbiero and Stein (2025), that produce their own estimates of PCE imports by origin based on Census trade data. These estimates typically rely on "proportionality assumptions" that allocate PCE imports of a given commodity to origins according to the share of that origin in the overall imports of that commodity. With much less detailed production and trade data, such estimates are less precise than those provided directly by the BEA. Our statistical analysis relies heavily on the breakdown of imports by origin, so this additional precision is especially important. 
+Return to text
+
+9. The PCE bridge data covers each year from 1997-2023. For our analysis on the 2018-19 tariffs, we use this data from 2017, and for our analysis on the 2025 tariffs, we use this data from 2019. These years are selected for compatibility with the BEA's IO data, as discussed in footnote 7. 
+Return to text
+
+10. For more details on BLS's variance estimation, see 
+Variance Estimates for the Consumer Price Indexes : U.S. Bureau of Labor Statistics
+. 
+Return to text
+
+11. Rather than excluding outliers, we also verify that our results are robust to using weighted least squares regressions. In one robustness check, the weights are the inverse variances of the CPI percent changes underlying our PCE categories. These weights place little importance on high variance categories, such as the three we have excluded, and high importance on low variance categories. In another robustness check, we also perform weighted least squares using each PCE category's weight in consumption overall. 
+Return to text
+
+12. In this note, we only assess the effects of tariffs on China, but our methodology is applicable to all origin regions mentioned in footnote 7. 
+Return to text
+
+13. While our data allow us to produce these charts for all PCE categories in the economy and for a variety of origin countries or regions, this note will focus on the core goods PCE price effects from tariffs on China, as this was the only country affected in the tariff events analyzed below. 
+Return to text
+
+14. Minton and Wheaton (2023) argue that the full propagation of intermediate input cost shocks to consumer prices can take more than a year. 
+Return to text
+
+15. Predicting pass-through using constant import content in PCE is consistent with preferences and production functions exhibiting unitary elasticity of substitution between consumption goods and between inputs, respectively. 
+Return to text
+
+16. The degree of understatement is related to the ratio of wholesale and retail profits to their value added. Using data on corporate profits and under various imputation assumptions for the profit share of proprietor's income, we estimate that the profit share of retail and wholesale value added is between 15%-20%, suggesting a relatively mild risk that using import content misses meaningful pass-through due to profit margin adjustment. 
+Return to text
+
+17. From Sangani's abstract: "incomplete pass-through in percentages often disguises 
+complete pass-through in levels
+: a $1/unit increase in commodity costs leads to $1/unit higher downstream prices." 
+Return to text
+
+18. We treat the forces leading to lower or negative inflation readings for PCE categories with little import content from China as independent from tariffs, but such a treatment relates to a broader issue in macroeconomics known as the "missing intercept" problem (Wolf 2023). How do we know that tariffs did not also cause PCE categories with little import content to experience lower or negative inflation? Our logic relates to the timing and magnitude of such effects. Imposing tariffs could, for example, depress domestic wage growth or lead to lower oil prices, reducing inflation even in PCE categories with little exposure to tariffs. But wages adjust slowly, and Minton and Wheaton (2023) argue that supply chain pass-through of oil price movements to goods prices takes more time than the horizons we consider in this note. Further, we do not think it plausible that the 2018-19 tariffs had substantial enough effects on oil prices and wage growth to drive our intercept estimates. For the larger tariffs considered in 2025, we think that studying the potential magnitude of these and other general equilibrium effects over the medium run is an important topic for further research. 
+Return to text
+
+19. In our scatter plot in Figure 2, the intercept was implicitly a time fixed effect, since the regression covered only one 3-month time period, and the y-axis residualization with respect to 2000-2017 inflation rates was analogous to the category fixed effects. 
+Return to text
+
+20. Another way of interpreting these pre-implementation coefficients is that price growth of PCE categories more and less exposed to tariffs on China was largely proceeding along parallel trends before tariffs. 
+Return to text
+
+21. Our finding of relatively quick pass-through of tariff changes during this period might be interpreted as evidence of this channel. 
+Return to text
+
+22. Put another way, using similar products with less import content as a control group to assess how much tariffs affected products with higher import content can understate the effect of tariffs through spillovers to the control group. These spillovers are present, for example, if retailers react to tariffs on one product by increasing the prices of all similar products. A more general discussion of these spillover issues is available in Minton and Mulligan (2024). Cavallo et al. (2021) do try to assess whether these spillovers are present by looking at price changes one of their retailers implements for the same products in Canada, which did not implement similar tariffs, but this approach could fail to detect spillovers if the retailer's product pricing is proportionally uniform across countries. We think this point, which evokes ideas akin to the uniform pricing findings of DellaVigna and Gentzkow (2019), is worthy of further study. 
+Return to text
+
+23. The analysis above used BEA input-output and PCE bridge data from 2017, but we use the same data for 2019 for our analysis in 2025. Ideally, we would use BEA data from 2024, but the BEA stopped publishing this data for years after 2020. We do not use the data from 2020 since it is potentially confounded by issues related to the pandemic that may make it ill-suited for analysis of incoming data in 2025. For completeness, we note that the results we show in this section are more statistically significant if we use the BEA data from 2017 instead of updating our import content measures for the more recent 2019 data. To compute excess inflation on the y-axis, we also change our residualization procedure relative to Figure 3, taking out each PCE category's average two-month inflation rates from January 2000 â December 2019, rather than the average three-month inflation rates from January 2000 â December 2017. The change in the end period for this residualization is also not important for our results. 
+Return to text
+
+24. The coefficient is below 1 at a 90% level of confidence (p-value 0.08). 
+Return to text
+
+25. We can also repeat the analysis shown in Figure 4 for one-month excess inflation in February and March separately. This analysis suggests that 0.25 of the two-month pass-through estimate of 0.54 occurred during February, and the remaining 0.29 occurred during March. Each of these estimates is more uncertain, likely due to additional noise in one-month inflation readings compared to two-month inflation readings. The February coefficient of $$\beta=0.25$$ (SE 0.15) is borderline significant with a 90% level of confidence (p-value 0.11), and the March coefficient of $$\beta=0.29$$ (SE 0.23) is less significant, with a p-value of 0.21. Looking through some of the noise, however, using the two-month inflation measures in Figure 4, we have more certainty of at least partial pass-through of the 20% tariffs on China to consumer goods prices. 
+Return to text
+
+26. The BEA has no longer included a breakdown of PCE imports by origin in more recent releases of the data. 
+Return to text
+
+27. A smaller factor also leading to exemptions in February and March is the de minimis exemption. Except for a few days in February, this exemption continued to apply and means that not all Chinese imports were affected by the 20% tariff, as our analysis assumes. The de minimis exemption is currently scheduled to be terminated again in early May. 
+Return to text
+
+28. Core goods as a whole includes the motor vehicles category, which we have excluded throughout this note. Because the import content of motor vehicles from China is quite small, this category contributes very little to the overall effects on core goods from tariffs on China. 
+Return to text
+
+29. For a more detail discussion of recent literature on this topic see Fajgelbaum and Khandelwal (2022). 
+Return to text
+
+Please cite this note as:
+
+Minton, Robert, and Mariano Somale (2025). "Detecting Tariff Effects on Consumer Prices in Real Time," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 09, 2025, https://doi.org/10.17016/2380-7172.3786.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

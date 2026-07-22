@@ -1,0 +1,428 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 16, 2021
+
+Have pandemic-induced declines in home listings fueled house price growth?
+
+Neil Bhutta, Adithya Raajkumar, and 
+Eileen van Straelen
+
+Introduction
+
+New homes listed for sale fell sharply at the beginning of the pandemic. Anecdotal evidence suggests that fear of COVID made homeowners reluctant to list their homes, driving down new listings. Figure 1 shows that from March to April 2020, as COVID lockdowns went into effect, new listings declined by more than one-third relative to previous years and did not return to normal levels until July 2020. Declines in the supply of homes available for sale could spark a rise in home prices if the reduction in listings comes from sellers who are not also simultaneous buyers (Anenberg and Kung (2014)). For example, if many of the non-selling homeowners were elderly and postponing a retirement home transition due to the pandemic, then the supply reduction may not be offset by a decline in demand.
+ 
+Consistent with this possibility, shortly following the early 2020 listings declines, the second half of 2020 saw rapid house price acceleration, as shown in Figure 1.
+
+Figure 1. Year-over-Year Listings Growth vs. House-Price Growth
+
+
+Note: Figure shows year-over-year percent change in total listings and annualized monthly house price growth over time. Listings data from Redfin.com, house price data from Zillow, Inc.
+
+Accessible version
+
+In this note, we examine county-level data on new listings, house prices, and pandemic severity and social distancing, and present three main findings. First, the magnitude of decline in new listings during 2020q2 varied substantially across counties. Second, counties that experienced higher rates of COVID hospitalizations and deaths, andâindependentlyâhigher levels of social distancing, also experienced larger declines in new listings. Third, counties with the largest declines in new listings saw more significant gains in house price growth during the second half of 2020. However, we further find that the relationship between listings declines and house price growth died out by first quarter of 2021, even as house prices continued to accelerate into 2021.
+
+Listings Declines Across Counties
+
+To investigate the relationship between listings, COVID, and house prices, we merge county level data on new listings from Redfin with house price data from Zillow and Census demographic data. We identify county-level "listings shocks" as the year-over-year percent change in total new listings over April-June 2020. Figure 2 displays average year-over-year growth in new listings, by week, across four groups of counties, grouped by quartile of the listings shock. The listings shock varies substantially across counties. In some weeks, new listings were down by more than 60 percent on average in in the first quartile of counties, compared with an average low point of about 30 percent in the fourth quartile of counties.
+
+Figure 2. Year-over-Year Percent Change in New Listings by Quartile of Listings Shock
+
+
+Note: Figure shows the year-over-year percent change in total listings over 2020 by quartile of the listings shock, where quartiles are weighted by the number of households per county. Listings shock defined as the year-over-year percent change in total new listings averaged over April-June 2020. Listings data from Redfin.com, population data from the Census Bureau.
+
+Accessible version
+
+Pandemic-Related Drivers of the Listings Decline
+
+We next turn to the drivers of the decline in new listings. The sharp drop in listings coincided with the early stages of the pandemic and lockdowns enacted by state and local governments to restrain the spread of COVID. Fear of COVID as well as these lockdown measures may have contributed to the decline in listings as homeowners became reluctant or unable to list their homes. The percent of respondents in a Fannie Mae National Housing Survey saying it is a "good time to sell" dropped substantially at the start of the pandemic.
+
+To help describe where listings declined most sharply, we run county-level regressions of listings shocks on measures of pandemic severity and lockdown intensity (see Table 1 for summary statistics), as well as several socio-economic variables. In each regression we include state fixed effects, cluster standard errors by state, and weight by number of households. The coefficients reported in Columns 1 and 2 of Table 2 indicate that counties with greater COVID deaths and hospitalizations per capita experienced greater declines in listings. The coefficient on COVID deaths in column 2 implies that 100 more COVID deaths per 100,000 is associated with a five-percentage point decline in listings.
+
+Table 1: Summary Statistics
+
+Variable:
+
+Obs.
+
+Mean
+
+St. Dev.
+
+25th Percentile
+
+75th Percentile
+
+House price acceleration: annualized percent growth in prices over 2020 H2 minus the same for 2019 H2
+
+1,189
+
+7.435
+
+5.562
+
+5.016
+
+10.209
+
+Listings shock: Year-on-Year percent change in total listings over April-June 2019 to 2020
+
+1,174
+
+-23.925
+
+17.185
+
+-29.581
+
+-17.23
+
+Time spent at home: percent change in average hours spent at home relative to January 2020
+
+729
+
+15.024
+
+3.559
+
+12.407
+
+17.066
+
+Total Covid-19 related hospitalizations per 100,000 persons, April-June 2020
+
+1,197
+
+81.982
+
+69.156
+
+13.815
+
+103.836
+
+Total deaths due to Covid-19 per 100,000 persons, April-June 2020
+
+1,197
+
+36.863
+
+32.215
+
+3.096
+
+41.254
+
+Note: Data are winsorized at the second and ninety-eighth percentiles to exclude large outliers. Means and quantiles are weighted by the number of households in each county.
+
+Sources: Redfin.com (listings), Zillow, Inc. (house prices), Google LLC, Community Mobility Reports (mobility), CDC (COVID), Census Bureau (population, land area, demographics).
+
+Table 2: Drivers of the Listings Shock
+
+Dependent Variable:
+
+(1) Listings Shock
+
+(2) Listings Shock
+
+(3) Listings Shock
+
+(4) Listings Shock
+
+Hospitalizations per 100,000
+
+-0.023***
+
+ 
+
+-0.016***
+
+ 
+
+ 
+
+(0.003)
+
+ 
+
+(0.006)
+
+ 
+
+Deaths per 100,000
+
+ 
+
+-0.051***
+
+ 
+
+-0.040***
+
+ 
+
+ 
+
+(0.007)
+
+ 
+
+(0.014)
+
+Change in hours spent at home
+
+ 
+
+ 
+
+-0.904**
+
+-0.764*
+
+ 
+
+ 
+
+ 
+
+(0.414)
+
+(0.453)
+
+Democratic vote share in 2016
+
+-0.121**
+
+-0.129**
+
+-0.064*
+
+-0.083**
+
+ 
+
+(0.05)
+
+(0.048)
+
+(0.037)
+
+(0.037)
+
+Share aged 65 years and above
+
+0.017
+
+0.05
+
+-0.097
+
+-0.045
+
+ 
+
+(0.22)
+
+(0.217)
+
+(0.179)
+
+(0.182)
+
+Share adults with at least bachelor's degree
+
+0.015
+
+0.029
+
+0.058
+
+0.05
+
+ 
+
+(0.063)
+
+(0.063)
+
+(0.081)
+
+(0.079)
+
+Log median household income
+
+0.051
+
+-0.096
+
+4.267
+
+3.86
+
+ 
+
+(5.093)
+
+(5.479)
+
+(6.995)
+
+(7.344)
+
+Mean unemployment from April to June 2019
+
+-0.732
+
+-0.779
+
+-1.610**
+
+-1.474*
+
+ 
+
+(0.6)
+
+(0.61)
+
+(0.734)
+
+(0.738)
+
+Share of homes used for recreation or vacation
+
+-0.055
+
+-0.065
+
+-0.054
+
+-0.063
+
+ 
+
+(0.063)
+
+(0.059)
+
+(0.058)
+
+(0.056)
+
+Share owner-occupied households
+
+-0.102
+
+-0.11
+
+-0.1
+
+-0.122
+
+ 
+
+(0.101)
+
+(0.099)
+
+(0.116)
+
+(0.114)
+
+Observations
+
+1,185
+
+1,185
+
+724
+
+724
+
+R-squared
+
+0.61
+
+0.614
+
+0.695
+
+0.698
+
+Note: Data are winsorized at the second and ninety-eighth percentiles to exclude large outliers. All specifications include state fixed effects and state-clustered standard errors weighted by the number of households. *** p<0.01, ** p<0.05, * p<0.1.
+
+Sources: Redfin.com (listings), Zillow, Inc. (house prices), Google LLC, Community Mobility Reports (mobility), CDC (Covid-19), Census Bureau (population, land area, demographics).
+
+We also find a strong independent correlation between listings declines and counties' 2016 Democrat vote share. Research has found that Democrat-leaning populations were more likely to socially distance (Barrios et al (2021)). Given that finding, and because we separately control for the severity of the pandemic (e.g. COVID hospitalizations), this result is consistent with lockdowns and voluntary social distancing being associated with greater declines in listings. Indeed, in columns 3 and 4, when we control for changes to time spent at home (which is only available for a subset of counties), the coefficient on Democrat vote share falls substantially, indicating that Democrat vote share is highly correlated with mobility.
+
+Listings Declines and House Prices
+
+Next, we examine the correlation between county-level listings shocks and subsequent house price acceleration. We define house price acceleration as annualized county-level house price growth over the second half of 2020 minus annualized county-level house price growth over the second half of 2019. In Figure 3 we plot the correlation between house price acceleration and the listings shock. Our dataset covers over 1,000 counties, but for Figure 3 we group the counties into 20 household-weighted bins according to the size of the listing shock. The x-axis shows the household-weighted average listing shock in each bin, and the y-axis shows the household-weighted average house price acceleration in each bin. The graph shows that counties with bigger listing shocks tended to experience more rapid house price acceleration during the second half of 2020.
+1
+
+Figure 3. Listings Shock and House Price Acceleration
+
+
+Note: Figure shows the household-weighted correlation between house price acceleration and the listings shock. County level listings and price data were collapsed into 20 household-weighted bins where each county was assigned to a bin based on the size of its listings shock. House price acceleration defined as the annualized percent change in house prices from June to December 2020 minus the same for 2019. Listings shock defined as the year-over-year percent change in total listings averaged over April-June 2020. Listings data from Redfin.com, population data from the Census Bureau, house price data from Zillow, Inc.
+
+Accessible version
+
+Figure 1 shows that new listings bounced back over the second half of 2020, and by the end of 2020, new listings exceeded 2019 levels. This rebound suggests that disruptions to new listings may have been less important for price growth in more recent periods. In Figure 4 we trace out the relationship between the 2020q2 listings shock and price growth over time. We estimate a regression at the county-by-quarter level, weighting by number of households, from 2019q4 through 2021q1. We regress the quarterly price acceleration on the listings shock interacted with dummies for each quarter of the sample. We plot the coefficients of these interactions by quarter in Figure 4.
+
+Figure 4. Time-Varying Relationship between Listings Shocks and House Price Acceleration
+
+
+Note: Figure shows estimates from a regression of year-over-year acceleration in quarterly price growth (annualized) on the listings shock interacted with dummies for each quarter of the sample, omitting 2020q2. The regression is estimated at the county-by-quarter level, weighting by number of households, from 2019q4 through 2021q1. Figure plots the coefficients of these interactions and their confidence intervals by quarter. Listings data from Redfin.com, population data from the Census Bureau, and house price data from Zillow, Inc.
+
+Accessible version
+
+Figure 4 shows that listings shocks are statistically significantly related to price acceleration in 2020q3, and this relationship strengthens in 2020q4. We find that a ten-percentage point decline in new listings during 2020q2 is associated with a one-percentage point increase in house price acceleration in 2020q4. The strengthening of the listings price relationship in 2020q4âtwo quarters after the contraction in supplyâsuggests that prices adjusted somewhat sluggishly to the supply shock. That said, the relationship dies out by 2021q1, even as price growth continued to accelerate, implying that strong demand must have been an important factor behind price acceleration in recent months. Consistent with our findings, Anenberg and Ringo (2021) use a housing search model to show that while supply factors may help explain house price growth in early in the pandemic, a surge in demand is responsible for continued price growth.
+
+Notably, Figure 4 also indicates that there is no statistically significant correlation between listings shocks and price growth in the two quarters 
+before
+ the pandemic. This result helps rule out that the relationship between listings shocks and price growth during 2020 simply reflected pre-existing trends in house price growth.
+
+Conclusion
+
+In this note, we investigate why listings declined in early 2020 and explore the relationship between the listings declines and house prices. We find that areas with more COVID deaths and greater reductions in mobility experience greater drops in listings. We also show that counties which experienced sharper listings drops at the beginning of the pandemic subsequently experienced stronger acceleration in house price growth. We find that the correlation between listings and price acceleration dies out by 2021 despite price growth continuing to accelerate, indicating that strong demand, possibly due to low mortgage rates or to a greater desire for housing because of working-from-home,
+2
+ has been important in explaining recent price acceleration.
+
+References
+
+Anenberg, Elliot, and Edward Kung. "Estimates of the size and source of price declines due to nearby foreclosures." 
+American Economic Review
+ 104.8 (2014): 2527-51.
+
+Anenberg, Elliot, and Daniel Ringo (2021). "
+Housing Market Tightness During COVID-19: Increased Demand or Reduced Supply?
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 25, 2021.
+
+Barrios, John M., et al. "Civic capital and social distancing during the Covid-19 pandemic." 
+Journal of Public Economics
+ 193 (2021): 104310.
+
+Gupta, Arpit, et al. 
+Flattening the curve: pandemic-induced revaluation of urban real estate
+. No. w28675. National Bureau of Economic Research, 2021.
+
+1. The counties in the left-most bin in Figure 3 experienced both weak price acceleration and large listings declines. This bin is largely made up of counties in New York. New York experienced both strict lockdowns, which reduce listings, and also weaker housing demand growth. 
+Return to text
+
+2. See (Gupta et al (2021)). 
+Return to text
+
+Please cite this note as:
+
+Bhutta, Neil, Adithya Raajkumar, and Eileen van Straelen (2021). "Have pandemic-induced declines in home listings fueled house price growth?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 16, 2021, https://doi.org/10.17016/2380-7172.2968.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

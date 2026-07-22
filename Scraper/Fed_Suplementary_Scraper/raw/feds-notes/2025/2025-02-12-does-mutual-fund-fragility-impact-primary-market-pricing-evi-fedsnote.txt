@@ -1,0 +1,756 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+February 12, 2025
+
+Does Mutual Fund Fragility Impact Primary Market Pricing? Evidence from Commercial Paper
+1
+
+Yi Li
+, Sean Tibay, and 
+Ashley Wang
+
+1. Introduction
+
+Investor flows in open-end mutual funds, along with their inherent liquidity mismatches and potential fragility risks, can significantly impact the pricing of assets these funds invest in. While much of the existing research has focused on these effects within the secondary markets for equities and bonds, this note, based on a working paper by Li, Tibay, and Wang (2024), provides evidence on how shocks from investor flows in prime money market funds (MMFs) influence the pricing and issuance in the primary markets for commercial paper (CP).
+
+As a fundamental component of the wholesale funding markets, CP, with a market size of about $1 trillion, is crucial for providing short-term financing to both financial and non-financial firms, helping them manage payroll, taxes, inventory, and other daily operational expenses. CP, typically maturing in about one month, is subject to considerable rollover risks.
+2
+ Disruptions in the CP markets can cause funding freezes and destabilize the broader financial system, as evidenced during the 2008 financial crisis and the 2020 COVID-19 crisis. Notably, all CP transactions are conducted in over-the-counter (OTC) markets with minimal secondary-market trading, which creates significant market frictions and heightens CP's susceptibility to investor shocks. This situation underscores the need to understand how investor fragility impacts CP pricing and the provision of funding.
+
+Meanwhile, MMFs are pivotal institutional investors in the CP markets, providing about a quarter of the market's funding. Due to MMF investors' extremely low tolerance for losses in value, these funds face higher redemption risks than equity or bond mutual funds. These risks, combined with the fragility of the markets for CP and some other instruments in which MMFs invest, creates a structural vulnerability that can trigger a cascade of rising funding costs and credit shortages during stressful periods. Even in normal times, fluctuations in MMF flowsâoften driven by factors unrelated to the fundamentals of CP issuersâcan significantly impact the CP markets.
+
+The distinctive features of the CP markets and the MMF industry create an ideal setting to explore the impact of open-end mutual funds' fragility on markets lacking secondary tradingâan important yet underexplored area. By utilizing confidential transaction-level data on CP and merging it with security-level MMF holdings data, we investigate this critical issue. We find that MMF flow-driven funding fragility significantly impacts CP prices, even after controlling for issuer characteristics and fixed effects. Moreover, CP market pricing reflects the bargaining power dynamic, with weaker CP issuers facing sharper borrowing cost increases under MMF redemption pressure.
+
+2. Data and the funding fragility measure
+
+For CP data, we utilize confidential data from The Depository Trust & Clearing Corporation (DTCC), which provides transaction-level information in the primary CP markets.
+3
+ These data are supplemented with firm-level short-term ratings from Moody's and S&P.
+4
+ For MMF data, we access month-end holdings of prime MMFs through their mandatory N-MFP filings with the SEC, which provide granular security-level holdings and fund-level information. We merge these two primary datasets using CUSIPs as common identifiers. Our dataset spans from December 2014 to March 2024, excluding the extreme stress period of March to April 2020 during the COVID-19 pandemic.
+5
+
+To evaluate MMF-induced funding fragility, we focus on the dynamics of MMF investor flows. MMF managers strategically adjust their portfolios in response to investor flows, which directly influences funds' holdings including their investments in CP.
+6
+ Specifically, we construct a monthly funding fragility measure for each CP issuer $$i$$ by aggregating the net outflows from all its MMF counterparties, weighted by the proportion of issuer $$i$$'s outstanding CP held by each MMF counterparty $$j$$:
+
+$$$$ Funding\ Fragility_{i,t} = \sum\nolimits_{j=1}^{J}\ \left( -\ \frac{Fund\_AUM_{j,t} - Fund\_AUM_{j,t-1}}{Fund\_AUM_{j,t-1}}\right) \times \frac{CP\_ Holdings_{i,j,t-1}}{CP\_ Outstanding_{i,t-1}}\ (1) $$$$
+
+Intuitively, this composite flow-based fragility measure integrates two pieces of information: the intensity of redemption pressure experienced by MMFs and the relative importance of each MMF to the specific CP issuer.
+7
+ This measure effectively captures funding shocksâwhether due to redemption pressures or capital inflowsâexerted by the MMF sector on a specific CP issuer.
+
+It's important to note that during non-stress periods, investor flows to MMFs are primarily driven by variations in investors' cash needs and the attractiveness of MMF shares relative to other investment and cash-management options, such as mutual funds and deposits. These relative advantages are partially shaped by regulations and monetary policy. As a result, for a specific CP issuer, the funding fragility measure based on its MMF counterparties' flows is largely independent of fundamentals of that CP issuer and can be viewed as exogenous shocks to that issuer.
+
+3. Impact of MMF Flow-induced funding fragility on CP markets
+
+Using the flow-based funding fragility measure, we investigate the effects of MMF fragility on pricing and issuance activities in the primary CP markets. To assess pricing impacts, we perform regression analyses at the issuer-day level. To account for the lumpy and sporadic nature of issuance on a day-to-day basis, we conduct regressions at the issuer-month level to mitigate some of the noise present in the daily data.
+
+Impact on CP pricing. 
+We conduct the following panel regression using an issuer-day sample to assess the impact of MMF-flow induced fragility on CP pricing:
+
+$$$$ Yield_{i,t} = \alpha + \beta \times Funding\ Fragility_{i,t-1} + \mu\ X_{i,t} + \theta_{t} + \varepsilon_{i,t}\ (2) $$$$
+
+where $$Yield_{i,t}$$ is issuance amount-weighted average yield calculated at the issuer-day level. $$Funding\ Fragility_{i,t-1}$$ is defined in Section 2 and represents the holding share-weighted average net outflows over the previous month across all MMF counterparties of a given CP issuer. We control for CP characteristics ($$X_{i,t}$$), including issuance amount-weighted average maturity, logarithm of daily issuance amount, fraction of CP issuance placed directly with investors, lagged MMF ownership as of the most recent month end, as well as credit rating- and CP type-fixed effects. Importantly, we include day-fixed effects, which absorb any potential influences from the changes in monetary policy, economic cycles, and financial market conditions on CP pricing. Standard errors are clustered at the issuer and day levels.
+
+Results in Table 1 show that CP issuers tend to incur higher borrowing costs when their MMF lenders have experienced increased funding fragility over the previous month, with this effect being statistically significant at the 1% level. As shown in Column (1), a one-percentage-point increase in lagged funding fragility is associated with a 0.3-basis-point rise in CP yields. Our finding of a significant price impact with nontrivial economic magnitude by nonfundamental factors like MMF flows is particularly noteworthy, as our model controls for an array of issuer characteristics and fixed effects. Column (2) shows that our finding regarding the price impact of lagged funding fragility remains strong with the inclusion of an issuer-fixed effect.
+
+Table 1. Impact of MMF flow-induced fragility on CP pricing
+
+Dependent Variable: Issuance Yield
+
+ 
+
+(1)
+
+(2)
+
+Funding Fragility
+
+0.3113***
+
+0.2827***
+
+(3.12)
+
+(4.52)
+
+Controls
+
+Yes
+
+Yes
+
+Rating FE
+
+Yes
+
+Yes
+
+Type FE
+
+Yes
+
+Yes
+
+Day FE
+
+Yes
+
+Yes
+
+Issuer FE
+
+No
+
+Yes
+
+Adjusted $$R^2$$
+
+0.991
+
+0.994
+
+N. of Obs
+
+490776
+
+490771
+
+Notes: Standard errors are clustered at the issuer and day levels, with corresponding $$t$$-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Impact on funding volume and maturity structure. 
+We proceed to investigate whether MMF flow-induced fragility influences funding volume and maturity structure in the CP markets. To measure funding volume, we calculate maturity-weighted gross issuance volumes and net changes in outstanding levels, and to gauge maturity structure, we compute volume-weighted average maturity and fraction of overnight issuance.
+8
+ These measures are calculated monthly for each issuer, in light of the sporadic nature of daily issuance. We then estimate the following model using an issuer-month sample:
+
+$$$$ Funding\ Volume_{i,t}\ (Maturity\ Structure_{i,t}) = \alpha + \beta \times Funding\ Fragility_{i,t-1} + \mu\ X_{i,t} + \theta_{t} + \varepsilon_{i,t}\ (3) $$$$
+
+We control for CP issuance characteristics and multiple fixed effects. Standard errors are clustered at the issuer and month levels.
+
+Results are summarized in Table 2, with Panel A focusing on funding volume and Panel B on maturity structure. In Panel A, the coefficients on lagged fragility measures are all insignificant, indicating that flow pressure from a CP issuer's MMF counterparties does not significantly affect funding volumes for that issuer. In Panel B, Columns (5) and (7) show that CP issuers reduce their issuance maturity by half a day and increase the fraction of overnight issuance by 0.5 percentage points in response to a one-percentage-point increase in funding fragility over the previous month. However, these impacts disappear once issuer-fixed effects are controlled for, as demonstrated in Columns (6) and (8).
+
+In sum, based on a decade-long sample that excludes notable episodes of market disruption, our baseline results indicate that MMF flow-induced fragility influences funding costs but not the quantity or maturity structure of CP issuance. These findings align with anecdotal evidence about the operations of CP primary markets. Specifically, the quantity and maturity structure of CP issuance are primarily determined by firms' anticipated funding needs, such as scheduled payments, payrolls, taxes, inventory, or daily operational expenses, which provide limited scope for negotiation. However, issuers often demonstrate a willingness to adjust pricing to secure the necessary funds.
+
+These dynamics explain the observed lack of sensitivity in CP issuance volume and maturity structure to non-fundamental factors such as MMF flow shocks. Given this insensitivity, pricing remains the primary negotiable factor between CP issuers and MMFs. Consequently, our subsequent analyses in this note will focus exclusively on the impact on pricing.
+
+Table 2. Impact of MMF flow-induced fragility on CP funding
+
+Panel A: Funding Volume
+
+ 
+
+Maturity-weighted Gross Volume
+
+$$ \Delta $$ Outstanding Amount
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+Funding Fragility
+
+-2.5576
+
+0.0406
+
+0.2668
+
+0.3626
+
+(-1.37)
+
+(0.04)
+
+(0.82)
+
+(1.04)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Rating FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Type FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Month FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Issuer FE
+
+No
+
+Yes
+
+No
+
+Yes
+
+Adjusted $$R^2$$
+
+0.265
+
+0.619
+
+0.01
+
+0.006
+
+N. of Obs
+
+42799
+
+42790
+
+42799
+
+42790
+
+Panel B: Maturity Structure
+
+ 
+
+Issuance Maturity
+
+Overnight Fraction
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+Funding Fragility
+
+-49.8701*
+
+-3.3342
+
+0.4877**
+
+-0.0318
+
+(-1.98)
+
+(-0.31)
+
+(2.11)
+
+(-0.33)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Rating FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Type FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Month FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Issuer FE
+
+No
+
+Yes
+
+No
+
+Yes
+
+Adjusted $$R^2$$
+
+0.319
+
+0.667
+
+0.266
+
+0.72
+
+N. of Obs
+
+38653
+
+38631
+
+38653
+
+38631
+
+Notes: Standard errors are clustered at the issuer and month levels, with corresponding $$t$$-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Distinguishing impacts from net redemptions versus net inflows. 
+While MMF flow-induced shocks impact CP issuers' funding costs, discerning whether this is driven more by outflows or inflows is key to understanding market dynamics and financial stability implications. If the dominant effect is MMFs imposing higher borrowing costs under redemption pressure rather than passing savings to issuers following inflows, it suggests MMFs have considerable market power in pricing negotiations. This scenario could increase financial stability risks, as firms will find it more costly to meet funding needs due to investors' redemptions.
+
+To investigate these dynamics, we construct two variables: $$Redemption_{i,t}$$ and $$Inflows_{i,t}$$. $$Redemption_{i,t}$$ equals $$Funding Fragility_{i,t}$$ for fund $$i$$ at time $$t$$, if it is greater than zero, and is set to zero otherwise. $$Inflows_{i,t}$$ equals the negative of $$Funding Fragility_{i,t}$$ if it is below zero, and is set to zero otherwise. We then perform the following panel regression:
+
+$$$$ Yield_{i,t} = \alpha + \beta_{1} \times Redemption_{i,t-1} + \beta_{2} \times Inflows_{i,t-1} + \mu\ X_{i,t} + \theta_{t} + \varepsilon_{i,t}\ (4) $$$$
+
+Variables and fixed effects are as defined in Model (2). Standard errors are clustered at the issuer and day levels.
+
+Table 3. Differentiating the impact of redemptions and inflows on CP pricing
+
+Dependent Variable: Issuance Yield
+
+ 
+
+(1)
+
+(2)
+
+Redemption
+
+0.3009**
+
+0.2417***
+
+-2.45
+
+-3.33
+
+Inflows
+
+-0.3445**
+
+-0.4116***
+
+(-2.14)
+
+(-3.14)
+
+Controls
+
+Yes
+
+Yes
+
+Rating FE
+
+Yes
+
+Yes
+
+Type FE
+
+Yes
+
+Yes
+
+Day FE
+
+Yes
+
+Yes
+
+Issuer FE
+
+No
+
+Yes
+
+Adjusted $$R^2$$
+
+0.991
+
+0.994
+
+N. of Obs
+
+490776
+
+490771
+
+Notes: Standard errors are clustered at the issuer and day levels, with corresponding $$t$$-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Our analyses indicate that MMFs charge higher rates on CP issuers under redemption pressures while also lowering funding cost following inflows. As shown in Column (1) of Table 3, a one-percentage-point increase in MMF redemption over the previous month is associated with a 0.3-basis-point rise in CP yields, while the same increase in inflows leads to a 0.34-basis-point reduction in CP yields. Our findings remain robust to the inclusion of an issuer-fixed effect to the regression, as shown in Column (2). This finding suggests that neither MMFs nor CP issuers are entirely price takers or setters in the primary markets of CP. Rather, their relative bargaining power may evolve over time and vary across market participants, which is characteristic of relationship-based markets with frictions.
+9
+ As such, we will conduct bargaining mechanism analyses in the next section.
+
+4. Mechanism analysis of bargaining power
+
+We have shown that MMFs typically reduce borrowing costs for CP issuers with inflows and increase them during redemptions, a dynamic possibly influenced by the relative bargaining power between the two. Specifically, when MMFs possess greater bargaining power, they are less likely to pass on savings to CP issuers during inflows and more likely to raise yields under redemption pressure. This section analyzes how this power dynamic affects CP pricing. Specifically, we calibrate the bargaining power of individual CP issuers and explore how this power affects the impact of MMF fragility on CP yields.
+
+We assess issuer-level bargaining power across three dimensions: issuance tenor, dealer dependence, and issuer domicile. First, issuers of longer-tenor CP are likely to possess less bargaining power due to MMFs' liquidity preferences. The absence of robust secondary markets makes longer-term CP less appealing to prime MMFs, which are concerned about potential challenges in offloading these securities during redemptions. Second, issuers more reliant on dealer intermediationâthose with limited direct investor accessâtypically have less flexibility in the CP markets, resulting in weaker bargaining power. Finally, foreign issuers often have more restricted access to alternative U.S. dollar funding sources compared to domestic issuers, placing them at a bargaining disadvantage. Using these three issuer-level bargaining power measures, we conduct the following panel regressions at the issuer-day level:
+
+$$$$ Yield_{i,t} = \alpha + \beta_{1}\ Redemption_{i,t-1} + \beta_{2}\ Inflows_{i,t-1} + \gamma_{1}\ Redemption_{i,t-1} \times Low\ Issuer\ Power_{i,t} $$$$
+
+$$$$ + \gamma_{2}\ Inflows_{i,t-1} \times Low\ Issuer\ Power_{i,t} + \mu\ X_{i,t} + \theta_{t} + \varepsilon_{i,t}\ (5) $$$$
+
+$$Low\ Issuer\ Power_{i,t}$$ is an indicator variable assigned a value of 1 if issuer $$i$$ on day $$t$$ has lower bargaining power, characterized by longer issuance tenor, higher dealer dependence, or foreign domicile. We control for CP characteristics included in Model (2) as well as their interactions with the high MMF power dummy. We also include two-way fixed effects. Standard errors are clustered at the issuer and day levels.
+
+We distinguish between the effects of MMF inflows and redemption pressures, with regression results presented in Table 4. The coefficients on the two interaction terms demonstrate that as MMFs experience a one-percentage-point increase in redemption, CP issuers with longer tenors, higher dealer dependence, and foreign domicilesâthose likely having weaker bargaining powerâface an additional raise in funding cost of 0.3-0.5 basis points compared to issuers with stronger bargaining power.
+
+Table 4. Price impact and bargaining power
+
+Dependent Variable: Issuance Yield
+
+ 
+
+Low power = Long Tenor
+
+Low power = Dealer Dependent
+
+Low power = Foreign Domicile
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+Low Issuer Power ×
+
+0.5000***
+
+0.4648***
+
+0.3066**
+
+0.2955**
+
+0.4826***
+
+0.2171**
+
+Redemption
+
+-3.38
+
+-4.27
+
+-2.11
+
+-2.56
+
+-2.62
+
+-2.14
+
+Low Issuer Power ×
+
+0.1665
+
+-0.0118
+
+-0.2974
+
+-0.6321**
+
+-0.0136
+
+-0.1476
+
+Inflows
+
+-0.58
+
+(-0.05)
+
+(-0.77)
+
+(-2.04)
+
+(-0.04)
+
+(-0.65)
+
+Redemption
+
+0.1129
+
+0.0654*
+
+0.0495
+
+0.0034
+
+0.0278
+
+0.0616*
+
+1
+
+-1.65
+
+-0.5
+
+-0.05
+
+-0.61
+
+-1.82
+
+Inflows
+
+-0.4782**
+
+-0.4468**
+
+-0.0981
+
+0.132
+
+-0.2837*
+
+-0.2816**
+
+(-2.23)
+
+(-2.41)
+
+(-0.27)
+
+-0.44
+
+(-1.67)
+
+(-2.07)
+
+Controls
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Controls × Low Issuer Power
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Rating × Low Issuer Power
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Type × Low Issuer Power
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Day × Low Issuer Power
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Issuer FE
+
+No
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+Adjusted $$R^2$$
+
+0.993
+
+0.995
+
+0.992
+
+0.994
+
+0.992
+
+0.994
+
+N. of Obs
+
+490771
+
+490766
+
+486353
+
+486351
+
+490774
+
+490769
+
+Notes: Standard errors are clustered at the issuer and day levels, with corresponding $$t$$-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+5. Conclusion
+
+The fragility of funding from investors, particularly due to liquidity mismatches in open-end mutual funds, significantly impacts asset pricing and has garnered substantial academic and regulatory focus, especially in secondary markets for equity and bonds. In this note, we explore a $1 trillion short-term funding market (CP) and its MMF investors to present a unique study of how funding fragility affects a market with little secondary market trading. We find that funding fragility arising from MMF flows influences funding costs but not the quantity or maturity structure of CP issuance. In addition, CP market pricing is shaped by the relative bargaining power between MMFs and asset issuers. Specifically, CP issuers with weaker bargaining power experience more pronounced increases in borrowing costs under MMF redemption pressure.
+
+These findings highlight the structural vulnerabilities of short-term funding markets and their susceptibility to investor funding shocks, even in non-stress periods. Importantly, our results have significant policy implications, especially in light of ongoing reforms aimed at strengthening MMF resilience to redemption risks and enhancing trading efficiency in these markets. Effective implementation of these improvements could mitigate vulnerabilities and enhance financial stability.
+
+References:
+
+Im, J., Li, Y., & Wang, A. (2024). Investor Flows, Monetary Policy, and Portfolio Management of Money Market Funds. Working paper.
+
+Lerner, A. (1995). The concept of monopoly and the measurement of monopoly power. Macmillan Education UK.
+
+Li, Y. (2021). Reciprocal lending relationships in shadow banking. Journal of Financial Economics, 141(2), 600-619.
+
+Li, Y., Tibay, S., & Wang, A. (2024). Investor Fragility, Bargaining Power, and the Pricing Implications for Short-Term Funding Markets. Working paper.
+
+Tirole, J. (1988). The theory of industrial organization. MIT press.
+
+1. This note is based on a working paper by Li, Tibay, and Wang (2024). This publication includes data licensed from DTCC Solutions LLC, an affiliate of The Depository Trust & Clearing Corporation. 
+Return to text
+
+2. A sizable portion of CP matures in less than a month, with some even maturing overnight. 
+Return to text
+
+3. Commercial paper data is licensed from DTCC Solutions LLC, an affiliate of The Depository Trust & Clearing Corporation (DTCC). This data set is confidential. Neither DTCC Solutions LLC nor any of its affiliates shall be responsible for any errors or omissions in any DTCC data included in this publication, regardless of the cause and, in no event, shall DTCC or any of its affiliates be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit, trading losses and opportunity costs) in connection with this publication. 
+Return to text
+
+4. Moody's Analytics, Inc., Ratings Delivery Service (RDS) - Corporate & Structured Finance Ratings - Instrument History File, http://www.moodysanalytics.com/Products-and-Solutions/Credit-Research-Risk-Measurement/Data-and-Licensing-Services/Rating-Delivery-Service.aspx.
+
+Copyright © 201*, S&P Global Market Intelligence (and its affiliates, as applicable). Reproduction of any information, data or material, including ratings ("Content") in any form is prohibited except with the prior written permission of S&P Global Market Intelligence ("S&P") or the relevant party. None of S&P, its affiliates or their third-party information providers guarantee the accuracy, adequacy, completeness, timeliness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. In no event shall S&P, its affiliates or any of their third-party information providers be liable for any damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with Subscriber's or others' use of such Content. A reference to a particular investment or security, a rating or any observation concerning an investment that is part of the Content is not a recommendation to buy, sell or hold such investment or security, does not address the suitability of an investment or security and should not be relied on as investment advice. Credit ratings are statements of opinions and are not statements of fact. 
+Return to text
+
+5. During periods of extreme stress, MMFs often experience drastic outflows, while CP market issuance typically freezes and in instances of issuance, yields tend to skyrocket. These effects are largely driven by sharply deteriorating market conditions and firm fundamentals, which introduces the concerns for endogeneity. In contrast, our analysis focuses on the impact of normal-time flow fluctuations, which are generally exogenous to firm fundamentals. 
+Return to text
+
+6. For instance, as demonstrated in Im, Li, and Wang (2024), increased flows into MMFs lead to a subsequent increase in credit risk exposures, extension of portfolio durations, and reduction in liquidity reserves. 
+Return to text
+
+7. For CP issuers without any outstanding MMF counterparties, the composite flow-based measure is, by definition, assigned a value of zero. Moreover, the weights used within this measure generally do not sum to 1 since there are investors other than MMFs in the primary CP markets. 
+Return to text
+
+8. Overnight CP issuance is defined as securities with a maturity of four calendar days or less. 
+Return to text
+
+9. Li (2021) shows that MMFs and their asset issuers engage in sophisticated, reciprocal relationship management. 
+Return to text
+
+Please cite this note as:
+
+Li, Yi, Sean Tibay, and Ashley Wang (2025). "Does Mutual Fund Fragility Impact Primary Market Pricing? Evidence from Commercial Paper," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 12, 2025, https://doi.org/10.17016/2380-7172.3671.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

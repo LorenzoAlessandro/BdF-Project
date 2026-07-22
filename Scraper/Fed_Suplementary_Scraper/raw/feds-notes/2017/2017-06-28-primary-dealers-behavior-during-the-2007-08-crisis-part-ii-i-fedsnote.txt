@@ -1,0 +1,1103 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+June 28, 2017
+
+Primary Dealers' Behavior during the 2007-08 Crisis: Part II, Intermediation and Deleveraging
+
+Rajkamal Iyer and Marco Macchiavelli
+
+I. Introduction
+
+In this second of two notes we study how dealers deleverage following the 2007-2008 funding squeeze. We show that part of the deleveraging is carried out by not rolling over reverse repos, or economically equivalent trades. This balance sheet flexibility is due to the widespread use of matched-book activities among dealers, which allows them to quickly deleverage without incurring fire-sale losses. However, repos are also used by dealers to finance their own net positions in various securities. We argue that the latter activity, while innocuous in normal times, proved to be risky once funding markets became distressed. Indeed, a sizable portion of dealers' net positions was financed by overnight repos collateralized by the same securities. Without access to overnight funding, some dealers had to sell part of those assets at fire-sale prices, eroding the dealers' equity value.
+
+Dealers' business model can be interpreted in light of how they intermediate securities. Figure 1 displays two stylized activities, namely net positions financing (left panel) and matched book activity (right panel).
+1
+ In the left panel we list a series of transactions aimed at taking a leveraged long position in a security. The dealer starts with $20 in cash raised by issuing long-term debt. In the first transaction (T1), the dealer buys a security worth $1,000. Being short of $980, the dealer pledges the security as collateral (repo-ing it out) in an overnight repo transaction with a 2% haircut, thus raising the needed amount of cash (T2). If the overnight repo does not roll over, the dealer may have to sell the underlying collateral in order to pay the amount owed to the repo lender. The right panel show a matched book deal. Suppose that client A wants to pledge a certain security to raise $1,000 from a dealer while the latter does not want to be exposed to such asset. What the dealer can do is to provide $1,000 in cash to client A in exchange for collateral (T1) while raising the same amount of cash by repo-ing out the same security pledged by client A (T2). The final column shows the net balance-sheet effect of this matched book activity, in which the dealer intermediates securities without taking any position: the security pledged by client A in the reverse repo goes out as collateral for the associated repo.
+
+Figure 1: Two Stylized Examples of Dealersâ Activities
+
+ 
+
+Net Positions Financing
+
+Matched Book Activity
+
+Initial
+
+T 1
+
+T2
+
+Final
+
+Initial
+
+T 1
+
+T 2
+
+Final
+
+Cash
+
+20
+
+-1,000
+
+980
+
+ 
+
+ 
+
+-1,000
+
+1,000
+
+ 
+
+Net Positions
+
+ 
+
+1,000
+
+ 
+
+1,000
+
+ 
+
+ 
+
+ 
+
+ 
+
+Reverse Repo
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+1,000
+
+ 
+
+1,000
+
+Total Assets
+
+20
+
+ 
+
+ 
+
+1,000
+
+ 
+
+ 
+
+ 
+
+1,000
+
+Repo
+
+ 
+
+ 
+
+980
+
+980
+
+ 
+
+ 
+
+1,000
+
+1,000
+
+Other Debt
+
+20
+
+ 
+
+ 
+
+20
+
+ 
+
+ 
+
+ 
+
+ 
+
+Total Liabilities
+
+20
+
+ 
+
+ 
+
+1,000
+
+ 
+
+ 
+
+ 
+
+1,000
+
+Total Equity
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Dealers earn intermediation spreads in various ways: charging a reverse repo rate greater than the repo rate, earning a term premium by financing a term reverse repo with an overnight repo, or charging a reverse repo haircut greater than the repo haircut, which allows to raise additional financing with the extra collateral. Importantly, in case the repo associated with a simple matched-book transaction does not roll over, the dealer can easily pay it back by not rolling over the associated reverse repo. In a hypothetical situation in which a dealer exclusively carries out matched-book activities, it can easily face a run on its repos by closing the associated reverse repos. No asset needs to be sold at fire-sale prices, leaving the dealer solvent.
+
+II. Data
+
+We use confidential data from the FR2004 Primary Government Securities Dealers Reports, forms A and C from January 1, 2007 to January 1, 2009.
+2
+ Form A reports positions, long and short, at fair (market) value. Positions are broken down by asset class (U.S. Treasuries, Agency Notes and Coupons, Agency MBS and Corporate Securities) and residual maturity. Form C reports financing and fails. Financing refers to the actual funds delivered or received and is divided in ``Securities In" (funds are delivered) and ``Securities Out" (funds are received). ``Securities In" refers to agreements by which securities are received from a counterparty; these include reverse repos, securities borrowed, securities received from a counterparty as collateral for margin calls or for other derivatives. ``Securities Out" similarly refers to agreements to deliver securities to counterparties, including repos, securities lent, and securities delivered to a counterparty as collateral for margin calls or for other derivatives. Securities In and Out are broken down by asset class (Treasuries, Agency Debt, Agency MBS, and Corporate Securities) and maturity (overnight and term). During the period under consideration (Jan'07 to Jan'08), a subset of Securities In and Out is reported separately: overnight repos, term repos, overnight reverse repos and term reverse repos. These include bilateral, GCF (inter-dealer), and tri-party GC agreements. See Iyer, Macchiavelli (2017) for more details on the data.
+
+III. Intermediation: from matched-book to maturity and collateral transformation
+
+In order to understand how dealers intermediate securities and how they adjust intermediation activities and inventories when facing funding stress, we run a set of panel regressions (displayed in Tables 1 and 2), such as
+
+$$$$ \begin{align} \Delta Term(Sec\ Out)_{i,t} &= \alpha_0 \Delta Term(Sec\ In)_{i,t} * PreBear_t + \alpha_1 \Delta Term(Sec\ In)_{i,t} * PostBear_t + \\ &+ \alpha_2 \Delta Term(Sec\ In)_{i,t} * LastMonth_t + \mu_t + \varepsilon_{i,t} \end{align} $$$$
+
+where $$\Delta Term(Sec\ Out)$$ is the first difference in the ratio of securities out with residual maturity of more than one business day over the total securities out; the analogous definition works for $$\Delta Term(Sec\ In)$$. Pre-Bear refers to the weeks from January 1, 2007 to March 14, 2008, Post-Bear goes from March 15 to August 14, 2008, and Last-Month refers to the August 15 to September 15, 2008 period.
+
+Table 1: Maturity adjustments â Jan 2007 to Sep 2008
+
+ 
+
+(1)
+
+			Î Term
+
+			(Sec In)
+
+(2)
+
+			Term
+
+			(Sec In)
+
+Pre-Bear Î X Term (Sec Out)
+
+0.214***
+
+			(0.058)
+
+ 
+
+Post-Bear Î X Term (Sec Out)
+
+0.304
+
+			(0.196)
+
+ 
+
+Last month Î X Term (Sec Out)
+
+0.279***
+
+			(0.097)
+
+ 
+
+Pre-Bear X Term (Sec Out)
+
+ 
+
+0.369***
+
+			(0.071)
+
+Post-Bear X Term (Sec Out)
+
+ 
+
+0.581***
+
+			(0.064)
+
+Last month X Term (Sec Out)
+
+ 
+
+0.559***
+
+			(0.128)
+
+Sample Size
+
+2078
+
+2100
+
+Week FE
+
+Yes
+
+Yes
+
+Dealer FE
+
+No
+
+Yes
+
+R^2
+
+0.26
+
+0.484
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+Table 1 focuses on maturity adjustments in sources and uses of funds. These results should not be interpreted causally, but merely as displaying adjustments between assets and liabilities. Both columns suggest an incomplete (less than 1-to-1) pass-through of maturity adjustments from sources to uses of funding; the elasticities in column (2) indicate that a 10% drop in the share of term securities out (such as repos) is associated with a 6% reduction in the share of term securities in (such as reverse repos) after Bear's near-default, as opposed to 4% prior to mid-March 2008. This finding suggests that dealers engage in maturity transformation in normal times, partially insulating changes in the maturity of their assets from changes in the maturity of their liabilities; however, when faced with considerable stress, they significantly increase the pass-through of maturity adjustments, from 37% prior to mid-March 2008, to 56-58% after Bear's collapse. Hence, during financial turmoil they seem to reduce maturity transformation, aligning the maturity of securities in and out to a larger degree.
+
+Next, Table 2 studies quantity adjustments between securities in and securities out in column (1) and between reverse repos and repos in column (2). In order to capture the pass-through in dollar terms, variables are expressed as weekly changes in dollar amounts, not as percentage changes. Column (1) suggests that for an extra $100 of securities out, there is an increase in securities in by $72 in the pre-crisis; most likely, the difference of $28 is accounted for both by haircuts differentials (charging a higher haircut on the reverse repo than the repo haircut) and by the fact that part of the cash raised by pledging securities is used to finance net positions. The latter point will be evident in Tables 3 and 4. During the last month of Lehman, the pass-through becomes almost complete (97%), suggesting that a loss of $100 in secured funding translates in shrinking secured lending by $97 dollar. Moreover, column (2) singles out the additional pass-through displayed by Lehman. The latter is not very different from other dealers except during its last month, when the pass-through from secured funding to secured lending becomes more than 1-to-1 (96% + 22% = 118%). This may suggests that some of Lehman's clients that regularly borrowed from Lehman were running on the failing dealer in an attempt to recover the pledged collateral from Lehman prior to the incoming bankruptcy. In other words, Lehman may have faced a run from both its lenders (repo run) and its borrowers (reverse repo run).
+
+Table 2: Deleveraging without fire-sales â Jan 2007 to Sep 2008
+
+ 
+
+(1)
+
+			Î Sec In
+
+(2)
+
+			Î Sec In
+
+(3)
+
+			Î Rev Repo
+
+(4)
+
+			Î Rev Repo
+
+Pre-Bear X Î Sec Out
+
+0.723***
+
+			(0.046)
+
+0.739***
+
+			(0.048)
+
+ 
+
+ 
+
+Post-Bear X Î Sec Out
+
+0.725***
+
+			(0.065)
+
+0.712***
+
+			(0.080)
+
+ 
+
+ 
+
+Last month X Î Sec Out
+
+0.970***
+
+			(0.097)
+
+0.961***
+
+			(0.104)
+
+ 
+
+ 
+
+Pre-Bear X Lehman X Î Sec Out
+
+ 
+
+-0.104*
+
+			(0.050)
+
+ 
+
+ 
+
+Post-Bear X Lehman X Î Sec Out
+
+ 
+
+0.088
+
+			(0.075)
+
+ 
+
+ 
+
+Last month X Lehman X Î Sec Out
+
+ 
+
+0.222**
+
+			(0.094)
+
+ 
+
+ 
+
+Pre-Bear X Î Repo
+
+ 
+
+ 
+
+0.560***
+
+			(0.068)
+
+0.602***
+
+			(0.056)
+
+Post-Bear X Î Repo
+
+ 
+
+ 
+
+0.563***
+
+			(0.087)
+
+0.555***
+
+			(0.108)
+
+Last month X Î Repo
+
+ 
+
+ 
+
+0.828***
+
+			(0.073)
+
+0.808***
+
+			(0.081)
+
+Pre-Bear X Lehman X Î Repo
+
+ 
+
+ 
+
+ 
+
+-0.285**
+
+			(0.063)
+
+Post-Bear X Lehman X Î Repo
+
+ 
+
+ 
+
+ 
+
+0.052
+
+			(0.102)
+
+Last month X Lehman X Î Repo
+
+ 
+
+ 
+
+ 
+
+0.345***
+
+			(0.107)
+
+Sample Size
+
+2078
+
+2078
+
+2078
+
+2078
+
+Week FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+R^2
+
+0.701
+
+0.719
+
+0.575
+
+0.582
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+Finally, we provide more details on dealers' collateral and maturity transformation. In particular, we ask how dealers finance certain investments, be it net positions or secured lending (reverse repos and similar transactions). Therefore, we study how dollar changes in securities in and net positions translate into dollar changes in means of financing, namely securities out. We do this exercise for different types of collateral and maturities. To this purpose, we run the following set of regressions (results in Tables 3 and 4):
+
+$$$$ \begin{align} \Delta Sec\ Out_{i,t} &= ( \alpha_0 \Delta Sec\ In_{i,t} + \beta_0 \Delta Net\ Pos_{i,t} ) * PreBear_t + \\ &+ ( \alpha_1 \Delta Sec\ In_{i,t} + \beta_1 \Delta Net\ Pos_{i,t} ) * PostBear_t + \\ & + ( \alpha_2 \Delta Sec\ In_{i,t} + \beta_2 \Delta Net\ Pos_{i,t} ) * PostLehman_t + \mu_t + \varepsilon_{i,t} \end{align} $$$$
+
+where $$\Delta Sec\ Out$$ and $$\Delta Sec\ In$$ are the first difference in the dollar value of securities out and securities in, respectively. Finally, $$\Delta Net\ Pos$$ is the first difference in the dollar value of net positions in a certain asset class, which varies table by table. Pre-Bear refers to the weeks from January 1, 2007 to March 14, 2008, Post-Bear goes from March 15 to September 15, 2008, and Post-Lehman refers to the September 16 to December 31, 2008 period.
+
+Table 3, column (2), suggests that in the pre-crisis about 60% of additional net positions in Treasuries are financed by pledging that security as collateral, and that about 90% of the Treasuries received as collateral by clients are repo-ed out. Allowing for a higher reverse repo haircut than the repo haircut, this suggests that almost all the cash channeled to a client in exchange for Treasury collateral (a reverse repo) is financed by pledging that security in a repo transaction. Digging deeper in the maturity transformation, it appears that Treasury net positions are partly (43% to 60%) financed with overnight repos â last three rows column (3); however, in the post-Lehman period, this relationship between net positions and Treasury repos seems to break down. The main example of maturity transformation, comes from rows four to six in column (3): for instance, in the pre-Bear period, about 30% of the Treasury collateral coming in from a term reverse repo (or term sec borrowing) was pledged in an overnight repo, suggesting some degree of maturity transformation (exposure to maturity risk). After Bear's near collapse, dealers on average reduce the degree of maturity transformation: now only 14% of the Treasury collateral from a term reverse repo is pledged in an overnight repo (as opposed to 30% prior to Bear near-default). Maturity transformation slightly resumes after Lehman's default.
+3
+
+Table 3: Maturity and Collateral Transformation â Treasuries Out
+
+ 
+
+(1)
+
+			Î Tsy Out
+
+			(All)
+
+(2)
+
+			Î Tsy Out
+
+			(All)
+
+(3)
+
+			Î Tsy Out
+
+			(Overnight)
+
+(4)
+
+			Î Tsy Out
+
+			(Term)
+
+Pre-Bear X Î Tsy In
+
+0.897***
+
+			(0.037)
+
+0.916***
+
+			(0.037)
+
+ 
+
+ 
+
+Post-Bear X Î Tsy In
+
+0.882***
+
+			(0.040)
+
+0.881***
+
+			(0.041)
+
+ 
+
+ 
+
+Post-Lehman X Î Tsy In
+
+0.887***
+
+			(0.023)
+
+0.889***
+
+			(0.024)
+
+ 
+
+ 
+
+Pre-Bear X Î Tsy In (Term)
+
+ 
+
+ 
+
+0.302***
+
+			(0.068)
+
+0.617***
+
+			(0.106)
+
+Post-Bear X Î Tsy In (Term)
+
+ 
+
+ 
+
+0.142**
+
+			(0.070)
+
+0.736***
+
+			(0.062)
+
+Post-Lehman X Î Tsy In (Term)
+
+ 
+
+ 
+
+0.243***
+
+			(0.089)
+
+0.747***
+
+			(0.101)
+
+Pre-Bear X Î Tsy In (Overnight)
+
+ 
+
+ 
+
+0.661***
+
+			(0.022)
+
+0.253***
+
+			(0.023)
+
+Post-Bear X Î Tsy In (Overnight)
+
+ 
+
+ 
+
+0.734***
+
+			(0.091)
+
+0.149**
+
+			(0.67)
+
+Post-Lehman X Î Tsy In (Overnight)
+
+ 
+
+ 
+
+0.789***
+
+			(0.034)
+
+0.052**
+
+			(0.023)
+
+Pre-Bear X Î Net Position Tsy
+
+ 
+
+0.586***
+
+			(0.063)
+
+0.593***
+
+			(0.101)
+
+-0.007
+
+			(0.133)
+
+Post-Bear X Î Net Position Tsy
+
+ 
+
+0.360***
+
+			(0.112)
+
+0.428***
+
+			(0.127)
+
+-0.068
+
+			(0.097)
+
+Post-Lehman X Î Net Position Tsy
+
+ 
+
+0.058
+
+			(0.234)
+
+0.052
+
+			(0.293)
+
+0.051
+
+			(0.147)
+
+Sample Size
+
+2078
+
+2078
+
+2078
+
+2078
+
+Week FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Time X (MBS, Notes, Corp) In
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+R^2
+
+0.823
+
+0.835
+
+0.565
+
+0.726
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+Finally, Table 4 focuses on the intermediation of corporate securities. The third row point to the fact that during the last month of Lehman, dealers' clients may have been actively shorting corporate securities, by borrowing them from dealers against Treasury collateral. It seems that on average 2-to-3% of Treasuries coming in was used as collateral to borrow corporate securities. Also, there seems to be a high degree of maturity transformation when intermediating corporate securities: throughout the sample, between 60% and 100% of corporate securities coming in with term reverse repos (or term sec borrowing) are on average pledged in overnight repos. Also, across the three time periods, between 25% and 87% of net positions in corporate securities are financed by pledging them as collateral in repos or sec lending trades. Interestingly, the degree of maturity transformation increases after Bear's near default, meaning that nearly all corporate collateral coming in with term reverse repos is now repo-ed out overnight. This suggests that there was no interest from money market funds to enter into term repos backed by corporate collateral.
+
+Table 4: Maturity and Collateral Transformation - Corporate Securities Out
+
+ 
+
+(1)
+
+			Î Corp Out
+
+			(All)
+
+(2)
+
+			Î Corp Out
+
+			(All)
+
+(3)
+
+			Î Corp Out
+
+			(Overnight)
+
+(4)
+
+			Î Corp Out
+
+			(Term)
+
+Pre-Bear X Î Tsy In
+
+0.009
+
+			(0.007)
+
+0.007
+
+			(0.006)
+
+0.003
+
+			(0.006)
+
+0.005**
+
+			(0.002)
+
+Post-Bear X Î Tsy In
+
+-0.014
+
+			(0.010)
+
+-0.0145*
+
+			(0.009)
+
+-0.009
+
+			(0.008)
+
+-0.005
+
+			(0.009)
+
+Post-Lehman X Î Tsy In
+
+0.027***
+
+			(0.010)
+
+0.022**
+
+			(0.010)
+
+0.019***
+
+			(0.007)
+
+0.003
+
+			(0.011)
+
+Pre-Bear X Î Corp In
+
+0.730***
+
+			(0.219)
+
+0.711***
+
+			(0.211)
+
+ 
+
+ 
+
+Post-Bear X Î Corp In
+
+0.925***
+
+			(0.212)
+
+0.932***
+
+			(0.200)
+
+ 
+
+ 
+
+Post-Lehman X Î Corp In
+
+1.047***
+
+			(0.170)
+
+1.111***
+
+			(0.131)
+
+ 
+
+ 
+
+Pre-Bear X Î Corp In (Term)
+
+ 
+
+ 
+
+0.586***
+
+			(0.175)
+
+0.269**
+
+			(0.105)
+
+Post-Bear X Î Corp In (Term)
+
+ 
+
+ 
+
+1.020***
+
+			(0.198)
+
+0.009
+
+			(0.131)
+
+Post-Lehman X Î Corp In (Term)
+
+ 
+
+ 
+
+0.705**
+
+			(0.278)
+
+0.233
+
+			(0.221)
+
+Pre-Bear X Î Corp In (Overnight)
+
+ 
+
+ 
+
+0.555***
+
+			(0.175)
+
+0.066
+
+			(0.047)
+
+Post-Bear X Î Corp In (Overnight)
+
+ 
+
+ 
+
+0.732***
+
+			(0.203)
+
+0.111
+
+			(0.123)
+
+Post-Lehman X Î Corp In (Overnight)
+
+ 
+
+ 
+
+1.062***
+
+			(0.145)
+
+0.096
+
+			(0.081)
+
+Pre-Bear X Î Net Position Corp
+
+ 
+
+0.249**
+
+			(0.106)
+
+0.236**
+
+			(0.120)
+
+0.010
+
+			(0.020)
+
+Post-Bear X Î Net Position Corp
+
+ 
+
+0.433**
+
+			(0.173)
+
+0.403***
+
+			(0.146)
+
+0.031
+
+			(0.070)
+
+Post-Lehman X Î Net Position Corp
+
+ 
+
+0.872***
+
+			(0.167)
+
+0.086
+
+			(0.144)
+
+0.785***
+
+			(0.299)
+
+Sample Size
+
+2078
+
+2078
+
+2078
+
+2078
+
+Week FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Time X (MBS, Notes) In
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+R^2
+
+0.214
+
+0.402
+
+0.228
+
+0.36
+
+Robust standard errors in parentheses; * p < 0.10, ** p < 0.05, *** p < 0.01
+
+Across collateral types, there is also evidence of dealers passing the majority of overnight reverse repos out as overnight repos: in Tables 3 and 4, the pass-throughs from overnight securities in to overnight securities out (column (3)) are always significant and estimated between 50% and 100%. The simplest form of matched-book activity would be obtaining a security with an overnight reverse repo, while repo-ing the same security out overnight, leaving the dealer with zero net exposure to such security; if the same haircuts are applied to both repo and reverse repo, these two transactions would deliver a 100% pass-through from security in to security out.
+
+IV. Conclusion
+
+Here we show how dealers manage assets and liabilities in times of stress. We find that matched-book activities allow dealers some flexibility to orderly deleverage without having to sell assets at fire-sale prices. Indeed, a dealer can unwind a reverse repo when the associated repo is not rolled over by money funds or other cash lenders. We also shed light on the average degree of maturity and collateral transformation that dealers engage in at different stages of the 2007-2008 funding squeeze.
+
+References
+
+Duffie, Darrell (2010). "The Failure Mechanics of Dealer Banks." 
+The Journal of Economic Perspectives
+ 24.1 (2010): 51-72.
+
+Iyer, Rajkamal, and Marco Macchiavelli (2017). "Primary Dealers' Behavior during the 2007-08 Crisis: Part I, Repo Runs." 
+FEDS Notes
+.
+
+Kirk, Adam, James McAndrews, Parinitha Sastry, and Phillip Weed (2014). "Matching Collateral Supply and Financing Demands in Dealer Banks." 
+Economic Policy Review
+ Dec (2014): 127-151.
+
+1.
+ The right panel in Figure 1 closely follows Exhibit 1 in Kirk et al. (2014). For more examples of dealers' activities, see Kirk et al. (2014) and Duffie (2010). 
+Return to text
+
+2.
+ For the instructions, see 
+https://www.federalreserve.gov/reportforms/forms/FR_200420070307_i.pdf
+. Professor Iyer did not have access to any confidential information during this analysis. 
+Return to text
+
+3.
+ Similar dynamics occur when we analyze the intermediation of GSE MBSs and GSE Discount Notes (unreported). 
+Return to text
+
+Please cite this note as:
+
+Iyer, Rajkamal, and Marco Macchiavelli (2017). "Primary Dealers' Behavior during the 2007-08 Crisis: Part II, Intermediation and Deleveraging," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 28, 2017, https://doi.org/10.17016/2380-7172.1998.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

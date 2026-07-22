@@ -1,0 +1,149 @@
+FEDS Notes
+
+Twitter
+
+April 08, 2026
+
+Stablecoins in 2025: Developments and Financial Stability Implications
+1
+
+Francesca Carapella
+,
+Arazi Lubis
+, and
+Alexandros Vardoulakis
+
+Section I: Introduction
+
+This note examines recent developments in the stablecoin industry and their implications for financial stability. During 2025, stablecoins have grown by about 50 percent in terms of market capitalization, with transaction volume and use in DeFi protocols also surging. While these trends are present for most stablecoins, those that have a safer and more liquid reserve composition âand hence lower run riskâ have exhibited relatively stronger adoption. Despite their lower exposure to run risk, these stablecoins plausibly strengthen interconnections between the traditional financial system and the digital assets' ecosystem, thus introducing risks associated with their possible widespread use for payments in the future.
+
+We identify three developments that have the potential to reshape the stablecoin landscape and introduce novel financial stability vulnerabilities, potentially amplifying existing ones: (1) increasingly complex intermediation chains between issuers and third-party service providers; (2) strategic vertical integration, combining multiple business functions under single entities; and (3) accelerating retail adoption, particularly through digital wallet partnerships.
+
+While these structural shifts can generate efficiency gains, they may also compound previously identified stability risks associated with stablecoins, particularly run risk, which can rapidly propagate through interconnections both within digital asset ecosystem and across the traditional financial system (Azar et al., 2022)
+2
+. The proliferation of intermediation nodes and vertical integration significantly impairs market transparency, making it increasingly difficult for participants to identify the source of emerging stress scenarios. This opacity can precipitate confidence crises, triggering disruptive runs or market freezes. Moreover, stablecoins' expanding integration with conventional payment infrastructure amplifies their systemic footprint, strengthening the potential destabilizing impact of operational disruptions or liquidity crises.
+
+Section II: Stablecoin Market Developments
+
+Market Growth
+
+The stablecoin market has demonstrated significant growth in 2025, with aggregate market capitalization reaching $317 billion as of April 6, 2026, representing a more than 50% growth since early 2025, despite flattening- out during the final quarter of 2025 and first quarter of 2026.
+3
+This expansion coincided with important events, beginning with the January 2025 White House Executive Order on "Strengthening American Leadership in Digital Financial Technology". On July 18, 2025, the "Guiding and Establishing National Innovation for US Stablecoins Act" (GENIUS Act) was signed into law, establishing a formal regulatory framework. Figure 1 illustrates this market capitalization trajectory since 2022, indexed to 100 on the GENIUS Act's signing date.
+
+Figure 1. Market Capitalization of Stablecoins
+
+Note: Data normalized to July 18, 2025 = 100.
+
+Source: DeFiLlama.
+
+Accessible version
+
+Focusing on collateralized stablecoins, reserve practices vary meaningfully across issuers. According to their attested disclosures, USDT (Tether) maintains approximately 1.04x in reserves for each coin in circulation, with only about 0.74x in assets qualifying as higher-quality reservesâTreasuries, repurchase agreements backed by Treasuries, and bank depositsâwhile USDC (Circle) maintains full 1.0x backing with higher-quality reserves.
+
+Usage Patterns and Adoption
+
+The higher growth trajectory for USDC is also reflected in usage trends. Figure 2 tracks the Total Value Locked (TVL) in stablecoins. Increased adoption is further substantiated by higher transaction volumes on Ethereum, which have risen by 50% for all stablecoins since the GENIUS Act, as shown in Figure 3.
+
+Figure 2. Total Value Locked of Stablecoins
+
+Note: Data normalized to July 18, 2025 = 100.
+
+Source: DeFiLlama.
+
+Accessible version
+
+Figure 3. Transaction Volumes on Ethereum
+
+Note: 14-day moving average of transaction ratios. Data normalized to July 18, 2025 = 100.
+
+Source: Amazon Web Services.
+
+Accessible version
+
+We complement our analysis of stablecoin adoption by examining their use by retail-sized investors, defined as investors with net weekly holdings of stablecoins in their wallets that do not exceed $1000 in value. Figure 4a and Figure 4b track the growth of retail-sized wallets. The gray area shows the total number of unique wallets in the Ethereum blockchain holding USDT and USDC respectively. The overlayed lines report the number of wallets by net holdings bucket. As can be seen by the green line, retail-sized wallets have substantially increased in 2025, indicating broader adoption by retail investors.
+4
+
+Figure 4. USDT and USDC Wallet Distribution
+
+Note: Cumulative net flows by wallet balance range.
+
+Source: Amazon Web Services.
+
+Accessible version
+
+Section III: The Economics of Stablecoin Vulnerabilities for Financial Stability
+
+Our analysis of the fast-evolving stablecoin ecosystem identifies three key structural vulnerabilities, which relate to growing interconnections and are thus novel with respect to the well-known funding risk arising from liquidity transformation.
+5
+
+1. Complex Intermediation Chains
+
+Complex intermediation chains in service provision introduce significant contagion risks and transparency challenges. When multiple third parties comprise the operational stack for a stablecoin, market participants may struggle to identify the source of stress events, potentially exacerbating panic in crisis times.
+
+For instance, some crypto wallet providers have recently launched stablecoins that rely on third-party digital asset firms for on-chain infrastructure, with the infrastructure provider's own stablecoin wrapped into the wallet provider's offering, thus creating a potential cascade risk without clear backup scenarios. Hence, the wallet provider's stablecoin may depeg and generate off-ramp pressures if the underlying infrastructure provider's stablecoin experienced a depeg. Analogously, stablecoin-issuing subsidiaries of payment processors have launched open issuance platforms to allow other issuers to issue and customize their stablecoin features and technology operability. Moreover, some of these subsidiaries have entered partnerships with cross-border payment processors to enable their customer businesses to transact and hold payment balances in stablecoins.
+
+2. Vertical Integration
+
+Vertical integration, where entities perform multiple functions across the stablecoin value chain, complicates risk assessment. Without adequate visibility into an entity's full range of activities, counterparties cannot properly insure against potential shocks, potentially amplifying their effects.
+
+Major players exemplify this approach, with crypto exchanges operating their own Layer 2 chains, payment processors and venture capital firms launching novel Layer 1 blockchains, and stablecoin issuers developing blockchain infrastructure specifically for stablecoin finance. Similarly, traditional brokerage firms have announced the issuance of new U.S. dollar-denominated stablecoins through their digital asset subsidiaries that may serve as the issuers of the stablecoins. These brokerage firms could use their stablecoins to vertically integrate the stablecoin issuer-distributor partnership model, reminiscent of existing partnerships between major stablecoin issuers and crypto exchanges. As both stablecoin issuer and broker-dealer, these entities could bring aspects of the issuer-exchange partnership structure under one entity.
+
+3. Integration with Traditional Finance
+
+Stablecoins' expanding integration with traditional financial infrastructure increases their importance for financial stability. Cross-border payment applications are growing, notably Zelle's initiative to incorporate stablecoins transfers across member banks. Likewise, Lead Bank has opened accounts for tens of thousands of individuals and businesses in emerging markets in the past year, enabling crypto apps users to receive dollars, convert them into Tether's USDT or Circle's USDC, and send them to users across borders.
+6
+Traditional payment rails are increasingly intertwined with stablecoins, as evidenced by MetaMask's Mastercard partnership, Mastercard's potential acquisition of zerohash (a stablecoin infrastructure startup), and Coinbase's collaborations with Citi, American Express, and First Electronic Bank.
+7
+Traditional broker-dealer firms have similarly stepped forward, integrating investment accounts with crypto assets as sources of funding.
+8
+In January 2026, Interactive Brokers enabled customers to fund brokerage accounts using Circle's stablecoin USDC through a partnership with on/off-ramp firm zerohash, planning to include PayPal's and Ripple's stablecoins (PYUSD and RLUSD).
+9
+
+Section IV: Concluding Remarks
+
+The stablecoin market has evolved significantly throughout 2025, characterized by substantial growth, increased institutional participation, and a clearer regulatory landscape. However, these developments have been accompanied by structural changes that may amplify financial stability risks. The three key vulnerabilities identified represent emerging challenges that may warrant careful consideration.
+
+As stablecoins continue to integrate with the traditional financial infrastructure through partnerships with payment networks, banks, and retail applications, their potential to transmit shocks across financial systems increases proportionally. The opacity generated by multilayered service provision and the concentration of activities within vertically integrated entities could further compound the challenge of identifying, assessing, and mitigating these risks.
+
+1. Authors: Francesca Carapella, Arazi Lubis, Alexandros Vardoulakis. Lucia Gurrieri provided excellent research assistance.
+Return to text
+
+2. Azar, Pablo D and Baughman, Garth and Carapella, Francesca and Gerszten, Jacob and Lubis, Arazi and Perez-Sangimino, Juan Pablo and Rappoport Wurgaft, David Elias and Scotti, Chiara and Swem, Nathan and Vardoulakis, Alexandros and Werman, Aurite, The Financial Stability Implications of Digital Assets (November 01, 2024).
+Economic Policy Review
+, Vol. 30, No. 2, 1-48, Available at SSRN: https://ssrn.com/abstract=5029118 or http://dx.doi.org/10.2139/ssrn.5029118.
+Return to text
+
+3. See Stablecoins Circulating - DefiLlama, https://defillama.com/stablecoins.
+Return to text
+
+4. The $1,000 threshold follows the wallet segmentation approach in Artemis Analytics (2025), which finds that most wallets transacting in USDT and USDC on Ethereum operate at small scale, consistent with retail participation. For more details, see: Artemis Analytics (2025). "An Empirical Analysis of Stablecoin Payment Usage on Ethereum", and Visa (2026), https://www.artemisanalytics.com/resources/an-empirical-analysis-of-stablecoin-payment-usage-on-ethereum. "Transactions | Visa Onchain Analytics Dashboard", https://visaonchainanalytics.com/transactions. For the distribution of unique addresses across stablecoins see: Allium Historical Data (2026). "
+Stablecoin Transfers - Allium Documentation Hub
+".
+Return to text
+
+5. Among others, see
+"The stable in stablecoins"
+, December 2022, and
+"The financial stability implications of digital assets"
+, September 2022.
+Return to text
+
+6. For more details, see
+Return to text
+
+7. For more details see https://fortune.com/crypto/2025/10/29/mastercard-zerohash-acquisition-bvnk-stablecoins-coinbase/.
+Return to text
+
+8. Interactive Brokers, one of the world's leading discount brokers with a market value of about $110 billion, offers trading in various cryptocurrencies to customers through its ties with crypto with crypto platform Paxos and exchange zerohash. Moreover, it is now working on enabling instant, 24/7 stablecoin funding for brokerage accounts (Stablecoin Deposits | Interactive Brokers LLC), https://www.interactivebrokers.com/en/trading/stablecoin.php.
+Return to text
+
+9. For more details, see Stablecoin Deposits | Interactive Brokers LLC, https://www.interactivebrokers.com/en/trading/stablecoin.php.
+Return to text
+
+Please cite this note as:
+
+Carapella, Francesca, Arazi Lubis, and Alexandros Vardoulakis (2026). "Stablecoins in 2025: Developments and Financial Stability Implications," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 08, 2026, https://doi.org/10.17016/2380-7172.4020.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

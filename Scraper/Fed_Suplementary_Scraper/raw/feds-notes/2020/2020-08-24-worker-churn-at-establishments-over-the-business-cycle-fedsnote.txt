@@ -1,0 +1,255 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 24, 2020
+
+Worker Churn at Establishments over the Business Cycle
+
+Alison Weingarden
+*
+
+This note decomposes worker churn (which occurs when business establishments have simultaneous hiring and separations) into two components using monthly Job Opening and Labor Turnover Survey responses from the U.S. Bureau of Labor Statistics. On average, nearly a third of worker churn was "employer-initiated" through layoffs and two thirds was "quit initiated" over the 2001 to 2016 period. Quit-initiated churn is highly procyclical, while employer-initiated churn is relatively constant over the business cycle.
+
+Churn: Turnover that is neither job creation nor destruction
+
+Worker churnâ the occurrence of both hiring and employee separations at a business establishment within a short interval of timeâ is an important aspect of aggregate labor market dynamics. Worker churn happens, for instance, when an employer lays off a worker and hires someone else or when a worker quits and is replaced. Churn is the portion of worker turnover not due to job reallocation, the latter of which occurs when some establishments expand while others contract (i.e. the sum of job creation and job destruction).
+
+In this note, I propose two new measures of worker churn: 
+employer-initiated churn
+ based on the layoff component of separations and 
+quit-initiated churn
+ based on the quit component. Using monthly microdata from the Job Opening and Labor Turnover Survey (JOLTS), I find that quit-initiated churn is more prevalent than employer-initiated churn at all points in the business cycle. Together, both types of churn account for more than half of establishment-level hiring and separations in the U.S. over a 15-year period but the prevalence of quit-initiated churn varies substantially over the business cycle.
+
+A number of papers have looked at worker churn over time and the relationship between churn and establishment characteristics. Lane et al. (1996) use administrative data for Maryland to measure worker churn and show it is generally higher for smaller and younger firms; Burgess et al. (2000) provide some evidence of churn's within-establishment persistence and, in a follow-up paper (2001), they document a negative relationship between churn and workers' wages.
+
+New measures of worker churn
+
+Most previous studies have used administrative unemployment insurance or tax records that do not distinguish between layoffs and quits.
+1
+ This note instead relies on JOLTS, a monthly survey conducted by Bureau of Labor Statistics (BLS) in which the rotating sample of approximately 16,000 U.S. business establishments are asked about their worker turnover.
+2
+
+In JOLTS, establishments report their gross employment dynamics on a monthly basis; departing workers are identified as quits (voluntary), layoffs (involuntary), or retirements and other separation reasons. Although the BLS publishes aggregate measures of hiring, quit, and layoff rates from JOLTS, it does not tabulate composite measures such as churn, job creation, and job destruction. Nevertheless, it is possible to calculate these composite measures from the confidential microdata because all the variables below are reported by establishments on a monthly basis.
+
+Table 1: Variables in JOLTS by Establishment and Month
+
+Variable
+
+Definition
+
+Layoffs and discharges ($$L$$)
+
+Layoffs lasting more than seven days (or with no intention to rehire); includes short-term employees and workers fired for cause
+
+Quits ($$Q$$)
+
+Employees that left voluntarily (except retirements)
+
+Retirements & other ($$R$$)
+
+Retirements; transfers; separations due to disability or death
+
+Hires ($$H$$)
+
+Employees added to the establishment's payroll within the month
+
+Total employment ($$N$$)
+
+Count of full and part-time employees in the payroll period that includes the 12th of the month
+
+Separations ($$S$$) are defined as $$S \equiv L + Q + R$$
+
+Worker churn occurs when a single employer reports both separations and hires within a short period of time. Previous literature such as Burgess et al. (2001) defines the rate of gross worker churn at employer $$i$$ in terms of its hires, separations, and total employment at time $$t$$,
+
+$$$$ {GC}_{i,t} = \frac{2 \text{ min}\{H_{i,t}, S_{i,t}\}}{E_{i,t}} $$$$
+
+Where $$E_{i,t} \equiv \frac{1}{2}(N_{i,t-1} + N_{i,t})$$. (In my calculations, "employers" are establishments in JOLTS). When an establishment has more hires than separations in a given period, it is expanding on net. At an expanding establishment any departing worker is replaced by a new hire, leading to two job flows for every separation. Instead, at a contracting establishment, gross churn is twice the number of hires because each hire has a corresponding separation.
+
+The standard measure of $$GC$$ presented above encompasses separations that occur for all reasons. However, information about layoffs, quits, and other separations can be used to decompose $$GC$$ into employer-initiated churn ($$EC$$), quit-initiated churn ($$QC$$), and a residual component.
+3
+ Dropping subscripts $$i$$ and $$t$$: when $$S>0$$, baseline measures of these two types of churn can be defined as,
+
+$$$$ EC = \frac{L}{S}{GC} \text{ ; } QC = \frac{Q}{S}{GC} \text{ ; }$$$$
+
+and zero when $$S=0$$. The baseline formula for $$EC$$ assumes that churn can be attributed in proportion to the percentage of separations at contracting establishments that were layoffs ($$EC$$), and likewise for $$QC$$ and quits. When an establishment is stable or expanding, the assumption of proportionality is immaterial because all layoffs and all quits are replaced by commensurate hires. However, when an establishment is contracting, it is more difficult to determine how to apportion its hiring between $$EC$$ and $$QC$$. For instance, one could assume that layoffs are a more important determinant of hiring than quits. In this case, an upper bound, denoted $$\bar{EC}$$ is,
+
+$$$$ \overline{EC} = \frac{2\text{ min}\{L,H\}}{E} $$$$
+
+Alternatively, quits could be a more important determinant of hiring than layoffs. A lower bound, denoted $$\underline{EC}$$ is,
+
+$$$$ \underline{EC} = \frac{2\text{ min}\{L, H-\text{ min}\left[Q,H\right] - \text{ min}\left[R,H\right]\}}{E} $$$$
+
+For stable or expanding establishments, $$L\le S\le H$$ thus all three measures of $$EC$$ equal $$\frac{2L}{E}$$. A similar logic applies to $$QC$$, which is $$\frac{2Q}{E}$$ in stable or expanding establishments.
+
+Using the baseline measures above, what percentage of hires are churn rather than job creation ($$JC$$)? Similarly, what percentage of layoffs and quits are replaced by new hires within the same month and thus are churn rather than job destruction ($$JD$$)? Table 2 shows the relative importance of these composite measures using JOLTS data.
+4
+
+Table 2: Percent of Hires and Separations that are Churning Flows
+
+ 
+
+(1) $$EC$$
+
+(2) $$QC$$
+
+(3) $$JC$$
+
+(4) $$JD$$
+
+Percent of
+
+$$H$$
+
+16%
+
+32%
+
+48%
+
+0%
+
+$$S$$
+
+44% of $$L$$
+
+63% of $$Q$$
+
+0%
+
+45%
+
+$$GC$$
+
+31%
+
+62%
+
+0%
+
+0%
+
+Source: Author's calculations from JOLTS microdata, January 2001-March 2016.
+
+As revealed by Columns (3) and (4), $$JC$$ and $$JD$$ account for less than half of all hires and separations; the rest are churning flows. The last row of the table shows that, on average, $$QC$$ accounts for nearly two-thirds of $$GC$$ and is twice the magnitude of $$EC$$. Even so, the prevalence of $$EC$$ is sizeable considering the non-negligible costs associated with worker turnover.
+
+Cyclical properties of employer-initiated and quit-initiated churn
+
+In light of the very different properties of quits and layoffs, how do $$EC$$ and $$QC$$ vary over the business cycle? While $$QC$$ should be procyclical because quits and hires are both procyclical, it is difficult to predict the cyclicality of $$EC$$. Different explanations for the existence of $$EC$$ would suggest different patterns of cyclical behavior. For example, if $$EC$$ is largely due to short-term (less than a month) employment opportunities at firms, then we would expect it to be procyclical; if it is due to short-term layoffs (less than a month duration), then we might expect it to be countercyclical.
+5
+ On the other hand, if $$EC$$ is instead due to employer reorganization, termination of under-performing workers, or attempts to replace higher-paid workers with lower-paid ones, these could all suggest different cyclical patterns.
+
+Chart 1 shows the $$QC$$ and $$EC$$ series over time. The dark lines denote the baseline calculation, while the light lines show the upper and lower bounds of each measure.
+
+Chart 1. Quit-initiated ($$QC$$) and Employer-initiated ($$EC$$) Churn
+
+
+Source: Author's calculations from JOLTS monthly microdata. 12-month averages.
+
+All measures are weighted by establishmentsâ employment.
+
+Note: Light-color lines represent upper and lower bounds of $$QC$$ and $$EC$$.
+
+Accessible version
+
+Indeed, $$QC$$ appears highly procyclical, similar to Mercan and Schoefer's (2020) model of "vacancy chains" in which job creation amplifies hiring and quits. On the other hand, $$EC$$ does not appear to vary much with the business cycle and, perhaps surprisingly, did not rise much during or immediately after the Great Recession.
+
+Chart 2 shows gross churn rates ($$GC$$)â roughly the sum of $$EC$$ and $$QC$$â relative to job creation and job destruction rates over time. As noted by Davis and Haltiwanger (2014), $$GC$$ shows an apparent secular decline. In contrast, $$JC$$ was relatively stable over this period and $$JD$$ trended down except in the years of the Great Recession.
+
+Chart 2. Gross Churn ($$GC$$), Job Creation ($$JC$$), and Job Destruction ($$JD$$)
+
+
+Source: Author's calculations of JOLTS microdata. 12-month averages.
+
+All measures are weighted by establishments' employment.
+
+Accessible version
+
+These new composite measures from JOLTS help illustrate the dynamics of worker turnover and the reasons for employer hiringâ job creation along with quit-initiated and employer-initiated churnâ over the business cycle. For the 15-year period starting in 2001, quit-initiated churn was highest in the mid-2000s whereas, during the Great Recession, the rate of job destruction was higher than gross churn (in part because $$QC$$ was low).
+
+Discussion
+
+Previous research such as Davis et al. (2012) suggests that worker churn is widespread: many shrinking establishments hire workers and many expanding establishments shed workers. However, quit-initiated and employer-initiated churn have different cyclical dynamics and different welfare implications. Quit-initiated churn is highly procyclical while employer-initiated churn is much less sensitive to the business cycle. Regarding welfare, Davis (2005) shows that laid-off workers are more likely to enter unemployment and lower-paying jobs, whereas workers who quit generally move to higher-paying jobs. This implies that, on average, employer-initiated churn leads to welfare losses for separating workers while quit-initiated churn leads to welfare gains. Future work could examine the ways in which churnâ both $$EC$$ and $$QC$$â vary across types of workers and industries and the interaction between churn and workers' wages.
+6
+
+Bibliography
+
+Bonhomme, Stephane and Gregory Jolivet (2009), "The Pervasive Absence of Compensating Differentials," 
+Journal of Applied Econometrics
+, 24(5), pp. 763-795.
+
+Burgess, Simon, Julia Lane, and David Stevens (2000). "Job Flows, Worker Flows, and Churning," 
+Journal of Labor Economics
+, 18(3), pp. 473-l502.
+
+Burgess, Simon, Julia Lane, and David Stevens (2001). "Churning Dynamics: An Analysis of Hires and Separations at the Employer Level," 
+Labour Economics
+, 8(1), pp. 1-14.
+
+Davis, Steven. "Job Loss, Job Finding, and Unemployment in the US Economy over the Past Fifty Years: Comment." 
+NBER Macroeconomics Annual 2005
+, ed. Mark Gertler and Kenneth Rogoff, pp. 139â57. Cambridge, MA: MIT Press.
+
+Davis, Steven, R. Jason Faberman, and John Haltiwanger (2012). "Labor market flows in the cross section and over time," 
+Journal of Monetary Economics
+, 59(1), pp. 1-18.
+
+Davis, Steven, and John Haltiwanger (2014). "Labor Market Fluidity and Economic Performance," Paper presented at the 2014 Federal Reserve Bank of Kansas City Economic Symposium Conference in Jackson Hole, WY.
+
+Fujita, Shigeru and Giuseppe Moscarini (2017). "Recall and Unemployment," 
+American Economic Review
+, 107(12), pp. 3875-3916.
+
+Hyatt, Henry and James Spletzer (2017), "The Recent Decline of Single Quarter Jobs," 
+Labour Economics
+, 46, pp. 166-176.
+
+Lane, Julia, David Stevens and Simon Burgess (1996). "Worker and Job Flows," 
+Economics Letters
+, 51(1), pp. 109-113.
+
+Lazear, Edward and James Spletzer (2012). "Hiring, Churn, and the Business Cycle," 
+American Economic Review Papers and Proceedings
+, 102(3), pp. 575-579.
+
+Mercan, Yusuf, and Benjamin Schoefer (2020). "Jobs and Matches: Quits, Replacement Hiring, and Vacancy Chains,"
+American Economic Review: Insights
+, 2(1), pp. 101-24.
+
+Molloy, Raven, Christopher L. Smith, and Abigail Wozniak (2020). "Changing Stability in U.S. Employment Relationships: A Tale of Two Tails," FEDS Working Paper 2020-017, Board of Governors of the Federal Reserve System.
+
+* 
+[email protected]
+; Board of Governors of the Federal Reserve System, Research and Statistics Division, Washington, DC 20551. I thank Andrew Figura, Charles Fleischman, Anne Polivka, Paolo Ramezzana, Ethan Rouen, and participants at the Bureau of Labor Statistics (BLS) Brownbag workshop for insightful comments on this topic. I thank Kathy Bauer for help with the JOLTS microdata. Any mistakes are mine. This note reflects my own views and does not indicate concurrence by other members of the research staff or the Board of Governors. This research was conducted with restricted access to BLS data. The views expressed here do not necessarily reflect the views of the BLS. 
+Return to text
+
+1. One exception is Lazear and Spletzer (2012); they use JOLTS data to calculate the lost output that could be attributed to the decrease in gross churn during the Great Recession. 
+Return to text
+
+2. Establishments' survey responses are confidential and not linked to tax records or unemployment insurance determinations. 
+Return to text
+
+3. The residual consists of churn arising from Retirements & other separations ($$R$$). It is defined as $$GC â EC â QC$$ and is very small relative to the other measures. 
+Return to text
+
+4. Here and in the remainder of the paper, I drop establishments with fewer than five employees because their churn is very idiosyncratic (since $$E$$ is small, any turnover in a month leads to a very high rate of measured churn). 
+Return to text
+
+5. For further discussion of short-term jobs and temporary layoffs, see Hyatt and Spletzer (2017) and Fujita and Moscarini (2017), respectively. 
+Return to text
+
+6. Molloy et al. (2020) look at a related issue of variation in job tenure across workers over time; Bonhomme and Jolivet (2009) show that job security can be an amenity that is positively associated with wages. 
+Return to text
+
+Please cite this note as:
+
+Weingarden, Alison (2020). "Worker Churn at Establishments over the Business Cycle," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 24, 2020, https://doi.org/10.17016/2380-7172.2379.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

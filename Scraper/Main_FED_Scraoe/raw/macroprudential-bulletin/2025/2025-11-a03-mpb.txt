@@ -1,0 +1,547 @@
+Skip to:
+
+Skip to 
+navigation
+
+Skip to 
+content
+
+Skip to 
+footer
+
+ANYTIME 
+
+PAST MONTH 
+
+PAST YEAR 
+
+Search Options
+
+Image Preview
+
+Home
+
+Media
+
+Explainers
+
+Research & Publications
+
+Statistics
+
+Monetary Policy
+
+The €uro
+
+Payments & Markets
+
+Careers
+
+Suggestions
+
+Sort by
+
+Relevance
+                                
+
+Date
+                                
+
+ 
+
+Alberto Grassi
+Michael Kosiahn
+Chiara Lelli
+Financial Stability Expert · Macro Prud Policy&Financial Stability, Stress Test Modelling
+María Losa Martín
+Michael Moers
+Matthias Sydow
+Michael Vincent
+Garbrand Wiersema
+
+        Integrating contagion risk into the 2025 EU-wide stress test: a system-wide analysis with amplification effects between banks and non-banks    
+
+Prepared by Alberto Grassi, Michael Kosiahn, Chiara Lelli, María Losa Martín, Michael Moers, Matthias Sydow, Michael Vincent and Garbrand Wiersema.
+Published as part of the 
+Macroprudential Bulletin 32
+, November 2025.
+This article expands on the 2025 EU-wide stress test by incorporating a system-wide perspective to capture contagion risks across investment funds and insurance corporations alongside the banking sector. It examines potential short-term contagion effects under the EBA’s adverse scenario as financial institutions adjust their balance sheets in response to stress. These adjustments would result in additional average CET1 ratio depletion of 29 basis points, increasing first-round effects by 12%. Among institutional sectors, investment funds − in particular equity funds − face the greatest losses under the EBA’s adverse scenario, while banks with less sophisticated hedging capabilities are also significantly affected. The findings emphasise the importance of a holistic, system-wide perspective to capture spillover effects both within and across financial sectors. Furthermore, the results show how solvency-driven liquidity shocks can trigger market reactions, which in turn propagate through the financial system and amplify the losses stemming from initial exogenous shocks. The article also includes two boxes which expand the way in which the EBA methodology accounts for counterparty credit risk. They do so by looking at exposures to additional institutional sectors such as central clearing counterparties (Box 1) and examining the losses that materialise when the failures of counterparties become more interdependent (Box 2).
+1 The benefits of a system-wide perspective
+This article expands on the 2025 EU-wide stress test to account for interactions across financial institutions by investigating amplification mechanisms.
+ A sector-by-sector approach to stress testing can rigorously assess the resilience of individual financial institutions to severe shocks but may overlook key contagion channels and spillover effects within the broader financial system, understating the risks that can arise from interconnections between banks, insurers, investment funds and other financial institutions.
+A system-wide perspective is essential to capture the full impact and transmission of financial shocks across the financial sector.
+ The financial landscape is characterised by dense linkages and overlapping exposures, where shocks originating in one segment can propagate rapidly through liquidity, solvency and market channels to other sectors. These transmission mechanisms (such as forced asset sales, cascading price effects and cross-holdings) can amplify initial losses and generate unforeseen vulnerabilities at the system level.
+The ECB’s Interconnected System-wide stress test Analytics (ISA) tool
+[
+1
+]
+ provides a framework to quantify these second-round effects and spillovers.
+ By integrating granular data on bilateral exposures and portfolio holdings across banks, insurers and investment funds,
+[
+2
+]
+ the ISA tool offers a holistic view of systemic risk under the EBA adverse scenario. This approach makes it possible to assess both direct and indirect contagion, revealing the endogenous dynamics and amplification mechanisms that a purely sectoral analysis would miss. By capturing the full spectrum of vulnerabilities that can emerge from the interconnectedness of the financial system, a system-wide stress-testing framework is critical for understanding the resilience of the entire financial sector and designing effective macroprudential policies.
+The contagion assessment provided by the ISA tool is complemented by two boxes which expand our understanding of counterparty credit risk beyond the EU-wide perspective.
+ Box 1 leverages the annual central clearing counterparty (CCP) stress test performed by ESMA to explore the potential consequences of a CCP default on banks’ solvency. Box 2 investigates contagion effects through Monte Carlo simulation methods to capture the interconnected nature of counterparty defaults.
+2 A description of the ISA data and methodological approach
+2.1 Entity-level network data
+The granular dataset underpinning the system-wide analysis maps a rich network of interconnections among banks, insurers and investment funds.
+ The network features 96 banks and 21,000 open-ended investment funds, each consolidated at group level.
+[
+3
+]
+ The analysis primarily focuses on the nearly 8,000 fund groups domiciled in the EU; non-EU funds play a secondary role. For the euro area insurance sector, the ISA tool uses country-level data. The data network reflects positions as at the end of 2024. All data are sourced from supervisory reporting and commercial data providers.
+[
+4
+]
+ Data on CCPs are not included in the network, but insights on risks from CCP-induced shocks are presented in Box 1.
+2.2 The ISA modelling framework
+The ISA model provides a comprehensive framework for assessing system-wide financial risks.
+ Using network modelling, ISA quantifies both first-round losses (the direct impact of the adverse scenario on financial institutions) and second-round losses (which emerge as institutions respond to solvency and liquidity distress). These second-round effects illustrate the cascading risks caused by the interconnected nature of the financial system.
+The system-wide analysis builds primarily on the EU-wide 2025 stress test market risk scenario,
+[
+5
+]
+ which affects all financial institutions at the same time.
+ The scenario assumes corrections in asset prices and rising sovereign credit spreads, reflecting escalating vulnerabilities across markets and economies. This adverse scenario is assumed to impact banks instantaneously.
+ISA comprises a sector-specific framework to calculate stress test losses under the adverse market risk scenario for all sectors.
+ First, the tool assesses the effects of the exogenous shocks outlined in the EU-wide stress test adverse scenario. These primarily relate to the revaluation of security and fund holdings. For banks, first-round revaluation losses are further supplemented by the EU-wide stress test results for non-market risks (see 
+Section 3.2
+ for further details). For investment funds, the decline in asset valuations leads to redemptions by investors. A flow-performance model
+[
+6
+]
+ is employed to project these outflows due to the decrease in asset prices. For insurers, liability-side adjustments are calculated, taking into account the discounting of future liabilities as well as profit-sharing clauses embedded in insurance policies.
+[
+7
+]
+ The solvency and liquidity distress generated in this phase then triggers the second-round reaction in the system.
+EU-wide stress test results are fed into ISA to complement short-term dynamics stemming from market risk shocks with longer-term credit and profitability losses.
+ This is done by incorporating adjusted longer-term impacts directly into the first-round loss calculations. The 2025 EU-wide stress test provides key inputs such as CET1 capital depletion over a multi-year horizon, capturing the medium to long-term emergence of credit and profitability risks. To align these outputs with the shorter time horizon of the ISA modelling framework, the projected adverse scenario losses for the first year of the 2025 EU-wide stress test are evenly distributed across the four quarters. Combined with the adverse market risk scenario shocks, this quarterly impact for non-market risk losses at bank level is fed into ISA for the first-round loss calculation. This approach ensures that the initial credit and profitability shocks are effectively integrated into the second-round contagion analysis.
+In a second step, ISA propagates first-round losses across the system, drawing on bilateral exposures between banks, insurers and investment funds in the euro area.
+ This involves several iterations.
+ 
+Each begins by calculating the losses incurred from defaults in the previous round. Next, liquidity is redistributed, with institutions holding liquidity surpluses lending to those facing shortfalls. Institutions unable to meet their liquidity needs instead have to redeem fund shares or undertake fire sales to raise cash.
+[
+8
+]
+ The cumulative impact of fire sales is assumed to drive further declines in asset prices, which are estimated using a predictive model.
+[
+9
+]
+ Entity-specific default criteria are evaluated at each round, and new defaults (if any) are identified at the end of each iteration. For banks, a default is assumed when the CET1 ratio falls below the minimum requirement of 4.5%. Moreover, an institution can become illiquid (called “liquidity default” in ISA) if liquid assets are insufficient to cover projected liquidity outflows. This iterative process continues until the losses converge to virtually zero.
+[
+10
+]
+3 System-wide stress test outcomes and analysis
+3.1 Insights from financial linkages and sectoral interconnections
+Market risk exposures represent the largest share of financial system assets, accounting for 53% of the total of €92 trillion (Chart 1).
+ These exposures to the market prices of bonds and equities vary significantly across sectors. 
+Chart 1
+, which maps the cross-holdings between banks, insurers and investment funds as well as these institutions’ investments in other sectors, shows that banks’ market risk exposures make up only 15% (€4 trillion) of total assets. Insurers’ market risk exposures make up a higher share at 36% (€3 trillion), and investment funds exhibit the highest exposure, with 81% (€46 trillion) of their total assets linked to market risk. By contrast, credit risk exposures dominate the balance sheets of banks, comprising 74% (€20 trillion) of their total assets.
+The network of bilateral links reveals dense financial linkages, including direct exposures and overlapping portfolios across sectors (Chart 1).
+ Banks engage in lending with other financial institutions, resulting in counterparty risks and exposure to liquidity outflows. The banking sector is mostly exposed to sovereign bonds, which also make up a substantial portion of the securities held by the other two sectors. Meanwhile, investment funds are the primary holders of equity issued by non-financial corporations, while also maintaining sizeable interconnections within the investment fund sector. Institutions within the same sector tend to hold similar portfolios of tradable securities, which increases the risk of correlated losses among peers. This also means that when stressed institutions in the sector sell off their assets driving market prices down, the portfolio impact is further propagated to others in the same sector. Finally, insurers hold substantial investments in shares issued by funds. This exposes insurers to the market risk of funds and funds to redemption risk from insurers.
+Chart 1
+Total assets and cross-holdings of banks, insurers and investment funds covered by the ISA model
+Source: ECB (AnaCredit, SHS), COREP, FINREP, LSEG Lipper, Solvency II and ECB calculations.
+Notes: NFC stands for non-financial corporations; FC stands for financial corporations excluding banks, insurers and investment funds. For bonds and equities, the entity on the left represents the owner, while the entity on the right represents the issuer of the security. For loans, the entity on the left represents the assets side (the lender), while the entity on the right represents the liabilities side (the borrower). For fund shares, the entity on the left represents the owner, while the entity on the right represents the investment fund.
+3.2 System-wide first and second-round effects
+Stress impacts vary across sectors, with pronounced first-round losses followed by milder but still critical second-round effects.
+ Investment funds, which are more exposed to market swings due to the composition of their portfolios, bear the brunt of the first and second-round losses (
+Chart 2, 
+panel a). For banks, the modest losses can be attributed to their smaller exposures to financial markets and overall well-hedged positions (
+Section 3.3
+). Insurers – who invest both indirectly through funds and directly in securities – experience larger relative losses on their fund shares and direct holdings. These losses are, however, partially mitigated by adjustments to technical provisions on the liabilities side. Across sectors, second-round effects add moderate losses to first-round impacts, mainly stemming from funds’ fire sales of securities.
+Investment funds are the most affected by both first and second-round losses.
+ Fire sale shocks primarily affect portfolios of investment funds, due to their higher market risk exposure (see 
+Section 3.1
+), which in turn transmit contagion to insurance corporations
+.
+ Given that stock prices are more significantly affected by the EBA scenario than other asset classes, these mechanics weigh more heavily on funds that predominantly invest in equities. They suffer the majority of investor redemptions and need to sell more of their assets, in particular stocks. As a result, equity prices are most impacted by the fire sale. Such drops in market values reduce the value of fund shares, spreading the losses mainly toward insurance corporations (
+Chart 2
+, panel b).
+Chart 2
+First and second-round losses relative to portfolio values and their propagation
+a) First and second-round losses across sectors relative to portfolio values
+b) Propagation of losses across the network of financial institutions
+(percentages)
+Source: ECB calculations.
+Notes: Panel a) shows the relative losses as a share of portfolio value in the first and second rounds. Panel b) shows how fair value losses in securities propagate across the network. The yellow, blue and green colours indicate losses due to equity, bond and investment fund holdings respectively. The vertical size of the bars indicates loss of value relative to the total portfolio value. As investment funds hold shares of other investment funds, there is a feedback loop (green) where losses in one investment fund result in losses in others.
+3.3 First and second-round effects for banks
+For banks, the results of the EU-wide stress test serve as the foundation for analysing the effects of contagion and spillovers.
+ To compute the first-round effects on banks implied by the EBA’s adverse scenario, the CET1 capital depletion reported in the 2025 EU-wide stress test is used. First-year non-market gains and losses
+[
+11
+]
+ incurred by banks (which represent the largest share of losses over the three-year period) are incorporated into the ISA model. Market risk losses for banks (as well as for all other sectors) are then re-estimated using ISA’s top-down satellite models.
+[
+12
+]
+To ensure alignment between the EU-wide bottom-up results and ISA’s first-round losses, hedging data provided by banks are fed into ISA.
+ The hedge ratio used to capture the extent to which banks are hedged against market risk is calibrated so that ISA’s first-round losses match the depletion caused by market risk exposures observed in the EU-wide stress test results. This ensures that important information collected directly from banks is adequately reflected in the results of the ISA model. On average, a 10 percentage point decrease in the hedge ratio would result in an additional 40 basis points of CET1 ratio depletion, with significantly stronger effects observed for banks with substantial market positions, such as investment banks and global systemically important banks (G-SIBs).
+[
+13
+]
+Banks experience the steepest reduction in CET1 ratios during the first round of stress, with second-round effects adding moderate additional impacts.
+ Aggregate depletion amounts to 239 basis points in the first round, with the largest declines observed among G-SIBs (
+Chart 3, 
+panel a). Additionally, forced asset sales by investment funds cause prices to fall sharply, which subsequently affects banks (and insurers) through cross-holdings and shared exposures. These second-round effects contribute to average CET1 depletion for banks of about 29 basis points, with G-SIBs and universal banks impacted the most due to their reliance on activities exposed to market risk. By contrast, custodians and asset managers see the smallest reduction, since they manage client assets held in custody or segregated accounts instead of deploying their own balance sheet capital. Consequently, they are less susceptible to contagion risks.
+On average, banks reported they were hedged against around 20% of market risks at the end of 2024, with those more active in financial markets being better protected.
+ Conversely, around one-third of these banks have negative hedge ratios. This does not reflect conventional hedging but rather additional exposure to the underlying asset price movements, amplifying the impact of market shocks. The degree of hedging varies significantly, with investment banks, G-SIBs and asset managers being more hedged than banks with other business models (
+Chart 3
+, panel b). These results highlight banks’ different sensitivity to the market risk scenario, but do not imply full insurance against all types of shock. It is important to note that market risk positions can adjust quickly, leading to hedges that are only effective for a short period of time and a given strategy.
+Chart 3
+Average depletion and hedge ratios across bank business models
+a) Average depletion per round
+b) Distribution of banks’ hedge ratios
+(basis points)
+(percentages)
+Source: ECB calculations.
+Notes: Starting points are derived from 2025 EU-wide stress test data. “Other banks” comprises diversified lenders, corporates/wholesale lenders, small market lenders, retail lenders and development/promotional lenders. In panel a, the blue and yellow bars represent average changes in the CET1 ratio in the first round and second round respectively. Averages are calculated as averages weighted by risk exposure amounts within each group. In panel b, the blue bars represent the interquartile range.
+4 Conclusions and policy implications
+A system-wide approach makes it easier to understand how financial shocks propagate and intensify across the entire financial sector.
+ The interconnected nature of today’s financial system, marked by intricate linkages and common exposures, means that stress originating in one segment can swiftly spread to others via liquidity strains, solvency pressures and market movements. Expanding the 2025 EU-wide stress test to cover other financial sectors and their interactions is key to obtaining a system-wide view of financial resilience.
+This article quantifies the additional losses stemming from cross-sectoral interactions overlooked by sector-specific analyses.
+ Based on the system-wide simulation, the banking sector experiences average CET1 depletion of 269 basis points in total in the first quarter, with 29 basis points attributable to second-round effects due to fire sales and losses on fund share holdings. At the same time, some banks experience significantly larger capital depletion than others due to their less effective hedging strategies. While the EU-wide stress test is geared towards assessing banking sector resilience, the system-wide results also highlight that the impact of adverse scenario shocks can be substantial for euro area non-bank financial institutions, making a strong case for further exploring financial vulnerabilities across sectors.
+System-wide stress testing also provides insights for macroprudential policy.
+ The ISA model shows that, while banks benefit from regulatory buffers, similar resilience mechanisms in the non-bank financial intermediation (NBFI) sector, particularly for investment funds, would be helpful to mitigate second-round amplification effects. By leveraging system-wide monitoring and tools like ISA, authorities can anticipate risks, strengthen resilience and enhance confidence in the financial system.
+Box 1	
+The impact of central clearing-induced counterparty credit risk on euro area banks
+Prepared by Antoine Baena and Philippe Molitor
+Central clearing counterparties (CCPs) play a crucial role in mitigating counterparty credit risk (CCR) by interposing themselves between the entities executing trades in financial markets.
+ CCR is the risk that the counterparty to a transaction could default before the final settlement of the transaction's cash flows.
+[
+14
+]
+ CCPs process 79% of euro area banks’ notional derivatives and securities financing transactions, making them a cornerstone of financial markets (
+Chart A
+, panel a). However, the European clearing landscape is highly concentrated, amplifying systemic risks during periods of stress. Most financial institutions access CCPs indirectly through clearing members, primarily banks.
+While CCPs are designed to absorb counterparty credit risk, their loss mutualisation mechanisms can still transmit risks to clearing members in an adverse scenario.
+ Euro area banks involved in the EU-wide stress test represent over 88% of clearing member activity.
+[
+15
+]
+ The 2018 default of one small clearing member, Einar Aas, demonstrated how CCPs can transmit risks; two-thirds of Nasdaq Clearing’s default fund was consumed in that episode.
+[
+16
+]
+This analysis integrates the ESMA 
+[
+17
+]
+ and EU-wide stress tests to estimate indirect CCR losses for clearing member banks in an adverse scenario.
+ While the ESMA stress test evaluates CCP-level risks, the EU-wide stress test focuses on banks’ non-cleared bilateral exposures. This box combines results from these supervisory exercises to trace a risk transmission channel that traditional assessments often overlook, underscoring the interconnectedness of CCPs and banks in stress scenarios.
+The analysis starts from the CCPs’ default fund losses estimated in the Fifth ESMA stress test published in 2024 and assesses how these could impact euro area banks.
+[
+18
+]
+ To align the ESMA stress test results with the EBA scenario in terms of severity, default fund losses from the ESMA test are rescaled by a factor of three, resulting in an estimated €13.7 billion depletion of CCP default funds.
+[
+19
+]
+ Sensitivity analysis from ESMA’s “reverse stress test” supports this adjustment.
+[
+20
+]
+Chart A
+Counterparty credit risk exposure through CCPs in the euro area banking system
+a) Importance of CCPs for derivatives and securities financing transactions for euro area banks in terms of notional amount
+b) Euro area banks’ contributions to CCPs’ default funds
+(left-hand scale: EUR billions; right-hand scale: percentage; quarterly data:
+Q2 2022-Q4-2024)
+(basis points of CET1 ratio; quarterly data: Q2 2021-Q4 2024)
+Sources: ECB (supervisory statistics) and ECB calculations.
+Losses estimated by the ESMA stress test are absorbed first by the CCP “skin in the game” (SITG) contributions, and remaining losses are covered by default fund contributions from clearing members.
+ SITG contributions are estimated at €500 million, leaving €13.2 billion in losses to be absorbed by clearing members.
+[
+21
+]
+At the end of 2024 euro area banks had committed €14 billion in prefunded contributions to CCP default funds, with an additional €18 billion in unfunded commitments (Chart A, panel b).
+ Once a default has been dealt with, clearing members are asked to replenish the default fund to allow the clearing service to continue. This requirement to provide further unfunded resources to assist a CCP’s default management, often urgently, can strain the liquidity of clearing members, particularly during periods of market-wide stress, and may adversely affect their solvency ratios.
+[
+22
+]
+Banks involved in the EU-wide stress test could incur additional losses equivalent to an average 9.7 basis point impact on their CET1 ratio under the adverse scenario through their contribution to CCP default funds.
+ Some banks are more exposed than others to indirect CCR losses through CCP default fund depletion, especially systemically important banks such as investment banks and G-SIBs, given the high concentration of euro area banks’ clearing activity among a few CCPs (
+Chart B
+, panel a). While indirect CCR losses are less severe in aggregate than direct CCR ones, they pose significant tail risks for banks with larger exposures to CCPs (
+Chart B
+, panel b). This underscores the need to include CCP-related contagion risks in stress-testing frameworks.
+Chart B
+Simulated contagion of counterparty credit risk through CCP default fund depletion
+a) Impact of indirect CCR impact through CCP default fund depletion, by business model
+b) Tail risk in indirect CCR impact through CCP default fund depletion
+Source: ECB calculations. Exposures to non-EU entities cleared through non-EU clearing members are not reported under EMIR and SFTDS. This limitation may introduce a slight upward bias in the calculated share of euro area banks’ contributions to CCP default funds, particularly for CCPs with clearing activities outside Europe.
+Notes: “Other banks” comprises diversified lenders, corporates/wholesale lenders, small market lenders, retail lenders and development/promotional lenders.
+Overall, this analysis shows how the loss mutualisation mechanisms of CCPs can transmit risks under a scenario of stress to clearing members.
+ The analysis highlights the importance of evaluating indirect CCR alongside direct exposures. The results from the 2025 EU-wide stress test indicate that all participating banks would remain solvent even after taking into consideration their indirect CCR losses through their activities of clearing members and their obligation to finance CCP default funds, reflecting the resilience of the banking system under extreme but plausible conditions. However, the framework does not yet capture broader systemic liquidity risks, such as procyclical margin calls and the urgent need to replenish default funds. These pressures could strain banks’ liquidity and solvency further during market-wide crises. Continued enhancements to stress-testing frameworks, including the integration of CCP-related contagion risks, will be crucial for safeguarding financial stability.
+Box 2	
+Revisiting bank counterparty credit risk: when defaults are not independent
+Prepared by Antoine Baena and Alberto Grassi
+This box investigates the effect of correlated defaults in assessing counterparty credit risk (CCR), complementing the analysis conducted by the ECB in its CCR exploratory scenario (CCR-ES).
+[
+23
+]
+ In practice, defaults are often interconnected, so counterparties can fail at the same time because they share exposures to common risk factors or are linked through financial and commercial relationships, potentially leading to contagion effects and systemic risk.
+[
+24
+]
+ This box complements the EU-wide stress test methodology for CCR, which assumes independent default of counterparties,
+[
+25
+]
+ by providing a systemic perspective on the risks faced by banks. The analysis uses the granular CCR exposure data collected by the ECB in parallel with the 2025 EU-wide stress test. Fifteen major banks, including G-SIBs, reported their top ten counterparties across ten institutional sectors, providing insights into portfolio composition and systemic risks stemming from overlapping exposures.
+The counterparties of the euro area banks included in the CCR-ES are highly interconnected, underscoring their potential to amplify financial risks.
+ Banks identified 634 distinct entities; of these, 78% were unique to single institutions, but 10% were linked to more than three banks and some shared by as many as 11. These overlapping relationships, involving large pension funds, major European firms and G-SIBs, emphasise the systemic significance of these counterparties.
+A Monte Carlo simulation approach is used to draw up expected default paths for these counterparties, showing how an entity’s own default is correlated to that of others.
+ First, distributions of potential future asset values are generated via 100,000 simulations of each firm’s daily asset returns over a one-year horizon using Moody’s data, covering the sample of counterparties and preserving their historical correlations.
+[
+26
+]
+ Next, a firm-specific default threshold is determined using the annual probabilities of default (PDs) reported in the CCR-ES for each counterparty.
+[
+27
+]
+ Based on this threshold, a matrix of expected defaults is constructed and the simulations in which a firm’s asset value falls below its respective default threshold are identified.
+[
+28
+]
+ This allows us to estimate the pairwise correlation of defaults between firms across all simulations, which are then collected to identify a distribution of default correlations.
+Simulations show that default correlations vary significantly across sectors and over time, with sharp increases during periods of financial turmoil.
+ To assess portfolio risk, it is crucial to identify counterparties with high default correlations within the distribution of all pairwise default correlations. The 95th percentile of this shows that (i) the correlation between investment funds is 2.5 times higher than that between banks, and (ii) correlations within sectors tend to be higher than those across sectors (
+Chart A
+, panel a). A time series of default correlations drawn up using a one-year rolling window of asset returns reveals significant volatility in the default correlation measure since 2019, which peaked after the outbreak of the COVID-19 pandemic (
+Chart A
+, panel b). During this period, both the average and the 95th percentile default correlation doubled, reaching their highest levels in January 2021. Although correlations have trended downwards since then, another notable hump occurred in 2022, coinciding with the onset of the Russia-Ukraine conflict and rising interest rates.
+Chart A
+Default correlation across euro area banks’ largest counterparties and tail losses
+a) Default correlation matrix between institutional sectors (95th percentile)
+b) Historical correlation coefficients between counterparties
+c) Distribution and 95th percentile of system-level losses of CCR counterparty defaults under alternative default correlation levels
+(Pairwise Jaccard correlation coefficients)
+(percentages)
+(x-axis: basis points; y-axis: probability density function)
+Sources: ECB, Moody’s CreditEdge and authors’ calculations.
+Notes: Panel a) highlights the 95th percentile of pairwise Jaccard correlation coefficients for simultaneous defaults of counterparties across different institutional sectors, based on 100,000 simulations. Institutional sectors include banks (B, ESA sector S122), insurance corporations and pension funds, (IC&PF, ESA sectors S128-S129), other financial institutions (OFI, ESA sectors S125-S126-S127), non-financial corporations (NFC, ESA sector S11) and investment funds (IF, ESA sector S123-S124). The investment funds sector includes all subcategories reported in the CCR-ES: money market funds (MMF), non-money market funds, hedge funds, real estate funds and private equity funds. The chart excludes the family offices sector due to a large number of missing data in Moody’s. Panel b) presents the average and 95th percentile of the pairwise Jaccard correlation coefficients for all counterparties across 100,000 simulations. These estimates have a monthly frequency and are computed by simulating each entity’s asset returns obtained from Moody’s CreditEdge using a one-year rolling window, with PD values held constant based on CCR-ES submissions. Panel c) presents the distribution of losses expressed in basis points of the system-level CET1 ratio, across 100,000 simulations. The system-level CET1 ratio is defined as that of the 15 banks taking part in the CCR-ES. The blue lines (uncorrelated) refer to losses under non-correlated defaults; the yellow lines (unstressed correlations) refer to losses under correlated defaults based on historical observations; the red lines (stressed correlations) show losses under stressed correlated defaults paired with stressed PDs. The stressed PDs are computed using the ECB credit risk path generator from the 2025 EU-wide stress test. The dashed lines indicate the 95th percentile of the respective distributions.
+Omitting default correlations in any CCR assessment can lead to risk for banks being underestimated, particularly during tail events.
+ Given a matrix of counterparties’ default simulations, losses at system-level can be computed by summing banks’ loss provisions
+[
+29
+]
+ for counterparties defaulting in a specific simulation, ultimately resulting in a distribution of losses across simulations. This analysis considers system-level
+[
+30
+]
+ losses, simulated under three different assumptions: no default correlation across counterparties, unstressed (starting point) default correlation, and stressed default correlation (
+Chart A
+, panel c).
+[
+31
+]
+ While expected losses as measured by the average aggregated loss across simulations do not change much under the three different assumptions, unexpected losses during tail events with stressed default correlations rise significantly, underscoring their potential systemic impact. At the 95th percentile of the loss distribution, the aggregated losses under unstressed default correlations nearly double compared with those from uncorrelated simulations. However, the latter are almost four times smaller than the losses projected under stressed conditions. Finally, a closer look at the tails reveals a subset of particularly vulnerable banks. More than 25% of banks face a loss exceeding 200 basis points of CET1 ratio at the 99th percentile of stressed loss projections.
+When default correlation is included, investment funds contribute most to the losses in the tail of the distribution.
+ Loss composition under unstressed default correlations varies with the severity of the results, with investment funds contributing 37% of losses in the 5th decile and 72% in the 10th decile (most severe simulations) (
+Chart B
+, panel a). This is due to three key factors. First, investment funds represent a significant share (37%) of the counterparties reported by banks, partly due to the structure of the CCR-ES templates; they include five investment fund subcategories (money market funds, non-money market funds, hedge funds, real estate funds and private equity funds). Second, counterparties in this sector exhibit higher median PDs (0.68%) than other sectors (0.16-0.55%). Third, investment funds have the highest default correlations both within their sector and with others, amplifying systemic risks and triggering default cascades in extreme scenarios. These characteristics make investment funds a critical driver of losses when accounting for correlated defaults.
+Losses resulting from the failure of a single entity, coupled with the cascading defaults that follow, highlight the significant role played by the insurance and pension funds sector in propagating shocks.
+ Mimicking the EBA methodology, it is assumed that for each bank the most vulnerable counterparty in each sector as identified in the simulations with unstressed default correlations defaults, and the resulting direct losses are computed. For these defaults, the conditional distributions of cascading indirect losses triggered by their default correlation with the failing entity are gauged from the subsets of simulations
+[
+32
+]
+ in which such defaults occur (
+Chart B
+, panel b). The results show that direct losses are highest when banks default, whereas the most severe indirect losses are triggered by defaults in the insurance and pension funds sector.
+Overall, the analysis suggests that when the effect of default correlations is included, CCR losses are largest when banks have substantial exposures to investment funds, insurers and pension funds.
+ The findings presented in this box underline that a significant portion of CCR in the banking sector stems from exposures to non-bank financial entities. Specifically, amplification effects due to default correlations are more likely to materialise in portfolios heavily exposed to investment funds, insurers and pension funds.
+Chart B
+Decomposition of aggregated impact by institutional sector
+a) Loss drivers under correlated default simulations, by loss decile
+b) Losses implied by the default of the most vulnerable counterparty in each sector for each bank
+(x-axis: decile of losses; y-axis: percentage share of aggregated losses)
+(basis points)
+Sources: ECB, Moody’s CreditEdge and authors’ calculations.
+Notes: The chart provides an analysis of losses across 100,000 simulations under the unstressed default correlation, representing the average default correlation observed between 2019 and 2024. The investment funds sector includes money market funds, non-money market funds, hedge funds, real estate funds and private equity funds. Panel a) breaks down system-level losses by the institutional sector of counterparties and groups losses into deciles by distribution. Panel b) presents losses computed using a methodology similar to the CCR approach used in the EU-wide stress test, assuming the default of each bank’s most vulnerable counterparty in each sector, independently of other entities’ behaviour (direct losses). The losses are classified by the institutional sector of the defaulting counterparty (x-axis). Indirect losses are computed as the median impact of other entities’ defaults conditional on the default of the counterparty causing the direct losses, based on the simulations with unstressed default correlations. FO stands for family office; MMF stands for money market funds; NFC stands for non-financial corporations; IF stands for investment funds; OFI stands for other financial institutions; IC&PF stands for insurance corporations and pension funds.
+References
+Barbieri, C. et al. (2025), “
+System-wide implications of counterparty credit risk
+”, 
+Macroprudential Bulletin
+, Issue 26, ECB, January.
+Bell, S. and Holden, H. (2018), “
+Two defaults at CCPs, 10 years apart
+”, 
+BIS Quarterly Review
+, Bank for International Settlements, December.
+Dubiel-Teleszynski, T. et al. (2022), “
+System-wide amplification of climate risk
+”, 
+Macroprudential Bulletin
+, Issue 17, ECB, June.
+EBA (2024), 
+Stacking orders and capital buffers
+, July.
+EBA (2025), 
+2025 EU-wide stress test - Market risk scenario
+, January.
+ECB (2025a), 
+2025 stress test of euro area banks – Final results
+, August.
+ECB (2025b), 
+Counterparty credit risk exploratory scenario exercise – Final results
+, August.
+ESMA (2023), 
+EU Derivatives Market Report 2023
+, September.
+ESMA (2024), 
+Final Report: Fifth ESMA Stress Test Exercise for Central Counterparties
+, July.
+ESRB (2025), 
+Macro-financial scenario for the 2025 EU-wide banking sector stress test
+.
+Fricke, C. and Fricke, D. (2017), “
+Vulnerable asset management? The case of mutual funds
+”, 
+Discussion Paper Series
+, No 32/2017, Deutsche Bundesbank.
+Fukker, G. et al. (2022), “
+Contagion from market price impact: a price-at-risk perspective
+”, 
+Working Paper Series
+, No 2692, ECB. 
+Gourdel, R. and Sydow, M. (2023), “
+Non-banks contagion and the uneven mitigation of climate risk
+”, 
+International Review of Financial Analysis
+, Vol. 89, 102739.
+Grassi, A. et al. (2026), “Default correlations and systemic risk”, mimeo.
+High-Level Group on the ESRB Review (2024), 
+Building on a decade of success
+, December.
+Merton, R. (1974), “
+On the Pricing of Corporate Debt: The Risk Structure of Interest Rates
+”, 
+Journal of Finance
+, Vol. 29(2), pp. 449-470.
+Mirza, M. et al. (2020), “
+Fire sales by euro area banks and funds: what is their asset price impact?
+”, 
+Working Paper Series
+, No 2491, ECB.
+Sydow, M. et al. (2024a), “
+Shock amplification in an interconnected financial system of banks and investment funds
+”, 
+Journal of Financial Stability
+, Vol. 71, 101234.
+Sydow, M. et al. (2024b), “
+Banks and non-banks stressed: liquidity shocks and the mitigating role of insurance companies
+”, 
+Working Paper Series
+, No 3000, ECB.
+Zieliński, T. (2013), “
+Merton’s and KMV models in credit risk management
+”, 
+Studia Ekonomiczne
+, University of Economics in Katowice, Vol. 127, pp. 127-135.
+ 
+ 
+The work on ISA is a collaborative effort that benefits from broad expertise found across the Eurosystem and the European Supervisory Authorities. Regular exchanges on the model take place within task forces of the ECB’s Financial Stability Committee and the ESRB. The model has already been used in the context of the EU-wide Fit-for-55 climate scenario analysis, using a comparable network of financial institutions but with a different scenario configuration. 
+ 	See Sydow et al. (2024a) and (2024b). 
+ 	Consolidation is performed at group and sector level in order to disentangle entities pertaining to different sectors withing the same group. 
+ 	Data sources include the EU-wide stress test, AnaCredit, COREP, FINREP and SHS-G (Securities Holding Statistics – Group level) for banks, Lipper IM for investment funds, Solvency II data and SHS-S (Securities Holding Statistics – Sector level) for insurance corporations. 
+ 	See EBA (2025) and ESRB (2025). 
+ 	The model for the relation between fund performance and investor flows is in line with the approach in Fricke and Fricke (2017), with flow-performance coefficients based on Mirza et al. (2020). 
+ 	Insurers maintain technical provisions (reserves) to meet liabilities that are typically long-term. These provisions are sensitive to interest rate changes, as they are calculated using a discounted cash flow valuation method. Liability adjustments are also required due to embedded profit-sharing clauses allowing a portion of the losses on asset holdings to be shared with policyholders. 
+ 	The analysis assumes that funds only use cash to meet redemptions to a limited extent. Although this is supported by empirical evidence, they may draw on cash buffers during a stress scenario to absorb shocks, mitigating second-round losses. The analysis also does not account for the potential use of liquidity management tools such as redemption gates or redemption fees, which could in practice mitigate the initial liquidity stress. 
+ 	See Fukker et. al. (2022). 
+ 	Iterations are stopped at a negligible amount of losses. 
+ 	Including the impacts from credit risk, net interest income, conduct and operational risk and non-interest income, expenses and capital. Transitional CET1 depletion figures are used. 
+ 	The stress test impacts associated with market risk credit-counterparty defaults of the three largest counterparties are excluded to maintain consistency with the system-wide calculations performed by ISA. 
+ 	More insights on hedging for more complex portfolios can be found in Box 4 of ECB (2025a). 
+ 	Article 272(1) of Regulation (EU) No 575/2013 (CRR). 
+ 	ESMA (2023) highlights that “clearing membership is highly concentrated among a limited number of banks, who account for the majority of the notional”. With 20 banks participating in the EU-wide stress test being clearing members clearing at least €100 million in transactions, these entities will have to absorb any losses resulting from adverse credit events leading to CCP default fund losses. 
+ 	See Bell and Holden (2018). 
+ 	See ESMA (2024). 
+ 	The EBA’s stress test scenario assumes a 52% drop in euro area equity indices (vs 15% in ESMA’s scenario), a 169 basis point widening in credit default swap spreads (iTraxx) (vs 42 bps in ESMA’s scenario) and a 127 basis point shock to the three-month euro interest rate swaps (vs 39 bps in ESMA’s scenario). It also includes the default of the three most vulnerable counterparties for each bank (vs the two largest counterparties for each CCP in ESMA’s scenario) and evaluates effects on profit and loss over one year (vs seven-day liquidity mismatches in ESMA’s scenario). 
+ 	Our sample of CCPs is that of the ESMA CCP stress test: 13 EU CCPs and two Tier 2 UK CCPs. See annex 1 “CCPs in scope” of ESMA report for the complete list.
+ESMA conducts annual stress tests for EU and UK CCPs to evaluate whether their financial resources are adequate to absorb losses under severe market conditions, including the simultaneous default of two clearing member groups. We consider the scenario “Cover-2 per CCP (with the largest combined credit exposure that are identified per CCPs) with concentration and WWR for March 2023”, with the results presented in Figure 6 of the ESMA report. This scenario incorporates estimates of market liquidation costs due to concentrated positions and wrong-way risk, in addition to market stress scenario losses. 
+ 	See Figure 7 in ESMA (2024). 
+ 	See the Risk Dashboard from the European Systemic Risk Board (ESRB). 
+ 	The liquidity impact would only be felt if banks needed to provide unfunded new resources to the default fund. Banks usually have one month to comply with their obligation to replenish prefunded default fund contributions, meaning that this becomes mainly a solvency risk rather than a liquidity risk. Following the default of the biggest counterparty, the size of the default fund contribution of surviving clearing members might increase, an additional composition effect not considered in this box. 
+ 	See ECB (2025b). 
+ 	See Barbieri et al. (2025) and the recommendations in High-Level Group on the ESRB Review (2024). 
+ 	Specifically, the EBA’s 2025 stress test methodology requires banks to evaluate the default risk of their three most vulnerable counterparties by PD within their ten largest exposures. See Box 19 of the EBA 2025 ST methodological note for more details. 
+ 	The simulations are based on historical daily returns for the period 2019-24. For entities not covered by Moody’s, the simulation assumes that the evolution of their asset values follows the average of their institutional sector and country plus a random normally-distributed noise. 
+ 	Under the assumptions of Merton (1974) (also used in the Moody’s methodology for expected default frequencies), the PD represents the probability that a firm’s assets are insufficient to repay its obligations at a future date. Such probability is calculated by comparing the distribution of future assets with a threshold determined by the future value of the firm’s payable liabilities, thereby defining a percentile of such distribution. See also Zieliński (2013). 
+ 	For more details on this methodology, see Grassi et al. (2026). 
+ 	Exposure at default multiplied by loss given default. 
+ 	The system is defined by the 15 banks included in the CCR-ES. 
+ 	Unstressed starting point correlation refers to the average default correlation observed between 2019 and 2024. Stressed correlations consider simulations based on asset correlation observed in 2020 and stressed PD values from the ECB credit risk path generator for the 2025 EU-wide stress test. 
+ 	Out of the 100,000 losses simulations estimated under the assumption of starting point correlations. 
+
+Are you happy with this page?
+
+Yes
+
+No
+
+What made you unhappy?
+
+Page not working
+
+Information not useful
+
+Design not attractive
+
+Something else
+
+Thank you for letting us know!
+
+ 
+
+Our website uses cookies
+
+We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:
+
+Read our privacy statement 
+ 
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Thank you!
+
+Thank you!
+
+We have updated our privacy policy
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+See what has changed in our privacy policy
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Your cookie preference has expired
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+This feature requires cookies.
+
+Modify

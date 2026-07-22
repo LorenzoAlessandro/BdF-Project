@@ -1,0 +1,338 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 29, 2020
+
+Monitoring the Liquidity Profile of Mutual Funds
+
+Sirio Aramonte
+1
+, Chiara Scotti
+2
+, and 
+Ilknur Zer
+3
+
+This note was updated on July 10, 2020 to extend the analysis through the COVID-19 outbreak.
+
+Policymakers and academics have been particularly attuned to the issues of liquidity transformation and first mover advantage at open-end mutual funds.
+4
+ Open-end mutual funds engage in 
+liquidity transformation 
+because they promise one-day redemptions on their assets, even when the invested assets have low or uncertain liquidity. If mutual fund investors expect large outflows, they may have an incentive to redeem quicklyâin order to benefit from the so-called 
+first mover advantage
+âbecause liquid assets may be depleted if they wait too long. During a stress event, these features might raise potential financial stability concerns in that funds, because managers might sell liquid assets first, worsening the liquidity profile, further impairing performance, putting downward pressure on prices, and potentially leading to more fund outflows.
+
+Against this backdrop, monitoring the liquidity profiles of mutual fundsâthe balance of liquid and illiquid assets held by fundsâis particularly important. While stress events unfold quickly, mutual funds portfolio holdings are released with a delay, causing challenges to such monitoring. In this note, we summarize and validate a methodology to monitor funds' liquidity at a higher frequency than possible with regulatory data, focusing on significant market events occurred over the past 15 years.
+5
+ We study the changes in the liquidity profile of high-yield and bank-loan mutual funds at the onset of the COVID-19 pandemic. We find signs of deterioration in the liquidity profile of high-yield bond and bank loan funds following the historic episodes we analyzed as well as during the COVID-19 pandemic.
+
+How do we estimate a fund's liquidity profile?
+
+Building on the asset-pricing literature, we measure the liquidity profile of a fund using the sensitivityâwhich we call $$\beta$$ â of its daily portfolio returns to an aggregate liquidity factor.
+6
+ Changes in the sensitivity of mutual funds to aggregate market liquidity proxy for changes in the liquidity profile of mutual funds. In particular, we interpret an increase in this sensitivity following some relevant events as a deterioration in the fund's liquidity profile.
+
+The rationale behind our approach is that funds with a higher $$\beta$$
+ 
+are more sensitive to liquidity risk. As illustrated in Figure 1, a nonzero change in such a $$\beta$$ âwhich we call $$\beta_{\Delta}$$ âimplies a change in the slope of the relation between a fund return and the market liquidity factor. Importantly, the fund-specific slope can change even if aggregate liquidity conditions remain the same (moving from the blue circle to the red triangle). At the same time, changes in aggregate liquidity conditions do not necessarily imply a change in the fund's liquidity profile (remaining on the same line but moving from the solid blue circle to the hollow blue circles). What we capture with $$\beta_{\Delta}$$
+ 
+is a change in the slope, indicating a shift in the sensitivity of fund returns to market liquidity.
+
+Figure 1. The Relation between Expected Returns and Liquidity
+
+
+The figure illustrates the relation between fund expected returns (y-axis) and changes in the liquidity factor (x-axis). If the sensitivity of the fund to aggregate market liquidity remains the same after a macroeconomic announcement, changes in aggregate market liquidity only imply movements along the blue solid line, from the solid marker to the hollow ones. The red dashed line is an example of the relation between fund expected returns and market liquidity after a shift in the sensitivity to market liquidity occurs. Moving from the blue solid circle to the red hollow triangle represents a change in the liquidity profile with constant underlying market liquidity.
+
+Accessible version
+
+We study the change in $$\beta$$
+ 
+around two types of announcements. First, we focus on scheduled macroeconomic releases and select a set of important real-activity announcements that surprised market participants.
+7
+ Second, we consider the announcement of significant market events, namely Bill Gross's departure from PIMCO, Third Avenue Focused Credit Fund's suspension of redemptions, and the effect of Lehman Brothers' collapse on Neuberger Berman. We compare changes in the liquidity-factor loading $$\beta$$, between the four weeks before and the four weeks after these announcementsâ$$\beta_{\Delta}$$.
+
+Empirical analysis
+
+We validate our methodology focusing on U.S. equity, government bond, and investment grade and high-yield corporate bond funds for the period 2004 to 2016.
+
+In the first application, we examine changes in the liquidity profile of funds following scheduled macroeconomic announcements. As shown in Table 1, we find an increase in the sensitivity of less-liquid mutual fundsâin particular, those investing in the stocks of small companies and in corporate bondsâfollowing the release of unexpected negative macroeconomic news.
+8
+ The effect is more pronounced during stress periodsâthat is, during the 2008 financial crisis and when the Aruoba et al. (2009) Business Conditions index is below its sample medianâsuggesting that a deterioration in the funds' liquidity could amplify vulnerabilities in situations of already weak macroeconomic conditions. These effects are economically significant: following negative news, a one standard deviation increase in aggregate liquidity implies an increase in the expected return of small-cap funds of about 2 basis points, which is above the 55th percentile of the daily return distribution, corresponding to an annual return of about 5 percent. Similarly, a one standard deviation increase in aggregate liquidity raises daily returns by about 4 (9) basis points for investment-grade (high-yield) corporate bond funds, which is around the 55th (65th) percentile of the category-specific distribution of daily fund returns. As mentioned above, we interpret an increase in this sensitivity as a deterioration in the fund's liquidity profile. While these magnitudes are unlikely to indicate a systemic event, they are average effects estimated over a long period of time; thus, they do not reflect interactions with other vulnerabilities that can emerge at times of market distress.
+
+In the second application, we study fund liquidity around three significant market events: William H. (Bill) Gross's departure from Pacific Investment Co. (PIMCO) on September 26, 2014; the suspension of redemptions from Third Avenue's Focused Credit Fund on December 9, 2015; and the effect of Lehman Brothers' September 15, 2008, collapse on Neuberger Berman, an affiliated asset manager that survived the parent company's bankruptcy. The results presented in Table 2 show that PIMCO fixed-income funds became less liquid after Gross's resignation and that high-yield funds were also less liquid following the suspension of redemptions from Third Avenue's fund. For Third Avenue, the magnitude of the coefficient is similar to that of macroeconomic announcements on high-yield bond funds, whereas the effect of Gross's resignation is much larger than what is reported in Table 1. In contrast, Lehman Brothers' default is associated with an improvement in the liquidity profile of Neuberger Berman funds, most likely because fund managers increased liquidity buffers to navigate a turbulent market.
+
+Monitoring funds' liquidity
+
+Our approach can also be used to estimate liquidity dynamics on a continuous basis without having to acquire holding-level inputs. These dynamics can be helpful to gauge important market developments as they unfold and to monitor financial stability risks. As an illustration, we focus on high-yield corporate bond and bank loan funds, which invest in particularly illiquid assets even though they offer daily redemptions to investors.
+9
+ Importantly, assets managed by U.S. corporate bond funds increased substantially over the past decade, magnifying the impact of potential disruptions in liquidity transformation.
+
+To this end, we estimate liquidity $$\beta$$s on a sample ending June 8, 2020 by regressing weekly percentage changes in fundsâ net asset values on aggregate market liquidity while controlling for other relevant market factors (slope and level of the yield curve, and the CDX spread) using a 20-week rolling windows.
+10
+
+Figure 2 depicts the time series of changes in the average rolling $$\beta$$s for high-yield and bank loan funds. In line with the results discussed in the previous section, the liquidity profile of high-yield funds deteriorated during the global financial crisis and following stress episodes in the mutual fund industry, such as the Third Avenue Focused Credit Funds suspension of redemptions in December 2015, which were captured by an increase in change in $$\beta$$s.
+11
+ Markets rebounded by mid-2016 and, alongside net inflows in high-yield funds of $2 billion during 2016:Q3, we observe a decrease in $$\beta$$s, suggesting an improvement in the liquidity profile of these funds (Figure 2 top panel).
+12
+
+Focusing on the most recent period, the stress of the COVID-19 pandemic seems to have resulted in a sharp deterioration of the liquidity of both high-yield and bank loan funds, amid changes in investor risk appetite. The magnitude of the $$\beta$$ changes for both types of funds is very large by historical standards, suggesting increased vulnerabilities for these funds.
+
+A key feature of the rolling beta is that it can be used to monitor, in nearly real time, the liquidity profile of funds that engage in significant liquidity transformation. At times of market distress, rapid changes in the liquidity profile of a fund, especially relative to similar funds, could indicate that the fund is selling liquid assets. In this case, remaining investors could rush to redeem, with dynamics similar to a bank run
+
+Figure 2. Liquidity Beta for High-Yield Bond and Bank Loan Funds
+
+
+The top panel shows the 20-week moving average of changes in the cross-sectional average of weekly rolling liquidity $$\beta$$s throughout the sample period for the high-yield bond funds. The bottom panel shows the liquidity $$\beta$$s for the bank loan funds. Both betas are coefficients on the standardized aggregate liquidity factor, averaged across 20weeks to smooth out and are expressed in basis points. The beginning of the global financial crisis (December 1, 2007), bankruptcy of Lehman Brothers on Neuberger Berman, an affiliated asset manager (September 15, 2008), Third Avenue Focused Credit Funds suspension of redemptions (December 9, 2015) and the onset of COVID-19 shutdowns in the U.S. (March 15, 2020) are labeled with vertical lines. Source: Authorsâ calculations based on Morningstar Direct.
+
+Accessible version
+
+Table 1: Changes in Liquidity $$\beta$$s Following Negative Macroeconomic Surprises
+
+ 
+
+Full sample
+
+$$\text{ADS}_{low}$$
+
+$$\text{ADS}_{high}$$
+
+Crisis period (2008â2010)
+
+U.S. Large-Mid Cap
+
+0.81
+
+1.16*
+
+0.46
+
+2.33***
+
+(1.63)
+
+(1.72)
+
+(0.72)
+
+(2.78)
+
+U.S. Small Cap
+
+1.95**
+
+2.76**
+
+0.48
+
+3.17*
+
+(2.26)
+
+(2.31)
+
+(0.51)
+
+(1.83)
+
+Treasury
+
+1.02
+
+1.11
+
+-2.54
+
+0.77
+
+(0.82)
+
+(0.84)
+
+(-0.48)
+
+(0.36)
+
+Investment-Grade Corp. Bond
+
+3.70**
+
+4.24**
+
+-4.99
+
+6.36**
+
+(2.37)
+
+(2.55)
+
+(-0.68)
+
+(2.20)
+
+High-Yield Corp. Bond
+
+9.45***
+
+10.95***
+
+-1.3
+
+17.95***
+
+(4.05)
+
+(4.34)
+
+(-0.17)
+
+(4.07)
+
+The table shows the estimated post-announcement change in the liquidity factor loading coefficients, $$\beta_{Delta}$$, for the indicated U.S. equity and fixed-income fund categories. We include all of the control variables from Aramonte et al. (forthcoming). but, for sake of brevity, only standardized $$\beta_{Delta}$$
+ 
+coefficients (in %) are reported here. $$\text{ADS}_{low}$$
+ 
+and $$\text{ADS}_{high}$$
+ 
+refer to periods when the Aruoba et al. (2009) Business Conditions index is below or above its sample median, respectively. Standard errors are double clustered by date and fund, and 
+t
+-statistics are in parentheses. ***, **, and * denote significance at the 1%, 5%, and 10% level (two-sided), respectively. Year and fund fixed effects are included, but the coefficients are not shown.
+
+Source: Authors' calculations based on Center for Research in Security Prices (CRSP), Wharton Research Data Services (WRDS), and Morningstar Direct.
+
+Table 2: Case Study Analysis
+
+ 
+
+PIMCO
+
+Third Avenue
+
+Lehman Brothers
+
+$$\beta_{Delta}$$
+
+31.15**
+
+8.61*
+
+-29.75***
+
+(2.07)
+
+(1.70)
+
+(-3.25)
+
+Obs.
+
+1,015
+
+4,918
+
+631
+
+adjR2
+
+0.105
+
+0.589
+
+0.912
+
+The table shows the estimated post-announcement change in the liquidity factor loading coefficients, $$\beta_{\Delta}$$, around three significant market events. We include all of the control variables from Aramonte et al. (forthcoming). But, for sake of brevity, only standardized $$\beta_{\Delta}$$
+ 
+coefficients (in %) are reported here. In the first column, the eight-week period used to estimate the coefficients is centered on September 26, 2014, when William H. Gross left Pacific Investment Management Co. (PIMCO). We study the liquidity profile of PIMCO fixed-income funds. In the second column, the reference date is December 9, 2015, when withdrawals were suspended from the Third Avenue Focused Credit Fund in light of the fund's deteriorating liquidity position. In this case, we study the liquidity profile of broad-market high-yield funds. In the third column, we focus on the bankruptcy of Lehman Brothers on September 15, 2008, and we study the funds managed by Neuberger Berman, an asset manager affiliated with Lehman Brothers that survived the parent company's bankruptcy. Standard errors are double clustered by date and fund, and 
+t
+-statistics are in parentheses. ***, **, and * denote significance at the 1%, 5%, and 10% level (two-sided), respectively.
+
+Source: Authors' calculations based on Center for Research in Security Prices (CRSP), Wharton Research Data Services (WRDS), and Morningstar Direct.
+
+References
+
+Anadu, K. and F. Cai (2019). Liquidity transformation risks in U.S. bank loan and highyield mutual funds. FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 9, 2019, https://doi.org/10.17016/2380-7172.2412.
+
+Aramonte, S., C. Scotti, and I. Zer (forthcoming). Measuring the liquidity profile of mutual funds. 
+International Journal of Central Banking
+.
+
+Aruoba, S., B., X. Diebold, F., and C. Scotti (2009). Real-time measurement of business conditions. 
+Journal of Business and Economic Statistics 27
+(4), 417â427.
+
+Chen, Q., I. Goldstein, and W. Jiang (2010). Payoff complementarities and financial fragility: Evidence from mutual fund outflows. 
+Journal of Financial Economics 97
+(2), 239â262.
+
+Chernenko, S. and A. Sunderam (forthcoming). Do fire sales create externalities? 
+Journal of Financial Economics
+.
+
+Financial Stability Board and International Organization of Securities Commissions (2015). Assessment methodologies for identifying non-bank non-insurer global systemically important financial institutions. 
+Second consultative document
+.
+
+Gurkaynak, R., B. Sack, and J. H. Wright (2006). The U.S. treasury yield curve: 1961 to the present. FEDS Working Paper, 2006-28. Washington: Board of Governors of the Federal Reserve System.
+
+Hu, G. X., J. Pan, and J. Wang (2013). Noise as information for illiquidity. 
+Journal of Finance 68
+(6), 2341â2382.
+
+Pastor, L. and R. F. Stambaugh (2003). Liquidity risk and expected stock returns. 
+Journal of Political Economy 111
+(3), 642â685.
+
+Scotti, C. (2016). Surprise and uncertainty indexes: Real-time aggregation of real activity macro surprises. 
+Journal of Monetary Economics 82
+(3), 1â19.
+
+1. Bank for International Settlements. 
+Return to text
+
+2. Federal Reserve Board. 
+Return to text
+
+3. Federal Reserve Board. 
+Return to text
+
+4. See for example Financial Stability Board and International Organization of Securities Commissions (2015); Chen et al. (2010); Anadu and Cai (2019); and Chernenko and Sunderam (forthcoming). 
+Return to text
+
+5. More details can be found in Aramonte et al. (forthcoming). 
+Return to text
+
+6. We proxy for aggregate market liquidity with different measures depending on whether we consider equity or fixed-income funds. In the first case, we build a daily measure based on the Pastor and Stambaugh (2003) value-weighted traded factor. For the fixed income funds, we proxy for aggregate liquidity with the noise measure introduced by Hu, Pan, and Wang (2013), which is based on differences between observed Treasury prices and model prices that use an interpolated Treasury curve. We then regress daily changes in fundsâ net asset values (NAV) on market liquidity while controlling for other relevant market factors (such as other Fama-French market factors or slope of the yield curve) and fund-specific characteristics (such as fund size, fund age, and average tenure of the fund managers). 
+Return to text
+
+7. The set of real-activity macroeconomic announcements we study is selected on the basis of how large their realizations are compared to the corresponding Bloomberg expectations, as measured by the Scotti (2016) surprise index. We restrict our attention to events with the largest positive or negative surprise within a given quarter. For instance, on January 14, 2005, the scheduled release of industrial production read a 0.8 percent increase versus a consensus expectation of 0.4 percent, a significant positive surprise about the state of the economy. 
+Return to text
+
+8. For the sake of brevity, we only report the standardized coefficients (in %) measuring the post-announcement change in the liquidity factor loadings ($$\Delta\beta$$). More details can be found in Aramonte et al. (forthcoming). 
+Return to text
+
+9. This analysis could also be applied to government bond funds. Aramonte et al. (forthcoming) show that the liquidity of government bond funds is not particularly affected by unexpected macroeconomic news. 
+Return to text
+
+10. We measure aggregate market liquidity via a yield curve fit error, introduced in Gurkaynak et al. (2006). The liquidity premium is estimated as the average absolute nominal yield curve fit error for securities used in the curve estimation and maturing in between 2 and 10 years, excluding on-the-run and first off-the-run securities. 
+Return to text
+
+11. These results are complementary to Anadu and Cai (2019), who hand-collected data for the 10 largest high-yield and bank-loan mutual funds from publicly-available SEC forms. 
+Return to text
+
+12. Different drivers can affect the liquidity profile of a fund over time, including fund flows and managerial investment decisions, both affecting $$\beta$$s. To examine how liquidity $$\beta$$s are correlated with fund flows, we estimate a fund-specific $$\beta$$s at the quarterly frequency. That is, for a given quarter $$q$$ and fund $$i$$, we compute fund-by-fund $$\beta$$s by regressing daily high-yield fund returns on market liquidity and market controls. We find that changes in fund-by-fund $$\beta$$s and changes in net flows (scaled by lagged assets) are above 40 percent correlated, on average. Moreover, change in fund-by-fund $$\beta$$s and changes in weekly rolling $$\beta$$s corresponding to the same quarter are highly correlated (about 85 percent), with the latter having an advantage of being calculated in a high frequency. 
+Return to text
+
+Please cite this note as:
+
+Aramonte, Sirio, Chiara Scotti, and Ilknur Zer (2020). "Monitoring the Liquidity Profile of Mutual Funds," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 29, 2020, https://doi.org/10.17016/2380-7172.2558.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

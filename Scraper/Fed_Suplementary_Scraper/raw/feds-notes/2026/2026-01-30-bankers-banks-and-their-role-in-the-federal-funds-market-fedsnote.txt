@@ -1,0 +1,164 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+January 30, 2026
+
+Bankersâ Banks and their Role in the Federal Funds Market
+
+Sriya Anbil
+, 
+Alyssa Anderson
+, and Benjamin Eyal
+
+1. Introduction
+
+The Global Financial Crisis (GFC) and the Federal Reserve's (Fed) large-scale asset purchases fundamentally reshaped the U.S. monetary policy implementation framework. Before 2008, the Fed operated under a scarce-reserves regime, steering the federal funds rate through daily open market operations. The federal funds market functioned as a large, active interbank market where banks borrowed and lent reserves overnight to manage end-of-day balances.
+
+Following the GFC, asset purchases expanded reserve balances significantly, shifting the implementation framework to an ample-reserves regime (Ihrig et al. 2020). In this framework, the Fed no longer adjusts reserve quantities daily. Instead, it uses administered ratesâmost notably the interest on reserve balances (IORB) and the overnight reverse repurchase agreement (ON RRP) rateâto anchor short-term interest rates.
+1
+ This approach, formally adopted by the FOMC in January 2019, has delivered stable control of the effective federal funds rate (EFFR) despite historically high levels of reserves (Clouse et al. 2025).
+
+These structural changes transformed the composition of federal funds trading. Today, non-bank lendersâespecially Federal Home Loan Banks (FHLBs)âaccount for over 90 percent of lending (Anderson & Tase 2024, Anderson & Na 2024). Because FHLBs cannot earn IORB, they lend at rates below it, supplying large volumes of funds to banks seeking short-term liquidity. Meanwhile, traditional bank-to-bank trading has declined sharply, with daily interbank volumes reported in the FR 2420 ranging between $2â$6 billion (Figure 1).
+
+Figure 1. Interbank Trading in the Federal Funds Market
+
+Source: FR 2420.
+
+Accessible version
+
+Despite their smaller footprint, this residual interbank market provides valuable information about funding and liquidity conditions among regional and community banks. Anderson & Eyal (2025) and Anbil et al. (2025) show that bankers' banks, specialized institutions that manage reserves for community bank customers, are the principal lenders in this market. By intermediating for community banks, bankers' banks play an outsized role in setting interbank lending rates. Importantly, these dynamics are not fully captured by the EFFR, which is calculated as the volume-weighted median lending rate each day and therefore largely reflects trading by non-bank lenders such as FHLBs. Because bankers' banks lend from their own members' pooled reserves, their pricing frequently differs from the EFFR and offers unique insights into liquidity pressures among smaller institutions.
+
+The purpose of this note is to describe what bankers' banks are, explain their role in the federal funds market, and show how their activity provides a window into funding dynamics among community and regional banks.
+
+2. Bankers' Banks
+
+Bankers' banks are specialized financial institutions created to support community and regional banks by providing access to funding, settlement, and liquidity services. They are defined in an interpretation of Regulation D under the Monetary Control Act of 1980, which established criteria to give smaller banks a collective way to compete for funding and financial services.
+2
+
+Bankers' banks emerged to solve a specific structural problem faced by community banks: their dependence on large correspondent banks for essential services such as payments, check clearing, liquidity management, and federal funds trading. Prior to the Riegle-Neal Interstate Banking and Branching Efficiency Act of 1994, federal law and state branching restrictions limited large correspondent banks from opening branches across state lines and directly competing with their client community banks. Once those branching restrictions were lifted, smaller community banks found themselves competing for retail deposits with the very large correspondents that had previously provided them services, giving those larger banks significant influence over liquidity flows in the banking system. In addition, many community banks lacked direct access to the Federal Reserve's payment system and the Discount Window, and instead accessed these via their correspondents. Bankers' banks were created to restore independence and improve efficiency for community banks: they offer the same core services as the large correspondent banks, but without competing for retail deposits. This structure allows community banks to pool their resources through the bankers' bank, achieve greater scale, and access the federal funds market and Federal Reserve services more directly and cost-effectively. At year-end 2024, there were 12 active bankers' banks in the United States, with combined assets of approximately $10 billion. Organized and owned primarily by community banks, their potential reach is substantial: for example, the Independent Bankers' Bank (TIB) advertises that one in three community banks rely on its services.
+3
+
+Bankers' banks typically lend to other depository institutions and their loan products reflect interbank or liquidity support rather than retail lending. They offer federal funds or short-term interbank loans, lines of credit, some mortgage products, or act as an agent, lending pooled customer reserves to approved borrowers under policies established by its management.
+
+Because bankers' banks lend their customers' excess reserves rather than their own, they become the marginal lender in federal funds. This distinction is important for understanding their role in short-term funding markets. Their activity provides smaller community banks with access to markets they could not otherwise reach and, at the same time, offers a window into the liquidity conditions faced by these institutions. By observing how bankers' banks manage and price their lending, we gain valuable insight into reserve dynamics among community banksâinformation that is not always captured by aggregate, summary measures such as the EFFR.
+
+Customers of bankers' banks are typically members of the Federal Home Loan Bank (FHLB) system and therefore have the option of borrowing through FHLB advances. However, several factors can make a federal funds loan from a bankers' bank more attractive than an FHLB advance. First, FHLB advances must be fully collateralized, typically with mortgage-related assets that are subject to substantial haircuts. Moreover, FHLBs are constrained by regulatory counterparty exposure limits, meaning that a borrower can effectively reach a de facto credit cap. Timing also plays an important role. FHLBs prefer advance requests to be submitted early in the business dayâtypically before 10 a.m.âto facilitate their own liquidity management. Many FHLBs impose rate penalties for later requests.
+4
+ Bankers' banks, by contrast, tend to lend later in the dayâafter 11 a.m. ETâwhen FHLB advances are relatively less attractively priced. Indeed, we find that 78 percent of bankers' bank federal funds volume occurs after 11 a.m. ET (Figure 2).
+
+Figure 2. Timing of Bankersâ Bank Loans
+
+Source: Fedwire Funds Service.
+
+Accessible version
+
+2.1. Role in the Federal Funds Market
+
+To study the activity of bankers' banks in the federal funds market, we identify overnight federal funds loans made over the Fedwire Funds Service in which a bankers' bank was the lender between October 2015 and August 2025. We use the algorithm of Furfine (1999), refined following Anderson & Eyal (2025), to identify overnight loans and isolate those that are federal funds transactions using the FR 2420 Report of Selected Money Market Rates. This procedure yields a comprehensive set of loans between bankers' banks and their client institutions.
+5
+
+The twelve active bankers' banks facilitated an average of $2.5 billion in daily federal funds lending. Although this volume is small relative to the overall size of the federal funds market (Figure 3) it plays a disproportionate role for community and regional banks that rely on bankers' banks for market access. The rates charged by bankers' banks therefore provide valuable information about funding conditions among smaller institutions and their demand for reserves. Figure 4 compares the effective federal funds rate (EFFR) with the volume-weighted median rate of transactions where bankers' banks are lenders, or what we call the bankers' federal funds rate (BFFR). We compute the BFFR daily using all transactions between bankers' banks and domestic bank borrowers.
+
+Figure 3. Interbank Trading and Aggregate Trading in the Federal Funds Market
+
+Source: FR 2420.
+
+Accessible version
+
+Figure 4. Rate Spreads to IORB
+
+Source: Fedwire Funds Service, FR 2420.
+
+Accessible version
+
+From Figure 4, we observe that on September 17, 2019âa day widely viewed as marking the onset of "less than ample'' reserves and associated with a sharp spike in repo ratesâthe BFFR showed little movement even as the EFFR briefly traded above the Federal Reserve's target range. Bankers' banks and their clients did not appear to experience liquidity constraints, suggesting that reserves were ample among these institutions.
+
+By contrast, in March 2023, the EFFR traded about 7 basis points below the Interest on Reserve Balances (IORB) rate, while the BFFR reached historic highs after having risen for several months with a corresponding decline in reserves held at bankers' banks (Figure 5). This pattern provides evidence that the BFFR captures tightening funding conditions among smaller banks. The BFFR declined only after the introduction of the Bank Term Funding Program.
+6
+
+Figure 5. Aggregate and Bankersâ Bank Reserve Balances
+
+Source: Internal Federal Reserve accounting records.
+
+Accessible version
+
+Figure 6 plots the equilibrium relationship between the BFFR and the ratio of aggregate reserve balances held by bankers' banks to the total assets of small banks.
+7
+ The figure shows that lending rates by bankers' banks increase as their reserve balances decline, indicating that their liquidity positions influenced pricing in the federal funds market. In contrast, Figure 7 plots the equilibrium relationship between the EFFR and aggregate reserve balances relative to total banking assets. The flatter slope of this curve suggests that, to date, the EFFR is largely unresponsive to the aggregate level of reservesâunlike the BFFR.
+
+Figure 6. Equilibrium Rate Curve for Bankersâ Banks
+
+Source: H.8. release, Internal Federal Reserve accounting records, Fedwire Funds Service, FR 2420.
+
+Accessible version
+
+Figure 7. Aggregate Equilibrium Rate Curve
+
+Source: H.8., H.4.1 release, FR 2420.
+
+Accessible version
+
+Taken together, these findings suggest that the BFFR provides a cleaner and more direct measure of funding conditions among smaller banks than the EFFR. Because most indicators of short-term funding stress are intertwined with repo market dynamics, the lending rates of bankers' banks could offer a more reliable signal of reserve demand in segments of the banking system less active in repo markets.
+
+3. References
+
+Anbil, S., Infante, S. & Senyuz, Z. (2025), 'A tale of demand and supply for central bank reserves', Working Paper. URL: https://www.dropbox.com/scl/fi/yzvecuqrz5a5svyxcb7jg/AnbilInfanteSenyuz_DemandSupplyFedFundsMkt Mar2025.pdf ?rlkey=q41gqx9ix5qxt5nayfect1c0tst=gpdkfshedl=0
+
+Anderson, A. & Eyal, B. (2025), 'Relationship dynamics in the federal funds market', Working Paper.
+
+Anderson, A. & Na, D. (2024), 'The recent evolution of the federal funds market and its dynamics during reductions of the federal reserve's balance sheet'. FEDS Notes.
+
+Anderson, A. & Tase, M. (2024), 'Lcr premium in the federal funds market', SSRN Working Paper .
+
+Clouse, J. A., Infante, S. & Senyuz, Z. (2025), 'Market-based indicators on the road to ample reserves'. FEDS Notes.
+
+Furfine, C. H. (1999), 'The microstructure of the federal funds market', Financial Markets, Institutions & Instruments 8(5), 24â44. URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0416.00031
+
+Ihrig, J., Senyuz, Z. & Weinbach, G. C. (2020), 'The Fed's "ample-reserves" approach to implementing monetary policy"', Finance and Economics Discussion Series 2020-022. Washington: Board of Governors of the Federal Reserve System.
+
+4. Appendix Document
+
+Figure A1. Appendix Document
+
+Accessible version
+
+1. The IORB rate is the interest the Fed pays banks on reserves held at the Fed. The ON RRP rate applies to overnight reverse repurchase agreements offered to non-bank institutions and serves as a floor under short-term money market rates. 
+Return to text
+
+2. 
+12 CFR 204.121
+. 
+Return to text
+
+3. 
+Website of the Independent Bankers' Bank
+. 
+Return to text
+
+4. For instance, FHLB Dallas notes in its Advance Products Guide (https://www.fhlb.com/getmedia/230e2ba9-fdc2-4236-b343-8db36822b873/Advances-Products-Guide.pdf) that requests made after 10 a.m. CT are subject to an additional 5 basis points, while FHLB Chicago offers an "early-bird discount" of 5 basis points for advances placed before 10 a.m. 
+Return to text
+
+5. More information about the FR 2420 Report of Selected Money Market Rates can be found 
+here
+. 
+Return to text
+
+6. First Republic, Silicon Valley Bank, and Signature Bank were approved as fed funds borrowers for certain bankers' banks. See CBB (https://cbbonline.com/mp-files/exhibit-a-march-2021.pdf) and FNBB (https://fluxconsole.com/files/item/544/78830/Agency/%20Update/%20Q1-20/%20Exhiibit/%20A.pdf). 
+Return to text
+
+7. Small banks are defined as all domestically chartered banks outside the largest 25. 
+Return to text
+
+Please cite this note as:
+
+Anbil, Sriya, Alyssa Anderson, and Benjamin Eyal (2026). "Bankersâ Banks and their Role in the Federal Funds Market," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 30, 2026, https://doi.org/10.17016/2380-7172.3969.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

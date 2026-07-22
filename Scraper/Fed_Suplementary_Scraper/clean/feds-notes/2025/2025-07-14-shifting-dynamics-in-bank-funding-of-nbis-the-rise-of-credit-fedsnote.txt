@@ -1,0 +1,346 @@
+FEDS Notes
+
+Twitter
+
+July 14, 2025
+
+Shifting Dynamics in Bank Funding of NBFIs: The Rise of Credit Lines
+1
+
+Ricardo Duque Gabriel
+2
+and Julianna Sterling
+3
+
+I. Introduction
+
+The financial system has undergone profound transformations over the past four decades, driven in large part by the rise of nonbank financial institutions (NBFIs). These institutions, which include entities such as insurance companies, broker-dealers, and finance companies, have increasingly taken on roles traditionally dominated by banks, such as credit provision, liquidity transformation, and securities trading. This shift has facilitated financial innovation and diversification but has also introduced significant risks by creating complex interdependencies between banks and NBFIs (Acharya, Cetorelli, and Tuckman 2024).
+
+Despite their central role, our understanding of how banks fund NBFIs and how these interactions contribute to systemic risk remains incomplete. A key component of this relationship lies in credit lines extended by banks to NBFIs. Credit lines are contingent liabilities that remain off balance sheet until drawn. While traditional measures of bank funding to NBFIs, such as holdings of liabilities, suggest a decline since 2012, this view neglects the growing importance of credit lines. Figure 1 illustrates this dynamic and documents that credit lines provided by banks grew from 2% in 2012 to 3% of GDP in 2024. Such an increase might lead to aggravated vulnerabilities of the financial sector, as simultaneous drawdowns during periods of financial stress could amplify liquidity shortages across the system
+
+Figure 1. Banks' Holdings of NBFIs as a Share of GDP (1980â2024) and Bank Credit Lines to NBFIs (2012â24)
+
+Note: Figure 1 shows banks' holdings of nonbank financial institutions (NBFIs) as a share of GDP over the 1980-2024 period and the sum of banks' holdings of NBFIs and credit lines as a share of GDP over the 2012-24 period. Credit lines' total includes North American Industry Classification System (NAICS) codes 5223, 5241, 5239, 53, 5242, 5222, 5259, and 5231.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom To Whom), Form FR Y-14Q, Schedule H.1, and Federal Reserve Economic Data (FRED hereafter) (GDP).
+
+Accessible version
+
+This note provides a comprehensive description of the shifting dynamics in bank funding of NBFIs from 1980 to 2024, documenting the recent growth in credit lines to NBFIs. Using the Federal Reserve's "From Whom to Whom" (FWTW) Flow of Funds data and Y-14 data, we document three key findings. First, bank funding to NBFIs varied as a proportion of total NBFIs liabilities between 2.5% and 4.5%. Second, since 2012, on-balance-sheet funding by banks has declined sharply in nominal terms, from U.S. dollar (USD) 2.4 trillion to USD 1.7 trillion, falling from 4.7% to 2.5% of total NBFIs liabilities. Third, credit lines extended by banks to NBFIs have more than doubled over the same period with substantial heterogeneity in interdependencies across different NBFI subsectors; highlighting a structural shift in how banks engage with NBFIs. While reducing on-balance-sheet exposure to NBFIs might enhance financial stability, the growing reliance on credit lines, now accounting for approximately 3% of GDP, has increasingly introduced systemic vulnerabilities that can be amplified during periods of financial stress.
+
+II. Literature Review
+
+By highlighting the shifting dynamics of bank-NBFI relationships, this study contributes to the literature on systemic risk, offering insights into the role and size of credit lines and their potential implications for financial stability. While prior research has extensively documented the rise of NBFIs and their interconnections with banks, this paper addresses three key gaps. First, existing studies often focus on long-term averages rather than time-varying trends. Second, the literature rarely quantifies the size of credit lines relative to GDP, despite their systemic importance. Third, there is limited analysis of sectoral heterogeneity within the NBFI sector. By addressing these gaps, this study provides new insights into the evolving bank-NBFI nexus.
+
+Foundational studies, such as Pozsar et al. (2010), Adrian and Ashcraft (2012), and Sunderam (2015), provide a comprehensive framework for understanding shadow banking by identifying NBFIs as critical players in providing liquidity outside of traditional banking systems. More recently, Acharya, Cetorelli, and Tuckman (2024) emphasize the structural shift in financial intermediation brought about by NBFIs, highlighting their growing interdependencies with banks.
+
+The interconnectedness of banks and NBFIs can have significant implications for systemic risk. Gorton and Metrick (2012) show how securitization and repurchase agreement (repo) markets create interdependencies between banks and NBFIs, amplifying liquidity risks during stress periods. Perotti and Suarez (2020) argue that while these interdependencies provide liquidity insurance benefits, they also serve as channels for financial shocks. Moreover, shocks in one sector can propagate rapidly across the financial system. Brunnermeier and Sannikov (2016) introduce the I-Theory of Money, highlighting how liquidity constraints in NBFIs can trigger systemic crises. Navarro and Strahan (2023) further explore the competitive dynamics between shadow banking and traditional banks, noting that these relationships often magnify systemic vulnerabilities. The conclusion is also supported by Cetorelli and Prazad (2024) who argue how liquidity synergies within bank holding companies that include NBFI affiliates by demonstrating how these structures mitigate short-term pressures but exacerbate systemic vulnerabilities. By providing a time-varying perspective on these interdependencies, this note contributes to the literature on systemic risk propagation.
+
+Credit lines represent a critical mechanism through which banks support NBFIs, but they also introduce significant risks. Irani et al. (2021) document how credit lines serve as liquidity backstops for NBFIs, particularly during financial stress. However, Adrian, Boyarchenko, and Giannone (2017) highlight the pro-cyclical nature of these arrangements, noting that simultaneous drawdowns can exacerbate liquidity shortages. Duffie (2019) emphasizes that contingent liabilities such as credit lines are often underappreciated in systemic risk assessments. This note extends these contributions by quantifying the size of credit lines to NBFIs in the U.S. relative to GDP and showing that they now represent at least 3% of GDP.
+
+Regulatory arbitrage is one potential driver of the growth of NBFIs, enabling them to thrive in areas traditionally dominated by banks (Acharya and Schnabl 2010; Buchak et al. 2018). Irani et al. (2021) argue that lighter capital requirements have allowed NBFIs to expand rapidly, while Buch, Dages, and Remsperger (2021) document how post-crisis regulatory reforms have shifted risks from banks to NBFIs. Elliot, Feldberg, and Lehnert (2013) highlight the limited application of macroprudential policies to NBFIs, further exposing vulnerabilities. These studies frame the regulatory context of the findings presented in this note, particularly the evolving composition of bank-NBFI funding relationships.
+
+While much of the literature treats NBFIs as a homogenous sector, recent studies have highlighted the importance of sectoral differences. Chernenko and Sunderam (2014) examine the vulnerabilities of money market funds, particularly their reliance on short-term funding markets. Kacperczyk, Van Nieuwerburgh, and Veldkamp (2014) focus on broker-dealers and their unique risk profiles, while Greenwood, Hanson, and Stein (2015) analyze NBFIs' roles in government debt markets. This note builds on these studies by providing a granular analysis of the bank funding heterogeneity within NBFIs.
+
+III. Data
+
+Published by the Federal Reserve, the FWTW data set tracks asset and liability flows between major sectors of the economy, including banks, NBFIs, the real sector, and international entities. It offers the possibility to analyze how these relationships have evolved over time, providing data on both the scale and composition of intersectoral financial flows over the period starting on January 1, 1980, and ending on April 1, 2024.
+4
+
+As detailed further in Table 1, we aggregate flows by sectors (or groups) to examine bank and NBFI interactions. Within these sectoral transactions, the FWTW data differentiate between assets and liabilities by designating sectors as either issuers or holders, where the issuer side of data designates a measurement of liabilities or debt and the holder side designates a measurement of assets or credit. A prominent example referenced throughout this study is banks' holdings of NBFIs, where the NBFI is the issuer and is thus indebted to the asset holder, banks.
+
+Table 1: Flow of Funds Sectoral Disaggregation
+
+Category
+
+Sector
+
+Category
+
+Sector
+
+U.S.-chartered
+
+Banks
+
+ABS
+
+NBFIs
+
+Banks in U.S.-affiliated area
+
+Banks
+
+Broker-dealers
+
+NBFIs
+
+FBOs
+
+Banks
+
+Closed-end funds
+
+NBFIs
+
+Credit unions
+
+Banks
+
+Exchange-traded funds
+
+NBFIs
+
+Holder companies
+
+Banks
+
+Finance companies
+
+NBFIs
+
+Federal govt.
+
+Real sector
+
+PC ins.
+
+NBFIs
+
+Households
+
+Real sector
+
+Life ins.
+
+NBFIs
+
+Nonfin. corp. bus.
+
+Real sector
+
+Money market funds
+
+NBFIs
+
+Nonfin. noncorp. bus.
+
+Real sector
+
+Mortgage REITs
+
+NBFIs
+
+State/local govt.
+
+Real sector
+
+Mutual funds
+
+NBFIs
+
+GSE and agency
+
+GSE
+
+Other fin. bus.
+
+NBFIs
+
+Monetary authority
+
+Monetary authority
+
+Pensions
+
+NBFIs
+
+Rest of the world
+
+Rest of the world
+
+Note: NBFI is nonbank financial institution; FBO is foreign banking organization; GSE is government-sponsored enterprise; PC is property and casualty; REIT is real estate investment trust.
+
+The FWTW data can be mismeasured. The most notable example is the "Rest of the world" aggregation, which includes domestic asset-liability flows with foreign institutions, U.S. special drawing rights, and U.S. equity in select international organizations.
+5
+In this structure, loans to foreign NBFIs made by domestic institutions are included as "Rest of the world" and cannot be distinguished from the greater aggregation. This configuration may contribute to an underestimation of NBFI transactions in our analysis.
+
+This study additionally uses regulatory filings - namely, Form FR Y-14Q Schedule H.1. (Y-14 hereafter) - to disaggregate bank credit lines (committed exposure less of utilized exposure) and classify NBFIs by subsector. These subsectors are identified by North American Industry Classification System (NAICS) classifications, which include activities related to credit intermediation (5223); agencies, brokerages, and other insurance-related activities (5242); insurance carriers (5241); nondepository credit intermediation (5222); other financial investment activity (5239); other investment pools and funds (5259); real estate and rental and leasing (53); and securities and commodity contracts intermediation and brokerage (5231), following Acharya, Cetorelli, and Tuckman 2024. The Y-14 data set provides detailed information on bank exposures to NBFIs through various financial instruments, including credit lines, securities holdings, and other claims, over the period starting on March 31, 2012, and ending on March 31, 2024.
+
+Given Y-14's limited period of collection for credit-line data (2012 to 2024), we use nonconfidential data reported in Form FR Y-9C (Y-9C hereafter) to estimate bank credit lines to NBFIs historically. Particularly, we use Schedule HC-L Section 1.e "Other Unused Commitments" to create a "credit proxy" measure, which is calculated as the product of Other Unused Commitments over the 1990-2024 period and the mean of Other Unused Commitments: Loans to Financial Institutions, taken over the available 2010-24 period.
+6
+Loans to Financial Institutions is one of the composing elements of Other Unused Commitments over the period starting on April 1, 2010, and ending on October 1, 2024, during which all composing elements remain stable over time. Thus, we operate under the assumption that Loans to Financial Institutions is relatively constant at an average share of 11.84% of total Other Unused Commitments throughout the duration of the Other Unused Commitments measure, extended backward to 1990. Under this assumption, we create the credit proxy variable over the period starting on October 1, 1990, and ending on October 1, 2024, to estimate bank credit lines to NBFIs historically.
+
+IV. Results
+
+IV.A. Who funds NBFIs, and who do NBFIs fund?
+
+NBFIs have emerged as key intermediaries in the financial system, acting as both recipients and providers of funding within a complex network of interdependencies. Figure 2 provides an overview of funding to NBFIs, both in inflation-adjusted and relative terms.
+
+Figure 2. Comparison of Funding to and by NBFIs in Inflation-Adjusted and Relative Terms
+
+Note: Figure 2a's left panel shows the inflation-adjusted total value in billion U.S. dollar (USD) of nonbank financial institution (NBFI) assets and sectoral liabilities to NBFIs, of which NBFI assets consist. The right panel of Figure 2a shows the mirror of this, demonstrating the sectoral breakdown of which sectors NBFIs are indebted to. Figure 2b shows the share of each sectors' contribution to NBFI total assets or liabilities, with NBFI assets shown in the left panel and NBFI liabilities in the right. Figure 2b's legend identifies area segments in order from bottom to top. All panels demonstrate the observed period of 1980 to 2024. GSE is government-sponsored enterprise.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom To Whom). Inflation-adjusted monetary values use the Consumer Price Index series from FRED (USACPIALLMINMEI).
+
+Accessible version
+
+Figure 2a displays the inflation-adjusted value of funding to NBFIs from 1980 to 2024. The pronounced growth underscores the expanding role of NBFIs in financial intermediation, particularly as key players in credit extension, asset management, and the securitization of financial products.
+
+By contrast, Figure 2b provides a relative perspective by illustrating funding to NBFIs as a percentage of total NBFI assets in the left panel and as a percentage of total NBFI liabilities on the right. The relative share of funding from key sectors - namely, the real sector, rest of world, and NBFI-NBFI transactions - illustrates shifting asset-liability relationships as NBFI growth continues over the observed period.
+
+However, the right panel of Figure 2b shows that funding provided by banks has remained relatively small and very stable over time. This proportional stability suggests that, while the size and activities of NBFIs have grown considerably, their reliance on banks as funding sources has not materially shifted. This enduring relationship points to a structural interdependence within the financial system. While on the one hand, it raises concerns about the potential vulnerabilities and systemic risks embedded in these stable yet persistent funding linkages, on the other hand, it alleviates concerns that banks have become increasingly more important sources of financing to NBFIs.
+
+To fully understand the systemic implications of these trends, we focus on the role of bank funding in the broader NBFI ecosystem. While the macro-level overview provided by Figure 2 sheds light on the stability of the relative funding to NBFIs, it leaves open critical questions about the composition and evolution of bank funding to NBFIs. The following section takes a closer look at these dynamics, exploring both the absolute importance of bank funding and its implications for systemic risk and financial stability.
+
+IV.B. Measuring the bank funding of NBFIs
+
+Figure 3 decomposes the type of funding banks provide to NBFIs and displays its relative importance to both banks' assets and NBFIs' liabilities. Figure 3a displays the inflation-adjusted value of funding to NBFIs from 1980 to 2024, revealing a substantial increase during the late 1990s, which culminated in a peak during 2008:Q4. This figure is broken down by financial instruments that reflect natural groupings based on economic roles and characteristics.
+
+Figure 3. Zooming In on Bank Funding of NBFIs
+
+Note: Figure 3a shows the inflation-adjusted measure of total nonbank financial institution (NBFI) liabilities held by banks and a breakdown by financial instrument in billion U.S. dollar (USD) from 1980 to 2024. Figure 3b shows the percent share of total NBFI liabilities held by banks, and Figure 3c shows the percent share of banks' total assets consisting of banks' holdings of NBFI liabilities, both over the period 1980 to 2024. The Bank Lending Proxy captures instruments associated with short-term lending and liquidity provision, such as depository institution loans not elsewhere classified (DI loans NEC), federal funds repurchase agreements (FF repos), open market paper, and other loans and advances. Debt Securities encompass longer-term borrowing arrangements, including corporate and foreign bonds as well as foreign direct investment (FDI) debt. Equity Holdings represent ownership stakes and include corporate equity, FDI equity, and miscellaneous other equity instruments. Finally, Insurance and Miscellaneous Reserves aggregate financial claims that function as reserves or pooled investment vehicles, such as life insurance reserves, mutual fund shares, and various identified and unidentified miscellaneous financial claims.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom To Whom). Inflation-adjusted monetary values use the Consumer Price Index series from FRED (USACPIALLMINMEI).
+
+Accessible version
+
+Bank funding to NBFIs has remained relatively stable in proportional terms but has varied in its composition. Key findings include a decline in debt securities (especially corporate equity holdings) and a significant increase in credit since 2012. This shift underscores the importance of monitoring the composition of bank-NBFI funding relationships, as changes in instrument type can have different systemic risk implications. For example, from 1980 to 2008, debt securities are among the largest of the financial instruments. Following the Great Financial Crisis, this dominance of debt securities sharply drops, while insurance and other miscellaneous reserves significantly increase, partially making up for the debt securities loss.
+
+By contrast, bank funding to NBFIs has remained low in proportional terms. Figure 3b shows the share of bank holdings of NBFI liabilities relative to total NBFI liabilities, demonstrating that it ranged between 2% and 6% since 1980. Complementary, we also plot in Figure 3c the share of bank holdings of NBFI liabilities relative to total bank assets, which has behaved closer to Figure 3a, displaying a steady increase from 4% in 1980 to 12.5% in 2008, followed by a decrease to 7% in 2024.
+
+Since 2012, the absolute value of bank funding to NBFIs has declined, as well as its relative importance. Bank funding has declined from USD 2.4 trillion to USD 1.7 trillion, reaching minimums both in absolute terms and relative to total NBFI liabilities. This decline highlights a reduction in on-balance-sheet exposures, which has implications for systemic risk mitigation but raises questions about where these exposures have shifted.
+
+IV.C. The silent role of credit lines
+
+Credit lines to NBFIs have more than doubled since 2012, partially offsetting the decline in direct funding. Figure 4a illustrates the growth of credit lines to NBFIs, which had risen from USD 0.4 trillion in 2012 to USD 0.9 trillion by 2024.
+7
+This shift indicates a re-allocation of bank exposures away from direct holdings to contingent liabilities. While this development reduces on-balance-sheet risks, it introduces new off-balance-sheet vulnerabilities. NBFI credit lines now represent 3% of GDP, as displayed in Figure 4b. This exposure is a significant systemic risk if drawn simultaneously during periods of stress.
+
+Figure 4. The Silent Role of Credit Lines in Addition to Bank Holdings of NBFIs
+
+Note: Figure 4a shows nominal total bank holdings of nonbank financial institution (NBFI) liabilities and credit lines as a stacked area chart over the 2012-24 period. The legend in Figure 4a identifies segments in order from bottom to top. Figure 4b shows bank holdings of NBFI liabilities, credit lines, and utilized credit as a share of GDP over the 2012-24 period. Credit lines and utilized credit include North American Industry Classification System (NAICS) codes 5223, 5241, 5239, 53, 5242, 5222, 5259, and 5231.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom To Whom), Form FR Y14, Schedule H.1, and FRED (GDP).
+
+Accessible version
+
+To add perspective to these numbers, we report complementary Figure 5 that extend Figure 4 backward until 1990 following the assumptions laid out in the Data section. Figure 5a shows nominal total bank holdings of NBFI liabilities and a credit-line proxy variable, while Figure 5b shows bank holdings of NBFI liabilities and credit-line proxy as a share of GDP over the 1990-2024 period. Both figures provide an estimation of historical credit lines, named as credit proxy. Between 1990 and 2024, credit lines to NBFIs increased from USD 0.08 trillion to USD 0.6 trillion using this measure. It also demonstrates that such a historical estimation of credit lines currently accounts for 2% of GDP and is in line with the proxy variable's historical mean share of 1.9% of GDP.
+
+Figure 5. The Silent Role of Credit Proxy in Addition to Bank Holdings of NBFIs
+
+Note: Figure 5a shows nominal total bank holdings of nonbank financial institution (NBFI) liabilities and credit proxy as a stacked area chart over the 1990-2024 period. Its legend identifies segments in order from bottom to top. Figure 5b shows bank holdings of NBFI liabilities and credit proxy as a share of GDP over the 1990-2024 period. This figure references Figure 4, providing a historic growth of credit lines as shown by credit proxy. Between 1990 and 2024, credit lines to NBFIs increased from USD 0.08 trillion to USD 0.6 trillion using this measure. It also demonstrates that credit lines, as shown through credit proxy, currently account for 2% of GDP, compared with 3% when referencing the original credit-lines measure. This is not much higher than credit proxy's historic mean share of GDP, which is measured as 1.9%.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom to Whom), Form FR Y14, Schedule H.1, FRED (GDP), and Form FR Y-9C.
+
+Accessible version
+
+IV.D. Heterogeneity among NBFIs over time
+
+Bank funding to NBFIs is far from uniform. Figure 6 illustrates the pronounced heterogeneity in the exposure of different NBFI subsectors to banks, both in terms of liabilities owed to banks and the share of banks' assets composed of NBFI claims. Broker-dealers stand out as the most interconnected NBFI subsector in terms of their financial ties to the banking system. Between 2020 and 2024, an average of approximately 27% of all broker-dealer liabilities were held by banks, indicating a deep and persistent credit linkage. On the asset side, claims on broker-dealers accounted for more than 4% of total bank assets over the same period, underscoring their systemic significance from the banking sector's perspective.
+
+Figure 6. Share of NBFI Liabilities owned by Banks in percentage of NBFI Liabilities (left) and Bank Assets (right)
+
+Note: Figure 6 shows the 5-year average share of nonbank financial institutions' (NBFIs') liabilities, broken down by NBFI type, owed to banks as a percentage of the total NBFI population's liabilities held by banks and the 5-year average share of banks' assets, broken down by NBFI type, consisting of NBFI liabilities held by banks over the 1980-2024 period. Broker-dealers have historically been the most interconnected subsector, though their reliance on banks has declined since the early 1980s. Other subsectors, such as money market funds (MMFs) and closed-end funds (CEF), exhibit relatively stable but smaller interdependencies. This heterogeneity emphasizes the need for targeted regulatory approaches to address the unique vulnerabilities of each subsector. ABS is asset-backed securities; CEF is closed-end fund; ETF is exchange-traded fund; MMF is money market funds; Mortgage REITs are mortgage real estate investment trusts; OtherFinBus is other financial businesses; PC ins is property and casualty insurance.
+
+Source: Federal Reserve System, Enhanced Financial Accounts (From Whom To Whom).
+
+Accessible version
+
+Finance companies and asset-backed securities (ABS) issuers show a notable reliance on bank funding, reflecting their structural dependence on banks. In contrast, money market funds (MMFs), mutual funds, and property and casualty (PC) insurance companies exhibit relatively low and stable bank exposures across the observed period, suggesting limited direct intermediation between these subsectors and the banking system. Interestingly, mortgage real estate investment trusts (REITs) display a strong dependence on bank funding but this exposure is not reciprocated to the same extent on banks' balance sheets, as claims on mortgage REITs represent only a small fraction of total bank assets. This asymmetry underscores the importance of evaluating both sides of the intermediation channel when assessing systemic risk.
+
+The dynamic and heterogeneous composition of bank exposures highlights the importance of studying each NBFI sector individually. For instance, systemic vulnerabilities stemming from broker-dealer-bank linkages are likely to differ from those arising from bank ties with Mortgage REITs. Moreover, the time-varying nature of these relationships underscores the need for granular, subsector-specific monitoring frameworks. Understanding how these funding patterns evolve over time can help identify which NBFIs pose elevated risks to financial stability under different market conditions.
+
+V. Conclusion
+
+This note provides new evidence on the shifting dynamics of bank funding to NBFIs and highlights the emerging risks associated with credit lines as contingent liabilities. Using four decades of data, we document a structural transformation in bank-NBFI relationships: While direct on-balance-sheet funding by banks has declined sharply since 2012, the use of credit lines has expanded significantly, now representing approximately 3% of GDP. This shift might have important implications for financial stability, as credit lines expose banks to liquidity shocks that can materialize suddenly during periods of stress.
+
+From a policy perspective, the growing systemic importance of credit lines in risk assessments has implications for regulatory decisions. Their contingent nature poses distinct challenges, particularly in stress scenarios when simultaneous drawdowns could amplify liquidity shortages across the financial system. Furthermore, liquidity shortages could be of varying severity, as a reflection of the heterogeneity within the NBFI sector. For example, we could expect stress to be particularly felt amongst highly interconnected subsectors.
+
+Future research should explore the microeconomic drivers of these trends, including the role of regulatory arbitrage and market competition in shaping bank-NBFI interactions. Additionally, examining the spillover effects of credit-line drawdowns during crises could provide valuable insights into systemic risk propagation. By advancing our understanding of the evolving bank-NBFI nexus, this study aims to inform both academic debates and policy discussions on this topic.
+
+References
+
+Acharya, Viral V., Nicola Cetorelli, and Bruce Tuckman (2024). "
+Where Do Banks End and NBFIs Begin?
+" In: Federal Reserve Bank of New York Staff Reports 1119.
+
+Acharya, Viral V. and Philipp Schnabl (2010). "Do global banks spread global imbalances? Asset-backed commercial paper during the financial crisis of 2007â09". In: IMF Economic Review 58.1, pp. 37â73.
+
+Adrian, Tobias and Adam B Ashcraft (2012). "Shadow banking regulation". In: Annu. Rev. Financ. Econ. 4.1, pp. 99â140.
+
+Adrian, Tobias, Nina Boyarchenko, and Domenico Giannone (2017). "Vulnerable Growth". In: American Economic Review 107.4, pp. 1267â1300. doi: 10.1257/aer.20150542.
+
+Brunnermeier, Markus K. and Yuliy Sannikov (2016). "The I-Theory of Money". In: NBER Working Paper Series 22533. doi: 10.3386/w22533.
+
+Buch, Claudia M., B. Gerard Dages, and Hermann Remsperger (2021). "Structural Changes in Banking After the Crisis". In: International Journal of Central Banking 17.4, pp. 1â38.
+
+Buchak, Gregor et al. (2018). "Fintech, regulatory arbitrage, and the rise of shadow banks". In: Journal of Financial Economics 130.3, pp. 453â483.
+
+Cetorelli, Nicola and Saketh Prazad (2024). "The Nonbank Footprint of Banks". In: FRB of New York Staff Report No. 1118, p. 57. doi: 10.59576/sr.1118.
+
+Chernenko, Sergey and Adi Sunderam (2014). "Frictions in Shadow Banking: Evidence from the Lending Behavior of Money Market Mutual Funds". In: Review of Financial Studies 27.6, pp. 1717â1750. doi: 10.1093/rfs/hhu001.
+
+Duffie, Darrell (2019). "Prone to Fail: The Pre-Crisis Financial System". In: Journal of Economic Perspectives 33.1, pp. 81â106. doi: 10.1257/jep.33.1.81.
+
+Elliott, Douglas, Gregory Feldberg, and Andreas Lehnert (2013). "
+The History of Cyclical Macroprudential Policy in the United States
+". In: Federal Reserve Board Working Paper Series 2014-056.
+
+Gorton, Gary and Andrew Metrick (2012). "Securitized Banking and the Run on Repo". In: Journal of Financial Economics 104.3, pp. 425â451. doi: 10.1016/j.jfineco.2011.03.016.
+
+Greenwood, Robin, Samuel G. Hanson, and Jeremy C. Stein (2015). "A Comparative Advantage Approach to Government Debt Maturity". In: Journal of Finance 70.4, pp. 1683â1722. doi: 10.1111/jofi.12294.14
+
+Irani, Rustom M. et al. (2021). "The Rise of Shadow Banking: Evidence from Capital Regulation". In: Review of Financial Studies 33.7, pp. 2925â2973. doi: 10.1093/rfs/hhz123.
+
+Kacperczyk, Marcin, Stijn Van Nieuwerburgh, and Laura Veldkamp (2014). "Time-Varying Fund Manager Skill". In: Journal of Finance 69.4, pp. 1455â1484. doi: 10.1111/jofi.12060.
+
+Navarro, Pablo and Philip E. Strahan (2023). "How Shadow Banking Competes with Traditional Banks". In: Journal of Money, Credit and Banking 55.2, pp. 427â456. doi:10.1111/jmcb.13015.
+
+Perotti, Enrico and Javier Suarez (2020). "Liquidity Insurance in a Financially Integrated World". In: Journal of Financial Economics 138.1, pp. 1â25. doi: 10.1016/j.jfineco.2020.05.004.
+
+Pozsar, Zoltan et al. (2010). "Shadow banking". In: Federal Reserve Bank of New York Staff Reports 458.
+
+Sunderam, Adi (2015). "Money creation and the shadow banking system". In: The Review of Financial Studies 28.4, pp. 939â977. 15
+
+1. We thank Nicola Cetorelli, Marco Migueis, Ben Ranish, Michael Suher, and Skander Van den Heuvel for their helpful comments and discussions. We also thank feedback received during the 2025 Society of Government Economists Annual Conference. The views expressed herein are those of the authors and should not be attributed to the Federal Reserve Board or those affiliated with the Federal Reserve System.
+Return to text
+
+2. Federal Reserve Board.
+Email
+:
+[email protected]
+
+Return to text
+
+3. Federal Reserve Board.
+Email
+:
+[email protected]
+
+Return to text
+
+4. For more details, see "
+Issuer-to-Holder (From-Whom-to-Whom) Data
+," available on the Board's website.
+Return to text
+
+5. For more details, see "
+Financial Accounts of the United States - Z.1
+," available on the Board's website.
+Return to text
+
+6. Other Unused Commitments relies on a historic aggregation approach to accommodate changes in data collection. From the 1990-2010 period, we use Y-9C variable BHCK3818. From the 2010-24 period, we use the sum of Y-9C variables BHCKJ457 (Commercial and Industrial Loans), BHCKJ458 (Loans to Financial Institutions), and BHCKJ459 (All Other Unused Commitments).
+Return to text
+
+7. These numbers are broadly in line with the
+November 2024 Financial Stability Report (PDF)
+.
+Return to text
+
+Please cite this note as:
+
+Gabriel, Ricardo Duque, and Julianna Sterling (2025). "Shifting Dynamics in Bank Funding of NBFIs: The Rise of Credit Lines," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 14, 2025, https://doi.org/10.17016/2380-7172.3822.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,641 @@
+FEDS Notes
+
+Twitter
+
+July 07, 2025
+
+Pay-by-Bank and the Merchant Payments Use Case: Benefits, risks and potential impacts on consumer payment behaviors in the U.S.
+
+Byoung Hwa Hwang
+1
+
+Introduction
+
+The consumer payments landscape is rapidly evolving. In the United States, the growth of instant payments and innovations such as open banking are among the many developments shaping today's consumer payment behaviors.
+2
+
+In this dynamic environment, "Pay-by-Bank" is an emerging payment solution gaining traction. Also known as "account-to-account" or "bank-based payments," it enables the direct transfer of funds from a payer's bank account into the account of a payee.
+3
+By offering merchants an arguably cost-efficient and secure alternative to current payment methods such as cash and cards, Pay-by-Bank could be appealing for the merchant payments use case.
+4
+
+This note aims to enhance our understanding of Pay-by-Bank and explores its potential to be adopted at the point of sale (POS). Section 1 outlines recent consumer payment trends in the U.S.; Section 2 describes Pay-by-Bank and illustrates its usage at the POS; Section 3 explores potential benefits, risks and opportunities for Pay-by-Bank as a merchant payment method; finally, Section 4 highlights key findings and proposes areas for further research and analysis.
+
+Section 1: Overview of recent consumer payment trends in the U.S.
+
+The use of cash and checks for consumer payments is continuously declining.
+The 2024 Diary of Consumer Payment Choice (DCPC) finds that in recent years, the use of cash for consumer payments has been steadily declining and seemingly reached a "floor."
+5
+Similarly, data from the 2021 Federal Reserve Payments Study points to a continuous decline in the number of consumer checks being used.
+6
+
+At the same time, ACH-, cards- and alternative nonbank payments are on the rise.
+Studies point to a substantial increase in ACH transfers and debit- and credit card paymentsâboth by number and value.
+7
+,
+8
+In addition, ownership and usage of alternative payment methods such as digital wallets and peer-to-peer payment apps are growing.
+9
+
+Currently, retail payment transactions are dominated by
+cards
+.
+According to the 2023 Survey of Consumer Payment Choice (SCPC), credit cards are the most frequently used payment method by number for retail purchases (32 percent), followed by debit cards (30 percent) and cash (19 percent).
+10
+Similarly, the 2024 DCPC study finds that credit cards account for approximately 32 percent, debit cards for 30 percent, and cash for 16 percent of payments by study participants.
+11
+
+A factor of note may be that the cited studies point to differences in payment behavior depending on income, race, ethnicity, and age of the payer, as well as transaction types. For example, cash is more frequently used by individuals aged 55 years and older and by low-income households; cards are the most prominent payment method for remote payments.
+12
+
+Cards are also the dominant funding method for digital wallets and payment apps.
+Customers initiating payments through digital payment solutions can generally choose their preferred funding method. Javelin Strategy's 2023 North American Payments Insights study finds that the majority of users (65 percent) fund their digital wallets with debit cards, followed by credit cards (53 percent), and about one quarter of consumers directly link their bank account to fund digital wallet transactions (26 percent).
+13
+An increase in usage of digital wallets and payment apps for consumer payments is thus linked to the growing card transaction volumes referenced above.
+
+The shift towards digital payments will likely continue.
+While the shift toward non-cash payments was accelerated by social distancing rules during the COVID-19 pandemic, studies such as the 2024 DCPC suggest that the pandemic had lasting effects on advancing the move towards digital consumer payments.
+14
+As new technologies and payment innovations continue to emerge, this trend is expected to prevail.
+
+Section 2. Pay-by-Bank and the merchant payments use case
+
+Pay-by-Bank offers an alternative to payments intermediated through card networks.
+In this note, Pay-by-Bank is defined as transactions originating from a customer's bank account, routed over ACH- or instant payment rails, and settled directly into the bank account of a merchant. This is different from payment methods such as cards, in which payments between an issuing bank (that is, a customer's bank account) and acquiring bank (that is, a merchant's bank account) are authorized, cleared, and settled via card network intermediaries.
+15
+
+Pay-by-Bank relies on open banking infrastructure and is facilitated by third-party service providers performing key technical and payment processing functions
+. The BIS Report on open banking and application programming interfaces (APIs) describes open banking as "the sharing and leveraging of customer-permissioned data from banks with third-party developers and firms to build applications and services to provide more efficient and transparent options in banking."
+16
+
+In the context of Pay-by-Bank, third-party service providers support critical payment initiation, user authentication, consent authorization, and processing functions, among others. To provide these services, third parties commonly establish connections with merchants, sending banks, and receiving banks in the form of APIs.
+17
+For example, with the consent of customers, third-party providers use open banking APIs to establish connections with customers' banks to access financial information, including customer account and funds availability information, to facilitate payment initiation and authorization processes.
+
+A typical Pay-by-Bank payment flow may look as follows
+.
+18
+During checkout at a merchant, customers select Pay-by-Bank as a payment option and are prompted to choose their primary bank from a list of participating institutions. The choice redirects customers to their bank's website or mobile banking app to log in to their account with their username and password or with biometric identifiers. During this step, customers may be asked to consent to a third-party provider accessing their bank account details through an API. Of note, open banking APIs do not require customers to share their bank login information with third-party service providers. Rather, sensitive login credentials stay between customers and their banks.
+19
+
+The account authentication and identity verification steps may involve switching between screens or even devices. For added security, customers could be asked to enter a one-time code displayed on the merchant's website or sent to them via SMS or app into their banking interface.
+
+Upon successful authentication, customers proceed with authorizing their purchase by confirming the specified payment amount and payee (that is, merchant) details. In the back end, sending banks and receiving banks engage in approval, clearing, and settlement processes, whereby customers' funds availability is checked, transactions are approved, respective accounts are debited and credited, and payment confirmation notifications are sent to the customer and merchant.
+
+The current use of Pay-by-Bank for consumer payments is generally low, but adoption is growing
+. Findings from a 2024 study on Consumer Sentiment About Open Banking Payments indicate that the overall uptake of Pay-by-Bank remains limited; about 11 percent of U.S. adults have conducted at least one open banking payment transaction in the past year.
+20
+
+At the same time, the study points to a higher willingness to use open banking payments among younger respondents (72 percent of Gen Z and 66 percent of millennials) and higher income earners (consumers earning at least $100,000 per year), suggesting potential for future adoption among these groups.
+21
+
+In addition, the 2023 SCPC points to a continuous increase in bank account-to-account payments, suggesting an upward trajectory for this payment method.
+22
+
+Pay-by-Bank could gain momentum as more deployments use instant payment rails.
+While at present, most Pay-by-Bank solutions settle transactions over ACH, forthcoming deployments may increasingly make use of instant payment rails.
+23
+
+For example, retailer Walmart â in partnership with technology firm Fiserv â plans to offer an instant Pay-by-Bank solution for both online and in person purchases at the retailer. Starting in 2025, customers can link their bank account details to their Walmart accounts to fund instant payment transactions. By bypassing card networks, the merchant could save on interchange fees and benefit from faster funds availability of payments routed over instant payment rails (see Section 3 for a more detailed discussion of potential cost benefits).
+24
+
+Similarly, Visa acquired open banking firm Tink to develop its own instant Pay-by-Bank solution for the U.S. market.
+25
+
+In addition, existing Pay-by-Bank solutions may expand their settlement rails beyond ACH and offer customers the option for instant settlement.
+
+Section 3. Benefits, risks and opportunities of Pay-by-Bank for the merchant payments use case
+
+1. The cost argument
+
+From the merchant perspective
+
+Pay-by-Bank is often presented as a cheaper payment acceptance method for merchants
+â
+particularly in comparison to credit cards.
+By reducing or eliminating various feesâmainly interchange feesâ merchant customers adopting Pay-by-Bank for POS payments could save significantly; according to some estimates, Pay-by-Bank could result in cost savings between 40 up to 85 percent compared to credit cards.
+26
+­
+
+However, such cost saving estimates should be approached with caution
+. As noted, Pay-by-Bank solutions, too, involve several entities and services that will translate into fees charged to merchants. For example, merchants may incur initial setup and integration fees, as well as ongoing payment transaction, processor, and subscription fees charged by third-party providers. In addition, merchants' receiving banks may apply additional transaction and service fees.
+
+Of note, ACH- and instant payment operators charge participating financial institutions a per transaction fee for processing payments, while card interchange fees are typically charged as a percentage of the transaction amount.
+27
+As such, total merchant fee amounts will vary depending on the transaction types and their values and volumes. In addition, some Pay-by-Bank providers offer their merchant customers different pricing models, depending on their usage and services utilized.
+
+Taking these variations into account, a blanket claim of significant cost savings resulting from merchants switching to Pay-by-Bank at the POS should be interpreted with care. While Pay-by-Bank may well present a cheaper payment acceptance method than credit cards, further analysis is needed to make a more precise and direct cost comparison across different payment channels.
+
+From the bank perspective
+
+Pay-by-Bank could present an opportunity for banks to compete with nonbank payment providers and to retain customer relationships.
+Pay-by-Bank could be instrumental in diversifying banks' existing financial services offeringsâincluding their payment services. By offering their customers new payment solutions, banks could compete with emerging nonbank payment providers and avert customers from depositing account balances into nonbank accounts. In addition, fees charged for Pay-by-Bank transactions may present new revenue streams for banks and alleviate them from passing on profits from their card business in the form of customer reward programs.
+28
+
+However, an uptake of Pay-by-Bank transactions could harm credit card banks' business models
+. Some banks generate significant revenue from their card businesses, especially from their credit card operations.
+29
+For example, credit card banks benefit from various charges and fees pertaining to interest, interchange, late payments, foreign exchange, and annual fees, among others.
+30
+Depending on the uptake and usage of Pay-by-Bank and resulting impacts on existing bank-offered payment methods, banks could see adverse effects on their card business revenues.
+
+In addition, banks incur a range of development and integration costs related to establishing and maintaining open API connections for Pay-by-Bank payments, including technical infrastructure, security and compliance costs. What's more, banks currently do not charge third-party service providers for access to customer financial data.
+31
+Allowing third parties to access customer financial data may hamper banks' competitive advantage of developing personalized financial products to their clients and could risk erodingârather than maintainingâcustomer relationships.
+
+Further research could study the impact of Pay-by-Bank on other payment methods and explore potential questions including: How many customers switch from debit- or credit cards to Pay-by-Bank solutions? Are different payment methods used complementarily or at the expense of one another? Do customers adopt Pay-by-Bank offered by the
+same
+card issuing bank or do they switch to another bank? Exploring these questions could aid banks in more accurately assessing the profitability and potential tradeoffs of offering Pay-by-Bank solutions.
+
+From the customer perspective
+
+Pay-by-Bank transactions are typically free for customers.
+Looking at current deployments, customers do not pay any explicit Pay-by-Bank usage fees, as charges are likely woven into existing bank account maintenance fees.
+32
+In comparison, credit cards, for example, can come with significant annual service fees.
+
+However, the absence of explicit customer usage fees may not be as compelling as current spending rewards offered by credit cards.
+Despite the absence of direct Pay-by-Bank usage fees, customers may be attached to alternative payment methodsâmost notably credit cardsâbecause of the myriads of spending rewards they offer. Rewards range from cash back on eligible purchases or at select merchants, points that can be redeemed for travel, retail purchases, and gift cards to incentives such as loyalty status at select hotels and airlines, airport lounge access, and rental car and travel insurance coverage, among many others.
+33
+
+To compete with these incentives, Pay-by-Bank promotions may need to be comparable to, if not more generous than those already on offer. To rival existing offers, merchants could pass on savings from lower Pay-by-Bank fees to their customers in the form of discounts. However, such incentives may affect merchants' own cost-benefit calculations and their adoption of Pay-by-Bank solutions.
+
+In addition, customers may be enticed by access to credit to fund their purchases
+. Credit cards may be appealing because they allow customers to spend funds beyond available account balances (that is, customers borrow money from card issuing banks up to a set credit limit and with interest if a balance is carried over). The extension of credit allows customers to make purchases immediately, giving them greater autonomy and flexibility to spend and pay off balances at their convenience.
+
+Pay-by-Bank could alleviate consumer debt resulting from credit purchases
+. While Pay-by-Bank might in some instances allow customers to transact beyond available account balances (for example, if a transaction is routed over ACH and the customer's bank allows for overdrafts), most transactions validate funds availability prior to authorizing a payment, rejecting those with insufficient balances.
+
+Spending beyond available account balances introduces risks including debt accumulation, high interest and late payment fees, and damages to customer credit scores. Data from the Federal Reserve Bank of New York's Quarterly Report on Household Debt and Credit reveals that in Q4 of 2024, total household debt increased by $93 billion (0.5 percent) to a total of $18.04 trillion. Specifically, credit card balances increased by $45 billion to a total of $1.21 trillion and delinquency transition rates into serious delinquency (defined as 90 days or more past due) increased about 7 percent.
+34
+Enticing customers to switch to non-credit payment methods such as Pay-by-Bank could arguably reduce such debt burdens.
+
+In conclusion, the cost savings argument of Pay-by-Bank is not straightforward for merchants, banks, or customers and comes with both opportunities and drawbacks.
+
+2. The safety argument
+
+Potential benefits
+
+Several Pay-by-Bank product features may provide greater safety and security than alternative forms of payment.
+Pay-by-Bank incorporates certain product design features that could improve its resistance to various payment risks: The payment initiation process of Pay-by-Bank transactions often involves enhanced security controls such as two- or multi-factor authentication to verify customers' identity before a payment can be authorized. Criminals will find it more difficult to spoof biometric identifications and retrieve a one-time security code than to make purchases with a lost or stolen debit- or credit card, or a compromised PIN, for example.
+35
+
+These features may protect customers from fraud and reduce merchants' exposure to subsequent payment disputes and reversals initiated by affected consumers. They could also reduce merchants' vulnerability to sham disputes whereby merchants themselves fall victim to claims against legitimate transactions, resulting in merchants having to issue a refund.
+36
+
+In addition, the direct bank-to-bank interaction of Pay-by-Bank transactions may reduce the exposure to operational outages and potential points of failure that multi-step, multi-party clearing and settlement arrangements may face.
+
+As a bank-offered payment solution, Pay-by-Bank deployments could also benefit from the brand recognition and established reputation of their providing banks, and be perceived as more trustworthy, resilient and safe than nonbank alternatives, for example.
+37
+
+Despite these varying features, Pay-by-Bank introduces a range of new safety risks that need to be carefully considered.
+
+Potential risks
+
+Consumer trust may not extend to open banking payment solutions.
+Despite customers expressing greater trust in financial products offered by established and larger banks than in those offered by nonbanks, studies such as the 2024 Consumer Sentiment About Open Banking Payments suggest that many individuals remain skeptical about open banking payments: More than half of the surveyed individuals (56 percent) cite security and trust concerns as their top reasons for not using open banking payments.
+38
+
+Such wariness may stem from the direct customer interaction with novel and unfamiliar third-party service providers during customer identification and account authentication processes, for example, which could raise data privacy concerns.
+39
+
+Pay-by-Bank is not immune to rising payment fraud.
+According to 2023 data published by the FTC Consumer Sentinel Network, fraud has increased across all payment methods since the COVID-19 pandemic: Payments conducted using credit-, debit- and prepaid cards and payment apps experience the highest number of fraud reports; bank transfers and cryptocurrency payments make up the highest loss amounts.
+40
+These figures are an indication that bank-offered payment solutions are not immune to fraudulent activities. Despite its various design features, Pay-by-Bank, too, could fall victim to payment fraud.
+
+Pay-by-Bank could introduce legal and regulatory compliance risks.
+Looking at some existing Pay-by-Bank deployments, fraud liability and dispute resolution processes are not always transparent and clear. For example, some deployments do not clearly outline whom a customer should engage with to initiate and resolve a dispute (that is, the bank, the third-party service provider, or the merchant), with parties shifting liability away from themselves. Such practices are confusing for customers and merchants alike and could create uncertainties around what protections apply to whom.
+
+Any gaps in applicable customer recourse mechanisms and liability arrangements pose important consumer protection risks. In addition, they can have adverse impacts on merchants and banks, exposing them to financial, operational, and reputational risks.
+
+Just like with other consumer payment methods, parties adopting Pay-by-Bank will need to consider time and resource commitments pertaining to customer payment queries and disputes, including those resulting from unauthorized or fraudulent transactions.
+41
+
+Pay-by-Bank solutions may face significant third-party risks.
+As previously discussed, Pay-by-Bank relies on various third-party service providers to facilitate key payment processes. These service providers may not have the same levels of security controls and monitoring tools as banks, thus possibly making them more vulnerable to malicious activities.
+
+While third-party payment risks are not unique to Pay-by-Bank deployments, the relative novelty of open banking technology and resulting provider arrangements requires risk mitigation and management practices to be vetted, particularly those pertaining to data privacy, cybersecurity, and operational risks more broadly.
+
+Instant Pay-by-Bank considerations
+
+The benefits and risks of Pay-by-Bank could be exacerbated if routed over instant payment rails.
+An increasing number of Pay-by-Bank deployments are expected to offer routing via instant payment rails, in addition to ACH, which could amplify both the gains and drawbacks described above.
+
+For example, Pay-by-Bank transactions that are settled instantly, irrevocably, and 24x7x365 could provide greater certainty about funds availability to merchants, thereby enhancing their financial planning and cash flow management activities and reducing exposure to credit and liquidity risks.
+
+As instant payment systems conduct real-time funds verification during payment authorization, the risk of chargebacks or payment failures due to insufficient funds in a sender's account is minimized. This could protect customers from overdrawing their accounts and accruing associated penalties or fees. Real-time funds availability could also support budgeting and money management efforts, as buyers would see their remaining account balance in real time, rather than upon deferred settlement, as is the case with ACH transfers.
+
+However, instant payments are generally considered final and irrevocable, posing additional fraud prevention and detection challenges and aggravating the risk of unauthorized or fraudulent account takeovers resulting in irreversible debits.
+42
+
+In addition, operational disruptions or outages can have an immediate impact on the flow of funds and may result in customers and merchants being unable to complete transactions in real time. Operational failures in deferred settlement systems, on the other hand, may not always be noticeable to end usersâprovided that incidents get resolved before settlement.
+
+Finally, some customers may prefer a delayed (versus instant) debiting of their accounts to allow for more time to fund transactions. The growing popularity of products such as Buy Now, Pay Later, alongside credit cards, could presumably be attributed to similar motivations.
+
+Section 4: Next steps in research
+
+Pay-by-Bank is a trending topic in the consumer payments landscape. For the merchant payments use case in particular, Pay-by-Bank could offer a range of benefits as well as introduce new risks to consumers, merchants and financial institutions.
+
+For instance, in the absence of network intermediaries, merchant fees could be lower than for credit card transactions. Pay-by-Bank's reliance on fewer intermediaries could also reduce exposure to operational risks; identity verification and access control measures built into Pay-by-Bank solutions may lower the risk of unauthorized or fraudulent transactions, which, in turn, could relieve merchants from managing costly payment disputes and reversals.
+
+As a bank-offered payment solution, Pay-by-Bank users could benefit from consumer protection requirements and other regulatory safeguards that banks must comply with. Banks could see Pay-by-Bank as an opportunity to compete with emerging nonbank payment methods and retain customer relations.
+
+On the flip side, however, Pay-by-Bank comes with several uncertainties: The cost savings that merchants may or may not experience by adopting this payment method need further exploration. This may include scrutinizing upfront and ongoing operational expenses, as well as potential security and compliance costs. The case for or against Pay-by-Bank will further depend on factors such as a merchant's business type, average transaction volumes and values, and typical customer base.
+
+Future research could further explore potential factors driving adoption behaviors: For customers, the potential additional security layers of Pay-by-Bank transactions may not be enticing enough to give up spending rewards, perks, or the extension of credit offered by existing payment methods, most notably credit cards. Pay-by-Bank adoption could be incentivized with merchant discounts, but such promotions would impact the cost savings calculations of merchants themselves. Similarly, Pay-by-Bank could undermine banks' lucrative card business, and introduce new operational, as well as regulatory and compliance risks. Merchants and customers, too, could face uncertainties around fraud liability arrangements and dispute resolution processes for Pay-by-Bank transactions. Finally, the various operational, liquidity and fraud risks could be exacerbated if Pay-by-Bank transactions are routed over instant rails.
+
+As more Pay-by-Bank deployments come to market, the outlined benefits and risks could become more apparent or be contested with new insights. Some questions that should stay at the forefront of future discussions include: What consumer protection measures, including liability rules, ought to apply to shield consumers and merchants from potential misconduct and fraud? What safety and security measures should financial institutions be required to comply with to mitigate the various risks pertaining to open banking technology?
+
+For the time being, Pay-by-Bank presents yet another addition to financial institutions' multi-rail payment offerings and merchants' and consumers' vast pool of payment options.
+
+References
+
+Adyen (2024). "
+What is Pay by Bank and why it will give your business an advantage,"
+Adyen Knowledge Hub, https://www.adyen.com/knowledge-hub/pay-by-bank.
+
+Bank for International Settlements (2022).
+"
+API Standards for Data-Sharing (Account Aggregator) (PDF)
+,"
+Bank for International Settlements.
+
+Basel Committee on Banking Supervision (2019). "
+Report on open banking and application programming interfaces (APIs)
+,"
+Bank for International Settlements.
+
+Board of Governors of the Federal Reserve System (2022). "
+Federal Reserve Payments Study â 2021 findings
+,"
+Washington: Board of Governors of the Federal Reserve System.
+
+Board of Governors of the Federal Reserve System (2024).
+"
+FedNow® Service- Frequently Asked Questions
+," Washington: Board of Governors of the Federal Reserve System.
+
+Board of Governors of the Federal Reserve System (n.d.). "
+Managing fraud risk: FedNow® readiness guide â Spotlight on: Advancing safe payments (PDF)
+," Washington: Board of Governors of the Federal Reserve System.
+
+Board of Governors of the Federal Reserve System (2022). "
+Profitability of credit card operations of depository institutions (PDF)
+,"
+Washington: Board of Governors of the Federal Reserve System.
+
+Board of Governors of the Federal Reserve System (2024). "
+The Federal Reserve Payments Study: 2024 triennial initial data release
+,"
+Washington: Board of Governors of the Federal Reserve System.
+
+Board of Governors of the Federal Reserve System (2023). "
+The Federal Reserve Payments Study: 2022 triennial initial data release
+,"
+Washington: Board of Governors of the Federal Reserve System.
+
+Clearly Payments (n.d.). "
+Interchange rates in USA,"
+Clearly Payments, https://www.clearlypayments.com/interchange-rates-in-usa/.
+
+Consumer Financial Protection Bureau (2020). "
+Dodd-Frank Act Section 1033: Consumer access to financial records
+,"
+Consumer Financial Protection Bureau.
+
+Consumer Financial Protection Bureau (2025). "
+Electronic fund transfers FAQs
+," Consumer Financial Protection Bureau.
+
+Consumer Financial Protection Bureau (2023). "
+The consumer credit card market: 2023 report (PDF)
+,"
+Consumer Financial Protection Bureau.
+
+Coyle, K., Kim, L., & O'Brien, S. (2021). "
+2021 findings from the Diary of Consumer Payment Choice
+,"
+Federal Reserve Bank of San Francisco.
+
+Dammeir, B. (2024). "
+Introducing Pay by Bank for Bill Pay: Higher adoption, fewer returns,"
+Plaid, https://plaid.com/blog/pay-by-bank-for-bill-pay/.
+
+Federal Reserve Bank of New York (2025). "
+Household debt and credit report
+,"
+Federal Reserve Bank of New York.
+
+Federal Reserve Financial Services (2024). "
+FedACH Services 2025 fee schedule
+,"
+Federal Reserve Bank Services.
+
+Federal Reserve Financial Services (2024). "
+FedNow® Service 2025 fee schedule
+," Federal Reserve Bank Services.
+
+Federal Reserve Financial Services (2024). "
+2024 diary of consumer payment choice (PDF)
+," Federal Reserve Bank Services.
+
+Federal Trade Commission (2024). "
+Consumer Sentinel Network Data Book 2023 (PDF)
+,"
+Federal Trade Commission.
+
+Foster, Kevin, Claire Greene, and Joanna Stavins (2024). "
+2023 Survey and Diary of Consumer Payment Choice (PDF)
+," Federal Reserve Bank of Atlanta.
+
+J.P. Morgan (2023). "
+J.P. Morgan and Mastercard take Pay-by-bank live,"
+JPMorgan Chase & Co., https://www.jpmorgan.com/about-us/corporate-news/2023/jp-morgan-and-mastercard-take-pay-by-bank-live.
+
+LexisNexis Risk Solutions (n.d.). "
+True cost of fraud study: U.S. and Canada edition,"
+LexisNexis Risk Solutions, https://risk.lexisnexis.com/insights-resources/research/us-ca-true-cost-of-fraud-study.
+
+Marek, L. (2024). "
+Visa preps for US pay-by-bank services,
+" Payments Dive
+,
+https://www.paymentsdive.com/news/visa-pay-by-bank-services-card-payments/717206/.
+
+McKinsey & Company (2023). "
+Global payments in 2024: Simpler interfaces, complex reality,"
+McKinsey & Company, https://www.mckinsey.com/industries/financial-services/our-insights/global-payments-in-2024-simpler-interfaces-complex-reality.
+
+Miller, C. (2023). "
+2023 North American PaymentInsights: U.S.: Financial services and emerging technologies exhibit,"
+Javelin Strategy & Research, https://javelinstrategy.com/research/2023-north-american-paymentinsights-us-financial-services-and-emerging-technologies.
+
+PaymentsJournal (2024). "
+How are consumers funding mobile wallets?"
+Payments Journal, https://www.paymentsjournal.com/how-are-consumers-funding-mobile-wallets/.
+
+PYMNTS Intelligence (2024). "
+Consumer sentiment about open banking payments,"
+PYMNTS, https://www.pymnts.com/study/consumer-sentiment-about-open-banking-payments-innovation/.
+
+The Clearing House (2025). "
+RTP
+," The Clearing House,
+Real Time Payments | The Clearing House
+.
+
+Walmart (n.d.). "
+Payment methods,"
+Walmart Inc.,
+
+https://www.walmart.com/help/article/payment-methods/af059a7587894f2f831a6159cd92d933.
+
+Williams, R. (2024). "
+What are credit card processing fees and costs?"
+ValuePenguin, https://www.valuepenguin.com/what-credit-card-processing-fees-costs.
+
+1. Federal Reserve Board. E-mail:
+[email protected]
+. The views expressed in this paper are solely those of the author and should not be interpreted as reflecting those of the Federal Reserve Board. The author would like to thank David Mills, Ian Spear, Kathy Wilson, Marc Rodriguez, Jeffrey Allen, Kirstin Wells, Melissa Leistra, Sarah Wright, and Malik Diaw of the Federal Reserve Board for their contributions and assistance towards this note.
+Return to text
+
+2. "Instant payments" refer to payments in which an end user receives funds in near real time and at any time, with immediate interbank settlement of the payment also having occurred. The term is sometimes used interchangeably with "fast payments." In the U.S., the two major instant payment systems include the FedNow® Service, operated by the Federal Reserve since July 2023, and RTP®, operated by the bank-owned payment network The Clearing House (TCH) since 2017.
+See
+
+The Fed - Frequently Asked Questions
+and
+Real Time Payments | The Clearing House
+. In October 2024, the CFPB finalized its Personal Financial Data Rights Rule (Section 1033), requiring financial institutions to share customer data with other entities, including third-party payment providers, at the customer's direction and in adherence with security standards and protocols. If the rule stands, proponents argue it could support open payment solutions and fuel competition and innovation among payment providers.
+See
+
+Dodd-Frank Act Section 1033 â Consumer Access to Financial Records | Consumer Financial Protection Bureau (consumerfinance.gov)
+.
+Return to text
+
+3. This note focuses on Pay-by-Bank deployments routed over both ACH (that is, the Federal Reserve's FedACH and TCH's EPN networks) and instant payment rails (that is, the Federal Reserve's FedNow and TCH's RTP networks). At the time of writing, most Pay-by-Bank deployments route their transactions over ACH and some over instant payment rails. Payments can also be routed over wire, but those transactions are generally for higher value and cross-border payments and are not considered in scope for this note.
+Return to text
+
+4. This note defines merchant payments as payments initiated at the point of sale (POS), both in person and remotely. The term is used interchangeably with POS payments. Importantly, bill payments fall outside the scope of discussion.
+Return to text
+
+5. The
+2024 DCPC (PDF)
+reports that since its inception, the overall use of cash has been declining from 31 percent of all consumer payments in 2016 to 16 percent in 2023. While the decline reported in 2023 is due to the increase in total payments (rather than a further decline in cash), it is indicative of cash use having reached a floor since 2021.
+See
+
+2024 Findings from the Diary of Consumer Payment Choice (PDF)
+. Other research indicates that cash transactions in the United States currently make up for only 5 percent of the total value of consumer payments.
+See
+McKinsey's Global Payments Report 2024 | McKinsey, https://www.mckinsey.com/industries/financial-services/our-insights/global-payments-in-2024-simpler-interfaces-complex-reality.
+Return to text
+
+6. Consumer checks declined 9.3 percent per year from 2018 to 2021; however, the average value increased to an average of $1,249.
+See
+
+The Fed - National Payment Volumes, Detailed Data, DFIPS (CY 2021)
+.
+Return to text
+
+7. From 2018 to 2021, ACH debit transactions paid by a consumer grew significantly, increasing 10.5 percent by number and 14.8 percent by value per year; consumer ACH credit transfers grew 34.7 percent by number and 25.4 percent by value per year.
+See
+
+The Fed - National Payment Volumes, Detailed Data, DFIPS (CY 2021)
+. In addition, the 2023 Survey and Diary of Consumer Payment Choice (SCPC) shows that ACH transfers dominate consumer payments by value (42 percent versus 37 percent for debit-, credit- and prepaid cards).
+See
+
+2023 Survey and Diary of Consumer Payment Choice (PDF)
+.
+Return to text
+
+8. The value of card payments has been rising 10 percent per year since 2018 to reach a total of $9.43 trillion in 2021; the number of card payments has been increasing and reached 157 billion payments in 2021, accounting for approximately 77 percent of total U.S. non-cash payments in by number.
+See
+
+The Fed - The Federal Reserve Payments Study: 2022 Triennial Initial Data Release
+.
+Return to text
+
+9. Data from the 2023 SCPC shows an increase in nonbank payment account ownership to 72 percent of U.S. consumers, compared to 66 percent in 2022. Mobile wallet payments increased to 14.4 billion transactions in 2022, up from 2.9 billion in 2018.
+See
+
+The Fed - National Payment Volumes, Detailed Data, NPIPS (CY 2021 and 2022)
+.
+Return to text
+
+10.
+See
+
+2023 Survey and Diary of Consumer Payment Choice (PDF)
+.
+Return to text
+
+11.
+See
+
+FRB SF 2021 Diary of Consumer Payment Choice
+.
+Return to text
+
+12.
+See
+
+2024 Findings from the Diary of Consumer Payment Choice (PDF)
+.
+Return to text
+
+13. Some providers charge fees for certain funding methods such as credit cards. Depending on the funding source, transactions are typically routed over card networks (for debit- and credit cards) or ACH (for bank accounts).
+See
+How Are Consumers Funding Mobile Wallets? - PaymentsJournal (https://www.paymentsjournal.com/how-are-consumers-funding-mobile-wallets/#:~:text=Top%205%20Methods%20Consumers%20Use,account%20to%20fund%20mobile%20wallet) and 2023 North American PaymentInsights: U.S.: Financial Services and Emerging Technologies Exhibit | Javelin, https://javelinstrategy.com/research/2023-north-american-paymentinsights-us-financial-services-and-emerging-technologies.
+Return to text
+
+14. The 2024 DCPC finds that the share of cash payments has been declining since 2022.
+See
+
+2024 Findings from the Diary of Consumer Payment Choice (PDF)
+.
+Return to text
+
+15. While there are notable differences in debit-, credit- and prepaid card features, all card payments are routed through card networks.
+Return to text
+
+16.
+See
+
+Report on open banking and application programming interfaces (APIs)
+.
+Return to text
+
+17. APIs are defined as "mechanisms that enable two software components to communicate with each other" using requests and responses.
+See
+What is an API? - Application Programming Interface Explained - AWS, https://aws.amazon.com/what-is/api/#:~:text=APIs%20are%20mechanisms%20that%20enable,weather%20updates%20on%20your%20phone. APIs are a critical part of open finance as they enable the secure exchange of information between different parties.
+See
+
+API standards for data-sharing (account aggregator) (PDF)
+.
+Return to text
+
+18. The actual Pay-by-Bank payment flow may vary by deployment. Pay-by-Bank can also be initiated with a QR code, secure links sent over SMS, or NFC technology.
+Return to text
+
+19. If a bank has not established a direct API connection to a third-party provider, the provider may still be able to access an individual's data through screen scraping; screen scraping describes the process in which a third party extracts customer financial and bank account data from a user's online banking portal. While this access method does not require an API connection, it involves customers sharing their bank login details directly with a third party to access their accounts and is therefore considered less private and secure than open banking API connections.
+Return to text
+
+20. Pay-by-Bank falls under the definition of "open banking payments" studied in this report, that is, "open banking payments enable consumers to make secure, instant bank account payments to merchants and service providers using only their regular online banking credentials."
+See
+Consumer Sentiment About Open Banking Payments, https://www.pymnts.com/study/consumer-sentiment-about-open-banking-payments-innovation/.
+Return to text
+
+21.
+See
+Consumer Sentiment About Open Banking Payments, https://www.pymnts.com/study/consumer-sentiment-about-open-banking-payments-innovation/.
+Return to text
+
+22. The 2023 SCPC notes that 44 percent of consumers adopted account-to-account payments (up from 40 percent in 2022). The study defines a bank account number payment as "You pay by giving your bank's number [sometimes called a "routing number"] and your account number." While this definition may not solely apply to merchant payments (it might include P2P payments, but explicitly excludes online banking bill payments), it provides an indication of Pay-by-Bank transactions conducted at the POS.
+Return to text
+
+23. For example, J.P. Morgan Payments and Mastercard's joint Pay-by-Bank solution primarily focuses on billers of recurring payments such as rent, utilities, insurance and healthcare. Open banking payment provider Trustly facilitates Pay-by-Bank for various U.S. businesses including eBay, Netflix, Spotify and Verizon.
+See
+J.P. Morgan and Mastercard take Pay-by-bank live (jpmorgan.com), https://www.jpmorgan.com/about-us/corporate-news/2023/jp-morgan-and-mastercard-take-pay-by-bank-live.
+Return to text
+
+24. At the time of writing, Walmart already offers bank account payments through its Walmart wallet; under its current Pay-by-Bank option, the retailer notes: "Please allow up to five business days for the funds to be withdrawn from your account," suggesting that outbound payments are routed through ACH rails. The retailer has announced plans to extend routing over instant payment rails.
+See
+Payment Methods - Walmart.com https://www.walmart.com/help/article/payment-methods/af059a7587894f2f831a6159cd92d933, and Walmart Teams With Fiserv on Instant Bank Payments, https://www.pymnts.com/news/faster-payments/2024/walmart-teams-with-fiserv-instant-bank-payments/.
+Return to text
+
+25.
+See
+Visa preps for US pay-by-bank services | Payments Dive, https://www.paymentsdive.com/news/visa-pay-by-bank-services-card-payments/717206/.
+Return to text
+
+26. On average, credit card processing fees range from 1.5 to 3 percent of the transaction amount and comprise a range of acquirer, network assessment, and interchange fees charged by card networks, issuing banks and acquiring banks, payment gateway providers and processors, and possibly others. While the specific types and amounts of fees may vary by providers, interchange fees may make up between 70 to 90 percent of these fees.
+See
+Interchange Rates in USA for Credit Card Processing (https://www.clearlypayments.com/interchange-rates-in-usa/) and What Are Credit Card Processing Fees and Costs? (https://www.valuepenguin.com/what-credit-card-processing-fees-costs) Plaid estimates that merchant customers of its Pay-by-Bank solution could save up to 40 percent in fees compared to credit card payments.
+See
+Introducing Pay by Bank for Bill Pay: Higher adoption, fewer returns | Plaid, https://plaid.com/blog/pay-by-bank-for-bill-pay/. Adyen estimates that Pay-by-Bank could result in cost savings as high as 85 percent compared to credit cards.
+See
+What's Pay by Bank and why it gives you an advantage - Adyen, https://www.adyen.com/knowledge-hub/pay-by-bank.
+Return to text
+
+27. The annual fee schedules for the Federal Reserve's FedACH and FedNow services are publicly available at
+FedACH Services 2025 Fee Schedule
+
+FedNow Service 2025 and Fee Schedule | Federal Reserve Financial Services
+).
+Return to text
+
+28. To encourage adoption and usage, some issuing banks pass on significant portions of profits generated from credit card fees to users in the form of customer rewards. According to the CFPB's 2023 Consumer Credit Card Market report, "the dollar value of rewards earned by general purpose cardholders exceeded $40 billion for mass market issuers in 2022."
+See
+
+2023 Consumer Credit Card Market Report (PDF)
+.
+Return to text
+
+29. Bank revenue sources and amounts differ between credit- and debit cards; both come with charges and fees that affect profit margins for issuing and acquiring banks. In addition, not all credit cards charge the fees listed, and amounts vary by providers.
+Return to text
+
+30. The Federal Reserve's 2022 Profitability of Credit Card Operations of Depository Institutions report finds that the average return on all assets is 1.54 percent for all banks, compared with 6.93 percent for large credit card banks.
+See
+
+Report to the Congress on the Profitability of Credit Card Operations of Depository Institutions, July 2022 (PDF)
+.
+Return to text
+
+31. As previously noted, Pay-by-Bank relies on third-party service providers to perform key functions such as user account authentication and payment initiation, among others. With the consent of customers, third parties commonly gain access to customer financial data (for example, account numbers, balances and transaction details) through open banking APIs.
+Return to text
+
+32. Fees charged for maintaining and using a bank account vary by DIs and depend on the types of accounts and services provided; they may include monthly service fees, minimum balance, overdraft and excess transaction fees.
+Return to text
+
+33. Other payment methods such as debit cards and digital payment apps also offer a range of spending rewards and chargeback protections to entice usage.
+Return to text
+
+34.
+See
+
+Household Debt and Credit Report - Federal Reserve Bank of New Yo
+rk.
+Return to text
+
+35. Of note, digital payment methods such as cards and digital payment apps employ a range of security measures such as tokenization to replace sensitive customer and financial data with tokens to reduce the risk of fraud.
+Return to text
+
+36. In the context of card payments, fraudulent or unauthorized payments may result in chargebacks. While chargebacks are an important consumer protection tool, they can have significant financial and operational implications for merchants. For example, merchants with high chargeback rates may be considered "high risk" and may be subject to stricter compliance requirements or even see termination of merchant accounts and payment processing services. According to data from the 2024 LexisNexis True Cost of Fraud Study, merchants reported an increase of 30 percent in losses due to chargebacks in 2023 compared to 2022.
+See
+The True Cost of Fraudâ¢ Study, https://risk.lexisnexis.com/insights-resources/research/us-ca-true-cost-of-fraud-study.
+Return to text
+
+37. In comparison with nonbank payment providers, banks provide greater safeguards, including measures pertaining to deposit insurance, fraud prevention and consumer protection. Of note, most credit- and debit cards are issued by banks and have the same safeguard measures in place as Pay-by-Bank solutions.
+Return to text
+
+38.
+See
+Consumer Sentiment About Open Banking Payments, https://www.pymnts.com/study/consumer-sentiment-about-open-banking-payments-innovation/.
+Return to text
+
+39. Regulatory measures such as the CFPB's proposed open banking rule are designed to address the nonconsensual sharing of consumers' financial data, but data could still be breached and improperly shared.
+Return to text
+
+40.
+See
+
+CSN Annual Data Book 2023 (PDF)
+.
+Return to text
+
+41. The specific processes, responsibilities and time windows for initiating, responding to and resolving a disputed payment may vary by payment rail and are defined in different rules and regulations.
+Return to text
+
+42. Instant payment systems such as FedNow incorporate various fraud detection tools to mitigate and identify payments fraud, including real-time transaction monitoring and reporting systems.
+See
+
+https://explore.fednow.org/resources/fraud-at-a-glance.pdf
+.
+Return to text
+
+Please cite this note as:
+
+Hwang, Byoung Hwa (2025). "Pay-by-Bank and the Merchant Payments Use Case: Benefits, risks and potential impacts on consumer payment behaviors in the U.S.," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 07, 2025, https://doi.org/10.17016/2380-7172.3834.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

@@ -1,0 +1,355 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+April 05, 2018
+
+On the Benefits of Universal Banks: Concurrent Lending and Corporate Bond Underwriting
+
+Elliot Anenberg
+, Maggie Church, 
+Serafin Grundl
+, and 
+You Suk Kim
+ 
+*
+
+1. Introduction
+
+In this note, we explore whether "universal banks" provide value to firms through their ability to provide both lending and underwriting services. Understanding the benefits of concurrent lending and underwriting to firms is important because some policy proposals that aim to end "Too Big to Fail" or reduce financial stability risks could result in a separation of commercial and investment banking.
+1
+
+One reason that firms may value access to universal banks is if such banks generate cost efficiencies through economies of scope, and pass on some of those efficiencies to firms through lower prices. For example, if some firm-specific information is costly to obtain but is a necessary input into both a bank's lending and underwriting services, then universal banks could achieve lower costs than specialized banks by exploiting the same firm information for both lending and underwriting transactions. Indeed, recent studies ([1, 2]) have found evidence that universal banks generate such informational economies of scope, and pass through at least some of these efficiencies into lower prices.
+
+Another reason firms may value universal banks is that they provide "one-stop banking." Some benefits to one-stop banking could be lower search or transaction costs for the firm. Indeed, [2] finds that firms are more likely to choose the same bank for underwriting and lending services even when the bank does not offer a price discount for doing so, which suggests that firms have some preference for one-stop banking.
+
+In our analysis, we infer how much a firm values access to universal banks from data describing the propensity for firms to choose the same bank for both lending and underwriting services. Our approach is similar to the aforementioned papers, but we use more comprehensive and more recent lending data that are collected by the Federal Reserve Board. Our main finding is that firms value the ability to use the same bank for underwriting and lending services. We also find that concurrent lending and underwriting is associated with lower prices to firms, which is consistent with such relationships generating efficiencies through economies of scope. However, our results do not rule out a role for other factors, such as one-stop banking, that may also make concurrent lending and underwriting relationships attractive to firms.
+
+2. Data and Summary Statistics
+
+Our analysis combines data from two different sources. We obtain information about the underwriting relationships between banks and firms from the Mergent Fixed Income Security Database (FISD). As these data describe corporate bond issuance only, we focus exclusively on underwriting of corporate bonds in this note. We obtain information about lending relationships from the FR Y-14 (Y14) regulatory filings required of banks with more than $50 billion in assets.
+
+Since there is no firm identifier that is common across data sets, we link firms in the underwriting data to firms in the lending data using CUSIP numbers, ticker symbol and listed stock exchange, or, if CUSIP and ticker symbol are unavailable, string matching algorithms to link similar firm names.
+
+In our analysis, we restrict the sample to transactions involving banks that offer both lending and underwriting services. Not all of these banks are universal banks. Universal banks usually refers to banks that engage in a wide variety of activities and are a subset of the banks that offer both lending and underwriting services. Our focus in this note is thus on the benefits of banks that do both lending and bond underwriting, not the broader benefits of universal banks. We also restrict the sample to transactions involving firms that obtain both a loan and underwriting services at some point during the sample period, which begins in 2011 and ends in 2016. In the end, we have a sample of 27 banks and 1896 firms.
+
+Based on our combined lending and underwriting dataset, Table 1 presents summary statistics on the propensity for firms to choose an underwriter with which they have a concurrent lending relationship.
+2
+ In almost 40 percent of underwriting deals during our sample period, the bank providing the underwriting has also provided a loan to the issuer within six months of the underwriting deal. This concurrent share was highest in 2011, but is fairly stable over our sample period.
+
+3. Estimation and Results
+
+Table 1 shows a considerable amount of concurrent lending and underwriting, which could suggest the existence of economies of scope or one-stop banking. However, the high share of concurrent transactions could also be explained by other factors. For example, if the markets for lending and underwriting are highly concentrated (i.e. a few banks control a majority of the market share), then the share of concurrent transactions will mechanically be high. To control for some of these other factors, we estimate a discrete-choice model of a firm's decision to use a particular bank for their underwriting needs. In the model, we assume that firms 
+i 
+= 1
+,...,N 
+have exogenously determined underwriting needs.
+3
+ They choose the bank 
+j 
+=1
+,...,J 
+for their underwriting needs to maximize their payoff. The payoff for firm 
+i 
+choosing bank 
+j 
+is given by:
+
+$$$$ V_{ij} =\alpha_j + \beta_jX_i + \theta D^{lend}_{ij} + \epsilon_{ij} \ \ \ \ \ \ \ (1) $$$$
+
+$$\alpha_j$$ is a set of bank fixed effects that capture differences across banks in a variety of bank-specific characteristics like size, quality, marketing, location, brand, etc. 
+X
+ is a set of observable firm characteristics such as credit rating, industry code, and the principal amount of the underwriting deal. Since the coefficient on 
+X
+ varies with 
+j
+, we allow for certain banks to be better matches for certain types of firms, regardless of any lending relationships that the bank and firm may have. The main variable of interest is 
+D
+ij
+lend
+, which is a dummy variable for whether firm 
+i
+ and bank 
+j
+ have a concurrent lending relationship, as defined above. $$\theta$$ does not depend on 
+j
+, so we are assuming that the effect of having a relationship on firm utility is the same for all firm-bank relationships. Finally, $${}_{ij}$$ is an idiosyncratic preference component that is iid across firms and banks, and is distributed according to a Type 1 Extreme Value distribution. Under these assumptions, we can write the probability that a firm 
+i
+ chooses a bank 
+j
+ as:
+
+$$$$ P_{ij} = \frac{ {\rm exp}(\ \alpha_j + \beta_jX_i + \theta D^{lend}_{ij} \ ) }{ \sum^J_{k=1}{\rm exp}(\ \alpha_k + \beta_kX_i + \theta D^{lend}_{ik} \ )} \ \ \ \ \ (2) $$$$
+
+and we can estimate the parameters in equation 2 by maximum likelihood.
+
+Figure 1 presents the results. All else equal, firms are almost twice as likely to choose banks with which they have a concurrent lending relationship. For example, the average firm chooses a large bank in our sample ("Bank 1") with probability 0.16 if they do not have a concurrent relationship with Bank 1. For the same firm, this probability rises to 0.27 if they do have a concurrent relationship with Bank 1. This finding suggests that there may be benefits to firms from universal banks. If banks were not permitted to provide both lending and underwriting services to firms, then concurrent relationships and the associated firm utility bonus from 
+Î¸ 
+may not be possible.
+
+In Figure 2, we report results from the choice model when we add an interaction of 
+D
+ij
+lend 
+with a dummy variable for whether the firm is a noninvestment grade issuer, which we define as a firm that is rated BB or below by Standard & Poor's. The results show that a concurrent relationship increases the choice probability for a noninvestment grade issuer by almost two times as much as it increases the choice probability for an investment grade issuer. One interpretation of this result is that the positive effect of concurrent relationships on underwriter choice is driven by informational economies of scope, and informational economies of scope are larger for riskier firms because information on such firms is costlier for banks to obtain.
+
+To further test the interpretation that informational economies of scope help generate the results from the choice model, we next investigate how concurrent relationships affect prices that we can observe in our data. The direct benefits of informational economies of scope should accrue to banks through cost savings, and may be passed on to firms through lower prices. In contrast, if the benefits of concurrent relationships were driven solely by one-stop banking, so firms have a higher willingness to pay if they purchase loans and underwriting services from the same bank, then concurrent relationships would generally not be associated with lower prices.
+
+To this end, we first regress the gross spread, which equals the commission paid to the bank for underwriting the firms' bonds as a percentage of the bond principal amount, on a dummy variable for concurrent lending and a variety of controls. The full set of control variables are listed in Table 2. Table 2 shows that concurrent lending is associated with 31 basis point lower spreads for noninvestment grade issuers, but is associated with 9 basis point higher spreads for investment grade issuers, all else equal. The lower underwriting fees for noninvestment grade issuers suggest that informational economies of scope benefit these issuers through lower costs of raising capital, and the magnitude of the discount (31 basis points) is about 5 percent of the average gross spread in our sample. Moreover, the results also suggest that lower prices for underwriting services may help explain why noninvestment grade firms tend to choose banks with which they have concurrent lending relationships. Although investment grade issuers appear to pay a higher spread when they underwrite with a concurrent lender, its economic magnitude is small (about 1.45 percent of the average gross spread) and is marginally statistically significant.
+
+Next, we look at the determinants of the price paid by firms for lending services. We use the interest rate on the credit facility as the measure of price. Table 3 shows that concurrent relationships are associated with prices that are about 13 basis points lower, all else equal. The full set of control variables are listed in Table 3. Column 2 shows that there is not any statistically significant difference in pricing for investment versus noninvestment grade firms. Thus, combining the results in Table 2-3, we find that the price for the bundle â i.e. the price that combines the price of both underwriting and lending services â declines when a concurrent relationship is present. Furthermore, the bundle-price declines even more with a concurrent relationship if the firm is noninvestment grade. These results helps to explain why concurrent relationshipsâand especially concurrent relationships for noninvestment grade firmsâare associated with a higher choice probabilities in the model presented above.
+
+4. Conclusion
+
+Our results suggest that firms value the ability to use the same bank for underwriting and lending services. Part of the attractiveness to firms appears to be that universal banks can provide lower prices, perhaps due to cost savings generated by informational economies of scope. Preferences for one-stop banking could also contribute to the attractiveness of universal banks. While our results highlight some benefits of universal banks for firms, they cannot speak to some potential costs of universal banks, which could offset some or all of the benefits they provide. For example, universal banks may create adverse competitive effects through their size, and they may increase risks to financial stability that ultimately tie into firm welfare.
+
+References
+
+Steven Drucker and Manju Puri. On the benefits of concurrent lending and underwriting. 
+The Journal of Finance
+, 60(6):2763â2799, 2005.
+
+Ayako Yasuda. Do bank relationships affect the firm's underwriter choice in the corporate-bond underwriting market? 
+The Journal of Finance
+, 60(3):1259â1292, 2005.
+
+Table 1: Share of Concurrent Deals by Year
+
+Year
+
+All Loans
+
+2011
+
+0.45
+
+2012
+
+0.39
+
+2013
+
+0.37
+
+2014
+
+0.38
+
+2015
+
+0.41
+
+2016
+
+0.34
+
+Total
+
+0.39
+
+Shows share of underwriting deals where the firm has a "concurrent" (within the same year) lending relationship with the same bank.
+
+Table 2: Relationship Between Concurrent Lending and Bond Underwriting Spreads
+
+ 
+
+(1) Gross Spread
+
+Concurrent
+
+0.0943**
+
+			(0.0475)
+
+Concurrent X Noninvestment Grade
+
+-0.396*
+
+			(0.209)
+
+Maturity
+
+2.486***
+
+			(0.0553)
+
+Maturity2
+
+-0.239***
+
+			(0.0125)
+
+Offering Amount
+
+-0.578***
+
+			(0.0416)
+
+Offering Amount2
+
+0.0144***
+
+			(0.0014)
+
+Constant
+
+0.132
+
+			(0.784)
+
+Observations
+
+6670
+
+Standard errors in parentheses
+
+** 
+p < 
+0
+.
+1, 
+**** 
+p < 
+0
+.
+05, 
+****** 
+p < 
+0
+.
+01
+
+Gross spread equals the commission paid to the bank for underwriting the firms' bonds as a percentage of the bond principal amount. The spread is measured in percentage points. Concurrent equals one if the firm has a concurrent lending relationship with the bank. Noninvestment grade equals one if the firm is rated as noninvestment grade. Controls not shown include fixed effects for the credit rating of the firm, bank fixed effects, year fixed effects, one-digit NAICS code of the firm, and several bond characteristics including coupon type, whether the bond is asset backed, and whether the bond is convertible.
+
+Table 3: Relationship Between Concurrent Bond Underwriting and Loan Interest Rates
+
+ 
+
+(1) Interest Rate
+
+(2) Interest Rate
+
+Concurrent
+
+-0.129**
+
+			(0.0540)
+
+-0.192***
+
+			(0.0605)
+
+Concurrent X Noninvestment Grade
+
+ 
+
+0.120
+
+			(0.101)
+
+Total Assets
+
+-4.27e-08
+
+			(4.81e-08)
+
+-4.13e-08
+
+			(4.80e-08)
+
+Syndicated Loan
+
+-0.216***
+
+			(0.0470)
+
+-0.217***
+
+			(0.0471)
+
+Constant
+
+7.539***
+
+			(0.672)
+
+7.514***
+
+			(0.679)
+
+Obsevations
+
+16468
+
+16468
+
+Standard errors in parentheses
+
+** 
+p < 
+0
+.
+1, 
+**** 
+p < 
+0
+.
+05, 
+****** 
+p < 
+0
+.
+01
+
+Interest rate is measured in percentage points. Concurrent equals one if the firm has a concurrent underwriting relationship with the bank. Noninvestment grade equals one if the firm is rated as investment grade. Controls not shown include fixed effects for the credit rating of the firm, bank fixed effects, year-by-month fixed effects, two-digit NAICS code of the firm, dummy variables for the type of credit facility, and whether the interest rate is variable or fixed. Standard errors are clustered by year-month.
+
+Figure 1: Multinomial Logit Results
+
+
+Source: FISD Mergent and FR Y-15.
+
+Accessible version
+
+Marginal effects from a multinomial logit model evaluated at the means of all control variables. Shows probability that a typical firm chooses each of four large anonymous banks by concurrent relationship status of the firm-bank pair. Concurrent relationship equals one if the firm has a concurrent relationship with bank 
+j 
+and not the omitted bank. Controls not shown include a dummy for whether the firm has a concurrent relationship with at least one bank, maturity of the bond, principal amount of the bond, a dummy for whether the firm is investment grade, year of issuance dummies, and one-digit NAICS code of the firm. Firms can choose over 15 banks in the choice model. One of the 15 banks is a catch-all category for the banks with the smallest number of underwriting observations in our sample.
+
+Figure 2: Multinomial Logit Results, by Investment Grade
+
+
+Source: FISD Mergent and FR Y-15.
+
+Accessible version
+
+Marginal effects from a multinomial logit model evaluated at the means of all control variables. Shows probability that a typical firm chooses each of four large anonymous banks by concurrent relationship status of the firm-bank pair, and investment grade status of the firm. Concurrent relationship equals one if the firm has a concurrent relationship with bank 
+j 
+and not the omitted bank. Noninvestment grade firms are those rated BB or below by Standard & Poor's. Controls not shown include a dummy for whether the firm has a concurrent relationship with at least one bank, maturity of the bond, principal amount of the bond, a dummy for whether the firm is investment grade, year of issuance dummies, and one-digit NAICS code of the firm. Firms can choose over 15 banks in the choice model. One of the 15 banks is a catch-all category for the banks with the smallest number of underwriting observations in our sample.
+
+*
+ The analysis and conclusions set forth are those of the authors and do not indicate concurrence by other members of the research staff or the Board of Governors. 
+Return to text
+
+1.
+ For example, some proposals call for an explicit separation of commercial and investment banking. Other proposals are targeted at reducing bank size more generally, and may result in some separation as banks spin off lines of business in order to reduce their size. 
+Return to text
+
+2.
+ Throughout our analysis, we focus on concurrent lending and underwriting relationships, which we define as lending and underwriting transactions that occur in the same six month period, in order to increase the likelihood that we are identifying relationships that provide useful information to the bank. The information from a relationship from many years ago may be stale. 
+Return to text
+
+3.
+ It is possible that the benefits of universal banks result in firms choosing to do more underwriting. In this case, our assumption of exogenously determined underwriting needs would likely cause us to understate the value of universal banks to firms. 
+Return to text
+
+Please cite this note as:
+
+Anenberg, Elliot, Maggie Church, Serafin Grundl, and You Suk Kim (2018). "On the Benefits of Universal Banks: Concurrent Lending and Corporate Bond Underwriting," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 5, 2018, https://doi.org/10.17016/2380-7172.2143.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

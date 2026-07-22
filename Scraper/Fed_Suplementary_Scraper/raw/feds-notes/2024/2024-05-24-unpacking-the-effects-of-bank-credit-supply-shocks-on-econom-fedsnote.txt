@@ -1,0 +1,385 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+May 24, 2024
+
+Unpacking the Effects of Bank Credit Supply Shocks on Economic Activity
+
+Michele Cavallo
+, Juan M. Morelli, and Rebecca Zarutskie
+1
+
+In this note, we examine the effects of bank credit supply shocks on real economic activity. First, we estimate how GDP and various aggregate demand sectors respond to such shocks. Second, based on the estimated responses, we compute how much those sectors contribute to the overall response of aggregate demand to bank credit supply shocks. We find that these shocks affect aggregate demand disproportionately through personal consumption expenditures on durable goods, nonresidential investment in equipment, and residential investment. We also find that measuring bank credit supply shocks through individual loan categories and estimating their effects on the corresponding aggregate demand sectors does not allow us to account for the overall estimated response of aggregate demand growth. This result suggests the presence of meaningful linkages at work across the various lending categories in the propagation of bank credit supply shocks.
+
+Estimating the Response of Aggregate Demand to Bank Credit Supply Shocks
+
+Our estimation framework consists of a linear multivariate dynamic system of a vector time series which includes growth in real GDP (or an alternate indicator of aggregate demand growth), core PCE inflation, the level of the shadow federal funds rate, an indicator of broad financial conditions, and the net percentage of banks tightening lending standards. Both the real growth variable and core PCE inflation are expressed in four-quarter percent changes. The shadow federal funds rate, taken from the work of Wu and Xia (2016), provides a measure of the overall monetary policy stance that is not constrained by the zero lower bound. We use the Financial Conditions Impulse on Growth (FCI-G), whose features are described in the note by Ajello et al. (2023) as the indicator of broad financial conditions, excluding bank lending standards and terms. The net percentage of banks tightening standards is from the Federal Reserve's Senior Loan Officer Opinion Survey (SLOOS).
+2
+ Data are quarterly and the sample period is from 1991:Q1 to 2019:Q4.
+3
+ We estimate the system using a constant and two lags of each variable.
+4
+
+The bank credit supply shock is identified through the method of external instruments.
+5
+ As an instrumental variable for the shock, we use a measure of changes in the supply of bank credit, or credit supply indicator (CSI), which is derived, along the lines of Bassett et al. (2014), from bank-level SLOOS responses on changes in lending standards and whose construction is presented in the companion FEDS note (Cavallo, Morelli, Zarutskie, and Baylor, 2024).
+6
+ As argued by Bassett et al. (2014), it is problematic to estimate the effects of bank credit supply shocks using the SLOOS composite index of overall lending standards. Banks' reported changes in bank lending standards may be determined by factors that, besides affecting the supply of credit, can also influence credit demand and real economic activity. In addition, movements in the SLOOS index also partly reflect changes in the macroeconomic environment and outlook. The variable we that we use as an instrument represents a suitable proxy for exogenous unanticipated changes in bank credit supply. By construction, it captures the portion of reported changes in lending standards that is orthogonal to demand-side and macroeconomic factors, as well as past changes in standards and lagged bank-level variables which might affect lending standards with a lag. Such "residual" component conceivably reflects the influence on lending standards of independent shifts in the supply conditions of bank credit.
+7
+
+We measure the effects of the identified bank credit supply shocks on the variables of interest by estimating impulse responses through local projections.
+8
+ Our choice to estimate the effects of bank credit supply shocks using the local projections approach is motivated by the feature that the shape and the magnitude of the implied impulse responses are robust across various lag orders. In contrast, impulse responses computed through the traditional approach of inverting the estimated vector autoregressive (VAR) lag structure are sensitive to the selected lag order.
+9
+
+With the estimates in hand, we plot the impulse response functions (IRFs), setting the size of the bank credit supply shock to be equal to one standard deviation, which is equivalent to an increase of about 8 percent in the net percentage of banks tightening lending standards. Following a typical bank credit supply shock of this magnitude, the estimates from our baseline specification indicate that the net percentage of banks tightening standards rises and then remains above its pre-shock level for several periods, while broad financial conditions, as captured by the FCI-G, become tighter over time.
+10
+ In Figure 1, we plot the estimated IRFs of real GDP growth and of growth in real private domestic final purchases (PDFP), which is an alternate indicator of aggregate demand growth.
+11
+ Looking at growth in PDFPâan aggregate measure consisting of personal consumption expenditures (PCE) and nonresidential and residential investmentâpresents two appealing aspects. First, by not including net exports, government expenditures, and the change in private inventories, it represents a more stable and accurate indicator of the underlying momentum in aggregate economic activity.
+12
+ Second, it includes the sectors of aggregate demand whose evolutions are more closely associated with changes in domestic bank lending standards.
+
+Figure 1. Estimated IRFs of GDP and PDFP Growth to a Bank Credit Supply Shock
+
+Note: The figure shows the estimated impulse responses of GDP growth (the blue line) and PDFP growth (the red dashed-and-dotted line) to a one standard-deviation bank credit supply shock. The light blue and pink shaded areas denote the corresponding 68 percent standard-error confidence bands.
+
+Source: Bureau of Economic Analysis, National and Income Product Accounts; Authors' calculations.
+
+Accessible version
+
+The estimated responses in Figure 1 show that a bank credit supply shock leads to a sizable slowdown in GDP and PDFP growth with the largest negative effects arriving nearly two years after the shock at about 0.6 percent and 0.8 percent, respectively, below their pre-shock values.
+13
+ The result that PDFP growth responds to the bank credit supply shock more than GDP growth is not surprising, considering the closer association between the sectors included in PDFP, such as nonresidential equipment investment, and the major domestic lending categories, such as commercial and industrial (C&I) loans.
+14
+ Regarding the remaining variables in our estimating vector, core PCE inflation decreases modestly and, in response to the slowdown in growth and the downtick in inflation, monetary policy becomes more accommodative.
+15
+
+Estimating the Responses of Aggregate Demand Sectors to Bank Credit Supply Shocks
+
+Next, we estimate how the various demand sectors comprised in the definition of PDFP respond to a bank credit supply shock identified through the same credit supply indicator that we used to estimate the response of GDP and PDFP growth in Figure 1.
+16
+ Our goal is to assess the contributions of the various PDFP sectors to the estimated overall response of PDFP growth to a typical bank credit supply shock, as shown by the red dashed-and-dotted line in Figure 1 above. We focus on nine PDFP sectors which include the three major personal consumption expenditure sectorsâdurable goods, nondurable goods, and servicesânonresidential investment in structures, equipment, and intangible assets ("intangibles"), and residential investment in permanent site structures, other structures, and equipment.
+17
+
+In Figure 2, we plot the estimated impulse response functions of real growth for the nine PDFP sectors to a bank credit supply shock.
+18
+
+Figure 2. Estimated IRFs of Real Growth to Overall Bank Credit Supply Shock
+
+Note: The figure shows the estimated impulse responses of real growth for various PDFP sectors to a one standard-deviation bank credit supply shock. Panel (a) shows the responses of personal consumption expenditure on durable goods (the blue dashed-and-dotted line) line), nondurable goods (the red line), and services (the green line). Panel (b) plots the responses of nonresidential investment in structures (the blue dashed-and-dotted line), equipment (the red line), and intangibles (the green line). Panel (c) shows the responses of residential investment in permanent site structures (the blue dashed-and-dotted line), other structures (the red line), and equipment (the green line). Diamonds denote the point estimates of the impulse responses that are statistically significant at the 68 percent confidence level.
+
+Source: Bureau of Economic Analysis, National and Income Product Accounts; Authors' calculations.
+
+Accessible version
+
+As shown in the figure panels, the largest effects on real growth are for PCE on durable goods, nonresidential investment in equipment and structures, and residential investment in permanent site structures.
+19
+ This result is consistent with the higher propensity of households and businesses to rely on bank financing to fund such expenditures, which makes them likely to be more sensitive to bank credit supply shocks.
+20
+ In contrast, the estimated effects on real growth for PCE on nondurable goods and services are fairly muted.
+
+Having obtained the estimated responses of PDFP sectors, our next goal is to aggregate the sectoral IRFs and assess their contributions to the overall response of PDFP growth. Toward this goal, we rely on the chain-aggregation methodology presented in Whelan (2002), which requires as inputs the levels of real expenditure series, as well as those of the corresponding chain-weighted price indexes, rather than their growth rates.
+21
+ We proceed in two steps, drawing on the conceptual definition of impulse responses as differences between two forecast paths. First, for each of the PDFP sectors, we compute two level paths: one path is the level of real expenditure (and of the corresponding chain-weighted price indexes) in the presence of the shocks, that is, the level implied by the corresponding IRF shown above in Figure 2. Associated with it, is the level of real expenditure (and of the price index) in the absence of the shock, that is, the path along which the variable of interest evolves according to its sample mean growth rate. Second, we compute the contributions of each PDFP sector to growth in the real PDFP aggregate implied by those two sets of paths using the formula provided by Whelan (2002).
+22
+ Our object of interest, that is, the contributions of the various PDFP sectors to the estimated response of PDFP growth to a typical bank credit supply shock, is then equal to the difference between the contributions to growth implied by the level paths computed on the basis of the estimated IRFs shown in Figure 2 and the contributions implied by the paths computed in the absence of the shocks.
+
+In Figure 3 below, we present the resulting contributions to growth in the PDFP aggregate implied by the estimated sectoral impulse response functions to a bank credit supply shock. In the figure, the colour bars represent the implied contributions of each PDFP sector, with the dash-dotted black line denoting the sum of such contributions. The solid black line is the estimated response of PFDP growth shown above in Figure 1. We find that, over the three years following the shock, the combined sectoral responses to a typical bank credit supply shock do a very good job at accounting for the estimated slowdown in PDFP growth. In fact, the sum of the contributions implied by the sectoral IRFs is closely aligned with the estimated overall response of PDFP growth for the first twelve quarters after the shock.
+23
+
+Figure 3. Contributions to PDFP Growth of IRFs to an Overall Bank Credit Supply Shock
+
+Note: This figure shows the contributions to the estimated response of real PDFP growth (the solid black line) to a one standard-deviation bank credit supply shock. The light green and red hatched bars denote the contributions from personal consumption expenditures on durable goods and on nondurable goods and services. The gold hatched and purple bars show the contributions of nonresidential investment in structures and in equipment and intangibles (E&I), while the blue hatched bars represent the contribution from residential investment. The black dashed-and-dotted line denotes the sum of the contributions.
+
+Source: Bureau of Economic Analysis, National and Income Product Accounts; Authors' calculations.
+
+Accessible version
+
+As shown in the figure, the largest contributions to the estimated slowdown in PDFP growth stem from nonresidential investment in equipment and intangibles and from personal consumption expenditures on nondurable goods and services and on durable goods. The sizable contribution of PCE on nondurable goods and services should not be surprising, despite their relatively modest responsiveness to the shock, since, over the sample period used for the estimation, it accounts, on average, for about 70 percent of PFDP. In contrast, nonresidential investment on equipment and intangibles and PCE on durable goods play an outsized role, with their contributions to the estimated negative response of PDFP growth substantially larger than their average share in PDFP over the sample period.
+
+In Table 1, we provide a quantitative assessment of the contributions of the various sectors to the negative response of PFDP to a bank credit supply shock. In the first column, we report the average shares of the contributions to the IRF of PDFP growth over the twelve quarters following the shock. We compare such average contribution shares with the average nominal shares in PDFP over the sample period, included the second column of the table.
+
+Table 1.
+
+ 
+
+Average share of contributions to IRF of PDFP over 12 quarters after the shock (%)
+
+Average nominal share in PDFP over sample period (%)
+
+PCE on durable goods
+
+22.9
+
+9.5
+
+PCE on nondurable goods and services
+
+30.3
+
+70.1
+
+Nonresidential investment on structures
+
+3.4
+
+3.5
+
+Nonresidential investment on E&I
+
+29.7
+
+11.9
+
+Residential investment
+
+13.7
+
+5.0
+
+Note: The table reports the average shares of the contributions to the estimated impulse response of PDFP growth over the twelve quarters following the shock (the first column) and the average nominal shares in PDFP over the sample period (the second column).
+
+Source: Bureau of Economic Analysis, National and Income Product Accounts; Authors' calculations.
+
+As indicated in the table, following a bank credit supply shock, personal consumption expenditures on durable goods, nonresidential investment in equipment and intangibles, as well as residential investment, on average, contribute to the estimated slowdown in PDFP growth about 2½ times more than implied by their average nominal shares in PDFP over the estimation sample period.
+
+Estimating Sectoral Responses to Loan Category-Specific Credit Supply Shocks
+
+In this section, we pursue a variant of the strategy that we followed to account for the estimated response of PDFP growth to a typical bank credit supply shock. Rather than estimating how the various PDFP sectors respond to a shock identified through the credit supply indicator derived across the full range of lending categories, we estimate their responses to what we call loan category-specific bank credit supply shocks.
+
+The methodology we use to derive the credit supply indicator can also be used to create loan category-specific credit supply indicators, such as, for example, a credit supply indicator for C&I loans. As shown in the companion note (Cavallo, Morelli, Zarutskie, and Baylor, 2024), the loan-weighted sum of the loan category-specific credit supply indicators tracks well the overall credit supply indicator. With the loan category-specific credit supply indicators in hand, we estimate how the various PDFP sectors respond to bank credit supply shocks that are specific to the relevant loan category. As we did in the previous section, we then assess how those sectors contribute to the estimated overall response of PDFP growth to a typical bank credit supply shock, as shown by the red dashed-and-dotted line in Figure 1 above.
+
+We associate the three major personal consumption expenditure sectorsâdurable goods, nondurable goods, and servicesâwith the consumer lending category; nonresidential investment in structures with the commercial real estate (CRE) lending category; and nonresidential investment in equipment and intangible assets ("intangibles") with the C&I lending category. Residential investment in permanent site structures, or single-family and multifamily structures, and in equipment are associated with the CRE lending category, while residential investment in other structures is associated with the residential real estate (RRE) lending category.
+
+To illustrate how our estimation strategy works, we provide two examples related to personal consumption expenditures and nonresidential investment. For estimating the responses of PCE to category-specific bank credit supply shocks, the vector of time series consists of real growth in either durable goods, nondurable goods, or services as indicators of demand growth (as substitutes for real GDP or PDFP growth), core PCE inflation, the shadow federal funds rate, the FCI-G, and the net percentage of banks tightening standards for consumer loans. As instrumental variable for the shock, we use the credit supply indicator for the consumer lending category, with the size of the supply shock set equal to one standard deviation. In a similar way, for estimating the responses of nonresidential investment to category-specific bank credit supply shocks, the vector of time series consists of real growth in investment for either structures, equipment, or intangibles as indicators of demand growth, core PCE inflation, the shadow federal funds rate, the FCI-G, and the net percentage of banks tightening standards for C&I loans. As instrumental variable for the shock, we use the credit supply indicator for the C&I lending category, with the size of the supply shock set equal to one standard deviation.
+24
+
+We find that, when we use the loan category-specific credit supply indicators as instruments for bank credit supply shocks, the estimated effects on real growth in the various PDFP sectors are generally smaller in size than those shown in Figure 2, which are estimated using the overall credit supply indicator as instrument.
+25
+ In Figure 4 below, we present the resulting contributions to growth in the PDFP aggregate implied by the estimated sectoral impulse response functions to loan category-specific bank credit supply shocks.
+
+Figure 4. Contributions to PDFP Growth of IRFs to Loan Category-Specific Bank Credit Supply Shocks
+
+Note: This figure shows the contributions to the estimated response of real PDFP growth (the solid black line) to one standard-deviation loan category-specific bank credit supply shocks. The light green and red hatched bars denote the contributions from personal consumption expenditures on durable goods and on nondurable goods and services. The gold hatched and purple bars show the contributions of nonresidential investment in structures and in equipment and intangibles (E&I), while the blue hatched bars represent the contribution from residential investment. The black dashed-and-dotted line denotes the sum of the contributions.
+
+Source: Bureau of Economic Analysis, National and Income Product Accounts; Authors' calculations.
+
+Accessible version
+
+We find that the combined sectoral responses to loan category-specific bank credit supply shocks can only partially account for the estimated slowdown in PDFP growth. Tellingly, at its trough nearly two years after the shock, the sum of the contributions implied by the sectoral IRFs is about half of the estimated overall response of PDFP growth. Importantly, this result suggests the presence of meaningful linkages at work across the various loan categories in the propagation of bank credit supply shocks. Because the combined sectoral responses to an overall bank credit supply shock can account for the estimated slowdown in PDFP growth, while those to loan category-specific bank credit supply shocks can account only for part of the overall response of PDFP growth, these results indicate that the various PDFP expenditure sectors appear to react also to credit supply disturbances outside of the associated bank loan category.
+
+Conclusions
+
+In this note, we have estimated the response of GDP and other aggregate demand variables to bank credit supply shocks identified using a credit supply indicator derived from bank-level SLOOS responses as instrumental variable. We have found sizable negative effects of those shocks on growth in real GDP and PDFP, which is the part of aggregate demand more closely associated with changes in domestic bank lending standards. Our results indicate that the largest effects on real growth are for PCE on durable goods and nonresidential investment in equipment and structures. One of our notable findings is that when we use as instrument the credit supply indicator derived across all loan categories, the combined estimated responses can account for the overall response of PDFP growth. We have also provided a quantitative assessment of the contributions of the various sectors of aggregate demand to the estimated slowdown in aggregate demand growth following a typical bank credit supply shock. We have documented that the contributions from PCE on durable goods, nonresidential investment on equipment and intangibles, and residential investment are substantially higher than what one might infer just by looking at their average shares in PDFP. Finally, when we use as instruments the credit supply indicators that are specific to the loan categories more closely associated with the aggregate demand sector of interest, we have found that the estimated responses do not add up to the overall estimated response of PDFP growth. This result hints at the presence of linkages at work across the various loan categories in the propagation of bank credit supply disturbances.
+
+References
+
+Ajello, Andrea, Michele Cavallo, Giovanni Favara, William B. Peterman, John W. Schindler IV, and Nitish R. Sinha (2023). "
+A New Index to Measure U.S. Financial Conditions
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 30.
+
+Altavilla, Carlo, Matthieu Darracq Pariès, and Giulio Nicoletti (2019). "
+Loan Supply, Credit Markets and the Euro Area Financial Crisis
+," 
+Journal of Banking and Finance
+, vol. 109 (December).
+
+Barnichon, Regis, Christian Matthes, and Alexander Zigenbein (2022). "
+Are the Effects of Financial Market Disruptions Big or Small?
+" 
+Review of Economics and Statistics
+, vol. 104 (May), pp. 557â570.
+
+Bassett, William F., Mary Beth Chosak, John C. Driscoll, and Egon ZakrajÅ¡ek (2014). "
+Changes in Bank Lending Standards and the Macroeconomy
+," 
+Journal of Monetary Economics
+, vol. 62 (March), pp. 23â40.
+
+Cavallo, Michele, Juan M. Morelli, Rebecca Zarutskie, and Solveig Baylor (2024). "
+Measuring Bank Credit Supply Shocks Using the Senior Loan Officer Survey
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 24.
+
+Forni, Mario, Luca Gambetti, Nicolò Maffei-Faccioli, and Luca Sala (2024). "
+Nonlinear Transmission of Financial Shocks: Some New Evidence
+," 
+Journal of Money, Credit and Banking
+, vol. 56 (February), pp. 5â33.
+
+Glancy, David, Robert J. Kurtzman, and Lara Loewenstein (2024). "
+On Commercial Construction Activity's Long and Variable Lags
+," Finance and Economics Discussion Series 2024-016. Washington: Board of Governors of the Federal Reserve System, April.
+
+Hurvich, Clifford M., and Chih-Ling Tsai (1993). "
+A Corrected Akaike Information Criterion for Vector Autoregressive Model Selection
+," 
+Journal of Time Series Analysis
+, vol.14 (May), pp. 271â279.
+
+Jordà, Òscar (2005). "
+Estimation and Inference of Impulse Responses by Local Projections
+," 
+American Economic Review
+, vol. 95 (March), pp. 161â182.
+
+Jordà, Òscar, Moritz Schularik, and Alan M. Taylor (2015). "
+Betting the House
+," 
+Journal of International Economics
+, vol. 96 (July), pp. S2âS18.
+
+Li, Dake, Mikkel Plagborg-Møller, and Christian K. Wolf (2024). "
+Local Projections vs. VARs: Lessons from Thousands of DGPs
+," 
+Journal of Econometrics
+, forthcoming.
+
+Miranda-Agrippino, Silvia, and Giovanni Ricco (2021). "
+The Transmission of Monetary Policy Shocks
+," 
+American Economic Journal: Macroeconomics
+, vol. 13 (July), pp. 74â107.
+
+Mertens, Karel, and Morten O. Ravn (2013). "
+The Dynamic Effects of Personal and Corporate Income Tax Changes in the United States
+," 
+American Economic Review
+, vol. 103 (June), pp. 1212â1247.
+
+Montiel Olea, José L., James H. Stock, and Mark W. Watson (2021). "
+Inference in Structural Vector Autoregressions Identified with an External Instrument
+," 
+Journal of Econometrics
+, vol. 225 (November), pp. 74â87.
+
+Plagborg-Møller, Mikkel, and Christian K. Wolf (2021). "
+Local Projections and VARs Estimate the Same Impulse Responses
+," 
+Econometrica
+, vol. 89 (March), pp. 955â980.
+
+Ramey, Valerie A. (2016). "
+Macroeconomic Shocks and Their Propagation
+," in John B. Taylor and Harald Uhlig, eds., 
+Handbook of Macroeconomics
+, vol. 2A. Amsterdam: Elsevier, pp. 71â162.
+
+Stock, James H., and Mark W. Watson (2012). "
+Disentangling the Channels of the 2007-2009 Recession
+," 
+Brookings Papers on Economic Activity
+, Spring, pp. 81â135.
+
+Stock, James H., and Mark W. Watson (2018). "
+Identification and Estimation of Dynamic Causal Effects in Macroeconomics Using External Instruments
+," 
+Economic Journal
+, vol. 128 (May), pp. 917â948.
+
+Whelan, Karl (2002). "
+A Guide to U.S. Chain Aggregated NIPA Data
+," 
+Review of Income and Wealth
+, vol. 48 (June), pp. 217â233.
+
+Wu, J. Cynthia, and F. Dora Xia (2016). "
+Measuring the Macroeconomic Impact of Monetary Policy at the Zero Lower Bound
+," 
+Journal of Money, Credit and Banking
+, vol. 48 (March-April), pp. 253â291.
+
+1. We thank Stephanie Aaronson, Gianni Amisano, Han Chen, Rochelle Edge, Will Gamber, Òscar Jordà, and Joe Nichols for helpful conversations and feedback. Solveig Baylor and Jaron Berman provided excellent support. The analysis and conclusions set forth are those of the authors and do not indicate concurrence by the Board of Governors of the Federal Reserve System. Any errors or omissions are the responsibility of the authors. 
+Return to text
+
+2. More precisely, we use the net percentage of domestic banks tightening standards across loan categories, weighted by banks' outstanding loan balances by category. 
+Return to text
+
+3. We end our sample before the outbreak of the COVID-19 pandemic because, as argued by several researchers, structural relations and shocks were different during the pandemic. For convenience, we also chose not to include post-COVID observations into our sample because, with only a few additional quarters of data available, we conjecture that the estimates would likely be little changed. 
+Return to text
+
+4. The lag order was selected through the corrected Akaike information criterion (AIC
+C
+) proposed by Hurvich and Tsai (1993). In small samples, the AIC
+C
+ provides better lag order selection for vector autoregressive models than the Akaike information criterion. 
+Return to text
+
+5. The external-instrument approach is based on the methodological contributions of Stock and Watson (2012), Mertens and Ravn (2013), and Montiel Olea, Stock, and Watson (2021). In our setup, the identification of the shock of interest is achieved by instrumenting the estimated reduced-form residuals from the equation for the net percentage of banks tightening lending standards. 
+Return to text
+
+6. In a related line of inquiry, Altavilla, Darracq Pariès, and Nicoletti (2019) estimated the macroeconomic effects of credit supply shocks in the euro area using as external instrument an indicator of loan supply conditions derived from bank-level responses on lending standards in the European Central Bank's Bank Lending Survey. 
+Return to text
+
+7. Formally, such variable consists of loan-weighted bank-level residuals from a panel regression of reported changes in bank lending standards on changes in the macroeconomic environment and outlook, lagged changes in standards, and bank-specific factors that, in addition to affecting credit supply, might also be correlated with changes in credit demand. 
+Return to text
+
+8. The method of local projections to estimate impulse responses was introduced by Jordà (2005). The method of using local projections to estimate impulse responses to a shock identified through instrumental variables has been labelled LP-IV by Jordà, Schularik, and Taylor (2015) and Ramey (2016). As discussed by Stock and Watson (2018), the LP-IV approach offers a direct way to estimate the "dynamic causal effects" of a shock of interest. The LP-IV approach consist of estimating a sequence of predictive IV regressions with the endogenous left-hand side variables shifted forward at various prediction horizons. To implement the LP-IV estimation, we relied on the code provided in Miranda-Agrippino and Ricco (2021). 
+Return to text
+
+9. This result is consistent with the properties that, with a finite lag order, impulse responses estimated through local projections and traditional VAR approaches are closely aligned only up to the horizons that correspond with the number of lags used for estimation (Plagborg-Møller and Wolf, 2021) and that, with identification through external instruments, impulse response estimates obtained with the traditional VAR procedure can be heavily biased (Li, Plagborg-Møller, and Wolf, 2024). 
+Return to text
+
+10. Because the focus of this note is on the real activity effects of the shocks, in the interest of saving space, we do not show here the estimated responses for the net percentage of banks tightening standards, the FCI-G, as well as for core PCE inflation and the shadow federal funds rate. 
+Return to text
+
+11. We obtain the estimated response of PDFP growth by replacing GDP growth in the vector time series that we use in our estimation. 
+Return to text
+
+12. In the Bureau of Economic Analysis' National Income and Products Accounts (NIPA), PDFP corresponds to "Final sales to private domestic purchasers." 
+Return to text
+
+13. The shaded areas in the figure denote 68 percent standard-error confidence bands. 
+Return to text
+
+14. We are aware of the fact that our estimates are materially affected by the sample observations during the period of the Great Financial Crisis (GFC). When we drop those observations from our sample and pool pre-GFC and post-GFC observations, the estimated responses are significantly smaller. This result is consistent with the findings in the empirical literature that it is large and adverse financial shocks that have sizable and protracted effect on economic activity (see, e.g., Barnichon, Matthes, and Ziegenbein, 2022, and Forni, Gambetti, Maffei-Faccioli, and Sala, 2024) 
+Return to text
+
+15. The estimated responses of variables other than real activity growth do not change meaningfully when we use PDFP growth as indicator of aggregate demand growth. 
+Return to text
+
+16. As we did for the response of PDFP growth, we obtain the estimated responses for real growth in the various PDFP sectors by replacing GDP growth in the vector time series that we use in our estimation. 
+Return to text
+
+17. Investment in intangibles corresponds to investment in intellectual property products in the NIPA data. Residential investment in permanent site structures is the sum of investment in single-family and multifamily structures, and residential investment in other structures consists mostly of improvements and brokers' commissions on the sale of residential structures and adjoining land, and other ownership transfer costs. Residential investment in equipment is the component of residential fixed investment that consists of equipment, such as furniture or household appliances, which is purchased by landlords and included in the rental to tenants. 
+Return to text
+
+18. To avoid crowding the panels in Figure 2, we omit plotting the confidence intervals associated with each impulse response. Instead, we use diamonds to denote the point estimates of the impulse responses that are statistically different from zero at the 68 percent confidence level. 
+Return to text
+
+19. As is well known in the literature, the method of local projections produces impulse responses that can display somewhat irregular patterns, as it imposes no restrictions on the relationship between estimated responses across different horizons (e.g., Ramey, 2016, Stock and Watson, 2018, Plagborg-Møller and Wolf, 2021, and Li, Plagborg-Møller and Wolf, 2024). 
+Return to text
+
+20. The lack of a negative response of structures investment over the few quarters immediately following the shock is consistent with the lengthy time-to-plan lags that are typical of commercial construction projects. Glancy, Kutzman, and Loewenstein (2024) is one recent study that documents long plan times using microdata on the phases of construction for a large number of U.S. commercial construction projects. The initial positive estimated response in panel (b) of Figure 2 is likely due to the continuation of previously started multiperiod construction projects. 
+Return to text
+
+21. To recover the levels of the chain-weighted price indexes implied by the shocks, we also estimated the responses of growth in the chain-weighted price indexes for each of the PDFP sectors shown in Figure 2, as well as in the chain-weighted price index for PDFP as a whole, adopting the same estimation structure that we used for obtaining the corresponding responses of real growth. 
+Return to text
+
+22. See equation (4) in Whelan (2002, p. 228). 
+Return to text
+
+23. Beyond the 12
+th
+ quarter after the shock, the average deviation of the sum of the contributions from the estimated response of PDFP growth is about four basis points (i.e., 0.04 percent). 
+Return to text
+
+24. In terms of the net percentage of banks tightening lending standards, for the C&I and the RRE loan categories a one standard-deviation bank credit supply shock is equivalent to an increase of about 12.5 percent, while, for the CRE and consumer loan categories, a one standard deviation supply shock is equivalent to an increase of about 10 percent. 
+Return to text
+
+25. Because our focus is on assessing how the estimated responses of the various PDFP sectors to loan category-specific credit supply shocks contribute to the estimated overall response of PDFP growth, in the interest of saving space, we do not show here the resulting IRFs of real growth for the nine PDFP sectors. 
+Return to text
+
+Please cite this note as:
+
+Cavallo, Michele, Juan Morelli, and Rebecca Zarutskie (2024). "Unpacking the Effects of Bank Credit Supply Shocks on Economic Activity," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 24, 2024, https://doi.org/10.17016/2380-7172.3517.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

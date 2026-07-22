@@ -1,0 +1,217 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+November 05, 2021
+
+International Measures of Common Inflation
+
+Eli Nir, Flora Haberkorn, and 
+Danilo Cascaldi-Garcia
+1
+
+1. Introduction
+
+A key challenge for monetary policymakers in achieving their inflation goalsâparticularly important at the current junctureâis to be able to distinguish between persistent inflationary changes and short-term idiosyncratic shocks. The most common approach for filtering out short-term price shocks from inflation is to focus on measures of "core" inflation, traditionally defined as the change in the consumer price index (CPI) excluding food and energy prices. However, this approach includes temporary shocks in other categories. For example, a temporary tax cut for a specific good, a short-term supply disruption, or a strike in a manufacturing industry would result in changes in core inflation that do not represent changes in underlying inflationary pressures. As such, core inflation is an imperfect measure of underlying inflation in that temporary shocks in sectors other than food and energy may be misunderstood as economy-wide shocks.
+
+In this note, we propose alternative measures of inflation for selected advanced and emerging economies that better represent structural inflationary movements. The basic assumption is that each component of the inflation index combines two driving forces. The first is a trend that is common across all components. The second comes from idiosyncratic components that capture one-off changes, sector-specific developments, and measurement errors. From a policymaker point of view, disentangling these two forces is important, as the first may be sensitive to policy actions while the second may not. Following the approach developed by Luciani (2020) using U.S. data, we employ a dynamic factor model (DFM) to estimate these two forces and aggregate the effects of the first in what we call 
+common inflation
+ using data for selected advanced and emerging economies.
+
+As it is less prone to temporary shocks and measurement errors, common inflation captures the connection between prices, the real economy, and monetary policy, qualifying it as a powerful concept for policymakers to focus on. We also show that these new measures perform better than traditional core inflation series in forecasting medium-term headline inflation (two to three years ahead). Of particular relevance to the current situation, the common inflation measures suggest that the deflationary period and eventual rebound due to the COVID-19 pandemic were mainly idiosyncratic factors with only muted effects on underlying structural inflation.
+
+2. Methodology
+
+We provide common inflation measures for Canada, the Euro area, Japan, United Kingdom (UK), Brazil, and Mexico. For each economy, we calculate a common inflation estimate by applying a DFM to its disaggregated price series. The idiosyncratic inflation is then defined as the difference between the common inflation and traditional core inflation.
+
+The DFM is designed to extract the common dynamics from a set of different time series variables. In this case, the time series are the disaggregated price series that make up a country's core consumer price index (CPI) or, in the case of the euro area, the harmonized index of consumer prices (HICP). The DFM identifies the common factor across all the series, as well as the influence of the common factor on the individual series (the factor loadings). For each period, the product of the common factor and factor loading for a price series is that individual series' 
+common component
+.
+
+We then employ CPI or HICP weights to generate the aggregate common inflation by calculating a weighted sum of the common components of each individual series. We exclude price series related to food and energy, so the common inflation is the common component of core inflation. In practice, we take the fully disaggregated list of price series and re-aggregate the series that shares a high correlation, resulting in a set of about 50 to 60 price series for each country.
+
+The general specification and technical explanation of the model closely follows Luciani (2020), which produces a similar measure for the United States. Formally, for disaggregated price series $$i$$ at time $$t$$, the DFM
+2
+ can be summarized as
+
+$$$$ \pi_{it} = \chi_{it} + \xi_{it} $$$$
+
+$$$$ \chi_{it} = \lambda_i f_t $$$$
+
+$$$$ f_t = a f_{t-1} + b f_{t-2} + c f_{t-3} + d f_{t-4} + u_t \ \ \ \ \ \ \ \ \ \ \ u_t \sim N(0,Q) \ \ {i.i.d} $$$$
+
+$$$$ \xi_{it} = \rho_i \xi_{it-1} + e_{it} \ \ \ \ \ \ \ \ \ \ \ \boldsymbol{e}_t \sim N(0,\Gamma) \ \ {i.i.d} $$$$
+
+where $$\pi_{it}$$ is the 12-month inflation rate, $$\chi_{it}$$ is the common component, $$\xi_{it}$$ is the idiosyncratic component, and $$f_t$$ is the common factor. $$\lambda_i$$ is the factor loading and $$\boldsymbol{e}_t = (e_{1t}\dots e_{nt})^{\prime}$$, where $$n$$ is the number of price series. The residuals in the last two equations are normally distributed with mean 0. $$Q$$ and $$\Gamma$$ are covariance matrices of full rank.
+
+The aggregated common inflation is calculated as
+
+$$$$ \sum_{i\in{core}} w_{it} \chi_{it} $$$$
+
+Where $$w_{it}$$ are the weights for the individual disaggregated price series based on the core inflation basket. The model is estimated using maximum likelihood, implemented through the expectation-maximization algorithm. Unobserved latent factors are predicted using past observations and a Kalman Smoother.
+
+3. Common inflation results
+
+In this section we present the historical series of the estimated common inflation for each country and compare it with the traditional core and headline inflation. On average, the common inflation measures track traditional core inflation but are substantially less volatile than core and headline inflation. The high persistence of the common inflations indicate that they are indeed capturing slow moving structural changes in underlying inflation, instead of large swings originating from temporary shocks. Moreover, traditional core inflation tends to mean-revert to the common inflation in the medium-run, indicating where that series should converge when short-term shocks dissipate.
+
+In what follows, we present the results
+3
+ for each of the selected advanced and emerging economies, focusing mainly on the historical experience. Later in section 4, we analyze the current situation during the pandemic in detail.
+
+3.1. Canada
+
+The common inflation (blue line) is clearly less volatile than core inflation (red solid line), but it still adheres to the long-term trends in inflation, as shown in Figure 1. Interestingly, our common inflation closely follows an equivalent measure (purple dashed line) calculated by the Bank of Canada (BoC), as described in Khan et. al. (2013). This result is reassuring since it demonstrates how our methodology employed for data from other countries aligns with those that are already considered informative for policymakers.
+
+Figure 1. Canada common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red solid line), CPI-common component calculated by the Bank of Canada (purple dashed line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+Some anecdotal evidence highlights the information uncovered by the common inflation in Canada. From December 2015 to March 2017, passenger vehicle purchase inflation and its contribution to core inflation was much higher than usual. The common component recognized this and kept its contribution relatively steady. From 2018 to 2019, common inflation was pinned down to the two percent inflation target established by the BoC even though headline inflation (black line) fluctuated above the target.
+
+3.2. Euro area
+
+The common inflation for the euro area has been remarkably stable in recent years. Since 2016, core inflation (red line) has oscillated around a value a little under one percent, well below the two percent target established by the European Central Bank, as presented in Figure 2. Common inflation (blue line) remained steady at or just below 1 percent during this period until the COVID-19 pandemic. For example, in April 2017, air transportation prices had a major spike that quickly dissipated. Common inflation correctly classified this shock as idiosyncratic.
+
+Figure 2. Euro area common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+3.3. Japan
+
+Figure 3 shows that the common inflation (blue line) for Japan has been hovering around zero for years now, exacerbating the difficulty of the Bank of Japan to increase inflation towards its two percent target. In March 2017, the communications price index had a major spike and was the biggest contributor to the value of core inflation. However, the common component recognized the spike and filtered it out.
+
+Figure 3. Japan common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+3.4. United Kingdom
+
+In Figure 4, common inflation (blue line) for the UK is substantially smoother and slower moving than the traditional core inflation (red line). It is also below the Bank of England's two percent target and correctly captures core inflation's acceleration up to 2018. Afterwards, core inflation starts to converge to the lower level of common inflation until the middle of 2019. July 2019 saw a positive spike in inflation for recreational items, which was also ignored by the common inflation.
+
+Figure 4. United Kingdom common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+3.5. Brazil
+
+We have also applied the common inflation method to selected emerging economies with much more volatile inflationary movements. Brazil's common core inflation (blue line) closely tracks the movements of core inflation (red line) with less volatility and short-term spikes, as seen in Figure 5. It showed a substantial slowdown from 2016 to mid-2018, converging to the 3-to-6 percent inflation target band set by the Central Bank of Brazil for that year. Brazil seems to be facing a stronger acceleration on common inflation with the rebound from the COVID-19 shock than the other countries considered in this note.
+
+Figure 5. Brazil common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+3.6. Mexico
+
+Figure 6 shows that Mexico's common core inflation (blue line) sits between headline (black line) and core inflation (red line). While both core and headline spiked in 2017, the common inflation showed a substantially more muted increase, treating most of the spike as temporary. Indeed, from 2018 onward, core inflation slowed down toward the lower level of the common inflation. Until the COVID-19 pandemic, common inflation has consistently remained above the mid-point 3 percent inflation target set by the Bank of Mexico, though inside its 2-to-4 percent band.
+
+Figure 6. Mexico common inflation
+
+Note: The figure presents the historical evolution of 12-month headline inflation (black line), core inflation (ex-food and energy, red line), and the common inflation (blue line).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+4. The COVID-19 pandemic
+
+Common inflation remained less volatile and fell substantially less during the onset of the COVID-19 pandemic than traditional core inflation (excluding food and energy). Figure 7 presents the evolution of the common component (red bars) and idiosyncratic component (white bars) of core inflation (black line) since January 2020.
+
+Except for Mexico, every country saw steep drops in core inflation in the early months of 2020 while the common component decreased at a much slower rate. As businesses and sectors adapted to lockdown restrictions, trade disruptions, and less consumer spending, common inflation classified most of the big dips in core inflation as temporary shocks.
+
+Indeed, the deflationary pressures did not last long, and by the beginning of 2021, most of the core inflation measures already converged back to the common inflation. In real-time, the discrepancy between common and the traditional core inflation over 2020 indicated that the large deflationary swings were temporary. With hindsight it is now possible to say that such evaluation was correct.
+
+Figure 7. Decomposition of common inflation on the onset of the COVID-19 pandemic
+
+Note: The figure presents the decomposition of core inflation (black lines) between the common inflation (red bars) and the idiosyncratic component (white bars).
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+More recently, some countries have experienced the opposite effect in mid-2021: Canada, the UK, and Brazil present core inflation measures above their central bank's mid-point inflation targets. For Canada and the UK, common inflation indicates that the upward swings are mainly due to temporary factors, such as base effects and side-effects of the economic re-opening.
+
+The euro area is seeing a steady increase in the common inflation, reaching its highest point in the past seven years. While most of the increase is still temporary, there seems to be some structural pass-through in place. This increase may be a welcome development, as the common component still sits well below the 2 percent target set by the European Central Bank. For Brazil, the recent increase seems to be mainly structural, with its common inflation situating almost at the upper bound of the 2-to-5 percent inflation target band set by the Central Bank of Brazil for 2021.
+
+5. Using common inflation to forecast headline inflation
+
+In this section, we show that common inflation is also useful for forecasting medium-term headline inflation with higher predictability than traditional core inflation measures. If the common inflation correctly distils the inflation measure from temporary shocks and measurement errors, it is expected that once these deviations dissipate, headline will converge back to the common inflation level.
+
+We tested the forecast power of common inflation for each country and for forecast horizons (
+h
+) ranging from 1 to 36 months with the following regression
+
+$$$$ y_{t+h} = \alpha + \beta x_t + \varepsilon_{t+h} $$$$
+
+Where $$y_{t+h}$$ is twelve-month headline inflation $$h$$ periods ahead, and $$x_t$$ is either the common inflation at time $$t$$ or the traditional core inflation at time $$t$$. We can then compare the in-sample root-mean-square deviation of the two regressions. For each $$h$$, we define $$RMSD_{hCommon}$$ and $$RMSD_{hCore}$$ as the root-mean-square deviation of the regression using common and traditional core inflation, respectively. The forecast power score of the common component for each $$h$$ is then calculated as
+
+$$$$ {Score}_h = \frac{ RMSD_{hCommon}}{RMSD_{hCore}} \times 100 . $$$$
+
+It follows that the score will be below 100 if the RMSD for the common inflation is lower than the traditional core inflation and above 100 otherwise. The lower the score, the better the predictive performance of common inflation over traditional core inflation at each $$h$$ horizon. Figure 8 presents the resulting forecast power scores for different countries.
+
+Figure 8. Power of common inflation in forecasting headline inflation
+
+Note: The figure presents the headline inflation forecast performance up to 36 months ahead using the common inflation as input, relative to using core inflation as input.
+
+Source: Haver Analytics and authors calculations.
+
+Accessible version
+
+For Canada, the UK, and Japan, the forecast power score stays below 100 for all forecast horizons, indicating a better performance for common inflation than traditional core. For every country except Japan, the forecast power sees a performance peak at around the two-year mark. Canada performs the best of all the countries at the one-year mark while the UK outperforms the other three at the two-year mark. Japan has relatively consistent performance until the three-year mark, where it sees a substantial boost in forecast power. As for the euro area, we see a crucial trough at the two-year mark, indicating that although it oscillates around the 100-mark threshold, it holds valuable forecasting power over the conventional core inflation.
+
+Again, an important benchmark is the comparison of our Canada common inflation and the BoC's CPI-Common inflation. Our proposed measure performs as good or marginally better than the BoC's version for every forecast horizon.
+
+For the emerging market economies, we see that the score shows strong forecasting performance in comparison to core for Mexico for all forecast horizons, peaking around 18 months. It also shows substantial gains for Brazil starting after 20 months. The forecast power of common inflation is undistinguishable or marginally lower than core inflation for Brazil in the short-term.
+
+6. Conclusion
+
+In this note we present common inflation measures for selected advanced and emerging economies free of temporary factors and measurement errors. The proposed series are less volatile and better represent underlying inflationary forces than traditional core inflation measures. Common inflation is a powerful tool for inflation evaluation since it prevents researchers and policymakers from misleadingly interpreting short-term, temporary fluctuations as structural inflationary movements. It also provides an accurate medium-term forecast for headline inflation once the temporary factors dissipate. Anecdotally, common inflation correctly indicated that a large part of the deflationary pressures at the onset of the COVID-19 pandemic was temporary and mostly reverted by the early months of 2021.
+
+7. References
+
+Khan, M., Morel, L., & Sabourin, P. (2013). "The Common Component of CPI: An Alternative Measure of Underlying Inflation for Canada," Staff Working Papers 13-35. Bank of Canada.
+
+Luciani, M. (2020). "Common and idiosyncratic inflation," Finance and Economics Discussion Series 2020-024. Washington: Board of Governors of the Federal Reserve System, 
+https://doi.org/10.17016/FEDS.2020.024
+.
+
+1. We thank Shaghil Ahmed, Harun Alp, Giuseppe Fiori, Joaquín García-Cabo, Anna LipiÅska, Matteo Luciani, Andrea De Michelis, Hyunseung Oh, Musa Orak, Andrea Raffo, Patrice Robitaille, Samer Shousha, Mariano Somale, and Thiago Teixeira Ferreira for comments and suggestions. 
+Return to text
+
+2. We implement the DFM with four lags in the factor transition equation along with no factor lags in the observation equation for the common component. 
+Return to text
+
+3. The DFM is applied to data starting on January 1st of: 1996 for the Euro area, 1993 for the UK, 2000 for Japan, 1990 for Canada, 2010 for Mexico, and 2007 for Brazil. 
+Return to text
+
+Please cite this note as:
+
+Nir, Eli, Flora Haberkorn, and Danilo Cascaldi-Garcia (2021). "International Measures of Common Inflation," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 05, 2021, https://doi.org/10.17016/2380-7172.3012.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

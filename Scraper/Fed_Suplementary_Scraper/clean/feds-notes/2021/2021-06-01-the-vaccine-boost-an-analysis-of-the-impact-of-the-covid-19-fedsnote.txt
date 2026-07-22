@@ -1,0 +1,716 @@
+FEDS Notes
+
+Twitter
+
+June 01, 2021
+
+The Vaccine Boost: An Analysis of the Impact of the COVID-19 Vaccine Rollout on Measures of Activity
+
+Ashley Sexton and
+Maria D. Tito
+1
+
+Several measures of economic activity have shown improvement since the start of the COVID-19 vaccine rollout. This note quantifies the impact of the rollout across four main dimensions of activity: spending, mobility, education, and employment.
+
+Our analysis draws on data from the Census Bureau Household Pulse Survey (HPS) to quantify the progress in vaccine administration across states and population subgroups. With the earliest information on the details of the rollout dating back to January 18, these data offer a longer time horizon and a fairly accurate view when compared with official sources.
+2
+In particular, figure 1 compares data on vaccine administration from HPS with U.S. statistics from the U.S Centers for Disease Control and Prevention (CDC). The number of HPS respondents that reported to have received or plan to receive all the required doses (red diamonds) appears well-aligned with the CDC data on the number of people who have received at least one dose (dashed blue line), a subset of the total doses administered (dark blue line). Of those that have received or plan to receive a vaccine, HPS offers additional state-level details on age breakdowns: across all states, people aged 65 years or older, which were among the earliest groups to be eligible for a vaccine, represented the largest share of potential and actual recipients early on (orange squares), but the number of potential and actual recipients of age 16+ subsequently grew at a faster rate as eligibility was gradually expanded to the entire adult population over time. In addition, as for the total adult population, the HPS aggregate for the group of people aged 65+ tracks very closely the corresponding CDC statistics (dotted gray line).
+
+Figure 1. Vaccine Administration
+
+Note: Administered and one or more doses are seven-day moving averages. Received and those for 65+ years old capture the number of people that have received or planned to receive all required doses.
+
+Source: U.S. Centers for Disease Control and Prevention (CDC) and Census Bureau Household Pulse Survey (HPS).
+
+Accessible version
+
+Even as the vaccine rollout has picked up speed in recent months, some heterogeneity is still present across states: for example, the share of people that have received at least one dose varies between 32 percent in Mississippi and 61 percent in New Hampshire as of May 5 vs. a national figure of 44 percent. In our exploration, we will leverage the state-level variation in the rollout for the whole population and for subgroup aged 65 or older to evaluate its effects on various outcomes. In particular, our baseline specification relates the number of people of a specific group in state
+s
+that received or was planning to receive a vaccine as of 2 weeks earlier with current measures of activity,
+3
+
+$$$ y_{st} = \beta_0 + \beta_1 \cdot \mathrm{ln}{Received}_{s,t-14} + \gamma \cdot X_{st} + d_s + \varepsilon_{st} $$$
+
+The 14-day lag between the main regressor and any outcome captures a possible delayed response in activity, given that immunization is expected to arise about 14 days after receiving a dose.
+4
+Our specification also includes state fixed effects to absorb time-invariant differences across states and other controlsâspecifically, month/holiday dummies, the change in the number of cases and deaths over the past two weeks, heating degree days, and the Oxford stringency index, a composite measure of non-pharmaceutical interventionsâthat may be correlated with vaccine administration and influence the pattern of activity.
+
+Spending
+
+The spending indicators in our analysis draw upon sector-level data from HPS, OpenTable, and SafeGraph. In particular, HPS collects data on changes in spending behavior over the previous week related to restaurants, medical/dental appointments, and housekeeping/caregiving services, as well as to the frequency of visiting stores; OpenTable publishes an index of year-over-year growth in the number of guests served in reservation-taking restaurants; and SafeGraph aggregates data on customers' visits to select businesses using cellphone GPS signals.
+5
+Because of data availability, we focus on 4 industries: restaurants, retail, healthcare, and other personal services.
+
+Figure 2 summarizes recent trends in spending across sectors. Since the beginning of the year, indicators of spending have been moving higher in all sectors, although the recovery has been more pronounced for restaurants and a few categories of retail spending; relatedly, the share of people that reported in HPS to have taken fewer trips to the stores than normal because of the coronavirus pandemic over the previous week declined 15 percentage points over the survey period, consistent with the direction of the changes in spending. Looking at medical and other personal services, SafeGraph indicators recorded some increases in early March but have moved sideways ever since; similarly, HPS measures show little change in the share of people that have attended in-person medical/dental appointments or engaged in housekeeping/caregiving services over the period of analysis.
+
+Figure 2. Measures of Spending
+
+Figure 2a. Restaurants
+
+Note: OpenTable index measures percentage changes in seated reservations. SafeGraph measure represents the percentage change in visits to fullâ and limitedâtime restaurants; HPS denotes the share of people reporting to have resumed going to a restaurant in the last 7 days.
+
+Source: OpenTable, SafeGraph, and HPS.
+
+Figure 2b. Retail
+
+Note: Grocery, pharmacies, and nonessential capture percentage change in visits to those establishments. HPS denotes the share of people reporting to have taken fewer trips to stores than normal because of the coronavirus pandemic over the last 7 days.
+
+Source: SafeGraph and HPS.
+
+Figure 2c. Medical Services
+
+Note: SafeGraph measures percentage changes in visits to medical establishments; HPS denotes the share of people reporting to have attended an inâperson medical or dental appointments in the last 7 days.
+
+Source: SafeGraph and HPS.
+
+Figure 2d. Other Personal Services
+
+Note: Auto repairs, personal care, and worship capture percentage change in visits to those places. HPS denotes the share of people reporting to have resumed or started new housekeeping/caregiving services in the last 7 days.
+
+Source: SafeGraph and HPS.
+
+Accessible version
+
+Tables 1 and 2 quantify the relationship between the vaccine rollout and each spending indicator; table 1 focuses on restaurant and retail spending, while table 2 summarizes the effects for personal services.
+
+Table 1. Effects of the Vaccine Rollout and Restaurant and Retail Spending
+
+Variables
+
+Restaurants
+
+Retail
+
+HPS
+
+OpenTable
+
+SafeGraph
+
+SafeGraph
+
+HPS
+
+Grocery
+
+Pharmacies
+
+Nonessential
+
+Receivedt-14
+
+0.320***
+
+0.097***
+
+0.060**
+
+0.136***
+
+0.105***
+
+0.011
+
+-0.174***
+
+(0.067)
+
+(0.022)
+
+(0.025)
+
+(0.023)
+
+(0.023)
+
+(0.021)
+
+(0.033)
+
+Received, 65 or oldert-14
+
+0.134***
+
+-0.076***
+
+-0.047
+
+(0.013)
+
+Additional Controls
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+State FE
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+Obs.
+
+249
+
+234
+
+299
+
+299
+
+299
+
+299
+
+249
+
+R-Squared
+
+0.495
+
+0.675
+
+0.814
+
+0.833
+
+0.800
+
+0.772
+
+0.511
+
+State IDs
+
+51
+
+39
+
+51
+
+51
+
+51
+
+51
+
+51
+
+Source: OpenTable, SafeGraph, HPS.
+
+Restaurants, HPS: Log-number of people reporting to have resumed going to a restaurant in the past 7 days.
+
+Restaurants, OpenTable: Percentage change in seated diners at reservation-taking restaurant relative to 2019.
+
+Restaurants, SafeGraph: Percentage change in visits to full- and limited-time restaurants relative to 2019.
+
+Retail, SafeGraph: Percentage change in visits to grocery stores, pharmacies, and nonessential retail stores relative to 2019.
+
+Retail, HPS: Log-number of people reporting to have taken fewer trips to stores than normal because of the pandemic in the past 7 days.
+
+Received (65 or older): Log-number of people (of age 65 or older) reporting to have received or plan to receive all required doses.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent.
+
+Notes: FE regressions. All specifications include state fixed effects, change in new cases and deaths relative to the prior 14 days, Oxford Stringency Index, heating degree days, and month dummies. The specifications that includes Received, 65 or older, apply to dependent variables also calculated for people 65 years of age or older. Robust standard errors, clustered at the state level, are reported in parenthesis.
+
+The estimates in table 1 confirm that the vaccine rollout has significantly boosted retail and restaurant spending. To keep effects comparable across different outcomes, we'll quantify the changes associated with a 1.5-standard deviation (sd) increase in the number of people receiving or planning to receive the vaccine, or roughly additional 2.25 million recipients, the average increase in the number of recipients since mid-Januaryâhereafter, also referred to as the
+baseline shock
+âand measure the response in terms of the variability of outcomeâthat is, in terms of standard deviations of each dependent variable. Specifically, after controlling for month dummies, the change in the number of cases and deaths, heating degree days, and differences in restrictions on activity across states, a 1.5-sd increase in the number of vaccine recipients translates into an increase of 45-to-55 percent of an sd in proxies of restaurant spending, of 175 percent of an sd in grocery visits, and of 110 percent of an sd in visits to pharmacies; relatedly, the number of people reporting fewer trips to stores than normal over the previous week declined almost 30 percent of an sd following a baseline shock in vaccinations. Interestingly, the elasticities for the group of people ages 65 or older are significantly lower than those for the entire adult population, suggesting that younger age groups have resumed activity as soon as older age groups, which face a higher risk of severe illness from a COVID-19 infection, had access to the vaccine rather than waiting for their own eligibility.
+
+Visits to nonessential retail shopsâwhich include clothing stores; electronics and appliance stores; furniture stores; and sporting goods, hobby, book, and music storesâdo not appear to have been significantly affected by the progress in the vaccine rollout, nor have most indicators of personal services spending summarized in table 2. In our data, the only exception is captured by visits to places of worship, which rose almost 45 percent of an sd in response to a 1.5-sd increase in the number of vaccinations. By contrast, visits to hospitals and other medical offices have significantly declined as the vaccine rollout has picked up, possibly a reflection of the reduced need for medical care related to COVID-19 after vaccines became available.
+
+Table 2. Effects of the Vaccine Rollout on Personal Services
+
+Variables
+
+Healthcare
+
+Other Personal Services
+
+HPS
+
+SafeGraph
+
+SafeGraph
+
+HPS
+
+Auto Repair
+
+Pers Care
+
+Worship
+
+Household
+
+Receivedt-14
+
+0.014
+
+-0.042***
+
+-0.031
+
+-0.013
+
+0.056***
+
+0.160*
+
+(0.024)
+
+(0.013)
+
+(0.021)
+
+(0.024)
+
+(0.019)
+
+(0.092)
+
+Received, 65 or oldert-14
+
+0.032
+
+-0.133
+
+(0.018)
+
+(0.082)
+
+Additional Controls
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+State FE
+
+y
+
+y
+
+y
+
+y
+
+y
+
+y
+
+Obs.
+
+249
+
+299
+
+299
+
+299
+
+299
+
+248
+
+R-Squared
+
+0.111
+
+0.745
+
+0.733
+
+0.681
+
+0.698
+
+0.021
+
+State IDs
+
+51
+
+51
+
+51
+
+51
+
+51
+
+51
+
+Source: SafeGraph and HPS.
+
+Heathcare, HPS: Log-number of people reporting to have attended in-person medical or dental appointment in the past 7 days.
+
+Healthcare, SafeGraph: Percentage change in visits to medical establishments relative to 2019.
+
+Other Personal Services, SafeGraph: Percentage change in visits to auto repair, personal care, and worship locations relative to 2019.
+
+Other Personal Services, HPS: Log-number of people reporting to have resumed or started new housekeeping or caregiving services in the past 7 days.
+
+Received (65 or older): Log-number of people (of age 65 or older) reporting to have received or plan to receive all required doses.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent.
+
+Notes: FE regressions. All specifications include state fixed effects, change in new cases and deaths relative to the prior 14 days, Oxford Stringency Index, heating degee days, and month dummies. The specifications that includes Received, 65 or older apply to dependent variables also calculated for people 65 years of age or older. Robust standard errors, clustered at the state level, are reported in parenthesis.
+
+Mobility
+
+To quantify mobility patterns, we complement the SafeGraph index of visits to gas stations with the Apple driving index, the INRIX index of passenger distance traveled, and the HPS data on changes in the number of trips by bus, rail, or ridesharing services because of the coronavirus pandemic over the previous week.
+6
+
+Figure 3. Mobility
+
+Note: SafeGraph capture percentage change in visits to gas stations. Apple and INRIX are 7âday moving averages of percentage changes in passenger distance traveled. HPS denotes the share of people reporting to have taken fewer trips by bus, rail, or rideâsharing services than normal because of the coronavirus pandemic over the previous 7 days.
+
+Source: SafeGraph, Apple, INRIX, and HPS.
+
+Accessible version
+
+Similar to spending measures, mobility indicators improved since the beginning of the year; our analysis in table 3 suggests that a large part of this improvement relates to the progress with vaccinations. Visits to gas stations and the Apple driving index have increased about 105 percent of an sd and 60 percent of an sd, respectively, in response to a baseline shock in the number of vaccine recipients; relatedly, people have shown more confidence in commuting and traveling, as the number of respondents to HPS that reported to have taken fewer trips by bus, rail, or ride-sharing services than normal because of the coronavirus pandemic over the previous 7 days declined about 15 percent of an sd deviation for the same change in our main regressor.
+
+Table 3. The Effect of the Vaccine Rollout on Measures of Mobility
+
+Variables
+
+SafeGraph
+
+Apple
+
+INRIX
+
+HPS
+
+Received$$$ _{t-14} $$$
+
+0.116***
+
+0.144***
+
+0.036
+
+-0.113***
+
+(0.028)
+
+(0.023)
+
+(0.022)
+
+(0.029)
+
+Received, 65 or older$$$ _{t-14} $$$
+
+-0.061**
+
+(0.023)
+
+Additional Controls
+
+y
+
+y
+
+y
+
+y
+
+State FE
+
+y
+
+y
+
+y
+
+y
+
+Obs.
+
+299
+
+250
+
+299
+
+245
+
+R-Squared
+
+0.872
+
+0.826
+
+0.548
+
+0.304
+
+State IDs
+
+51
+
+51
+
+51
+
+51
+
+Source: SafeGraph, Apple, INRIX, and HPS.
+
+SafeGraph: Percentage change in visits to gas stations relative to 2019.
+
+Apple: Percentage change in the 7-day moving average of the driving index.
+
+INRIX: Percentage change in the 7-day moving average of passenger distance traveled.
+
+HPS: Log-number of people reporting to have taken fewer trips by bus, rail, or ride-sharing services than normal because of the pandemic.
+
+Received (65 or older): Log-number of people (of age 65 or older) reporting to have received or plan to receive all required doses.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent.
+
+Notes: FE regressions. All specifications include state fixed effects, change in new cases and deaths relative to the prior 14 days, Oxford Stringency Index, heating degree days, and month dummies. The specifications that includes Received, 65 or older apply to dependent variables also calculated for people 65 years of age or older. Robust standard errors, clustered at the state level, are reported in parenthesis.
+
+Education and Employment
+
+Turning to education, we rely on SafeGraph visits to universities and the share of respondents that reported in HPS four or more days of in-person contact with teachers for their children over the previous week to assess developments in the sector. The pattern of education indicators is subject to larger variability when compared with other seriesâand highlighted in the top panel of figure 4âlikely due to the effects of holidays on the school calendar: in fact, significant declines in our education indicators occur around Presidents' Day and in late March/early April, a period marked by Passover, Holi, and Easter. Smoothing through this variability, however, both measures show an upward trend. The effects of the vaccine rollout on these indicators (first two columns of table 4), however, are mixed. In particular, given a 1.5-sd increase in vaccinations, people reporting four or more days of in-person instruction for their children rises by about 15 percent of an sd, while visits to universities have not been significantly affected so far.
+
+Figure 4. Measures of Spending
+
+Figure 4a. Education
+
+Note: Universities denote visits to those locations. HPS denotes share of people whose children had inâperson contact with teachers 4 or more days in the last 7 days.
+
+Source: SafeGraph and HPS.
+
+Figure 4b. Employment
+
+Note: Employees Working and Hours Worked are 7âday moving averages of percent changes; HPS denotes share of people expecting loss of employment income over the next 4 weeks.
+
+Source: Homebase and HPS.
+
+Accessible version
+
+Results are mixed also in terms of labor market outcomes (last three columns of table 4). On the one hand, the vaccine rollout has tempered expectations of further loss of employment income: following a baseline shock in vaccinations, the number of people in the HPS survey expecting employment income loss over the next 4 weeks declined by about 30 percent of an sd. On the other hand, the progress in vaccine administration has not been one of the factors supporting the recovery (bottom panel, figure 4) in the number of employees working or hours worked in small businessesâindicators tracked by Homebase.
+7
+
+Table 4. Effects of the Vaccine Rollout on Measures of Education and Employment
+
+Variables
+
+Education
+
+Employment
+
+HPS
+
+SafeGraph
+
+HPS
+
+Homebase
+
+Hours Worked
+
+Employees Working
+
+Receivedt-14
+
+0.090***
+
+0.008
+
+-0.184***
+
+0.005
+
+-0.001
+
+(0.029)
+
+(0.025)
+
+(0.025)
+
+(0.015)
+
+(0.014)
+
+Received, 65 or oldert-14
+
+-0.099
+
+-0.099***
+
+(0.067)
+
+(0.031)
+
+Additional Controls
+
+y
+
+y
+
+y
+
+y
+
+y
+
+State FE
+
+y
+
+y
+
+y
+
+y
+
+y
+
+Obs.
+
+247
+
+249
+
+249
+
+249
+
+249
+
+R-Squared
+
+0.215
+
+0.342
+
+0.629
+
+0.422
+
+0.395
+
+State IDs
+
+51
+
+51
+
+51
+
+51
+
+51
+
+Source: SafeGraph, Homebase, and HPS.
+
+Education, HPS: Log-number of people with children having had live contact with teachers for 4 or more days over the past 7 days.
+
+Education, SafeGraph: Percentage change in the number of visits to higher education establishments relative to 2019
+
+Employment, HPS: Log-number of people reporting to expect employment income loss over the next 4 weeks.
+
+Employment, Homebase: Percentage change in the number of total hours worked or employees working relative to 2019 in small business establishments.
+
+Received (65 or older): Log-number of people (of age 65 or older) reporting to have received or plan to receive all required doses.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent.
+
+Notes: FE regressions. All specifications include state fixed effects, change in new cases and deaths relative to the prior 14 days, Oxford Stringency Index, heating degree days, and holiday dummies. The specifications that includes Received, 65 or older apply to dependent variables also calculated for people 65 years of age or older. Robust standard errors, clustered at the state level, are reported in parenthesis.
+
+Implications for Aggregate Economic Activity
+
+Our analysis suggests that many sectors of the economy have received a significant boost from the progress in the vaccine rollout, explaining between 40 percent and nearly all of the variation in indicators since mid-January.
+8
+But what do those effects ultimately tell us about aggregate economic activity? A direct inference can be drawn from spending indices, which are more readily comparable with monthly retail sales data. While visits to grocery stores and to pharmacies do not seem to capture the variation in spending in those sectors, visits to restaurants and seated reservation are correlated with more than 50 percent of the changes in spending in the food and accommodation sector (NAICS 722); we also find a high correlation between visits to nonessential stores and spending in that group of industries, but we cannot draw aggregate implications from this sector due to the insignificant effect of the rollout. Thus, our aggregate quantification focuses on the findings for the restaurant industry. Since the beginning of the year, indicators for spending at restaurants rose around 40 percentage points, with about 15 percentage points of that increase associated with the vaccine rollout. In turn, the effect of the rollout accounts for about 9 percentage points of the increase in spending in the food and accommodation sector, which translates into 0.3 percentage point of higher GDP in the first quarter. While likely a lower bound, this estimate underscores the importance of the availability of vaccines and their effects on the economy.
+
+References
+
+Apple (2021).
+Mobility Trends Reports,
+available at https://covid19.apple.com/mobility
+
+Thompson MG, Burgess JL, Naleway AL, et al.
+Interim Estimates of Vaccine Effectiveness of BNT162b2 and mRNA-1273 COVID-19 Vaccines in Preventing SARS-CoV-2 Infection Among Health Care Personnel, First Responders, and Other Essential and Frontline Workers â Eight U.S. Locations, December 2020âMarch 2021
+. MMWR Morb Mortal Wkly Rep 2021; 70:495â500. DOI:
+http://dx.doi.org/10.15585/mmwr.mm7013e3
+
+U.S. Census Bureau (2021).
+Household Pulse Survey
+,
+Phase 3
+, available at
+https://www.census.gov/programs-surveys/household-pulse-survey/data.html
+
+U.S. Centers for Disease Control and Prevention (2021).
+COVID Data Tracker
+, available at
+https://covid.cdc.gov/covid-data-tracker/
+
+1. The views expressed in the article are those of the authors and do not necessarily reflect those of the Federal Reserve System.
+Return to text
+
+2. Data published by the U.S Centers for Disease Control and Prevention on the COVID-19 vaccine doses received by the population that include geographic details and age breakdowns go back only to March 9, 2021.
+Return to text
+
+3. In the version for the subgroup of 65 or more years of age, the dependent and main independent variables are specified for that group.
+Return to text
+
+4. While full protection is achieved around 14 days after the second dose, some studies have indicated a high degree of effectiveness of partial immunization (of around 80 percent for both Moderna's and Pfizer's vaccines) 14 days after the first dose but before the second dose. See, for example, Thompson et al. (2021).
+Return to text
+
+5. The SafeGraph data encompass more than 40 million devices and identify visits to about 3 million establishments.
+Return to text
+
+6. INRIX developed a series of flash indicators that provide a snapshot of the transportation system during the COVID-19 pandemic. We rely on the index of passenger distance traveled, that is, the estimated on-road distance traversed by each trip for passenger vehicles.
+Return to text
+
+7. Homebase provides clock-in/clock-out software for small businesses; these data can be used to construct employment activity indicators in almost real time. See http://joinhomebase.com/data for more details on Homebase data.
+Return to text
+
+8. The increase in the number of vaccine recipients since mid-January explains 40-to-70 percent of the variation in restaurant indicators; 45 percent of the variation in visits to places of worship and to gas stations; 60 percent of the variation in visits to pharmacies; 75 percent of the variation in the Apple mobility index; 80 percent of the variation in visits to grocery stores and in the expectation of employment income loss; and nearly all of the variation in the number of people reporting fewer trip to stores, fewer trips by bus, rail, and ride sharing services, and four or more days of in-person contact with teachers for their children over the same time period.
+Return to text
+
+Please cite this note as:
+
+Sexton, Ashley, and Maria D. Tito (2021). "The Vaccine Boost: An Analysis of the Impact of the COVID-19 Vaccine Rollout on Measures of Activity," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 01, 2021, https://doi.org/10.17016/2380-7172.2923.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

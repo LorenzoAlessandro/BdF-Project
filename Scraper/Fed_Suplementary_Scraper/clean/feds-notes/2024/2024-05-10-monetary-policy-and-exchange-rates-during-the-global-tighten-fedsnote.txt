@@ -1,0 +1,586 @@
+FEDS Notes
+
+Twitter
+
+May 10, 2024
+
+Monetary Policy and Exchange Rates during the Global Tightening
+1
+
+Emre Yoldas
+
+Most central banks tightened monetary policy considerably over the past few years as inflation surged globally. Though effects of the COVID pandemic on global supply chains and labor markets was a common factor driving inflation higher across economies, domestic factors led to notable variation in the timing and extent of monetary policy responses. Against this backdrop, exchange rates registered notable movements and many commentators highlighted relative stance of monetary policy as the main driver. Although both previous Federal Reserve Board staff analysis and the academic literature suggest shocks to interest rate differentials have limited explanatory power for exchange rate movements, it is possible that this time was different due to the unusual nature of the shocks that hit the global economy.
+2
+
+This note examines this issue, focusing on the following questions: To what extent do surprise changes in policy rates explain movements in a broad set of currencies against the dollar in recent years that saw a surge in inflation? How did exchange rates move in different phases of the tightening cycle as expectations for monetary policy evolved? How did other factors such as risk appetite in global financial markets contribute to the exchange rate movements? To answer these questions, we use survey and financial asset price data and examine how interest rate surprises correlated with changes in exchange rates since early 2021. Our findings can be summarized as follows:
+
+On average, exchange rate movements are not generally consistent with survey-based interest rate surprises. In the cross section of exchange rates as well, there is very limited systematic variation with respect to surprises in relative policy rates obtained from surveys.
+
+However, when we restrict our attention to advanced economies, we observe that exchange rate movements are directionally consistent with survey-based interest rate surprises on average. Moreover, we find statistically significant and economically meaningful correlations between relative interest rate surprises and advanced economy exchange rates throughout the tightening cycle. Explanatory power of these regressions is generally limited, though, and intercept terms are large and significant, highlighting the importance of other factors as well.
+
+Time series analysis using policy rates implied by financial derivatives also suggests economically meaningful effects of shifts in monetary policy expectations in driving advanced economy currencies.
+
+Co-movement of exchange rates with broad measures of risk appetite has been stronger than that with changes in market-implied policy rates, on average, since early 2021. This was especially the case when the U.S. dollar sharply appreciated in 2022.
+
+As risk appetite in broader markets improved amid disinflation and resilient economic activity, the dollar retraced from its 2022 peak. This weakening in the dollar was about in line with its empirical relationship with broad risk measures. Currently, the Federal Reserve Board's advanced foreign economy (AFE) dollar index is about 13 percent higher than early September of 2021, when market-implied policy rates in the U.S. started to move up. Our analysis suggests that about half of this increase can be attributed to the larger surprises in the path of policy rates in the U.S.
+
+Evidence from Survey Data
+
+As an overall measure of shifts in policy expectations, we use a simple average of surprises relative to expectations in a given year and revisions for the next year from the Bloomberg surveys of economists.
+3
+Specifically, we calculate
+
+$$$$ \Delta PE_{i,t} = \frac{1}{2} (r_{i,t|t}^{actual} â r_{i,t|t-1}^{forecast}) + \frac{1}{2} (r_{i,t+1|t}^{forecast} â r_{i,t+1|t-1}^{forecast}) \ , (1)$$$$
+
+where
+r
+is the policy rate in country
+i
+at the end of year
+t
+and the second time subscript indicates the time of the forecast.
+4
+To illustrate with a numerical example, consider how expectations for the federal funds rate evolved in 2022. At the end of 2021, based on survey data, the average of analysts' expectations for the upper end of the target range for year-end 2022 and year-end 2023 were 0.75 percent and 1.55 percent, respectively. However, the realized rate for 2022 was 4.5 percent and the average expectation for 2023 was revised up to 4.7 percent by the end of 2022. Hence, our summary measure for the shift in U.S. policy expectations in 2022 is $$ \Delta PE_{US,2022} = 0.5 \times [(4.5 â 0.75) + (4.7 â 1.55)] = 3.45 $$ percentage points.
+
+Table 1 reports the changes in policy expectations described above and aggregate measures of the exchange value of the dollar in the form of equally-weighted averages from 2021 to 2023.
+5
+In 2021, policy expectations moved little in the U.S. and most AFEs as inflation rose from relatively low levels and private economists generally did not expect the rise in inflation to be persistent. Nonetheless, the dollar appreciated around 5 percent against AFE currencies on average. Policy expectations moved notably higher in emerging market economies (EMEs) as many central banks reacted to rising inflation, in part reflecting concerns about stability of inflation expectations given the historical experience of EMEs with high inflation. Despite this material change in the outlook for relative monetary policy favoring EME currencies, the dollar appreciated almost 8 percent against EME currencies on average.
+
+Table 1: Changes in Policy Expectations, Inflation Forecasts, and Exchange Rates
+
+Policy Expectations
+
+Exchange Rates
+
+2021
+
+2022
+
+2023
+
+2021
+
+2022
+
+2023
+
+ALL
+
+1.3
+
+3
+
+0.7
+
+6.9
+
+7
+
+-3.3
+
+AFE
+
+0.3
+
+2.2
+
+1
+
+5.5
+
+9.3
+
+-0.3
+
+EME
+
+1.9
+
+3.5
+
+0.5
+
+7.9
+
+5.5
+
+-5.3
+
+U.S.
+
+0.23
+
+3.45
+
+0.9
+
+Note: Equally weighted averages across respective country groups reported. Changes in policy expectations and exchange rates are measured in percentage points. See equation (1) in the text for description of the policy equations measure. Exchange rates are measured as foreign currency per dollar so positive values indicate appreciation of the U.S. dollar.
+
+In 2022, policy expectations changed significantly in most economies as inflation surprised further on the upside and proved more persistent than expected. The increase in our policy expectations indicator for the U.S. was historically large and above the cross-country average, but the dollar appreciation was about the same as in 2021. Nonetheless, dollar appreciation against advanced economy currencies was directionally consistent with the larger increase in the U.S. policy expectations measure.
+
+Changes in policy expectations and inflation forecasts were relatively modest in 2023 compared with 2022. The policy expectations indicator moved up slightly more in AFEs than in the U.S. and the dollar depreciated modestly against AFE currencies on average.
+6
+However, the dollar depreciated notably against EME currencies on average, even as some EMEs started to cut rates and the change in our policy expectations indicators favored the dollar. All told, aggregate data do not suggest a systemic relationship between exchange rate movements and changes in expectations for relative monetary policy stances over 2021-2023. However, it is possible that the averages may mask economically important moves in bilateral exchange rates, so we next turn to a systematic analysis of the effects on individual currencies using cross-sectional data for different years, in turn.
+
+Specifically, we run the following regression
+
+$$$$ \Delta e_{i,t} = \alpha + \beta (\Delta PE_{US,t} - \Delta PE_{i,t}) + u_{i,t} \textit { for}\ t\ \epsilon \{2021, 2022, 2023 \} \ , (2) $$$$
+
+where
+e
+is the natural logarithm of the bilateral exchange rate of country
+i
+against the dollar (foreign currency per dollar so that an upward movement is an appreciation of the dollar) and $$ \Delta PE $$ is described above in equation (1). The slope coefficient can be interpreted as change in the bilateral exchange rate per unit of surprise in
+relative
+policy expectations.
+7
+Conventional wisdom suggests this slope coefficient should be positive, so that, for example, if policy rates in the U.S. rise more relative to expectations than in the foreign country, the dollar should appreciate. Moreover, if surprise increases in interest rates are the main driver of exchange rate movements, the regression should have high explanatory power.
+
+Results including all countries in the sample are summarized in the top panel of Table 2.
+8
+For 2021 and 2022, when large moves in exchange rates were observed, the regression produces a negative and statistically insignificant slope coefficient, inconsistent with the view that surprise increases in interest rates in a given country results in appreciation of its currency. The regression for 2023 yields a positive value with an economically meaningful magnitude, suggesting about 3.7 percent change in the bilateral exchange rate for a percentage point change in relative policy expectations. Nonetheless, the slope coefficient is not statistically significant at conventional levels, and the explanatory power is modest with an R-squared value of 0.15. Overall, the cross-sectional analysis with all countries included provides hardly any evidence for a meaningful positive relationship between shifts in relative policy expectations and exchange rate movements during the recent global tightening episode.
+
+Table 2: Cross-sectional Regressions
+
+2021
+
+2022
+
+2023
+
+ALL
+
+Constant
+
+6.13
+
+7.08
+
+-4.02
+
+(0.00)
+
+(0.00)
+
+(0.01)
+
+Relative Policy Expectations
+
+-0.79
+
+-0.17
+
+3.70
+
+(0.26)
+
+(0.82)
+
+(0.26)
+
+R-squared
+
+0.06
+
+0.00
+
+0.15
+
+AFE
+
+Constant
+
+5.91
+
+7.24
+
+0.34
+
+(0.00)
+
+(0.00)
+
+(0.67)
+
+Relative Policy Expectations
+
+3.4
+
+1.69
+
+6.97
+
+(0.15)
+
+(0.00)
+
+(0.00)
+
+R-squared
+
+0.16
+
+0.26
+
+0.53
+
+EME
+
+Constant
+
+6.71
+
+5.42
+
+-7.27
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+Relative Policy Expectations
+
+-0.74
+
+-0.86
+
+5.17
+
+(0.38)
+
+(0.25)
+
+(0.08)
+
+R-squared
+
+0.06
+
+0.08
+
+0.31
+
+Note: Heteroskedasticity robust standard errors are used to calculate p-values shown in parenthesis. See equation (2) in the text for the regression.
+
+We next estimate the regression separately for AFE and EME currencies. For AFE currencies, the slope coefficient is positive and statistically significant at conventional levels for all years (middle panel in Table 2). The estimated slope coefficient for 2022, when the outlook for monetary policy changed substantially in most economies, implies about 1.7 percent appreciation of a currency against the dollar for every percentage point increase in policy expectations relative to the U.S. counterpart. The regression has moderate explanatory power with an R-squared value of 0.26. Nonetheless, the intercept is sizeable; even if changes in policy expectations for a given AFE matched that for the U.S. in 2022, its currency is expected to depreciate about 7 percent against the dollar. This may reflect the safe-haven role of the dollar, which we will discuss further in the next section. Overall, the results for AFE currencies provide stronger support for the conventional wisdom, but a large fraction of exchange rate movements remain unexplained by shifts in expectations for relative monetary policy stances.
+
+The results for EME currencies are very different (bottom panel in Table 2). The regression using 2021 data produces a negative slope coefficient and a large and highly statistically significant intercept. This result may come as a surprise because several EME central banks started raising their policy rates in 2021 while the Federal Reserve stayed put, and expectations for the future path of policy rates also favored those EME currencies. Importantly, the Brazilian real depreciated about 7 percent against the dollar in 2021 even as the Central Bank of Brazil increased its policy rate about 6 percentage points and analysts expected the gap between Brazilian and U.S. policy rates to widen further in 2022 (about 6.5 percentage points). Depreciation of the Chilean peso was a staggering 18 percent in 2021 despite the Central Bank of Chile's policy rate hikes and expectations for further increases. Political uncertainty appears to have been instrumental in driving weakness in both the Brazilian real and the Chilean peso in 2021 despite notable tightening in respective monetary policies.
+9
+Results for 2022 are qualitatively similar to 2021 while those for 2023 are consistent with the role of monetary policy contributing to exchange rate movements. Nonetheless, the intercept term is large and highly statistically significant for 2023 as well. All told, the regression results suggest that factors other than surprise changes in interest rate differentials tend to dominate moves in EME currencies.
+
+Evidence from Higher-frequency Financial Data
+
+So far, we have focused on survey-based policy expectations. In this section, we use higher-frequency financial market data to analyze how exchange rates evolved over time relative to market-based policy expectations and other relevant indicators. We use 2-year overnight index swaps (OIS) for the U.S. and AFEs as a proxy for market-based policy expectations over the medium term.
+10
+For the first part of the analysis, we estimate the following time-series regressions using weekly data from January 8, 2021, to April 12, 2024
+
+$$$$ \Delta e_{i,t} = \theta_{0,i} + \theta_{1,i,} \Delta (y_{US,t} - y_{i,t}) + \epsilon_{i,t}  \ , (3)$$$$
+
+where
+e
+denotes the natural logarithm of the bilateral exchange rate measured as the price of currency of country
+i
+per U.S. dollar and
+y
+is the 2-year OIS rate.
+11
+As exchange rates and OIS differentials reflect equilibrium prices that are determined endogenously, the regression cannot be used to estimate causal effects of changes in monetary policy expectations. It merely shows co-movement of exchange rates with market-based policy expectations as financial markets process economic data and other types of news.
+
+With the exception of the British pound, the slope coefficients are highly statistically significant (Table 1, top panel). The average slope is around 3.5, which is economically meaningful and fairly close to the average from cross-sectional regressions reported in the previous section. A shock that leads to a 1 percentage point widening of the OIS differential is associated with 3.5 percent dollar appreciation. Japanese yen stands out with a larger sensitivity around 5, which likely reflects Japan's large net foreign investment position.
+12
+The explanatory powers of the regressions are still generally modest, continuing to suggest that other systemic factors may help explain a larger fraction of the variation in exchange rates.
+
+In the aftermath of the global financial crisis, correlation between exchange value of the dollar and risk appetite in broader financial markets increased.
+13
+In times of increased risk aversion, investors flock to safety of dollar assets and required returns on riskier currencies increase. Both of these mechanisms put upward pressure on the dollar. To capture this channel, we consider changes in the VIX index and Bloomberg high-yield corporate bond spread index (HYSI) and modify the regressions using market-based data as follows:
+
+$$$$ \Delta e_{i,t} = \theta_{0,i} + \theta_{1,i} \Delta (y_{US,t} â y_{i,t}) + \theta_{2,i} \Delta VIX_{t} + \theta_{3,i} \Delta HYSI_{t} + \epsilon_{i,t} \ , (4)$$$$
+
+As can be seen from the lower panel of Table 3, both VIX index and the high-yield spread are generally highly statistically and economically significant. On average, a 10 point increase in the VIX index coupled with a 100 basis points widening in the high-yield spread is associated with about 2.7 percent average dollar appreciation, holding OIS differentials constant. The extended model has generally much higher adjusted R-squared values indicating strong co-movement in the exchange value of the dollar with broad risk appetite in financial markets.
+
+Table 3: Time-series Regressions
+
+AUD
+
+CAD
+
+EUR
+
+JPY
+
+GBP
+
+NOK
+
+NZD
+
+SEK
+
+Regression with OIS differentials
+
+OIS differential
+
+3.0
+
+2.7
+
+3.5
+
+4.8
+
+0.4
+
+3.6
+
+3.1
+
+3.5
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.78)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+Adj. R-squared
+
+0.08
+
+0.06
+
+0.10
+
+0.32
+
+0.00
+
+0.09
+
+0.10
+
+0.07
+
+Regression with OIS differentials and risk indicators
+
+OIS differential
+
+4.7
+
+3.3
+
+3.9
+
+5.0
+
+1.1
+
+4.3
+
+4.2
+
+4.6
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.43)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+High-yield Spread
+
+2.5
+
+1.2
+
+1.0
+
+0.8
+
+0.9
+
+2.7
+
+2.1
+
+1.7
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.02)
+
+(0.04)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+VIX Index
+
+0.1
+
+0.1
+
+0.1
+
+0.0
+
+0.1
+
+0.2
+
+0.1
+
+0.2
+
+(0.00)
+
+(0.00)
+
+(0.02)
+
+(0.22)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+(0.00)
+
+Adj. R-squared
+
+0.42
+
+0.37
+
+0.23
+
+0.33
+
+0.11
+
+0.40
+
+0.34
+
+0.30
+
+Note: Heteroskedasticity robust standard errors are used to calculate p-values shown in parenthesis. See equations (2) and (3) in the text for the regressions.
+
+These results suggest that shocks that lead to both a widening of the U.S.-foreign OIS differentials and a reduction in risk appetite lead to more dollar appreciation. What kind of shocks would create such dynamics? News of higher-than-expected U.S. inflation are likely to drive this combination of movements in asset prices as they lead to expectations for higher U.S. interest rates which weigh on economic growth outlook and lead to reduced risk-taking in financial markets. For example, the U.S. CPI inflation for May 2022 released on June 10, 2022 was notably above consensus expectations and led to a significant revision in the outlook for monetary policy. Over the three trading sessions following the news, 2-year U.S. OIS rate rose 62 basis points and the average U.S.-AFE OIS differential widened about 28 basis points on net. At the same time, concerns about implications of tighter monetary policy for growth led to almost 7 points increase in the VIX index and around 50 basis points widening in the high-yield spread measure. Combining these with the estimated parameters suggest around 2.6 percent predicted average dollar appreciation, which is very close to the actual at 2.8 percent.
+
+We next turn to how exchange value of the dollar evolved over time since early 2021. As aggregate measure of exchange value of the dollar, we use the Federal Reserve Board staff's AFE dollar index. To gain insights into the role of interest rate differentials and other factors, we estimate the above regressions with rolling windows and construct exchange rate paths implied by the models. Specifically, we use 6-month rolling windows to allow for potential shifts in sensitivity of exchange rates to interest-rate differentials and risk appetite. At each point in time, we estimate the regression and obtain predicted values. We then compound predicted changes over time to form model-consistent paths for individual exchange rates and aggregate them based on their weights in the AFE dollar index.
+
+As can be seen from Figure 1, the notable increase in the AFE dollar index (black line) from early September of 2021 through end of March 2022 is largely in line with what's implied by OIS differentials (blue line). This reflects the widening of the difference between the U.S. and AFE OIS rates over this period as persistently higher inflation led to a reassessment of the monetary policy outlook in the U.S. Over the course of the following six months, the AFE dollar index rose another 13 percent even as the path implied by OIS differentials moved little, on net, as monetary tightening became increasingly synchronous across major economies. At the same time, risk aversion in financial markets increased as investors assessed implications of Russian invasion of Ukraine and historically fast tightening by major central banks for global growth outlook. Such concerns clearly contributed to dollar appreciation as can be seen from the path implied by the model that contains the high-yield spread and VIX index in addition to OIS differentials (gray line). The AFE dollar index retraced notably from its October 2022 peak as inflation came down and risk appetite in broader financial markets recovered. This retracement is quantitively in line with that implied by the model including broad risk indicators. Currently, AFE dollar is about 13 percent higher than its level in September 2021, when market-implied U.S. policy rates started to move up, and about half of this increase can be attributed to relatively higher interest rates in the U.S.
+
+Figure 1. AFE Dollar Index
+
+Accessible version
+
+Currently the level of the dollar implied by interest rate differentials alone and the extended model including risk indicators are roughly the same and notably below the actual. What could explain this gap? First, noise in weekly financial data may lead to underestimation of the slope coefficients in the regressions, so the true level of the dollar consistent with interest rate differentials and risk indicators can be higher. Second, factors not included in the model such as terms of trade (including the effects of commodity prices on these), relative expected returns on assets other than short-term money market instruments, and shifts in investor preferences can also account for the unexplained dollar strength.
+14
+Further work is required to determine quantitative relevance of such additional factors in driving exchange value of the dollar over the recent global tightening cycle.
+
+References
+
+Bloomberg News, 2021, obtained via Terminal. Brazil Assets Sink as Political Risk Flares Up Amid Protests.
+
+Central Bank of Chile, 2021.
+Monetary Policy Report
+, December 2021.
+
+Curcuru, S., 2017.
+The Sensitivity of the U.S. Dollar Exchange Rate to Changes in Monetary Policy Expectations
+, IFDP Notes. Washington: Board of Governors of the Federal Reserve System, September 2017.
+
+Faust, J. and Rogers, J.H., 2003. Monetary policy's role in exchange rate behavior.
+Journal of Monetary Economics
+, 50(7), pp.1403-1424.
+
+Jiang, Z., Richmond, R.J. and Zhang, T., 2022. Understanding the Strength of the Dollar (No. w30558).
+National Bureau of Economic Research
+.
+
+Liao, G. and Zhang, T., 2023. The Hedging Channel of Exchange Rate Determination, Working paper.
+
+Lilley, A., Maggiori, M., Neiman, B. and Schreger, J., 2022. Exchange Rate Reconnect.
+Review of Economics and Statistics
+, 104(4), pp.845-855.
+
+1. Emre Yoldas, Division of International Finance. I am grateful to Shaghil Ahmed and Luca Guerrieri for very useful comments.
+Return to text
+
+2. See Curcuru (2017) and Faust and Rogers (2003).
+Return to text
+
+3. We use the median reported by Bloomberg as the aggregate measure of analyst expectations.
+Return to text
+
+4. Results are robust to different weighting schemes for surprises for the current year and revisions for the next year.
+Return to text
+
+5. We include the following advanced economies in our analysis: Australia, Canada, the euro area, Japan, New Zealand, Norway, Sweden, and the United Kingdom. We exclude Switzerland as the Swiss National Bank uses foreign exchange intervention in support of its price stability objective. Emerging market economies in our analysis are Brazil, Chile, Colombia, Czech Republic, Hungary, Indonesia, Mexico, Poland, Romania, S Korea, Taiwan, and Thailand. The sample of emerging market economies is determined with respect to data availability and obtaining a balanced representation of different regions (Latin America, Eastern Europe, and Asia). All data are obtained from Bloomberg Per Security Data License.
+Return to text
+
+6. In the fourth quarter of 2023, private economists' expectations for the federal funds rate for year-end 2024 were revised down but this only partially offset the notable upward revisions earlier in the year.
+Return to text
+
+7. The regression should not be interpreted in a casual way as our measure of the shifts in policy expectations does not represent a structural shock. It is a surprise measure that also reflects revisions to forecasts for the future.
+Return to text
+
+8. We report ordinary least squares estimates. Robust regression provides qualitatively similar results.
+Return to text
+
+9. See Central Bank of Chile (2021) and Bloomberg News (2021).
+Return to text
+
+10. These instruments (or similar) are not available for most EMEs, so we focus exclusively on AFEs in this section.
+Return to text
+
+11. Weekly frequency addresses issues arising from nonsynchronous trading.
+Return to text
+
+12. See for example Liao and Zhang (2023).
+Return to text
+
+13. See Lilley, Maggiori, Neiman, and Schreger (2022) for a detailed analysis.
+Return to text
+
+14. See Jiang, Richmond, and Zhang (2022) for role of shifts in investor demand for different assets in driving exchange value of the dollar.
+Return to text
+
+Please cite this note as:
+
+Yoldas, Emre (2024). "Monetary Policy and Exchange Rates during the Global Tightening," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 10, 2024, https://doi.org/10.17016/2380-7172.3489.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

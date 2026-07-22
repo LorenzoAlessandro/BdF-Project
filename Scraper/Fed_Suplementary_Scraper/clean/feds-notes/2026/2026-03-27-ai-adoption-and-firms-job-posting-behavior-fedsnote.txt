@@ -1,0 +1,326 @@
+FEDS Notes
+
+Twitter
+
+March 27, 2026
+
+AI Adoption and Firms' Job-Posting Behavior
+
+Jessica Liu
+and
+Douglas Webber
+1
+
+Introduction
+
+Since ChatGPT was launched in November 2022, usage of generative artificial intelligence (AI) has soared. More than half of the U.S. working-age population has used generative AI, according to the Real-Time Population Survey from August 2025 (Bick, Blandin, and Deming 2025). While usage outside of the workplace exceeds usage at work, usage at work is rapidly increasing as firms adopt AI (Bick, Blandin, and Deming 2025; Hartley et al. 2024; Hyman et al. 2025). Predictions about how AI will disrupt the labor market include automating and replacing some jobs, increasing worker productivity by augmenting certain tasks, and creating new occupations. Research on the current state of AI adoption and its impact on employment is still in the early stages, and long-term conclusions are difficult to formulate.
+
+This note uses job postings data from Lightcast and the Census Bureau's Business Trends and Outlook Survey to investigate the relationship between AI adoption and firms' job-posting behavior. We find that thus far, there is no evidence of a reduction in job postings for industries or firms which have higher levels of AI adoption. The overall slowdown in national job postings following the pandemic recovery does not appear to be driven (even modestly) by AI. That said, we focus on the total level of job postings in firms and industries, rather than on specific occupations which may be particularly susceptible to automation via AI. Our results do not imply that there are no pockets of workers who are experiencing a disproportionately difficult job search due to the impact of AI. Rather, our results thus indicate that if there is a large negative impact on some occupations, thus far it has been balanced out by firms switching job postings to other hiring priorities. Moreover, the United States is still in a very early stage of AI development, so the lack of a significant labor market impact at this point is not particularly surprising. The empirical exercise in this note is therefore meant to be part of an active monitoring process for signs of labor market impacts in the months and years to come.
+
+Literature Review
+
+Firms are reporting rapid growth in AI adoption, and demand for AI skills continues to increase. Multiple firm-level surveys estimate that between 5 to 40 percent of firms have adopted AI (Crane, Green, and Soto 2025).
+2
+In the last decade, demand for skills related to AI has steadily risen (Acemoglu et al. 2022; Galeano, Hodge, and Ruder 2025). Since 2015, demand for AI skills has shifted from being highly concentrated in computer and mathematical occupations to covering a broader set of occupations. In 2024, nearly a quarter of all occupations demanded some AI skills (Mohnen and Lee 2024).
+
+Research on the effect of AI on employment and wages varies. Hartley et al. (2024) find that generative AI exposure has little or no significant effect on total jobs or job postings, though AI-exposed occupations have statistically significant wage gains. Similarly, Acemoglu et al. (2022) observe no relationship between AI exposure and overall employment or wages at the industry- or occupation-level, but do find that AI-exposed establishments reduced hiring in non-AI positions. Brynjolfsson, Chandar, and Chen (2025) find entry-level employment declines in occupations where AI primarily automates work, but stable or growing employment for more experienced workers in the same occupations, and for workers in less AI-exposed fields. The New York Fed's regional business surveys show that very few firms reported AI-induced layoffs in the past year, though firms are expecting more layoffs and scaled-back hiring due to AI (Hyman et al. 2025).
+
+Various studies indicate growing AI adoption among workers. U.S. workers are rapidly adopting generative AI tools such as large language models (LLMs), with 45.9% of one survey's respondents reporting LLM adoption at work in June/July 2025, up from 30.1% in December 2024 (Hartley et al. 2024). Other surveys of individual workers similarly report 20 to 40 percent of workers using AI in the workplace (Crane, Green, and Soto 2025). In one study on the effect of generative AI tools on worker productivity, Brynjolfsson, Li, and Raymond (2025) found that access to a generative AI-based chat assistant increased productivity, though with heterogeneity, among customer support agents. Regarding the exposure of different occupations to AI, Eloundou et al. (2024) estimate that 80% of U.S. workers are in occupations that could have at least 10% of their work tasks affected by LLMs, and 18.5% of workers could have over 50% of their tasks impacted.
+
+Such significant technological shifts in the labor market raise the question of whether they will widen or reduce economic inequalities. Research shows that labor market inequalities exist by wage distribution (Autor, Dube, and McGrew 2023) and geography (Webber et al. 2025). A recent report analyzes the impact of generative AI on workers in lower-income households (Kneebone and Holmes 2025). Acemoglu (2025) does not find evidence of AI reducing inequality, instead suggesting AI may slightly increase inequality, and widen the gap between capital and labor income. However, AI adoption could also lead to positive economic and societal outcomes, as described in potential scenarios by Acemoglu and Restrepo (2020) and Autor (2024).
+
+Data and Methodology
+
+This note uses two data sources and two distinct sources of variation to investigate the relationship between AI adoption and firms' job-posting behavior. Job postings are drawn from the Lightcast (formerly Burning Glass) database, which catalogues job postings from more than 65,000 sources.
+3
+This database functionally contains the universe of jobs which are posted online. While this makes comparisons over long periods of time difficult, as the composition of jobs posted online is likely different between different years, this is not a concern in the current study which uses only post-2022 data. Moreover, the data have been found to be representative of other sources when looking at occupation/industry representation (Hershbein and Kahn 2019).
+
+The Lightcast database contains variables such as the occupation/industry of the posting, as well as information drawn from the text of the posting such as whether the job requires any prior experience with AI/Machine Learning (ML). Also of note for our study is a firm-identifier, allowing us to link job postings by the same firm over time. Despite the many advantages of the Lightcast database, one well-documented weakness is that postings frequently do not contain high-quality of information on wages (Batra, Michaud, and Mongey 2023), and thus we do not examine wages as an outcome in our study.
+
+We use data from the Census Bureau's Business Trends and Outlook Survey (BTOS) as the primary source of information on the adoption of AI by industries. The BTOS has a sample of roughly 1.2 million businesses, each of which is surveyed every 12 weeks. The full sample is divided into six staggered panels, meaning that new data are released every two weeks.We use the proportion of respondents choosing "yes" to either of the following questions: 1) "In the past two weeks, did this business use Artificial Intelligence (AI) in producing goods or services? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)," and 2) "During the next six months, do you think this business will be using Artificial Intelligence (AI) in producing goods or providing services? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)." We run all models with both questions.
+
+Empirical model:
+
+We estimate models of the following form:
+
+$$$$y_{i,t}=\alpha+\ \beta{adoption}_{i,t-k}+\gamma X_i+{yearmonth}_t+\ \varepsilon_{i,t}$$$$
+
+The dependent variable $$y$$ denotes the number of new job postings in a given month for firm i at time t.
+4
+We use two distinct sources of variation to measure AI adoption: 1) 3-digit NAICS industry-level variation in adoption, and 2) firm-level variation in adoption.
+5
+Industry-level adoption is drawn from the BTOS, while firm-level variation is obtained directly from Lightcast, and is proxied by whether the firm has requested expertise with AI/machine learning in a prior job posting. Models were run separately with adoption lagged by 1, 3, 6, and 12 months. $$X$$ is a set of firm characteristics which depend on the model being estimated: state and NAICS fixed-effects for the industry-level adoption models, and firm fixed-effects for the firm-level adoption models. Finally, a full set of year-by-month fixed effects accounts for both seasonality in posting behavior and macroeconomic conditions that affect the entire labor market. The timeframe for the results presented below is September 2023, the earliest date at which complete data from the BTOS is available, through November 2025. All results are robust to restricting the date to shorter and more recent dates. The Census Bureau updated the wording of the AI questions in November 2025, leading to a notable trend break in the time series for both questions, which is why we cut off our analysis at that date.
+6
+
+Results
+
+Table 1: Impact of Industry-Level AI Adoption on Future Job Postings
+
+Lag of AI adoption measure
+
+1-month
+
+3-month
+
+6-month
+
+12-month
+
+Used AI (past two weeks)
+
+0.341
+
+0.286
+
+-0.0324
+
+0.494
+
+(0.209)
+
+(0.229)
+
+(0.189)
+
+(0.336)
+
+Plan to use AI (next six months)
+
+0.551**
+
+0.111
+
+0.129
+
+0.142
+
+(0.266)
+
+(0.221)
+
+(0.276)
+
+(0.28)
+
+Observations
+
+1,512
+
+# of NAICS industries
+
+72
+
+Note: Each cell represents the regression coefficient on the AI adoption treatment variable from Equation (1). Standard errors, clustered at the industry level, are presented below each coefficient, with statistical significance at the .10, .05, and .01 levels respectively denoted by *, **, and ***.
+
+Table 1 presents results from separate regression models where the dependent variable is the natural log of job postings for a given firm and the treatment variable is the level of AI adoption at the 3-digit NAICS industry level. Four different lags are used for each AI adoption variable since the timeline of the transmission of AI adoption to a change in hiring practices is unclear.
+
+The first thing to note is that the coefficients are generally positive, indicating that there is no evidence thus far that industries with higher levels of AI adoption are posting fewer jobs. Second, given the actual magnitudes of adoption (10 percent) and anticipated adoption (14 percent), the magnitudes of the coefficients are small once scaled appropriately. It is possible that industries which have a greater rate of AI adoption have increased hiring, either due to gains in productivity or because they are reaping the benefits of the AI investment boom (e.g. an industry is flush with cash and is expanding both in terms of AI capabilities and new hiring). But given the general lack of statistical significance of the coefficients in Table 1, the most likely effect currently is either zero or a very small positive effect.
+
+Table 2: Effect of Firm-Level AI Adoption on Future Job Postings
+
+Lag of AI adoption measure
+
+1-month
+
+3-month
+
+6-month
+
+12-month
+
+All Firms
+
+0.082***
+
+0.056***
+
+0.028***
+
+-0.0002
+
+(0.006)
+
+(0.007)
+
+(0.007)
+
+(0.007)
+
+Observations
+
+7,325,898
+
+# of Firms
+
+1,053,991
+
+Ever had AI Posting
+
+0.084***
+
+0.057***
+
+0.029***
+
+0.001
+
+(0.006)
+
+(0.006)
+
+(0.007)
+
+(0.007)
+
+Observations
+
+1,378,031
+
+# of Firms
+
+80,220
+
+Large Firms
+
+0.210***
+
+0.157***
+
+0.072***
+
+0.015
+
+(0.023)
+
+(0.022)
+
+(0.025)
+
+(0.025)
+
+Observations
+
+1,011,538
+
+# of Firms
+
+36,260
+
+Note: Each cell represents the regression coefficient on the AI adoption treatment variable from Equation (1). Standard errors, clustered at the firm level, are presented below each coefficient, with statistical significance at the .10, .05, and .01 levels respectively denoted by *, **, and ***.
+
+Table 2 defines AI adoption in both a more direct and narrow way. In this set of models, adoption is defined at the firm level, with a firm being deemed to have adopted AI if either AI or Machine Learning was mentioned as a required skill in a prior job posting by the firm. This way of defining adoption is certainly the most targeted of all of our measures, as it uses a firm's own past labor-market behavior rather than industry-level survey responses. However, this way of defining AI adoption is likely unrepresentative of the typical firm's experience, as it indicates a particularly intensive form of AI use (many workers interact with AI without it appearing as required in their job description). In 2025, 5.5 percent of firms had an AI-related job posting, compared to 10 percent of BTOS respondents who indicated that their business had used AI/ML. The adoption measure is defined as the proportion of a firm's postings which request AI/ML experience, but results are qualitatively similar with other functional forms such as the number/log-number of postings.
+
+This set of models is run on three different samples to examine heterogeneous effects: all firms, only those which have ever had an AI/ML job posting, and large firms (defined as having at least 300 job postings over the 2023-2025 sample timeframe). There is no evidence across the range of models that firm-level AI investment is having a negative impact on subsequent job-posting behavior.
+
+Just as with the industry-exposure models, the magnitude of the firm-exposure coefficients is small when scaled appropriately by the degree of the mean of the treatment variable. It is important to remember that due to the large size of the Lightcast data, statistical significance is not a useful barometer of the importance of a given treatment. For all firms, the proportion of AI-related postings is only 1.6 percent, for firms which have ever had an AI-related posting the proportion is 8.6 percent, and for large firms it is 2.5 percent. In other words, an entirely causal interpretation (which to reiterate, is not our claim) of the top row of coefficients implies that in 2025 job postings increased between 0.04% and 0.13% due to AI adoption. We thus view the coefficients in Table 2 as precisely-estimated null effects.
+
+Conclusion
+
+Despite the recent boom in AI investment across the economy and fears that the technology will lead to widespread job losses, we find no evidence of negative impacts thus far on firms' job-posting behavior. We measure "exposure" to AI using both industry-level survey responses and firm-level job postings across a range of time periods, and the only statistically significant results point to a small positive relationship between AI exposure and job postings.
+
+It is important to note that this is not likely a causal connection, more plausibly reflecting factors relating to the type of industry or firm that invests in AI. Instead, we view our results simply as evidence against the narrative that there has been AI-driven deterioration in the labor market up to this point in time. Moreover, this exercise is explicitly backward-looking, and does not imply anything about the relationship between AI and the labor market going forward, though we plan to monitor it on an ongoing basis.
+
+References
+
+Acemoglu, Daron, David Autor, Jonathon Hazell, and Pascual Restrepo. "
+Artificial Intelligence and Jobs: Evidence from Online Vacancies
+."
+Journal of Labor Economics
+40, no. S1 (April 2022): S293â340.
+
+Acemoglu, Daron, and Pascual Restrepo. "The Wrong Kind of AI? Artificial Intelligence and the Future of Labour Demand."
+Cambridge Journal of Regions, Economy and Society
+13, no. 1 (March 2020): 25â35. https://doi.org/10.1093/cjres/rsz022.
+
+Autor, David. "
+Applying AI to Rebuild Middle Class Jobs (PDF)
+." National Bureau of Economic Research Working Paper No. 32140 (February 2024).
+
+Autor, David, Arindrajit Dube, and Annie McGrew. "
+The Unexpected Compression: Competition at Work in the Low Wage Labor Market
+." National Bureau of Economic Research Working Paper No. 31010 (March 2023).
+
+Batra, Honey, Amanda Michaud, and Simon Mongey. "
+Online Job Posts Contain Very Little Wage Information
+." National Bureau of Economic Research Working Paper No. 31984 (December 2023).
+
+Bick, Alexander, Adam Blandin and David Deming. "
+The State of Generative AI Adoption in 2025
+," Federal Reserve Bank of St. Louis On the Economy. November 13, 2025.
+
+Bick, Alexander, Adam Blandin, and David Deming. "
+The Rapid Adoption of Generative AI
+." National Bureau of Economic Research Working Paper No. 32966 (September 2024).
+
+Brynjolfsson, Erik, Bharat Chandar, and Ruyu Chen. "
+Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (PDF)
+." Stanford Digital Economy Lab, August 2025.
+
+Brynjolfsson, Erik, Danielle Li, and Lindsey Raymond. "Generative AI at Work."
+The Quarterly Journal of Economics
+140, no. 2 (May 2025): 889-942. https://doi.org/10.1093/qje/qjae044.
+
+Crane, Leland, Michael Green, and Paul Soto. "
+Measuring AI Uptake in the Workplace
+." FEDS Notes, Board of Governors of the Federal Reserve System. February 05, 2025.
+
+Eloundou, Tyna, Sam Manning, Pamela Mishkin, and Daniel Rock. "
+GPTs are GPTs: Labor Market Impact Potential of LLMs
+."
+Science
+384, no. 6702 (June 2024): 1306-1308.
+
+Galeano, Sergio, Nyerere Hodge, and Alexander Ruder. "
+By Degree(s): Measuring Employer Demand for AI Skills by Educational Requirements
+." Federal Reserve Bank of Atlanta Center for Workforce & Economic Opportunity Workforce Currents 2025-01. May 21, 2025.
+
+Hartley, Jonathan, Filip Jolevski, Vitor Melo, and Brendan Moore. "The Labor Market Effects of Generative Artificial Intelligence." December 2024, revised September 2025. http://dx.doi.org/10.2139/ssrn.5136877.
+
+Hershbein, Brad, and Lisa B. Kahn. "
+Do Recessions Accelerate Routine-Biased Technological Change? Evidence from Vacancy Postings
+."
+American Economic Review
+108, no. 7 (July 2018): 1737-1772.
+
+Hyman, Ben, Jaison R. Abel, Natalia Emanuel, Nick Montalbano, and Richard Deitz. "
+Are Businesses Scaling Back Hiring Due to AI?
+" Liberty Street Economics, Federal Reserve Bank of New York. September 4, 2025.
+
+Kneebone, Elizabeth and Natalie Holmes. "
+On-the-Job Exposure to AI Among Lower-Income Workers
+." Federal Reserve Bank of San Francisco Community Development Research Brief 2025-03. November 21, 2025.
+
+Mohnen, Paul, and David Lee. "
+Recent Trends in the Demand for AI Skills
+." Policy Hub: Macroblog, Federal Reserve Bank of Atlanta. October 15, 2024.
+
+Webber, Douglas, Isabella Agnes, Jessica Liu, and Erin Troland. "
+Place-Based Labor Market Inequality
+." Finance and Economics Discussion Series 2025-040 (June 2025). Board of Governors of the Federal Reserve System.
+
+1. The views expressed are solely ours and do not necessarily reflect the views the Federal Reserve Board of Governors, or the Federal Reserve System.
+Return to text
+
+2. Crane, Green, and Soto (2025) note that the 5 percent lower-end estimate comes from BTOS which is firm-weighted and not employment-weighted. They note that if treating the other firm-level surveys as approximately employment-weighted, since they likely skew towards larger firms, then AI adoption estimates are generally around 20 to 40 percent.
+Return to text
+
+3. "Lightcast - a Global Leader in Labor Market Analytics." Lightcast. 2018. http://lightcast.io.
+Return to text
+
+4. All models were run with the natural log of job postings as the dependent variable, rather than the raw number of postings. The results are qualitatively identical regardless of the functional form of the dependent variable.
+Return to text
+
+5. All models were also run using state-level variation in AI adoption, but due to a lack of substantial variation across states, the results are too imprecise to be informative.
+Return to text
+
+6. On November 17, 2025, BTOS updated wording for the two AI questions to be: 1) "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)," and 2) "During the next six months, do you think this business will be using Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)." With the updated wording, there is an upward level shift, so BTOS created a new time series for the AI questions beginning with data released on December 4, 2025. For more information: "
+BTOS AI Core Question Updates. (PDF)
+" U.S. Census Bureau. 2025.
+Return to text
+
+Please cite this note as:
+
+Liu, Jessica, and Douglas Webber (2026). "AI Adoption and Firms Job-Posting Behavior," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, March 27, 2026, https://doi.org/10.17016/2380-7172.4026.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

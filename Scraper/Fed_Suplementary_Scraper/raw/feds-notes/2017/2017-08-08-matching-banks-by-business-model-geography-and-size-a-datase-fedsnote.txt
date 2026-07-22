@@ -1,0 +1,184 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+August 08, 2017
+
+Matching Banks by Business Model, Geography and Size: A Dataset
+
+Mark Carlson
+, Molly Shatto, and 
+Missaka Warusawitharana
+
+In this note, we describe an algorithm, developed in Carlson, Shan, and Warusawitharana (2013) [hereafter CSW], to match banks that are geographically close and are similar in size and business model. Concurrently, we also release a data set of matched banks obtained from applying this algorithm from 1998 to 2014, as well as some of the associated computer programs. The algorithm, and the associated data set, can help researchers control for local economic conditions when analyzing bank behavior.
+
+A large literature studies bank behavior and whether various bank outcomes, such as loan growth or profitability, are related to factors internal to the bank, such as corporate governance or capital ratios, or external factors, such as local economic conditions. Understanding the role of internal factors is important for policy makers as it can indicate the value of policies that impact internal conditions at banks, such as regulations. However, assessing the impact of the internal factors can be difficult as factors external to the bank, in particular the local economic environment, can have substantive impacts on the outcome variables, thus making it necessary to carefully account for the impact of these external factors.
+
+Researchers have used a few different methods to separate the effects of internal factors from the role of the local economic environment in determining various bank outcomes. Some studies have tried to control for external factors by trying to account for them directly while other studies have looked for natural experiments in which the source of changes in behavior was clearly internal to the bank. Both these approaches have advantages and disadvantages. The purpose of this note is to describe the thinking behind the matched bank analysis used by CSW and release the matched bank data sets obtained from that approach.
+
+The matched-bank method relies on being able to correctly identify the local market for banks, which tends to be defined by geography. As such, this method may be particularly valuable for researchers studying the behavior of community banks, the institutions for which the matching algorithm likely produces the best results. Nevertheless, this method allows researchers to study general behavior patterns that presumably apply to all banks generally. Indeed, while we discuss the approach with respect to banks and provide implementation details that are specific to banks, the underlying concept could also be used for other types of firms.
+
+The remainder of this note is organized as follows. We first discuss the broad thinking behind the matched-bank method used by CSW and how its advantages and disadvantages compared with other methods used to separate the impacts of internal and external factors on bank outcomes. We then discuss the details of the data and the procedure used to produce the matches.
+
+Disentangling the roles of internal and external factors in determining bank behavior 
+
+One of the most important external influences on banks is the local economic condition. Changes in the condition could influence both the balance sheets and income statements of the bank even if the bank is not taking any action or adjusting its behavior. For example, a deteriorating local environment could reduce the demand as businesses have less demand for loans to finance activities and decrease the quality of the potential borrowers.
+1
+ These trends could result in higher loans losses, poorer profitability, and possibly lower capital ratios. Thus, any attempt to understand whether a particular aspect of the bank has any effect on its behavior, balance sheet, or income without controlling for the impact of these external factors risks either over- or underestimating the size of the effect. This is particularly true if the aspect of the bank being considered and the outcome variable are both potentially influenced by the economic environment.
+
+Most prior research has focused on one of two methods for dealing with the impact of the local environment in shaping developments at the bank. The first method is to try to control for the local environment directly (Bernanke and Lown, 1991; Berger and Udell, 1994; Berger and Mester, 1997, Aubuchon and Wheelock, 2010; Del Giovane, Eramo, and Nobili, 2011). This could be done by including measures of changes in unemployment, changes in different vacancy rates, real personal income, etc. Including these measures directly has the advantage that they can also allow the researcher to see what the effect of these external factors are on the outcomes of interest. One potential problem with trying to control for the economic environment in this way is that the included measures may not capture the particular aspects of the local economy that matter for the banking outcome of interest.
+
+The other method has been to look for natural experiment where the shock is clear and is exogenous to the bank (Peek and Rosengren, 2000; Mora and Logan, 2012; Rice and Rose, 2016). These studies are useful for identifying behavioral responses to particular types of shocks. However, this method depends on identifying a shock that specifically affects the aspect of the bank in which the researcher is particularly interested. Moreover, this method also generally tends to be focused on particular periods in which the shock occurs, which limits the ability to understand whether the behavior response might differ over time or in response to other factors.
+
+In this note, we review an alternative method to controlling for external factors. We argue that by comparing banks that are in the same location, and so are exposed to the same external factors, one effectively controls for those outside forces. Differences in outcomes between banks in the same location, once these external factors have been controlled for, thus reflect differences in internal factors. This can be illustrated mathematically. Consider bank 
+j
+, matched bank(s) 
+m
+, in location 
+l. 
+For bank 
+j
+, we have:
+
+$$$${Outcome}_j=\alpha+\beta{IntFct}_j+\Pi{BC}_j+\Phi{ExtFct}_l+\varepsilon_j$$$$ (1)
+
+Where IntFct indicates internal factors, BC are bank level controls, and ExtFct are external controls. For the matched bank 
+m
+, also in location 
+l
+ we have:
+
+$$$${Outcome}_m=\alpha+\beta{IntFct}_m+\Pi{BC}_m+\Phi{ExtFct}_l+\varepsilon_m$$$$ (2)
+
+Subtracting, gives us:
+
+$$$$\begin{align}{Outcome}_j-{Outcome}_m =& \alpha-\alpha+\beta{IntFct}_j-\beta{IntFct}_m+\Pi{BC}_j-\Pi{BC}_m+\\ & \Phi{ExtFct}_l-\Phi{ExtFct}_l+\varepsilon_j-\varepsilon_m \end{align}$$$$ (3)
+
+As the external factors are identical, they do not play a role in explaining the differences in outcomes between bank 
+j
+ and the match bank(s). Simplifying gives us:
+
+$$$${{Outcome}_j-Outcome}_m=\beta({IntFct}_j-{IntFct}_m )+\Pi({BC}_j-{BC}_m )+\varepsilon_j-\varepsilon_m$$$$ (4)
+
+Estimating equation 4 allows us to understand the effect of the internal factors on the outcomes. This method was used by CSW to study the impact of capital requirements. Calomiris and Carlson (forthcoming) use a similar methodology to study the response of institutions differentially exposed to a liquidity shock.
+
+A key assumption in this approach is that banks are predominately affected by local factors and that their business is affected by local business conditions. A number of studies have examined whether this is indeed the case. Looking at small businesses, Brevoort et al. (2010) looks at small business borrowers and find that such institutions tend to borrow from banks that are very close by. Considering behavior from the bank side, Aubuchon and Wheelock (2010) also find that banks mainly serve local clientele. Looking at the bank deposit base, Heitfield and Prager (2004) find that deposit markets tend to be quite local in nature. Based on this evidence, it seems that our assumption that banks are strongly connected to their local market is quite reasonable.
+
+This matched-bank method has advantages over the previous approaches in that it allows unobservable local factors to be controlled for and can be estimated without having to have a special event occur. The method does require that banks are able to be matched to other banks (so areas where only one bank exists must be excluded) and that business area of a bank be sufficiently well contained that it can be compared to business areas of the matched bank(s) (so banks with a nationwide branching presence would have to be excluded). Thus, this methodology a useful complement to the other methods, but does not replace them.
+
+There are other considerations in the matching process beyond simply matching on location. For instance, the business models of the banks in the same location may differ; one might focus on commercial real estate lending while another may focus on various types of consumer lending. The size of the banks in the same location may also differ, which might allow the banks different economies of scope or scale. To account for some of these differences CSW use a matching algorithm that, conditional on a locational match, allows banks to be matched to others based on the similarity of various balance sheet metrics and their size.
+
+Another consideration is whether a bank should be matched to one other bank or to the average of many other nearby banks. Matching to one other bank allows the matched set to be as similar as possible along whatever dimensions the researcher considers most important. This approach compares institutions that are most similar except for any differences in the factor of interest and thus may provide the best estimate of the effect of that factor. However, this approach could be sensitive to the matching algorithm. Matching a bank against many other nearby banks allows a bank to be compared against the average experience of banks in the area. This method is more likely to be robust to different ways of implementing the matching procedure. This latter approach also tends to result in more observations than the former approach. Given that there are advantages to both approaches, CSW found it useful to use both.
+
+The two matched data sets
+
+We implement this matching approach using data on bank balance sheets and income statements from the Call Report combined with information on their deposit networks from the Summary of Deposits data. As the Summary of Deposits data are as of June 30th each year, we obtain the Call Report data for the 2nd quarter of each year, thus aligning the reporting periods of both data sets. We limit the bank sample to commercial banks that are not subject to special analysis.
+2
+ We also exclude 
+de novo
+ banks by requiring a bank to have been in existence for three or more years. In addition, we exclude banks that have either acquired another bank or that have been the target of an acquisition over the past year. We limit the bank deposits data to branches that have non-zero deposits, and use the ArcGIS
+®
+ software to calculate the latitude and longitude of each branch location.
+3
+
+Using the deposits data, we calculate the latitude and longitude of the geographic midpoint of the branch network, weighted by the deposits at each branch. This provides us with the geographic location of the bank. In addition, we also calculate the dispersion of the branch network as the minimum distance from the bank's headquarters that contains at least 80 percent of the bank's total deposits. Using the Call report data, we calculate the following ratios that are used to quantify the business model of a bank:
+
+Commercial and industrial loans outstanding as a ratio of total loans
+
+Commercial real estate loans outstanding as a ratio of total loans
+
+Residential real estate loans outstanding as a ratio of total loans
+
+Consumer loans outstanding as a ratio of total loans
+
+Security holdings divided by the sum of securities and total loans
+
+Average managed liabilities scaled by total interest bearing liabilities
+
+Interest income over total income
+
+Interest expenses over total expenses
+
+Net interest margin, calculated as interest income minus expenses scaled by interest bearing assets.
+
+We standardize each ratio by subtracting the mean and scaling by the standard deviation for a given cross-section. Finally, we measure the size of each bank by the total assets of the bank.
+
+We carry out our matching on a year-by-year, state-by-state basis. We assign each bank to a state based on where the bank has the most deposits. Within a state, we consider banks to be eligible to be matched to each other if they satisfy the following criteria:
+
+Their relative size is between 1/3 and 3.
+
+The distance between their geographic mid-points is less than 10 miles in New Jersey.
+4
+
+The average of the square root of the sum-of-squared differences in their business model measures is less than one standard deviation.
+
+Using this approach, we create two data sets. The first data set consists of pair-wise matches obtained by sequentially selecting the pairs of banks within each state with the lowest sum-of-square difference between their business model characteristic that are close to each other in terms of geographic location and size. The second data set consists of each bank sequentially paired with all banks that are considered match-eligible based on the above geographic location, size and business model characteristics.
+
+As noted above, one can use these data sets to control for variation in local business conditions in the following manner. For the first data set with pair-wise matches, one would simply difference the variables of interest between the each matched pair of banks. For the second data set, one would take the difference between the variable of interest for a given bank with the average of the corresponding value for all match-eligible banks. As the latter approach creates one collinear observation from each set of N banks that consist of all banks that are match-eligible to at least one bank within the set, we drop one observation per such set.
+
+Description of linked files
+
+We release matched-bank data sets obtained by using this approach on a year-by-year basis from 1998 to 2014 (
+see link to data.zip
+). The files for the matched-banks obtained by the first and second approach are named 'bank_matchsingxx.txt' and 'bank_matchsdxx.txt', respectively, where xx denotes the year. The associated data dictionaries are named 'SingBankMatch.txt' and 'MultiBankMatch.txt', respectively. In addition, we also release the programs that are used to carry out the above matching procedure once one has obtained the necessary source data (
+see link to programs.zip
+). These include the SAS programs to construct the measures used in the matching procedure and Matlab programs that are used to carry out the matching algorithm and create the .txt files listing the matched banks. The ReadMeExec.txt file details how these programs work.
+
+References
+
+Aubuchon, Craig, and David Wheelock, 2010. The geographic distribution and characteristics of U.S. Bank failures, 2007-2010: Do bank failures still reflect local economic conditions? Federal Reserve Bank of St. Louis Review, 92(5), 395-415.
+
+Berger, Allen and Loretta Mester, 1997. Inside the black box: What explains differences in the efficiencies of financial institutions? Journal of Banking and Finance, 21, 895-947.
+
+Berger, Allen and Gregory Udell, 1994. Did risk-based capital allocate bank credit and cause a ''credit crunch'' in the United States? Journal of Money, Credit, and Banking 26(3), 585-628.
+
+Bernanke, Ben, and Cara Lown, 1991. The credit crunch. Brookings Papers on Economic Activity 1991 (2), 205-247.
+
+Brevoort, Kenneth, John Holmes and John Wolken, 2010. Distance still matters: The information revolution in small business lending and the persistent role of location, 1993-2003. Finance and Economics Discussion Series, 2010-08.
+
+Calomiris, Charles W. and Mark Carlson, forthcoming, Interbank networks in the National Banking Era: Their purpose and their role in the Panic of 1893, Journal of Financial Economics.
+
+Carlson, Mark, Hui Shan and Missaka Warusawitharana, 2013. Capital ratios and bank lending: A matched bank approach, Journal of Financial Intermediation, 22, 663-687.
+
+Del Giovane, Paulo, Ginette Eramo, and Andrea Nobili, 2011. Disentangling demand and supply in credit developments: a survey-based analysis for Italy, Journal of Banking and Finance, 35(10), 2719-32.
+
+Heitfield, Erik and Robin Prager, 2004. The geographic scope of retail deposit markets. Journal of Financial Services Research 25 (1), 37-55.
+
+Mora, Nada and Logan, Andrew, 2012. Shocks to bank capital: Evidence from UK banks at home and away. Applied Economics, 44(7-9), 1103-19.
+
+Peek, Joe and Eric Rosengren, 2000. Effects of the Japanese bank crisis on real activity in the United States. American Economic Review 90 (1), 30-45.
+
+Rice, Tara and Rose, Jonathan, 2016. When good investments go bad: The contraction in community bank lending after the 2008 GSE takeover. Journal of Financial Intermediation, 27, 68-88.
+
+Linked Files
+
+Data.zip
+ | 
+Programs.zip
+
+1. A deterioration in local economic conditions could also increase the demand for loans as borrowers seek resources to enable them to weather a temporary downturn. 
+Return to text
+
+2. The sample is restricted to banks with RSSD9048 = 200 and RSSD9425 = 0. The data was sourced from: 
+Federal Financial Institutions Council, Consolidated Reports of Condition and Income for a Bank with Domestic and Foreign Offices (Call Reports)
+. 
+Return to text
+
+3. Due to the way that geography is used in the procedure, the sample is limited to the 48 contiguous states. 
+Return to text
+
+4. We scale distances by the square root of the population density of each state to account for the fact that branch networks would be more dispersed in less dense states. We determine our thresholds based on distances in New Jersey, the densest state. 
+Return to text
+
+Please cite this note as:
+
+Carlson, Mark, Molly Shatto, and Missaka Warusawitharana (2017). "Matching Banks by Business Model, Geography and Size: A Dataset ," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, August 8, 2017, https://doi.org/10.17016/2380-7172.2022.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

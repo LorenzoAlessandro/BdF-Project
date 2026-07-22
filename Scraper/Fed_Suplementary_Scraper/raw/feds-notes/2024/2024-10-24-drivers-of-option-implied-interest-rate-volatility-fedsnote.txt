@@ -1,0 +1,204 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+October 24, 2024
+
+Drivers of Option-Implied Interest Rate Volatility
+
+Cisil Sarisoy
+1
+
+Option-implied volatilities of U.S. short-term interest rates have risen sharply since late 2021, reaching their highest levels in over a decade. Although these measures declined moderately since early 2023, they remain at around the 70th percentile of their historical distribution.
+2
+ This note links the implied volatility of short-term interest rates to macroeconomic uncertainty and highlights two fundamental drivers of short-term interest rate volatility over the past 30 years: inflation uncertainty and growth uncertainty. In a regression framework, I find that both have positive relationships with implied volatility during periods when the effective lower bound is not binding. That said, the relationships diverge over periods when rates are at, or near, the effective lower bound. The positive relationship between the inflation uncertainty and the implied volatility becomes stronger. In contrast, the relationship between the growth uncertainty and the implied volatility weakens and turns negative. The latter likely reflects the downward pressure on implied volatility from the return to the effective lower bound paired with the expectation of low rates for a protracted period, on the backdrop of the COVID-19 crisis.
+
+Option-implied volatilities of interest rates in part reflect market participants' expectations about the volatility of an underlying interest rate at a specified horizon, and thus provide a signal about the market participants' uncertainty regarding future interest rates.
+3
+ The implied volatility of short-term interest rates is likely closely related to the uncertainty about the path of fed funds rate, and uncertainty about the fed funds rate should, in turn, reflect uncertainty about the outlook for inflation and real economic activity. To illustrate this, I construct survey-based disagreement measures for inflation and real GDP growth using the forecasts via Blue Chip Economic Indicators to proxy for inflation uncertainty and the real GDP growth uncertainty.
+4
+ Figure 1 shows the time series of the one-year-ahead option-implied volatility measure of one-year rate (dashed black lines) alongside measures of uncertainty of CPI inflation over the next year (red line in the left panel) and uncertainty of real GDP growth over the next year (blue line in the right panel).
+5
+ The shaded areas represent the effective lower bound (ELB) periods. Up until the onset of the pandemic, both inflation uncertainty and real GDP growth uncertainty have generally been positively correlated with the implied volatility.
+6
+ However, the implied volatility moved in opposite directions with the real GDP uncertainty in early 2020; the implied volatility declined notably while the real GDP uncertainty spiked.
+7
+ The decline in the implied volatility in this period is likely to be partly driven by the mechanical pull down from return to the effective lower bound in the U.S. and the expectation that rates would be pinned at low levels for a protracted period amid the COVID-19 crisis.
+8
+
+Figure 1. Interest Rate Volatility and Survey-Based Uncertainty (Disagreement) Measures of CPI and Real GDP Growth
+
+Note: Swaption volatility line corresponds to the swaption-implied volatility of one-year swap rate at a horizon of one year ahead. Values are quarterly averages of monthly data from January 1995 to July 2024.
+
+Source: Barclays Research; Blue Chip Economic Indicators; ICAP.
+
+Accessible version
+
+Next, I run regressions to show the effects of inflation uncertainty and real GDP uncertainty on option-implied interest rate volatility empirically. I estimate two regression specifications with the option-implied interest rate volatility as the dependent variable. In the first specification, I include the uncertainty measures for inflation over the next year and real GDP growth over the next year as the explanatory variables. I subsequently expand the specification to account for additional variables of interestâa dummy variable indicating the ELB periods and interactions of the ELB dummy variable with the inflation uncertainty and the real GDP growth uncertainty measures. These interaction terms enable me to capture whether the relationship between the implied volatility and the uncertainty measures differ between the ELB periods and the periods when the ELB is not binding. All independent variables are standardized by subtracting their unconditional mean and dividing by their unconditional standard deviations, to make the regression coefficients easy to compare and interpret. Both specifications are estimated using monthly data from January 1995 to July 2024.
+9
+
+Table 1 summarizes the regression results. As shown in column 1, there is a positive and statistically significant relationship between inflation uncertainty and implied volatility, indicating that a higher inflation uncertainty is associated with a higher implied volatility.
+10
+ The real GDP growth uncertainty, however, does not have a statistically significant relationship with the implied volatility.
+11
+ This specification explains 16 percent of the variation in implied volatility. The regression results in column 2 show that adding interaction effects between the ELB dummy and the measures for inflation uncertainty and the real GDP growth uncertainty adds substantial explanatory power. The relationship of the implied volatility with the uncertainty measures exhibits variation between the periods when ELB is binding and not binding. When the ELB is not binding, inflation uncertainty and the real GDP uncertainty both have positive, economically and statistically significant relationships with the implied volatility. As shown, a one standard deviation increase in inflation uncertainty is associated with a 10-basis-point increase in implied volatility for inflation uncertainty, and a one standard deviation increase in real GDP growth uncertainty is associated with a 22-basis-point increase in implied volatility during the periods when the ELB is not binding. However, the regression results show that, when the ELB is binding, the relationship between the inflation uncertainty and the implied volatility becomes stronger, and the relationship between real GDP uncertainty and the implied volatility weakens and turns negative (Table 1, column 2).
+12
+ The latter likely reflects the downward pressure on implied volatility from the return to the effective lower bound paired with the expectation of low rates for a protracted period amid COVID-19 crisis. This specification explains almost 60 percent of the variation in implied short-term interest rate volatility.
+
+Table 1: Explaining Option-Implied Interest Rate Volatility
+
+Explanatory variables
+
+(1)
+
+(2)
+
+CPI uncertainty
+
+16***
+
+10***
+
+Real GDP growth uncertainty
+
+-3
+
+22***
+
+ELB dummy x CPI uncertainty
+
+ 
+
+7*
+
+ELB dummy x Real GDP growth uncertainty
+
+ 
+
+-30***
+
+ELB dummy
+
+ 
+
+-46***
+
+Constant
+
+91***
+
+107***
+
+Number of Observations
+
+355
+
+355
+
+Adjusted R-squared
+
+16%
+
+58%
+
+Note: */**/*** denotes significance at the 10 percent, 5 percent, and 1 percent levels, respectively.
+
+Source: Barclays Research; Blue Chip Economic Indicators; ICAP.
+
+Finally, considering the results from the second specification, I take a closer look at the changes in the implied short-term interest rate volatility since its peak in March 2023.
+13
+ As shown in Table 2, implied short-term interest rate volatility declined moderately since March 2023, by about 45 basis points. The model-based prediction entirely accounts for the decline in implied volatility, and more than half of the predicted decline is due to the decline in inflation uncertainty.
+
+Table 2: Recent Movements in Option-Implied Interest Rate Volatility
+
+Changes
+
+March 2023 - July 2024
+
+Observed
+
+- 45 bps
+
+Predicted
+
+-52 bps
+
+Attributed to CPI uncertainty
+
+-29 bps
+
+Attributed to Real GDP growth uncertainty
+
+-23 bps
+
+Note: Total predicted change is calculated based on the regression results in the second model specification.
+
+Source: Barclays Research; Blue Chip Economic Indicators; ICAP.
+
+References
+
+Altig, D., Baker, S., Barrero, J.M., Bloom, N., Bunn, P., Chen, S., Davis, S.J., Leather, J., Meyer, B., Mihaylov, E., Mizen, P., Parker, N., Renault, T., Smietanka, P., Thwaites, G., 2020. Economic uncertainty before and during the COVID-19 pandemic. J. Public Econ. 191, 104274.
+
+Cascaldi-Garcia, Danilo, Cisil Sarisoy, Juan M. Londono, Bo Sun, Deepa D. Datta, Thiago Ferreira, Olesya Grishchenko, Mohammad R. Jahan-Parvar, Francesca Loria, Sai Ma, Marius Rodriguez, Ilknur Zer, and John Rogers. 2023. "What Is Certain about Uncertainty?" 
+Journal of Economic Literature
+, 61 (2): 624â54.
+
+Dräger, Lena and Lamla, Michael J., Disagreement à la Taylor: Evidence from Survey Microdata (April 24, 2015). KOF Working Paper No. 380.
+
+Jurado, Kyle, Sydney C. Ludvigson, and Serena Ng (2015). "Measuring Uncertainty," American Economic Review 105 (3): 1177â1216.
+
+Sarisoy, Cisil (2023). "Elevated Option-Implied Interest Rate Volatility and Downside Risks to Economic Activity," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, December 22, 2023, 
+https://doi.org/10.17016/2380-7172.3404
+.
+
+1. I thank Shaghil Ahmed, Eric Engstrom, Simona Hannon, Bastian von Beschwitz, and Emre Yoldas for helpful comments and suggestions and Shaily Acharya and Kevin Bao for research assistance. The views expressed in this note are solely those of the author and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of anyone else associated with the Federal Reserve System. 
+Return to text
+
+2. The option-implied volatility series covers the period from January 1995 to July 2024. 
+Return to text
+
+3. Option-implied volatilities are affected by volatility risk premiums. Sarisoy (2023) analyzes the effect of option-implied short-term interest rate volatility on future economic activity in a quantile regression framework. 
+Return to text
+
+4. Blue Chip economic indicators forecast data for year-over-year CPI inflation and year-over-year real GDP growth is available for the end of current calendar year and for the end of next calendar year. Survey-based disagreement measures for CPI inflation over the next year and real GDP growth over the next year at any point in time are calculated based on a linear interpolation of the year-end forecasts for the current year and the next year such that the forecast horizon of both disagreement measures correspond to 12 months from the forecast date. Periods when forecasters hold more diverse views on macroeconomic variables are likely to reflect greater uncertainty. The correlation between the real uncertainty measure of Jurado et al. (2013) and the survey-based disagreement measure of real GDP growth is about 65 percent. See Cascaldi-Garcia et al. (2023) for a comprehensive survey on a wide range of uncertainty measures suggested in the literature. 
+Return to text
+
+5. The inflation uncertainty and real GDP growth uncertainty could be related because shocks to aggregate demand and supply likely affect both inflation and growth. The correlation between the survey-based disagreement measures of CPI inflation and the real GDP growth is 0.45. 
+Return to text
+
+6. The pre-COVID-19 pandemic period correlation between the implied volatility and inflation uncertainty is 0.46, and pre-COVID-19 pandemic period correlation between the implied volatility and real GDP growth uncertainty is 0.63; both correlations are statistically significant at 1 percent level. 
+Return to text
+
+7. Albeit much less dramatically, CPI uncertainty also moved in the opposite direction to implied volatility. 
+Return to text
+
+8. Altig et al. (2020) examines a variety of economic uncertainty measures before and during the COVID-19 pandemic. 
+Return to text
+
+9. The sample is chosen in line with the availability of the option-implied volatility data series. 
+Return to text
+
+10. Dräger and Lamla (2015) find that disagreement on future interest rate is largely driven by disagreement on inflation. 
+Return to text
+
+11. The coefficient of real GDP growth uncertainty remains insignificant when robust regression methods are used in estimation. The variance inflation factor value for the inflation uncertainty and real GDP growth uncertainty measures is at around 1.2. 
+Return to text
+
+12. This regression specification doesn't distinguish between the two ELB periods in the sample that likely differ in nature. Of note is the fact that the second ELB period overlapped with the COVID-19 crisis. 
+Return to text
+
+13. The option-implied interest rate volatilities rose notably in March 2023 amid Silicon Valley Bank-related concerns. 
+Return to text
+
+Please cite this note as:
+
+Sarisoy, Cisil (2024). "Drivers of Option-Implied Interest Rate Volatility," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 24, 2024, https://doi.org/10.17016/2380-7172.3572.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

@@ -1,0 +1,172 @@
+FEDS Notes
+
+Twitter
+
+February 09, 2024
+
+Governance of Permissionless Blockchain Networks
+
+Amber Seira
+,
+Jeffrey Allen
+,
+Cy Watsky
+, and Richard Alley
+1
+
+Introduction
+
+A permissionless blockchain network is a system of physically distributed computers running a copy of a shared ledger and using the same software rules that enable all network participants to "read, submit, and validate transactions" (Beck, Müller-Bloch, and King, 2018, p. 1022). A permissionless system's accessibility stands in contrast to that of permissioned systems, in which a central authority pre-selects validators and potentially restricts viewing and submission rights (Krause, Natarajan, and Gradstein, 2017; Beck, Müller-Bloch, and King, 2018).
+
+An open question for the trajectory of blockchain-based financial services is whether permissionless networks are suitable for hosting products and services in modern financial and payment systems. Key issues in this area include whether permissionless blockchain networks are compatible with financial regulatory and auditing standards, whether they introduce novel risk management issues for financial institutions, and how the open and decentralized nature of the networks affects governance.
+
+This note focuses on the last of these considerationsâgovernance. Blockchain scholars have explored a range of governance questions surrounding permissionless systems, including how the networks establish rules, react to market competition, respond to security threats, and make other strategic decisions (see, for example: Beck, Müller-Bloch, and King, 2018; Glaser, 2017; De Filippi and Loveluck, 2016; Lumineau, Wang, and Schilke, 2021; Pelt, Jansen, Baars, and Overbeek, 2021).
+
+The purpose of this note is to facilitate the continued investigation of permissionless network governance issues through three related analyses. First, the note provides a primer on permissionless blockchain network stakeholders, focusing on developers, nodes, and users. The primer can serve as a reference for scholars and policymakers seeking to understand the key players in permissionless network governance. Second, the note lays out some similarities and differences in governance patterns between the two largest permissionless blockchain networks, Bitcoin and Ethereum. Finally, we trace differences in models of change between the two networks, with an emphasis on their histories of hard forksâprotocol updates that are not backwards compatible. We use the analysis to lay out a variety of important research questions at the nexus of governance and software updates that warrant further investigation.
+
+Key Stakeholders in Permissionless Blockchain Networks
+
+We identify three broad groups of stakeholders in permissionless networks: developers, nodes, and users. Importantly, there are distinct sub-groups within these stakeholder categories that play different roles in permissionless network governance.
+
+Developers
+
+We distinguish between two types of developers based on the software they work on: core developers and application developers. Core developers work on the blockchain protocol and client software. Depending on the network, there may be one or multiple types of client software that constitute the core infrastructure. Application developers build decentralized applications on top of blockchains. Within core and application developer groups, there are authority structures. Between these groups, core developers are generally more influential in governance decisions because they steer protocol design choices. Although application developers can exert influence on governance decisions by voicing opinions on developer calls and in public forums, they are less directly involved in network governance than core developers.
+
+As discussed further in our comparison of governance patterns between Bitcoin and Ethereum, the formality of core developer labor arrangements and compensation varies among permissionless networks. In Ethereum, for example, core developers are more likely to be compensated and potentially hired as contractors by the Ethereum Foundation. In Bitcoin, core developers are more likely to be volunteers or work for donations. Occasionally, permissionless networks offer grants or "bug bounties" to the public for identifying code vulnerabilities.
+
+Nodes
+
+Fundamentally, a blockchain is a network of nodesâcomputers running blockchain client software. Blockchain nodes maintain the state of the shared ledger. Stated differently, nodes "ensure that everyone interacting with the blockchain has the same data" (Ethereum.org, 2023a). This maintenance generally involves storing the history of the blockchain and updating the blockchain when new transactions are processed and when blocks are appended. Individuals and consortiums running nodes are called operators. Node operators constitute a key permissionless network governance stakeholder. To be effectuated on permissionless blockchains, proposed source code changes must be accepted and implemented by node operators.
+
+Bitcoin and Ethereum have different types of nodes that can be categorized according to the data they store and the function they serve. A "full" node locally stores and verifies the validity of blocks and blockchain transactions (Bitcoin.org, 2023; Ethereum.org, 2023a). An "archival" node is a full node that maintains the entire history of the blockchain (Bitcoin.org, 2023; Ethereum.org, 2023a). Partial nodes, such as "light" and "pruned" nodes, store only certain parts of the information contained in each block or a limited number of blocks (Bitcoin.org, 2023; Ethereum.org, 2023a).
+
+Miners and validators are also types of nodes with a specific responsibility: they append blocks to a blockchain in proof-of-work and proof-of-stake systems, respectively (Bitcoin.org, 2023; Ethereum.org, 2023a). In proof-of-work networks, miners compete for the right to create new blocks by working to solve computationally intensive cryptographic puzzles (Bitcoin.org, 2023). In proof-of-stake systems, validators are randomly selected to create new blocks, with their odds weighted by the amount of capital they stake (Ethereum.org, 2023a). Miners and validators are critical for well-functioning permissionless systems, since they are responsible for checking the validity of newly proposed transactions against the rules of the blockchain protocol. Additionally, by executing the consensus mechanism, they help keep the networks secure.
+
+The core client software each node runs codifies the rules of a blockchain protocol. Nodes can run additional software depending on their function and role. The most popular software used by Bitcoin nodes is Bitcoin Core. In the Bitcoin network, nodes can function within the network simply by running Bitcoin Core. In Ethereum, nodes run separate execution and consensus clients (Ethereum.org, 2023a). The most popular execution and consensus clients on Ethereum are Go Ethereum (Geth) and Prysm, respectively (Ethereum.org, 2023a). Nodes that perform mining and validation functions run additional specialized software.
+
+Users
+
+A permissionless network user is anyone who holds digital assets related to the blockchain. Users are important for a permissionless system's ability to achieve network effects, wherein the value of the network increases with the number of participants (Wall, 2018). Users can exert pressure on governance decisions through online forums and core developer calls. As in other decentralized governance systems, users, as well as their node counterparts, have the ability to "vote with their feet" if they are unsatisfied with permissionless network services or strategic direction (Ostrom, 2010, p. 644). In networks that have "on-chain" governance, holders of native tokens may also be able to vote for or against software development changes directly (Wall, 2018).
+2
+Overall, though, users face collective action problems (Olson, 1971; Ostrom, 2007) due to their dispersed nature that can impede concentrated influence on governance decisions.
+
+Variations in Permissionless Blockchain Governance
+
+The largest permissionless blockchain networks, Bitcoin and Ethereum, share many common features, but their governance approaches are far from uniform. In examining Bitcoin governance, De Filippi and Loveluck (2016) distinguish between "governance by the infrastructure," which is "achieved via the Bitcoin protocol" itself and "governance of the infrastructure," which is "managed by the community of developers and other stakeholders" (p. 1). The former mechanism, protocol-based governance, enforces the rules of the blockchain. But the protocol does not make design choices, fix bugs, and pursue strategic changes. Indeed, despite their decentralized premise, permissionless networks still need centralized structures to govern blockchain software development.
+
+Regarding protocol-based governance, there are meaningful differences between the proof-of-work and proof-of-stake consensus mechanisms underlying Bitcoin and Ethereum, including the incentive structures designed to shape miner and validator behavior. However, the mechanisms play similar governance roles on the respective blockchains. They enforce economic outcomes and govern what constitutes valid transactions. Network conflicts involving overlapping block validations are generally resolved via rule-based or tiebreaker logic. Economic disputes are largely preempted by the protocols. As such, there are no formal dispute resolution mechanisms for economic actors.
+
+Differences in governance of the permissionless network infrastructures is more complex. Both Bitcoin and Ethereum are open source software (OSS) projects with off-chain governance. Off-chain governance refers to a system in which "protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code" (Ethereum.org, 2023b). The two networks borrow consensus building and feedback solicitation approaches from other well-known computing projects. Specifically, they leverage improvement proposal and request for comments (RFC) frameworks, adapted from the Python programming language and the Internet Engineering Task Force, respectively (Python Core Team, 2018; Internet Engineering Task Force, 2023; De Filippi and Loveluck, 2016). In both networks, software update suggestions start out as improvement proposals before moving onto the next phase as RFCs.
+
+In Bitcoin and Ethereum, as in most OSS projects, anyone can typically review source code, recommend bug fixes, and propose other enhancements. OSS proponents argue that this continuous peer review process leads to better outcomes than can be achieved in closed-source, proprietary software development models (Raymond, 1999). Additionally, anyone can generally copy and modify OSS code, though different OSS licenses spell out expectations for doing so (Weber, 2004).
+
+While the ability to review and copy OSS code is quite permissive, making source code modifications and accepting improvement proposals is almost always restricted, and considerable variation exists in approaches for controlling permissions. Two extremes that have developed in OSS projects are the "democratic-organic structure" (De Laat, 2007, p. 170), which tends to be meritocratic and maintain highly formalized rules and procedures, and the more autocratic "benevolent dictator" (Weber, 2004, p. 90) model, in which the power to make changes is concentrated in the hands of one or a small group of developers.
+
+Historically, Bitcoin has tended toward the more consolidated authority structure. The power to make source code modifications was originally concentrated in the hands of Bitcoin's founder, Satoshi Nakamoto, before a small core development team took over project maintenance in 2010, a structure that remains in place today. It has been reported that the Bitcoin Core software is primarily maintained by five key developers (Kiernan, 2023). Bitcoin core developers often operate under pseudonyms and work on a volunteer basis, though they can be compensated through donation channels, some of which are formalized.
+
+It is less straightforward to locate Ethereum on the continuum of OSS governance models, and we observe that the network's governance approach is evolving. Several key differences between Ethereum and Bitcoin are clear though. Compared to Bitcoin, Ethereum's leadership is more visible, the network is larger and more diverse, the developer model is more conventional, and the network relies more on its foundation for coordination. When it comes to leadership, the network's co-founder and key figurehead, Vitalik Buterin, is public facing and has advocated building "fair and inclusive institutions" that are "credibly neutral" (Buterin, 2020). Regarding size, Ethereum has the largest core developer pool among blockchain projects by a considerable margin (Electric Capital, 2023). Further, core developers are generally known, and their work is usually compensated. The Ethereum Foundation also plays a central role in hiring development contractors, though other independent contributors and employees of private companies contribute to Ethereum development as well. Notwithstanding these observations, more research is needed to understand Ethereum's evolving governance approach.
+
+Variations in Hard Fork Patterns: An Opportunity for Future Research
+
+An important and understudied question in permissionless blockchain governance is how variations in governance approaches affect patterns of change, particularly within the context of hard forks. In blockchain networks, a hard fork is a "change to a blockchain implementation that is not backwards compatible. Non-updated nodes cannot continue to transact with updated nodes" (Yaga and others, 2018, p. 29-30). Hard forks entail an update-or-leave dynamic that often drives core developers to build consensus prior to their deployment. The backwards-incompatibility inherent in hard forks means that node operators are faced with a decision: either they update to stay with the network, or they get kicked out. But if the proposed change is contentious and enough nodes elect to forgo the update, the legacy network, rather than the updated network, could be considered the main network.
+
+Bitcoin and Ethereum have both experienced hard forks. However, hard forks on Bitcoin have not generally been used to implement updates or changes to the protocol design. Instead, updates are implemented in a backwards-compatible manner. Historical instances of hard forks on Bitcoin have created separate blockchains with a different native cryptocurrency. These "altcoins," including Bitcoin Cash, Litecoin, Bitcoin Gold, and Bitcoin Diamond, have had varying degrees of success. The lack of substantive hard forks on Bitcoin that modify the main network protocol raises at least two questions for future research. First, to what extent do Bitcoin's governance mechanisms deter collective action on the Bitcoin network and impede substantive change to the core Bitcoin protocol? Second, does the relative stability of the core Bitcoin protocol lead to better network outcomes?
+
+The Ethereum network, on the other hand, has pursued significant, coordinated changes to the main network via hard forks. Early in its history, the majority of Ethereum nodes accepted a hard fork in response to a major security incident, the hack of a large decentralized autonomous organization, The DAO. A distinct minority set of nodes refused to accept the fork and continue to maintain a separate blockchain, Ethereum Classic, which operates under the proof-of-work consensus mechanism. The most notable Ethereum hard fork was the Beacon Chain, where the proof-of-stake consensus mechanism was developed and tested, and, subsequently, The Merge, which transformed the core Ethereum consensus mechanism from proof-of-work to proof-of-stake. Another substantive and coordinated change to the network was Ethereum Improvement Proposal 1559, which modified how gas fees are calculated.
+
+The relative frequency of substantive hard forks on Ethereum, as compared to Bitcoin, raises several questions that warrant further interrogation. First, is Ethereum's governance framework the primary enabling factor behind these substantive modifications to the main network? Second, is there a relationship between the diversity of applications and services hosted on a blockchain and hard forking propensity? Finally, does the flexibility to pursue major changes to core permissionless blockchain protocols, as opposed to protocol stability, lead to better economic outcomes?
+
+Conclusion
+
+The nature and effectiveness of permissionless blockchain network governance are important areas of inquiry for scholars and policymakers seeking to understand the potential role of permissionless networks in the digital economy. This note provides a primer on key stakeholders in permissionless systems, focusing on developers, nodes, and users. Further, it compares governance approaches between the largest permissionless systems, Bitcoin and Ethereum, and highlights variations in hard fork patterns between these systems. In doing so, we call on scholars and policymakers to further explore the interaction of permissionless network governance and models of change.
+
+References
+
+Beck, Roman, Christoph Müller-Bloch, and John Leslie King (2018). "Governance in the Blockchain Economy: A Framework and Research Agenda." Journal of the association for information systems 19, no. 10: 1,
+https://doi.org/10.17705/1jais.00518
+.
+
+Bitcoin.org (2023). "Bitcoin Developer: Developer Guides," accessed October 11,
+https://developer.bitcoin.org/devguide/index.html
+.
+
+Buterin, Vitalik (2020). "Credible Neutrality As A Guiding Principle," Nakamoto, https://nakamoto.com/credible-neutrality/.
+
+De Filippi, Primavera, and Benjamin Loveluck (2016). "The invisible politics of bitcoin: governance crisis of a decentralized infrastructure." Internet policy review 5, no. 4,
+https://doi.org/10.14763/2016.3.427
+.
+
+De Laat, Paul B. (2007). "Governance of open source software: state of the art", Journal of Management & Governance 11(2), pp. 165-177,
+https://doi.org/10.1007/s10997-007-9022-9
+.
+
+Electric Capital (2023). "Developer Report," accessed October 13, https://www.developerreport.com/.
+
+Ethereum.org (2023a). "Ethereum Development Documentation," accessed October 11,
+https://ethereum.org/en/developers/docs/
+.
+
+Ethereum.org (2023b). "Introduction to Ethereum Governance," accessed October 11,
+https://ethereum.org/en/governance/
+.
+
+Glaser, Florian (2017). "Pervasive decentralisation of digital infrastructures: a framework for blockchain enabled system and use case analysis." Proceedings of the 50th Hawaii International Conference on System Sciences.
+https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1204&context=hicss-50
+.
+
+Internet Engineering Task Force (2023). "RFCs,"
+https://www.ietf.org/standards/rfcs/
+(accessed May 2023).
+
+Kiernan, Paul (2023). "Bitcoin's Future Depends on a Handful of Mysterious Coders," The Wall Street Journal, February 16, https://www.wsj.com/articles/bitcoin-core-maintainers-crypto-7b93804.
+
+Krause, Solvej, Harish Natarajan, and Helen Luskin Gradstein. (2017). "Distributed ledger technology (DLT) and blockchain." World Bank Group: Washington, DC, USA.
+https://openknowledge.worldbank.org/server/api/core/bitstreams/5166f335-35db-57d7-9c7e-110f7d018f79/content
+.
+
+Lumineau, Fabrice, Wenqian Wang, and Oliver Schilke (2021). "Blockchain governanceâA new way of organizing collaborations?." Organization Science 32, no. 2: 500-521,
+https://doi.org/10.1287/orsc.2020.1379
+.
+
+Olson, Mancur (1971). The Logic of Collective Action: Public Goods and the Theory of Groups. Harvard Economic Studies: 124. Harvard University Press.
+
+Ostrom Elinor (2010), "Beyond Markets and States: Polycentric Governance of Complex Economic Systems." American Economic Review, Vol. 100, No. 3: 641-672,â¯
+https://www.jstor.org/stable/27871226
+.
+
+Ostrom, Elinor (2007). "Collective Action Theory," in C.â¯Boixâ¯and S. Stokes (eds), Oxford Handbook of Comparative Politics (Oxford: Oxford University Press).
+
+Pelt, Rowan van, Slinger Jansen, Djuri Baars, and Sietse Overbeek (2021). "Defining blockchain governance: a framework for analysis and comparison." Information Systems Management 38, no. 1: 21-41,
+https://doi.org/10.1080/10580530.2020.1720046
+.
+
+Python Core Team (2018). "PEP 13 â Python Language Governance,"
+https://peps.python.org/pep-0013/#the-core-team
+.
+
+Raymond, Eric S. (1999). "The Cathedral and the Bazaar." Knowledge, Technology & Policy 12, no. 3: 23-49,
+https://doi.org/10.1007/s12130-999-1026-0
+.
+
+Wall, Larry D. (2018). Blockchain Challenges and Governance. Center for Financial Innovation and Stability. Federal Reserve Bank of Atlanta.
+https://www.atlantafed.org/cenfis/publications/notesfromthevault/07-blockchain-challenges-and-governance-2018-07-30#_edn14
+.
+
+Weber, Steven (2004). The Success of Open Source. Harvard University Press, 2004.
+
+Yaga, Dylan, Peter Mell, Nik Roby, and Karen Scarfone (2018). "Blockchain Technology Overview." U.S. Department of Commerce: National Institute of Standards and Technology, Internal Report 8202,
+https://doi.org/10.6028/NIST.IR.8202
+.
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the Federal Reserve System. The authors would like to thank David Mills, Sonja Danburg, Jillian Mascelli, and Sarah Wright of the Federal Reserve Board for their review.
+Return to text
+
+2. "On-chain" refers to activity that happens on the blockchain network where the data is appended as a record of the blockchain. "Off-chain" refers to activity that occurs outside the blockchain and it is not formally recorded on the network.
+Return to text
+
+Please cite this note as:
+
+Seira, Amber, Jeffrey Allen, Cy Watsky, and Richard Alley (2024). "Governance of Permissionless Blockchain Networks," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 09, 2024, https://doi.org/10.17016/2380-7172.3443.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

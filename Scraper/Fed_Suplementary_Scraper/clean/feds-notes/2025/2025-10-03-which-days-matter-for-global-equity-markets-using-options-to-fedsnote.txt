@@ -1,0 +1,303 @@
+FEDS Notes
+
+Twitter
+
+October 03, 2025
+
+Which Days Matter for Global Equity Markets? Using Options to Price Events in the Global Calendar
+
+Juan M. Londono
+and Mehrdad Samadi
+
+Economic developments matter for equity markets, as these developments contain information about both future cash flows and discount rates, the two fundamental drivers of equity prices. Due to the interconnected nature of global equity markets, foreign economic developments could also matter for investors in domestic equity markets. Investors obtain information about domestic and foreign economic developments mainly through prescheduled releases, such as the release of monetary policy rates after FOMC and ECB meetings and CPI and employment reports by the U.S. Bureau of Labor Statistics and Eurostat. Although less frequent than economic releases, elections also have the potential to affect the economy and, therefore, be of relevance to investors in equity markets. Equity markets'
+ex-post
+reactions to economic releases limit our ability to identify which future releases are important to equity markets today if releases contain unexpectedly good news, rather than reflecting proper risk compensations, or the relevance of these announcements varies over time. For instance, Londono and Samadi (2023) and Knox, Londono, Samadi, and Vissing-Jorgensen (2025) find that information about inflation and monetary policy rates in the U.S. became more relevant for domestic equities during the exceptional rise in inflation after the onset of the Covid-19 pandemic that eventually brought the period of very low interest rates to an end at the beginning of 2022.
+1
+
+In this note, we discuss an approach to determine the
+ex-ante
+relevance of economic releases that uses recently introduced daily equity option expirations in the U.S. and the euro area. We assess which upcoming economic releases are more relevant in the eyes of equity market participants, and we explore the extent to which upcoming foreign prescheduled events matter for domestic investors. Because the relevance of upcoming releases can be determined at each point in time, we can create an option-implied global calendar tracking all upcoming domestic and international events. This calendar could be useful to policy makers to understand what equity market participants are paying attention to at each point in time, which economic releases become more or less relevant over time, and even how this relevance varies as the event approaches.
+
+Market price of upcoming domestic and foreign economic releases
+
+Options expiring every day only became available in 2022 for the U.S. (S&P 500) and 2023 for the euro area (Stoxx 50). Before that, option expirations were sparser (once a month since 1987, end-of-the-week since 2008, and three times a week since 2016 for the S&P 500). Daily expiration options make possible the estimation of forward option-implied risk compensation measures associated with each upcoming trading day. We examine daily forward premiums in the U.S. and euro-area equity markets. To isolate how much of the risk compensation required by investors today is attributable to each economic release occurring in the future, we compare the price of options traded today that expire right before the future event with those that span the event and expire soon after. Londono and Samadi (2023) and Knox, Londono, Samadi, and Vissing-Jorgensen (2025) show that various option-implied measures, including forward equity risk premiums, can be estimated separately for each upcoming daily forward period, including forward periods where economic news are released.
+
+Figure 1 shows estimated option-implied forward equity risk premiums associated with U.S. and euro-area economic releases calculated using daily expiration S&P 500 (Panel A) and STOXX 50 (Panel B) options. Daily estimates of forward premiums are averaged over the week prior to a given event. Our sample is relatively short, running from September 2023 to July 2025, as daily expiration options only became available recently for these two markets. Forward periods for different economic releases are identified with different shapes with U.S. economic releases in bold red and periods with euro-area releases in blue. We also report major elections in the euro area and the U.S. as the purple stars. For reference, forward periods where there are no economic announcements are reported in small black circles.
+
+Figure 1. Forward option-implied premiums
+
+Note: this figure reports forward daily equity risk premiums for the U.S. (panel A) and the euro-area (panel B). Forward equity risk premiums are calculated as differences in the Gao and Martin (2021) LVIX measure using options that span the release and those that expire right before the release. For each forward period, the LVIX is a weighted average of the price of out-of-the-money puts and calls empirically similar to the VIX volatility index. Under certain conditions, LVIX provides a lower bound approximation to the forward equity risk premium (see Gao and Martin, 2021 and Londono and Samadi, 2023 for details). Daily estimates of forward premiums are averaged over the week prior to a given event. We examine the change in unemployment release for Germany (blue squares), CPI releases for the euro area, France, and Germany (blue circles), GDP releases for Germany and France (blue triangles), ECB policy rate announcements (blue diamonds), U.S. nonfarm payrolls (bold red squares), U.S. CPI (bold red circles), U.S. GDP (bold red triangles), and FOMC announcements (bold red diamonds). Because euro-area markets are closed when FOMC statements are released, we shift FOMC to the following trading day for the Stoxx 30 options. We also mark the French first-round and runoff elections, U.S. presidential election, and German elections with purple circles. We remove trading days during April and May 2025 associated with the April 2025 tariff announcements.
+
+Sources: OptionMetrics, Bloomberg, Board Staff Calculations.
+
+Accessible version
+
+Several prescheduled economic releases, mostly those related to inflation (the circles) and monetary policy announcements (the diamonds), are relevant to the eyes of investors in equity markets during this time period, as equity premiums associated with these announcements are usually higher than on non-announcement dates. The importance of these releases to investors fluctuates over time, with the largest euro-area inflation release premiums concentrated in the period of tightening that started to wane at the end of 2023, where days with inflation and monetary policy releases consistently command a higher risk compensation than other forward periods, including periods with other announcements or with no announcements scheduled. In particular, the highly-anticipated September 29 euro-area CPI announcement commanded some of the highest macroeconomic release risk compensations in both U.S. and euro-area equity marketsâup to 79% and 77% larger than premiums for surrounding days in the euro area and U.S, respectively. This period appeared to signal the conclusion of monetary policy tightening in the euro area; the ECB deposit facility rate peaked at 4 percent at the September 2023 ECB meeting. At least for our sample period, euro-area employment (the squares) and, except for a few episodes, euro-area and U.S. output (the triangles) releases do not seem to command additional risk compensation compared to other forward periods.
+
+Certain foreign economic releases appear to be relevant to domestic equity investors in our sample. For both the U.S. and the euro area, domestic inflation releases consistently command higher risk premiums compared to neighboring dates, while only certain foreign inflation releases command relatively high equity risk premiums. Domestic and foreign policy rate announcements often command significantly higher risk premiums during our sample. Major elections in the euro area and the U.S. command the largest event risk premiums in domestic, and, in some cases, foreign markets, with magnitudes significantly larger than those for economic releases.
+
+We formally assess whether upcoming economic releases during our sample are relevant to U.S. and euro-area equity markets ex ante and the extent to which foreign releases matter for domestic investors. To do so, in Table 1, we run separate regressions for U.S. and euro-area equity risk premiums:
+
+$$$$F_{t,e}=\alpha_t+\sum_{m=1}^{4}{\beta_m^{US}I_{m,e}^{US}}+\ \sum_{m=1}^{4}{\beta_m^{EA}I_{m,e}^{EA}}+\epsilon_{t,e}$$$$
+
+where $$F_{t,e}$$ is the forward equity premium measure for trade date $$t$$ and forward period $$e$$, and the right-hand-side variables of interest are eight indicator variables that take the value of one for the following four key economic announcements in both the U.S and the euro area: inflation, employment, output, and policy rate announcements, respectively. We also include trade date fixed effects, $$\alpha_t$$, which allow us to determine whether one announcement type commands a significantly higher equity risk compensation than other nearby forward periods observed on the same trade date.
+
+Table 1. Which economic events are relevant to U.S. and euro-area equity investors?
+
+Economic release
+
+Event Coefficient (bp, annualized)
+
+t-statistic
+
+Number of observations
+
+United States
+
+CPI U.S.
+
+45
+
+10.4
+
+1716
+
+CPI euro area
+
+18
+
+2.8
+
+1716
+
+Policy rate U.S.
+
+49
+
+4.7
+
+1716
+
+Policy rate euro area
+
+5
+
+1.5
+
+1716
+
+Employment U.S.
+
+53
+
+8.8
+
+1716
+
+Employment euro area
+
+-1
+
+-0.2
+
+1716
+
+GDP U.S.
+
+4
+
+0.5
+
+1716
+
+GDP euro area
+
+-11
+
+-0.9
+
+1716
+
+Euro area
+
+CPI U.S.
+
+24
+
+5.9
+
+1747
+
+CPI euro area
+
+31
+
+2.6
+
+1747
+
+Policy rate U.S.
+
+39
+
+4.3
+
+1747
+
+Policy rate euro area
+
+28
+
+6.2
+
+1747
+
+Employment U.S.
+
+35
+
+4.8
+
+1747
+
+Employment euro area
+
+-9
+
+-0.7
+
+1747
+
+GDP U.S.
+
+-6
+
+-0.6
+
+1747
+
+GDP euro area
+
+2
+
+0.1
+
+1747
+
+Note: This table reports the results for regressions for both U.S. and euro-area equity risk premiums (for all forward periods available), where the right-hand-side variable is an indicator that takes the value of one for each announcement type and zero otherwise, along with trade date fixed effects to compare release forward premiums to forward premiums for surrounding days on the forward equity term structure. We remove trading days during April and May 2025 associated with the April 2025 tariff announcements, as these premiums are quite large, most likely due to significant noise in option prices around those dates and not explained by events that could have been anticipated by markets. Because euro-area markets are closed when FOMC statements are released, we shift FOMC to the following trading day for the Stoxx 30 options. We report the estimated coefficient associated with the release indicator variable ("event coefficient") and the
+t
+-statistic for the statistical significance of the estimated coefficient. We also report the total number of observations. Standard errors are clustered by forward period.
+
+Sources: Optionmetrics, Bloomberg, Board Staff Calculations.
+
+For the U.S., domestic CPI and FOMC release risk premiums are significantâ45 and 53 basis points annualized, respectively. Euro-area CPI releases also seem relevant to U.S. investors during our sample and command an elevated premium with respect to nearby forward periods. U.S. employment releases are also significantly priced (53 bps), but euro-area employment releases as well as domestic and foreign GDP releases do not appear relevant to investors in U.S. equity markets. For the euro area, both domestic and U.S. CPI have elevated premiums during our sample. Similarly, the risk premiums associated with both the euro-area and the U.S. policy rate announcements are significantly higher than for other forward periodsâ39 and 28 basis points annualized, respectively. Interestingly, for the euro area, only foreign (U.S.) employment commands significantly elevated premiums. Like for U.S. equity markets, domestic and foreign GDP releases are not significantly priced. Thus, while for the U.S., domestic releases are always more important, for the euro area, U.S. releases are as important as domestic releases in many cases.
+
+In sum, we find that prescheduled announcements and economic releases, especially U.S. releases, appear relevant to equity investors in the U.S. and the euro area. The market relevance of upcoming events varies across announcements, with CPI releases and FOMC announcements being the most relevant in our sample. We also find some evidence of international spillovers, where certain foreign releases matter for domestic investors.
+
+An Option-Implied Global Calendar
+
+While the previous section focused on economic releases, the option-implied approach can also be used to assess the relative importance of less frequently occurring events, such as major elections. Given that option-implied measures of equity premiums can be computed separately for each day and in real time, we propose an approach to determine, at each point in time, which upcoming events appear more relevant to equity markets. Londono and Samadi (2023) and Knox, Londono, Samadi, and Vissing-Jorgensen (2025) have similarly proposed an approach to price the upcoming U.S. domestic calendar using various option-implied measures over the month preceding events. Table 2 shows an example of market pricing for the upcoming U.S. CPI and French second round Election for the U.S. and the euro area equity markets as of July 5, 2024. To assess how relevant each announcement is to equity market investors, we report the historical percentile of these estimates. Bear in mind that investors know when releases will occur but do not know yet the final release number. They can, of course, form expectations of the release using, for instance, information from surveys and market data, such as forecast dispersion and perceived policy rules from the Survey of Professional Forecasters and historical release return measures.
+
+Table 2. Pricing the Global Calendar
+
+S&P 500 Forward Premia: July 5, 2024
+
+Date
+
+Event
+
+LVIX (% annualized)
+
+Historical percentile
+
+July 8, 2024
+
+French Election
+
+0.31
+
+0.24
+
+July 9, 2024
+
+0.34
+
+0.31
+
+July 10, 2024
+
+0.26
+
+0.17
+
+July 11, 2024
+
+U.S. CPI
+
+0.90**
+
+0.93
+
+Stoxx 50 Forward Premia: July 5, 2024
+
+Date
+
+Event
+
+LVIX (% annualized)
+
+Historical percentile
+
+July 8, 2024
+
+French Election
+
+2.75***
+
+0.99
+
+July 9, 2024
+
+0.95
+
+0.10
+
+July 10, 2024
+
+0.50
+
+0.02
+
+July 11, 2024
+
+U.S. CPI
+
+0.80
+
+0.05
+
+Note: This Table illustrates an example of how to estimate risk pricing of the upcoming economic calendar. Forward equity risk premiums are estimated using option prices on July 5, 2024, for options that expire over the following week (the forward periods). Forward equity risk premiums are calculated as differences in the Gao and Martin (2021) LVIX measure using options that span the release and those that expire right before the release. LVIX is a weighted average of the price of out-of-the-money puts and calls empirically similar to the VIX volatility index. We compute historical percentiles by first subtracting the average forward premiums across all forward periods on a given trade date. Premia for release days with these adjusted premiums falling above the 80th, 90th, and 99th percentile of the historical distribution are identified with *, **, and ***, respectively. For dates with prescheduled announcements, we report the announcement type. Forward premiums are reported in annualized percent.
+
+Sources: Optionmetrics, Bloomberg, Board Staff Calculations.
+
+For this example, the premium for July 8, 2024, the date of the upcoming French runoff election, as of July 5, 2024, is only significantly priced in the euro area. The U.S. CPI release, on July 11, 2024, was significant to investors in the U.S., but not in the euro area.
+
+In summary, this empirical framework can be used to assess how much equity market participants care about both frequently occurring events, such as upcoming economic releases, as well as infrequently occurring events, such as upcoming elections.
+
+References
+
+Gao, C., and Martin, I., (2021). Volatility, valuation ratios, and bubbles: An empirical measure of market sentiment. Journal of Finance, 76 (6), 3211-3254.
+
+Knox, Londono, Samadi, and Vissing-Jorgensen (2025). Equity premium events. Working paper.
+
+Londono, J. M., and Samadi, M. (2023). The price of macroeconomic uncertainty: Evidence from daily option expirations. International Finance Discussion Paper, Federal Reserve Board.
+
+1. Knox, Londono, Samadi, and Vissing-Jorgensen (2025) also aim to reconcile the differences between ex ante and ex post approaches to estimate equity premiums in terms of the magnitude of premiums and how much of the total equity risk compensation is due to economic releases.
+Return to text
+
+Please cite this note as:
+
+Londono, Juan M. and Mehrdad Samadi (2025). "Which Days Matter for Global Equity Markets? Using Options to Price Events in the Global Calendar," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 03, 2025, https://doi.org/10.17016/2380-7172.3908.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

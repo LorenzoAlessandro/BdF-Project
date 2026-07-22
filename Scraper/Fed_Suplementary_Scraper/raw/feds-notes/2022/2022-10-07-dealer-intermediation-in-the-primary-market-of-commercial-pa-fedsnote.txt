@@ -1,0 +1,638 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+October 07, 2022
+
+Dealer Intermediation in the Primary Market of Commercial Paper
+1
+
+Max Gross, 
+Yi Li
+, and 
+Ashley Wang
+2
+
+1. Introduction
+
+The commercial paper (CP) market is an important source of short-term funding for highly-rated financial and nonfinancial firms, with over $1 trillion in outstanding assets. The Global Financial Crisis in 2008 and the COVID-19 crisis in March 2020 both demonstrated the fragility of the CP market, which seized up in both crises and only recovered following interventions from the Federal Reserve in the form of several liquidity facilities.
+3
+ As such, it is important to develop an understanding of trading dynamics in the CP market, which may shed light on risk preferences of major market participants, including commercial paper issuers, investors and primary dealers, especially at times of market stress.
+
+In this project, we focus on primary-market trading of CP, which accounts for over 90 percent of total CP trading. The primary market for CP has two distribution channels: 
+Directly placed
+, where issuers sell directly to investors, and 
+dealer intermediated
+, where an issuer sells to a dealer and the dealer sells to investors. As such, we identify three types of transactions: direct placement from an issuer to an investor (type 1), dealer purchase from the issuer (type 3), and dealer sale to an investor (type 2). These types are illustrated in the diagram below.
+
+Illustration 1. Three types of transactions: direct placement from an issuer to an investor (type 1), dealer purchase from the issuer (type 3), and dealer sale to an investor (type 2)
+
+Accessible version
+
+We find three main sets of results, each presented from the perspective of one group of market participants.
+
+From CP investors' perspective, we find that among transactions involving the highest rated financial issuers, investors earn higher yields from dealer-intermediated CP than from directly placed CP. The average difference ranges from 1 basis point (bp) for the overnight bucket to about 3 bps for the 30-day maturity bucket, and the difference widened further over the COVID crisis period.
+4
+ These patterns may be driven by the heterogeneity among financial CP issuers: those with access to direct funding from CP investors tend to be more credit-worthy and better-connected financial institutions, hence, investors demand lower yields from such issuers. Indeed, once we control for the issuer fixed effect, we find for a given issuer, investors tend to receive about 2 basis points more yield from direct issuance than from dealer-intermediated CP trades (see first row of Table 1). This finding suggests that for a given issuer that chooses to place its CP directly, investors take a significant share of the saved intermediation costs.
+
+Table 1: Spreads in CP yields from different transaction types (for a given issuer)
+
+Spread type
+
+Perspective and interpretation
+
+Spread (basis points)
+
+1: Type 1 less Type 2
+
+Investors: Spread earned by lending directly to issuers
+
+2
+
+2: Type 3 less Type 1
+
+Issuers: Extra cost for dealer-intermediated issuance
+
+0
+
+3: Type 3 less Type 2
+
+Dealers: Intermediation spread for a given issuer
+
+2
+
+Note: We control for issuer fixed effects and other CP characteristics when calculating the difference between CP yields from different transaction types. See section 4 for details.
+
+From CP issuers' perspective, we find that among transactions involving the highest rated financial issuers, the funding cost is higher for dealer-intermediated issuance than through direct placement, with the difference averaging about 2 bps for overnight CP and 6 bps for 30-day CP. During crisis times, the spreads between the yields via the two distribution channels widen significantly. These, again, are consistent with the heterogeneity in issuers' characteristics: those with access to the direct placement channel are likely to be more creditworthy and better connected and hence have lower funding costs. Once we control for the issuer fixed effect, we find no significant difference in funding costs via the two distribution channels for a given issuer (see second row of Table 1). This finding further confirms that for a given CP issuer, investors take almost all the benefits from eliminating the intermediation costs charged by dealers.
+
+From dealers' perspective, we document evidence of robust revenues earned by dealers from intermediating between investors and CP issuers, ranging from 1 to 6 bps, depending on the credit rating and maturity of the CP issuance. We show that dealers earn higher spreads from intermediation services for CP issuers with little to no access to direct placement, such as issuers of nonfinancial and asset-backed CP. In contrast, dealers earn lower spreads from intermediating for highly rated financial issuers, which tend to have access to direct placement and hence presumably hold stronger bargaining power. For transactions involving the same issuer, dealers earn an average spread of 2 basis points between the yields they receive from investors and those they charge to issuers (third row of Table 1).
+
+2. Data and background
+
+We conduct our analysis using transaction-level CP data from the DTCC and issuer credit rating data from Standard & Poor's and Moody's Investors Service for the period from July 2018 to August 2022.
+5
+
+Dealer-intermediated trades account for the majority of the CP primary-market transactions, as illustrated in the charts below. Direct issuance (type 1) has made up a relatively small share of the CP market since 2013. Over the period from April 2013 to August 2022, the market share of direct issuance averaged about 20 percent and ranged from about 10 to 40 percent (Figures 1 and 2).
+
+Figure 1. Direct issuance (type 1) share of CP market
+
+Note: 5-day moving average. Type 1 is direct issuance, from issuer to investor, and type 2 is dealer intermediated, from dealer to investor.
+
+Source: DTCC.
+
+Accessible version
+
+Figure 2. Total CP issuance volumes
+
+Note: 5-day moving average. Type 1 is direct issuance, from issuer to investor, and type 2 is dealer intermediated, from dealer to investor.
+
+Source: DTCC.
+
+Accessible version
+
+Most direct issuance is concentrated among financial issuers, who on average account for about 80 percent of all direct CP issuance. For other categories of CP issuers, the vast majority of issuance is intermediated by dealers, especially for nonfinancial issuers, who have negligible direct issuance in the last three years.
+
+Figure 3. AA financial CP total issuance volumes
+
+Note: 5-day moving average. Type 1 is direct issuance, from issuer to investor, and type 2 is dealer intermediated, from dealer to investor.
+
+Source: DTCC, Standard & Poor's, and Moody's Investors Service.
+
+Accessible version
+
+CP issuers vary significantly in their choice between (or access to) direct and dealer-intermediated issuance. Among the top 50 financial CP issuers (in terms of total issuance volume) over the period from 2013 to 2022, 13 place over 60% of their issuance directly, while nine place less than 10% of their issuance directly. While the vast majority of these top 50 issuers have foreign parents, U.S.-domiciled issuers are more likely to use direct placement.
+
+3. Summary statistics: comparing CP yields of different transaction types
+
+We move to investigate whether there are any significant differences in average funding costs across different CP distribution channels. We start with univariate analysis and provide summary statistics for CP yields of different transaction types.
+6
+ We focus on three time periods: July 2018 to August 2022 (full sample), the repo spike (September 16-20, 2019), and the COVID-19 crisis (March 1-April 10, 2020).
+
+3.1 Investor perspective
+
+Investors can purchase CP either directly from issuers or from dealers. We focus on financial CP with the highest rating and compare the average yields that CP investors earn through these two purchasing channels. For transactions involving the highest rated financial issuers, investors on average earn more on dealer-intermediated CP (type 2) than directly-placed CP (type 1), with this difference larger for maturities in the 30-day maturity bucket (3.3 basis points) than for the overnight bucket (0.8 basis points) (Table 2). During crisis times, this yield difference widened substantially. For instance, it increased to almost 7 basis points during the COVID-19 crisis. Potential explanations for these observations are that issuers who have direct access to CP investors tend to be more credit-worthy and better-connected financial institutions and investors on average require lower yields from them.
+
+Table 2: Average type 1 - type 2 spreads for AA financial
+
+Time period
+
+Overnight
+
+30-day
+
+Full Sample (Jul 2018-Aug 2022)
+
+-0.8 bps***
+
+-3.3 bps***
+
+Repo spike (Sep 16-20, 2019)
+
+-23.7
+
+-6.1**
+
+COVID crisis (Mar 1-Apr 10, 2020)
+
+-6.7***
+
+-18**
+
+Note: ***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+3.2 Issuer perspective
+
+Issuers can issue CP directly to investors or have dealers intermediate the transaction. We again focus on financial CP with the highest rating and compare the average costs that CP issuers pay through these two channels. Table 3 below demonstrates how the cost to issuers differs between direct issuance (type 1) and dealer-intermediated issuance (type 3). On average, the highest rated financial CP issuers pay more via dealers (type 3) than through directly placed CP (type 1), with the differences averaging 1.8 and 6 basis points, respectively, for overnight and 30-day issuance. During crisis times, the spreads between the yields on these two distribution channels also widen significantly.
+
+Table 3: Average type 3 - type 1 spreads for AA financial
+
+Time period
+
+Overnight
+
+30-day
+
+Full Sample (Jul 2018-Aug 2022)
+
+1.8 bps***
+
+5.9 bps***
+
+Repo spike (Sep 16-20, 2019)
+
+24.4
+
+10.9***
+
+COVID crisis (Mar 1-Apr 10, 2020)
+
+8.8***
+
+21.6***
+
+Note: ***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+3.3 Dealer perspective
+
+Finally, the difference between yields on type 3 (issuer to dealer) and type 2 (dealer to investor) CP transactions represents how much revenue dealers earn from intermediating transactions. Table 4 shows that across different CP categories, dealers earn statistically significant spreads from intermediation in the primary CP market over the full sample period. For overnight CP, average spreads range from about 1 basis point for the highest rated financial CP to about 6 basis points for A2/P2 nonfinancial CP, and for 30-day CP, average spreads range from 2.7 to 5.8 bps.
+
+Table 4: Average type 3 - type 2 spreads by CP category
+
+Category
+
+Overnight
+
+30-day
+
+AA financial
+
+0.9 bp***
+
+2.7 bps***
+
+Asset-backed
+
+4.2***
+
+4.2***
+
+AA nonfinancial
+
+4.6***
+
+3.1***
+
+A2/P2 nonfinancial
+
+5.9***
+
+5.8***
+
+Note: ***, **, * indicate statistical significance at 1%, 5%, and 10%, respectively.
+
+Dealer revenues from intermediation are greater for nonfinancial and asset-backed CP issuance, especially for lower-rated nonfinancial CP, probably because lower-rated issuers have less direct access to investors. Dealers' spreads are more compressed for the highest rated financial issuers, likely because these issuers' direct access to investors gives them greater bargaining power. During crisis times, dealers' intermediation spreads remain robust.
+
+4. Regression analysis with issuer-fixed effects
+
+Summary statistics provide an overview of CP pricing for different transaction types. However, yield differences can be driven by various issuer characteristics (including credit rating, financing amounts, ease of access to the CP market, etc.), and these issuer characteristics can also determine whether issuers choose direct placement or dealer intermediation when issuing CP.
+
+To analyze CP pricing for different transaction types while controlling for the effects of issuer characteristics, we exploit the fact that some issuers have both direct placement and dealer-intermediated transactions and compare yields of different transaction types for the same issuer in a given month.
+7
+ By doing so, we effectively eliminate the impact of issuer characteristics on CP pricing. Importantly, we also control for various CP features that can potentially affect its pricing, including CP type, issuance amount, and time to maturity. The sample for this analysis spans from July 2018 to August 2022 and includes only observations for CP issuers who distribute CP through both channels (direct and intermediated) in a given month.
+
+Table 5 presents regression results from the perspective of investors, with the dummy variable 
+Direct_issue
+ equal to one if the observation represents a direct issuance to investors and zero if it was intermediated by dealers. It shows that for a given issuer, investors earn higher yields (about 2 bps) from direct issuance â the result we previewed in the first row of Table 1. This finding suggests that when an issuer directly places its CP, investors take a significant share of the saving from avoiding intermediation costs.
+
+Table 5: From investor perspective
+
+Dependent variable: Yield
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+Direct_issue
+
+1.95***
+
+2.02***
+
+2.11***
+
+(2.84)
+
+(3.6)
+
+(3.83)
+
+Direct_issue × Crisis
+
+ 
+
+ 
+
+-2.02
+
+ 
+
+ 
+
+(-0.56)
+
+Crisis
+
+ 
+
+ 
+
+14.42***
+
+ 
+
+ 
+
+(3.46)
+
+Characteristic controls
+
+Yes
+
+Yes
+
+Yes
+
+CP type FE
+
+Yes
+
+Yes
+
+Yes
+
+Time (year-month) FE
+
+Yes
+
+ 
+
+ 
+
+Issuer FE
+
+Yes
+
+ 
+
+ 
+
+Issuer × Time FE
+
+ 
+
+Yes
+
+Yes
+
+Adjusted R
+2
+
+0.947
+
+0.954
+
+0.954
+
+N of observations
+
+711969
+
+711969
+
+711969
+
+Note: 
+Crisis
+ is defined to include repo spike and COVID crisis.
+ CP characteristics
+ controls include log(
+issuance amount
+) and 
+days to maturity
+. 
+CP type
+ includes financial, nonfinancial, and ABCP. Standard errors are clustered at the issuer and month levels, with corresponding t-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Table 6 reports results from the perspective of CP issuers. It shows that funding costs for given issuer do not vary significantly for direct issuance and issuance through dealers (see also the second row of Table 1). This finding further confirms that for a given CP issuer, its investors take almost all the benefits from eliminating the intermediation costs charged by dealers.
+
+Table 6: From issuer perspective
+
+Dependent variable: Yield
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+Direct_issue
+
+0.39
+
+0.46
+
+0.47
+
+(0.76)
+
+(1.15)
+
+(1.21)
+
+Direct_issue × Crisis
+
+ 
+
+ 
+
+0.14
+
+ 
+
+ 
+
+(0.03)
+
+Crisis
+
+ 
+
+ 
+
+12.04***
+
+ 
+
+ 
+
+(2.98)
+
+Characteristic controls
+
+Yes
+
+Yes
+
+Yes
+
+CP type FE
+
+Yes
+
+Yes
+
+Yes
+
+Time (year-month) FE
+
+Yes
+
+ 
+
+ 
+
+Issuer FE
+
+Yes
+
+ 
+
+ 
+
+Issuer × Time FE
+
+ 
+
+Yes
+
+Yes
+
+Adjusted R
+2
+
+0.975
+
+0.983
+
+0.983
+
+N of observations
+
+520886
+
+520886
+
+520886
+
+Note: 
+Crisis
+ is defined to include repo spike and COVID crisis. 
+CP characteristics
+ controls include log(
+issuance amount
+) and 
+days to maturity
+. 
+CP type
+ includes financial, nonfinancial, and ABCP. Standard errors are clustered at the issuer and month levels, with corresponding t-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+Table 7 focuses on the perspective of dealers, with the dummy variable 
+Dealer_buy
+ equal to one if the observation represents a purchase by dealer (from CP issuers) and zero if a sale by dealer (to investors). It shows that dealers make robust spreads (about 2 bps, as shown in the third row of Table 1) from intermediating between issuers and investors.
+
+Table 7: From dealer perspective
+
+Dependent variable: Yield
+
+ 
+
+(1)
+
+(2)
+
+(3)
+
+Dealer_buy
+
+2.30***
+
+2.30***
+
+2.35***
+
+(6.00)
+
+(5.86)
+
+(6.00)
+
+Dealer_buy × Crisis
+
+ 
+
+ 
+
+-1.39
+
+ 
+
+ 
+
+(-1.53)
+
+Crisis
+
+ 
+
+ 
+
+18.30***
+
+ 
+
+ 
+
+(6.13)
+
+Characteristic controls
+
+Yes
+
+Yes
+
+Yes
+
+CP type FE
+
+Yes
+
+Yes
+
+Yes
+
+Time (year-month) FE
+
+Yes
+
+ 
+
+ 
+
+Issuer FE
+
+Yes
+
+ 
+
+ 
+
+Issuer × Time FE
+
+ 
+
+Yes
+
+Yes
+
+Adjusted R
+2
+
+0.947
+
+0.953
+
+0.953
+
+N of observations
+
+664041
+
+664041
+
+664041
+
+Note: 
+Crisis
+ is defined to include repo spike and COVID crisis. 
+CP characteristics
+ controls include log(
+issuance amount
+) and 
+days to maturity
+. 
+CP type
+ includes financial, nonfinancial, and ABCP. Standard errors are clustered at the issuer and month levels, with corresponding t-values in parentheses. ***, **, and * indicate statistical significance at the 1%, 5%, and 10% level, respectively.
+
+5. Conclusion
+
+In this note, we examine CP trades in primary markets, where CP dealers play a major intermediation role. CP issuers vary significantly in terms of their access to direct funding from investors, and issuers with less access rely more on dealers for CP issuance and pay higher intermediation costs. Our findings suggest that there are substantial trading frictions in the CP markets, represented by notable yield spreads between different distribution channels and across different market participants. These frictions could be important for other short-term funding markets in which primary trades dominate and dealer intermediation is also vital.
+
+1. This publication includes data licensed from DTCC Solutions LLC, an affiliate of The Depository Trust & Clearing Corporation. 
+Return to text
+
+2. Sean R. Tibay provided excellent research assistance. 
+Return to text
+
+3. The facilities implemented by the Federal Reserve related to the CP market include The Commercial Paper Funding Facility (CPFF), Money Market Mutual Fund Liquidity Facility (MMLF) and Primary Dealer Credit Facility (PDCF). 
+Return to text
+
+4. We examine CP of two representative maturity buckets, with "overnight" referring to maturities of one to four days and "30-day" meaning maturities of 21 to 40 days. 
+Return to text
+
+5. Security-level data on primary market issuance of CP is obtained from DTCC Solutions LLC, an affiliate of The Depository Trust & Clearing Corporation (DTCC). This data set is confidential. Neither DTCC Solutions LLC nor any of its affiliates shall be responsible for any errors or omissions in any DTCC data included in this publication, regardless of the cause and, in no event, shall DTCC or any of its affiliates be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit, trading losses and opportunity costs) in connection with this publication. 
+Return to text
+
+6. For a given CP category (defined by industry, rating, and maturity bucket), we first compute the average yield (weighted by issuance volumes) on a daily basis for each transaction type (1, 2, 3) and then calculate the difference between the average yields (i.e., spreads) for a given set of CP types (1 and 2, 1 and 3, and 2 and 3) on a given day. Finally, we calculate the averages for these spreads across the sample period. 
+Return to text
+
+7. To check the robustness of our results, we also use CP spread (calculated as the difference between CP yield and same-maturity OIS rate) as the dependent variable for our regression tests and obtain consistent results. 
+Return to text
+
+Please cite this note as:
+
+Gross, Max, Yi Li, and Ashley Wang (2022). "Dealer Intermediation in the Primary Market of Commercial Paper," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, October 07, 2022, https://doi.org/10.17016/2380-7172.3213.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

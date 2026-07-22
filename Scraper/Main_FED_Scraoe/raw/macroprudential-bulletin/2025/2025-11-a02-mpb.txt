@@ -1,0 +1,385 @@
+Skip to:
+
+Skip to 
+navigation
+
+Skip to 
+content
+
+Skip to 
+footer
+
+ANYTIME 
+
+PAST MONTH 
+
+PAST YEAR 
+
+Search Options
+
+Image Preview
+
+Home
+
+Media
+
+Explainers
+
+Research & Publications
+
+Statistics
+
+Monetary Policy
+
+The €uro
+
+Payments & Markets
+
+Careers
+
+Suggestions
+
+Sort by
+
+Relevance
+                                
+
+Date
+                                
+
+ 
+
+Cyril Couaillier
+Team Lead - Financial Stability · Macro Prud Policy&Financial Stability, Stress Test Modelling
+Ivan Dimitrov
+Financial Stability Expert · Macro Prud Policy&Financial Stability, Stress Test Modelling
+Finn Faber
+Marco Forletta
+Financial Stability Expert · Macro Prud Policy&Financial Stability, Macroprudential Policy
+Ieva Mikaliūnaitė-Jouvanceau
+André Nunes
+Alessandro Pollastri
+Nicola Röhm
+Financial Stability Analyst · Macro Prud Policy&Financial Stability, Stress Test Modelling
+
+        Simulating dynamic balance sheet reactions and macroprudential policy using the 2025 EU-wide stress test    
+
+Prepared by Cyril Couaillier, Ivan Dimitrov, Finn Faber, Marco Forletta, Ieva Mikaliūnaitė-Jouvanceau, André Nunes, Alessandro Pollastri and Nicola Röhm
+Published as part of the 
+Macroprudential Bulletin 32
+, November 2025.
+Stress test simulations can enhance our understanding of the interplay between bank actions, the real economy and macroprudential buffers. Leveraging BEAST, the ECB’s workhorse top-down stress test model, this article explores impacts stemming from bank behavioural reactions by simulating them under the adverse scenario of the 2025 EU-wide stress test. The article shows that allowing banks to adjust their balance sheets only improves their capital ratios to a minor extent compared with simulations where they are assumed to keep their balance sheets constant. However, these reactions trigger negative credit supply shocks, exacerbating the downturn. Conversely, releasing available releasable buffers reduces banks’ incentives to deleverage and mitigates GDP contraction. These findings highlight how stress test simulations can inform macroprudential policy. More generally, they underscore the value of building sufficient releasable buffers during stable periods, to be used in times of stress to sustain credit supply to the real economy while preserving banks’ resilience.
+1 Revisiting the 2025 EU-wide stress test under varying modelling assumptions with a fully top-down approach
+EU-wide capital depletion is calculated under the assumption of a constant balance sheet, which presumes that banks do not adjust their behaviour in response to stress. 
+This implies each bank’s asset composition and overall size are kept constant at their end-2024 levels throughout the three‑year horizon. If this assumption were relaxed, banks could respond by deleveraging (shedding assets or cutting loan supply) and de-risking (changing the composition of their portfolios from high to low-risk weight assets) in an effort to restore their regulatory capital ratios. While such actions would bolster headline CET1 ratios, they would come at the expense of tighter credit conditions.
+As bank deleveraging has opposite first-round effects on bank capital and the economy, simulations help determine the macroeconomic and microeconomic effects more precisely.
+ At the microeconomic level, individual banks can strengthen their capital ratios by reducing risk-weighted assets (RWA), either lowering credit supply or shifting their portfolios toward safer and lower-assets assets. This strategy compresses the denominator of the capital ratio and improves banks’ capital positions. At the macroeconomic level, however, the contraction in credit supply weakens economic activity, increases default risk on existing loans and amplifies losses across the banking sector. These feedback effects in turn reduce banks’ capital. As such, the net effect on capital ratios is ambiguous and requires quantification, while the repercussions for the real economy are unambiguously negative.
+The complexity of modelling both constant and dynamic balance sheet dynamics with feedback loops requires the use of a top-down model.
+ 
+First, incorporating dynamic balance sheet adjustment into a bottom-up framework in which banks themselves calculate the impact of the stress test scenario on their activities would make it difficult to ensure individual projections are consistent, as each bank could apply different assumptions and methodologies when projecting future changes in their balance sheets. Aggregating these projections could lead to outcomes that are internally inconsistent and misaligned with the macroeconomic scenario. In addition, developing a common methodology to guide banks in projecting future changes in their balance sheets is inherently challenging and could place a significant burden on banks. Second, the presence of feedback effects means that an individual bank’s deleveraging or capital adjustment could influence the outcomes for others, making the aggregation of results non-trivial, highly sensitive to modelling assumptions and operationally very complex. A top-down approach is more suitable for capturing system-wide interactions and macro-financial feedback effects in a consistent and tractable way. The ECB’s BEAST model offers an appropriate framework for this, enabling analysis of macro-financial scenarios and their implications for both banks and the real economy (see Box 1).
+This article details the results from four simulation exercises carried out sequentially, with different constant and dynamic balance sheet features.
+ The first exercise runs the model under a constant balance sheet assumption, allowing a direct comparison with EBA stress test results and acting as a point of reference against which to assess the impact of the different modelling assumptions. The second exercise relaxes the constant balance sheet assumption to assess the impact of bank deleveraging, without yet accounting for the impact of lower credit supply on the real economy. The third exercise activates the feedback loop between the banking system and the real economy to evaluate whether bank deleveraging has a net positive or negative impact on capital ratios. Finally, given that repercussions for the real economy are unambiguously negative, the fourth exercise introduces the possibility of releasing capital buffers – such as the countercyclical capital buffer (CCyB) and the systemic risk buffer (SyRB) – to explore how these macroprudential tools can support credit supply to the real economy under stress.
+2 Bank reactions and macroeconomic feedback loops with and without policy changes
+Banks experience the most significant capital depletion under a constant balance sheet assumption, as employed in the EU-wide stress test.
+ In this modelling set-up, macroeconomic variables follow the EBA’s adverse scenario, while aggregate credit is unchanged, consistent with the constant balance sheet assumption. This implicitly assumes that banks offset any downward shift in the credit demand curve during a crisis by increasing credit supply. In this initial simulation, the banking system’s capital ratio declines by 3.5 percentage points (
+Chart 1
+, blue bars). These results are broadly in line with the outcomes of the 2025 EU-wide stress test, both at the system level and for individual banks (
+Chart 1
+, yellow bars).
+[
+1
+]
+The differences between the official EU-wide stress test results and those of the BEAST constant balance sheet simulation are primarily driven by different modelling choices.
+ The EU-wide exercise imposes methodological constraints on banks’ projections to ensure conservativeness and maintain a level playing field within its bottom-up approach. These constraints include (but are not limited to) calibrated pass-through parameters from risk-free rates to bank margins, caps and floors on net fee and commission income (NFCI) projections and a cap on net interest income (NII) under the adverse scenario. Additionally, the EU-wide stress test assumes no recovery for transition rates and imposes a cap on client revenues. By relaxing these constraints, BEAST projects moderately lower CET1 depletion than in the EU-wide stress test (3.5 percentage points vs 4.0 percentage points), leading to slightly fewer banks breaching the maximum distributable amount (MDA) trigger: 18 compared to 24 in the EU-wide exercise in year three (
+Chart 2
+). Despite this difference, bank-level results for the two stress tests are very similar, with a correlation coefficient above 0.8.
+Relaxing the constant balance sheet assumption without accounting for the feedback loop between the banking system and the real economy
+ 
+results in substantially higher capital ratios.
+ Allowing banks to deleverage without accounting for the impact on the real economy
+ 
+makes it possible to capture the direct effects of deleveraging (how banks’ balance sheets adjust to mitigate capital depletion) without factoring in the potential negative repercussions on the economy. In response to adverse shocks, banks reduce the size of their balance sheets to bolster their capital ratios, ensuring compliance with capital requirements and meeting market expectations (see Couaillier et al., 2024). This strategy results in higher capital ratios compared to the simulation under a constant balance sheet assumption, primarily due to a reduced impact on RWAs and credit risk (
+Chart 1
+, panel a, yellow bars). Banks achieve this risk reduction by cutting lending and reallocating their portfolios toward less risky sectors. Although net interest income (NII) declines due to the reduction in interest-bearing assets combined with a shift to safer but less profitable counterparts (e.g. sovereigns), capital ratios improve overall. In total, banks’ capital ratios increase by 0.83 percentage points relative to the constant balance sheet simulation, allowing eight additional banks to avoid breaching their regulatory capital buffers.
+Chart 1
+Deleveraging supports capital ratios; releasing macroprudential buffers allows banks to absorb more losses before deleveraging 
+a) Contributions to the change in CET1 capital
+b) Contributions to the change in CET1 capital
+(percentage points of risk exposure amount)
+(difference to BEAST constant balance sheet, in percentage points of risk exposure amount)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: The chart shows the results of four simulations of the 2025 EU-wide stress test adverse scenario in the BEAST model with (i) constant bank balance sheets, (ii) dynamic bank balance sheets without a feedback loop with the real economy, (iii) dynamic bank balance sheets with a feedback loop with the real economy, and (iv) releasing the CCyB and SyRB at the beginning of the projection. The bars indicate the cumulative impact over the three years of the projections by driver and the final impact on the CET1 ratio. NII stands for net interest income; NFCI stands for net fee and commission income; RWA stands for risk-weighted assets: CET1 stands for Common Equity Tier 1. Items not reported: operation risk, operating expenses, other profit & loss, and dividend paid.
+The third simulation documents that bank deleveraging substantially amplifies the severity of an economic crisis.
+ By reducing credit to firms and households, banks exacerbate the downturn in a procyclical way, deepening the initial adverse developments. The additional macroeconomic contraction arises from multiple channels: first, compared to the constant balance sheet simulation, implicit positive credit supply shocks vanish as banks are allowed to deleverage, removing a stabilising factor during the downturn; second, negative credit supply shocks intensify, particularly for banks with low management buffers, as they react to deteriorating solvency and profitability.
+[
+2
+]
+ These negative credit supply shocks significantly worsen economic activity, resulting in a further contraction in real GDP of around 2 percentage points after three years (
+Chart 3
+, panel b, red bars compared with blue and yellow bars).
+The intensified economic crisis triggers significant second-round effects on banks’ capital, offsetting much of the initial benefit from deleveraging.
+ As a weakened economy implies lower income (such as lower NFCI) and reduced NII due to higher non-performing loans) credit risk rises, putting banks’ solvency under pressure. Increased risk weights inflate RWAs and reduce capital ratios, triggering further deleveraging and even tighter credit supply. Accounting for these feedback effects increases overall capital depletion by 0.27 percentage points (
+Chart 1
+, panel b, red bars). However, the capital ratio remains 0.56 percentage points higher than under the constant balance sheet assumption. These results indicated that deleveraging in such an adverse scenario can provide a modest net benefit for banks with strong initial capital positions and profitable balance sheets. At the same time, feedback loops are likely to intensify under weaker economic conditions and lower initial capital ratios, leading to more pronounced deleveraging for banks. In any case, the macroeconomic cost of credit rationing highlights the risks of deleveraging and the importance potentially releasing macroprudential buffers to mitigate negative spillovers to the real economy.
+Chart 2
+Deleveraging and releasing macroprudential buffers help banks not to breach capital requirements
+Banks breaching the Maximum Distributable Amount trigger
+(number of banks and percentage of total assets)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: Panel a) shows the results of four simulations of the 2025 EU-wide stress test adverse scenario in the BEAST model with (i) constant bank balance sheets, (ii) dynamic bank balance sheets without feedback loop with the real economy, (iii) dynamic bank balance sheets with feedback loop with the real economy, and (iv) releasing the CCyB and SyRB at the beginning of the projection. The bars indicate banks breaching the maximum distributable amount (MDA) trigger (minimum capital requirements plus combined buffers requirements) at the end of the projection horizon, in number of banks (blue bars) and share of total assets of banks in the sample in the fourth quarter of 2024 (yellow bars)
+Chart 3
+Bank deleveraging has a strong negative impact on the real economy, partially alleviated by releasing macroprudential buffers
+a) Loan to firms and households, deviation from starting point
+b) Real GDP, deviation from starting point
+(percentage deviation from initial level)
+(percentage deviation from initial level)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: this chart shows the results of four simulations of the 2025 EU-wide stress test adverse scenario in the BEAST model with (i) constant bank balance sheets, (ii) dynamic bank balance sheets without feedback loop with the real economy, (iii) dynamic bank balance sheets with feedback loop with the real economy, and (iv) releasing the CCyB and SyRB at the beginning of the projection. Panel a) indicates the deviation of loans to firms and households from the starting point, panel b) the deviation in real GDP.
+Releasing macroprudential buffers limits banks’ procyclical deleveraging, allowing them to absorb losses through reduced capital requirements.
+ In a crisis amplified by stress in the banking system, the release of macroprudential buffers allows banks to absorb losses while maintaining their capacity to lend to firms and households. This mitigates the procyclical deleveraging dynamics, which emphasises the importance of building capital buffers during favourable periods and using them during adverse times.
+[
+3
+]
+ Macroprudential authorities have built up more substantial releasable buffers since the pandemic, with the CCyB and the SyRB together amounting to 0.8% at system level, albeit with substantial heterogeneity across banks.  Against this background, the ECB’s BEAST model is used to simulate a full release of these macroprudential buffers under the adverse scenario at the onset of the crisis. The results show a reduction in banks’ procyclical deleveraging behaviour and less pronounced second-round macroeconomic effects from weaker credit supply shocks. The release of 0.8 percentage points of CCyB and SyRB triggers an increase in credit and GDP by 1.3% and 0.3% after three years, compared with a scenario with no release. Those elasticities are at the medium-to-high end of the range of estimates from the empirical literature, reflecting a more significant impact of buffer release on banks’ credit policy than on the real economy. 
+[
+4
+]
+ These findings highlight the role of macroprudential policies in stabilising the financial system and mitigating the economic fallout during periods of stress.
+Simulations confirm the importance of macroprudential buffer releases during crises, particularly in mitigating the impact on real GDP.
+ A full release of the CCyB and SyRB would result in a milder decline in credit of around 1.25 percentage points after three years, which in turn would lead to a smaller reduction in real GDP of 0.26 percentage points over the same period (
+Chart 3
+, green bars compared with red bars). As macroprudential buffers are released, banks use the capital freed up to absorb losses and deleverage less, which on aggregate leads their capital ratio to decrease slightly (
+Chart 1
+, panel b, green bars). Despite this, fewer banks breach their MDA triggers thanks to the release of the buffers (
+Chart 2
+). These findings highlight the importance of considering dynamic balance sheet adjustments and the feedback effects between banks and the real economy when assessing the impact of releasing macroprudential buffers.
+3 Investigating cross-sectional differences and zooming in on the weakest banks
+As banks are allowed to deleverage, significant heterogeneity in capital depletion emerges, driven by differences in their ability to reduce their balance sheets while preserving income. Chart 4
+ illustrates why this is and which banks benefit from relaxing the constant balance sheet assumption, by breaking down the main drivers of the effect. The strongest gains are seen in banks that can lower their risk exposure amount without significantly reducing NII, often by cutting back on costly funding sources (see fourth quartile in 
+Chart 4
+, panel a). Compared with other banks, these institutions typically start with lower leverage ratios (i.e. less capital relative to total assets), which gives them both more incentive and more room to reduce debt and RWAs (
+Chart 4
+, panel b).
+Banks most impacted by the feedback loop have a larger share of fragile credit exposures, as their NII and credit risk are more vulnerable to adverse conditions.
+ The way banks respond to the feedback loop mainly depends on how their NII and credit risk evolve. The hardest-hit institutions face a double impact: a steep drop in NII alongside rising credit risk provisions as more borrowers default. This vulnerability is strongly linked to starting conditions, in particular a larger share of Stage 2 loans (underperforming assets that have not yet defaulted but carry a higher risk of becoming non-performing in the event of economic deterioration) (
+Chart 5
+).
+Chart 4
+Banks benefit from deleveraging by compressing their risk exposure amount while preserving income and increasing their initially low leverage ratio
+a) Drivers of change in the CET1 ratio when allowing for a dynamic balance sheet, by quartile of net change
+b) Initial leverage ratio, by quartile of change in the CET1 ratio when allowing for a dynamic balance sheet
+(percentage points)
+(percentage)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: Panel a): end-of-projection difference in CET1 ratio between simulations of the 2025 EU-wide stress test adverse scenario in the BEAST model with (i) constant and (ii) dynamic bank balance sheets without feedback loop with the real economy, by quartile of net impact on the CET1 ratio. The change is decomposed into contributions from net interest income, credit risk, other changes to CET1 volume and change to risk exposure amount (REA). NII stands for net interest income; CR stands for credit risk. Panel b): leverage ratio in the fourth quarter of 2024 by quartile of change in CET1 ratios between the two simulations, with the lowest (highest) quartile corresponding to the lowest (largest) improvement.
+Releasing macroprudential buffers supports credit growth, especially for banks that would otherwise face a capital shortfall
+ (
+Chart 6
+)
+.
+ Under the adverse scenario, several banks hover near (or even breach) their MDA trigger, prompting them to reduce lending to preserve capital. However, by releasing macroprudential buffers, these banks gain the capital headroom needed to resume lending, resulting in a pronounced uptick in credit growth for both non-financial corporates (NFCs) and households (HHs). From a macroprudential perspective, this positive impact demonstrates the effectiveness of releasing buffers in alleviating MDA constraints. Releases also do not weaken financial stability. Indeed, the comfortable levels of non-releasable capital requirements and banks’ initial capital ratios imply that they would remain in a healthy capital position even after using the capital freed up by the buffer release. The positive impact is most pronounced for banks that move from a capital shortfall to a surplus thanks to the buffer release, but those still with a shortfall also lend more as their shortfalls decline.
+Chart 5
+The feedback loop has a greater negative impact on banks with more fragile credit exposures
+Initial share of Stage 2 loans by quartile of change in CET1 when introducing the feedback loop
+(percentage)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: Share of Stage 2 exposures in loans to non-financial corporates and households (loans for house purchase and loans for consumption). The different quartiles denote the change in banks` depletion in the simulation with the feedback loop compared with the simulation with dynamic balance sheet only with the lowest (highest) quartile corresponding to the largest (lowest) deterioration. 
+Chart 6
+Releasing macroprudential buffers significantly boosts bank lending, with the extent of the increase depending on a bank’s distance from the MDA trigger
+Loan growth difference when macroprudential buffers are released and kept, by portfolio and bank distance from the MDA trigger
+(percentage points)
+Source: EBA stress test data, Supervisory data, ECB calculation
+Notes: Loan growth end-of-year projection difference between the simulation when macroprudential buffers are released and the simulation with a feedback loop to the real economy. These differences are calculated for the non-financial corporate (NFC) and households (loans for house purchase and loans for consumption) portfolios and depending on a bank’s distance from the MDA trigger: The “Always in excess” group includes banks that are above the MDA trigger in both simulation; the opposite applies for the “Always in shortfall” group; “From shortfall to excess” includes banks that breach the MDA trigger in the simulation with a feedback loop but are above it in the simulation when macroprudential buffers are released.
+4 Conclusions and implications for macroprudential policy
+This article quantifies how bank reactions under the EBA’s 2025 adverse scenario would deepen the crisis and explores the positive support that comes from a macroprudential response.
+ The procyclical feedback loop between banks and the real economy during crises implies that banks cut credit precisely when the economy needs it most, intensifying the initial downturn. This procyclical behaviour lies at the core of macroprudential considerations and calls for a response to safeguard support for the economy in times of crisis. Building on the ECB’s top-down BEAST model, our analysis demonstrates the effectiveness of releasing capital buffers in mitigating credit supply shocks if the shocks outlined in the stress test 2025 adverse scenario were to materialise. This finding is in line with the empirical literature, which shows that banks with a low distance to the MDA trigger significantly reduce lending and adopt more conservative portfolio strategies. Well-designed capital buffer releases alleviate these pressures, enable banks to sustain lending (especially to NFCs) and provide critical support to the real economy.
+[
+5
+]
+The effects of deleveraging, the feedback loop and macroprudential buffer releases vary substantially across banks, reflecting differences in their initial conditions and balance sheet dynamics.
+ Allowing for dynamic balance sheet adjustments tends to benefit banks with lower leverage ratios, as they have greater potential to deleverage by cutting expensive liabilities and reducing their balance sheets with limited impact on NII. The ability to preserve NII emerges as a key factor driving the heterogeneous impact of the feedback loop; banks that can maintain income streams fare better overall. As intended, the release of macroprudential buffers primarily supports credit growth at banks that are initially in capital shortfall, providing them with the headroom needed to expand lending. In contrast, banks with a pre-existing capital surplus are less responsive to buffer release. The impact is particularly pronounced for corporate loans, as their higher risk weights make them more sensitive to changes in capital ratios.
+Stress tests are a key instrument for quantifying financial stability risk and informing the calibration of macroprudential measures.
+ Top-down stress test models 
+provide a valuable framework for analysing transmission channels and feedback loops, making it possible to assess the effects of bank deleveraging during periods of stress. The heterogeneity in results across individual banks highlights the importance of bank-level analyses over more aggregated approaches, as they offer deeper insights into the factors driving capital depletion and banks’ responses to macroprudential policies. The findings suggest that deleveraging can be a successful strategy for individual banks to stabilise their balance sheets, but this comes at the cost of deepening the economic downturn. Releasing macroprudential buffers is an effective tool to mitigate procyclical deleveraging, helping to soften the economic contraction. These results underscore the importance of building sufficient releasable buffers during stable periods, enabling banks to absorb losses during times of stress without restricting credit supply or weakening their resilience.
+[
+6
+]
+ By achieving these two key objectives of macroprudential policy, buffer releases help stabilise the financial system and support the real economy.
+Box 1	
+BEAST: the ECB’s top-down stress test modelling framework 
+Prepared by Cyril Couaillier, Ivan Dimitrov, Finn Faber, Marco Forletta, Ieva Mikaliūnaitė-Jouvanceau, André Nunes, Alessandro Pollastri and Nicola Röhm
+The key features of BEAST
+BEAST is the ECB’s workhorse top-down stress test model.
+ It draws on a wide range of macroeconomic and financial data to simulate the effects of an adverse scenario on the health of the banking system. The model integrates the behaviour of the largest 96 banks in the euro area with that of 19 individual euro area economies, capturing the diversity among banks by replicating the structure of their balance sheets and profit and loss statements. Key bank portfolio adjustments are modelled through estimated behavioural equations, while the macroeconomic environment follows a vector autoregression (VAR) setup, allowing for a rich interaction between banks and the macroeconomy, as described in Budnik et al. (2022). Its main difference to the methodology underlying regular supervisory exercises is that it can also incorporate the assumption of a dynamic balance sheet, meaning banks’ balance sheet size and composition are allowed to adjust in response to macroeconomic developments. Hence their assets and liabilities, pricing strategies, management buffers and profit distribution react to macroeconomic developments and prudential measures, also taking bank-specific features into account. The model captures key stylised facts, such as the contraction of credit supply during periods of crisis and the reallocation of sight deposits to term deposits in response to monetary tightening.
+A key strength of the model lies in its ability to capture the feedback loop between the banking system and the real economy,
+ as aggregate bank credit feeds back into the macroeconomy. A contraction in bank lending in reaction to a weaker economy thus leads to a negative credit supply shock, which can directly deepen an economic downturn. This in turn further increases credit risk and reduces banks’ profitability. The resulting deterioration in capital positions can then reinforce the initial credit contraction, creating a self-reinforcing cycle that amplifies the severity of the crisis. Moreover, this interaction introduces an interdependence among banks’ capital depletions, as the credit policies of individual banks affect the economy in which all banks operate. This interconnectedness highlights the systemic implications of individual banks’ behaviour during periods of stress, which is essential for analysing the macroprudential dimension.
+Recent improvements in BEAST
+The BEAST model is maintained and revised regularly in the light of new data and methodological advances to remain fit for purpose in an evolving stress-testing environment. 
+The core of the model relies on the framework described by Budnik et al. (2022) and the updates described in Cappelletti et al. (2024). Since then BEAST has been updated to better capture bank dynamics and reflect changes in the regulatory and policy environment. Recent improvements cover three different areas: (1) updating the model for Capital Requirements Regulation 3 (CRR3)
+[
+7
+]
+ compliance, (2) re-estimating bank sensitivities and behavioural equations to reflect recent developments, and (3) updating/adding new banking block mechanisms or transmission channels.
+The incorporation of CRR3 required a number of revisions to key aspects and parameters of the model. 
+First, several formulas were updated to reflect the changes that came into force in January 2025. CRR3 changes include updates to risk weight formulas, notably introducing output floors (floors for internal ratings-based approach (IRB) parameters), updated treatment of equity exposures, and other elements of the Basel III finalisation agreements and their implementation in the European Union. The treatment of operational risk was adjusted by incorporating the revised standardised approach for calculating operational risk capital requirements. Whereas in previous EU-wide stress test exercises, risk exposure amounts for operational risk were based on data submitted by banks, this change computes them using profitability metrics already generated within the model.
+[
+8
+]
+Behavioural equations have been revised to better match the latest empirical literature and data.
+ Equations capturing bank reactions have been updated to better reflect key findings in the empirical literature about the behaviour of banks and investors. For example, the equation capturing bank dividend payment policy is now driven by an estimated target dividend payout ratio, rather than by the previous mechanical adjustment of dividends to target a historical management buffer of actual capital above all mandatory and voluntary buffers. This reduces the volatility of dividends, in line with banks’ actual behaviour and better reflects their propensity to ration lending rather than cut dividends.
+[
+9
+]
+ Equations driving deposit rates have also been revised to improve the monetary policy pass-through and better reflect its heterogeneity across banks. The revised model introduces asymmetric responses to policy changes and incorporates key explanatory variables, such as the term-sight deposit rate spread, funding structure and market concentration. The updated model captures cross-bank heterogeneity more effectively, and the estimated pass-through is consistent with empirical findings in the literature.
+[
+10
+]
+ In the credit risk block, coefficients capturing the sensitivity of the IFRS 9 transition rates matrix have been updated using the latest data, making them more responsive to the macroeconomy.
+Finally, the key transmission channel in earlier versions of BEAST has been amended.
+ The feedback loop between aggregate bank credit and the macroeconomy has been modified to ensure consistency between the micro and macroeconomic blocks of the model and fully reflect how such shocks affect the macroeconomy. In past top-down macroprudential stress tests, the same adverse macroeconomic scenarios were used for both constant and dynamic balance sheet simulations. Second-round effects were modelled by adding only the estimated “unexpected” (non-linear) reduction in bank lending. With this update, the BEAST adverse scenario is designed to be consistent with a constant value of total bank loans. For the case of dynamic balance sheets, the total change in bank lending is used to transmit additional feedback to the macroeconomy. This ensures consistency when comparing the final impact on bank capital ratios for the cases of constant versus dynamic balance sheet simulations.
+References
+BCBS (2011), “
+Basel III: A global regulatory framework for more resilient banks and banking systems
+”.
+Behn, M., Forletta, M. and Reghezza, A., (2024), “
+Buying insurance at low economic cost – the effects of bank capital buffer increases since the pandemic
+”, 
+Working Paper Series
+, No 2951, ECB. 
+Behn, M., Claessens, S., Gambacorta, L. and Reghezza, A. (2025), “
+Macroprudential and monetary policy tightening: more than a double whammy?
+”, 
+Working Paper Series
+, No 3043, ECB.
+Belloni, M., Grodzicki, M. and Jarmuzek, M. (2023), “
+Why European banks adjust their dividend payouts?
+”, 
+Working Paper Series
+, No 2765, ECB.
+BIS (2019), “
+Newsletter on buffer usability
+”, October.
+Budnik, K., Gross, J., Vagliano, G., Dimitrov, I., Lampe, M., Panos, J., Velasco, S., Boucherie, L. and Jančoková, M. (2022), “
+BEAST: A model for the assessment of system-wide risks and macroprudential policies
+”, 
+Working Paper Series
+, No 2855, ECB.
+Byrne, D. and Foster, S. (2024), “Transmission of monetary policy: Bank interest rate pass-through in the euro area”, 
+SUERF Policy Brief
+, No 771.
+Cappelletti, G., Dimitrov, I., Le Grand, C., Naruševičius, L., Nunes, A., Podlogar, J., Röhm, N. and Ter Steege, L. (2024), “
+2023 macroprudential stress test of the euro area banking system
+”, 
+Occasional Paper Series
+, No 347, ECB.
+Couaillier, C., Lo Duca, M., Reghezza, A. and Rodriguez d’Acri, C. (2024), “Caution: do not cross! Capital buffers and lending in Covid-19 times”, 
+Journal of Money, Credit and Banking
+, Vol. 57, pp. 833-862.
+Couaillier, C., Reghezza, A., Rodriguez d’Acri, C. and Scopelliti, A. (2025), “How to release capital requirements during a pandemic? Evidence from euro area banks”, 
+Journal of Financial Intermediation
+, 
+Vol. 63
+, 101148. 
+Cozzi, G. et al. (2021), “
+Macroprudential policy measures: macroeconomic impact and interaction with monetary policy
+”, 
+Working Paper Series
+, No 2376, ECB.
+Grodzicki, M., Klaus, B., Pancaro, C. and Reghezza, A. (2023), “Euro area bank deposit costs in a rising interest rate environment”, 
+Financial Stability Review
+, ECB, May.
+Kwapil, C. and Scharler, J. (2010), “Interest rate pass-through, monetary policy rules and macroeconomic stability”, 
+Journal of International Money and Finance, 
+Vol. 29, Issue 2. 
+Messer, T. and Niepmann, F. (2023), “What determines passthrough of policy rates to deposit rates in the euro area?”, 
+FEDS Notes
+, July.
+Munoz, M.A. (2020), “
+Rethinking capital regulation: the case for a dividend prudential target
+”, 
+Working Paper Series
+, No 2433, ECB. 
+ 	See EBA 
+press release
+, August 2025. 
+ 	The management buffer is the capital banks hold in excess of their capital requirements, which are composed of their minimum and combined buffer requirements (CBR). These requirements together define the maximum distributable amount (MDA) trigger. When banks breach this trigger, they are constrained in their distribution of capital in dividends, share buybacks and bonuses. 
+ 	See BCBS (2011). 
+ 	See for instance the literature review contained in Table 2 of Cozzi et al. (2021). 
+ 	See, for example, Couaillier et al. (2025) or Couaillier et al. (2024). 
+ 	See, for example, Behn et al. (2024) or Behn et al. (2025). 
+ 
+Regulation (EU) 2024/1623 of the European Parliament and of the Council of 31 May 2024 amending Regulation (EU) No 575/2013 as regards requirements for credit risk, credit valuation adjustment risk, operational risk, market risk and the output floor
+ (OJ L, 19.06.2024). 
+ 	For further details see the 
+BIS website
+.  
+ 	See Munoz (2020) and Belloni et al. (2023). 
+ 	See Grodzicki et al. (2023), Messer and Niepmann (2023), Kwapil and Scharler (2010) and Byrne and Foster (2024). 
+
+Are you happy with this page?
+
+Yes
+
+No
+
+What made you unhappy?
+
+Page not working
+
+Information not useful
+
+Design not attractive
+
+Something else
+
+Thank you for letting us know!
+
+ 
+
+Our website uses cookies
+
+We use functional cookies to store user preferences; analytics cookies to improve website performance; third-party cookies set by third-party services integrated into the website. You have the choice to accept or reject them. For more information or to review your preference on the cookies and server logs we use, we invite you to:
+
+Read our privacy statement 
+ 
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Thank you!
+
+Thank you!
+
+We have updated our privacy policy
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+See what has changed in our privacy policy
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+Your cookie preference has expired
+
+We are always working to improve this website for our users. To do this, we use the anonymous data provided
+			by cookies.
+
+Learn more about how we use cookies
+
+I understand and I accept the use of
+				cookies
+
+I do not accept the use of
+				cookies
+
+This feature requires cookies.
+
+Modify

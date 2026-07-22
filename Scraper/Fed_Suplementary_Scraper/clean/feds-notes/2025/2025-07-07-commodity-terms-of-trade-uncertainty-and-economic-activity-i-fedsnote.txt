@@ -1,0 +1,234 @@
+FEDS Notes
+
+Twitter
+
+July 07, 2025
+
+Commodity terms of trade uncertainty and economic activity in emerging economies
+
+Oscar Monterroso and
+Diego Vilán
+
+Introduction
+
+It has been extensively documented that medium- and low-income countries tend to experience substantially more volatile business cycles than their more advanced economy counterparts. Numerous studies, including Acemoglu and Zilibotti (1997), Koren and Tenreyro (2007), and Aguiar and Gopinath (2007), to name a few, provide extensive evidence of the heightened degree of output volatility that emerging market economies must often bear.
+
+Some explanations for these differences in volatility point to domestic reasons such as feeble institutional frameworks and procyclical domestic government policies. More fundamentally, however, emerging economies are often subject to more frequent and severe external shocks than developed ones. Two characteristics make these countries particularly vulnerable: shallow domestic capital markets, which foster reliance on international borrowing and expose them to currency mismatches, and a structural specialization in the production and export of a narrow set of commodities, such as metals and minerals, agricultural goods, or energy. The former amplifies their sensitivity to global interest rate shocks, while the latter heightens exposure to commodity price cycles and terms-of-trade fluctuations.
+
+Over the past two decades, commodity prices have exhibited pronounced volatility, often closely tracking movements in the terms of trade for commodity-exporting economies. In most emerging economies, commodity terms of trade surged prior to the Global Financial Crisis (GFC), collapsed during the crisis, and rebounded thereafter. At the onset of the COVID-19 pandemic, plunging global demand precipitated another sharp drop in commodity prices, followed by a rapid rebound in 2022, fueled by supply chain disruptions, post-pandemic demand surges, and heightened geopolitical tensions.
+1
+Correspondingly, poverty rates in developing countries have tended to fall during periods of favorable terms of trade and rise during downturns. Gazzani et al. (2024), Bellemare et al. (2013), and Spatafora and Tytell (2009), amongst others, have documented the cyclicality of commodity prices and their effect on output and income growth.
+
+The real effects of terms of trade
+
+The precise quantitative role of terms-of-trade fluctuations in driving business cycles remains the subject of ongoing debate. Mendoza (1995) and Kose (2002), for instance, report that terms of trade movements can account for roughly half of the output volatility in emerging economies. Similarly, Fernández et al. (2018) argue that, for the median country, commodity shocks are responsible for 42% of the variance in income. In contrast, Schmitt-Grohé and Uribe (2017) challenge the conventional view and find that, in structural models, terms of trade play only a modest role in generating business cycle fluctuations in developing countries.
+
+A broader consensus exists on the qualitative effects of terms-of-trade shocks, which are generally more disruptive in developing economies. As noted by Kohn et al. (2020), the production structure of many emerging markets renders them particularly susceptible to fluctuations in international prices, given their typical pattern of running trade surpluses in commodities and deficits in manufactured goods, in contrast to the more balanced trade composition observed in advanced economies.
+
+Terms of trade shocks influence aggregate activity through two primary channels. The first operates via an income effect: improvements in the terms of trade enhance purchasing power, enabling higher levels of consumption and investment. Greater economic activity further stimulates capital accumulation and labor demand, leading to rising wages, stronger economic activity, and real exchange rate appreciation. The second channel relates to sovereign borrowing costs: as export prices rise, countries' capacity to service external debt improves, lowering risk premiums. This mechanism has been documented by Shousha (2016) and Drechsel and Tenreyro (2018).
+
+Why terms-of-trade uncertainty matters?
+
+Considerably less attention has been given to the effects of time varying uncertainty in an open economy context. Pioneering work in this area corresponds to Fernández-Villaverde et al. (2011), who documented the real effects induced by changes in the volatility of interest rates at which small open economies may borrow. Mendoza (1997) uses a stochastic endogenous growth model to document how terms of trade volatility affect savings and output growth.
+
+At least two main channels are believed to link time-varying uncertainty to business cycle fluctuations. The first mechanism is a precautionary motive in which risk-averse agents react to increases in uncertainty by curtailing consumption, investment and production. This channel captures a real options effect, by which rising uncertainty about the future makes firms more cautious about hiring and investing, and consumers more cautious about buying durables. Bloom (2009) explores this mechanism in detail, reporting that uncertainty not only reduces the level of investment and hiring but also makes firms less sensitive to business conditions drivers such as demand, prices and productivity. The second channel by which uncertainty may dampen economic activity is through increasing the risk premium. Investors expect to be compensated for higher risk, and during periods of higher uncertainty this could lead to a higher cost of finance. Furthermore, a higher cost could also lead to considerable difficulties in servicing debts, as well as a greater number of default events.
+
+Irrespective of the specific transmission channel, terms-of-trade uncertainty can pose a significant headwind for emerging market economies by dampening investment, production, and trade. In the agricultural sector, for example, farmers may delay planting or harvesting decisions in response to uncertain price expectations. Similarly, firms operating in tradable sectors may choose to postpone capital expenditures or expansion plans amid rising financing costs, often driven by heightened country risk premiums. At a broader level, uncertainty can aggravate external imbalances, trigger capital outflows, and increase the likelihood of procyclical fiscal adjustments, all of which can reinforce the slowdown in economic activity.
+
+Estimating uncertainty
+
+To quantify these effects, we construct a measure of time-varying uncertainty by estimating a stochastic volatility process for the terms of trade across a broad sample of developing countries. This volatility measure is then incorporated into a structural model to assess its impact on aggregate economic activity.
+
+We model the terms of trade as following an autoregressive process with stochastic volatility, adapting the approach of Fernández-Villaverde et al. (2011). Estimation proceeds via maximum likelihood using the density filter method described in Avellán et al. (2022), wherein the likelihood function is evaluated through numerical integration. The model specification is given by:
+
+$$$$ \text{tot}_{jt}^\prime=(expâ¡(\sigma_{jt}))^\frac{1}{2}\ u_{jt} \\\\ \sigma_{jt}=\alpha_{0j}+\alpha_{1j}z_{jt} \\\\ z_{jt+1}=\rho_j z_{jt} \left(1-\rho_j^2\right)^{1/2}e_{j,t+1} $$$$
+
+where $$tot_{jt}^\prime$$ is the detrended terms of trade observed series, $$\sigma_{jt}^2$$ is the unobserved volatility series and $$u_{jt}$$ and $$e_{jt}$$ are independent (both across time and variables)
+N
+(0,1) innovations. Furthermore, $$ \alpha_{1j}>0 $$ and $$ {|\rho}_j|<1 $$.
+
+The terms-of-trade data are monthly and span the period from 1980 to 2025. Monthly frequency is used instead of quarterly, as it is better suited to capture the high-frequency fluctuations in terms-of-trade volatility that are central to the analysis. Figure 1 presents the estimated stochastic volatility processes for a selection of nine developing countries representing a range of geographical regions and export structures. While the magnitude and persistence of volatility vary across countries, the estimates consistently reflect well-known episodes of heightened terms-of-trade uncertainty, including the oil price spikes of late 1990 and early 1991, as well as the sharp commodity price swings observed during the GFC and the COVID-19 pandemic. The figure also highlights periods of relative stability punctuated by sudden and often sharp increases in volatility, underscoring the importance of accounting for these dynamics in the macroeconomic analysis of developing economies.
+
+Figure 1. Terms-of-trade volatility processes for selected countries
+
+Source: Author's calculations.
+
+Accessible version
+
+The effects of terms-of-trade uncertainty: a SVAR-X approach
+
+To quantify the effects of terms-of-trade uncertainty on aggregate economic activity, a structural vector autoregressive model with exogenous variables (SVAR-X) is estimated individually for 25 emerging market economies. The SVAR-X framework partitions the model into two blocks of variables: an exogenous block, whose elements are assumed to affect the system without being influenced by it, and an endogenous block, whose dynamics depend on their own lags as well as on the exogenous variables. This structure has the advantage that foreign variables are determined exclusively by their own lagged values, independently of domestic conditions. The model includes six variables: the volatility of terms of trade, the level of terms of trade, the trade balance, aggregate investment, consumption, and output. Estimation is based on annual data spanning the period 1980 to 2023. In our baseline specification, the stochastic volatility measure and the terms of trade are treated as foreign variables, while the remaining ones are considered domestic.
+
+The trade balance, aggregate investment, consumption, and output data are sourced from the World Bank's World Development Indicators (WDI) database, while the terms-of-trade data are obtained from the International Monetary Fund's commodity net export price index. The stochastic volatility measure is constructed based on this measure of terms of trade. Following standard approaches in the literature, the sample of emerging economies includes countries meeting the following criteria: a commodity-export share exceeding 20%,
+2
+classification as a low-income or emerging economy,
+3
+and at least 40 consecutive annual observations for all variables.
+4
+Investment, consumption, and output are expressed in real per capita terms and detrended using the Hodrick-Prescott (HP) filter. Terms of trade are similarly log-detrended, and the trade balance is measured following Mendoza (1995) as the log-difference between exports and imports.
+
+The SVAR-X model takes the following form:
+
+$$$$ A_0x_t=A_1x_{t-1}+\epsilon_t $$$$
+
+where $$A_0$$ and $$A_1$$ are coefficient matrices and the vector $$x_t$$ is given by:
+
+$$$$ x_t=\ \left[\begin{matrix}SV_t^{tot}\\t{ot}_t\\\begin{matrix}tb_t\\i_t\\\begin{matrix}c_t\\y_t\\\end{matrix}\\\end{matrix}\\\end{matrix}\right] $$$$
+
+The variables $$SV_t^{tot}$$, $$tot_t$$ denote the estimated stochastic volatility and the terms of trade in log-deviations from trend and constitute the foreign block. Similarly, $$tb_t$$, $$i_t$$, $$c_t$$, $$y_t$$ denote log-deviations of the real trade balance per capita, real investment per capita, real consumption per capita and real output per capita, and constitute the domestic block.
+
+Identification relies on the standard assumption in the international economics literature that the terms of trade and its volatility are predetermined with respect to domestic business cycle fluctuations and internal economic developments. We impose a block-recursive structure on the contemporaneous coefficient matrix $$A_0$$, specified as lower triangular with unit diagonal elements. Furthermore, we restrict the dynamic multiplier matrix $$A_1$$ such that all elements in the first two rows, beyond the corresponding own lags, are set to zero. This specification ensures that domestic variables neither contemporaneously affect nor dynamically propagate into the foreign block, thereby preserving the exogeneity of external shocks with respect to the domestic economy.
+
+Impulse-Response Analysis and Variance Decompositions
+
+Figure 2 reports the impulse responses of domestic macroeconomic variables to a one-standard-deviation increase in terms-of-trade volatility. Following Schmitt-Grohé and Uribe (2017), responses are summarized by the pointwise medians across the set of country-specific estimates. Despite considerable cross-country heterogeneity, the median responses suggest that heightened terms-of-trade volatility exerts contractionary effects on real economic activity in emerging economies, with investment exhibiting the largest sensitivity. Specifically, a one-standard-deviation shock reduces investment by 2.51 percentage points, consumption by 1.05 percentage points, and output by 0.62 percentage points. The trade balance improves by 1.59 percentage points as increased uncertainty reduces domestic demand for imports.
+
+Figure 2. Responses of domestic macroeconomic variables to a one-standard-deviation terms-of-trade volatility shock
+
+Note: Shaded areas represent the 84th-16th percentile range.
+
+Source: Author's calculations.
+
+Accessible version
+
+The dynamic patterns depicted in Figure 2 align with theoretical models that emphasize the disproportionate impact of uncertainty on investment, reflecting its irreversible and forward-looking characteristics, while precautionary motives contribute to a more muted response in aggregate consumption. The observed improvement in the trade balance is consistent with a standard expenditure-switching mechanism, whereby heightened external uncertainty prompts households and firms to reduce imports. Moreover, the cross-country dispersion underscores significant heterogeneity in vulnerability to terms-of-trade uncertainty, shaped by differences in trade composition, financial integration, and macroeconomic policy frameworks.
+
+In addition to the impulse response analysis, Figure 3 reports forecast error variance decompositions, illustrating the relative contribution of terms-of-trade volatility shocks in explaining business cycle fluctuations in emerging economies. As with the impulse responses, the variance decompositions are summarized using the pointwise medians of the country-specific estimates.
+
+Figure 3. Forecast error variance decompositions of domestic macroeconomic variables
+
+Accessible version
+
+For the median country, terms-of-trade volatility shocks explain approximately 5% to 6% to the variance in trade balance, investment and output, and around 10% for aggregate consumption. These results suggest that while the second-moment effects of terms-of-trade are not the dominant drivers of business cycle variability, they nonetheless contribute meaningfully to aggregate fluctuations in a non-negligible share of countries. These findings are consistent with the main conclusions of Schmitt-Grohé and Uribe (2017)
+5
+who find a relatively limited role for terms of trade shocks. Furthermore, the substantial heterogeneity observed across countries underscores the role of country-specific factors such as export concentration, financial market depth, and policy credibility. For example, in South Africa, volatility shocks account for 18% of output variance but only 2% of trade balance variance, while in Chile, they explain 28% of trade balance variance but less than 3% of output variance. This cross-country variation highlights that terms-of-trade uncertainty interacts with domestic economic structures in complex ways, amplifying vulnerabilities in some contexts while remaining relatively muted in others.
+
+Conclusions
+
+This note highlights the importance of terms-of-trade volatility as a relevant driver of business cycles in emerging economies. While much of the literature has traditionally focused on the level of the terms of trade, our results provide evidence that the second momentâtime-varying volatilityâplays an important role in explaining aggregate fluctuations, particularly in small and medium-income countries. Given the centrality of commodity prices to export earnings, fiscal revenues, and overall economic activity in these economies, the pronounced volatility of terms of trade has material consequences for inflation dynamics, external balances, and long-run growth trajectories. Our findings underscore the need for further research to better understand the transmission channels through which uncertainty affects macroeconomic performance and to inform the design of policy frameworks capable of mitigating the adverse effects of commodity terms of trade shocks in small open economies.
+
+References
+
+Acemoglu, D., & Zilibotti, F. (1997). Was Prometheus unbound by chance? Risk, diversification, and growth.
+Journal of Political Economy
+,
+105
+(4), 709-751.
+
+Aguiar, M., & Gopinath, G. (2007). Emerging market business cycles: The cycle is the trend.
+Journal of Political Economy
+,
+115
+(1), 69-102.
+
+Avellán, G., González-Astudillo, M., & Salcedo Cruz, J. J. (2022). Measuring uncertainty: A streamlined application for the Ecuadorian economy.
+Empirical Economics
+,
+62
+(4), 1517-1542.
+
+Bellemare, M., Barrett, C., & Just, D. (2013). The Welfare Impacts of Commodity Price Volatility: Evidence from Rural Ethipia.
+American Journal of Agricultural Economics
+, 877-899.
+
+Bloom, N. (2009). The Impact of Uncertainty Shocks.
+Econometrica
+, 623-685.
+
+Di Pace, F., Juvenal, L., & Petrella, I. (2025). Terms-of-trade shocks are not all alike.
+American Economic Journal: Macroeconomics
+,
+17
+(2), 24-64.
+
+Drechsel, T., & Tenreyro, S. (2018). Commodity booms and busts in emerging economies.
+Journal of International Economics
+, 112, 200-218.
+
+Fernández, A., Gómez, A., & Rodríguez, D. (2015). Sharing a Ride on the Commodities Roller Coaster: Common Factors in Business Cycles of Emerging.
+IMF Working Paper,
+2015/280.
+
+Fernández, A., González, A., & Rodriguez, D. (2018). Sharing a ride on the commodities roller coaster: Common factors in business cycles of emerging economies.
+Journal of International Economics
+,
+111
+, 99-121.
+
+Fernández-Villaverde, J., Guerrón-Quintana, P., Rubio-Ramirez, J. F., & Uribe, M. (2011). Risk matters: The real effects of volatility shocks.
+American Economic Review
+,
+101
+(6), 2530-2561.
+
+Gazzani, A. G., Herrera, V., & Vicondoa, A. (2024). The Asymmetric Effects of Commodity Price Shocks in Emerging Economies.
+Unpublished manuscript
+.
+
+Gruss, B., & Kebhaj, S. (2019).
+Commodity terms of trade: A new database
+.
+IMF Working Paper
+, 2019/021.
+
+Kohn, D., Leibovici, F., & Tretvoll, H. (2021). Trade in commodities and business cycle volatility.
+American Economic Journal: Macroeconomics
+,
+13
+(3), 173-208.
+
+Koren, M., & Tenreyro, S. (2007). Volatility and development.
+The Quarterly Journal of Economics
+,
+122
+(1), 243-287.
+
+Kose, M. A. (2002). Explaining business cycles in small open economies: 'How much do world prices matter?'.
+Journal of International Economics
+,
+56
+(2), 299-327.
+
+Mendoza, E. G. (1995). The terms of trade, the real exchange rate, and economic fluctuations.
+International Economic Review
+, 101-137.
+
+Mendoza, E. G. (1997). Terms-of-trade uncertainty and economic growth.
+Journal of Development Economics
+,
+54
+(2), 323-356.
+
+SchmittâGrohé, S., & Uribe, M. (2018). How important are termsâofâtrade shocks?
+International Economic Review
+, 59(1), 85-111.
+
+Shousha, S. (2016). Macroeconomic effects of commodity booms and busts: The role of financial frictions.
+Unpublished manuscript
+.
+
+Spatafora, N., & Tytell, I. (2009). Commodity terms of trade: The history of booms and busts.
+IMF Working Paper,
+2009/205.
+
+1. Based on Gruss and Kebhaj (2019), which provide a comprehensive database of country-specific commodity price indices for 182 economies covering the period 1962. The database includes a commodity terms-of-trade indexâwhich proxies the windfall gains and losses of income associated with changes in world pricesâas well as additional country-specific series, including commodity export and import price indices.
+Return to text
+
+2. In Fernández et. al (2015), the authors compute the commodity-export shares for 189 countries from 1960 to 2013 using the World Bank's World Development Indicators (WDI) database. For each country, country-specific commodity export shares are calculated as the average of the shares of three groups of commodities in total exports (agricultural, fuel and metals) across time. Based on their results, the median for advanced and emerging economies is 11.2% and 25.7%, respectively. We conduct the same procedure using the shares of four groups of commodities (agricultural, fuel, metals and food) for the period 1980-2023. Except for Bangladesh which stands at 17%, the shares for all the countries in our sample are above the 20% threshold.
+Return to text
+
+3. As in Schmitt-Grohé and Uribe (2017) and Di Pace et al. (2020) poor and emerging countries are defined as all countries in the WDI database with average PPP converted GDP per capita in U.S dollars of 2021 below 25,000 dollars over the period 1990-2023.
+Return to text
+
+4. The sample comprises countries from all major regions worldwide, providing a broad and diverse representation of emerging market economies. The selected countries include: Uganda, Burundi, Kenya, Tunisia, South Africa, Guinea-Bissau, Morocco, Rwanda, Costa Rica, El Salvador, Dominican Republic, Guatemala, Chile, Honduras, Jamaica, Peru, Bahamas, Nepal, Malaysia, Thailand, Turkey, Bangladesh, Pakistan, Philippines, and Bahrain.
+Return to text
+
+5. Schmitt-Grohé and Uribe (2017) concluded that SVAR models predict a relatively minor role for terms-of-trade shocks as a source of aggregate fluctuations in poor and emerging countries. According to their estimates, on average, terms-of-trade shocks explain about 10% of the variances of output, consumption, investment, and the trade balance and 14% of the variance of the real exchange rate.
+Return to text
+
+Please cite this note as:
+
+Monterroso, Oscar, and Diego Vilán (2025). "Commodity terms of trade uncertainty and economic activity in emerging economies," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 07, 2025, https://doi.org/10.17016/2380-7172.3837.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

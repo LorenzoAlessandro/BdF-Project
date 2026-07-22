@@ -1,0 +1,707 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+April 08, 2026
+
+Detecting Tariff Effects on Consumer Prices in Real Time â Part II
+
+Robert Minton
+, Madeleine Ray and 
+Mariano Somale
+
+Introduction
+
+Major changes in U.S. trade policy last year have led to a surge of interest in the timely assessment of the economic effects of tariffs. Minton and Somale (2025) developed a methodology to detect tariff effects on consumer prices in real time that relies solely on publicly available data. Under this approach, the authors first construct theoretical predictions of tariffs' effects on prices of individual personal consumption expenditure (PCE) categoriesâbased on implemented tariff changes, the prevalence of tariffed imports in each category, and the assumption of full dollar-for-dollar pass-through from tariffs to pricesâand then assess whether these theoretical effects align with observed changes in PCE prices. Minton and Somale (2025) found preliminary evidence that U.S. tariffs on China implemented early last year were already impacting consumer prices through March.
+
+In this note, we build on Minton and Somale (2025) to assess consumer price effects of additional tariffs implemented in 2025. We confirm the authors' preliminary findings that 2025's tariffs have led to statistically significant increases in prices of consumer goods more exposed to tariffs. Our estimates indicate that tariff effects on prices gradually build over time, with cumulative effects seven months after implementation consistent with our theoretical measures of full dollar-for-dollar pass-through. We estimate that the tariffs implemented through November of 2025 have raised core goods PCE prices by 3.1 percent through February 2026, explaining the entirety of excess inflation in the core goods category relative to pre-pandemic inflation rates and contributing to a 0.8 percent boost in core PCE prices as a whole. Moreover, the data so far suggest that pass-through of these tariffs is effectively complete. Our results suggest that 2025's tariffs are passing through to consumer prices less strongly and more slowly than the 2018-19 tariffs on China analyzed in Minton and Somale (2025). While this note will not cover the effects of tariff changes that occurred due to the February 2026 Supreme Court ruling against the International Emergency Economic Powers Act (IEEPA) tariffs, we think our methodology remains applicable outside of the tariffs this note considers.
+
+We make three methodological advances relative to Minton and Somale (2025). First, we use the 2025 release of the BEA's Global Value Chain Input-Output tables to compute import prevalence by PCE category. Relative to the 2022 release used in Minton and Somale (2025), the new dataset extends coverage through 2023 and disaggregates PCE into more commodities and more regions of origin, allowing us to carry out our analysis at a more disaggregated level and based on more recent consumption patterns.
+
+Second, our extended methodology leverages variation in tariffs changes across both products and regions of origin. The approach in Minton and Somale (2025) focused on tariff variation across regions of origin, making it best suited to study origin-wide tariffs, such as the flat tariffs imposed on all imports from China in February and March of 2025.
+1
+ However, many of the tariffs enacted in 2025 have targeted specific goods and exporter countries at a granular level. Our extended framework aggregates these trade policy changes to compute average tariff changes for each commodity-region pair in our consumption data, allowing us to exploit this richer tariff variation in our empirical analysis.
+
+Third, we adopt a new regression methodology to estimate pass-through dynamics that allows consumer prices in each month to be affected by multiple tariff waves simultaneously.
+2
+
+Main Data Sources
+
+In addition to monthly PCE price data from the Bureau of Economic Analysis (BEA), the main data requirements of our analysis relate to the construction of our theoretical tariff effects. For each PCE category, we need a measure of the prevalence of imports by commodity type and region of origin as well as a measure of the tariffs applied to these imports. Moreover, the measure of import prevalence must account for both direct imports of final/consumer goods as well as indirect imports (e.g., intermediate inputs used in the domestic production of consumer goods).
+
+We construct measures of import prevalence (direct and indirect) by commodity type and regions of origin using the 2025 release of the BEA's Global Value Chains Input-Output (GVC IO) tables. These tables break down PCE into 8 regions of origin and 140 commodities, of which 39 belong to the manufacturing sector, 87 to the service sector, and 14 to the agricultural, mining, and construction sectors, allowing us to compute direct imports. These tables also have information on the type and region of origin of intermediate inputs used in US production, allowing us to compute indirect imports. The PCE data in the BEA's GVC IO tables are not directly compatible with the BEA's PCE price data, so we use benchmark 2017 PCE bridge data to merge both datasets.
+3
+ With extended coverage and finer commodity disaggregation, the latest release of BEA's GVC IO tables allows us to use about twice as many PCE categories and more recent consumption and trade patterns in our empirical analysis relative to Minton and Somale (2025).
+
+Finally, as discussed in more detail in the next section, we construct measures for tariff rates for each commodity-region pair in BEA's GVC IO tables from detailed information on enacted tariffs by 10-digit HS product code (HS10) and exporter country, which we aggregate using 2024 import weights computed from U.S. trade data from Census.
+
+Tracking Changes in Tariffs
+
+The U.S. import tariffs enacted since early 2025 represent the largest change in U.S. trade policy in several decades. Table 1 summarizes tariff changes implemented from February to November 2025, which are the focus of our analysis. As shown in the table, new tariffs have been rolled out sequentially over several months, often targeting specific products and exporter countries at a granular level, and in some instances were later rolled back. As a result, tariff changes have differed significantly across products and regions of origin.
+
+Table 1. Enacted U.S. Tariff Changes, February-November 2025.
+
+1. Tariff Event
+
+2. Goods Affected
+
+3. Effective
+
+4. Tariff Rate Applied
+1
+ (p.p.)
+
+5. Imports Affected (2024 bil. $)
+
+1 China Fentanyl
+
+All goods
+
+4-Feb-2025
+
+10
+
+439
+
+2 China Fentanyl
+
+All goods
+
+4-Mar-2025
+
+10
+
+439
+
+3 Canada Fentanyl
+
+Non-USMCA compliant goods
+2
+
+4-Mar-2025
+
+25
+
+81
+
+4 Mexico Fentanyl
+
+Non-USMCA compliant goods
+
+4-Mar-2025
+
+25
+
+73
+
+5 Steel and aluminum (S&A)
+
+S&A and S&A-content of derivative goods
+
+12-Mar-2025
+
+(**)25
+
+88
+
+6 Finished cars
+
+All (exept US content of USMCA compliant cars)
+
+3-Apr-2025
+
+(*)25
+
+223
+
+7 Reciprocal tariffs: China
+
+All goods outside exempted categories
+3
+
+9-Apr-2025
+
+125
+
+252
+
+8 Reciprocal tariffs: All ex CA/ME/CH
+
+All goods outside exempted categories
+3
+
+9-Apr-2025
+
+10
+
+977
+
+9 Auto parts
+
+All non-USMCA compliant parts
+
+3-May-2025
+
+25
+
+85
+
+10 Update to line 7
+
+Tariff rate reduction on same products
+
+14-May-2025
+
+(-)115
+
+252
+
+11 Update to line 5
+
+Additional goods and higher tariff rate
+
+4-Jun-2025
+
+(**)50
+
+94
+
+12 EU autos deal
+
+All autos and parts from EU
+
+1-Aug-2025
+
+(**)15
+
+42
+
+13 Copper
+
+Copper and copper content of derivative products
+
+1-Aug-2025
+
+50
+
+5
+
+14 Japan trade deal
+
+Japan trade deal implementation (excl. autos and parts)
+
+7-Aug-2025
+
+(**)15
+
+73
+
+15 Update to line 8
+
+Exemptions for goods tariffed under 10, 11
+
+7-Aug-2025
+
+range: 0-29
+
+896
+
+16 Punitive tariffs : Brazil
+
+All goods not tariffed under 5, 6, 9, 10, 13
+
+6-Aug-2025
+
+40.0
+
+20
+
+17 Punitive tariffs : India
+
+All goods not tariffed under 5, 6, 9, 10, 13
+
+27-Aug-2025
+
+25.0
+
+53
+
+18 EU trade deal
+
+EU trade deal implementation (excl. autos and parts)
+
+1-Sep-2025
+
+(**)15
+
+294
+
+19 Japan autos deal
+
+All autos and parts
+
+16-Sep-2025
+
+(**)15
+
+49
+
+20 Timber, lumber and furniture
+
+Timber, lumber and furniture products
+4
+
+14-Oct-2025
+
+(*)10,25
+
+18
+
+21 South Korea autos deal
+
+All autos and parts
+
+1-Nov-2025
+
+(**)15
+
+46
+
+22 Trucks
+
+Trucks, truck parts
+5
+
+1-Nov-2025
+
+(*)10,25
+
+19
+
+23 China Fentanyl
+
+All goods
+
+10-Nov-2025
+
+(-)10
+
+439
+
+24 Food Products exemptions
+
+Some goods affected by reciprocal and Brazil tariffs
+
+13-Nov-2025
+
+(*)0
+
+42
+
+25 South Korea trade deal
+
+SK trade deal implementation (excl. autos and parts)
+
+14-Nov-2025
+
+(**)15
+
+43
+
+26 Switzerland and Liechtenstein deal
+
+SZ/LE trade deal implementation
+
+14-Nov-2025
+
+(**)15
+
+21
+
+1
+ Unless otherwise inidicated, the rates shown in the table must be added to preexiting tariffs. A sign (-) indicates that the rate must be subtracted from preexisting tariffs. A sign (*) indicates that, while additive with respect to fentanyl tariffs on China, the ad valorem measure replaces other previously applied 2025 tariffs on affected goods. A sign (**) indicates that the number in the table represents the new overall tariff rate on affected goods.
+
+2
+ Potash and Canadian energy products are tariffed at 10ppt.
+
+3
+ Main exempted categories include electronics, pharmaceuticals, some wood products and goods subject to tariffs in lines 5, 6, 9, and 13.
+
+4
+ Timber and lumber are tariffed at 10 percent while furniture is tariffed at 25 percent.
+
+5
+ Trucks are tariffed at 25 percent while buses are tariffed at 10 percent.
+
+Our approach to assess the effects of these new U.S. tariffs on consumer prices accounts for their sequential introduction and leverages variation in tariff rates across products and regions of origin. As such, the first step of our empirical analysis is to produce a panel dataset capturing the evolution of tariffs for each commodity-region pair in the BEA's GVC IO tables described earlier. Given the complex nature of the tariffs enacted in 2025, the construction of this dataset is not a trivial task. We outline how we do this below.
+
+We start by compiling detailed information on enacted tariffs by month, HS10 product and exporter country based on official information from the Executive Office, the Federal Register, and Customs and Border Protection (CBP). For most of the policy actions in table 1, these official sources provide all the information needed to determine tariff rates for each HS10-exporter pair in our detailed tariff data.
+4
+ For some cases, however, determining tariff rates by HS10-exporter pair requires additional information about USMCA compliance or about certain content embedded in import values, as tariffs apply to only a subset of imports in a given HS10-exporter pair. We discuss in appendix 1 how we handle these more complicated cases.
+
+We then aggregate this detailed tariff information to compute tariff rates at the level of aggregation of BEA's GVC IO tables. Specifically, we first use concordance tables to assign each HS10-exporter pair in our detailed tariff dataset to a commodity-origin pair in BEA's GVC IO tables. We then compute tariff rates for each of the latter as weighted averages of the tariffs rates of the assigned HS10-exporter pairs, with weights given by 2024 import shares.
+
+The discussion in this section and in appendix 1 shows that we have devoted significant effort to compile a measure of tariffs that adheres as close as possible to the letter of the statutes implementing them. As such, our approach to track tariff changes differs from that of other recent studies that try to estimate tariffs based on tariff revenue and import values, such as Gopinath and Neiman (2026) and Besten and Kanzig (2026). Although these revenue-based measures are widely used, they are subject to the import-composition effects discussed in Eck, Hoang, Mix and Ray (2026), which tend to bias these tariff measures downward.
+5
+ 
+6
+ Our approach is closest to the one followed by Mike Waugh to calculate "statutory tariffs" in his Trade War Tracker website, although we deal more carefully with USMCA compliance exemptions.
+
+Theoretical Tariff Effects
+
+As in Minton and Somale (2025), we now determine how much prices should be affected by tariffs in theory, and later we will assess whether realized price changes align with these theoretical predictions. We compute theoretical effect of tariffs on PCE prices for a benchmark case of full dollar-for-dollar pass-through: prices of affected imports at the port of entry increase by the full amount of the tariffs, and domestic producers, wholesalers, and retailers maintain constant dollar margins (rather than constant percent markups). Specifically, for each PCE category, we first compute the import content from each commodity-region pair in BEA's GVC IO tables by taking the ratio of total U.S. imports of the commodity from that region (direct and indirect) to PCE valued at consumer prices. We then compute a commodity-region-specific tariff effect for each PCE category as the product of tariff changes applied to that commodity-region pair and the PCE category's import content from that pair. To compute the total tariff effect for each PCE category, we sum across these commodity-region-specific tariff effects.
+
+The resulting theoretical tariff effect for a PCE category can be interpreted as the percent increase the category's price would experience under full dollar-for-dollar pass-through of tariffs. These theoretical tariff effects measure so-called "first-round" tariff effects, as they exclude "second-round" effects due to retaliatory tariffs, wages, economic uncertainty, extrapolatory inflation expectations, etc.
+7
+
+As our analysis aims to account for the timing of the tariffs in table 1, we build a panel dataset that captures monthly changes in our theoretical tariff effects. When constructing this monthly panel, one needs to address differences in within-month timing of tariffs and pauses to some of these measures soon after their implementation. To ensure tariffs are fully accounted for in the month they become effective, we deal with differences in within-month timing of tariffs by defining the tariff rate in a given month as the tariff rate effective at the end of that month.
+8
+ For suspended tariffs, we consider the time they were effective and shipping times between region of origin and the US. For example, we assume no theoretical effects from 115 percentage points of the tariff increase on imports from China implemented on April 9, 2025 and later paused on May 14, 2025, as it takes about a month for Chinese goods to arrive to US ports by sea, and tariffs do not apply to goods that have already been shipped. The resulting panel is the main input for our empirical analysis.
+
+Figure 1 shows the theoretical tariff effects of all policy actions through November for the 59 core goods PCE categories in our data (black dots), broken down by the import region of origin (stacked bars).
+9
+ 
+10
+ Theoretical tariff effects range from close to zero for books, newspapers, and computer software to about 8% for some appliances and information processing equipment. Further, and in part due to high levels of USMCA compliance, we see that most theoretical tariff effects stem from tariffs on China and the Rest of Asia and Pacific. Some exceptions include the new autos category, in which tariffs on Mexico and Canada feature more prominently, and the watches category, in which tariffs on Europe are the main driver.
+
+Figure 1. Theoretical tariff effects by PCE category and country
+
+Note: Theoretical price effects are computed under an assumption of full dollar-for-dollar pass-through and incorporate changes in tariff rates from table 1. Black dots show the total theoretical effect for each category, accounting for occasional negative contributions. In the legend, "ROA" means "Rest of Asia and Pacific," and "ROW" is a residual category for all other countries/regions. Key identifies in order from right to left.
+
+Source: Authors' calculations using data from the BEA, Census, the Executive Office, the Federal Register, and Customs and Border Protection.
+
+Accessible version
+
+Figure 2 shows the same theoretical tariff effects by PCE category depicted in Figure 1 (black dots) but this time broken down by tariff wave (stacked bars) rather than by import region of origin. The tariff increases on China in February and March, the reciprocal tariffs imposed in April and August, and the tariff reductions on China in November are all meaningful drivers of theoretical tariff effects. The negative bars for new autos in August reflect the EU trade deal, which contributed to a reduction in new auto tariffs; the generally positive August bars, however, show that tariff increases (new reciprocal and punitive tariffs) were the dominant development in August tariff policy. Of note, the contributions from each wave depicted in the picture represent the main treatment variable in our regression analysis discussed in the next section.
+
+Figure 2. Theoretical tariff effects by PCE category and tariff wave
+
+Note: Theoretical price effects are computed under an assumption of full dollar-for-dollar pass-through and incorporate changes in tariff rates from table 1. Black dots show the total theoretical effect for each category, accounting for occasional negative contributions. In the legend, "ROA" means "Rest of Asia and Pacific," and "ROW" is a residual category for all other countries/regions. Key identifies in order from right to left, with the exception of new autos, watches, and therapeutic equipment.
+
+Source: Authors' calculations using data from the BEA, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+As discussed in more detail in Minton and Somale (2025), there are many reasons why realized tariff effects in the data may differ from our theoretical tariff effects. For example, recall that full dollar-for-dollar pass-through, which is assumed in our theoretical measures, is always lower than full pass-through under constant percent margins. As a result, estimated pass-through could be higher than implied by full dollar-for-dollar pass-through, as Minton and Somale (2025) found. Importantly, however, our analysis below will empirically assess whether prices have increased as predicted by the theoretical measures, and no element of the empirical analysis requires that 
+any 
+pass-through occurs, despite our theoretical reasons for expecting it.
+
+Baseline Estimation Framework
+
+Minton and Somale (2025) propose (1) an event-study approach to estimate pass-through to consumer prices from a particular tariff event and (2) a local-projections approach that pools across multiple tariff events to estimate pass-through dynamics. We argue that neither of these approaches is suitable to study pass-through from 2025's tariffs, which were rolled out in multiple waves over several months and with little time between them. First, although the "tariff event" in the event-study approach can be defined to comprise multiple tariff policy changes implemented across time, the pass-through coefficient for such a composite event then represents a complicated averageâwith pass-through from earlier tariff waves in the event expected to be higher than pass-through from more recent ones.
+11
+ Second, the local projections approach proposed in Minton and Somale (2025) implicitly assumes that consumer prices in each month may be affected at most by the most recent tariff event, an assumption that does not hold for the tariffs in table 1.
+12
+
+We now propose a methodology to study pass-through dynamics from the US tariffs in table 1 that accounts for their rollout in frequent, staggered waves. Specifically, taking January 2024 to February 2026 as our sample period,
+13
+ we estimate the following distributed lag unweighted regression model:
+14
+
+$$$$ \pi_{it}=\alpha_i+\lambda_t+\sum_{h=0}^{H}{\beta_h\ {\hat{\pi}}_{i,t-h}+\epsilon_{it}} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1) $$$$
+
+The dependent variable $$\pi_{it}$$ is the one-month percent change in the prices of PCE category $$i$$ at time $$t$$. The main regressors $${\hat{\pi}}_{i,t-h}$$ are the theoretical price effects from tariffs implemented $$h$$ months prior (shown in Figure 2
+15
+), with $${\hat{\pi}}_{it}=0$$ for all $$t$$ before February 2025. The coefficients $$\beta_h$$ are one-month pass-through coefficients capturing how much of the theoretical tariff effects from tariff changes at time $$t-h$$ pass through to one-month inflation rates in time $$t$$. The category fixed effect $$\alpha_i$$ controls for inflation trends in each category.
+16
+ The time fixed effect $$\lambda_t$$ controls for aggregate factors affecting all PCE categories that may be correlated with tariffs. Once we have estimates of the one-month pass-through coefficients $$\hat{\beta}_h$$, we can sum them up to obtain estimates of cumulative pass-through coefficients.
+17
+
+In the spirit of Minton and Somale (2025), the previous regression framework identifies tariff pass-through to consumer prices by exploiting a key implication of our theoretical tariff effect calculations: some goods are more affected by tariffs than others. The pass-through coefficients simply measure how much and how quickly those theoretical differences are realized in incoming inflation data.
+18
+ As our regression inherently analyzes 
+relative 
+prices, our pass-through estimates do not capture tariff effects that are common across all goods categories at a given point in time.
+19
+ We present additional analysis relevant for such common effects later in the note.
+
+Dynamic Tariff Effects on Consumer Prices
+
+We estimate our regression model with seven lags and report the cumulative pass-through estimates in Figure 3. The results are consistent with full dollar-for-dollar tariff pass-through into relative consumer prices seven months after a tariff change. Stated more intuitively, the results mean that if retailers' acquisition costs for a good rise $1 because of tariffs, they charge $1 more for that good seven months later. Compared to the pass-through estimates from the 2018-19 U.S. tariffs on China studied in Minton and Somale (2025), the data so far indicate that pass-through from the tariffs in table 1 has been lower and slower, with only half of total estimated pass-through occurring three months after a tariff change. Note that, while estimated pass-through is highly statistically significant, the 90% confidence bands still reveal meaningful uncertainty around our point estimates.
+
+Figure 3. Baseline pass-through estimates
+
+Note: Pass-through coefficients are cumulative. A value of 1 means full dollar-for-dollar pass-through of tariffs into relative consumer prices. The regression sample period is January 2024 â February 2026, and observations are unweighted. 90% confidence intervals are displayed, and standard errors are clustered by PCE category.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+Appendix 2 varies the number of lags in our pass-through regression to assess whether long-run tariff pass-through is stabilizing. We think a reasonable but still tentative conclusion is that tariff pass-through is stabilizing around 100% and takes 5 to 9 months to occur. One of the key benefits of our methodology is the ability to continue assessing whether pass-through is complete with each new month of data, and we expect that more data will allow us to estimate the long-run level of tariff pass-through with increasing confidence.
+
+We now quantify how much each wave of tariffs in table 1 has boosted or will boost core inflation by assuming that each wave passes through according to the estimates shown in Figure 3.
+20
+ When our tariff effect estimate or forecast pertains to a date more than seven months after February 2025, when the initial tariffs were implemented, we assume no additional pass-through seven months after a tariff eventâthat is, we assume that cumulative pass-through flattens after the last estimate shown in Figure 3. Given the appendix analysis just described, we think this is a reasonable assumption.
+
+The results are shown in Figure 4. We estimate that the tariff changes in table 1 increased core PCE prices by 0.8% through February 2026 and that pass-through is effectively complete. Note that our estimates indicate that tariffs would have increased core PCE prices by 0.9% cumulatively through June 2026 if not for the 10-percentage point tariff reduction on China implemented in early November 2025, which is why the stacked positive bars in Figure 4 exceed the total tariff effects (black dots) starting in November 2025. Our estimated effect on core PCE prices is consistent with the findings in Cavallo, Llamas, and Vazquez (2025), who estimate tariff effects on consumer prices using online prices from five large retailers.
+21
+
+Figure 4. Tariff effects on core PCE prices
+
+Note: Black dots show total tariff effects, summing across positive and negative tariff wave contributions. The forecast region, shaded in blue, assumes no additional tariff changes beyond those in table 1 and no additional tariff pass-through seven months after a tariff change. Key identifies in order from top to bottom.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+Given that the entire effect quantified above is driven by tariff effects on core goods PCE prices, and core goods represent about a quarter of overall core PCE, our tariff effects can equivalently be stated as boosting core goods PCE prices through February 2026 by 3.1%. As core goods PCE prices rose 2.3% over the twelve months ending in February 2026 and typically declined by 0.7% per year during the pre-pandemic period of 2015-2019, our estimates suggest that tariffs can explain the entirety of the excess inflation in the core goods category since January 2025.
+22
+ We illustrate this result in Figure 5, which shows the 12-month percent change in core goods PCE prices (black line), its pre-pandemic average (dashed black line), and the corresponding series after removing our estimated tariff effects (blue line).
+23
+ 
+24
+ Note that, as previously discussed, the core goods PCE inflation 
+ex tariffs 
+series only removes the so-called "first-round" or relative price effects of tariffs.
+
+Figure 5. Tariff effects on core goods PCE prices
+
+Note: Core goods PCE inflation in February 2026 is an FRB staff estimate. The dashed line represents the average 12-month percent change in published core goods PCE prices from January 2015 â December 2019.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+Aggregate effects of tariffs
+
+By including time fixed effects, our estimation identifies relative price effects of tariffs. As noted earlier, this implies that our estimates do not capture tariff effects that are common to all goods categories at a given point in time. In this section, we present tentative evidence that these common tariff effects might be meaningful and partly offset the relative price effects of tariffs. We stress the tentative and suggestive nature of these results, as properly identifying common tariff effects would require a time series framework that controls for other price-relevant aggregate factors correlated with tariffsâan analysis beyond the scope of this note.
+
+Panel (a) of Figure 6 shows our results from estimating equation (1) but excluding time fixed effects. Removing this control yields meaningfully lower cumulative pass-through coefficients (in red) relative to our baseline specification (in blue).
+25
+ Panel (b) shows tariff effects on core PCE prices peaking at 0.4 percent when we exclude time fixed effects, about half of the estimate from our baseline specification. These findings suggest that tariff effects common across goods categoriesâpreviously absorbed by the time fixed effectsâmay be putting downward pressure on consumer prices, perhaps reflecting income effects, wealth effects, or other tariff-induced reductions in overall goods demand. Such effects would be consistent with those found in Besten and Kanzig (2026) and Barnichon and Singh (2025) and inconsistent, on net, with the idea that tariffs have caused inflation expectations to generate broader inflationary pressures among all goods.
+26
+ An alternative hypothesis, and the reason we included time fixed effects in our baseline, is that other correlated aggregatesâoil prices, continued unwinding of pandemic-era price-wage dynamics, deregulation, general economic policy uncertainty, etc.âmay have also put downward pressure on consumer goods prices in 2025 for reasons largely unrelated to tariffs.
+27
+
+Figure 6. Tariff effects excluding time fixed effects
+
+Note: In panel (a), pass-through coefficients are cumulative. A value of 1 means full dollar-for-dollar pass-through of tariffs into relative consumer prices. The regression sample period is January 2024 â February 2026, and observations are unweighted. 90% confidence intervals are displayed, and standard errors are clustered by PCE category. In panel (b), the forecast region, shaded in blue, assumes no additional tariff changes beyond those in table 1 and no additional tariff pass-through seven months after a tariff change.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+We conclude this section by noting that the different estimated tariff effects shown in panel (b) of Figure 6 have different implications for the near-term outlook for core goods PCE inflation. Under our baseline specification (blue line), tariffs can explain essentially all of the excess core goods inflation relative to pre-pandemic trends starting in 2025, as we illustrated in Figure 5. Moreover, because the estimated pass-through from tariffs is largely complete, core goods inflation would be expected to return soon to pre-pandemic levels.
+28
+ However, if the smaller tariff effects obtained under the alternative specification (red line) are closer to the true effects, then other factors must have also contributed to keeping core goods inflation above its pre-pandemic levels in 2025. Determining the nature and persistence of these additional factors would then be relevant for the core goods inflation outlook, but such an analysis is beyond the scope of this note.
+
+Conclusion
+
+We find strong evidence that tariff changes in 2025 have raised core goods prices. Under our baseline estimates, tariff changes through November 2025 raised core goods PCE prices cumulatively by 3.1% through February 2026, explaining the entirety of excess inflation in the core goods category relative to pre-pandemic inflation rates and boosting core PCE prices as a whole by 0.8 percent. We also estimate that pass-through from the 2025 tariffs is effectively complete. An important factor limiting further inflationary effects from the 2025 tariffs is the 10 percentage point reduction in tariffs on China implemented in November, which offsets a substantial portion of the tariff effects from the reciprocal tariffs implemented in August. Of note, our analysis does not cover the effects of tariff changes that occurred due to the February 2026 Supreme Court ruling against the IEEPA tariffs.
+
+We emphasize that one key benefit of our methodology is the ability to continue reassessing our estimates of tariff pass-through as we receive more data. With additional inflation data, we will gain more confidence about the long-run level of tariff pass-through and refine our estimates of how the effects of tariffs play out.
+
+References
+
+Barnichon, Régis and Aayush Singh. 2025. "
+What Is a Tariff Shock? Insights from 150 years of Tariff Policy
+." Federal Reserve Bank of San Francisco Working Paper 2025-26.
+
+Tamar den Besten and Diego R. Känzig, "
+The Macroeconomic Effects of Tariffs: Evidence From U.S. Historical Data (PDF)
+," NBER Working Paper 34852 (2026).
+
+Cavallo, Alberto, Paola Llamas, and Franco M. Vazquez, "
+Tracking the Short-Run Price Impact of U.S. Tariffs (PDF)
+," NBER Working Paper 34496 (2025).
+
+De Michelis, Andrea, and Mariano Somale (2023). "
+A Sourcing Risk Index for U.S. Manufacturing Industries
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, September 08, 2023.
+
+Eck, Sydney, Trang Hoang, Carter Mix, and Madeleine Ray (2026). "
+Mind the Gap: Announced versus implied tariff rates in recent trade policy episodes
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 08, 2026.
+
+Gopinath, Gita and Brent Neiman, "
+The Incidence of Tariffs: Rates and Reality (PDF)
+," NBER Working Paper 34620 (2026), https://doi.org/10.3386/w34620.
+
+Minton, Robert, and Mariano Somale (2025). "
+Detecting Tariff Effects on Consumer Prices in Real Time
+," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 09, 2025.
+
+Minton, Robert, and Brian Wheaton. "Delayed inflation in supply chains: Theory and evidence." 
+Available at SSRN 4470302
+ (2023).
+
+Sangani, Kunal. 2024. "Pass-Through in Levels and the Incidence of Commodity Shocks." Available at SSRN: https://ssrn.com/abstract=4574233 or http://dx.doi.org/10.2139/ssrn.4574233
+
+Appendix 1
+ 
+
+Tracking changes in tariffs: some complex cases
+
+For the tariffs on Canada, Mexico and auto parts in lines 3, 4 and 9 of table 1, determining changes in tariff rates requires information by HS10 product on the share of imports from Canada and Mexico that are USMCA compliant, as these imports are exempted from these tariffs. We calculate these shares by HS10-exporter pair using Census dutiable values for July 2025. Armed with this information, we compute implied changes in tariff rates as the product of the corresponding rate in column 4 and the share of imports in affected HS10-exporter pairs that are not USMCA compliant.
+29
+
+Our decision to use USMCA compliance information from July 2025 warrants further discussion. Although standard practice would favor the use of pre-shock measures of USMCA compliance, we argue that Census dutiable values from 2024 do not accurately capture the true extent of USMCA compliance prior to last year's tariff increases.
+30
+ As Most Favored Nation tariffs were very low in 2024, many firms that were, in principle, eligible for USMCA preferential treatment had little incentive to complete the required paperwork to formally claim USMCA-compliant status. Furthermore, as discussed in a recent official notice from Census, Census data often underreported product-level formal USMCA compliance rates prior to July 2025.
+31
+ As such, we interpret the surge in USMCA compliance rates in Census data through July 2025 as largely reflecting a formalization of compliance by firms that were already compliant in practice as well as a correction in reporting practices at Census. For this reason, Census data from July 2025 provides a more accurate measure of USMCA compliance rates in 2024 than Census data from that year.
+
+The tariffs on finished cars in line 6 of table 1 exempt the US content of imported finished cars from Canada and Mexico that are USMCA compliant. As such, for HS10-exporter pairs affected by these exemptions, we first compute exempted import shares as the product of pair-specific USMCA compliant rates and our own estimates of the overall share of US content in imports of finished cars from Canada and Mexico, which we produce based on information from the National Highway Transportation Safety Administration (NHTSA) for 2024.
+32
+ We then compute implied changes in tariff rates as the product of the tariff rate in column 4 and nonexempted import shares.
+33
+ For HS10-exporter pairs not affected by these exemptions, the rate in column 4 directly yields implied changes in tariff rates.
+
+The steel, aluminum and copper tariffs in lines 5, 11 and 13 of table 1 apply to raw metal imports as well as to the metal content of certain imported derivative products. As the latter is not directly observable from trade data, we estimate it using BEA's 2017 benchmark US input-output tables under the assumption that other countries use similar technologies to produce these derivative products.
+34
+ For HS10-exporter pairs representing derivative products, we compute implied changes in tariff rates as the product of the tariff rate in column 4 and share of metal content in these products. For the case of raw metal imports, the rate in column 4 directly gives implied changes in tariff rates.
+
+Appendix 2
+
+Regression Estimates with fewer or more lags
+
+Figure A1 shows that, in a model estimated with nine lags, cumulative tariff pass-through at nine months remains around 100%; in fact, it remains at a level similar to the seven-month cumulative tariff pass-through shown in our baseline Figure 3. Figure A2 shows that, in a model estimated with five lags, cumulative tariff pass-through at five months appears close to 100%. As confidence bands are wide, we think a reasonable but still tentative conclusion is that tariff pass-through is stabilizing around 100% and takes 5 to 9 months to occur.
+
+Figure A1. Pass-through estimates, model with 9 lags
+
+Note: Pass-through coefficients are cumulative. A value of 1 means full dollar-for-dollar pass-through of tariffs into relative consumer prices. The regression sample period is January 2024 â February 2026, and observations are unweighted. 90% confidence intervals are displayed, and standard errors are clustered by PCE category.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+Figure A2. Pass-through estimates, model with 5 lags
+
+Note: Pass-through coefficients are cumulative. A value of 1 means full dollar-for-dollar pass-through of tariffs into relative consumer prices. The regression sample period is January 2024 â February 2026, and observations are unweighted. 90% confidence intervals are displayed, and standard errors are clustered by PCE category.
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+Appendix 3
+
+Scatterplot using Minton and Somale (2025) Methodology
+
+In Figure A3, we replicate the event-study approach in Minton and Somale (2025) but using x-axis theoretical tariff effects from all of the tariffs in table 1 (formally, the black dots in figures 1 and 2) and updating the y-axis for the additional price data we have received through February 2026. While the pass-through estimate from this regression is not statistically different from the that of our baseline specification, the point estimates from our baseline approach in this note are a bit higher, consistent with the caveats discussed in the text.
+
+Figure A3. Event-study approach in Minton and Somale (2025)
+
+Note: Excess inflation (y-axis) is computed using category-average inflation from Jan. 2024 to Dec. 2024 and is not annualized. Theoretical tariff effects (x-axis) are the black dots shown in figures 1 and 2. 95% confidence bands for fitted values are heteroskedasticity robust. The regression underlying the linear fit is unweighted. The slope coefficient is 0.78 (p-value 0.04), and the intercept is 0.39 (p-value 0.80).
+
+Source: Authors' calculations using data from the BEA, BLS, Census, the Executive Office, the Federal Registrar, and Customs and Border Protection.
+
+Accessible version
+
+1. When studying the 2018-19 U.S. tariffs on China, Minton and Somale (2025) abstract from tariff variation across products by considering instead a flat tariff equal to the average rate on all US imports from China implied by the policy changes under consideration. 
+Return to text
+
+2. The pooled local-projections approach discussed in Minton and Somale (2025) implicitly assumes that consumer prices in each month may be affected at most by the most recent tariff event. While we think this assumption is reasonable for the 2018-19 China tariffs, when tariff events were sufficiently spaced out, this assumption is less appropriate for this year's tariffs. 
+Return to text
+
+3. For more details on production information in BEA's IO tables and compatibility issues between PCE data in BEA's IO tables and PCE price data, see De Michelis and Somale (2023) and Minton and Somale (2025), respectively. 
+Return to text
+
+4. Official communications provide information on the products and countries of origins affected by the measure as well as the tariff rates on affected imports. This information readily yields changes in tariff rates by HS10-exporter pairs when tariffs apply to all imports within said pairs. 
+Return to text
+
+5. While Gopinath and Neiman (2026) and Besten and Kanzig (2026) use revenue measures intended to alleviate some of these limitationsâsuch as computing average tariff rates using 2024 trade weightsânone of these approaches can fully resolve the downward bias that arises when imports of highly tariffed goods fall to zero. 
+Return to text
+
+6. That said, there is a Passche interpretation for these revenue-based measures, and we have repeated all of the analysis in this note using those measures. While measured tariff effects are somewhat lower using that approach, they are still large and statistically significant. A full accounting of those findings is beyond the scope of this note. 
+Return to text
+
+7. Minton and Somale (2025) argued the "first-round" tariff effects they estimated in February-March 2025 were likely equivalent to the total tariff effects at the time, since general equilibrium effects take longer to play out. Enough time has passed since the initial tariffs were implemented in 2025 that we believe "second-round" effects may be more meaningful now. 
+Return to text
+
+8. Our estimated tariff effects are robust to dealing with differences in within-month timing of tariffs by scaling the theoretical tariff effect in the month of implantation by the fraction of days the tariffs were effective; in this case, we are assigning the remainder of the theoretical effect to the following months. 
+Return to text
+
+9. The 59 core goods categories for which we can measure tariff effects cover 100% of market-based core goods PCE. From overall core goods PCE, only two, non-market core goods categories are excluded: "Standard clothing issued to military personnel" and "Net expenditures abroad by U.S. residents." Note that our 59 core goods categories are slightly more aggregated than the core goods categories available in the detailed PCE bridge; we have aggregated core goods categories in the PCE bridge when the BEA's price indices are measured using the same underlying consumer price index. An example is our "New autos" category â we observe "New domestic autos" and "New foreign autos" separately in the PCE bridge, but the BEA's price indices for these categories are derived from the same underlying CPI for new cars. 
+Return to text
+
+10. Tariffs affect the cost of core goods consumption much more than the cost of core services consumption. While some services, such as motor vehicle repair services, may experience meaningfully higher costs due to tariffs, we leave this assessment (which is possible using our framework) for future research. 
+Return to text
+
+11. Minton and Somale (2025) used the event-study approach to study pass-through to consumer prices from US tariffs on China implemented in February and March of 2025, treating them as a single tariff event. Figure A3 in the appendix updates this analysis with data through February 2026, treating the 2025 tariff changes in Table 1 as a single tariff event. While we still find a strong association between excess inflation across consumer goods categories and theoretical tariff effects, the interpretation of the coefficient in this case is subject to the caveats discussed in the text. 
+Return to text
+
+12. Intuitively, long-horizon price changes, the dependent variable for estimating long-horizon pass-through coefficients in a local projection approach, are affected both by the early tariff changes explicitly included in the regression but also by highly correlated tariff changes in subsequent months. The increased persistence in the process of tariff changes will cause the local projections approach to overstate the longer-run pass-through of tariff changes early in 2025. 
+Return to text
+
+13. PCE prices in February 2026 are FRB staff estimates from the February 2026 CPI release, as February 2026 PCE prices were not yet published as of the writing of this note. For market-based core goods PCE categories, the only categories included in our analysis, the mapping to PCE prices from CPI prices is known. We needed to drop the Educational Books PCE category in February 2026 as the CPI underlying this category was unpublished. 
+Return to text
+
+14. While we mention the regression is unweighted, our results are not meaningfully different if we weight observations by PCE. 
+Return to text
+
+15. Figure 2 highlights several particularly important months, with less important months collapsed into a single "Other" category, but our regression uses the fully disaggregated data. 
+Return to text
+
+16. Category fixed effects are necessary because more tariffed goods categories have a lower (more negative) trend inflation rate than less tariffed goods. Put differently, pre-trends are clearly apparent in estimations where category fixed effects are not included. 
+Return to text
+
+17. Formally, cumulative pass-through up to some horizon $$\bar{H}$$ is estimated as $$\sum_{h=0}^{\bar{H}}{\hat{\beta}}_h$$. Standard errors on the cumulative pass-through coefficients can be constructed using the estimated variance matrix for the one-month pass-through coefficients. 
+Return to text
+
+18. Prior to Minton and Somale (2025), Minton and Wheaton (2023) used an analogous framework to assess how fully and quickly supply chains transmit commodity price shocks into relative prices. 
+Return to text
+
+19. Formally, such effects are absorbed by the time fixed effects. 
+Return to text
+
+20. More formally, we propagate the theoretical tariff effects from Figure 2âwhich resulted from the tariffs in Table 1 and were the regressors in Equation 1âusing the coefficients shown in Figure 3, and then we aggregate the effects into contributions to core PCE prices using each category's weight in core PCE. 
+Return to text
+
+21. Cavallo, Llamas, and Vazquez (2025), despite finding similar effects of tariffs on prices, argue that realized effective tariff pass-through has only been 24% so far. This is partially because their pass-through definition is different than ours. 100% pass-through for them means that the prices of affected imports increase by the same amount as the tariff. Because we assume constant dollar margins, and tariffed products, on average, are sold to consumers for 2.7 times their price at the border, full pass-through for us is roughly 100%/2.7 = 37% of full pass-through for Cavallo, Llamas, and Vazquez (2025). 
+Return to text
+
+22. Core goods PCE inflation in February 2026 is an FRB staff estimate, as discussed in a previous footnote. 
+Return to text
+
+23. Formally, we subtract the 12-month difference in the tariff effects shown in the black dots of Figure 4, rescaled to be in terms of core goods PCE prices rather than core PCE prices as a whole. 
+Return to text
+
+24. The high variance of the blue line in 2025 compared to pre-pandemic core goods inflation rates can partially be attributed to software price inflation, which was particularly volatile in 2025 and has a 5% weight in the core goods PCE price index. The within-year variance of the monthly 12-month percent change in the PCE Computer Software & Accessories price index was 18.4% in 2025, compared to 7.6%, on average, over 2015-2019. 
+Return to text
+
+25. Note that, without time fixed effects, our estimates likely need Driscoll-Kraay standard errors, which are based on large T asymptotics. Such asymptotics are probably invalid in our context, due to the short time dimension of our panel. We have continued to cluster by PCE category, but the incorrect clustering is an important sense in which our implicit measures of "aggregate" tariff effects should be interpreted with caution. Note that we have estimated the Driscoll-Kraay errors, and they are not substantially wider; the issue is whether they are meaningful. 
+Return to text
+
+26. The tariff effects identified in Besten and Kanzig (2026) and Barnichon and Singh (2025) include any negative aggregate demand effects induced by higher foreign retaliatory tariffs on the United States. As such, one reason why our common tariff effects may be less negative than those in these papers is that this type of retaliation was more limited in 2025 than in previous episodes. 
+Return to text
+
+27. A common view is that the direct cost pressures of tariffs on prices play out faster than the general equilibrium demand effects of tariffs. One argument that the differences between our estimates in Figure 6 are driven by confounding aggregates, rather than general equilibrium effects of tariffs, is that the main difference in our estimates has already emerged just one month after tariff implementation, as shown in panel (a). While this argument is suggestive evidence that confounding aggregates are at play, we reemphasize the substantial uncertainty around identifying which aggregate effects are driving the differences between our estimated effects in Figure 6. 
+Return to text
+
+28. This prediction is 
+ceteris paribus
+; it does not take into account tariff changes implemented after those shown in table 1, recent changes in oil prices in 2026, etc. 
+Return to text
+
+29. Note that the calculated changes in tariffs must be added to preexisting tariffs in the case of the policy actions in lines 3 and 4, but they must be added to 2024 tariff levels plus fentanyl tariffs on China in the case of the policy action in line 9, as the latter replaces some of the previous 2025 tariffs. 
+Return to text
+
+30. Standard practice favors the use of pre-tariff information for endogenous variables, such as a firm's decision to become USMCA compliant, as these variables may themselves be affected by tariffs. 
+Return to text
+
+31. The official Census notice was issued on March 19, 2026 and can be found at 
+https://www.census.gov/foreign-rade/statistics/corrections/Notice_for_USMCA_Eligibility.pdf
+. 
+Return to text
+
+32. The NHTSA publishes annual reports with information on the joint US/Canada content of imports of finished cars. Based on these data and estimates of the Canadian content of US car production in Flaaen, Kamal, Lee and Yi (2025), we estimate that the US content of imports of finished cars from Canada and Mexico is 55% and 18%, respectively. 
+Return to text
+
+33. Note that calculated changes in tariff rates must be added to 2024 tariff levels plus fentanyl tariffs on China. 
+Return to text
+
+34. With more industry detail than the BEA's 2023 GVC IO tables we use in our main analysis, BEA's 2017 benchmark US input-output tables are better suited to compute metal content. However, these benchmark tables do not have imports broken down by region of origin, which is a central input to our analysis. 
+Return to text
+
+Please cite this note as:
+
+Minton, Robert, Madeleine Ray, and Mariano Somale (2026). "Detecting Tariff Effects on Consumer Prices in Real Time â Part II," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, April 08, 2026, https://doi.org/10.17016/2380-7172.4040.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

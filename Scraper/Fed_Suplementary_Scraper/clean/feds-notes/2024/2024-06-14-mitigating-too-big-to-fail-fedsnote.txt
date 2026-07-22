@@ -1,0 +1,761 @@
+FEDS Notes
+
+Twitter
+
+June 14, 2024
+
+Mitigating Too Big to Fail
+
+Wayne Passmore and Colleen Faherty
+
+I. Introduction
+
+Failure is an integral part of market capitalism. Avoiding failure gives firms a strong motivation to compete in serving their customers well. The possibility of failure also creates a desire to innovate.
+
+Financial institutions that are "Too-Big-to-Fail" impede proper market functioning in financial services. These firms can undermine the disciplining effects of capital markets should their failure have substantial "knock-on" effects on the real economy. Capital markets participants may perceive that, to mitigate these broader costs, governments likely will intervene to save the failing financial institution or substantially limit the losses incurred by some of its investors. As a result, many policymakers desire to regulate the size and scope of very large financial institutionsâtheir "systemic importance"âwith the goal of permitting failure while limiting the broader losses.
+
+Here we propose a low-cost method of identifying systemic importance among the largest financial institutions, including banks and non-bank financial firms with publicly traded equity. We also suggest an associated system of capital surcharges that could be added to the risk-weighted capital ratio. This type of surcharge would provide an incentive for systemically important financial institutions (SIFIs) to reduce the broader effects caused by its failure.
+1
+The reduction of contagion effects makes the failure of the SIFI more socially acceptable. As noted, our method allows the comparison of systemic importance across different types of financial institutions. In particular, we can compare other financial institutions to Global Systemically Important Banks (G-SIBs).
+
+II. Results
+
+We select our sample of financial institutions using the following criteria: 1) A stock that was publicly traded in 2022; 2) Greater than 10 billion dollars in book assets; and 3) Having GICS (Global Industry Classification Standard) sector designation as "financial." The GICS is a hierarchical industry classification system developed and reviewed annually by S&P Dow Jones Indices and MSCI (Morgan Stanley Capital International).
+
+Our technique uses four data series for each financial institution: 1) Accounting Returns, 2) Market Returns, 3) Book Assets, 4) Market Assets. We use the negative returns on assets (ROAs) as a proxy for a firm's failure. To build a measure of contagion effects, we use the covariance of the overall financial system's market returns with a firm's market returns. Our methodology will be described in more detail after we discuss Table 1 (below).
+2
+
+Table 1: Average Surcharges by Firm for 2022
+
+Ticker
+
+Firm
+
+$$\Delta$$ CoVaR (%)
+
+$$\Delta$$ CoVaR (b)
+
+LGD Ratio (%)
+
+Surcharge (bps)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+1
+
+BACâ
+
+BANK OF AMERICA CORP
+
+-2.91
+
+-8.6
+
+11
+
+759
+
+2
+
+JPMâ
+
+JPMORGAN CHASE & CO
+
+-2.17
+
+-8.19
+
+10.5
+
+738
+
+3
+
+Vâ¡
+
+VISA INC
+
+-1.45
+
+-4.93
+
+6.3
+
+535
+
+4
+
+MAâ¡
+
+MASTERCARD INC
+
+-1.15
+
+-3.76
+
+4.8
+
+439
+
+5
+
+GS*
+
+GOLDMAN SACHS GROUP INC
+
+-2.42
+
+-2.72
+
+3.5
+
+332
+
+6
+
+WFCâ
+
+WELLS FARGO & CO
+
+-1.49
+
+-2.62
+
+3.4
+
+320
+
+7
+
+MS*
+
+MORGAN STANLEY
+
+-1.58
+
+-2.38
+
+3.1
+
+291
+
+8
+
+PYPLâ¡
+
+PAYPAL HOLDINGS INC
+
+-2.12
+
+-2.36
+
+3
+
+288
+
+9
+
+BLK*
+
+BLACKROCK INC
+
+-2.04
+
+-2.12
+
+2.7
+
+255
+
+10
+
+BX*
+
+BLACKSTONE INC
+
+-2.74
+
+-1.96
+
+2.5
+
+234
+
+11
+
+USBâ
+
+US BANCORP
+
+-2.69
+
+-1.96
+
+2.5
+
+234
+
+12
+
+MMC¶
+
+MARSH & MCLENNAN COS
+
+-1.83
+
+-1.47
+
+1.9
+
+153
+
+13
+
+AXP§
+
+AMERICAN EXPRESS CO
+
+-1.17
+
+-1.42
+
+1.8
+
+145
+
+14
+
+BNSâ
+
+BANK OF NOVA SCOTIA
+
+-1.91
+
+-1.41
+
+1.8
+
+143
+
+15
+
+Câ
+
+CITIGROUP INC
+
+-1.35
+
+-1.36
+
+1.7
+
+134
+
+16
+
+SCHW*
+
+SCHWAB (CHARLES) CORP
+
+-0.97
+
+-1.35
+
+1.7
+
+132
+
+17
+
+PNCâ
+
+PNC FINANCIAL SVCS GROUP INC
+
+-1.84
+
+-1.32
+
+1.7
+
+125
+
+18
+
+ICE*
+
+INTERCONTINENTAL EXCHANGE
+
+-1.88
+
+-1.13
+
+1.5
+
+88
+
+19
+
+TFCâ
+
+TRUIST FINANCIAL CORP
+
+-1.41
+
+-0.96
+
+1.2
+
+46
+
+20
+
+AIG¶
+
+AMERICAN INTERNATIONAL GROUP
+
+-1.95
+
+-0.89
+
+1.1
+
+28
+
+21
+
+PGR¶
+
+PROGRESSIVE CORP-OHIO
+
+-1.25
+
+-0.86
+
+1.1
+
+22
+
+22
+
+MET¶
+
+METLIFE INC
+
+-1.56
+
+-0.85
+
+1.1
+
+20
+
+23
+
+BK*
+
+BANK OF NEW YORK MELLON CORP
+
+-2.23
+
+-0.85
+
+1.1
+
+20
+
+24
+
+MCO*
+
+MOODY'S CORP
+
+-1.54
+
+-0.84
+
+1.1
+
+16
+
+â  Indicates the firmsâ industry classification is Banks.
+
+â¡ Indicate the firmsâ industry classification is Financial Services.
+
+* Indicate the firmsâ industry classification is Capital Markets.
+
+¶Indicate the firmsâ industry classification is Insurance.
+
+§ Indicate the firmsâ industry classification is Consumer Finance.
+
+Note: The regressions that yield the inputs for this table occur at a weekly frequency. Weekly values are averaged by year.
+
+Source: CRSP Compustat/Merged Database, Center for Research in Security Prices, S&P Dow Jones Indices, State Variables consistent with Adrian and Brunnermeier (2016), and Staff Calculations.
+
+Our sample is an unbalanced panel of 224 unique financial institutions. Our methodology classifies 24 of these institutions as systemically important in 2022; that is, firms with an estimated capital surcharge greater than zero.
+
+As shown in Table 1, we rank firms by the size of their estimated capital surcharge.
+3
+Among the 24 firms that have positive estimated capital surcharges in 2022, eight are identified as banks by their GICS Industry classification, eight are identified as capital markets entities, four are identified as insurance companies, three are identified as financial services companies and one firm is identified as a consumer finance company. Seven of the firms currently designated as GSIBs under the Basel System show up in our list of systemically important firms in 2022.
+4
+Perhaps surprisingly, there are three payments processers (Visa Inc., Mastercard Inc., and PayPal Holdings Inc.) on the list (classified as "Financial Services" by the GICS).
+
+Note the large gap between the two most systemically important firms, Bank of America Corp. and JPMorgan Chase & Co., and the third, Visa Inc. In addition, despite the substantial variation of firm activities within GICS industry class, there is loose clustering of capital surcharges within classes. Banks are generally found in the upper half of the table and investment banks are found in the top ten. Payments processers are found to pose significant systemic risk in more recent years. While insurance companies are generally at the bottom of the table and are designated systemic but receive very small capital surcharges. However, these results are simply suggestive and more information about the methods used to develop data and classifications would be needed to establish robust results.
+
+One might care to focus on the persistently systemic firms. From 2015 to 2022, there are 15 firms that are estimated to have positive capital surcharges by our methodology in each of those years (see Table 2 below). We refer to these firms as the Persistently Systemic.
+
+Table 2: Persistently Systemic; Averaged Annual Surcharges from 2015 - 2022
+
+Ticker
+
+Firm
+
+$$\Delta$$ CoVaR (%)
+
+$$\Delta$$ CoVaR (b)
+
+LGD Ratio (%)
+
+Surcharge (bps)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+1
+
+BACâ
+
+BANK OF AMERICA CORP
+
+-2.3
+
+-5.84
+
+11.1
+
+758
+
+2
+
+JPMâ
+
+JPMORGAN CHASE & CO
+
+-1.7
+
+-5.95
+
+11
+
+756
+
+3
+
+Vâ¡
+
+VISA INC
+
+-1.2
+
+-3.1
+
+5.4
+
+471
+
+4
+
+MAâ¡
+
+MASTERCARD INC
+
+-1.3
+
+-2.68
+
+5.6
+
+471
+
+5
+
+GS*
+
+GOLDMAN SACHS GROUP INC
+
+-0.9
+
+-2.07
+
+3.5
+
+313
+
+6
+
+WFCâ
+
+WELLS FARGO & CO
+
+-2.1
+
+-1.6
+
+3.1
+
+293
+
+7
+
+MS*
+
+MORGAN STANLEY
+
+-1.1
+
+-1.54
+
+3.1
+
+286
+
+8
+
+BLK*
+
+BLACKROCK INC
+
+-1.8
+
+-1.58
+
+2.9
+
+278
+
+9
+
+USBâ
+
+US BANCORP
+
+-1.8
+
+-1.45
+
+2.6
+
+246
+
+10
+
+MMC¶
+
+MARSH & MCLENNAN COS
+
+-1.4
+
+-1.36
+
+2.5
+
+230
+
+11
+
+AXP§
+
+AMERICAN EXPRESS CO
+
+-1.7
+
+-1.13
+
+2.2
+
+197
+
+12
+
+BNSâ
+
+BANK OF NOVA SCOTIA
+
+-1.7
+
+-0.995
+
+1.9
+
+152
+
+13
+
+Câ
+
+CITIGROUP INC
+
+-0.9
+
+-0.795
+
+1.4
+
+81
+
+14
+
+PNCâ
+
+PNC FINANCIAL SVCS GROUP INC
+
+-1.6
+
+-0.816
+
+1.4
+
+80
+
+15
+
+BK*
+
+BANK OF NEW YORK MELLON CORP
+
+-1.7
+
+-0.729
+
+1.4
+
+80
+
+â  Indicates the firmsâ industry classification is Banks.
+
+â¡ Indicate the firmsâ industry classification is Financial Services.
+
+* Indicate the firmsâ industry classification is Capital Markets.
+
+¶Indicate the firmsâ industry classification is Insurance.
+
+§ Indicate the firmsâ industry classification is Consumer Finance.
+
+Note: The values in this table are weekly values averaged over the period from 2015 to 2022 by firm.
+5
+
+Source: CRSP Compustat/Merged Database, Center for Research in Security Prices, S&P Dow Jones Indices, Staff Calculations.
+
+There are several striking characteristics about the ordering of the Persistently Systemic. The top spots of the table are dominated by firms typically thought of as banksâboth retail banks and investment banks. Payments processers fill out most the remaining top spots. In contrast, two non-bank firms that stand out for their persistence as systemically important, BlackRock and American Express Company. Finally, only one insurance company, Marsh & McLennan, appears in Table 2.
+6
+
+Note that Bank of America and JPMorgan, which are both currently designated as GSIBs, are much larger in systemic importance than the other persistently systemic firms.
+
+III. Methodology
+
+The formula for the surcharge is given as follows:
+
+$$s = -(f-(\mu - \frac{\sigma}{\xi}))[1-(\frac{LGD(G)}{LGD(r)})]$$,
+7
+
+where $$s$$ is the surcharge, $$f$$ is the negative shock to ROA, $$\mu$$ is the demarcation of the probability tail, $$\sigma$$ is the scale parameter, $$\xi$$ is the shape parameter, LGD(G) is the social losses given default of a SIFI, and LGD(r) is the social loss given default of the reference firm, which we define in the paragraph that follows. The parameters $$\mu$$, $$\sigma$$, and $$\xi$$ are estimated using a Generalized Pareto Distribution, which is the appropriate distribution of ROA (see Jiron, Passmore, and Werman, 2021).
+
+The derivation of this surcharge formula depends heavily on the expected impact approach, which argues that a capital surcharge can be used to equate the expected social loss of a SIFI to the expected social loss of a hypothetical firm with a socially acceptable level of social loss given failure. Conceptually, it would be reasonable to choose a level of social loss (associated with firm failure) that one may be willing to incur to maintain the credibility of market mechanisms in the financial industry.
+
+We proxy LGD(G) with the firm-to-aggregate CoVaR ratio.
+8
+In the case of the reference firm, the surcharge is assumed to be zero (thus, LGD(G) = LGD(r)). By examining the derived surcharges, we can determine a break point between firms who have a positive surcharge and those who do not. We learned LGD(r) is near 1 percent. That is, if this reference firm were to fail, then one percent of the total knock-on losses in the economy would be realized. In principle, this assumption is a public choice and would reflect society's relative aversion to social losses given a financial institution's failure.
+
+Our judgment is also rendered through the choice of $$f$$, the negative shock to ROA that initiates government intervention. To capture the influence of policymakers, we chose a value consistent with the structure of the bank capital surcharge system currently in use ($$f$$ = 0.025). As shown in Jiron, Passmore, Werman (2021), the Basel bank capital surcharge system proxies bank failure by a 2.5 percent decline in book revenues.
+
+There are four steps for calculating CoVaR for a firm. First, we calculate the market capitalization for each firm in our sample on a weekly basis ($$m_{i,t}$$) and calculate weekly returns for each firm ($$r_{i,t}$$). Second, we estimate a qth-percentile quantile regression of market returns on individual firm returns and a vector of state variables:
+
+$$r_{0,t} = \alpha^q_{0|i}+\lambda^q_{0|i}M_{t-1}+\beta^q_{0|i}r_{i,t}+\epsilon^q_{0|i,t}$$,
+
+where $$M_{t-1}$$ is the lagged vector of state variables and $$r_{0,t}$$ is the returns to the S&P500 index. $$\beta$$ is the relationship between the individual returns for the firm and the returns to the financial sector index at a given quantile.
+
+Third, $$VaR^q_{i,t}-VaR^{50}_{i,t}$$ is the drop in revenue when there is financial stress. Following Adrian and Brunnermeier, we estimate the value at risk at a given quantile:
+
+$$VaR^q_{i,t}=\hat{\alpha}^q_{i}+\hat{\lambda}^q_iM_{t-1}$$.
+
+Fourth, we calculate, $$\Delta{CoVaR}^q_{i,t}$$:
+
+$$\Delta{CoVaR}^q_{i,t}=\beta^q_{0|i} (VaR^q_{i,t}-VaR^{50}_{i,t})$$ and $$\Delta^\ CoVaR^q_{i,t} = \Delta{CoVaR}^q_{i,t}m_{i,t}$$
+
+We assume that $$LGD(G) = \frac{\Delta^\ CoVaR^q_{i}}{\sum ^n_1 \Delta^\ CoVaR^q_{i}}$$ which allows us to calculate the capital surcharge using the formula given earlier.
+
+IV. Conclusion
+
+We propose a low-cost, data-driven approach to identify firms with publicly traded equity that appear to have systemic footprints in the United States financial system. Our approach also produces a capital surcharge, which, if implemented, could mitigate the cost of broad economic consequences created by the potential failure of large financial institutions and can be applied to firms other than banks.
+
+References
+
+Adrian, T and Brunnermeier, M (2016): "CoVaR",
+American Economic Review
+, vol 106, no 7, July, pp 1705â41.
+
+Basel Committee on Banking Supervision, BCBS (2013a): "Global systemically important banks: updated assessment methodology and the higher loss absorbency requirement", July 2013.
+
+"The Global Industry Classification Standard (GICS®)."
+MSCI,
+GICS® - Global Industry Classification Standard â MSCI, https://www.msci.com/our-solutions/indexes/gics
+
+Jiron, Passmore, and Werman (2021): "An empirical foundation for calibrating the G-SIB surcharge",
+BIS Working Papers
+, No 935, 31 March 2021.
+
+Passmore, W. and von Hafften, A, 2019. "Are Basel's Capital Surcharges for Global Systemically Important Banks Too Small?",
+International Journal of Central Banking
+, vol. 15(1), pages 107-156, March.
+
+1. To lower the capital surcharge, the firm could either 1) lower the covariance of its market returns with the returns of the financial sector; or 2) the firm could make itself more immune from revenue drops during a financial crisis. For example, the firm might add a portfolio of longer-term treasury bonds. This would lower its correlation with movements in financial system market returns as well as lessen its revenue losses in a financial crisis. However, the market capital of the firm and its revenues during "normal times" would be lowered. A firm could compare the cost of holding this additional liquidity to the cost imposed by a capital surcharge.
+Return to text
+
+2. See also Jiron, Passmore, Werman 2021.
+Return to text
+
+3. The levels of capital surcharges that result from our calculations should not be taken literally. Our method relies on a variety of assumptions about parameter values (e.g., the size of the fluctuations in revenues needed to cross the bankruptcy threshold) and estimation techniques (e.g., the time periods and the cross-sectional groups used for estimation of parameters). However, bucketing systems, similar to that used currently by bank regulators, can be used to limit the variation in capital surcharges applied to most firms, while keeping the relative differences between firms the same. Indeed, firms often prefer a bucketing system because they desire capital surcharges to be stable over long periods of time.
+Return to text
+
+4. The SIFIs in Table 1 that are also currently designated as GSIBS are (in order of their appearance in Table 1) Bank of America, JPMorgan, Goldman Sachs, Wells Fargo, Morgan Stanley, Citigroup, and Bank of New York Mellon.
+Return to text
+
+5. We use the following state variables: (i) Cboe
+
+Volatility Index® (VIX®) accessed via Bloomberg Finance L.P.; (ii) The Secured Overnight Financing Rate (SOFR) from Bloomberg; (iii) The change in the three-month Treasury bill rate from the Board of Governors of the Federal Reserve System (H.15 release); (iv) The change in the slope of the yield curve, measured by the yield spread between the ten-year Treasury rate and the three-month bill rate obtained from the Board of Governors of the Federal Reserve System (H.15 release); (v) The change in the credit spread between BAA-rated bonds and the Treasury rate (with the same maturity of ten years) from the Board of Governors of the Federal Reserve System (H.15 release); (vi) The weekly equity market return from Bloomberg. (vii) The weekly real estate sector return in excess of the market financial sector return (staff calculations).
+Return to text
+
+6. We could extend our analysis to include nonfinancial firms. However, the capital surcharge argument may not make sense because the nonfinancial firms typically do not use a great deal of leverage.
+Return to text
+
+7. The capital surcharge function is derived in the BIS Working Paper, see Jiron, Passmore, and Werman (2021).
+Return to text
+
+8. See Adrian and Brunnermeier (2016) on how systemic losses can be approximated by $$\Delta$$ CoVaR.
+Return to text
+
+Please cite this note as:
+
+Passmore, Wayne, and Colleen Faherty (2024). "Mitigating Too Big to Fail," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, June 14, 2024
+, https://doi.org/10.17016/2380-7172.3521.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

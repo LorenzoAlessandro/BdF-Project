@@ -1,0 +1,859 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+February 12, 2019
+
+Gender Diversity on Bank Board of Directors and Performance
+1
+
+Ann L. Owen and 
+Judit Temesvary
+
+1. Introduction
+
+Women are underrepresented in leadership positions in financial services, where they generally remain in lower-paying first or mid-level positions. While women made up 54.3 percent of the workforce at S&P 500 finance companies in 2014, only 18.7 percent of S&P 500 finance company boards and only 2.1 percent of CEOs were women (Catalyst, 2015). Many papers have studied the effects of boards' gender composition on firm performance and a few have studied it in the banking industry specifically (Adams and Mehran, 2012; Garcia-Meca et al, 2015; Berger et al, 2014; Pathan and Faff, 2013), showing mixed results. We study this issue using a newly compiled annual dataset on bank boards and financial performance, and we propose the resolution to these conflicting findings is that the impact of greater gender diversity depends on bank and board traits. Specifically, we find significant non-linearities in the relationship between bank performance and board gender diversity, suggesting that the impact of increasing gender diversity depends on its existing level. We also find that the effects of gender diversity depend on bank managerial quality. These results suggest that banks' continued voluntary expansion of board gender diversity is likely to bring performance benefits, provided that the banks are well-managed or capitalized.
+
+Overall, we find that banks with more gender diversity on their board perform better once the composition of these boards reaches a critical level of gender diversity, corresponding to a board female share of around 13-17 percent. Given the size and composition of most boards, this result essentially means that adding more women to the board improves overall performance if there is already at least one woman on the board; adding the first woman to the board does not have this positive effect. This implies that currently about half of the banks in our sample enjoy the performance-enhancing effects of board gender diversity. This non-linear relationship between gender diversity and bank performance continues to hold, even after we account for banks' risk. Specifically, while greater gender diversity corresponds to lower risk-adjusted returns when female participation on bank boards is low, this relationship turns positive once the female share of board
+ 
+reaches around 20 percent. Higher risk-adjusted returns and bank performance in general may in part be due to better monitoring by the board. Consistently, we find some evidence suggesting that increasing gender diversity beyond a threshold is associated with fewer regulatory enforcement actions.
+
+2. Empirical analysis
+
+We compile a new dataset on nearly 90 U.S. bank holding companies' (from here on, banks) boards' gender composition, and these banks' financial performance and balance sheet characteristics from 1999 to 2015.
+2
+
+Our main measure of gender diversity on boards is the 
+Blau Index
+ (Blau, 1977; Bear et al, 2010):
+
+$$$$ B = \Bigg[ 1-\sum_{g=1}^G P_g^2 \Bigg] \times 100 $$$$
+
+In this expression, 
+P
+ is the fraction of women and men on bank boards, and 
+g
+ indexes gender. By construction, this measure has a maximum value of 50 if both men and women have 50 percent shares. Lower values of the 
+Blau Index
+ indicate greater gender inequality. The average and median female share of board in our sample is around 12.5 percent, corresponding to one out of eight board members being female. The median size of a board is 13 members, meaning that the typical bank board has one or two women on it. However, the distribution has a long right tail: while the maximum female share is high at 42.8 percent, three-quarters of the boards in our sample have less than 16.8 percent female share. That said, gender diversity has risen over time, with the median 
+Blau Index
+ across all banks in a given year increasing from 16 to over 30, translating into an uptick in the median board female share from 9 to 20 percent (Figure 1).
+
+ 
+
+Figure 1: Average and Median Female Share and Blau Index of Board, over time 1999-2015
+
+
+Source: BoardEx and authors' calculations.
+
+Accessible version
+
+We run first-differenced Instrumental Variables regressions to address the endogeneity of gender diversity that may arise if shocks to performance affect board composition (Fich, 2005; Mateos de Cabo et al, 2012):
+
+$$ (1) \ \ \ Y_t^b = \alpha_0 + \alpha_1 X_{t-1}^b + \alpha_2 (X_{t-1}^b)^2 + C_{t-1}^b \times[\alpha_3 X_{t-1}^b + \alpha_4 (X_{t-1}^b)^2] + \alpha_5 S_{t-1}^b + \alpha_6 T_t + \alpha_7 B_b + \varepsilon_t^b $$
+
+In Equation 1, $$Y_t^b$$ denotes one of four measures of bank performance: three are based on banks' financial statements and the fourth is a market-based measure. 
+Revenue to Expense Ratio
+ is the ratio of banks' operating revenue to operating expenses and is our measure of the efficiency of a banks' operations.
+3
+ 
+Return on Assets
+ is net income divided by total assets and is included to measure banks' profitability. We also account for the implications that risk-taking behavior may have for bank performance by using the 
+Sharpe Ratio
+ on a bank's books as an indicator of risk. 
+Stock Price Growth
+, which is a market-based measure of bank performance, is the annual growth rate of the bank's stock price. In addition, $$X_{t-1}^b$$ is the (one-year) lagged value of the 
+Blau Index
+, which is our main gender diversity measure. We also add the square of this measure $$(X_{t-1}^b)^2$$, to capture non-linearities in the relationship between bank performance and gender diversity. We interact both the 
+Blau Index
+ and its square with the 
+Risk-weighted Capital Ratio
+ $$C_{t-1}^b$$, which we use to proxy a bank's quality of management (Mehran and Thakor, 2011). The banks in our sample are well-capitalized, with mean and median capital ratios between 13 and 14 percent. However, we see a substantial variation in capitalization across banks, which helps our identification.
+
+The vector $$S_{t-1}^b$$ contains (lagged) bank balance sheet characteristics to control for non-board related developments that may affect performance. These are: the 
+Loan to Deposit Ratio
+ (to measure bank liquidity conditions); an 
+Acquisition
+ dummy (to capture the performance impact of bank M&A activity); 
+Board Size
+ (a control for the scale of the board, ranging from 6 to 32 members, with a mean of 13). The sets $$B_b$$ and $$T_t$$ are bank and year fixed effects (Adams and Ferreira, 2009; Adams and Mehran, 2012).
+4
+
+We use two different types of instruments for the 
+Blau Index
+ $$X_t^b$$ in Equation 2: $$I_t^b$$ is the 
+Share of Independent Directors
+ as described in Boardex, bank and year fixed effects and the initial 
+Blau Index
+ (measured in 1999) times year fixed effects (Ahern and Dittmar, 2012).
+ We also add bank traits $$S_{t-1}^b$$:
+
+$$ (2) \ \ \ X_t^b = \beta_0 + \beta_1 I_t^b + \beta_2 (X_{1999}^b \times T_t) + \beta_3 Z_{t-1}^b + \beta_4 S_{t-1}^b + \beta_5 T_t + \beta_6 B_b + \upsilon_t^b $$
+
+We examine two hypotheses about the ways in which the impact of gender diversity is context-dependent. First, we test the hypothesis that 
+the impact of increasing gender diversity depends on its existing level
+ (Karpowitz and Mendelberg, 2014; Gneezy et al, 2003). Second, we examine if 
+the impact of diversity is conditional on the quality of bank management
+, which we proxy with banks' capital ratios
+.
+
+3. Estimation Results: Bank Performance and Board Gender Diversity
+
+Table 1 summarizes our findings on the relationship between bank performance and the gender diversity of its board. Each column presents the results of the second stage of an IV estimation. The p-values for Sargan tests, reported at the bottom of Table 1, show that we cannot reject the validity of the instruments in any of our specifications. All regressions include the 
+Blau Index
+ for gender diversity and three interaction terms that allow for the impact of gender diversity to vary with bank traits: the 
+Blau Index
+ times the 
+Risk-weighted Capital Ratio
+, the 
+Blau Index
+ squared, and the 
+Blau Index
+ squared times the 
+Risk-weighted Capital Ratio
+. We also add balance sheet traits and bank and year fixed effects throughout.
+
+Table 1: The Role of Gender Diversity in Determining US Banks' Performance 1999 - 2015
+
+ 
+
+Model
+
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+Measure of Bank Performance
+
+Revenue to Expense Ratio
+
+Return on Assets
+
+Sharpe Ratio
+
+Annual Stock Price Growth
+
+Gender Diversity
+
+Blau Index {t-1}
+
+3.790*
+
+			[2.101]
+
+0.289**
+
+			[0.132]
+
+0.779**
+
+			[0.378]
+
+3.753*
+
+			[2.165]
+
+Blau Index {t-1} * Risk-Weighted Capital Ratio {t-1}
+
+-0.327**
+
+			[0.145]
+
+-0.0215**
+
+			[0.009]
+
+-0.0710***
+
+			[0.0264]
+
+-0.266*
+
+			[0.162]
+
+Blau Index {t-1} * Blau Index {t-1}
+
+-0.0752*
+
+			[0.0450]
+
+-0.00619*
+
+			[0.003]
+
+-0.0142*
+
+			[0.00741]
+
+-0.0836*
+
+			[0.0443]
+
+Blau Index {t-1} * Blau Index {t-1} * Risk-Weighted Capital Ratio {t-1}
+
+0.00639**
+
+			[0.00312]
+
+0.000467**
+
+			[0.0002]
+
+0.00124**
+
+			[0.000500]
+
+0.00614*
+
+			[0.00333]
+
+Bank Characteristics
+
+Acquisition Dummy {t-1}
+
+-3.034**
+
+			[1.515]
+
+-0.149*
+
+			[0.0850]
+
+0.052
+
+			[0.278]
+
+0.606
+
+			[1.776]
+
+Loan to Deposit Ratio {t-1}
+
+-19.27**
+
+			[7.532]
+
+-0.814*
+
+			[0.429]
+
+-0.261
+
+			[1.930]
+
+24.31*
+
+			[14.69]
+
+Board Size {t-1}
+
+-0.205
+
+			[0.279]
+
+0.0047
+
+			[0.0171]
+
+0.0731
+
+			[0.0766]
+
+-0.281
+
+			[0.387]
+
+Risk-Weighted Capital Ratio {t-1}
+
+3.109**
+
+			[1.498]
+
+0.183**
+
+			[0.0910]
+
+0.680**
+
+			[0.329]
+
+3.316*
+
+			[1.749]
+
+Constant
+
+-0.408
+
+			[0.523]
+
+-0.0879**
+
+			[0.0389]
+
+0.393***
+
+			[0.121]
+
+-0.739
+
+			[1.035]
+
+Bank Fixed Effects
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Year Fixed Effects
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+730
+
+632
+
+328
+
+687
+
+P-Value of Sargan Test Statistic
+
+0.26
+
+0.82
+
+0.71
+
+0.84
+
+R-squared
+
+0.24
+
+0.11
+
+0.01
+
+0.46
+
+Marginal effect of a one standard deviation increase in the Blau index, for well-capitalized banks (at the 90th percentile) with low Blau index (at the 10th percentile):
+
+ 
+
+-21.15
+
+-0.90
+
+-5.08
+
+-9.210
+
+Marginal effect of a one standard deviation increase in the Blau index, for well-capitalized banks (at the 90th percentile) with high Blau index (at the 90th percentile):
+
+ 
+
+7.41
+
+0.59
+
+0.86
+
+8.721
+
+Note: This table shows the results of Instrumental Variables regressions. The dependent variable is various measures of bank performance, as indicated at the top of each column. The explanatory variables are as described in the text. The coefficients show the impact of a one-unit increase in the explanatory variable on percentage points changes in banks' performance measure. All regressions contain bank and year fixed effects. The instrumented variable is the Blau Index measure of gender diversity. The set of instuments consists of: the share of independent directors, bank and year fixed effects, and the 1999 (beginning of sample) value of the Blau Index interacted with the year dummies. Robust standard errors in square brackets. *** p<0.01, ** p<0.05, * p<0.1
+
+We first show results for a broad measure of bank performance, the 
+Revenue to Expense Ratio
+ (Column 1). The 
+Blau Index
+ enters significantly and positively, but it does so in a non-linear way. Importantly, we find that the impact of board gender diversity on bank performance is more complicated than a simple "level" effect suggests. The marginal effect of additional gender diversity depends on its existing level and on the bank's capitalization, as can be seen from the squared 
+Blau Index
+ and the interactions with the 
+Risk-weighted Capital Ratio
+. At the bottom of Table 1, we take all these effects into account and calculate the marginal effects of a one standard deviation increase in the 
+Blau Index 
+for well-capitalized banks with low and high existing gender diversity (at the 10
+th
+ and 90
+th
+ percentile of the 
+Blau Index 
+distribution, respectively). For well-capitalized banks with a very low level of board gender diversity, a small increase in gender diversity has a negative effect on performance. However, as board gender diversity increases, the evidence of a negative effect disappears. Bank efficiency (as measured by the 
+Revenue to Expense Ratio
+) no longer decreases with gender diversity once the share of women on the board reaches around 17 percent at well-capitalized banks (paralleling a 
+Blau Index
+ of around 27). This represents around the top 25 percent of our sample banks. There is a significant relationship between the 
+Revenue to Expense Ratio
+ and board gender diversity only in well-capitalized banks, consistent with our hypothesis that better management can lower the costs of potential conflict and reap the benefits of different perspectives in the boardroom.
+
+We examine another broad measure of bank performance, 
+Return on Assets
+ (Column 2). In line with the Column 1 results, the 
+Blau Index
+ enters positively, and the interactions of the 
+Blau Index
+ are also all statistically significant. This time, however, when we calculate the marginal effect of an increase in the gender diversity of the board for well-capitalized banks, the effects are statistically significant for banks with both low and high existing board gender diversity (the effects for the worst-capitalized banks are insignificant.) When a well-capitalized bank has low board gender diversity, a one standard deviation rise in the 
+Blau Index
+ reduces 
+Return on Assets
+ by about one percentage point. However, when a well-capitalized bank has higher existing gender diversity on its board, a comparable rise in gender diversity 
+raises
+ its 
+Return on Assets
+ by around 0.6 percentage points. This result is consistent with the idea that board room dynamics are influenced by the number of women in the room. When there is a threshold share of women on the board and the bank is well-managed (as proxied for by the 
+Risk-weighted Capital Ratio
+), more board gender diversity makes a positive contribution to bank performance. The impact of increased diversity is significant and positive on 
+Return on Assets
+ at well-capitalized banks once the female share of the board reaches around 13 percent (a 
+Blau Index
+ of around 22). This implies that around 50 percent of well-capitalized banks in our sample enjoy the performance-enhancing effects of gender diversity.
+
+Although some risks that banks take will pay off in the form of higher income, higher returns at the cost of excessive risk-taking will hinder bank performance in the longer term. Therefore, in Column 3 we examine the relationship between gender diversity on banks' boards and 
+risk-adjusted
+ returns on bank assets, as captured by the 
+Sharpe Ratio
+ on a bank's overall portfolio. Previous studies provide mixed predictions for what this relationship looks like.
+6
+ We confirm that our earlier non-linearity results hold even after we control for risk-taking: the link between risk-adjusted returns (the 
+Sharpe Ratio
+) and gender diversity is similar to those we documented in Columns 1 and 2. The 
+Blau Index
+ enters positively and significantly, and the interaction terms are also significant. At low levels of board gender diversity an increase in diversity is significantly and negatively associated with the overall 
+Sharpe Ratio
+ on a bank's books (bottom of Table 1). However, this negative relationship disappears at higher levels of gender diversity, once well-capitalized banks reach a 
+Blau Index 
+of around 30, corresponding to 15-20 percent of banks in our sample.
+
+In addition to measures of performance that are derived from bank financial statements, we also study if market-based measures of performance improve when gender diversity increases. To this end, we use a fourth measure, 
+Growth of Stock Prices
+ (Column 4). These findings are consistent with those presented earlier, with the coefficients on the 
+Blau Index
+, its square and interactions with the capital ratio entering with the predicted statistically significant signs. While estimates for well-capitalized banks (90
+th
+ percentile) are not significant, we find significant and positive marginal effects of board gender diversity at the extremes (at the sample maximum capital ratio). Given the complex nature of the interactions, it makes sense that the market perception of performance is not precisely the same as in our earlier estimations.
+
+We further explore the hypothesis that board gender diversity may exert its influence on bank performance through its effect on monitoring. In Table 2, we do so by examining how higher board gender diversity is related to regulatory enforcement actions against banks. Using the number of enforcement actions by the Federal Reserve as the dependent variable (Column 1), we find that higher gender diversity is in fact negatively related to the number of regulatory enforcement actions in the non-linear way that we find earlier. A one standard deviation increase in gender diversity at well-capitalized banks corresponds to a reduction in enforcement actions of 0.47 per year, and this effect is smaller at poorly capitalized banks at 0.27 percent per year. Diamond and Rajan (2001) argue that higher bank capital interferes with market discipline and adversely affects the board's incentive to monitor â and therefore impedes performance. Based on this interpretation, this larger gender diversity impact at well-capitalized banks suggests that higher gender diversity may impact bank performance by counteracting the monitoring-reducing impact of better capitalization.
+
+Table 2: The Role of Gender Diversity in Determining Enforcement Actions against US Banks 1999 - 2015
+
+ 
+
+Model
+
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+Measure of Bank Performance
+
+Number of Fed Enforcement Actions
+
+Probability of Fed Enforcement Actions
+
+Probability of "Financial Health" Enforcement Actions
+
+Probability of "Misconduct" Enforcement Actions
+
+Gender Diversity
+
+Blau Index {t-1}
+
+0.126*
+
+			[0.0661]
+
+0.240*
+
+			[0.129]
+
+-0.35
+
+			[0.243]
+
+0.00115
+
+			[0.0812]
+
+Blau Index {t-1} * Risk-Weighted Capital Ratio {t-1}
+
+-0.00867*
+
+			[0.00487]
+
+-0.0145
+
+			[0.00938]
+
+0.0336*
+
+			[0.0192]
+
+-0.000441
+
+			[0.00584]
+
+Blau Index {t-1} * Blau Index {t-1}
+
+-0.00287**
+
+			[0.00140]
+
+-0.00732**
+
+			[0.00323]
+
+0.00485
+
+			[0.00568]
+
+0.000227
+
+			[0.00200]
+
+Blau Index {t-1} * Blau Index {t-1} * Risk-Weighted Capital Ratio {t-1}
+
+0.000155
+
+			[0.000106]
+
+0.000407*
+
+			[0.000242]
+
+-0.000572
+
+			[0.000451]
+
+-0.00000179
+
+			[0.000139]
+
+Bank Characteristics
+
+Acquisition Dummy {t-1}
+
+0.0706
+
+			[0.0496]
+
+-0.0645
+
+			[0.243]
+
+0.366
+
+			[0.306]
+
+0.0539
+
+			[0.178]
+
+Loan to Deposit Ratio {t-1}
+
+0.0571
+
+			[0.212]
+
+-0.427
+
+			[1.136]
+
+-4.803***
+
+			[1.789]
+
+0.0665
+
+			[0.682]
+
+Board Size {t-1}
+
+0.00578
+
+			[0.0115]
+
+-0.151***
+
+			[0.0471]
+
+-0.0841
+
+			[0.0883]
+
+-0.0386
+
+			[0.0318]
+
+Risk-Weighted Capital Ratio {t-1}
+
+0.100*
+
+			[0.0538]
+
+-0.0289
+
+			[0.0714]
+
+-0.418**
+
+			[0.200]
+
+-0.0142
+
+			[0.0543]
+
+Constant
+
+0.0252
+
+			[0.0457]
+
+1.581
+
+			[1.773]
+
+14.28***
+
+			[3.689]
+
+0.21
+
+			[1.520]
+
+Bank Fixed Effects
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Year Fixed Effects
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+737
+
+339
+
+263
+
+586
+
+P-Value of Sargan Test Statistic
+
+--
+
+--
+
+--
+
+--
+
+R-squared
+
+0.02
+
+0.33
+
+0.44
+
+0.23
+
+Marginal effect of a one standard deviation increase in the Blau index, for well-capitalized banks (at the 90th percentile) with low Blau index (at the 10th percentile):
+
+ 
+
+-0.270
+
+0.010
+
+0.360
+
+-0.020
+
+Marginal effect of a one standard deviation increase in the Blau index, for well-capitalized banks (at the 90th percentile) with high Blau index (at the 90th percentile):
+
+ 
+
+-0.470
+
+-0.100
+
+-0.220
+
+0.020
+
+Note: This table shows the results of Instrumental Variables regressions. The dependent variable is various measures of enforcement actions against banks, as indicated at the top of each column. The explanatory variables are as described in the text. The coefficients show the impact of a one-unit increase in the explanatory variable on percentage points changes in banks' performance measure. All regressions contain bank and year fixed effects. The instrumented variable is the Blau Index measure of gender diversity. The set of instuments consists of: the share of independent directors, bank and year fixed effects, and the 1999 (beginning of sample) value of the Blau Index interacted with the year dummies. Robust standard errors in square brackets. *** p<0.01, ** p<0.05, * p<0.1
+
+Of course, in our sample we have several banks that have no enforcement actions over the entire time period. To separate out the effect of gender diversity on the occurrence of an enforcement action vs. the number of enforcement actions, we fit a (discrete) probit model to the probability of any enforcement action against a bank.
+7
+ We find statistically significant evidence that gender diversity reduces the occurrence of any regulatory enforcement action (Column 2). There is a 10 percent reduction in the probability of having any enforcement action for well-capitalized banks when gender diversity rises by one standard deviation.
+
+If we compile data from several bank regulators (Federal Reserve, FDIC, and OCC) we have a sufficient number of regulatory enforcement actions in our sample to be able to take a more nuanced look at the ways in which gender diversity may increase regulatory compliance. We categorize the enforcement actions into two broad groups: those related to 
+misconduct by the bank or affiliated parties
+ (Column 3) and those related to 
+financial health 
+(Column 4). Using probit models, we find that increased gender diversity is associated with significantly lower probabilities of 
+financial health
+ enforcement actions, once a threshold level of board gender diversity is achieved â consistent with our earlier findings on improved bank performance. We find no evidence that higher gender diversity would reduce enforcement actions related to 
+misconduct by the bank or affiliated parties
+.
+
+Throughout, we interpret our results based on the hypothesis that the main benefit of diversity is that it provides multiple perspectives that improve decision-making. Consistent with this hypothesis, when we re-estimate our models interacting each independent variable with a financial crisis period indicator, we find that the effects of gender diversity at well-capitalized banks are much larger during the crisis period.
+
+4. Conclusion
+
+Using a sample of large U.S. banks over the 1999-2015 period, we study the relationship between various measures of bank performance and gender diversity on bank boards. We find that the impact of board gender diversity on bank performance is highly non-linear. We identify "threshold" results, which indicate that the relationship between bank performance and board gender diversity changes directions once banks increase gender diversity on their boards from low to higher levels. Our non-linearity results help shed light on the very wide-ranging findings of previous papers on the role of board gender diversity in bank (and in general, firm) performance. Our findings suggest that banks' continued voluntary expansion of board gender diversity is likely to bring overall performance benefits for well-capitalized (well-managed) banks.
+
+References
+
+Adams, Renee B. and Daniel Ferreira (2009). "Women in the boardroom and their impact on governance and performance," 
+Journal of Financial Economics 
+94, 291-309.
+
+Adams, Renee B. and Hamid Mehran (2012). "Bank board structure and performance: Evidence for large bank holding companies," 
+Journal of Financial Intermediation 
+21, 243-267.
+
+Ahern, Kenneth and Amy K. Dittmar (2012). "The changing of the boards: The impact on firm valuation of mandated female board representation," 
+The Quarterly Journal of Economics 
+127(1), 137-197.
+
+Bear, Stephen, Noushi Rahman and Corrine Post (2010). "The impact of board diversity and gender composition on corporate social responsibility and firm reputation," 
+Journal of Business Ethics 
+97, 207-21.
+
+Berger, Allen N., Thomas Kick and Klaus Schaeck (2014). "Executive board composition and bank risk taking," 
+Journal of Corporate Finance 
+28, 48-65.
+
+Blau, Peter M. (1977). Inequality and heterogeneity. New York, NY: Free Press.
+
+Catalyst (2015). 
+Pyramid: Women in S&P 500 finance
+. New York: January 13.
+
+Croson, Rachel and Uri Gneezy (2009). "Gender differences in preferences," 
+Journal of Economic Literature
+ 47(2), 448-74.
+
+Diamond, Douglas and Raghuram Rajan (2000). "A theory of bank capital," 
+The Journal of Finance
+ 55(6), 2431-65.
+
+Fich, Elizier M. (2005). "Are some outside directors better than others? Evidence from director appointments by Fortune 1000 firms," 
+The Journal of Business 
+78(5), 1943-1972.
+
+Garcia-Meca, Emma, Isabel-Maria Garcia-Sanchez and Jennifer Martinez-Ferrero (2015). "Board diversity and its effects on bank performance: An international analysis," 
+Journal of Banking & Finance 
+53, 202-14.
+
+Gneezy, Uri, Muriel Niederle and Aldo Rustichini (2003). "Performance in competitive environments: Gender differences," 
+Quarterly Journal of Economics
+ 118(3), 1049-74.
+
+Karpowitz, C., & Mendelberg, T. (2014). The Silent Sex: Gender, Deliberation, and Institutions. Princeton University Press.
+
+Mehran, Hamid and Anjan Thakor (2011). "Bank capital and value in the cross-section," 
+Review of Financial Studies 
+24(4)
+, 
+1019-1067.
+
+Mateos de Cabo, Ruth, Ricardo Gimeno and Maria J. Nieto (2012). "Gender diversity on European banks' boards of directors," 
+Journal of Business Ethics 
+109(2), 145-162.
+
+Pathan, Shams (2009). "Strong boards, CEO power and bank risk-taking," 
+Journal of Banking & Finance 
+33, 1340-1350.
+
+Pathan, Shams and Robert Faff (2013). "Does board structure in banks really affect their performance?" 
+Journal of Banking & Finance 
+37(5), 1573-89.
+
+Wang, Taiwei and Carol Hsu (2013). "Board composition and operational risk events at financial institutions," 
+Journal of Banking & Finance
+ (37), 2042-2051.
+
+1. 
+ Temesvary: Division of Monetary Affairs, Federal Reserve Board. Owen: Department of Economics Hamilton College. This note is based on Owen, Ann and Judit Temesvary (2018). "The Performance Effects of Gender Diversity on Bank Boards," 
+Journal of Banking & Finance
+ 90, 50-63. 
+Return to text
+
+2. 
+ Data sources: BoardEx; S&P Global Market Intelligence: Compustat; Center for Research in Security Prices, CRSP 1925 US Stock Database, Wharton Research Data Services; Bureau van Dijk: Orbis Bank Focus. Our sample covers 40 percent of U.S. bank assets. 
+Return to text
+
+3. 
+ This measure is therefore the inverse of the "efficiency ratio" â a common proxy of performance in banking. 
+Return to text
+
+4. 
+ In auxiliary regressions, we use the 
+Female Share of Board
+ as our dependent variable and the 
+Share of Board Members with Post-BA Education
+ to measure managerial quality, and reach similar conclusions. In more complete specifications (shown in the paper), we also control for board demographic traits and experience. 
+Return to text
+
+5. 
+ The 
+Share of Independent Directors
+ is an appropriate instrument because it may be associated with more women on the board if it signals banks' boards being selected from a larger pool of qualified professionals rather than a smaller, internally-generated pool. On average, three-quarters of bank boards are made up of independent directors. 
+Return to text
+
+6. 
+ Croson and Gneezy (2009) conclude that experimental evidence suggests that women are more risk-averse than men, although gender differences in preference for financial risk are smaller among managers than in the general population. In the context of banks, Berger et al (2014) and Wang and Hsu (2013) find a positive tie between risk-taking and gender diversity â perhaps suggesting that gender-diverse boards are stronger, and take more risks (Pathan, 2009). 
+Return to text
+
+7. 
+ We aggregate enforcement actions on individual commercial banks up to the level of the holding company. The sample is smaller since for banks that had no enforcement the bank fixed effect perfectly predicts no occurrence. Enforcement actions related to misconduct by the bank or affiliated parties could result from an employee that has committed an offense. Actions related to financial health may result from a bank failing to implement a plan to address safety concerns. 
+Return to text
+
+Please cite this note as:
+
+Owen, Ann L., and Judit Temesvary (2019). "Gender Diversity on Bank Board of Directors and Performance," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, February 12, 2019, https://doi.org/10.17016/2380-7172.2270.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

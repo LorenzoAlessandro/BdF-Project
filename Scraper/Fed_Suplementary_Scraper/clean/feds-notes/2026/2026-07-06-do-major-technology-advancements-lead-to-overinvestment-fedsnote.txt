@@ -1,0 +1,173 @@
+FEDS Notes
+
+Twitter
+
+July 06, 2026
+
+Do Major Technology Advancements Lead to Overinvestment?
+1
+
+Geng Li
+2
+
+From the era of the Industrial Revolution, industrialized economies were blessed with a number of major technology advancements that profoundly changed production and services in essentially all industries. Because of their universal, far-reaching impacts, such technologies are often referred to as âGeneral Purpose Technologiesâ (GPT).
+3
+The steam engine, the railroad, electricity, electronic computing, and IT are some well-known examples of GPT (Jovanovic and Rousseau, 2005; Bresnahan, 2010). In recent years, artificial intelligence (AI) has been widely discussed as the next potential major GPT advancement (see, for example, Baily et al. 2025). In history, while GPT had vastly increased productivity in the economy, many of them were also associated with significant overinvestment and massive capital overhang. For example, both the railroad and canal expansions in the 19th century ended with substantial overcapacity (Conant, 1964; Atack and Passell, 1994).
+
+Li (2007) introduced an embodied technology model with technology advancements of unknown magnitudes. This note summarizes its key features and argues that the model, motivated by the IT boom and bust, may shed light on investment dynamics in the Artificial Intelligence (AI) era. This model predicts that a major technology breakthrough (
+a la
+GPT) can induce a lasting investment boom and productivity gains. However, for certain prior beliefs on the technology shock distribution, the boom may come to an end with the cost of overinvestment. The model is fully rational and forward looking, with optimal investment choices taking into account the risk of overinvestment.
+
+1. A Model of Embodied Technology
+
+Solow (1959) introduced the seminal idea of embodied technologyâwithout new capital being invested, new technology cannot increase productivity by itself. The main innovation of our model relative to the Solow model is that, instead of only the capital installed following the advent of new technology enjoying higher productivity, we assume that the new technology raises the productivity of capital of all vintages as more new capital has been installed. We argue that this assumption is particularly relevant following the arrival of a GPT.
+
+Specifically, assume an economy is at the steady state in time $$t_{0}$$ with a production function, $$Y_{0} = K_{t}^{\alpha }$$, when a technological progress of magnitude $$A > 1$$ takes place. The production function following the technological progress is assumed to be:
+
+$$$$ Y_{t} = \begin{cases} \Psi (K_{t}) \times K_{t}^\alpha\ & if\ K_{t} < K^*\\ AK_{t}^\alpha & \ if K_{t} \geq K^*, \\ \end{cases}\ (1) $$$$
+
+where $$\Psi$$, the level of effective productivity, is an increasing function of newly installed capital relative to $$K_{0}$$ and is bounded by $$A$$. $$K_{t} = K_{new, t} + K_{0}$$ is the combined stock of new and old capital, and $$K^{*} = K^{*}_{new, t}+ K_{0}$$ reflects the level of capital required to fully embody the new technology.
+4
+
+If we assume
+
+$$$$ \Psi (K_{t}) = \Bigl(\frac{K_{t}}{K_{0}}\Bigr)^{1-\alpha} = \Bigl(\frac{K_{new,t} + K_{0}}{K_{0}}\Bigr)^{1-\alpha}\ (2) $$$$
+
+then the production function has the property that the minimum amount of new capital required to completely embody the new technology is the steady state level of capital and, relatedly, the model shares the same steady state levels of output and capital as a standard neoclassical growth model for any level of $$A$$. The production function can be then rewritten as
+
+$$$$ Y_{t} = \begin{cases} K_{0}^{\alpha-1}\ K_{t} &\ if\ K_{t} < K^{*}(A)\\ AK_{t}^{\alpha} &\ if\ K_{t} \geq K^{*}(A),\\ \end{cases}\ (3) $$$$
+
+recognizing that before capital stock reaches the sufficient, steady state level $$K^{*}(A)$$, output is linear of $$K_{t}$$, resembling the so-called $$AK$$ models.
+5
+
+The transition from lower to higher productivity through accumulating new capital is illustrated in figure 1. Thus, during the phase of installing new capital, the marginal productivity of new capital is higher than at the steady state because the new capital has the additional role of embodying the new technology.
+
+Figure 1. Production Transition with New Capital Accumulation
+
+Accessible version
+
+2. Invest with Unknown Magnitude of $$A$$âLearning by Investing
+
+Another key feature of the model is the lack of perfect knowledge of the magnitude of technological progress. Investors know only the distribution of technological advances, but not exactly how big $$A$$ is. They learn sequentially by investing and assessing if they have reached $$K^{*}$$ as follows.
+
+$$$$ Y_{t} = \begin{cases} Y_{t} = \Psi (K_{t}) \times K_{t}^\alpha\ & \Longrightarrow \ A > \Psi (K_{t})\\ Y_{t} < \Psi (K_{t}) \times K_{t}^\alpha & \Longrightarrow A = Y_{t} / K_{t}^{\alpha}\\ \end{cases}\ (4) $$$$
+
+Let $$\Phi (A)$$ and $$\phi (A)$$ be the CDF and PDF functions of the technological progress distribution respectively, in the scenarios of $$A > \Psi (K_{t})$$, the conditional distribution will be updated to $$ \frac{\phi (A)}{1-\Phi [\Psi (K_{t})]} $$.
+
+Because the magnitude of $$A$$ is unknown, the amount of new capital installed in the economy may undershoot the required level of taking full advantage of the new technology immediately. In such a scenario, investors update their belief about the magnitude of $$A$$ based on the conditional distribution and choose the amount of investment in the next period. Such a process may evolve as future investment decelerates or accelerates. If investment accelerates, the economy experiences an investment boom that eventually overshoots the required capital stock $$K^{*} (A)$$. Too much capital pushes its marginal product $$(\alpha A K_{t}^{\alpha-1})$$ to levels lower than market interest rates, resulting in an excessive stock of capital. Such an uncertainty and learning structure is similar to the model considered in Zeira (1987, 1999).
+
+Intuitively, to a large extent, whether investment accelerates depends on if investors' belief turns increasingly optimistic.
+6
+Li (2007) characterizes the following
+sufficient
+condition concerning the perceived probability distribution of the underlying technology shock for accelerating investment:
+
+$$$$\frac{H(\gamma A)}{H(A)} < \frac{1}{\gamma}\textit{,}\ \forall\ A\ and\ \gamma > 1\ (5)$$$$
+
+where $$H(A)$$, defined as $$\frac{\phi(A)}{1-\Phi(A)}$$, is the hazard rate function of the distribution $$ \Phi(A) $$. This sufficient condition states that if the hazard rate declines more rapidly than the growth of the underlying random variable itself in a proportional sense, optimal investment accelerates over time (until it hits or overshoots $$K^{*}$$).
+7
+We also note that, while this model has a stylized representative-firm setup, an economy-wide investment boom can take place with multiple firms if they engage in a âwinner takes allâ type of competition and all firms race to the top, which more closely resembles the landscape of the competition among AI firms.
+
+3. Technology-Driven Investment Booms
+
+A prominent example of such a technology-driven investment boom in recent history is the IT boom and bust. As shown in figure 2, during the 1990s U.S. intellectual property (IP) and equipment investment share in GDP surged to 11.5 percent in 2000.
+8
+
+The rising investment share is broadly consistent with the dynamics implied by the model introduced above. Throughout the 1990s, as IT continued to transform the economyâmanufacturing, services, entertainment, education, and many other areas not conceived beforeâpeople's expectations on the potential of IT grew increasingly more optimistic, which in turn fueled investment to race higher. However, by the early 2000s, the boom ended with a large scale of unproductive capital, such as the "dark fiber" installed during the boom.
+
+Figure 2. IP and Equipment Investment Share in GDP
+
+Source: Bureau of Economic Analysis. Annual data through 2025 and quarterly for 2026:Q1.
+
+Accessible version
+
+From the perspective of the model, the risk of overinvestment has been taken into account in the formulation of optimal investment. In this sense, overinvestment is not a mistake caused by irrational exuberance over the new technology. Rather, it reflects the magnitude of the underlying advancement, after exceeding expectations earlier during the investment cycle, eventually underwhelming the increasingly optimistic expectations in a rational, forward-looking settingâsubject to investors' belief about the technology shock distribution being consistent with the true distribution.
+9
+
+After fluctuating within a relatively narrow range over the previous ten years, this share turned sharply higher in 2025 and, as of the first quarter of 2026, was about 0.8 percentage points higher than the level of 2024, only a touch lower than the year 2000 peak. A large part of the recent investment boom has been AI-driven, and the pace of IP and equipment investment acceleration relative to GDP growth has been comparable to that seen during the 1990s, but this time starting at a much higher base level.
+
+As implied by the model, in order to drive a sustained investment boom, the technology advancement has to be sufficiently largeâenough to repeatedly beat investor expectations, and the same criterion applies to AI. Will the economy witness another episode of lasting investment boom if various sectors and industries begin and continue to reap sizable productivity gains associated with AI? Perhaps. If there is such an investment boom, will it end with a significant overinvestment and capital overhang? Possibly. Should such investment therefore be preemptively curbed to avoid overinvestment? Not necessarily.
+
+References
+
+Atack, Jeremy and Peter Passell,
+A New Economic View of American History from Colonial Times to 1940
+, W.W. Norton & Company, New York, New York., 1994.
+
+Baily, Martin Neil, David M. Byrne, Aidan T. Kane, and Paul E. Soto. "Generative AI at the Crossroads: Light Bulb, Dynamo, or Microscope?,"
+Finance and Economics Discussion Series 2025-053
+. Washington: Board of Governors of the Federal Reserve System.
+
+Bresnahan, Timothy, "General Purpose Technologies,"
+Handbook of Economics of Innovation, vol. 2
+, 2010, pp. 761â91.
+
+Conant, Michael,
+Railroad Mergers and Abandonments
+, University of California Press: Berkely and Los Angeles, California., 1964.
+
+Jovanovic, Boyan and Peter Rousseau, "General Purpose Technologies,"
+Handbook of Economic Growth, vol. 1
+, 2005, pp. 1181â224.
+
+Li, Geng, "Learning by Investing: Embodied Technology and Business Cycles,"
+Federal Reserve Finance and Economics Discussion Series
+, 2007, (2007-15).
+
+McGrattan, Ellen, "A Defense of AK Growth Models,"
+Federal Reserve Bank of Minneapolis Quarterly
+, 1998,
+22
+, 13â27.
+
+Solow, Robert, "Investment and Technological Progress," in S. Karlin K. J. Arrow and P. Suppes, eds.,
+Stanford Symposium on Mathematical Methods in the Social Sciences
+, Stanford University Press, Stanford, California, 1959.
+
+Zeira, Joseph, "Investment as a Process of Search,"
+Journal of Political Economy
+, 1987,
+95
+(1), 204â10.
+
+â, "Informational overshooting, booms, and crashes,"
+Journal of Monetary Economics
+, 1999,
+43
+(1), 237â57.
+
+1. The views in this note are those of the authors and do not necessarily reflect those of the Federal Reserve Board or its staff. This note draws on the main ideas of the first chapter of my University of Michigan dissertation many years ago, which was released in the FEDS working paper series (2007-15). All acknowledgements therein apply here.
+Return to text
+
+2. Federal Reserve Board, Washington, DC 20551. E-mail:
+[email protected]
+.
+Return to text
+
+3. Not to be confused with Generative Pre-trained Transformer, the acronym of which is also GPT (e.g. ChatGPT).
+Return to text
+
+4. For simplicity, we assume zero capital depreciation to ensure that new capital does not become excessive because old capital depreciates.
+Return to text
+
+5. See, for example, McGrattan (1998) for a detailed discussion of the $$AK$$ model.
+Return to text
+
+6. Investment is also affected by market interest rates, which can be endogenous to the rate of investment in a closed economy.
+Return to text
+
+7. An example of the distributions that satisfy the sufficient condition is the so-called truncated Cauchy distribution, $$\phi (A) = \frac{2}{\pi [ 1+(A-1)^{2}]}\textit{,}\ A\ \epsilon (1, \infty)$$ .
+Return to text
+
+8. Around that time, business leaders and policy makers raised concerns about the risk of overinvestment. See Li (2007) for examples of such comments.
+Return to text
+
+9. In a quantitative example, Li (2007) shows that a sufficiently large technology shock in a closed economy with risk-averse consumers is capable of generating a lasting investment and output boom of nine years before overshooting.
+Return to text
+
+Please cite this note as:
+
+Li, Geng (2025). "Do Major Technology Advancements Lead to Overinvestment?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 06, 2026, https://doi.org/10.17016/2380-7172.3714.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

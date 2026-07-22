@@ -1,0 +1,347 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+December 31, 2024
+
+Cross-border venture capital and reverse technology flows
+1
+
+Ufuk Akcigit, 
+Sina T. Ates
+, Josh Lerner, Rick Townsend, and Yulia Zhestkova
+
+Over the past decade, a salient feature of the U.S. entrepreneurship has been the growing extent of foreign venture investments in Silicon Valley, particularly from Chinese corporations, individuals, and financial institutions. This trend has raised concerns in the U.S in light of the evidence that suggests these investments are often in critical areas, such as artificial intelligence, fintech, robotics, and virtual reality.
+2
+ Particular attention centered around venture investments by foreign corporations since these investors could be seen as gaining and exploiting insights from their interactions with the companies in their portfolios (through, for instance, board observer roles). Figure 1 demonstrates the increase in these investments and the dramatic rise in the share of flows from China more recently.
+3
+ In this note, we present new empirical findings from our recent research (Akcigit et al., 2024) on the cross-border corporate venture capital (CVC) investments into U.S. startups with a special look at investments from China and the associated technology spillovers to foreign firms.
+
+Figure 1. Foreign CVC as a share of all U.S. venture capital investment and Chinese share
+
+Accessible version
+
+The attention of academic economists to these issues has been very limited. While academic work has scrutinized numerous aspects of entrepreneurial finance, such as the mixture of securities employed (Kaplan and Stromberg, 2002) and the consequences of intensive monitoring by investors, the impact of cross-border capital flows on technology transfer have received almost no attention. The focus of the few examples has exclusively been the performance of the country that is the recipient of the financing (e.g., Alfaro et al., 2004), with some recent prominent examples establishing a causal link between foreign direct investment and the productivity of the recipient firm (Fons-Rosen et al., 2021) or other foreign firms in the same sector (or in upstream sectors) that benefit from knowledge spillovers (Fons-Rosen et al., 2017). However, the technology transfer to the country providing cross-border funds has remained largely unexplored. Nor has this been a major focus of works on trade and innovation.
+4
+ Our recent work (2024) seeks to address this gap, examining foreign corporate investment in Silicon Valley from a theoretical and empirical perspective.
+
+The empirical investigation focuses on the determinants of cross-border CVC flows and the potential knowledge spillovers to foreign firmsâthose providing the financing and peers that invest in similar technologies as determined by their patenting activityâthese investments can facilitate. We begin by acknowledging that the analysis here presents correlations rather than casual relationships. Identifying exogenous shifts in foreign corporate investments that are uncorrelated with key dependent variables is exceedingly difficult. Thus, the results from the correlations must be interpreted more as suggestive that the trade-offs illustrated in the theoretical model examined in Akcigit et al. (2024) could be at play.
+
+For the empirical analysis of CVC investment and subsequent innovation and technology dynamics, we build a dataset of venture investments that includes as comprehensive as possible a sample of investments by non-U.S. corporate investors in U.S. startups. We identify transactions involving 344 investing companies from 32 countries between 1976 and 2015. From the databases maintained by the United States Patent and Trademark Office, we identify the patents of the startup firms, as well as those registered by the corporate investors specifically and by the residents of the countries in which they are based. The data also covers citations these patents give to each other, and other patents registered in the United States. The citation patterns provide useful information to track the direction of knowledge flows (spillovers).
+
+We begin by exploring the technological determinants of cross-border startup investments. Utilizing information on investment flows between countries in different patent classes over four decades, we investigate whether foreign entities tend to make these investments in technological areas where their country is behind relative to the U.S., or in areas where their country already has expertise relative to the U.S. To address this question, we regress a country 
+f'
+s investments in U.S. startups that specialize in technology class 
+c 
+during year 
+t
+ on country 
+f
+'s relative knowledge in that class.
+5
+ Relying on the patent data maintained by the USPTO, we measure the relative knowledge as the ratio of patents in technology class 
+c
+ registered by entities from 
+f
+ in the U.S. to the sum of those patents and the ones registered by the U.S. entities. This measure provides a proxy for the technology gap between country 
+f
+ and the U.S. in the specific technology class 
+c
+âthe ratio increases as patenting in country 
+f 
+(registered in the U.S.) â which measures the rate of new technology creation â rises relative to the U.S., meaning that the technology gap relative to the U.S. shrinks.
+
+The results are shown in Table 1. In columns 1 and 2, the measure of investment is simply an indicator variable equal to one if, during year 
+t
+, corporations in country 
+f 
+made any investments in U.S. startups that had patent applications in class 
+c
+. We find that as a country increases its knowledge of a technology class relative to the U.S., it also becomes less likely to invest in a U.S. startup innovating in that technology class. In columns 3â4, the measure of investment is a continuous variableâthe share of country 
+f'
+s investments in U.S. startups during year 
+t 
+that were allocated to patent class 
+c
+. The results are qualitatively similar. Overall, these results show that foreign countries tend to invest in U.S. startups that specialize in technological areas where they are behind the U.S., and these investments appear to be strategic 'responses' to address the technology gap, at least partially.
+
+Table 1. Relative technology and foreign CVC investment
+
+ 
+
+$$$$ \mathbf{1} \{\text{Investment}_{t}\} $$$$
+
+$$$$\text{Investment Share}_{t} $$$$
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+$$$$ \text{Relative Knowledge}_{f,c,t} $$$$
+
+-0.103***
+
+-0.173***
+
+-0.0043**
+
+-0.0051**
+
+(0.039)
+
+(0.046)
+
+(0.0017)
+
+(0.0021)
+
+$$$$ \text{Relative Knowledge}_{f,c,t-1} $$$$
+
+ 
+
+-0.089
+
+ 
+
+-0.0007
+
+ 
+
+(0.092)
+
+ 
+
+(0.0046)
+
+$$$$ \text{Relative Knowledge}_{f,c,t-2} $$$$
+
+ 
+
+0.137
+
+ 
+
+0.0002
+
+Country FE
+
+Yes
+
+(0.140) Yes
+
+Yes
+
+(0.0059) Yes
+
+Year FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+R-squared
+
+0.040
+
+0.040
+
+0.002
+
+0.005
+
+Observations
+
+71,646
+
+56,108
+
+71,646
+
+56,108
+
+Note: This table examines how investments by corporations based in a foreign nation in U.S. startups in that technology reflects the relative knowledge of that nation. Observations are at the patent class by country by year level. In the first two columns, the dependent variable is an indicator of whether at least one corporate venture capital program from country 
+f 
+invested in U.S. startups that innovate in a technology class 
+c 
+in year 
+t
+. In the last two columns, the dependent variable is the share of investments in U.S. startups that innovate in a technology class 
+c 
+in year 
+t 
+by CVC firms from a country 
+f 
+relative to all investments in U.S. startups by CVCs from 
+f 
+in year 
+t
+. Relative knowledge
+ 
+is a ratio with a numerator equal to number of successful (ultimately granted) patent applications submitted by foreign assignees from country 
+f 
+in technology class 
+c 
+before the investment event at 
+t
+. The denominator is the sum of all successful patent applications submitted by foreign assignees from 
+f and 
+from the U.S. in technology class 
+c 
+before year 
+t
+. First and second lags look at this variable one year and two years before the investment event correspondingly. Patent classes are defined using the United States patent classification scheme. Robust standard errors in parentheses clustered on year and country levels. *** p
+<
+0.01, ** p
+<
+0.05, * p
+<
+0.1
+
+Next, we seek to understand whether the cross-border investments into U.S. startups foster innovation and knowledge spillovers back to the financing country. To do so, we look at how a foreign country's innovation in a technology class evolves after entities there invest in a U.S. startup specializing in that technology. In particular, we examine patenting and citation activity before and after the corporate investment. To be sure, it is difficult to estimate the causal effect of a country's cross-border startup investments on its own innovation, as cross-border startup investments are endogenous.
+6
+ To address such endogeneity concerns as effectively as possible, we use a difference-in-differences approach. Specifically, we focus on the period surrounding a country's first investment in a U.S. startup specializing in a particular technology class. We then compare changes in the country's innovative activity in that "treated" technology class to changes in the same country's innovative activity in a similar "control" technology class in which it never invested.
+7
+
+Defining treatment and control technology classes for a country, we estimate difference-in-differences specifications comparing patenting behavior in the treated and control classes in the post-investment period.
+8
+ The regression results (not shown) demonstrate that around the time of investment, patent applications by entities in the country in which the investor is based increase in the patent classes that the startup focuses on (17% relative to the control group in the baseline specification). Applying a similar specification to patent citations, we find that after the event of a corporate investment in a U.S. startup with a patent in a particular patent class, countries increase their citations to patents in that class (31% relative to their citations to the patents in the control group in the baseline specification).
+
+Providing a more detailed account of the findings obtained from the preceding analysis, Figure 2 shows the dynamic effects of foreign CVC investment estimating it year by year.
+9
+ In each of the five years following the investment, activity in the treatment class is significantly higher than in the control class both in patenting (Figure 2a) and citations to the U.S. startups (Figure 2b). The results suggest that there are benefits from these investments in the form of knowledge creation and spillovers back to the financing country. Thus, the patterns are consistent with the idea that investing countries learn from U.S. startup investments.
+10
+ Follow-on analysis (not shown) also brings out that investing foreign firms increase their citations to the patents of the U.S. startups in which they invest after the investment event, providing more direct evidence of learning for the investing firm itself. Overall, the results indicate that both the investing firm and also other firms from the investing country sharing the same technology benefit from increased spillovers following an investment event.
+
+Figure 2. Dynamic effects of foreign CVC investment into U.S. startups
+
+Accessible version
+
+Given the intense debates surrounding China's economic advancements, a natural follow-up question is the impact of investments by Chinese corporates.
+11
+ Figure 3 shows the results of the same analysis that only looks at the subsample of Chinese investments in the U.S. This analysis reveals that similar effects are not only present in the Chinese subsample, but that the spillovers are particularly dramatic when it comes to Chinese investments in Silicon Valley, as seen from the estimated coefficients.
+
+Figure 3. Dynamic effects of Chinese CVC investment into U.S. startups
+
+Accessible version
+
+The above results regarding spillovers are also heterogeneous in the nature of technology with which investing firms operate. In particular, we examine whether the results systematically differ in patent classes that rely more on basic research, where learning from and catching up to the technological frontier without the benefit of the insights gained through a corporate venture investment is likely to be harder. According to the National Science Foundation, basic research is a systematic study directed toward greater knowledge or understanding of the fundamental aspects of phenomena and of observable facts without specific applications towards processes or products in mind. In technology classes that are more reliant on such knowledge, spillovers could be expected to be stronger. Figure 4 illustrates that this conjecture is indeed true, as the effects are found to be larger in high-basicness classes.
+12
+ Similarly, knowledge flows appear to be greater in classes that contain patents subject to a secrecy order from the federal government. These patterns of patenting and citations suggest the real knowledge transfer is taking place, and cross-border investments are a means to access that knowledge.
+
+Figure 4. Dynamic effects of foreign CVC investment and technology class basicness
+
+Accessible version
+
+Finally, we examine the consequences of these investments. While we cannot demonstrate causality directly, more foreign investments in firms specializing in a technology class are associated with greater subsequent patenting by U.S. startups in this class. These results are at least consistent with the idea that such investments ease capital constraints for the recipient firms, as hypothesized in Akcigit et al. (2024). As such, our empirical analysis reveals that foreign CVC investments constitute another mode of technology transfer between countries, with the recipient firms of these investments also benefiting from them in terms of additional capital.
+
+Data Note and Disclaimer
+
+Data on VC investments were obtained from the Refinitiv VentureXpert database (formerly, Thomson Reuters VentureXpert and Venture Economics). We complement these data with additional sources such as CVCs compiled by Global Corporate Venturing, CB Insights, Crunchbase, and using media reports and filings with the U.S. Securities and Exchange Commission. Access to these data was obtained by Josh Lerner under the purview of Harvard Business School licenses. The remaining co-authors, Ufuk Akcigit, Sina T. Ates, Rick Townsend, and Yulia Zhestkova
+,
+ did not have any unauthorized access to this data while working on this paper/project.
+
+References
+
+Akcigit, U., Ates, S. T., Lerner, J., Townsend, R., Zhestkova, Y. (2024). "Fencing off Silicon Valley: cross-border venture capital and technology spillovers." 
+Journal of Monetary Economics
+, Carnegie-Rochester Conference Series on Public Policy, 141: 14-39.
+
+Alfaro, L., Chanda, A., Kalemli-Ozcan, S., and Sayek, S. (2004). "FDI and economic growth: the role of local financial markets." 
+Journal of International Economics
+, 64(1):89â112.
+
+Brown, M. and Singh, P. (2018). "China's technology transfer strategy: How Chinese investments in emerging technology enable a strategic competitor to access the crown jewels of U.S. innovation." Technical report, Defense Innovation Unit Experimental
+
+Fons-Rosen, C., Kalemli-Ozcan, S., Sorensen, B. E., Villegas-Sanchez, C., and Volosovych, V. (2017). "Foreign investment and domestic productivity: Identifying knowledge spillovers and competition effects." National Bureau of Economic Research Working Paper 23643.
+
+Fons-Rosen, C., Kalemli-Ozcan, S., Sorensen, B. E., Villegas-Sanchez, C., and Volosovych, V. (2021). "Quantifying productivity gains from foreign investment." 
+Journal of International Economics
+, 131:103456.
+
+Hanemann, T., Rosen, D. H., Witzke, M., Bennion, S., and Smith, E. (2021). "Two-way street: 2021 update U.S.-China investment trends." 
+Rhodium Group and National Committee on U.S.-China Relations. New York, NY.
+
+Kaplan, S. N., Stromberg, P., and Sensoy, B. A. (2002). "How well do venture capital databases reflect actual investments?" 
+Unpublished Working Paper
+.
+
+Klein, J. X. (2018). "It's not just the U.S.: Around the world, doors are shutting on Chinese investment." 
+Southern China Morning Post
+, September 13.
+
+Shu, P. and Steinwender, C. (2019). "The impact of trade liberalization on firm productivity and innovation." 
+Innovation Policy and the Economy
+, 19(1):39â68.
+
+U.S. House, Permanent Select Committee on Intelligence (2018). "China's threat to American government and private sector research and innovation." 
+115th Congress
+.
+
+U.S. Senate, Committee on Banking, Housing, and Urban Affairs (2018). "CFIUS reform: Administration perspectives on the essential elements." 
+115th Congress
+.
+
+1. Ufuk Akcigit (
+[email protected]
+) is Arnold C. Harberger Professor of economics at the University of Chicago, Sina T. Ates (
+[email protected]
+) is a Principal Economist in the Division of International Finance of the Federal Reserve Board of Governors, Josh Lerner (
+[email protected]
+) is Jacob H. Schiff Professor of investment banking at Harvard Business School, Richard Townsend (
+[email protected]
+) is an Associate Professor of Finance at the University of California San Diego, and Yulia Zhestkova is a strategist at Goldman Sachs. We thank Shaghil Ahmed for his comments. The views expressed are solely the responsibility of the authors and should not be interpreted as reflecting the views of the Board of Governors of the Federal Reserve System or of any other person associated with the Federal Reserve System. 
+Return to text
+
+2. Brown and Singh (2018) highlight, for instance, Alibaba's and Enjoyor's investment in Magic Leap, Baidu's purchase of shares in Velodyne, and Lenovo and Tencent's investments in Meta. Several classified and unclassified reports (see, for instance, U.S. House, Permanent Select Committee on Intelligence, 2018; and U.S. Senate, Committee on Banking, Housing, and Urban Affairs, 2018) have documented investments that led to technology flows detrimental to U.S. economic and military interests. 
+Return to text
+
+3. All figure and table notes are presented at the end of the text. 
+Return to text
+
+4. Shu and Steinwender (2019), who review of the theoretical and empirical economics literature studying the link between trade liberalization and firms' innovation-related outcomes, highlight that there has been virtually no literature looking at the consequences of foreign competition for inputs such as R&D and early-stage innovation. 
+Return to text
+
+5. The specification includes country and year fixed effects. 
+Return to text
+
+6. Technology classes may experience shocks that lead foreign entities to try to innovate in those classes and also to invest in U.S. startups innovating in those classes. Thus, even absent any learning, there may be a positive correlation between a country's cross-border investments in a technology class and its own innovations in that class. 
+Return to text
+
+7. We match treated classes to control classes based on two measures of innovative activity in a class during the five years prior to investment: (1) the country's annual number of (eventually granted) patent applications in the class, and (2) the country's annual number of citations to patents in the class. 
+Return to text
+
+8. Difference in differences is a statistical technique that utilizes longitudinal data from treatment and control groups to obtain an appropriate counterfactual to estimate the causal effect of a specific intervention or treatmentâthe differential effect of a treatment on a "treatment group" versus a "control group" in a natural experiment. It calculates the effect of a treatment (i.e., an explanatory variable or an independent variable) on an outcome (i.e., a response variable or dependent variable) by comparing the average change over time in the outcome variable for the treatment group (the sample that is subject to the treatment) to the average change over time for the control group (the sample that does not receive such treatment). The specifications discussed here include country-class and year fixed effects. 
+Return to text
+
+9. Figure 2 also demonstrates that in the five years leading up to a U.S. startup investment, there is no significant difference between a country's patenting (citations) in the treatment and control classes. 
+Return to text
+
+10. To further address the endogeneity issue, we entertain an alternative control group in the same technology class. Specifically, rather than comparing activity in treated classes to activity in different control classes within the same country, we instead compare activity in treated classes to activity in the same classes within a different control country that did not invest, based on similar matching criteria as before. The results are similar. 
+Return to text
+
+11. Chinese corporate venture investments in U.S. startups are a relatively recent phenomenon. Thus, the number of such investments in the sample are relatively modest and the investment activities quite recent. 
+Return to text
+
+12. We maintain that a technology (patent) class is more basic if patents in that class cite academic publications more, with the hypothesis that such patents rely on scientific discoveries inside academia and thus are more likely to contain complex and fundamental innovations than patents that do not cite academic articles. High-basicness classes are those that are above median in the basicness measure. 
+Return to text
+
+Please cite this note as:
+
+Akcigit, Ufuk, Sina Ates, Josh Lerner, Rick Townsend, and Yulia Zhestkova (2024). "Cross-border venture capital and reverse technology flows," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, December 31, 2024, https://doi.org/10.17016/2380-7172.3501.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

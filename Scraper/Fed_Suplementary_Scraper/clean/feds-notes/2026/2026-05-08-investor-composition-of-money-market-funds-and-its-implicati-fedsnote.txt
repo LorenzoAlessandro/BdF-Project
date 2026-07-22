@@ -1,0 +1,538 @@
+FEDS Notes
+
+Twitter
+
+May 08, 2026
+
+Investor Composition of Money Market Funds and Its Implications for Flow Dynamics
+
+Yi Li
+, Nick Panetta, and Weston Watts
+
+1. Introduction
+
+Money market funds (MMFs) play a critical role in supplying short-term funding to corporations, banks, and governments. While existing research has made substantial progress in understanding MMF portfolio choices and investor flows, little is known about the composition of MMFs' institutional investors. In this FEDS Note, we use newly available data to provide an overview of MMFs' investor composition and examine how it relates to funds' portfolio characteristics and flow dynamics. We find that when banks are the dominant investors, MMFs tend to experience more volatile flows and a higher likelihood of large outflows. Consistent with this pattern, MMFs with banks as principal investors hold more liquid and lower-risk portfolios. Although our methodology does not attempt to establish causality, the results suggest that MMFs respond to investor behavior and manage portfolio risk in an integrated manner.
+
+2. Data and summary statistics
+
+MMFs must file Securities and Exchange Commission (SEC) Form N-MFP each month.
+1
+Beginning in June 2024, the SEC required institutional prime MMFs to disclose a breakdown of their investor composition by type. The new data on investor types, which is reported for each of a fund's share classes, complements Form N-MFP data that have been collected for many years, including granular security-level holdings and liquidity metrics. In combination, these data allow us to link investor composition to a fund's portfolio exposures, risk profiles, and liquidity management. In addition, we use daily flow information to construct measures of investor flow dynamics, which enables us to examine whether investor composition has a potential influence on flow behavior.
+
+Our sample spans June 2024 through August 2025. We conduct the analysis at the share-class level rather than the aggregate fund level, since different share classes often target distinct investor segments and may exhibit materially different flow dynamics. We focus on institutional prime MMFs that are publicly offered and that consistently file N-MFP reports throughout the sample period. Funds that were liquidated, converted, or merged with another fund prior to the implementation of SEC reforms in October 2024 are excluded to maintain a consistent panel.
+2
+The final sample includes 32 share classes from 8 institutional prime funds.
+3
+
+Form N-MFP requires funds to classify investors in each share class into 12 categories.
+4
+We consolidate these into four groups: Dealer (broker/dealers), Bank (depository institutions), Firm (nonfinancial firms), and Other (all remaining types). As shown in Figure 1, over our sample period, Dealer and Bank each account for roughly 30% of investments in institutional prime MMFs, while Firm and Other each contribute about 20%.
+
+Figure 1. Composition of Investors in Institutional Prime MMFs
+
+Note: "Bank" = depository institutions; "Dealer" = broker/dealers; "Firm" = nonfinancial firms; "Other" includes registered investment companies, insurance companies, municipalities, nonprofits, pension funds, private funds, sovereign funds, and "other investors" as reported in Form N-MFP. The legend identifies series in order from top to bottom.
+
+Accessible version
+
+We then define four dummy variables (
+Dealer
+,
+Bank
+,
+Firm
+, and
+Other
+) to indicate the principal-investor type for each share class. Specifically, $$Dealer_{i,t}$$ equals 1 if dealers provide more than 50% of the investments in share class $$i$$ in month $$t$$, and 0 otherwise. The other indicators are defined analogously. By construction, at most one principal-investor indicator can equal 1 for a given share class in a given month.
+
+Table 1 reports the summary statistics for these principal-investor indicators based on the share classâmonth panel. Across share classes, there is a 23% probability that dealers are the principal investor, a 26% probability that banks are the principal investor, and an 11% probability that nonfinancial firms are the principal investor. For 19% of share classes, no single investor type accounts for more than half of total investments.
+
+Table 1. Summary Statistics for Principal-Investor Indicators
+
+Variable
+
+N
+
+Mean
+
+St. Dev
+
+25th pctl.
+
+Median
+
+75th pctl.
+
+Dealer
+
+464
+
+0.23
+
+0.42
+
+0
+
+0
+
+0
+
+Bank
+
+464
+
+0.26
+
+0.44
+
+0
+
+0
+
+1
+
+Firms
+
+464
+
+0.11
+
+0.31
+
+0
+
+0
+
+0
+
+Other
+
+464
+
+0.21
+
+0.41
+
+0
+
+0
+
+0
+
+3. Investor type and fund characteristics
+
+We next examine how investor types relate to key fund characteristics. Different types of investors may have distinct preferences for liquidity and risk-taking. These preferences may influence investors' allocation decisions across MMFs as well as how fund managers adjust fund characteristics to attract and respond to specific investor bases. Rather than attempting to establish causality, we examine the associations between investor composition and fund characteristics, including size, liquidity condition, and risk profiles.
+
+Specifically, we use weekly liquid assets (WLA) and weighted-average maturity (WAM) to capture funds' portfolio liquidity (with longer maturity indicating lower liquidity), and the cross-sectional percentile ranking of gross yield and the share of risky assets to proxy for risk-taking.
+5
+Table 2 provides summary statistics for these fund characteristics at the share class-month level.
+
+Table 2. Summary Statistics for Fund Characteristics
+
+Variable
+
+N
+
+Mean
+
+S.D.
+
+25th pctl.
+
+Median
+
+75th pctl.
+
+AUM, $bn
+
+464
+
+4.77
+
+9.33
+
+0.01
+
+0.59
+
+2.94
+
+WLA, in percent
+
+464
+
+60.6
+
+14.9
+
+52.2
+
+55.8
+
+58.8
+
+WAM, in days
+
+464
+
+56.1
+
+24.6
+
+52.3
+
+63.1
+
+71.7
+
+Gross yield, in percent
+
+442
+
+4.88
+
+0.4
+
+4.54
+
+4.64
+
+5.45
+
+Risky share, in percent
+
+463
+
+54.1
+
+16.3
+
+41.3
+
+58.4
+
+69.7
+
+To provide a simple illustration of the relationship between investor base and fund portfolio choices, we sort MMF share classes over the sample period into groups based on their principal-investor type and plot the average levels of liquidity and risk measures for each group.
+
+Figure 2 shows that, relative to other institutional prime MMFs, funds dominated by bank investors hold higher levels of weekly liquid assets and maintain shorter weighted average maturities on average. Based on a similar methodology, Figure 3 shows that funds dominated by bank investors earn lower average gross yields and hold fewer risky assets relative to their peers.
+
+Figure 2. Principal-Investor Type and MMF Liquidity
+
+Note: "Bank" is defined as the principal-investor type if banks account for more than 50% of a share class's investments; other principal-investor types are defined analogously. "None" indicates that no single investor type accounts for more than half of total investments.
+
+Accessible version
+
+Figure 3. Principal-Investor Type and Portfolio Riskiness
+
+Note: "Bank" is defined as the principal-investor type if banks account for more than 50% of a share class's investments; other principal-investor types are defined analogously. "None" indicates that no single investor type accounts for more than half of total investments.
+
+Accessible version
+
+Next, to systematically quantify these relationships and account for common time effects and other confounding factors, we run contemporaneous panel regressions of fund characteristics on principal-investor indicators:
+
+$$$$ {Fund\ Charateristics}_{i,t}=\alpha+\beta_{Dealer}\times Dealer_{i,t}+\beta_{Bank}\times Bank_{i,t}+\beta_{Firm}\times Firm_{i,t}+\beta_{Other}\times Other_{i,t}+\gamma\times{HHI}_{i,t}+\mu_t+\epsilon_{i,t}. $$$$
+
+In addition to the principal-investor indicators, we control for the concentrations of investor types for a given share class, proxied by the Herfindahl-Hirschman Index (HHI). We emphasize that the coefficients on investor composition measures (i.e., $$\beta$$) should be interpreted as associative rather than causal: they describe how fund characteristics vary across share classes with different investor profiles. We also control for year-month fixed effects ($$\mu_t$$) to absorb common time-series shocks that influence all funds. Standard errors are two-way clustered at the share-class and month levels to account for cross-sectional dependence and serial correlation.
+
+Consistent with the findings in Figure 2 and 3, regression results in Table 3 show that funds in which banks are the principal investors maintain more conservative portfolio positions: they keep shorter portfolio maturities (i.e., higher liquidity) and generate lower gross yields (i.e., lower risk). In contrast, funds predominantly held by dealers or nonfinancial firms hold longer-duration portfolios.
+6
+
+Table 3. Principal-Investor Type and Fund Characteristics
+
+Dependent variable:
+
+log(AUM)
+
+(1)
+
+WLA
+
+(2)
+
+WAM
+
+(3)
+
+Yield ranking
+
+(4)
+
+Risky share
+
+(5)
+
+Dealer
+
+-0.496
+
+-3.31
+
+12.4*
+
+9.19
+
+-8.46
+
+(0.51)
+
+(3.32)
+
+(6.4)
+
+(9.55)
+
+(6.04)
+
+Bank
+
+-1.92**
+
+13.7
+
+-21.0*
+
+-25.5*
+
+-12.7
+
+(0.829)
+
+(8.31)
+
+(11.8)
+
+(13.3)
+
+(9.78)
+
+Firm
+
+-2.32
+
+-5.41
+
+20.4**
+
+12.4
+
+-11.6
+
+(1.43)
+
+(4.86)
+
+(9.35)
+
+(17.9)
+
+(8.96)
+
+Other
+
+-0.916
+
+-1.74
+
+5.88
+
+19.5
+
+-6.59
+
+(0.648)
+
+(4.19)
+
+(7.74)
+
+(12.9)
+
+(7.79)
+
+HHI
+
+-0.775
+
+14
+
+-10.9
+
+33.1*
+
+-17.3
+
+(0.967)
+
+(7.93)
+
+(14)
+
+(18.4)
+
+(12.6)
+
+Year-month FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.36
+
+0.34
+
+0.35
+
+0.31
+
+0.28
+
+Observations
+
+463
+
+464
+
+464
+
+442
+
+463
+
+These findings point to a significant association between a fund's investor base and its portfolio choices. In particular, the tendency for funds with banks as their primary investors to hold more conservative portfolios raises the question of why such differences arise. Our analysis in the next section suggests that these patterns appear to be consistent with the flow dynamics of bank investors.
+
+4. Investor base and flow dynamics
+
+We next examine the relationships between investor base and flow dynamics. Intuitively, investor flows are driven by the investors themselves, and different types of investors may exhibit different withdrawal patterns. Specifically, we test whether funds with certain investor base characteristics experience greater flow volatility or a higher probability of large outflows in the subsequent month.
+
+To evaluate these relationships, we regress next month's flow outcomes on current investor base:
+
+$$$$ Flow\ Outcome_{i,t+1}=\alpha+\beta_{Dealer}\times Dealer_{i,t}+\beta_{Bank}\times Bank_{i,t}+\beta_{Firm}\times Firm_{i,t}+\beta_{Other}\times Other_{i,t} \\ +\gamma\times{HHI}_{i,t}+\mu_t+\epsilon_{i,t}, $$$$
+
+where $$Flow\ Outcome$$ is either (i) the standard deviation of share class $$i$$'s daily percentage flows during month $$t + 1$$ or (ii) the percentage of days in month $$t + 1$$ in which the share class experiences daily net outflows of at least 5%. All regressions include yearâmonth fixed effects, and standard errors are two-way clustered at both the share-class and month levels.
+
+Table 4 shows that when banks are the principal investors, MMFs tend to experience more volatile flows and are more likely to face large outflows in the subsequent month.
+7
+These findings are consistent with our earlier result that MMFs with banks as principal investors maintain more conservative and liquid portfolio positions. Together, our results suggest that MMFs may take additional precautions in response to banks' relatively more volatile flows and greater propensity for large-scale withdrawals. Such flow patterns may reflect banks' motives for investing in MMFs and their management of these investments, issues that are beyond the scope of this note.
+
+Table 4. Principal-Investor Type and Next-Month Flow Dynamics
+
+Dependent variable:
+
+Standard deviation of daily flows
+
+(1)
+
+Chance of large outflows
+
+(2)
+
+Dealer
+
+0.028
+
+0.769
+
+(0.383)
+
+(0.57)
+
+Bank
+
+2.83***
+
+5.15***
+
+(0.623)
+
+(1.35)
+
+Firm
+
+0.269
+
+0.768
+
+(0.665)
+
+(0.987)
+
+Other
+
+1.02
+
+1.42
+
+(0.686)
+
+(1.16)
+
+HHI
+
+-1.86
+
+-2.29
+
+(1.35)
+
+(1.91)
+
+Year-month FE
+
+Yes
+
+Yes
+
+Adjusted R2
+
+0.15
+
+0.19
+
+Observations
+
+343
+
+404
+
+5. Conclusion
+
+Using novel data, we find that the investor composition of institutional prime MMFs is significantly associated with their portfolio decisions and flow dynamics. The relationships we find indicate that MMFs respond to investor behavior and manage portfolio risk in an integrated manner.
+
+While our analysis is based on a 15-month period in which there was no material stress among MMFs, and the predictive role of investor composition during periods of market strain remains uncertain, the results suggest that investor composition is an informative indicator of MMF flow dynamics. These patterns may have implications for the likelihood of large redemptions during stress episodes and therefore warrant consideration in assessments of MMF run risk.
+
+1. A single MMF often offers multiple share classes targeted to different investor groups; while these classes have the same underlying portfolio, they usually differ in fee structures and investor eligibility.
+Return to text
+
+2. Following the runs on prime MMFs in March 2020, the SEC adopted reforms for the industry in July 2023. The reforms were fully implemented starting in October 2024.
+Return to text
+
+3. Feeder funds and money market ETFs are excluded from the final sample.
+Return to text
+
+4. The 12 types are: broker/dealers, depository institutions, nonfinancial firms, registered investment companies, insurance companies, municipalities, nonprofit organizations, pension funds, private funds, sovereign funds, and other investors.
+Return to text
+
+5. Weekly liquid assets are cash, direct and certain indirect debt of the U.S. Government, securities that mature within five business days, and receivable balances due within five business days. Risky asset share is the percentage of fund assets comprised of commercial paper, certificates of deposit, and time deposits.
+Return to text
+
+6. Although not reported in the table, we observe similar patterns when replacing the principal-investor indicators with continuous investor shares.
+Return to text
+
+7. We conduct two robustness checks (not shown): (i) computing flow outcomes over the subsequent quarter instead of the next month, and (ii) replacing principal-investor indicators with continuous investor-share measures. Both approaches yield consistent results.
+Return to text
+
+Please cite this note as:
+
+Li, Yi, Nick Panetta, and Weston Watts (2026). "Investor Composition of Money Market Funds and Its Implications for Flow Dynamics," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, May 08, 2026, https://doi.org/10.17016/2380-7172.3973.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

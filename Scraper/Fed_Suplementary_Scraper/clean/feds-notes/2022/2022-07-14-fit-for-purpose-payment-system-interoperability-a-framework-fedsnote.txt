@@ -1,0 +1,535 @@
+FEDS Notes
+
+Twitter
+
+July 14, 2022
+
+Fit-for-Purpose Payment System Interoperability: A Framework
+
+Angela N. Lawson and Jorge Herrada
+1
+
+Introduction
+
+The U.S. payment system is not one system, but many. Systems within the U.S. payment system effect different types of transfers, such as credit card transactions, bank-to-bank transfers, and foreign exchange. Effecting these and other payment transfers require some degree of communication and information exchange both within and across these different systems. This exchange is broadly described as "interoperation." Most people comprehend the word and its basic definition, but like many words in common use, the meaning individuals ascribe to
+interoperability
+depends not only on the context of the discussion, but on their understanding and experience of its effects.
+2
+The way the term is used in payments today generally lacks clarity and can lead to confusion. A structured way to think about and discuss interoperation may reduce ambiguity and support substantive, nuanced assessments on ways interoperability could enhance the efficiency, safety, and accessibility of electronic retail payment options. This paper aims to provides this structure through a simple, four-part framework for building a shared understanding of how payment system interoperation could be designed to fit a purposeâsuch as increased efficiency of the system or increased access to it. We propose fit-for-purpose interoperation results from both the clear articulation of the expected behavior of the system and agreed-upon definitions and descriptions of the appropriate relationships between constituent elements of a payment system or across payment systems.
+
+This paper is organized as follows. First, we provide an overview of payment system interoperation, and define payment instruments, payment messages, conceptual units of value, and components in a system for the purposes of this paper. Next, we discuss interoperation, differing definitions of the term, why it is important, and the challenges of achieving payment system interoperation. Then, we describe our framework for analysts, technologists and members of the public interested in payments to gain a contextual understanding of payment system interoperation. Finally, we apply our four-step framework by sketching a hypothetical discussion between participants seeking to describe fit-for-purpose interoperation in a payment system where central bank digital currency (CBDC) and stablecoins co-exist.
+3
+
+Overview of Payment System Interoperation
+
+This section aims to provide clarity on key aspects of typical retail electronic payment systems. We first define payment systems and describe four constituent elements for the purpose of this paper. Next, we discuss the importance of interoperation, concluding this overview section with a description of some of the challenges and methods for achieving interoperation in payment systems.
+
+Defining payment systems
+
+Any payment system's basic purpose is the transfer of funds. A payment system includes the set of instruments, procedures, and rules for the transfer of funds between participants; the participants themselves; and the agreed-upon operational infrastructure.
+4
+Each payment flow for each payment instrument, including the route or routes the message can take to reach its destination, is explicitly defined by the agreed-upon rules of the system to ensure the transfer of funds. However, though individual payment flows are largely defined and clear, the borders of various payment systems and the complexity of their interconnections are much less so. Elements of this complexity include the variety of payment instruments, the variability in message and data formats, number of potential vendors providing an array of components and services at various points in the payment flow, and dependencies on existing operational infrastructure (Committee on Payment and Settlement Systems, 2003).
+
+For the purposes of this paper, we focus our discussion on four elements of a payment system involved in the transfer process: (1) payment instruments, (2) payment messages, (3) conceptual units of value, and (4) components of the system. Figure 1 offers a simplified illustration of these elements.
+
+Figure 1. Simplified view of elements of a payment system
+
+Accessible version
+
+Payment instruments.
+Payment instruments, such as a credit or debit cards, and ACHs, trigger a flow of funds from one party to another but are distinct from the "funds" being transferred (Bofinger and Haas, 2020).
+5
+A payment instrument can originate in an electronic system (an ACH request does this), or it can be introduced to an electronic system (for example, when a credit card is tapped in person or debit card information is entered online).
+
+Payment messages.
+When a payment instrument is used in an electronic system a "message" is created. The message contains the necessary information to initiate a transfer of units of value ("funds").
+
+Conceptual units of value.
+The funds (for example, U.S. dollars) are the conceptual units of value transferred between parties following the successful initiation of the payment by the payment instrument and processing and settlement of the payment message.
+
+Components of the system.
+A component of a payment system performs a complete function within a payment flow, may be made up of sub-components, and has a defined border. Examples of components used by many systems include digital wallets, payment terminals, payment gateway service providers, and merchant acquirer/processors among others.
+6
+,
+
+7
+If a payment flow contains two or more components that must communicate electronically with each other to accept a payment instrument or transmit a message, these components must technically interoperateâat least to some degree.
+8
+
+Importance of interoperation
+
+Balancing benefits with costs and designing fit-for-purpose strategies, policies, and tools for payment system interoperation requires understanding the role interoperation plays and the purpose it can serve based on the goals stakeholders envision for the operation of the system. For example, the degree to which interoperation exists within or between payment systems influences the use and utility of the system(s) through network effects.
+9
+A system intended for widespread use may employ the tool of interoperability to increase its reach. Whereas a system with limited use within a specific market segment or geographic region, may not need to consider questions of interoperation. Thus, the importance of interoperability in a payment system, or between systems, depends on the purpose, and the structure, of the system itself.
+
+The importance of interoperation in a system also depends on the expectations of efficiency within that system. The efficiency of a system results from how it is structured, including if and how components interoperate (Meadows, 2008). For example, interoperation between components within a self-contained payment system, often referred to as closed-loop, may be important, but relatively straightforward to achieve.
+10
+Firms that control closed-loop systems may eschew interoperation with any outside providers, seeking to build sufficient scale to attract and lock-in participants to their proprietary scheme. This could have the effect of hurting competition and generating societal costs (Bank for International Settlements, 2020).
+11
+Closed systems are not the focus of this paper.
+
+Open systems enable participation by more firms and the opportunity to compete as component or service providers. In such a system, considering where interoperation between components or systems is needed, and how it will be achieved is more important, and likely more complex, than in closed or proprietary systems. In these more open systems various entities may issue a payment instrument, and many firms with distinct functions may provide components that participate in aspects of the payment flow based on the rules and procedures established for the system. In this case, an infrastructural scheme, technical standards and specifications, and some form of governance define interoperation between components to achieve the transfer of funds.
+
+Achieving interoperation
+
+Once interoperation is identified as an important feature of a system, achieving it begins with defining what it means and what its purpose is. For example, in discussions about payment systems, some understand interoperability to be an experience of "seamlessness" for the end user; others view it as a technical state (Bank for International Settlements, 2020). Interoperation could be a tool to meet regulatory requirements, lower costs, expand access and choice in payment services (Negre and Cook, 2021), reduce risk and improve efficiency by promoting straight-through processing (Bech and Hancock, 2020), and spur adoption of innovative new products through network effects (Caskey and Sellon, 1994).
+
+Although technical interoperation may be important in most multi-component payment systems, several complicating factors make achieving and maintaining significant depth of interoperation a challenge. These factors include incentive alignment among participants, cost versus benefit, and the effectiveness of leadership (Caskey and Sellon, 1994).
+
+Achieving technical interoperation between components in open systems often requires bilateral business agreements, multi-party coalitions or groups fostering collaboration among market participants, regulatory requirements, and the use of tools such as technical standards.
+12
+Technical standards, implemented by market segments or affinity groups in a harmonized way, are key tools in achieving a degree of interoperation based on identified goals of the relevant system stakeholders.
+13
+,
+
+14
+They can also form the basis for technical regulations and conformity assessments.
+
+Framework for Constructing Fit-for-Purpose Payment System Interoperation
+
+So far, we have defined elements in payment systems, outlined why interoperation is important, and described how it can be achieved. Next, we clarify why discussions about payment system interoperation are challenging, beginning with the nature of payment systems themselves, followed by four key issues our proposed framework seeks to address. We then discuss the framework itself followed by our sketch of the potential results of a hypothetical discussion where our framework is used to develop a clearer picture of the role of interoperation related to some aspects of CBDC and stablecoins.
+
+Clarifying challenges with payment system interoperation discussions
+
+Determining if, where, how, and to what degree interoperation can act as a tool in support of efficiency, security or accessibility of a payment system is complicated by many factors. First, as previously noted, payment systems can be complex, incorporating many different technologies and parties participating in a payment flow. Second, interpretations of the term "interoperation" and its outcome can be ambiguous unless clearly defined within the context of the discussion. Third, interoperation is not binary; degrees of interoperation exist. Though studied in other domains, such as within healthcare-related systems, descriptions of degrees of technical interoperation within the payments domain are not widely available. Finally, due to the complex nature of many payment systems, visualizing the interconnections between components to analyze the structure of payment systems to improve efficiency, for example, can be challenging. Stylized models are helpful for discussion purposes but may be too high-level to facilitate technical discussion. Where possible, mapping the structure of a systemâspecific to the context of the discussionâcan help uncover more opportunities for intervention and innovation. Our proposed framework aims to address each of these issues.
+
+Four-step framework for designing fit-for-purpose payment system interoperation
+
+This proposed framework for constructing fit-for purpose payment system interoperation includes defining the boundaries of a system, adopting common terminology, describing the desired degree of interoperability, and if applicable, mapping the structure of the system. It aims to clarify goals and identify tools to support investigation into the state of and opportunity for interoperation within and across existing and potential future systems. Following our discussion on the four-step framework, we use it to sketch a possible result from an initial hypothetical design discussion identifying potential technical relationships between payment system components, hypothetical CBDC, and stablecoins.
+
+Step 1:
+Define the boundaries of a system
+.
+Explicit definition of the boundaries of the system or systems in question and understanding which components are in scope for the discussion may help maintain focus on the relevant parts of a complex ecosystem specific to the goal. For example, if the purpose of payment system interoperation is to improve cross-border payment efficiency, the system boundary could be drawn around only the components involved in a cross-border transaction, eliminating from the discussion components that play no role in that process. On the other hand, if the purpose was understanding where interoperation could improve the reach of a particular payment system, the boundaries of the system in question might not include components involved in initiating, authenticating, or authorizing a transaction but could include components involved in routing and processing payment messages through to final settlement.
+
+Step 2: Adopt common terminology.
+Defining the use of terms specific to the discussion is akin to defining the boundaries of the systemâit reduces complexity and confusion for participants about what is in scope for the discussion.
+15
+Often, terms used to define aspects of relationships between different elements may be understood differently by various participants in the discussion. For example,
+interoperability
+can describe a specific relationship between two or more components in a system, whereas
+compatibility
+has a broader meaning. Table 1 is our proposal of how to interpret common terms describing the types of relationship between components in a payment system.
+
+Table 1. Terms describing types of relationships between components in a payment system
+
+Component relationships
+
+Interoperable
+components work together
+.
+
+A component is interoperable with another component when it shares some degree of technical commonality such that information can be exchanged to perform a desired action.
+
+Interchangeable
+components replace each other
+.
+
+Components are interchangeable when they can be substituted for one another with minimal changes and no material loss of functionality or efficiency.
+16
+
+Compatible
+components share the same environment (at least)
+.
+17
+
+A component is compatible with another component when neither component, operating normally, disrupts or impedes the operation of another within the same environment.
+18
+
+For example,
+payment instruments must be
+compatible
+and sometimes
+interoperate
+with various components at the point of acceptance.
+19
+However, the payment message initiated by the payment instrument does not
+interoperate
+with the components that carry it through the payment flowâit is the passenger carried through the operational infrastructure.
+20
+
+Another clarification on terms concerns conceptual units of value. As we defined it in the overview of payment system interoperation,
+conceptual units of value
+, the "funds" ultimately transferred as a result of the initiation of a payment, are distinct from payment instruments, payment messages and system components. As concepts, not objects or technological processes, we propose units of value cannot technically interoperate with any element in the payment system, including each other.
+21
+Conceptual units of value, however, can represent the investiture of an idea of money into
+types
+and
+forms
+. The type of conceptual unit of value is generally differentiated by the unit of account it is denominated in. Different forms of the same type of conceptual units of value may be liabilities of different entities and may be embodied in a variety of payment instruments. Table 2 offers a way to interpret terms that describe relationships between units of value
+
+Table 2. Describing the relationship between units of value
+
+Asset Exchange / Conversion Terminology
+
+Exchangeable
+units of value trade at a market rate for different units of value.
+
+These units are settled independently in their respective systems such that the amount of one type of conceptual unit, for example U.S. dollars, is traded for an amount of another type of conceptual unit, such as euros or yen.
+
+Convertible
+units of value trade at par with different forms of the same unit of account.
+
+These units may be the liability of different entities, for example various commercial banks or the central bank, but are equivalent in value.
+
+For example,
+an amount of U.S. dollars can be
+exchanged
+for an amount of euros or yen. A $20 bank account balance can be
+converted
+to a $20 banknote.
+
+22
+
+Step 3: Describe the desired degree of interoperation.
+The desired degree of interoperation affects the actions needed, and by whom, to achieve the desired results. Describing the degree of interoperability fit for the purpose may include articulating how the end-user will experience the systemâfor example as "seamless," but should also include how the system should be architected, constructed, and managed, to create and maintain interoperation between components. A description of the degree of interoperation could explicitly account for where translations, mapping, or intermediary services may be necessary to achieve the goal.
+23
+Definitions could also include where in the payment flow the use of technical standards, and harmonized approaches to applying them, may be most effective.
+24
+
+To describe the desired degree of interoperation, a common tool or model could support clarity and further substantive discussions. However, models or tools describing levels or degrees of interoperation from a technical perspective and specific to payment systems prove hard to find.
+25
+To address this challenge, in figure 2 we adapt a model proposed by Wang, Tolk, and Wang (2009) showing technical interoperation layers from information system analysis. The figure shows five layers of technical interoperability, beginning at the lowest level, Level 0, of "No technical interoperability," to Level 4, "Common Conceptual Models and Business Integration." Though more gradations are possible, this tool illustrates the potential areas for commonality between components, each layer representing increasing degrees of communication fluency and direct interoperation between components.
+
+Figure 2. Example of levels of interoperation between components in a payment system
+
+Source: Authors' adaptation of Wang, Tolk and Wang (2009) Levels of Conceptual Interoperability Model
+
+Accessible version
+
+Step 4: Map the structure (if applicable).
+Performing a close examination of how the components within the scope of the discussion are currently interoperating (or not) helps create a baseline and shared understanding among participants about the system and related components within the context of the discussion.
+26
+This level of inquiry uncovers places within an existing system where additional investigation may be warranted. Many approaches to mapping the current state of a defined system are possible. One approach could entail an examination of interoperation aspects between components in a payment flow of a particular payment type. Figure 3 offers examples of questions probing where and how interoperation is achieved in a typical retail payment flow. This list of questions is not exhaustive but intended to illustrate the types of questions an investigation into the state and degree of interoperability within an existing payment system can be assessed.
+
+Figure 3. An approach for mapping the extent and degree of interoperation within payment systems.
+
+Accessible version
+
+Undertaking a mapping of the structure of the system may not be applicable in all discussions about payment system interoperability. The first three steps in our proposed framework help determine the applicability of this step. For example, if a discussion is largely theoretical or involving hypothetical elements, mapping the existing structure may not be appropriate or necessary. In addition, payment systems, as we have highlighted throughout this paper, can be extremely complex. For that reason, this type of exercise could result in unnecessary detail which may obscure, rather than illuminate, the state of interoperation if the boundaries of the system, common definitions, and desired degree of interoperability have not yet been clearly articulated.
+
+Applying the framework to potential future payment systems
+
+To illustrate the use of our framework and to show how the concepts discussed here could apply to current and complex topics on future payment system interoperation, we consider interoperation between a hypothetical CBDC and stablecoins. To begin, we outline a few assumptions, clarify what interoperation means in this context, then use the concepts proposed in this paper to provide a preliminary sketch of an outcome of a hypothetical fit-for-purpose interoperation discussion.
+
+First, we assume a unit of CBDC would be a unit of value denominated in local currency, in this case U.S. dollars. We also assume this unit of value would be transferred using some type of payment instrument to initiate the transaction and would require some mechanism, akin to a payment message, for transmitting the necessary information for the transfer of funds.
+
+Next, we assume that stablecoins are considered by some to be conceptual units of value, not necessarily denominated in the local currency, but that they may be managed to maintain an "at par" value. We further assume stablecoins are issued and transferred using distributed ledger or blockchain technologies as operational infrastructure. Finally, we assume when a transaction triggers the transfer the value, the information in the transaction that results in an update to the shared ledger is analogous to a payment instrument coupled with a payment message.
+27
+
+Clarifying interoperation in context
+
+To help begin to answer the question of what interoperation means between hypothetical CBDC and stablecoins we start by addressing how the term
+interoperation,
+as we have described it in this paper
+,
+does or does not apply relative to the elements we defined in our overview of payment system interoperation. Recall that the term
+interoperation
+refers to a type of relationship between components in a system, but the specific meaning individuals assign to the term may vary and could result in confusion if not clarified.
+
+Payment instruments.
+Payment instruments can interoperate with acceptance devices, such as payment terminals, but cannot interoperate with each other.
+28
+Two payment instrumentsâa payment instrument that initiates a hypothetical CBDC fund transfer and a payment instrument that initiates stablecoins fund transfersâcannot interoperate. For example, a digital wallet could be compatible with multiple payment instruments, but the payment instruments within the digital wallet would not interact with each other.
+
+Payment messages.
+Payment messages consist of collections of data necessary for the transfer of funds. Payment messages do not exchange information with anythingâthey are the information being exchanged.
+29
+A payment message with information pertaining to the transfer of hypothetical CBDC and a payment message with information specific to the transfer of a stablecoin, cannot interoperate. However, a standard message and data format could be compatible with multiple components in the payment flow and could support a degree of interoperation between them.
+30
+
+Conceptual units of value
+. Currency is a conceptual unit of value and cannot interoperate with other currencies. However, a hypothetical CBDC and stablecoins could potentially be exchangeable with each other or convertible into (or out of) banknotes or commercial bank balances.
+
+Components of a system
+. If two or more components in a payment flow may be expected to accept or handle both a hypothetical CBDC and stablecoins, interoperation between these components may be desirable to support efficiency. Varying degrees of interoperation are possible and may depend on the goal. One way to facilitate interoperation between components is through the harmonized use of standard information exchange protocols, messaging formats, and reference data.
+
+Describing hypothetical fit-for-purpose interoperation for CBDC and stablecoins
+
+Now that we have clarified what is meant by interoperation between a hypothetical CBDC and stablecoins, we sketch a theoretical outcome of a discussion using our proposed framework. In this hypothetical scenario, our participants sought to construct fit-for-purpose interoperation between components handling both stablecoins and CBDC in a retail payment flow. The purpose of the discussion was to determine if, how, and where interoperation can support the following objectives: (1) increased access to low or no cost payment choice options for end-users, (2) enhanced payment system efficiency, and (3) minimal investment required for payment acceptance.
+
+Step 1: Define the boundaries of the system.
+Components within scope for this discussion could include any component within the system that holds, receives, or processes multiple digital currency payment instruments and/or payment messages and must discern between them. (Examples of potential in-scope components may be digital wallets, payment terminals or POS systems, merchant processors/acquirers, and payment gateways or other intermediaries.)
+
+Step 2: Adopt common terminology.
+The payment instruments embodying the ability to spend any type of stablecoin could be compatible with the components that must store, accept, and handle them. Wherever possible, consistent message formats and use of data, as well as identifiers to allow components to differentiate between different currency types could be used. A standard, interchangeable payment message template which includes all information necessary to complete the payment transaction, and uses standard data formats, could support interoperation between components.
+31
+Security measures should be effective and compatible with the capabilities of each component.
+
+Step 3: Describe the desired degree of interoperation.
+Payers could pay with their digital currency of choice and the payee could receive the payment such that each experiences the process as convenient and can confirm the payment has been received and is final. A CBDC, as a conceptual unit of value, should be transferable between end users who may be customers of different digital wallet providers or other intermediaries (Board of Governors of the Federal Reserve System, 2022). This does not mean all payment instruments which initiate the transfer of a CBDC must be technically identical. However, any instrument used to initiate a payment of CBDC should be compatible with the component receiving the transfer request to the extent that a transfer of funds can readily occur. Minimizing operational burdens and reducing the potential for error will improve convenience for payers and payees. Thus, direct interoperation to the highest feasible degree between components in the system could be the goal, enabled by technical standards, or other tools, and coordinated implementation. Based on the goals for interoperation and the desired outcome, the desired degree of interoperability is Level 2 or above.
+
+Step 4: Map the Structure.
+Not applicable in this case as it deals with hypothetical elements.
+32
+
+Conclusion
+
+This paper offers a discussion on the challenges analysts, technicians, and interested members of the public face when discussing how interoperation in a payment system can support goals of efficiency, security, and accessibility. We deconstructed elements of the payment system and defined these elements to support a deeper analysis of where and how the term interoperation can be appropriately applied. The fit-for-purpose framework offers a simple, four-step approach to increasing the depth and clarity of discussions about payment system interoperability and how it may be used as a tool to support various goals. The approach focuses on defining the boundaries of a system within the context of the discussion, adopting common terminology, describing the degree of interoperation required, based on agreed-upon descriptions, and mapping the current state of existing structures (where applicable). Finally, we sketched preliminary results of a hypothetical discussion where participants used our framework to discuss the topic of interoperation with respect to how a potential CBDC and stablecoins could technically co-exist in payment systems.
+
+References
+
+Bank for International Settlements.
+"
+Central Banks and Payments in the Digital Era
+(PDF)
+".
+Annual Economic Report
+. Bank for International Settlements, June 2020.
+
+Bech, Morten, and Jenny Hancock. "
+Innovations in Payments (PDF)
+."
+BIS Quarterly Review
+(March 2020): 21-34.
+
+Bensen, Carol Coye, and Scott Loftesness.
+Interoperability in Electronic Payments: Lessons and Opportunities
+(PDF)
+. CGAP, 2012.
+
+Board of Governors of the Federal Reserve System. "
+Money and Payments: The U.S. Dollar in the Age of Digital Transformation (PDF)
+." Federal Reserve Board. January 2022
+
+Bofinger, Peter, and Peter Haas. "
+CBDC: A Systemic Perspective. (PDF)
+"
+Würzburg Economic Papers
+, no. 11, (July 2020).
+
+Caskey, John P., and Gordon H. Sellon, Jr.
+"Is the Debit Card Revolution Finally Here?"
+
+Economic Review
+. Federal Reserve Bank of Kansas City, 4th Quarter (1994): 79-95
+
+Cheng, Jessica, Angela N. Lawson, and Paul Wong.
+"Preconditions for a general-purpose central bank digital currency.
+" Federal Reserve Board. February 2021.
+
+Clemons, E. K., David C. Croson, D. C., and Bruce W. Weber. "
+Reengineering Money: The Mondex Stored Value Card and Beyond
+."
+International Journal of Electronic Commerce
+1, no. 2 (1996): 5â31.
+
+Committee on Payment and Settlement Systems.
+"United States (PDF)
+."
+Payments and Settlement Systems in Selected Countries.
+Bank for International Settlements. April 2003: 427-449
+
+Cook, William, Dylan Lennox, and Souraya Sbeih.
+Building Faster Better: A Guide to Inclusive Instant Payment Systems
+(PDF)
+. Washington, D.C.: CGAP, 2021.
+
+Negre, Alice, and Will Cook.
+Interoperability in Digital Financial Services: Emerging Guidance for Funders
+. (PDF)
+Washington, D.C: CGAP, 2021.
+
+Engebretson, Joan. "Interoperability Means Sharing Data, https://www.sdmmag.com/articles/84092-interoperability-means-sharing-data."
+SDM: Security Distributing & Marketing
+37, no. 5, (2007): 91.
+
+ESMIG Secretariat. "
+Standardisation, interoperability, Interchangeability and Innovation (PDF)
+." European Smart Metering Industry Group (ESMIG). July 11, 2011.
+
+Faster Payments Council.
+Faster Payments Interoperability
+(PDF)
+. Faster Payments Council. June 2020.
+
+Faster Payment Task Force.
+The U.S. Path to Faster Payments: Final Report Part One: The Faster Payments Task Force Approach.
+(PDF)
+Faster Payment Task Force. January 2017.
+
+Guo, Sky. "It's Critically Important Central Bank Digital Currencies (CBDCs) are Interoperable, https://www.nasdaq.com/articles/its-critically-important-central-bank-digital-currencies-cbdcs-are-interoperable-2020-06." Nasdaq. June 25, 2020.
+
+Heun, David. "The Next Step for Faster Payments: Interoperability, https://www.americanbanker.com/payments/news/the-next-step-for-faster-payments-interoperability." American Banker. June 9, 2021.
+
+Maniff, Jesse L., and Paul Wong. "
+Stuck in the Middle: Observations from intermediaries in Cross-Border Payments for CBDC Design (PDF)
+." BIS. August 2021.
+
+Meadows, Donella H.
+Thinking in Systems: A Primer
+. White River Junction, VT: Chelsea Green Publishing Company, 2008.
+
+Teixeira de Sousa, Paulo, and Peter Stuckman, "Telecommunications Network Interoperability, https://www.eolss.net/Sample-Chapters/C05/E6-108-22.pdf" in
+Telecommunication Systems and Technologies-Volume II
+, edited by Paolo Bellavista, 265-298. Singapore: United Nations Educational, Scientific and Cultural Organization (UNESCO) in partnership with Encyclopedia of Life Support Systems (EOLSS), 2009.
+
+Tompkins, Michael and Ariel Olivares. "
+Clearing and Settlement Systems from Around the World: A Qualitative Analysis (PDF)
+- Payments Canada Discussion Paper No. 5."
+Payments Canada
+, June 2016. Clearing and Settlement Systems from Around the World: A Qualitative Analysis - Payments Canada Discussion Paper No. 5."
+Payments Canada
+, June 2016.
+
+Wang, Wenguang, A. Tolk, and Weiping Wang. "
+The Levels of Conceptual Interoperability Model: Applying Systems Engineering Principles to M&S.
+"
+Presented at the Spring Simulation Multiconference (SpringSim' 09), San Diego, CA, March, 2009.
+
+Zhao, Kexin, and Mu Xia. "Forming Interoperability Through Interorganizational Systems Standards, https://doi.org/10.2753/MIS0742-1222300410."
+Journal of Management Information Systems
+, 30 no. 4 (2014): 269â298.
+
+1. The views expressed in this paper are solely those of the authors and should not be interpreted as reflecting the views of the Board of Governors or the staff of the Federal Reserve System. The authors would like to thank our colleagues Guy Berg and Niel Willardson (Federal Reserve Bank of Minneapolis); Sonja Danburg, Peter Lone, Jesse Leigh Maniff, Jillian Mascelli, David Mills, and Sarah Wright (Federal Reserve Board); and Paul Wong for their contributions to and assistance with this note.
+Return to text
+
+2. For example, the experience of "paying" in the United States feels largely seamlessâby designâfor most end-users. Thus, interoperability between components in the payment flow would appear interoperable to the end-user because the payment is completed quickly without any additional exertion on their part. However, the degree of technical interoperation between the components involved in the payment flow is hidden from view and may not be optimal for achieving efficient and safe transfer of funds.
+Return to text
+
+3. Private digital currencies purportedly managed to maintain par value to national currencies are typically referred to as "stablecoins."
+Return to text
+
+4. See Committee on Payment and Settlement Systems and International Organization of Securities Commissions,
+Principles for Financial Market Infrastructures
+(PDF)
+(BIS/CPMI, April 2012), p. 8.
+Return to text
+
+5. Committee on Payment and Settlement Systems,
+A Glossary of Terms Used in Payments and Settlement Systems
+(PDF)
+bis.org) (BIS/CPMI, 2003) defines
+payment instrument as "
+any instrument enabling the holder/user to transfer funds." A payment instrument can be a banknote or an electronic payment mechanism conveyed through digital systems (Committee on Payment and Settlement Systems, 2003). We refer to this mechanism as the "message."
+Return to text
+
+6. The term
+component
+is common in system and software architecture and refers broadly to discrete units of a larger system that perform a particular function. Most payment operational infrastructures have several components, some of which are used by more than one system. These components follow operational procedures, technical standards, and rules. A component may be a device, such as a payment terminal at a merchant counter, or may be a service provider, such as a payment processor performing an intermediating function. In most cases a component will be composed of hardware, software, or both. Each component plays a role in the acceptance of the payment instrument and the movement of a payment message through the payment flow to trigger the transfer of funds.
+Return to text
+
+7. Some payment instruments may also be components. For example, a chip card capable of interacting with a payment terminal or other device would be considered a component based on how we have defined it for this paper.
+Return to text
+
+8. Definitions of interoperation vary, sometimes significantly. In general, interoperation is the technical ability for components in a system to exchange information (Engebretson, 2007) in a meaningful, generally automated manner (Tompkins and Olivares, 2016).
+Return to text
+
+9. When more participants join a particular system, the value of the system increases with the addition of more users. This network effect is an important aspect of payment systems but may be a "mixed blessing" (Bank for International Settlements, 2020, p. 75).
+Return to text
+
+10. Operators of a self-contained payment system generally maintain hegemonic control over all aspects of the payment system from issuance of the payment instrument to settlement and thus can design interoperation into the system. Mondex smart card from the 1990s (Clemons, Croson, and Weber, 1996), and store gift cards are examples of self-contained systems.
+
+Many systems have scheme operators, such as Visa, or rules organizations, such as Nacha, who establish the requirements for participation in the payment scheme. However, where Visa and other card networks, participate in the payment flow, Nacha is not an automated clearing house (ACH) operator. The Federal Reserve and The Clearing House are the operators of the ACH network in the United States.)
+Return to text
+
+11. See Bensen and Loftesness (2012) for an interesting case study on this effect using the development of ATM networks in New York in the late 1970s through the 80s.
+Return to text
+
+12. See Federal Reserve Board, "
+Federal Reserve issues a final rule establishing standards for debit card interchange fees and prohibiting network exclusivity arrangements and routing restrictions
+." Federal Reserve Board, June 29, 2011. For a debit transaction to be routed to more than one network, some degree of interoperation between components is required. One example of an effort to develop a degree of technical interoperation as required by regulation was the creation of the Common AID (application identifier) as part of the United States migration to chip cards. See U.S. Payments Forum,
+U.S. Debit EMV Technical Proposal
+, https://www.emv-connection.com/wp-content/uploads/2018/07/US_Debit_Technical_Solution_V1.4-FINAL-July-2018.pdf (Princeton Junction, NJ: U.S. Payments Forum, 2018).
+Return to text
+
+13. The term
+harmonization
+is sometimes used to describe the process of aligning variable standards and approaches across a market segment or affinity group.
+Return to text
+
+14. A technical standard is concerned with describing the "what" and the "how" to meet minimal acceptable security, facilitate broad adoption, remove operational burdens affecting efficiency and cost, and provide guidelines for development considerations (Caskey and Sellon, 1994; Faster Payments Task Force, 2017; Zhao and Xia, 2014). See for example Bank for International Settlements, (2020) and World Economic Forum,
+Connecting Digital Economies: Policy Recommendations for Cross-Border Payments
+(PDF)
+. World Economic Forum, 2020.
+Return to text
+
+15. For example, Heun (2021) wrote, citing a U.S. Faster Payments Council report, "Nearly 80% of respondents to an online survey in 2019 and 71% in 2020 cited
+interoperability
+as "very important" across "
+compatible
+faster payments systems [
+emphasis added
+]" and Guo (2020) writes, "
+Interoperability
+persists as one of the most significant hurdles to both CBDC adoption and functionality. As such, it's integral that central banks converge on this idea and harness
+compatibility [emphasis added]
+." When terms such as interoperability and compatibility are not well defined in context it may be unclear what relationships and capabilities are desired.
+Return to text
+
+16. See ESMIG (2011) which offers a clear distinction between interoperability and interchangeability, that, though discussing a different domain than payment systems, is applicable here.
+Return to text
+
+17. Payment messages are typically compatible with the components that handle them. A payment instrument, such as a magnetic stripe card, would typically be compatible with a payment terminal, but might not be considered interoperable because the payment terminal reads the static information on the card, there is no "exchange" of information.
+Return to text
+
+18. In some cases, payment system components, whether hardware or software, are incompatible. In that case, a translation mechanism or intermediary may be needed to allow automated transfer of a payment message to achieve a form of interoperation. Further, two components may be compatible but may not interoperate. For example, a digital wallet from one provider may share the same environment, a mobile device operating system, as a digital wallet from another provider, but the two may not work together to perform any function.
+Return to text
+
+19. Because a chip card and a payment terminal can exchange information at the time the chip is read by the terminal either through dipping or near-field communication, the payment instrument (the chip card) can be said to interoperate with the terminal.
+Return to text
+
+20. How an ATM handles banknotes may offer a concrete example of why payment messages do not interoperate. An ATM accepts and dispenses banknotes. It can read what the banknotes are and their designated units of value (one dollar, five dollars and so on). The ATM can process the banknotes, but the banknotes are the objects being processed, not a component participating
+in
+the process. Further, an ATM may accept banknotes from more than one jurisdiction. The ATM can distinguish between euros and U.S. dollars (for example). The machine could accept a deposit of dollars and could dispense euros. The machine and the banknotes are all compatible, but none are interoperable because there is no exchange of information. An electronic payment instrument similarly can be handled by multiple componentsâand therefore be compatible with themâbut does not interoperate either with other instruments or with the components as a participant in the process.
+Return to text
+
+21. See for example Cheng, Lawson, and Wong (2021), "[m]oney is a social and legal
+construct
+[
+emphasis added
+]".
+Return to text
+
+22. See Committee on Payment and Settlement Systems.
+The Role of Central Bank Money in Payment Systems
+(PDF)
+. Bank for International Settlements. August 2003 for a discussion on the role and practice of convertibility.
+Return to text
+
+23. Maniff and Wong (2021) point out that intermediaries enter the payment flow to meet a need and often provide valuable services but can also increase costs and the potential for error. Investigating if intermediation is required due to a lack of interoperation can illustrate where increasing interoperation could result in shorter, more direct, payment message exchange.
+Return to text
+
+24. The Federal Reserve,
+Fed Payments Improvement Glossary of Terms
+, fedpaymentsimprovement.org, 2021, includes this definition of interoperability: "Ability to process payment instructions across payment systems or platforms. Requires the use of common standards and technical compatibility between systems."
+Return to text
+
+25. For a broad description of three attributes of interoperability specific to payments see Boar, Codruta, Stijn Claessens, Anneke Kosse, Ross Leckow, and Tara Rice, "
+Interoperability Between Payment Systems Across Borders (PDF),
+"
+BIS Bulletin No. 49
+. December 11, 2021
+Return to text
+
+26. A discussion of a system is often looking at a model of that system and may not be representative of every possible input or effect the operation of the system creates in "real-life." (Meadows, 2008).
+Return to text
+
+27. For example, if Alice wants to transfer X amount of Y stablecoin to Bob, Alice would use software tools and protocols to digitally sign a transaction with a private cryptographic key, initiating the transfer to Bob. In this case, the tools and information used here are both the instrument that initiates the transfer (payment instrument) and the mechanism that carries the necessary information to effect the transfer (the message). The transaction is then completed using the associated distributed ledger as the operational infrastructure, and the funds transfer from Alice to Bob occurs once the transaction has been accepted into the ledger and finalized as per the protocols of the system.
+Return to text
+
+28. An existing payment instrument, such as a credit or debit card, could initiate a hypothetical CBDC or stablecoin funds transfer. The message initiated by the payment instrument would, in that case, need to contain the necessary information to convey where funds should be transferred from and to. Maintaining existing levels of interoperability may or may not require changes to existing acceptance and information exchange messages and protocols depending on what information, and in what format, was required to convey the necessary information to complete the final settlement.
+Return to text
+
+29. Within a distributed ledger environment, the way stablecoins (and other private digital currencies), the shared ledger, and programs known as âsmart contractsâ interact could be understood as interoperation. This is distinct from how electronic payment messages are exchanged in most payment systems today. However, this distinction is out of scope for this discussion.
+Return to text
+
+30. In most cases, private digital currencies, like stablecoins, exist in closed, self-contained ecosystems. Though private digital currency access keys may be stored in a variety of compatible digital wallets, as it stands today, a private digital currency issued on one distributed ledger platform is neither technically compatible nor interoperable with other blockchains or existing payment systemsâthe associated payment instrument and payment message cannot "move" from one platform to another. However, several efforts by various firms to develop mechanisms, including intermediation, to create seamlessness for end-users to use private digital currency on different payment platforms are currently underway. See for example Decentralized Dog, "What Is Wrapped Bitcoin?, https://coinmarketcap.com/alexandria/article/what-is-wrapped-bitcoin" coinmarketcap.com, October 13, 2021; and Visa, "Visa Unveils UPC for Blockchain, https://www.pymnts.com/blockchain/2021/visa-unveils-universal-payment-channel-for-blockchain", PYMNTS.com, September 30, 2021.
+Return to text
+
+31. The scope of this hypothetical discussion does not include the relationship between conceptual units of value therefore we do not use the terms
+exchange
+or
+convert
+here.
+Return to text
+
+32. If maps of existing payment flows and processes exist, they may illustrate where components already have the capability to support multiple digital currencies or show where natural intervention points exist where updates to software could support interoperability goals.
+Return to text
+
+Please cite this note as:
+
+Lawson, Angela N., and Jorge Herrada (2022). "Fit-for-Purpose Payment System Interoperability: A Framework," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, July 14, 2022, https://doi.org/10.17016/2380-7172.3136.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

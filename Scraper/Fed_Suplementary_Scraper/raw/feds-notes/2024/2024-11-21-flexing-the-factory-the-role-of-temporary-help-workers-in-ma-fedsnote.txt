@@ -1,0 +1,981 @@
+FEDS Notes
+
+Twitter
+
+Share
+
+RSS
+
+November 21, 2024
+
+Flexing the Factory? The Role of Temporary Help Workers in Manufacturing
+
+Spencer Bowdle and 
+Maria D. Tito
+1
+
+Since the COVID-19 pandemic, the demand for flexible work arrangements has notably increased, driven by the need for adaptability in the face of disruptions caused by lockdowns, work-from-home mandates, economic uncertainty, and supply chain shortages. The surge in demand for flexibility could have also provided a boost to the temporary help services industry (NAICS 56132), which provides businesses with temporary workers on a contractual basis. Indeed, temporary help employment (black line in figure 1) experienced a swifter recovery compared with the private sector (dashed red line) despite suffering larger cuts during the pandemic recession. While the trend in temporary helpâhereafter, 
+temp help
+âemployment growth has reversed recently, there is generally little empirical evidence on the factors influencing the demand for temporary workers because of the limited availability of data on the characteristics of firms employing temp help.
+2
+ This note leverages novel data for the manufacturing sector to explore the factors shaping the demand for temporary help workers.
+
+Figure 1. Recent Trends in Production Worker Employment
+
+Notes: Production worker employment in selected industries. Levels are normalized by February 2020 values. Data through August 2024.
+
+Source: Bureau of Labor Statistics.
+
+Accessible version
+
+In particular, our analysis relies on the Census Bureau's Quarterly Survey of Plant Capacity (QSPC), which includes detailed industry descriptions of the surveyed plants and, since the first quarter of 2012, has collected data on the employment of temporary help workers. This data source is able to replicate aggregate trends. Indeed, as shown in figure 2, the QSPC data (light blue line) align fairly well with an annual proxy of temporary services employment across manufacturing industries constructed from the Bureau of Labor Statistics' (BLS) Occupational Employment and Wage Statistics' (OEWS, navy line) data.
+3
+
+Figure 2. Measuring Temporary Help Services Employment in Manufacturing
+
+Notes: Employment in selected subgroups within the temporary help services industry (NAICS 56132). Production occupations are adjusted to exclude the contribution of transportation equipment (NAICS 336).
+
+Source: Bureau of Labor Statistics and U.S. Census Bureau.
+
+Accessible version
+
+As an additional validation exercise, we compare the QSPC distribution of temporary help employment across manufacturing industries with the distribution from the Contingent Worker Supplement to the BLS's Current Population Survey (CPS); our analysis is for 2017, the only year of overlap between the two data sources.
+4
+ Table 1 summarizes the comparison of temp help shares within manufacturing industries across the two sources in columns (1) and (2). While the exact shares differ, the two distributions are fairly consistent, with the correlation coefficient across shares above 0.8. The specific differences across the two distributions could be, at least in part, driven by the divergence in the sampling frames: Looking, for example, at the production worker employment shares across manufacturing industries in the QSPC sample relative to official dataâshown in columns (3) and (4)âthe composition of the QSPC sample appears much more skewed toward some sectors, such as chemicals and electronic and electrical equipment, relative to the actual employment distribution as measured in the BLS' Current Employment Statistics (CES, column (4)).
+
+Table 1. Distribution of Temporary and Production Workers across Manufacturing Industries
+
+Sector
+
+NAICS Code
+
+Temp Help
+
+Production Workers
+
+(1)
+
+			QSPC
+
+(2)
+
+			CPS Supp.
+
+(3)
+
+			QSPC
+
+(4)
+
+			CES
+
+Food
+
+311
+
+12.49
+
+10.14
+
+13.20
+
+20.36
+
+Paper
+
+322
+
+6.58
+
+3.49
+
+11.60
+
+4.52
+
+Chemicals
+
+325
+
+27.06
+
+18.81
+
+20.27
+
+8.54
+
+Rubber
+
+326
+
+5.34
+
+0.78
+
+5.63
+
+8.84
+
+Primary and Fabricated Metals
+
+331-332
+
+3.90
+
+11.95
+
+11.74
+
+21.75
+
+Machinery
+
+333
+
+8.68
+
+16.47
+
+9.79
+
+10.01
+
+Electronic and Electrical Equipment
+
+334-335
+
+29.97
+
+27.50
+
+20.45
+
+13.84
+
+Furniture
+
+337
+
+2.68
+
+9.20
+
+3.78
+
+4.72
+
+Miscellanous
+
+339
+
+3.28
+
+1.66
+
+3.53
+
+6.20
+
+Note: Comparison between the distribution of employment shares for temporary and production workers among the Quarterly Survey of Plant Capacity (QSPC), the Contingent Worker Supplement to the Current Population Survey (CPS Supp.) and Current Employment Statistics (CES) survey. Data are for 2017.
+
+Source: Bureau of Labor Statistics and U.S. Census Bureau.
+
+These two validation exercises provide a robust foundation for our empirical strategy, which we describe next.
+
+While the literature has highlighted the role of plant characteristicsâsuch as sizeâand the need to accommodate output fluctuations in shaping the demand for temp help, we conjecture that the availability of traditional labor and material inputs also play a role in determining how many temp help workers plants will ultimately decide to hire.
+5
+ For example, the input shortages that emerged in the post-pandemic period may have supercharged the recovery in the aggregate temp help employment, before easing more recently. As a result, our baseline model relates the employment of temporary workers at manufacturing plants with plant size, demand conditions, and indicators of input availability,
+
+$$$$ \log{({Temp\ Help)}_{ist}}=\ \beta_0+\beta_1\bullet\log{({Prod\ Wrk)}_{ist}}+\beta_2\bullet{Insuff.\ Orders}_{ist}+ $$$$ $$$$+\ \beta_3\bullet{Insuff.\ Materials}_{ist}+\beta_4\bullet{Insuff.\ Labor}_{ist}+d_i+d_{st}+\varepsilon_{ist},\ (1) $$$$
+
+where $$ \log{({Temp\ Help)}_{ist}} $$ denotes the ($$log$$) number of temp help workers at plant $$i$$ in sector $$s$$ at time $$t$$; $$ \log{({Prod\ Wrk)}_{ist}} $$ is the ($$log$$) number of production workers at the plant; $$ {Insuff.\ Orders}_{ist} $$ is a dummy variable equal to one if the firm is experiencing insufficient orders among the reasons for not operating at full capacity and, thus, reflects demand conditions; and $$ {Insuff.\ Materials}_{ist} $$ and $$ {Insuff.\ Labor}_{ist} $$ are dummies that measure whether a plant faces insufficient supply of materials or of labor, respectively, as other factors restraining capacity.
+
+Previous work suggests that larger plants demand more temp workers $$ (\beta_1>0) $$ and that the demand for temp help would be lower if plants faced insufficient orders $$ (\beta_2<0) $$, a typical signal of weakened demand conditions. In addition, we explore how labor and material shortages affect plants' hiring decisions. We expect that plants facing difficulties in hiring permanent workers would increasingly turn to temporary workers to maintain operations $$ (\beta_4>0) $$, while shortages of material inputs may have an ex ante uncertain impact on temp help demand depending on whether such inputs are substitutes for or complements to temp labor.
+
+Our specification also includes plant fixed effects and sector-time dummies to capture time-invariant plant-specific characteristics and sectoral featuresâsuch as unionization rates and labor turnoverâthat may influence the choice of temp help employment.
+6
+
+Table 2 presents the estimates of model (1). Our findings confirm that the use of temp help workers is more pronounced at larger firms, with an elasticity around 0.9 relative to production worker employment, and that firms facing weaker demand scale down significantly on temp help workers, a less costly margin of adjustment. Consistent with our expectations, plants facing labor shortages tend to increase the number of temp help employees. The coefficient on $$ {Insuff.\ Materials}_{ist} $$ is also positive, but its significance disappears once we include all controls (column 5).
+
+Table 2: Shortages and the Demand for Temp Help
+
+Variables
+
+Log Temp. Workers
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+Log Prod. Workers
+
+0.880***
+
+0.879***
+
+0.870***
+
+0.879***
+
+0.870***
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+Insuff. Orders
+
+ 
+
+-0.127***
+
+ 
+
+ 
+
+-0.120***
+
+ 
+
+(0.013)
+
+ 
+
+ 
+
+(0.013)
+
+Insuff. Materials
+
+ 
+
+ 
+
+0.038**
+
+ 
+
+0.006
+
+ 
+
+ 
+
+(0.018)
+
+ 
+
+(0.018)
+
+Insuff. Labor
+
+ 
+
+ 
+
+ 
+
+0.108***
+
+0.094***
+
+ 
+
+ 
+
+ 
+
+(0.017)
+
+(0.017)
+
+Plant FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Sector-Time FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+53,000
+
+53,000
+
+53,000
+
+53,000
+
+53,000
+
+R2
+
+0.852
+
+0.852
+
+0.853
+
+0.853
+
+0.853
+
+Notes: FE plant-level regressions, 2012q1-2023q3. Robust standard errors, clustered at the plant level, are reported in parenthesis.
+
+Log Temp. Workers: Log number of temporary help workers.
+
+Log Prod. Workers: Log number of production workers.
+
+Insuff. Orders: dummy equal to one if the plant lists insufficient orders among the reasons for not operating at full capacity.
+
+Insuff. Materials: dummy equal to one if the plant lists insufficient materials among the reasons for not operating at full capacity.
+
+Insuff. Labor: dummy equal to one if the plant lists insufficient labor or skills among the reasons for not operating at full capacity.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent, * significance at 10 percent.
+
+Source: U.S. Census Bureau.
+
+Thinking about magnitudes, plants facing labor shortages increase their demand for temp help by 6 percent of a standard deviationâor about 2,000 workers. This effect is quantitatively similarâalthough of a different signâto that of insufficient orders, which temper the demand of temp help by 8 percent of a standard deviation.
+
+Table 3 investigates whether the impact of shortages has been more pronounced since the onset of the pandemic. In particular, we include interactions of our main regressors with a dummy equal to one since 2020:Q2. Our results largely suggest that temp hiring motives related to the shortages have not been different more recently. Even as the marginal effects of shortages have remained unchanged, the significant rise in the number of plants experiencing labor shortages compounds the magnitude of the impact on temp help employment. The share of plants reporting labor shortages rose almost 30 percentage points, from 16 percent at the end of 2019 to 43 percent at the end of 2021. According to our estimates, that increase was associated with a 3-percentage point rise in the demand for temp help from manufacturing alone. With the share of temp workers in manufacturing around 30 percent, and the level of temp help employment at the end of 2021 about 5 percent above the 2019 levels, our estimates suggest that labor shortages in manufacturing explain 20 percent of the aggregate increase. Their contribution to the subsequent decline in employment is, instead, somewhat lowerâaround 10 percentâas labor shortages have roughly returned to pre-pandemic levels while the temp help employment dropped 10 percent from the late 2021 peak. Our estimates would be lower bounds of true effects if similar mechanisms were at play in other industries: Assuming that all industries faced similar effects, the boost from shortages to temp help employment would reach 60 percent from 2019 to 2021 and turn into a 30 percent drag afterwards.
+
+Table 3: Shortages and the Demand for Temp Help, Post-Pandemic Effects
+
+Variables
+
+Log Temp. Workers
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+Log Prod. Workers
+
+0.907***
+
+0.906***
+
+0.898***
+
+0.905***
+
+0.897***
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+(0.022)
+
+Log Prod. Workers*Post 2020q2
+
+-0.089***
+
+-0.088***
+
+-0.091***
+
+-0.088***
+
+-0.091***
+
+(0.019)
+
+(0.019)
+
+(0.019)
+
+(0.019)
+
+(0.019)
+
+Insuff. Orders
+
+ 
+
+-0.108***
+
+ 
+
+ 
+
+-0.100***
+
+ 
+
+(0.016)
+
+ 
+
+ 
+
+(0.016)
+
+Insuff. Orders*Post 2020q2
+
+ 
+
+-0.072**
+
+ 
+
+ 
+
+-0.074**
+
+ 
+
+(0.029)
+
+ 
+
+ 
+
+(0.029)
+
+Insuff. Materials
+
+ 
+
+ 
+
+0.061***
+
+ 
+
+0.033
+
+ 
+
+ 
+
+(0.024)
+
+ 
+
+(0.023)
+
+Insuff. Materials*Post 2020q2
+
+ 
+
+ 
+
+-0.051
+
+ 
+
+-0.056
+
+ 
+
+ 
+
+(0.036)
+
+ 
+
+(0.035)
+
+Insuff. Labor
+
+ 
+
+ 
+
+ 
+
+0.124***
+
+0.109***
+
+ 
+
+ 
+
+ 
+
+(0.020)
+
+(0.020)
+
+Insuff. Labor*Post 2020q2
+
+ 
+
+ 
+
+ 
+
+-0.041
+
+-0.038
+
+ 
+
+ 
+
+ 
+
+(0.032)
+
+(0.031)
+
+Plant FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Sector-Time FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+53,000
+
+53,000
+
+53,000
+
+53,000
+
+53,000
+
+R2
+
+0.853
+
+0.853
+
+0.853
+
+0.853
+
+0.854
+
+Notes: FE plant-level regressions, 2012q1-2023q3. Robust standard errors, clustered at the plant level, are reported in parenthesis.
+
+Log Temp. Workers: Log number of temporary help workers.
+
+Log Prod. Workers: Log number of production workers.
+
+Post 2020q2: dummy equal to one from 2020q2 onwards.
+
+Insuff. Orders: dummy equal to one if the plant lists insufficient orders among the reasons for not operating at full capacity.
+
+Insuff. Materials: dummy equal to one if the plant lists insufficient materials among the reasons for not operating at full capacity.
+
+Insuff. Labor: dummy equal to one if the plant lists insufficient labor or skills among the reasons for not operating at full capacity.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent, * significance at 10 percent.
+
+Source: U.S. Census Bureau.
+
+As for the other firm characteristics, we instead find significant differences following the COVID-19 outbreak. The interactions of the pandemic dummy with either firm size or insufficient orders have negative coefficients, indicating that, since 2020q2, larger plants tempered some of their demand for temporary workers, while plants facing insufficient orders further reduced temp hiring. These estimates could reflect the inclusion of the pandemic 
+recession
+ in the post-2020q2 dummy; as a result, those firm characteristics could account for the additional cyclical response of firms in recessions, consistent with previous work that emphasized the cyclical sensitivity of the temp help industry.
+7
+
+Our final empirical exercise considers whether economic uncertainty alters plants' decisions around the hiring of temp workers along the three margins we have identifiedâplant size, output fluctuations, and input shortages. We construct plant-level measures of uncertainty using revenue volatility over 2007-2014.
+8
+ Since our specification includes plant fixed effects, we will be able to consider only how uncertainty interacts with plant characteristics; thus, we include interactions of our measure of uncertainty with other regressors. The results are mixed: While plants experiencing larger revenue fluctuations do not change their temp hiring practices if they face shortages or insufficient orders, larger firms factor in their experience of higher uncertainty and significantly expand their temp worker cohort. At plants experiencing one standard deviation higher output volatility, the elasticity with respect to firm size is 0.98, compared with the 0.9 value at plants with a flatter revenue contour. The reaction of larger plants in presence of uncertainty is consistent with the mechanism highlighted by Abel et al. (1996), where firms may prefer costly expansion in some aspects of the businessâfor example, via temp help workers, a relatively less costly margin of adjustmentârather than completely delaying investment until uncertainty is resolved.
+
+Table 4: Shortages, Volatility, and the Demand for Temp Help
+
+Variables
+
+Log Temp. Workers
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+Log Prod. Workers
+
+0.905***
+
+0.905***
+
+0.899***
+
+0.903***
+
+0.898***
+
+(0.046)
+
+(0.046)
+
+(0.046)
+
+(0.046)
+
+(0.046)
+
+Log Prod. Workers*Firm Volatility
+
+0.503*
+
+0.497*
+
+0.501*
+
+0.498*
+
+0.497*
+
+(0.266)
+
+(0.266)
+
+(0.270)
+
+(0.273)
+
+(0.274)
+
+Insuff. Orders
+
+ 
+
+-0.107***
+
+ 
+
+ 
+
+-0.098***
+
+ 
+
+(0.027)
+
+ 
+
+ 
+
+(0.027)
+
+Insuff. Orders*Firm Volatility
+
+ 
+
+0.030
+
+ 
+
+ 
+
+0.050
+
+ 
+
+(0.122)
+
+ 
+
+ 
+
+(0.119)
+
+Insuff. Materials
+
+ 
+
+ 
+
+0.046
+
+ 
+
+0.010
+
+ 
+
+ 
+
+(0.041)
+
+ 
+
+(0.039)
+
+Insuff. Materials*Firm Volatility
+
+ 
+
+ 
+
+0.221
+
+ 
+
+0.237
+
+ 
+
+ 
+
+(0.185)
+
+ 
+
+(0.169)
+
+Insuff. Labor
+
+ 
+
+ 
+
+ 
+
+0.131***
+
+0.116***
+
+ 
+
+ 
+
+ 
+
+(0.042)
+
+(0.041)
+
+Insuff. Labor*Firm Volatility
+
+ 
+
+ 
+
+ 
+
+-0.065
+
+-0.098
+
+ 
+
+ 
+
+ 
+
+(0.250)
+
+(0.250)
+
+Plant FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Sector-Time FE
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Observations
+
+23,500
+
+23,500
+
+23,500
+
+23,500
+
+23,500
+
+R2
+
+0.839
+
+0.839
+
+0.839
+
+0.839
+
+0.839
+
+Notes: FE plant-level regressions, 2012q1-2023q3. Robust standard errors, clustered at the plant level, are reported in parenthesis.
+
+Log Temp. Workers: Log number of temporary help workers.
+
+Log Prod. Workers: Log number of production workers.
+
+Firm Volatility: Standard deviation of revenues over 2007-2014.
+
+Insuff. Orders: dummy equal to one if the plant lists insufficient orders among the reasons for not operating at full capacity.
+
+Insuff. Materials: dummy equal to one if the plant lists insufficient materials among the reasons for not operating at full capacity.
+
+Insuff. Labor: dummy equal to one if the plant lists insufficient labor or skills among the reasons for not operating at full capacity.
+
+Legend: *** denotes significance at 1 percent level, ** significance at 5 percent, * significance at 10 percent.
+
+Source: U.S. Census Bureau.
+
+All our results are based on contemporaneous effectsâfor example, whether the plant experiences shortages and its decision to hire temp workers occur within the quarter. This assumption is consistent with evidence by Weaver and Osterman (2017), who report that establishments require, on average, about six weeks to recruit and hire a core worker. Even so, our baseline results remain robust when using lags of our main regressors, a strategy that strengthens the case for a causal interpretation of the results.
+9
+
+Finally, our analysis has focused solely on the intensive marginâwhether plants expand or contract their pool of temp workersâas previous work had emphasized the prevalence of temporary workers or other flexible staffing arrangements in manufacturing.
+10
+
+All told, our results highlight the need to address shortages as a novel and intuitive margin for the use of temp helpâone that has significantly contributed to the recent patterns of employment in the temp help industry.
+
+References
+
+Abel, Andrew B., Avinash K. Dixit, Janice C. Eberly, and Robert S. Pindyck (1996). 
+Quarterly Journal of Economics
+, vol. 111 (3), 753â77
+
+Bureau of Labor Statistics (2017). Current Employment Statistics.
+
+Bureau of Labor Statistics (2017). Current Population Survey.
+
+Bureau of Labor Statistics (2023). Occupational Employment and Wage Statistics.
+
+Estevão, Marcello, and Saul Lach (1999). "
+Measuring Temporary Labor Outsourcing in U.S. Manufacturing
+." NBER Working Paper Series 7421. Cambridge, Mass.: National Bureau of Economic Research, November.
+
+Houseman, Susan N. (2001). "Why Employers Use Flexible Staffing Arrangements: Evidence from an Establishment Survey," 
+ILR Review
+, vol. 55 (1), 149â70.
+
+Houseman, Susan N., and Carolyn J. Heinrich (2015). "
+Temporary Help Employment in Recession and Recovery
+," Upjohn Institute Working Paper 15-227. Kalamazoo, MI: W.E. Upjohn Institute for Employment Research, May.
+
+Ono, Yukako, and Daniel Sullivan (2013). "Manufacturing Plants' Use of Temporary Workers: An Analysis using Census Microdata," 
+Industrial Relations: A Journal of Economy and Society
+, vol. 52 (2), 419â43.
+
+Segal, Lewis M., and Daniel G. Sullivan (1995). "The Temporary Labor Force," 
+Economic Perspectives
+, vol. 19 (2), 2â19.
+
+U.S. Census Bureau (2023). Quarterly Survey of Plant Capacity.
+
+Weaver, A., and Paul Osterman (2017). "Skill demands and mismatch in US manufacturing," 
+ILR Review
+, vol. 70 (2), pp.275â307.
+
+1. The views expressed in the article are those of the authors and do not necessarily reflect those of the Federal Reserve Board or the Federal Reserve System. The Census Bureau has ensured appropriate access and use of confidential data and has reviewed these results for disclosure avoidance protection. Project No. P-6000374, Disclosure Review Board (DRB) approval number: CBDRB-FY24-0459. 
+Return to text
+
+2. Estevão and Lach (1999) proposed a methodology to estimate temp help employment across manufacturing firms based on worker individual characteristics observable in the Bureau of Labor Statistics' Current Population Survey. Among other exceptions, Ono and Sullivan (2013) rely on data from the late 1990s and early 2000s to explore how the employment of temp help workers in manufacturing relates to output fluctuations and uncertainty. Our analysis is, instead, more recent and also focuses on the effect of labor and material shortages on temp help employment, complementing their work. 
+Return to text
+
+3. Both series shown in figure 2 exclude transportation equipment, as some of the detailed data for that industry are often suppressed in the QSPC survey. 
+Return to text
+
+4. Data from the Contingent Worker Supplement to the Current Population Survey, which provides details on the industry of employment of temp help workers, are available for February 1995, February 1997, 1999, 2005, and May 2017. 
+Return to text
+
+5. See Ono and Sullivan (2013). Segal and Sullivan (1995) list, in more detail, firms' reasons in using temporary workers. 
+Return to text
+
+6. For example, Houseman (2001) shows that the use of temp help workers is lower in more unionized sectors, a result also confirmed by Ono and Sullivan (2013). 
+Return to text
+
+7. See, for example, Seagal and Sullivan (1995) and Houseman and Heinrich (2015). 
+Return to text
+
+8. Measures of revenue dispersions largely reflect the fluctuations during the Great Recession. Indeed, the correlation of our measure of volatility with an indicator constructed over 2007-2011 is 1. 
+Return to text
+
+9. The coefficient estimates are smaller and point to an effect of 3 percent of a standard deviation for plants facing labor shortages or insufficient orders. 
+Return to text
+
+10. Houseman (2001) reports that 72 percent of manufacturing establishment use temporary workers. 
+Return to text
+
+Please cite this note as:
+
+Bowdle, Spencer, and Maria D. Tito (2024). "Flexing the Factory? The Role of Temporary Help Workers in Manufacturing," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, November 21, 2024, https://doi.org/10.17016/2380-7172.3650.
+
+Disclaimer:
+ FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.
+
+Back to Top

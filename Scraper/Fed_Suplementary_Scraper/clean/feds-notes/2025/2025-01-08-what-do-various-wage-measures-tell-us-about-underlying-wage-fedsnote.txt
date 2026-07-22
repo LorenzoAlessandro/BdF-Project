@@ -1,0 +1,159 @@
+FEDS Notes
+
+Twitter
+
+January 08, 2025
+
+What do various wage measures tell us about underlying wage growth?
+
+Hie Joo Ahn
+, Lucas Moyon, and
+Daniel Villar
+
+The increase in price inflation following the Covid pandemic has brought renewed attention to wage growth as a potentially important driver of price inflation.
+1
+At the same time, developments during and after the pandemic have made it difficult to measure aggregate wage inflation. To begin with, the economic shocks associated with the pandemic had uneven effects across industries, leading to significantly increased dispersion in sectoral wage growth.
+2
+Even more challenging is that these sectoral imbalances likely intensified the shortcomings of various wage measures in capturing the underlying wage inflation that reflects the tightness of labor market and aligns with the business cycle. For instance, at the onset of the pandemic average hourly earnings growthâa widely cited wage growth metricârose rather than fell, despite a significant drop in labor demand. This puzzling development was driven by a compositional shift among workers: A disproportionately large share of low-wage workers lost their jobs, which led to a shift in payroll composition toward higher-wage workers, thus raising average wages.
+
+Economists have access to a variety of measures of wage inflation from various sources. In addition to average hourly earnings (AHE), which comes from the Current Employment Statistics (CES) survey and measures total wages and salaries divided by total hours for the private nonfarm sector, other important metrics include the Employment Cost Index (ECI), the Atlanta Wage Growth Tracker (AWT), and measures constructed by Federal Reserve Board staff based on data from the payroll processing company ADP (ADP). The ECI, which is derived from the National Compensation Survey, measures the cost of labor for a given
+job,
+so controls for changes in the mix of industries and occupations. The AWT, which is based on microdata from the Current Population Survey, measures wage changes for a given
+worker
+. The ADP wage changes are measured similarly to the AWT, but are based on the individual-level records of a payroll processing company.
+3
+Each data source uses a distinct concept of wages, measuring wage inflation in its own unique way. No dataset is flawless; each wage indicator captures wage inflation alongside its own measurement errors.
+4
+
+This note introduces a novel indicator of aggregate and sectoral wage inflation, designed to capture wage inflation pressure that is pervasive both across industries and across different wage measures within a given industry. We create a comprehensive dataset that includes AHE, ECI, AWT, and ADP data for 11 broad industry definitions (this level of disaggregation provides a reliable three-month moving average for sectoral AWT).
+5
+The 11 industries include mining, construction, education and health, information, finance, professional and business services, leisure and hospitality, other services, manufacturing, trade, and transportation, and our dataset is structured so that wage inflation in each industry is observed using indicators from several different data sources. We then adapt the hierarchical dynamic factor model (HDF model) of Moench et al. (2013) to produce measures of underlying wage inflation.
+6
+
+For each industry, we observe at least four different wage indicators.
+7
+Assuming each indicator has distinct or uncorrelated measurement errors or features, the common component across these measures captures the underlying wage inflation of the industry in a manner that controls for any indicator-specific feature or measurement error. We therefore start by extracting an industry-level common component using the wage indicators that are available for each industry. In the second step, we extract an aggregate common component from these industry-level estimates that controls for industry-specific idiosyncratic movements. This bottom-up approach offers a powerful advantage: Even if the disaggregate data from the same source share common measurement errors across industries, these errors are purged by identifying the sector-level common component from different data sources. Leveraging the unique structure of our dataset and the information content of wage measures from different sources, we capture aggregate and sectoral underlying wage inflation by estimating the HDF model using a Bayesian method.
+8
+Our model is specified monthly, and the sample period is 2009:M1 â 2024:M9.
+9
+
+Panel A of Figure 1 displays the resulting estimate of aggregate underlying wage inflation. Since the estimated aggregate factor does not have natural units of measurement, it is scaled by the mean and standard deviation of the percent change in the wage and salaries component of the ECI to make it comparable to headline ECI wage inflation. Aggregate underlying wage inflation declines sharply and very briefly at the onset of the pandemic, then rises rapidly and moves far above its previous levels. After peaking in 2022, the aggregate estimate begins to decline and approaches pre-pandemic levels by the end of the first half of 2024; the 2024:Q3 average essentially matches that from 2019:Q4.
+10
+As shown in Panel B of the same figure, the path of underlying wage inflation aligns with the unemployment rate and the vacancyâunemployment ratio, both of which provide gauges of labor market tightness.
+11
+
+Figure 1. Estimated Aggregate Underlying Wage Inflation (2014:M1 â 2024:M9)
+
+Note: Panel A displays the aggregate factor scaled by the mean and standard deviation of 12-month percent changes in the wage and salaries component of the ECI. In Panel A, the dashed lines are 95 percent posterior intervals. Panel B displays two measures of labor market tightness: the unemployment rate (right axis) and the vacancyâunemployment ratio (left axis). The shaded bar indicates period of economic recession as defined by the National Bureau of Economic Research: February 2020âApril 2020.
+
+Sources: Authorsâ calculations and BLS.
+
+Accessible version
+
+Figure 2 presents industry-level estimates of underlying wage inflation for leisure and hospitality (Panel A) and education and health (Panel B), scaled according to their respective sectoral ECI growth. Both sectors were affected by the Covid-19 pandemic, but in different ways and to different degrees. Wage inflation in both sectors plummeted during the pandemic recession; soon after that, wage inflation in both industries increased rapidly in 2021 and 2022 before then starting to decline. The increase and subsequent decline are more pronounced for the leisure and hospitality sector. Wage inflation in leisure and hospitality returned to its pre-pandemic pace by the end of 2023, fluctuated around that level through the first half of 2024, and then fell below the pre-pandemic pace in the third quarter. By contrast, wage inflation in the education and health sector remains somewhat higher than its pre-pandemic level. The evolution of both industries' estimates aligns with the quits rate and job openings rate in each sector (Panels C and D), which are proxies for the tightness of each sector's labor market.
+
+Figure 2. Underlying Wage Inflation and Measures of Labor Market Tightness of Selected Industries (2014:M1 â 2024:M9)
+
+Note: Panels A and B show the industry-level factors scaled by the mean and standard deviation of annualized 12-month percent changes in the wage and salaries component of the ECI for leisure and hospitality (Panel A) and education and health (Panel B). In Panels A and B, the dashed lines represent 95 percent posterior intervals. Panels C and D show the three-month moving averages of quits and job openings rates, expressed as fractions of the labor force, for the same industries. The three-month moving averages are used to smooth out transitory noise in the industry-level data. The shaded bar indicates period of economic recession as defined by the National Bureau of Economic Research: February 2020âApril 2020.
+
+Sources: Authorsâ calculations and BLS.
+
+Accessible version
+
+The model's assessment of underlying wage inflation is supported by other evidence besides the measures of hiring and labor market tightness shown above. For example, the May 2024 Beige Book reported that "[w]age growth remained mostly moderate, though some Districts reported more modest increases. Several Districts reported that wage growth was at pre-pandemic historical averages or was normalizing toward those rates." Subsequent Beige Books have reported that wage growth in most of the country is moderate or modest, and slowing in many places. [Federal Reserve System, 2024].
+
+In summary, we demonstrate that multiple sources of wage data with rich sectoral detail can effectively uncover underlying wage inflation at both the aggregate and industry levels in the context of a carefully designed hierarchical dynamic factor model. Our empirical approach is particularly effective in assessing wage inflation during the Covid era, a period marked by increased dispersion in wage growth across industries and heightened volatility in wage inflation. In addition, our estimates align well with indicators of labor market conditions at both the aggregate and sectoral levels. By the third quarter of 2024, our measure of aggregate underlying wage inflation had returned to pre-pandemic levelsâwith inflation in some sectors even falling below its preâpandemic rateâproviding additional evidence that the labor market has cooled considerably.
+
+References
+
+Ahn, Hie Joo, Han Chen, and Michael Kister. 2024. "A New Indicator of Common Wage Inflation."
+Journal of Money, Credit and Banking
+.
+
+Ahn, Hie Joo, and Jeremy B. Rudd. 2024. "(Re-)Connecting Inflation and the Labor Market: A Tale of Two Curves."
+Finance and Economics Discussion Series 2024-050
+, Board of Governors of the Federal Reserve System (U.S.).
+
+Almuzara, Martin, Richard Audoly, Augustin Belin, and Davide Melcangi. 2024. "Will the Moderation in Wage Growth Continue?"
+Technical Report
+, Federal Reserve Bank of New York.
+
+Amiti, Mary, Sebastian Heise, Fatih Karahan, and AyÅegül Åahin. 2024. "Inflation Strikes Back: The Role of Import Competition and the Labor Market."
+NBER Macroeconomics Annual 2024
+.
+
+BaÅbura, Marta, and Michele Modugno. 2014. "Maximum Likelihood Estimation of Factor Models on Datasets with Arbitrary Pattern of Missing Data."
+Journal of Applied Econometrics
+, 29 (1): 133â160.
+
+Bernanke, Ben, and Blanchard, Olivier. Forthcoming. "What Caused the Pandemic-Era U.S. Inflation?"
+American Economic Journal: Macroeconomics
+.
+
+Cajner, Tomaz, Leland Crane, Ryan Decker, Adrian Hamins-Puertolas, and Christopher Kurz. n.d. "Improving the Accuracy of Economic Measurement with Multiple Data Sources." In
+Big Data for 21st Century Economic Statistics
+.
+
+Federal Reserve Bank of Atlanta. 2024. "Atlanta Wage Growth Tracker."
+Technical Report
+, Federal Reserve Bank of Atlanta.
+
+Federal Reserve System. 2024.
+The Beige Book
+.
+
+Grigsby, John, Erik Hurst, and Ahu Yildirmaz. 2021. "Aggregate Nominal Wage Adjustments: New Evidence from Administrative Payroll Data."
+American Economic Review
+, 111: 428â471.
+
+Moench, Emanuel, Serena Ng, and Simon Potter. 2013. "Dynamic Hierarchical Factor Models."
+The Review of Economics and Statistics
+, 95 (5): 1811â1817.
+
+Shapiro, Adam H. 2023. "How Much Do Labor Costs Drive Inflation?"
+Economic Letter 2023-13
+, Federal Reserve Bank of San Francisco.
+
+The views expressed in this note are those of the authors only and do not necessarily represent those of the Federal Reserve Board or its staff. We gratefully acknowledge useful comments and suggestions from Andrew Figura, Glenn Follette, and Jeremy Rudd.
+
+1. See, for example, Shapiro (2023), Bernanke and Blanchard (2023), and Amiti et al. (2024).
+Return to text
+
+2. The cross-industry standard deviation of average hourly earnings for production and nonsupervisory workers across 18 two-digit NAICS industries increased from 2.3 (average between 2016:M1 and 2019:M12) to 5.5 (average between 2020:M1 and 2021:M12). This calculation is based on the annualized three-month percent change. Similarly, the two-digit cross-industry standard deviation of ECI growthâmeasured by the annualized three-month percent change in the wage and salary component across 16 industriesârose from an average of 1.5 (2016:Q1 to 2019:Q4) to 2.9 (2020:Q1 to 2021:Q4).
+Return to text
+
+3. The ADP data are also used by Grigsby et al. (2021) and Cajner et al. (2022), among others. These studies contain a more detailed description of the data.
+Return to text
+
+4. As previously noted, the AHE can be significantly influenced by shifts in worker composition. The ECI, which measures the cost of jobs, is less affected by compositional issues but still has limitations in capturing implicit wage changes when workers with varying productivity levels take on the same job at the same pay. The AWT, which follows individual workers, mitigates this shortcoming of the ECI but can still be affected by measurement error arising from the sample size and self-reported nature of the Current Population Survey. Finally, despite its large sample size, ADP measures are based on a sample that is not designed to be representative and so might not reflect aggregate wage developments.
+Return to text
+
+5. For the AHE, we use the annualized three-month percent change for production and nonsupervisory workers. For the ECI, we use the annualized three-month percent change of its wage and salary component. Both the AWT and ADP measure wage changes at the individual level and hence are noisy. We therefore use a three-month moving average of the median 12-month wage change for the AWT, while for the ADP, we use a seasonally adjusted trimmed mean of individual three-month changes. The industry-level AWT data are constructed using the infrastructure and code provided by CADRE at the Federal Reserve Bank of Kansas City (available at
+https://cps.kansascityfed.org/
+).
+Return to text
+
+6. Other papers have estimated underlying aggregate wage inflation as the common component of wage growth across different sectors using dynamic factor models. In particular, Ahn et al. (2024) take this approach using AHE data from 75 industries, and Almuzara et al. (2024) apply it to AWT series broken out by industry, occupation, and other worker attributes.
+Return to text
+
+7. In principle, each industry has four wage measures (the only exception is "Mining," for which the ECI is not available). Since the AHE and the ADP have more disaggregated industry-level information, a few broad industries have more than four wage indicators: For example, trade as well as professional and business services each have seven indicators.
+Return to text
+
+8. Our HDF model is a three-layer model that is composed of two layers of latent dynamics and one layer of observation, which is the main modification we make to a four-layer model proposed by Moench et al. (2013). In our model, the first latent layer is the commonality within an industry and the second latent layer is the commonality across industries. The indicator-specific measurement features and errors are captured by the idiosyncratic component at the industry level.
+Return to text
+
+9. Our sample period begins in 2009 because of the availability of ADP data. The ECI is available quarterly (its value corresponds to the last month of a given quarter), and we use the quarterly data to interpolate monthly values with the initializing technique of the EM algorithm from BaÅbura and Modugno (2014). The extreme outliers in the industry-level AHE data during the Covid pandemic are removed, as is typically done when estimating a dynamic factor model.
+Return to text
+
+10. Most of the wage measures used by our model follow a similar qualitative pattern; however, the magnitudes of the changes in wage growth in recent years vary noticeably across measures. Our model's aggregate estimate appears to take a considerable amount of signal from the ADP measures; note that the industry-level ADP data are less noisy relative to other sectoral measures, likely because of their large sample size. In addition, the ADP-based series appear to move more closely with the aggregate business cycle than other wage indicators.
+Return to text
+
+11. The trajectory of the aggregate wage factor also aligns well with the quits rate from JOLTS, which is an alternative measure of labor-market tightness. This result is consistent with Ahn and Rudd (2024), who find that a job reallocation shock that increases quits raises both wage and price inflation.
+Return to text
+
+Please cite this note as:
+
+Ahn, Hie Joo, Lucas Moyon, and Daniel Villar (2024). "What do various wage measures tell us about underlying wage growth?," FEDS Notes. Washington: Board of Governors of the Federal Reserve System, January 08, 2025, https://doi.org/10.17016/2380-7172.3693.
+
+Disclaimer:
+FEDS Notes are articles in which Board staff offer their own views and present analysis on a range of topics in economics and finance. These articles are shorter and less technically oriented than FEDS Working Papers and IFDP papers.

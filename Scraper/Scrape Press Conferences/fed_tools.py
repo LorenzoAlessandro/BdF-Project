@@ -60,10 +60,7 @@ SOURCES = {
     # is occasionally spelled 'fomcpressconf', hence press?), and the
     # transcript itself is a predictable PDF under /mediacenter/files/.
     "fomc-press-conferences": dict(
-        kind="fomc", label="presconf", first_year=2000,
-        # ^ pressers exist from 2011-04-27; first_year=2022 scopes the
-        #   scrape to 2022-onwards per request (set back to 2011 for the
-        #   full run, or add last_year=2026 to hard-freeze the top end).
+        kind="fomc", label="presconf", first_year=2011,
         patterns=[r"/monetarypolicy/fomcpress?conf(?P<d>\d{8})\.htm"],
         doc_url=FED + "/mediacenter/files/FOMCpresconf{d}.pdf"),
     # Summary of Economic Projections tables (one 2022 page is spelled

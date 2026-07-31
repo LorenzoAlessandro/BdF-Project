@@ -39,8 +39,35 @@ PANEL_B2 = ("ease", "easing", "rise", "rising", "increase", "expand",
 PANEL_C = ("weren't", "were not", "wasn't", "was not", "did not",
            "didn't", "do not", "don't", "will not", "won't")
 
+# Guide-specific stance phrases (Table 10 "Key Words/Phrases" row, plus the
+# directional cues from the other rows that aren't single-word A2/B2 hits:
+# these are what actually turn a topical sentence into a Dovish/Hawkish one
+# rather than a merely on-topic/neutral one).
+PANEL_DOVISH_PHRASES = (
+    "patient", "patience", "gradual", "gradually", "accommodative",
+    "accommodation", "supporting the recovery", "subpar inflation",
+    "disinflation", "act cautiously",
+)
+PANEL_HAWKISH_PHRASES = (
+    "vigilant", "vigilance", "act decisively", "restrictive stance",
+    "restrictive", "sustained", "durably", "quantitative tightening",
+    "balance sheet runoff",
+)
+PANEL_NEUTRAL_PHRASES = (
+    "mixed", "balanced", "data-dependent", "data dependent",
+    "meeting-by-meeting", "meeting by meeting", "medium-term target",
+)
+
 TARGET_VOCAB = PANEL_A1 + PANEL_B1              # target filter: A1 | B1
 SPLIT_VOCAB = TARGET_VOCAB + PANEL_A2 + PANEL_B2 + PANEL_C  # any Table 1
+
+# Stance/direction vocabulary: words and guide phrases that actually carry a
+# dovish/hawkish *direction*, as opposed to TARGET_VOCAB which only says the
+# sentence is on-topic. A sentence needs a TARGET_VOCAB hit *and* a
+# SIGNAL_VOCAB hit to be a real coding candidate; TARGET_VOCAB alone lets
+# through plenty of purely descriptive, on-topic-but-directionless prose.
+SIGNAL_VOCAB = (PANEL_A2 + PANEL_B2 + PANEL_DOVISH_PHRASES
+                 + PANEL_HAWKISH_PHRASES)
 
 _VOCAB_RES = {}
 
@@ -80,6 +107,27 @@ def _sent_tokenize(text):
             except Exception:
                 pass
         return nltk.tokenize.sent_tokenize(text)
+
+# ---------------------------------------------------------------------------
+# Titles that empirically carry a much higher share of directional sentences
+# than the average ECB speech (anniversary lectures, historical retrospectives,
+# payments/fintech talks, etc. are almost all Neutral regardless of period).
+# These are the speech *types* built around live policy communication:
+# post-Governing-Council introductory statements, "outlook" addresses, and
+# speeches given explicitly to explain the current stance.
+TITLE_BOOST_TERMS = (
+    "introductory statement", "monetary policy and the outlook",
+    "monetary policy in", "economic outlook", "current policy challenges",
+    "high inflation", "commitment and", "monetary policy decisions",
+    "press conference",
+)
+
+def is_boosted_title(title):
+    """True if a speech title matches a known higher-signal-density type."""
+    if not title:
+        return False
+    low = title.lower()
+    return any(t in low for t in TITLE_BOOST_TERMS)
 
 # ---------------------------------------------------------------------------
 # ECB Presidents (for final filtering)
@@ -324,11 +372,18 @@ def load_topics(manifest):
 
 def build(in_dir, glob="*.txt", title_filter=True, target_filter=True,
           do_split=True, drop_questions=False, after=None, topic=None,
-          topics_by_file=None, president_only=True):
-    """Process speeches and extract sentences."""
+          topics_by_file=None, president_only=True, signal_filter=False):
+    """Process speeches and extract sentences.
+
+    signal_filter: if True, a sentence must contain a TARGET_VOCAB word
+        *and* a SIGNAL_VOCAB word (direction word or guide key phrase) to be
+        kept. This is the lever for pulling in more sentences that actually
+        read as Dovish/Hawkish rather than merely on-topic. It's a stricter
+        superset of target_filter, so target_filter is still applied first.
+    """
     records = []
     n_files = n_after = n_title = n_topic = 0
-    n_sents = n_quest = n_junk = n_target = 0
+    n_sents = n_quest = n_junk = n_target = n_signal = 0
     n_non_president = 0
 
     for path in sorted(Path(in_dir).rglob(glob)):
@@ -365,9 +420,14 @@ def build(in_dir, glob="*.txt", title_filter=True, target_filter=True,
             if target_filter and not contains_any(sent, TARGET_VOCAB):
                 continue
             n_target += 1
+            if signal_filter and not contains_any(sent, SIGNAL_VOCAB):
+                continue
+            n_signal += 1
+            boosted = is_boosted_title(title)
             for unit in (split_sentence(sent) if do_split else [sent]):
                 records.append(dict(date=date, file=path.name, speaker=speaker,
-                                    title=title, topics=topics, sentence=unit))
+                                    title=title, topics=topics, sentence=unit,
+                                    boosted=boosted))
 
     msg = f"{n_files} files kept"
     drops = []
@@ -383,14 +443,23 @@ def build(in_dir, glob="*.txt", title_filter=True, target_filter=True,
         msg += " (" + ", ".join(drops) + " dropped)"
     msg += (f"; {n_sents} sentences, {n_junk} junk"
             + (f", {n_quest} questions" if drop_questions else "")
-            + f" dropped; {n_target} target, {len(records)} after splitting")
+            + f" dropped; {n_target} target"
+            + (f", {n_signal} with a stance signal" if signal_filter else "")
+            + f", {len(records)} after splitting")
     print(msg)
     return records
 
 # ---------------------------------------------------------------------------
 
-def stratified_sample(records, n, seed):
-    """Equal share of n per calendar year, seeded."""
+def stratified_sample(records, n, seed, boost_frac=0.0):
+    """Equal share of n per calendar year, seeded.
+
+    boost_frac: if > 0, this fraction of each year's quota is filled first
+        from records tagged boosted=True (higher-signal-density speech
+        titles; see is_boosted_title), falling back to the normal pool for
+        the remainder or if a year has no boosted records available. Set to
+        0 to reproduce the original behaviour exactly.
+    """
     rng = random.Random(seed)
     pools = defaultdict(list)
     for i, r in enumerate(records):
@@ -419,13 +488,29 @@ def stratified_sample(records, n, seed):
             quota[y] += bump[y]
 
     chosen = set()
+    n_boosted_taken = 0
     for y in years:
-        chosen.update(rng.sample(pools[y], quota[y]))
+        pool = pools[y]
+        want = quota[y]
+        if boost_frac > 0:
+            boosted_idx = [i for i in pool if records[i].get("boosted")]
+            normal_idx = [i for i in pool if not records[i].get("boosted")]
+            want_boosted = min(len(boosted_idx), round(want * boost_frac))
+            take_boosted = rng.sample(boosted_idx, want_boosted) if want_boosted else []
+            remaining_pool = normal_idx + [i for i in boosted_idx if i not in take_boosted]
+            take_rest = rng.sample(remaining_pool, min(want - want_boosted, len(remaining_pool)))
+            chosen.update(take_boosted)
+            chosen.update(take_rest)
+            n_boosted_taken += len(take_boosted)
+        else:
+            chosen.update(rng.sample(pool, want))
     ann = [records[i] for i in range(len(records)) if i in chosen]
     rest = [records[i] for i in range(len(records)) if i not in chosen]
     print("per-year sample (picked/available): "
           + ", ".join(f"{y or '????'}: {quota[y]}/{len(pools[y])}"
                       for y in years))
+    if boost_frac > 0:
+        print(f"boosted-title sentences in sample: {n_boosted_taken}/{len(ann)}")
     return ann, rest
 
 def per_file_sample(records, k, seed):
@@ -461,7 +546,9 @@ def process_ecb_speeches(
     no_split=False,
     drop_questions=False,
     after=None,
-    all_speakers=False
+    all_speakers=False,
+    signal_filter=False,
+    boost_frac=0.0
 ):
     """
     Main function to process ECB speeches and create annotation dataset.
@@ -496,6 +583,19 @@ def process_ecb_speeches(
         Only include files on or after this date (YYYY-MM-DD)
     all_speakers : bool
         Include all speakers (default: only Presidents)
+    signal_filter : bool
+        Require each sentence to co-occur with a direction word / guide key
+        phrase (SIGNAL_VOCAB), not just a topic word (TARGET_VOCAB). This is
+        the main lever for raising the share of sentences that actually code
+        as Dovish/Hawkish rather than merely on-topic. Default False
+        reproduces the original behaviour.
+    boost_frac : float
+        Fraction (0-1) of each year's sampling quota to fill first from
+        speeches whose title matches a known higher-signal-density pattern
+        (introductory statements, "monetary policy and the outlook", etc. -
+        see TITLE_BOOST_TERMS). 0 reproduces the original even sampling;
+        ignored when per_file sampling is used. Try 0.4-0.6 to meaningfully
+        shift the sample toward denser speeches without eliminating variety.
     
     Returns:
     --------
@@ -518,7 +618,8 @@ def process_ecb_speeches(
                     drop_questions=drop_questions,
                     after=after, topic=topic,
                     topics_by_file=topics_by_file,
-                    president_only=not all_speakers)
+                    president_only=not all_speakers,
+                    signal_filter=signal_filter)
     
     if not records:
         raise ValueError(f"No sentences found under {in_dir}")
@@ -527,7 +628,7 @@ def process_ecb_speeches(
     if per_file:
         ann, rest = per_file_sample(records, per_file, seed)
     else:
-        ann, rest = stratified_sample(records, n_samples, seed)
+        ann, rest = stratified_sample(records, n_samples, seed, boost_frac=boost_frac)
     
     # Create DataFrames
     cols = ["date", "file", "speaker", "title", "topics", "sentence"]
@@ -555,8 +656,10 @@ def process_ecb_speeches(
 # Example usage in notebook
 
 if __name__ == "__main__":
-    # Default usage - only Presidents, all filters applied
-    df_annotate, df_remaining = process_ecb_speeches()
+    df_annotate, df_remaining = process_ecb_speeches(
+        signal_filter=True,
+        boost_frac=0.5
+    )
     
     # Alternative: include all speakers
     # df_annotate, df_remaining = process_ecb_speeches(all_speakers=True)
@@ -571,4 +674,14 @@ if __name__ == "__main__":
     # df_annotate, df_remaining = process_ecb_speeches(
     #     per_file=5,
     #     all_speakers=True
+    # )
+
+    # Alternative: bias the sample toward sentences that actually carry a
+    # dovish/hawkish direction (topic word + direction word/guide phrase),
+    # and toward speech types built around live policy communication
+    # (introductory statements, outlook addresses) rather than ceremonial
+    # ones. This is the "more like FOMC statements" setting.
+    # df_annotate, df_remaining = process_ecb_speeches(
+    #     signal_filter=True,
+    #     boost_frac=0.5
     # )

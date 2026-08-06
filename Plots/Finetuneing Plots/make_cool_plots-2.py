@@ -40,8 +40,8 @@ from scipy import stats
 
 # ==================== HARD-CODED INPUT PATHS (edit me) ======================
 BASE = Path("/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/"
-            "Project/BdF-Project/Bert Model Finetuning Code /Finetuned Models/"
-            "Multi Model Finetune - Bert")
+            "Project/BdF-Project/Bert Model Finetuning Code /"
+            "Multi Model Finetune - Bert ")
 RESULTS_CSV = BASE / "results_per_run.csv"     # falls back to auto-discovery
 LOGS = BASE / "logs"
 

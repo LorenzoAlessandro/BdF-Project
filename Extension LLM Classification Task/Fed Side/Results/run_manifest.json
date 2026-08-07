@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-08-07T07:50:55.317832+00:00",
+  "random_seed": 42,
+  "python": "3.13.12",
+  "platform": "macOS-14.3.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "anthropic": "0.120.2",
+    "openai": "2.53.0",
+    "pandas": "3.0.5",
+    "openpyxl": "3.1.5",
+    "xlrd": "2.0.2"
+  },
+  "models": {
+    "claude-sonnet": "claude-sonnet-4-6",
+    "claude-haiku": "claude-haiku-4-5",
+    "gpt-5.1": "gpt-5.1",
+    "gpt-5-mini": "gpt-5-mini",
+    "mistral-large": "mistral-large-latest",
+    "mistral-small": "mistral-small-latest",
+    "deepseek-chat": "deepseek-chat",
+    "deepseek-reasoner": "deepseek-reasoner"
+  },
+  "prompts_sha256": "d553bf6685e4cc2abf9b7c7a70e8fc931229535418e72f394ae2054b6f938e18",
+  "gold_to_digit": {
+    "D": 0,
+    "MD": 0,
+    "H": 1,
+    "MH": 1,
+    "N": 2
+  },
+  "runs": {
+    "fed_statements_presconf": {
+      "n_items": 1998,
+      "items_sha256": "9caab486ccdceaab96d175a18269c26aaa06a1bb9a5f9899ef2337ea151865d7",
+      "files": {
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/FED/Annotated/FOMC STATEMENTS/fomc_statements_train_1000.xls": "8a8bc2c3d576bfd8b72da7a50d8cf6d59a2f59102e3f2fecc755b0ced818330a",
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/FED/Annotated/Press Conferences/presconf_to_annotate.xlsx": "e6f82e4be078528aa2ff95be811310dc34537cba58c26a1c7a6c5d71e170a511"
+      },
+      "fewshot_from": "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/FED/Annotated/Speeches/Annotated with Shah Merge/lab-manual-sp-train-5768-augmented.xlsx",
+      "gold_dist": {
+        "H": 491,
+        "N": 877,
+        "D": 628,
+        "unscored": 2
+      }
+    },
+    "fed_speeches": {
+      "n_items": 951,
+      "items_sha256": "f73d74942bafa41c3d1c912b60672091d17446c3e07d010553649e2af4126a80",
+      "files": {
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/FED/Annotated/Speeches/Annotated with Shah Merge/lab-manual-sp-train-5768-augmented.xlsx": "6412b9cce58543c4fc100ab0d6bbf1e35e9a48b633af8f4922d133735cdbe269"
+      },
+      "fewshot_from": "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/FED/Annotated/FOMC STATEMENTS/fomc_statements_train_1000.xls",
+      "gold_dist": {
+        "D": 201,
+        "N": 520,
+        "H": 230
+      }
+    }
+  },
+  "config": {
+    "limit": null,
+    "rpm": 200,
+    "workers": 4,
+    "dry_run": false,
+    "allow_input_change": true
+  }
+}

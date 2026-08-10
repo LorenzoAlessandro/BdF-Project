@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-08-07T10:40:10.200256+00:00",
+  "random_seed": 42,
+  "python": "3.13.12",
+  "platform": "macOS-14.3.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "anthropic": "0.120.2",
+    "openai": "2.53.0",
+    "pandas": "3.0.5",
+    "openpyxl": "3.1.5",
+    "xlrd": "2.0.2"
+  },
+  "models": {
+    "claude-sonnet": "claude-sonnet-4-6",
+    "claude-haiku": "claude-haiku-4-5",
+    "gpt-5.1": "gpt-5.1",
+    "gpt-5-mini": "gpt-5-mini",
+    "mistral-large": "mistral-large-latest",
+    "mistral-small": "mistral-small-latest",
+    "deepseek-chat": "deepseek-chat",
+    "deepseek-reasoner": "deepseek-reasoner"
+  },
+  "prompts_sha256": "ca08212ade4a035cb28f11dfb76e72f0b9c84ad9d52296f1b3f558c60a67849e",
+  "gold_to_digit": {
+    "D": 0,
+    "MD": 0,
+    "DOVISH": 0,
+    "H": 1,
+    "MH": 1,
+    "HAWKISH": 1,
+    "N": 2,
+    "NEUTRAL": 2
+  },
+  "runs": {
+    "ECB_statements_presconf": {
+      "n_items": 2044,
+      "items_sha256": "6303671ca3802c288adbc7b800dd0bf750681e68954e31231bb69d7ac5e44aac",
+      "files": {
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/ecb_train-2.xls": "5f7b85d7f4a23b82877299b949944fe769bf3dd0daaa1c65e8c7375be5e80cf3",
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/ecb_test.csv": "c474173dd26e15558c97d6493705181d8e9b7ef4743b2cf05d2f95179091d78e",
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/ecb_Press Conference Statements + QA_to_annotate.xlsx": "6abd11ad489fe98783e25f024d3943e9ab56adc16e2b89d8729ab09d6895df40"
+      },
+      "fewshot_from": "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/speeches_annotated_v3.xlsx",
+      "gold_dist": {
+        "N": 951,
+        "D": 633,
+        "H": 459,
+        "unscored": 1
+      }
+    },
+    "ECB_speeches": {
+      "n_items": 1000,
+      "items_sha256": "20b1ae3b03720ff35b55c64bbf7620e9601d7652bd93c4c3d191ce2bf76a42dc",
+      "files": {
+        "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/speeches_annotated_v3.xlsx": "2f8b24ba5ccf30d8810847e91e3972e8fa501ee86aad9d9f6817ea78760d57f6"
+      },
+      "fewshot_from": "/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /Github Repos/Project/BdF-Project/data/ECB/Annotated/ecb_train-2.xls",
+      "gold_dist": {
+        "N": 467,
+        "H": 216,
+        "D": 317
+      }
+    }
+  },
+  "config": {
+    "limit": null,
+    "rpm": 200,
+    "workers": 4,
+    "dry_run": false,
+    "allow_input_change": false
+  }
+}

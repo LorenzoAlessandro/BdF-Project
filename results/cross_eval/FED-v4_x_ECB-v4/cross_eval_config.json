@@ -1,0 +1,83 @@
+{
+  "experiment": "v4",
+  "branches": {
+    "FED": "FED-v4",
+    "ECB": "ECB-v4"
+  },
+  "learning_rates": {
+    "roberta-base": 2e-05,
+    "roberta-dapt": 2e-05,
+    "roberta-large": 2e-05,
+    "roberta-large-dapt": 2e-05,
+    "deberta-v3": 2e-05,
+    "finbert": 2e-05,
+    "finbert-tone": 2e-05
+  },
+  "models": [
+    "roberta-base",
+    "roberta-dapt",
+    "roberta-large",
+    "roberta-large-dapt",
+    "deberta-v3",
+    "finbert",
+    "finbert-tone"
+  ],
+  "checkpoints": {
+    "roberta-base": [
+      "roberta-base",
+      "roberta-base"
+    ],
+    "roberta-dapt": [
+      "/kaggle/input/datasets/lorenzouberti/roberta-base-dapt-finetune",
+      "LorenzoAleCon29/roberta-base-ECB-dapt"
+    ],
+    "roberta-large": [
+      "roberta-large",
+      "roberta-large"
+    ],
+    "roberta-large-dapt": [
+      "/kaggle/input/notebooks/lorenzouberti/dapt-finetune-bert-models/dapt/roberta-large/final",
+      "LorenzoAleCon29/roberta-large-ECB-dapt"
+    ],
+    "deberta-v3": [
+      "microsoft/deberta-v3-base",
+      "microsoft/deberta-v3-base"
+    ],
+    "finbert": [
+      "ProsusAI/finbert",
+      "ProsusAI/finbert"
+    ],
+    "finbert-tone": [
+      "yiyanghkust/finbert-tone",
+      "yiyanghkust/finbert-tone"
+    ]
+  },
+  "n_runs": 5,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "tokenization": {
+    "truncation": true,
+    "max_length": 256
+  },
+  "eval_batch_size": 32,
+  "fp16": true,
+  "label2id": {
+    "dovish": 0,
+    "hawkish": 1,
+    "neutral": 2
+  },
+  "test_set_sizes": {
+    "FED": 407,
+    "ECB": 645
+  },
+  "versions": {
+    "transformers": "5.0.0",
+    "datasets": "5.0.0",
+    "torch": "2.10.0+cu128"
+  }
+}

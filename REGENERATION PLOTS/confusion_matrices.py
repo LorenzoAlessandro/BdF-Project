@@ -9,11 +9,18 @@ Outputs, into --out:
   cm_counts_long.csv            every cell of every matrix, tidy format
   cm_per_run_long.csv           same but not pooled over runs (for per-run analysis)
   per_class_metrics.csv         precision/recall/F1 per class, mean +/- std over the 5 runs
+  summary_metrics.csv           macro-F1 and accuracy per (train, eval, model), mean +/- std
   figs/cm_<model>.png           2x2 panel per model: train institution x eval institution
   figs/cm_pooled_<train>_on_<eval>.png   all models pooled, one per quadrant
 
 Pooling: counts are SUMMED over the 5 runs (so a 407-row test set gives 2035 predictions
 per matrix). Percentages are row-normalised, i.e. each row is recall for that true class.
+
+Panel titles show macro-F1 as mean +/- sd across runs: the score is computed separately
+for each run (each model x run fit in the pooled figures), then averaged, with sd using
+ddof=1. This is the same convention as the repo's mean/std summaries and is NOT the F1
+of the pooled matrix, which can differ slightly. --stat accuracy shows accuracy instead,
+also as mean +/- sd across runs.
 
     python confusion_matrices.py --preds out_v5/cross_eval_predictions.csv.gz --out figs_v5
 """
@@ -26,15 +33,36 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
+from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
+                             precision_recall_fscore_support)
 
 LABELS = ["dovish", "hawkish", "neutral"]   # ids 0, 1, 2
 IDS = [0, 1, 2]
 INSTITUTIONS = ["FED", "ECB"]
+STAT_LABEL = {"f1_macro": "macro-F1", "accuracy": "acc"}
 
 
 def cm_for(df, normalize=None):
     return confusion_matrix(df["y_true"], df["y_pred"], labels=IDS, normalize=normalize)
+
+
+def score(y_true, y_pred, stat):
+    if stat == "f1_macro":
+        return f1_score(y_true, y_pred, labels=IDS, average="macro", zero_division=0)
+    return accuracy_score(y_true, y_pred)
+
+
+def run_stats(g, stat):
+    """mean, sd (ddof=1) and n of `stat`, computed once per (model, run) fit in g."""
+    vals = np.array([score(gr["y_true"], gr["y_pred"], stat)
+                     for _, gr in g.groupby(["model", "run"])], dtype=float)
+    sd = vals.std(ddof=1) if len(vals) > 1 else 0.0
+    return float(vals.mean()), float(sd), len(vals)
+
+
+def stat_line(g, stat, unit="runs"):
+    m, sd, n = run_stats(g, stat)
+    return f"{STAT_LABEL[stat]} {m:.3f} ± {sd:.3f} ({n} {unit})"
 
 
 def draw(ax, cm, title, show_pct=True):
@@ -61,6 +89,9 @@ def main():
                     help="path to cross_eval_predictions.csv.gz")
     ap.add_argument("--out", default="cm_v5")
     ap.add_argument("--tag", default="v5", help="label used in figure titles")
+    ap.add_argument("--stat", choices=list(STAT_LABEL), default="f1_macro",
+                    help="score shown in panel titles as mean ± sd across runs "
+                         "(default: f1_macro)")
     args = ap.parse_args()
 
     out = Path(args.out)
@@ -86,7 +117,7 @@ def main():
               f"{c.iloc[0]} sentences each")
 
     # ---- tidy long tables -------------------------------------------------------
-    long_rows, per_run_rows, pcm_rows = [], [], []
+    long_rows, per_run_rows, pcm_rows, summary_rows = [], [], [], []
 
     for (tr, ev, m), g in df.groupby(["train_institution", "eval_institution", "model"]):
         cm = cm_for(g)
@@ -97,12 +128,14 @@ def main():
                                   "count": int(cm[i, j]),
                                   "row_pct": float(cm[i, j] / max(cm[i].sum(), 1))})
 
-        # per-class metrics, mean +/- std across runs
-        stats = []
+        # per-class and overall metrics, mean +/- std across runs
+        stats, overall = [], {k: [] for k in STAT_LABEL}
         for run, gr in g.groupby("run"):
             p, r, f, _ = precision_recall_fscore_support(
                 gr["y_true"], gr["y_pred"], labels=IDS, zero_division=0)
             stats.append(np.vstack([p, r, f]))
+            for k in STAT_LABEL:
+                overall[k].append(score(gr["y_true"], gr["y_pred"], k))
             cmr = cm_for(gr)
             for i, ti in enumerate(LABELS):
                 for j, pj in enumerate(LABELS):
@@ -118,10 +151,18 @@ def main():
                                  "std": float(arr[:, k, c].std(ddof=1))
                                  if arr.shape[0] > 1 else 0.0,
                                  "n_runs": int(arr.shape[0])})
+        for k, vals in overall.items():
+            vals = np.asarray(vals, dtype=float)
+            summary_rows.append({"train_institution": tr, "eval_institution": ev,
+                                 "model": m, "in_domain": tr == ev, "metric": k,
+                                 "mean": float(vals.mean()),
+                                 "std": float(vals.std(ddof=1)) if len(vals) > 1 else 0.0,
+                                 "n_runs": int(len(vals))})
 
     pd.DataFrame(long_rows).to_csv(out / "cm_counts_long.csv", index=False)
     pd.DataFrame(per_run_rows).to_csv(out / "cm_per_run_long.csv", index=False)
     pd.DataFrame(pcm_rows).to_csv(out / "per_class_metrics.csv", index=False)
+    pd.DataFrame(summary_rows).to_csv(out / "summary_metrics.csv", index=False)
 
     # ---- one 2x2 figure per model ----------------------------------------------
     for m in models:
@@ -135,11 +176,11 @@ def main():
                     ax.axis("off")
                     ax.set_title(f"{tr} -> {ev}: no data", fontsize=9)
                     continue
-                acc = (g.y_true == g.y_pred).mean()
                 tail = " (in-domain)" if tr == ev else ""
-                draw(ax, cm_for(g), f"{tr} model -> {ev} test{tail}\nacc {acc:.3f}")
-        fig.suptitle(f"{m} — {args.tag}, counts pooled over "
-                     f"{df['run'].nunique()} runs", fontsize=11)
+                draw(ax, cm_for(g),
+                     f"{tr} model -> {ev} test{tail}\n{stat_line(g, args.stat)}")
+        fig.suptitle(f"{m} — {args.tag}, counts pooled over {df['run'].nunique()} runs, "
+                     f"{STAT_LABEL[args.stat]} mean ± sd across runs", fontsize=11)
         fig.tight_layout()
         fig.savefig(out / "figs" / f"cm_{m}.png", dpi=160)
         plt.close(fig)
@@ -151,8 +192,8 @@ def main():
             if g.empty:
                 continue
             fig, ax = plt.subplots(figsize=(4.2, 4))
-            acc = (g.y_true == g.y_pred).mean()
-            draw(ax, cm_for(g), f"all models, {tr} -> {ev}\nacc {acc:.3f}")
+            draw(ax, cm_for(g), f"all models, {tr} -> {ev}\n"
+                                f"{stat_line(g, args.stat, 'model×run fits')}")
             fig.tight_layout()
             fig.savefig(out / "figs" / f"cm_pooled_{tr}_on_{ev}.png", dpi=160)
             plt.close(fig)

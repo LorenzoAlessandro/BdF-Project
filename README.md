@@ -17,8 +17,6 @@ Central bank communication is now a policy instrument in its own right, and lang
 - [Part 2 — DAPT + SFT encoders](#part-2--does-institutional-origin-shape-a-fine-tuned-models-transfer)
 - [Results](#results)
 - [Reproducing the study](#reproducing-the-study)
-- [Status and known issues](#status-and-known-issues)
-- [Citation](#citation)
 
 ---
 
@@ -36,28 +34,60 @@ Central bank communication is now a policy instrument in its own right, and lang
 
 ## Repository layout
 
+Directory names are historical and a few are misleading — the notes below are
+authoritative. Every code directory also carries its own `README_*.md`
+describing the individual notebooks and scripts inside it.
+
 ```
 .
-├── scraping/            # Per-publication-type scrapers for federalreserve.gov and ecb.europa.eu
-├── cleaning/
-│   ├── document_clean/  # Source-specific front-ends (boilerplate, chart debris, footnotes)
-│   ├── sentence_core/   # Shared sentence-processing core (identical across institutions)
-│   └── chunking/        # Token-budgeted chunking + quality gate + dedup for DAPT
-├── annotation/
-│   ├── dictionary/      # Panel A1/B1/A2/B2/C term lists and clause segmenter
-│   └── guides/          # Fed and ECB annotation guides (Tables 7 and 8)
-├── llm_eval/            # Part 1: provider SDK clients, five prompts, macro-F1 decomposition
-├── finetune/
-│   ├── dapt/            # Continued MLM pre-training (RoBERTa-base / -large)
-│   └── sft/             # Shared HF Trainer routine, 5 seeds per (model, institution)
-├── analysis/            # Confusion matrices, transfer tables, stance index time series
-└── data/
-    ├── raw/ cleaned/    # Scraped text + manifest logs
-    ├── unlabelled/      # DAPT chunks (annotated sentences removed)
-    └── annotated/       # ~3,000 labelled sentences per institution
+├── Scraper/                              # Stage 1 — fetch raw text from both institutions
+│   ├── Fed_Suplementary_Scraper/         #   FED: statements, press conferences, projections,
+│   │                                     #        FEDS Notes, testimony, annual reports
+│   ├── Scrape Press Conferences/         #   FED: FOMC press conferences + sentence extraction
+│   ├── Scrape Fed Speeches/Scrape/       #   FED: Board speeches, 2006–2026
+│   ├── Main_FED_Scraoe/                  #   ECB (despite the name): speeches, interviews, SSM
+│   │                                     #        and macroprudential bulletins, GC decisions
+│   ├── Scrape_ECB_Speeches/              #   ECB: speeches 1997–2024 + sentence extraction
+│   ├── Scrape_ECB_Q&A/                   #   ECB: press-conference statements, MP accounts
+│   └── Scrape - Base File - Hard Code/   #   ECB: original hard-coded prototype the others grew from
+│
+├── Textual Data Cleaning and Splitting/  # Stage 2 — document cleaning and sentence selection
+│   └── Textual Cleaner ECB/              #   ECB-specific cleaning front-end
+├── Tokenizer/                            # Stage 2b — DAPT chunking + annotation-set preparation
+│
+├── data/                                 # Stage 3 — corpora
+│   ├── Annotation Guides/                #   Fed (Shah et al.) and ECB annotation guides
+│   ├── FED/  ECB/                        #   Annotated/, DAPT data/, Finetunes Data/ per institution
+│   └── Test-Train-Val-JSONL files/       #   the chronological splits fed to the trainers
+│
+├── Extension LLM Classification Task/    # Part 1 — generative LLM grid (8 models × 5 prompts)
+│   ├── Fed Side/                         #   Fed run, results, plots
+│   └── ECB Side/                         #   ECB run, results, plots
+│
+├── Bert Model Finetuning Code/           # Part 2 — DAPT + SFT encoders
+│   ├── Pre Tests/                        #   preliminary Kaggle runs, LR sweeps, DAPT notebooks
+│   ├── Full Cross Eval MultiModel Runs/  #   the reported grid, one folder per learning rate
+│   ├── Eval Stop Loss run/               #   early-stopping variant (v6)
+│   └── Code Repos For Full Multimodel, Cross Eval/   # the main end-to-end training notebook
+│
+├── Plots/                                # Analysis — descriptive stats and stance-index figures
+├── REGENERATION PLOTS/                   # Analysis — confusion matrices and per-cell sentence dumps
+├── figures/                              # Final PNGs used in the paper
+└── Reference Papers/                     # Background PDFs
 ```
 
-> Adjust paths to match your local checkout — the structure above reflects the pipeline described in the paper.
+**Naming caveats, so you don't lose an afternoon:**
+
+- `Scraper/Main_FED_Scraoe/` and `Scraper/Scrape - Base File - Hard Code/` both
+  target **`ecb.europa.eu`**, not the Fed. Only the three folders marked *FED*
+  above hit `federalreserve.gov`.
+- Several directory names carry a trailing space (`Bert Model Finetuning Code `,
+  `Textual Data Cleaning and Splitting `, `best `, `Prelim Run `). They are kept
+  as-is because notebook path strings depend on them; quote paths in the shell.
+- The scrapers share near-copies of `tools.py` / `fed_tools.py` rather than a
+  common module. They have diverged; treat each folder as self-contained.
+- Notebooks contain absolute paths under `/Users/lorenzouberti/...`. Point them at
+  your own checkout before running.
 
 ---
 
@@ -203,31 +233,110 @@ A stance index built from the hand annotations (`+1` hawkish, `0` neutral, `−1
 
 ## Reproducing the study
 
+The pipeline is a set of standalone scripts and notebooks rather than an
+installable package — each stage is run from inside its own directory, and the
+scrapers resolve `raw/`, `clean/` and `out/` relative to the working directory.
+Quote paths: several directory names contain spaces.
+
 ```bash
-# 1. Environment
-pip install -r requirements.txt          # transformers, datasets, torch, beautifulsoup4, ftfy, scikit-learn
-
-# 2. Scrape (writes raw/, cleaned/ and a manifest log)
-python -m scraping.fed   --start 1998 --end 2026
-python -m scraping.ecb   --start 1998 --end 2026
-
-# 3. Build corpora
-python -m cleaning.build_unlabelled --max-tokens 2048 --min-tokens 64
-python -m annotation.extract_sentences --bank fed
-python -m annotation.extract_sentences --bank ecb
-
-# 4. Part 1 — generative LLM grid (8 models x 5 prompts x 4 corpora)
-export ANTHROPIC_API_KEY=... OPENAI_API_KEY=... MISTRAL_API_KEY=... DEEPSEEK_API_KEY=...
-python -m llm_eval.run --workers 4
-python -m llm_eval.decompose            # macro-F1, relative skill, confusion matrices
-
-# 5. Part 2 — DAPT then SFT
-python -m finetune.dapt --model roberta-base --corpus data/unlabelled/fed
-python -m finetune.sft  --config v4 --seeds 42 43 44 45 46 --cross-eval
+# 0. Environment (Python 3.13)
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-API keys are read from the environment; never commit them. Expect the Part 1 grid to be the dominant cost and the 70 fine-tunes to be the dominant GPU time.
+**Stage 1 — scrape.** Each scraper takes publication types as positional
+arguments and writes `raw/<type>/<year>/`, `clean/<type>/<year>/` and a
+`out/csv/<type>_manifest.csv` + `_missing.csv` log. With no arguments it runs
+every type it knows about.
 
+```bash
+# FED — statements, press conferences, projections, testimony, FEDS Notes, annual reports
+cd "Scraper/Fed_Suplementary_Scraper"      && python fed_scrape.py fomc-statements fomc-press-conferences
+
+# FED — press conferences on their own, plus Board speeches
+cd "Scraper/Scrape Press Conferences"      && python fed_scrape.py
+cd "Scraper/Scrape Fed Speeches/Scrape"    && python fed_scrape.py
+
+# ECB — speeches; and the broader ECB set (note: "Main_FED_Scraoe" scrapes ECB)
+cd "Scraper/Scrape_ECB_Speeches"           && python scrape.py speeches
+cd "Scraper/Main_FED_Scraoe"               && python scrape.py bsu-speeches research-bulletin
+cd "Scraper/Scrape_ECB_Q&A"                && python scrape.py press-conference-statements monetary-policy-accounts
+```
+
+**Stage 2 — sentence selection.** The dictionary filter and clause segmenter
+described under [Data](#data) live in the `*_sentences.py` scripts, which emit
+the spreadsheets that are then hand-annotated.
+
+```bash
+cd "Scraper/Scrape Press Conferences" && python fed_presconf_sentences.py --in clean/fomc-press-conferences --out out --n 1000 --seed 42
+cd "Scraper/Scrape_ECB_Speeches"      && python ecb_speech_sentences.py --help   # same interface
+```
+
+**Stage 3 — cleaning, chunking and splits.** Run as notebooks, in this order.
+See `Textual Data Cleaning and Splitting /README_*.md` and
+`Tokenizer/README_*.md` for what each one consumes and produces.
+
+| Order | Notebook |
+|---|---|
+| 1 | `Textual Data Cleaning and Splitting /Text Data Cleaning Pipeline.ipynb` |
+| 2 | `Textual Data Cleaning and Splitting /Fed Speech Cleaner.ipynb` · `ECB text Splitter.ipynb` |
+| 3 | `Tokenizer/Tokenizer- FED Branch.ipynb` — DAPT chunking |
+| 4 | `Tokenizer/Annotator Clean.ipynb` — annotation sheets → JSONL splits |
+
+Outputs land in `data/Test-Train-Val-JSONL files/` and `data/{FED,ECB}/DAPT data/`.
+
+**Stage 4 — Part 1, the generative LLM grid.** API keys are read from the
+environment (the notebooks fall back to `getpass` if a variable is unset).
+Never commit them.
+
+```bash
+export ANTHROPIC_API_KEY=... OPENAI_API_KEY=... MISTRAL_API_KEY=... DEEPSEEK_API_KEY=...
+```
+
+| Step | Notebook |
+|---|---|
+| Fed run | `Extension LLM Classification Task/Fed Side/LLM_Extension.ipynb` |
+| ECB run | `Extension LLM Classification Task/ECB Side/LLM_Extension_ECB_Side.ipynb` |
+| Decomposition | `Extension LLM Classification Task/Result Analysis, LLM EXtension .ipynb` |
+| Error analysis | `Extension LLM Classification Task/LLM Extension Error Analysis.ipynb` |
+| Figures | `.../Fed Side/LLM Extension Code repos/LLM Extension Plots.ipynb` · `.../ECB Side/LLM Extension Plots ECB.ipynb` |
+
+**Stage 5 — Part 2, DAPT then SFT.** The reported grid runs end-to-end from a
+single notebook, written for Kaggle GPUs and restart-safe:
+
+```
+Bert Model Finetuning Code /Code Repos For Full Multimodel, Cross Eval/MultiModel with Cross Evaluation Analysis.ipynb
+```
+
+It fine-tunes both institutions (5 seeds each), runs the 2×2 cross-evaluation
+and pushes checkpoints to the Hugging Face Hub. DAPT itself is done beforehand
+in `Bert Model Finetuning Code /Pre Tests/FOMC Finetunes/Kaggle Roberta DAPT Finetune/dapt-finetune-bert-models.ipynb`
+(base) and `.../Kaggle Roberta-Large-DAPT/Roberta-Large-DAPT.ipynb` (large).
+
+Per-learning-rate outputs are already committed under
+`Bert Model Finetuning Code /Full Cross Eval MultiModel Runs/`; **the reported
+run is `Learning Rate 3e-5` (config v4)**.
+
+**Stage 6 — analysis and figures.**
+
+```bash
+cd "REGENERATION PLOTS"
+python predict_v5.py            # regenerate predictions from the saved checkpoints
+python confusion_matrices.py    # -> cm_v5/figs/*.png and the per-class metric CSVs
+python sentences_by_cell.py     # -> sentences_v5/*.xlsx, the qualitative error dumps
+```
+
+`Plots/Descriptive Statistics/Dezzy_Stats.ipynb` produces the corpus
+descriptives, and `Plots/Plot_Code_Repos/FED_Hawkish_Dovish_Plots.ipynb` the
+stance-index time series. Final PNGs are collected in `figures/`.
+
+**Cost.** The Part 1 grid is the dominant API spend; the 70 fine-tunes are the
+dominant GPU time.
+
+**Two things to fix before anything runs.** Notebooks contain absolute paths
+under `/Users/lorenzouberti/Desktop/BANQUE DE FRANCE /...` — repoint them at
+your own checkout. Model weights are not in the repo (`.gitignore` excludes
+them); pull the fine-tuned checkpoints from the Hub or retrain.
 
 ---
 

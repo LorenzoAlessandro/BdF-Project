@@ -1,0 +1,48 @@
+# Python 3.13 (the committed bytecode was built with CPython 3.13).
+# Install with:  pip install -r requirements.txt
+#
+# Not every notebook needs every package -- see the section comments below.
+
+# --- Core data handling (used almost everywhere) ---
+pandas
+numpy
+openpyxl              # read/write the .xlsx annotation workbooks
+
+# --- Scraping (Scraper/) ---
+requests
+beautifulsoup4        # imported as `bs4`
+pdfplumber            # PDF text extraction for projections / annual reports
+pypdf
+PyMuPDF               # imported as `fitz`
+
+# --- Text cleaning & sentence work (Textual Data Cleaning and Splitting/, Tokenizer/) ---
+ftfy                  # mojibake / unicode repair
+nltk                  # sentence tokenisation
+pysbd                 # sentence boundary detection during DAPT chunking
+datasketch            # MinHash near-duplicate suppression
+tiktoken              # token budgeting for the DAPT chunker
+
+# --- Fine-tuning (Bert Model Finetuning Code/) ---
+torch
+transformers
+datasets
+huggingface_hub
+scikit-learn          # imported as `sklearn`
+
+# --- Generative-LLM extension (Extension LLM Classification Task/) ---
+anthropic             # Claude models
+openai                # GPT models; also used for the OpenAI-compatible
+                      # Mistral and DeepSeek endpoints
+
+# --- Plots & statistics (Plots/, REGENERATION PLOTS/) ---
+matplotlib
+seaborn
+scipy
+statsmodels
+fredapi               # FRED macro series (CPI, HICP, unemployment)
+
+# --- Kaggle-only ---
+# `kaggle_secrets` is provided by the Kaggle runtime and is not installable
+# via pip. The Kaggle notebooks under Bert Model Finetuning Code /Pre Tests/
+# use it to read the Hugging Face token; run them on Kaggle, or replace the
+# import with os.environ["HF_TOKEN"].
